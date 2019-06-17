@@ -40,7 +40,6 @@ def parse_qname(qname):
         raise Exception(f"Could not segment the qualified name: {qname}")
     return  "" if prefix is None else prefix, name, language
 
-
 def qname_uri(qname, namespaces):
     """
         return the URI for this qname provided that the prefix is found in the list of namescapce tuples 
@@ -58,9 +57,9 @@ def qname_lang(qname):
     """
     return parse_qname(qname)[2]
 
-s = "skos:prefLabel@en"
-ss = "skos:prefLabel"
-ss1 = "skossgfd hgfc hghd"
+# s = "skos:prefLabel@en"
+# ss = "skos:prefLabel"
+# ss1 = "skossgfd hgfc hghd"
 
 # p = re.compile(r"""([\w]+){1,1}:([\w\-_]+){1,1}(?:@){0,1}([\w]+){0,1}""")
 # display(p.split(s))
