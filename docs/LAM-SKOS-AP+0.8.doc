@@ -1,0 +1,723 @@
+Message-ID: <1966236744.70994.1561474691907.JavaMail.wikis@wtwikisextprd.cc.cec.eu.int>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_70993_1300512784.1561474691900"
+
+------=_Part_70993_1300512784.1561474691900
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>LAM-SKOS-AP 0.8</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>LAM-SKOS-AP 0.8</h1>
+    <div class=3D"Section1">
+        <h1 id=3D"LAM-SKOS-AP0.8-Goal">Goal</h1>
+<p>This document describes the application profile needed to describe the a=
+ssets in the LAM project.</p>
+<p>LAM classification table maintains a set of concepts that represent grou=
+ps of documents uniquely distinguished by the column keywords which in fact=
+ means title fragments.&nbsp;</p>
+<p>Latter on this asset will have to manage depndencies between the associa=
+ted classes (cdm class, resource type, document type etc.) and mandatory pr=
+esent/absent properties. This dependecy management shall be performed in a =
+proto-application-profile fashion.&nbsp;</p>
+<p>TODO:&nbsp;</p>
+<ul class=3D"inline-task-list" data-inline-tasks-content-id=3D"333453010">
+<li class=3D"checked" data-inline-task-id=3D"1"><span>create the initial as=
+set in VB3 using the the first 5 columns&nbsp;<time datetime=3D"2019-03-20"=
+ class=3D"date-past">20 Mar 2019</time>&nbsp;</span></li>
+<li class=3D"checked" data-inline-task-id=3D"2"><span>meet and explain&nbsp=
+;<time datetime=3D"2019-03-27" class=3D"date-past">27 Mar 2019</time>&nbsp;=
+</span></li>
+<li class=3D"checked" data-inline-task-id=3D"3"><span>develop the SRC-AP-LA=
+M 1.0 to be able to express the first part of the excel table</span></li>
+<li data-inline-task-id=3D"4">develop the SRC-AP-LAM 2.0 to be able to expr=
+ess the second/last part of the excel table&nbsp;</li>
+<li data-inline-task-id=3D"5"><span>update the project in VB accordingly.&n=
+bsp;</span></li>
+</ul>
+<h1 id=3D"LAM-SKOS-AP0.8-PartialInput">Partial Input</h1>
+<p><img height=3D"150" style=3D"margin: 2px; border: 1px solid #ddd; box-si=
+zing: border-box; vertical-align: text-bottom;" src=3D"4ea4a0d60e523325d2ce=
+13c52214a86f" width=3D"150"></p>
+<h1 id=3D"LAM-SKOS-AP0.8-ApplicationProfile">Application Profile</h1>
+<p>URI pattern</p>
+<p><a href=3D"http://publications.europa.eu/resources/authority/lam/" class=
+=3D"external-link" rel=3D"nofollow">http://publications.europa.eu/resources=
+/authority/lam/</a>*</p>
+<h2 id=3D"LAM-SKOS-AP0.8-skos:Conceptclass"><span>skos:Concept</span>&nbsp;=
+class</h2>
+<p>This class is subclass of skos:Concept and represents the backbone for m=
+aintaining Legal Analisys Methodology. This is a meta-class and roughtly co=
+rresponds to rdfs:Class or owl:Class. The instances of this class represent=
+ classes of legal resources in Cellar.</p>
+<div class=3D"table-wrap">
+<table class=3D"wrapped relative-table confluenceTable" style=3D"width: 100=
+.0%;">
+<colgroup>
+<col style=3D"width: 7.34353%;">
+<col style=3D"width: 22.6982%;">
+<col style=3D"width: 6.28651%;">
+<col style=3D"width: 11.3491%;">
+<col style=3D"width: 6.28651%;">
+<col style=3D"width: 6.28651%;">
+<col style=3D"width: 7.67733%;">
+<col style=3D"width: 32.1001%;">
+</colgroup>
+<tbody>
+<tr>
+<td class=3D"confluenceTd"><strong>Domain</strong></td>
+<td class=3D"confluenceTd"><strong>Property</strong></td>
+<td class=3D"confluenceTd"><strong>Range</strong></td>
+<td colspan=3D"1" class=3D"confluenceTd"><p><strong>Excel column</strong></=
+p></td>
+<td class=3D"confluenceTd"><strong>Min cardinality</strong></td>
+<td class=3D"confluenceTd"><strong>Max cardinality</strong></td>
+<td class=3D"confluenceTd"><strong>Value Restrictions</strong></td>
+<td class=3D"confluenceTd"><strong>Comment</strong></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd">skos:Concept</td>
+<td colspan=3D"1" class=3D"confluenceTd">skos:exactMatch</td>
+<td colspan=3D"1" class=3D"confluenceTd">URI</td>
+<td colspan=3D"1" class=3D"confluenceTd">CDM_class</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd">*</td>
+<td colspan=3D"1" class=3D"confluenceTd">CDM Work</td>
+<td colspan=3D"1" class=3D"confluenceTd">sub-property of skos:related; perh=
+aps <em>skos:closeMatch</em> is more appropriate here.</td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span>skos:Concept</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">skos:editorialNote@en</td>
+<td colspan=3D"1" class=3D"confluenceTd">LangLiteral</td>
+<td colspan=3D"1" class=3D"confluenceTd">CDM_class_comment</td>
+<td colspan=3D"1" class=3D"confluenceTd">0</td>
+<td colspan=3D"1" class=3D"confluenceTd">*</td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span>skos:Concept</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">lam:dts</td>
+<td colspan=3D"1" class=3D"confluenceTd">Literal</td>
+<td colspan=3D"1" class=3D"confluenceTd">DTS</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>sub-property of skos:notatio=
+n; part of cdm:resource_legal_id_celex</span></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span>skos:Concept</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">lam:dtt</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>Literal</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">DTT</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>sub-property of skos:notatio=
+n; part of cdm:resource_legal_id_celex</span></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span>skos:Concept</span></td>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(255,0,0)=
+;"><span style=3D"color: rgb(0,0,0);">cdm:work_has_resource-type</span><br>=
+</span></td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>URI</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">Resource type</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd">ResourceType AT</td>
+<td colspan=3D"1" class=3D"confluenceTd"><p>cdm:resource-type is a class no=
+t a property.</p><p>candidate properties are <em>cdm:resource_legal_has_typ=
+e_act_concept_type_act</em></p><p><em>cdm:work_has_resource-type</em></p><p=
+><br></p></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span>skos:Concept</span></td>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(0,51,102=
+);">lam:ojType</span></td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>Literal</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">OJ type</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>free text, coming from PlanJ=
+O</span></td>
+<td colspan=3D"1" class=3D"confluenceTd"><p><span>sub-property of skos:nota=
+tion; this eventually should evolve into a controleld list or removed becau=
+se it seems quite similar to resource type. </span></p><p>candidate propert=
+y:</p><p><em>cdm:official_journal</em></p></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span>skos:Concept</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">cdm:keywords@en</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>LangLiteral</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">Keywords</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+<td colspan=3D"1" class=3D"confluenceTd"><p>should evolve into a set of val=
+ues split by the new line; originally created for search purposes; to uniqu=
+ely identify a concept/document type all these keyqords must appear in the =
+document.</p><p>candidate property: <em>cdm:keyword</em> (not <em>cdm:keywo=
+rds</em> as currently set)</p></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span>skos:Concept</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">skos:example@en</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>LangLiteral</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">Example EN</td>
+<td colspan=3D"1" class=3D"confluenceTd">0</td>
+<td colspan=3D"1" class=3D"confluenceTd">*</td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span>skos:Concept</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">skos:example@fr</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>LangLiteral</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">Example FR</td>
+<td colspan=3D"1" class=3D"confluenceTd">0</td>
+<td colspan=3D"1" class=3D"confluenceTd">*</td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span>skos:Concept</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">skos:editorialNote@en</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>LangLiteral</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">Additional comment</td>
+<td colspan=3D"1" class=3D"confluenceTd">0</td>
+<td colspan=3D"1" class=3D"confluenceTd">*</td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span>skos:Concept</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">cdm:created_by</td>
+<td colspan=3D"1" class=3D"confluenceTd">URI</td>
+<td colspan=3D"1" class=3D"confluenceTd">Author</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd">*</td>
+<td colspan=3D"1" class=3D"confluenceTd">Corporate body, Country</td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span>skos:Concept</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">skos:example</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>Literal</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">Examples from EUR-Lex</td>
+<td colspan=3D"1" class=3D"confluenceTd">0</td>
+<td colspan=3D"1" class=3D"confluenceTd">*</td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd">skos:Concept</td>
+<td colspan=3D"1" class=3D"confluenceTd">sh:property</td>
+<td colspan=3D"1" class=3D"confluenceTd"><p>lam:PropertyConstraint</p></td>
+<td colspan=3D"1" class=3D"confluenceTd">All columns from <em>M to the last=
+ one.</em></td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd">*</td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+<td colspan=3D"1" class=3D"confluenceTd">Starting from column M (EuroVoc) u=
+ntil the last one, each column or pair of columns (for annotated properties=
+) in Excel should become a property constraint instance in the LAM class.</=
+td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id=3D"LAM-SKOS-AP0.8-lam:PropertyConstraintclass"><br>lam:PropertyConst=
+raint class</h2>
+<p>This class is subclass of sh:Shape and represents the main mechanism for=
+ expressing class restrictions, i.e. constraints that apply to all instance=
+s of this class. The aim is to come as close as possible to SHACL language.=
+&nbsp;</p>
+<p>This class should be instantiated as constraint descriptions for various=
+ (cdm) properties of LAM classes.&nbsp;</p>
+<p>The constraint definition follows the description of the SHACL core comp=
+onents (<a href=3D"https://www.w3.org/TR/shacl/#core-components" class=3D"e=
+xternal-link" rel=3D"nofollow">https://www.w3.org/TR/shacl/#core-components=
+</a>). The mechanisms relevant for LAM project are the caardinality (min,ma=
+x)&nbsp; constraints and the controlled list of values.&nbsp;</p>
+<p>Requirement: each cdm property (currently columns in the Excel file) nee=
+ds to be restricted in a certain way, either by value, and/or by an additio=
+nal annotation property (in case of various cdm:dates).&nbsp;</p>
+<p><br></p>
+<div class=3D"table-wrap">
+<table class=3D"wrapped confluenceTable">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class=3D"confluenceTh"><strong>Domain</strong></th>
+<th class=3D"confluenceTh"><strong>Property</strong></th>
+<th class=3D"confluenceTh"><strong>Range</strong></th>
+<th class=3D"confluenceTh"><strong>Min cardinality</strong></th>
+<th class=3D"confluenceTh"><strong>Max cardinality</strong></th>
+<th class=3D"confluenceTh"><strong>Value Restrictions</strong></th>
+<th class=3D"confluenceTh"><strong>Comment</strong></th>
+</tr>
+<tr>
+<td class=3D"confluenceTd">lam:PropertyConstraint</td>
+<td class=3D"confluenceTd">sh:path</td>
+<td class=3D"confluenceTd"><span>URI (rdf:Property)</span></td>
+<td class=3D"confluenceTd">1</td>
+<td class=3D"confluenceTd">1</td>
+<td class=3D"confluenceTd"><span>cdm property</span></td>
+<td class=3D"confluenceTd"><br></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span>lam:PropertyConstraint</span=
+></td>
+<td colspan=3D"1" class=3D"confluenceTd">sh:minCount</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>xsd:integer</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">0</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+<td colspan=3D"1" class=3D"confluenceTd">The minimum cardinality. Node shap=
+es cannot have any value for sh:minCount. A property shape has at most one =
+value for sh:minCount. The values of sh:minCount in a property shape are li=
+terals with datatype xsd:integer.</td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span>lam:PropertyConstraint</span=
+></td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>sh:maxCount</span></td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>xsd:integer</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">0</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+<td colspan=3D"1" class=3D"confluenceTd">The maximum cardinality. Node shap=
+es cannot have any value for sh:maxCount. A property shape has at most one =
+value for sh:maxCount. The values of sh:maxCount in a property shape are li=
+terals with datatype xsd:integer.</td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span>lam:PropertyConstraint</span=
+></td>
+<td colspan=3D"1" class=3D"confluenceTd">sh:class</td>
+<td colspan=3D"1" class=3D"confluenceTd">URI</td>
+<td colspan=3D"1" class=3D"confluenceTd">0</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd">URI of a controlled list concept s=
+cheme, under the asusmption that the class equivalance is established to th=
+e concept scheme.</td>
+<td colspan=3D"1" class=3D"confluenceTd">The type of all value nodes. The v=
+alues of sh:class in a shape are IRIs.</td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span>lam:PropertyConstraint</span=
+></td>
+<td colspan=3D"1" class=3D"confluenceTd">sh:datatype</td>
+<td colspan=3D"1" class=3D"confluenceTd">URI</td>
+<td colspan=3D"1" class=3D"confluenceTd">0</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd">URI of any XSD or other data types=
+.</td>
+<td colspan=3D"1" class=3D"confluenceTd">The datatype of all value nodes (e=
+.g., xsd:integer). The values of sh:datatype in a shape are IRIs. A shape h=
+as at most one value for sh:datatype.</td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd">lam:PropertyConstraint</td>
+<td colspan=3D"1" class=3D"confluenceTd">sh:hasValue</td>
+<td colspan=3D"1" class=3D"confluenceTd">URI/Literal</td>
+<td colspan=3D"1" class=3D"confluenceTd">0</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+<td colspan=3D"1" class=3D"confluenceTd"><span style=3D"color: rgb(0,0,0);"=
+>A specific required value.</span></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd">lam:PropertyConstraint</td>
+<td colspan=3D"1" class=3D"confluenceTd">sh:in</td>
+<td colspan=3D"1" class=3D"confluenceTd">SHACL list</td>
+<td colspan=3D"1" class=3D"confluenceTd">0</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd">A list of accepted values</td>
+<td colspan=3D"1" class=3D"confluenceTd">A SHACL list that has the allowed =
+values as members. Each value of sh:in in a shape is a SHACL list. A shape =
+has at most one value for sh:in.</td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><span>lam:PropertyConstraint</span></td>
+<td class=3D"confluenceTd">sh:name</td>
+<td class=3D"confluenceTd"><span>Literal</span></td>
+<td class=3D"confluenceTd">0</td>
+<td class=3D"confluenceTd">1</td>
+<td class=3D"confluenceTd"><br></td>
+<td class=3D"confluenceTd">how to refer to it in documentation, i.e. a huma=
+n friendly name</td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span>lam:PropertyConstraint</span=
+></td>
+<td colspan=3D"1" class=3D"confluenceTd">sh:description</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>Literal</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">0</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd"><br></td>
+<td colspan=3D"1" class=3D"confluenceTd">describe the menaing of this const=
+raint in the documentation</td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span>lam:PropertyConstraint</span=
+></td>
+<td colspan=3D"1" class=3D"confluenceTd">lam:annotatedWithProperty</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>URI (rdf:Property)</span></t=
+d>
+<td colspan=3D"1" class=3D"confluenceTd">0</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>cdm annotation property</spa=
+n></td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>cdm proporty the owl:Annotat=
+ion is created for. The <strong>first</strong> assumption is that there is =
+maximum one annotation propoerty needed to annotate the cdm:propoerty. For =
+example the cdm date propoerties, such as cdm:esource_legal_date_deadline, =
+are annotated with annot:comment_on_date only. The <strong>second </strong>=
+assumption is that the only relevant control on the annotation propoerty is=
+ the value range. </span></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd"><span>lam:PropertyConstraint</span=
+></td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>lam:annotation<span>Property=
+</span>Range</span></td>
+<td colspan=3D"1" class=3D"confluenceTd"><span>URI</span></td>
+<td colspan=3D"1" class=3D"confluenceTd">0</td>
+<td colspan=3D"1" class=3D"confluenceTd">1</td>
+<td colspan=3D"1" class=3D"confluenceTd">a controlled list such as FD table=
+s</td>
+<td colspan=3D"1" class=3D"confluenceTd">this constraint is tightly coupled=
+ to <em>lam:annotatedWithProperty</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Note: the annotation constraint specification using&nbsp;<span><em>lam:a=
+nnotatedWithProperty</em> and&nbsp;<em>lam:annotationProperty</em><span><em=
+>Range</em>&nbsp;is a shortcut to creating two types of constraint specific=
+ations, which would complicate the LAM model in VB3. T</span></span>he deci=
+ssion to merge constraints is an attempt to optimise and ease the work of t=
+he content managers.</p>
+<h1 id=3D"LAM-SKOS-AP0.8-Involvedcontrolledvocabularies">Involved controlle=
+d vocabularies</h1>
+<ul>
+<li>fd_013</li>
+<li>fd_014</li>
+<li>fd_040</li>
+<li>fd_100</li>
+<li>fd_130</li>
+<li>fd_301</li>
+<li>fd_330</li>
+<li>fd_335</li>
+<li>fd_340</li>
+<li>fd_345</li>
+<li>fd_350</li>
+<li>fd_361</li>
+<li>fd_365</li>
+<li>fd_370</li>
+<li>fd_375</li>
+<li>fd_395</li>
+<li>fd_396</li>
+<li>fd_400</li>
+<li>fd_578</li>
+<li>http://publications.europa.eu/resource/dataset/corporate-body</li>
+<li>http://publications.europa.eu/resource/dataset/corporate-body&nbsp;</li=
+>
+<li>http://publications.europa.eu/resource/dataset/country</li>
+<li>http://publications.europa.eu/resource/dataset/dir-eu-legal-act</li>
+<li>http://publications.europa.eu/resource/dataset/eurovoc</li>
+<li>http://publications.europa.eu/resource/dataset/language</li>
+<li>http://publications.europa.eu/resource/dataset/place</li>
+<li>http://publications.europa.eu/resource/dataset/procjur</li>
+<li>http://publications.europa.eu/resource/dataset/procresult</li>
+<li>http://publications.europa.eu/resource/dataset/resource-type</li>
+<li>http://publications.europa.eu/resource/dataset/role-qualifier</li>
+<li>http://publications.europa.eu/resource/dataset/subject-matter</li>
+<li>http://publications.europa.eu/resource/dataset/treaty</li>
+</ul>
+<p><br><br></p>
+<p><br></p>
+<div class=3D"table-wrap">
+<table class=3D"wrapped confluenceTable" style=3D"width: 134.0px;" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr style=3D"height: 24.0pt;" height=3D"32">
+<td class=3D"xl63 confluenceTd" style=3D"height: 24.0pt;width: 100.0pt;" wi=
+dth=3D"134" height=3D"32">OJ type</td>
+</tr>
+</tbody>
+</table>
+</div>
+    </div>
+</body>
+</html>
+------=_Part_70993_1300512784.1561474691900
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/4ea4a0d60e523325d2ce13c52214a86f
+
+iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAMAAAAL34HQAAADAFBMVEX19fXv7+98fHzd3d19fX22
+traenp5wcHD09PTn5+d1dXWSkpLOzs6Dg4Pt7e2ioqLR0dHY2NhycnLm5uapqam5ubnHx8eLi4vB
+wcHy8vKAgICsrKytra3o6Oji4uKxsbEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAADa0/+tAAADbUlEQVR42u2a+3OiMBDHU14Lijx8oNxNkfv//6lef3Gq0xNta0FF
+LgTFqMz5KKVcZz8d0mUJ8WuyriaEEARBEARBEARBEARBEARBEOSYu1tu0uKNeGHVWBDfK3ormiRr
+F9eVBa0iWYp8TW1ZueElhBvu2UjX1JY2FfUWfGr1m3urAmoqSyqlFUOJYiLCcl4rWXZkTDdEMBQh
++MIePo5hHazMsMAuKeRLkGVI1s60GkZtPonKIB+6wFZqM4gt7vtRbNWmt2IujTfjcoLp47LUONmf
+zONvnU5RFsqquSzA3kJZKAtloSyU9VWy3KZbF1lNeqw6mR3KI6I26yArDO6Jq23XlhSVkLugFr2l
+TcmoMx2wGWOwpLOfEtbZxBvukY7mERCRmRF1N+1QNUZUprr4Z/WqeuuFvrepLt0tzRlVJb5F9ViD
+cOCeEyk49ViDIKQn5bFgQ6+MX65lxBZZdBeG3EokU9Re7cnZ6pWl07GuJLOkMUuUeFyXpZHPmH7g
+V/Vny4qvSuNaXJEsYX1N7bVQkSwxueZRVHxLDvpGD+4QBEEQBEEQBEGQ/x//3Kw6r2CCyc636z/g
+VyHj/GQ/HISZoedF9ZzIsslvwjaHbVZpucr39fgmJOAMaUEn+l6b/u9Q508AGBLOOOib/Oq2q+if
+n9ou8w4hXWqwgTYl856i7u3LpNtn5+nWNRvyCz54ahNYQYfWUd2+kDrtbBU3Nw7azK/uXmLXWAd0
+otP3Rc/hp0usRu4p7i01EMkyUFPT0AhZc5ug+o9h7KYFtaNxOJqlD1TMKZmac97gKXSmPJsre6U9
+M/vPiASLA8+pLEsKyXzFdtVNnj1vudpfeqRxxwqXEBHAZzE43x57g6fQyRj3Fkb2bEjatIbegadA
+1rxHR99bMtuIomyrn59FBIeUtB8efn0kqMfhLDPeNGHypPCe09i6B5dF5D07B+CCzueLdCeZnsZK
++sjCAc44aHPnZK162/sYDljg5I13IPcUyjKzfaiSuc8whbKgS8cxlQXWLuS3BquyPXJn44dB4zm9
+T88a8FiAe6wpR1WHkHuOBzEdKT9sM7sdnhkC+SWR2Oei9Z4sBhPe4Nk5tSBKVgOWdbIE8aS+ktfB
+E0sQs/fkZc17Ssza/kdy+iVZ/jsAJ0bhVQRBEARBEARBEARBEORy/gIcC94uofVqSgAAAABJRU5E
+rkJggg==
+------=_Part_70993_1300512784.1561474691900--
