@@ -1,10 +1,10 @@
-Message-ID: <360597173.71001.1561474740835.JavaMail.wikis@wtwikisextprd.cc.cec.eu.int>
+Message-ID: <955233238.152931.1561732185366.JavaMail.wikis@wtwikisextprd.cc.cec.eu.int>
 Subject: Exported From Confluence
 MIME-Version: 1.0
 Content-Type: multipart/related; 
-	boundary="----=_Part_71000_1931761745.1561474740825"
+	boundary="----=_Part_152930_1720908124.1561732185363"
 
-------=_Part_71000_1931761745.1561474740825
+------=_Part_152930_1720908124.1561732185363
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 Content-Location: file:///C:/exported.html
@@ -338,11 +338,17 @@ an annotation column represent cardinality constraints on the annotation of=
 </tbody>
 </table>
 </div>
+<p>The constraint notation can also be provided with an additional comment.=
+ The convention to do that is&nbsp;<strong>&lt;constraint notation&gt;&lt;s=
+pecial character&gt;&lt;comment text&gt;.</strong> The &lt;constraint notat=
+ion&gt; is the same as provided in the table above. The &lt;special charact=
+er&gt; is either tilda (~), pipe (|) or dash (-). The &lt;comment text&gt; =
+is free text using any characters.&nbsp;</p>
 <p>If none of the constraint notation is in the table cell and the cell is =
-not empty then the text is considered as the value, or the proxy for the va=
-lue on the column property. The value is expected to be present in the cont=
-rolled list associated to the column. This also implies the "mandatory" car=
-dinality constraint.&nbsp;</p>
+<strong>not empty</strong> then the text is considered as the controlled va=
+lue, or the proxy for the value on the column property. The value is expect=
+ed to be present in the controlled list associated to the column. This also=
+ implies the "mandatory" cardinality constraint.</p>
 <h1 id=3D"MeetingNotesfrom21/06/2019-Metadatadescription">Metadata descript=
 ion</h1>
 <p>The metadata used in the LAM model must be diligently described already =
@@ -526,4 +532,4 @@ etadata property annotation must be reified structures.&nbsp;</p>
     </div>
 </body>
 </html>
-------=_Part_71000_1931761745.1561474740825--
+------=_Part_152930_1720908124.1561732185363--
