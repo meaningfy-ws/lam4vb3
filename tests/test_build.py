@@ -9,6 +9,8 @@ import unittest
 import pandas as pd
 import numpy as np
 
+from lam4vb3 import build
+
 
 class MyTestCase(unittest.TestCase):
 
@@ -35,7 +37,8 @@ class MyTestCase(unittest.TestCase):
              'annotation_7': {0: np.nan, 1: np.nan, 2: np.nan, 3: np.nan, 4: np.nan},
              'controlled value_annotation_7': {0: np.nan, 1: np.nan, 2: np.nan, 3: np.nan, 4: np.nan},
              'Definition': {0: np.nan, 1: np.nan,
-                            2: 'Field used in the cataloguing methodology for  classification and search purposes. Keywords are usually extracted from the titles of documents.',
+                            2: 'Field used in the cataloguing methodology for classification and search purposes. '
+                               'Keywords are usually extracted from the titles of documents.',
                             3: 'Field used in the cataloguing methodology for  information purposes. ',
                             4: 'Field used in the cataloguing methodology for  information purposes. '},
              'Example - cellar notice': {0: np.nan, 1: np.nan, 2: np.nan, 3: np.nan, 4: np.nan},
@@ -61,8 +64,20 @@ class MyTestCase(unittest.TestCase):
             'Changes to be done': 'skos:editorialNote@en',
         }
 
-    def test_something(self):
-        self.assertEqual(True, False)
+        self.graph = build.make_lam_graph()
+
+    def test_simple_triple_maker(self):
+        s = build.SimpleTripleMaker(df=self.test_df, column_mapping_dict=self.column_mappings, graph=self.graph)
+        triples = s.make_column_triples(target_column="Label", )
+        print(len(triples))
+        assert len(triples) > 4, "Must have some triples generated"
+        assert len(self.graph) > 4, "Must have some triples in the graph"
+
+    def test_reified_triple_maker(self):
+        s = build.ReifiedTripleMaker(df=self.test_df, column_mapping_dict=self.column_mappings, graph=self.graph)
+        triples = s.make_column_triples(target_column="Label", )
+        assert len(triples) > 14, "Must have some triples generated"
+        assert len(self.graph) > 14, "Must have some triples in the graph"
 
 
 if __name__ == '__main__':

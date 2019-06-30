@@ -25,6 +25,7 @@ CDM = rdf.Namespace("http://publications.europa.eu/ontology/cdm#")
 LAM_DATA = rdf.Namespace("http://publications.europa.eu/resources/authority/lam/")
 CELEX_DATA = rdf.Namespace("http://publications.europa.eu/resources/authority/celex/")
 LAM_SKOS_AP = rdf.Namespace("http://publications.europa.eu/ontology/lam-skos-ap#")
+ANNOTATION = rdf.Namespace("http://publications.europa.eu/ontology/annotation#")
 
 
 def make_lam_graph():
@@ -39,6 +40,7 @@ def make_lam_graph():
     lam_graph.bind("lam", LAM_SKOS_AP)
 
     lam_graph.bind("cdm", CDM)
+    lam_graph.bind("ann", ANNOTATION)
     lam_graph.bind("euvoc", EUVOC)
 
     lam_graph.bind("skos", SKOS)
@@ -55,7 +57,21 @@ def make_lam_graph():
     return lam_graph
 
 
-class ColumnTripleMaker(ABC):
+class TripleMaker(ABC):
+    """
+        abstract class for building triples from a tabular
+    """
+
+    @abstractmethod
+    def make_column_triples(self):
+        pass
+
+    @abstractmethod
+    def make_cell_triples(self):
+        pass
+
+
+class ColumnTripleMaker(TripleMaker):
     """
         Create triples in a controlled manned  for a specified column.
 
@@ -71,23 +87,28 @@ class ColumnTripleMaker(ABC):
 
     """
 
-    def __init__(self, df, column_mapping_dict, graph, uri_column="URI"):
+    def __init__(self, df, column_mapping_dict, graph, uri_valued_columns=[], uri_column="URI"):
         """
             initialise the column triple maker
-        :param df: the dataframe
+        :type uri_valued_columns: columns whose values are URIs, the rest are considered literals
+        :param df: the data frame
         :param uri_column: the column with uris
         :param column_mapping_dict: the mapping dictionary from column titles to rdf predicates e.g. {"column title":"predicate", }
         """
+        self.uri_valued_columns = uri_valued_columns
         self.df = df
         self.uri_column = uri_column
         self.column_mapping_dict = column_mapping_dict
         self.graph = graph
 
     def make_column_triples(self, target_column: "the target column",
-                            is_uri_column: "whether the values are URIs" = False,
-                            error_bad_lines: "should the bad lines be silently passed or raised as exceptions" = True):
+                            error_bad_lines: "should the bad lines be silently passed or raised as exceptions" = True,
+                            inplace: "should the triples be added directly to the graph or returned as a list" = True):
+
         """
 
+        :param inplace: if true the triples are added directly to the graph or,
+                        if false returned as a list; the default is true.
         :param target_column: the column to process
         :param error_bad_lines: should the bad lines be silently passed or raised as exceptions
         :return: the set of triples for the entire column
@@ -97,7 +118,7 @@ class ColumnTripleMaker(ABC):
         predicate = utils.qname_uri(self.column_mapping_dict[target_column], self.graph.namespaces())
         language = utils.qname_lang(self.column_mapping_dict[target_column])
 
-        if is_uri_column and language:
+        if target_column in self.uri_valued_columns and language:
             raise Exception(f"The column {target_column} cannot be an column with URIs and have a language "
                             f"tag @{language} in the mapped column property, which implies literal values.")
 
@@ -117,15 +138,15 @@ class ColumnTripleMaker(ABC):
             try:
                 subject = utils.qname_uri(quri, self.graph.namespaces())
 
-                if is_uri_column:
+                if target_column in self.uri_valued_columns:
                     oobject = utils.qname_uri(obj, self.graph.namespaces())
                 elif language:
-                    oobject = rdf.Literal(obj, lang=self.language)
+                    oobject = rdf.Literal(obj, lang=language)
                 else:
                     oobject = rdf.Literal(obj)
 
-                    # if everything went well so far, make the triples
-                result_triples.extend(self.make_cell_triples(subject, self.predicate, oobject))
+                # if everything went well so far, make the triples
+                result_triples.extend(self.make_cell_triples(subject, predicate, oobject))
             except Exception:
                 if error_bad_lines:
                     raise Exception(
@@ -135,8 +156,15 @@ class ColumnTripleMaker(ABC):
                         f"There is an error ar the row {quri} column {target_column}. The value {obj} was skipped.")
                     continue
 
+        #  add triples to the graph
+        if inplace:
+            for triple in result_triples:
+                self.graph.add(triple)
+
+        return result_triples
+
     @abstractmethod
-    def make_cell_triples(self, subject, predicate, oobject, controled_list_uri):
+    def make_cell_triples(self, subject, predicate, oobject):
         """
             for a given subject, predicate, object create the triples gor RDF graph.
             The triple can be simple or reified.
@@ -147,6 +175,8 @@ class ColumnTripleMaker(ABC):
 
 class SimpleTripleMaker(ColumnTripleMaker):
     """
+        build a triple per data frame cell
+
         make (s,p,o)
     """
 
@@ -156,21 +186,25 @@ class SimpleTripleMaker(ColumnTripleMaker):
 
 class ReifiedTripleMaker(ColumnTripleMaker):
     """
+        build a set of triples per data frame cell, corresponding to a reified structure
+
         make
             (s, p, o_uri),
             (o_uri, rdf:type, reification_class),
             (o_uri, reification_property, o),
     """
 
-    def __init__(self, df, uri_column, graph, reification_class="skosxl:Label",
+    def __init__(self, df, column_mapping_dict, graph, uri_column="URI",
+                 reification_class="skosxl:Label",
                  reification_property="skos:literalForm", ):
         self.reification_class = reification_class
         self.reification_property = reification_property
-        super().__init__(df, uri_column, graph, )
+        super().__init__(df, column_mapping_dict, graph, uri_valued_columns=[], uri_column=uri_column)
 
-    def make_cell_triples(self, subject, predicate, oobject, ):
+    def make_cell_triples(self, subject, predicate, oobject):
         r_class = utils.qname_uri(self.reification_class, self.graph.namespaces())
         r_property = utils.qname_uri(self.reification_property, self.graph.namespaces())
+
         # use the default namespace for intermediary/reification nodes
         r_uri = utils.qname_uri(":" + str(uuid.uuid4()), self.graph.namespaces())
         return [
@@ -178,3 +212,8 @@ class ReifiedTripleMaker(ColumnTripleMaker):
             tuple([r_uri, RDF.type, r_class]),
             tuple([r_uri, r_property, oobject]),
         ]
+
+# class MultiColumnTripleMaker(TripleMaker):
+#     """
+#         make triples
+#     """
