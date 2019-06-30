@@ -1,5 +1,6 @@
 uuid
 rdflib
 pandas
-warnings
-re
+jupyter
+jupyterlab
+xlrd
