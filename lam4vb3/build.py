@@ -4,7 +4,7 @@ Date: 29.06.19
 Author: Eugeniu Costetchi
 Email: costezki.eugen@gmail.com
 """
-
+import rdflib
 import rdflib as rdf
 import uuid
 from rdflib.namespace import RDF, RDFS, SKOS, DCTERMS, OWL, XMLNS, XSD
@@ -63,6 +63,41 @@ class TripleMaker(ABC):
     """
 
     @abstractmethod
+    def handle_subject(self, cell_value) -> rdflib.URIRef:
+        """
+        :param cell_value: string value of a dataframe cell with subject URI
+        :return: rdflib.URIRef
+        """
+
+    @abstractmethod
+    def handle_predicate(self, column_name) -> rdflib.URIRef:
+        """
+        :param column_name: string value of a dataframe column title. Resolve from mapping table
+        :return: rdflib.URIRef
+        """
+
+    @abstractmethod
+    def handle_data_type_from_predicate_signature(self, column_name) -> rdflib.URIRef:
+        """
+        :param column_name: string value of a dataframe column title. Resolve from the mapping table.
+        :return: rdflib.URIRef
+        """
+
+    @abstractmethod
+    def handle_literal_language_from_predicate_signature(self, column_name) -> str:
+        """
+        :param column_name: string value of a dataframe column title. Resolve from the mapping table.
+        :return: str
+        """
+
+    @abstractmethod
+    def handle_object(self, cell_value):
+        """
+        :param cell_value: string value of a dataframe cell
+        :return: an implementation specific result type
+        """
+
+    @abstractmethod
     def make_column_triples(self):
         pass
 
@@ -90,7 +125,7 @@ class ColumnTripleMaker(TripleMaker):
     def __init__(self, df, column_mapping_dict, graph, uri_valued_columns=[], uri_column="URI"):
         """
             initialise the column triple maker
-        :type uri_valued_columns: columns whose values are URIs, the rest are considered literals
+        :param uri_valued_columns: columns whose values are URIs, the rest are considered literals
         :param df: the data frame
         :param uri_column: the column with uris
         :param column_mapping_dict: the mapping dictionary from column titles to rdf predicates e.g. {"column title":"predicate", }
@@ -100,6 +135,27 @@ class ColumnTripleMaker(TripleMaker):
         self.uri_column = uri_column
         self.column_mapping_dict = column_mapping_dict
         self.graph = graph
+
+    def handle_subject(self, cell_value) -> rdflib.URIRef:
+        return utils.qname_uri(cell_value, self.graph.namespaces())
+
+    def handle_predicate(self, column_name) -> rdflib.URIRef:
+        return utils.qname_uri(self.column_mapping_dict[column_name], self.graph.namespaces())
+
+    def handle_data_type_from_predicate_signature(self, column_name) -> rdflib.URIRef:
+        """
+        :param column_name: string value of a dataframe column title. Resolve from the mapping table.
+        :return: rdflib.URIRef
+        """
+        # TODO: implement something better
+        return XSD.string
+
+    def handle_literal_language_from_predicate_signature(self, column_name) -> str:
+        """
+        :param column_name: string value of a dataframe column title. Resolve from the mapping table.
+        :return: str
+        """
+        utils.qname_lang(self.column_mapping_dict[column_name])
 
     def make_column_triples(self, target_column: "the target column",
                             error_bad_lines: "should the bad lines be silently passed or raised as exceptions" = True,
@@ -115,8 +171,9 @@ class ColumnTripleMaker(TripleMaker):
         """
         result_triples = []
 
-        predicate = utils.qname_uri(self.column_mapping_dict[target_column], self.graph.namespaces())
-        language = utils.qname_lang(self.column_mapping_dict[target_column])
+        predicate = self.handle_predicate(target_column)
+        language = self.handle_literal_language_from_predicate_signature(target_column)
+        data_type = self.handle_data_type_from_predicate_signature(target_column)
 
         if target_column in self.uri_valued_columns and language:
             raise Exception(f"The column {target_column} cannot be an column with URIs and have a language "
@@ -136,7 +193,7 @@ class ColumnTripleMaker(TripleMaker):
 
             # try to do prepare cell values or fail
             try:
-                subject = utils.qname_uri(quri, self.graph.namespaces())
+                subject = self.handle_subject(quri)
 
                 if target_column in self.uri_valued_columns:
                     oobject = utils.qname_uri(obj, self.graph.namespaces())
