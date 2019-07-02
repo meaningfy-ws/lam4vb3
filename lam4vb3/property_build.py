@@ -63,7 +63,7 @@ def create_concepts(df, graph):
         graph.add((subject, SKOS.topConceptOf, LAM_MD_CS))  # supposed to be skos:inScheme
 
         # add descriptive triples with URI values for each column
-        simple_uri_maker = build.SimpleTripleMaker(df,
+        simple_uri_maker = build.ColumnTripleMaker(df,
                                                    uri_column=URI_COLUMN,
                                                    column_mapping_dict=LAM_PROPERTIES_DESCRIPTIVE_COLUMNS,
                                                    uri_valued_columns=URI_VALUED_COLUMNS,

@@ -4,3 +4,4 @@ pandas
 jupyter
 jupyterlab
 xlrd
+Deprecated

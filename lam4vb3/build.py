@@ -14,6 +14,8 @@ import lam4vb3.lam_utils as utils
 import pandas as pd
 import warnings
 
+from deprecated import deprecated
+
 # namespace definitions
 
 DCT = DCTERMS
@@ -148,14 +150,29 @@ class ColumnTripleMaker(TripleMaker):
         :return: rdflib.URIRef
         """
         # TODO: implement something better
-        return XSD.string
+        # return XSD.string
+        return None
 
     def handle_literal_language_from_predicate_signature(self, column_name) -> str:
         """
         :param column_name: string value of a dataframe column title. Resolve from the mapping table.
         :return: str
         """
-        utils.qname_lang(self.column_mapping_dict[column_name])
+        return utils.qname_lang(self.column_mapping_dict[column_name])
+
+    def handle_object(self, cell_value, target_column, language=None, data_type=None):
+
+        if not cell_value or pd.isna(cell_value):
+            return None
+
+        if target_column in self.uri_valued_columns:
+            return utils.qname_uri(cell_value, self.graph.namespaces())
+        elif language:
+            return rdf.Literal(cell_value, lang=language)
+        elif language:
+            return rdf.Literal(cell_value, datatype=data_type)
+        else:
+            return rdf.Literal(cell_value)
 
     def make_column_triples(self, target_column: "the target column",
                             error_bad_lines: "should the bad lines be silently passed or raised as exceptions" = True,
@@ -175,39 +192,24 @@ class ColumnTripleMaker(TripleMaker):
         language = self.handle_literal_language_from_predicate_signature(target_column)
         data_type = self.handle_data_type_from_predicate_signature(target_column)
 
-        if target_column in self.uri_valued_columns and language:
-            raise Exception(f"The column {target_column} cannot be an column with URIs and have a language "
-                            f"tag @{language} in the mapped column property, which implies literal values.")
+        if target_column in self.uri_valued_columns and (language or data_type):
+            raise Exception(f"The column {target_column} cannot be an column with URIs and, at the same time,"
+                            f"have a language tag ({language}) or a data type ({data_type}) in the mapped column property.")
 
         # create triples for each value in the column
         for quri, obj in zip(self.df[self.uri_column], self.df[target_column]):
-            # without an uri we cannot do much
-            if pd.isna(quri):
-                if error_bad_lines:
-                    raise Exception("Encountered a row without an URI.")
-                else:
-                    continue
-            # skip nan cells
-            if pd.isna(obj):
-                continue
-
-            # try to do prepare cell values or fail
             try:
                 subject = self.handle_subject(quri)
-
-                if target_column in self.uri_valued_columns:
-                    oobject = utils.qname_uri(obj, self.graph.namespaces())
-                elif language:
-                    oobject = rdf.Literal(obj, lang=language)
-                else:
-                    oobject = rdf.Literal(obj)
+                oobject = self.handle_object(obj, target_column, language, data_type)
 
                 # if everything went well so far, make the triples
                 result_triples.extend(self.make_cell_triples(subject, predicate, oobject))
+
             except Exception:
                 if error_bad_lines:
                     raise Exception(
-                        f"Could not create triples for the column {target_column}. There is an error ar the row {quri}.")
+                        f"Could not create triples for the column {target_column}. "
+                        f"There is an error ar the row {quri} and cell value {obj}.")
                 else:
                     warnings.warn(
                         f"There is an error ar the row {quri} column {target_column}. The value {obj} was skipped.")
@@ -220,16 +222,19 @@ class ColumnTripleMaker(TripleMaker):
 
         return result_triples
 
-    @abstractmethod
     def make_cell_triples(self, subject, predicate, oobject):
         """
             for a given subject, predicate, object create the triples gor RDF graph.
             The triple can be simple or reified.
             @return a list of triple tuples
         """
-        pass
+        if oobject:
+            return [tuple([subject, predicate, oobject])]
+
+        return []
 
 
+@deprecated
 class SimpleTripleMaker(ColumnTripleMaker):
     """
         build a triple per data frame cell
@@ -252,11 +257,16 @@ class ReifiedTripleMaker(ColumnTripleMaker):
     """
 
     def __init__(self, df, column_mapping_dict, graph, uri_column="URI",
+                 uri_valued_columns=[],
                  reification_class="skosxl:Label",
                  reification_property="skos:literalForm", ):
         self.reification_class = reification_class
         self.reification_property = reification_property
-        super().__init__(df, column_mapping_dict, graph, uri_valued_columns=[], uri_column=uri_column)
+        super().__init__(df, column_mapping_dict=column_mapping_dict, graph=graph,
+                         uri_valued_columns=uri_valued_columns, uri_column=uri_column)
+
+    def handle_object(self, cell_value, target_column, language=None, data_type=None):
+        return super().handle_object(cell_value, target_column, language, data_type)
 
     def make_cell_triples(self, subject, predicate, oobject):
         r_class = utils.qname_uri(self.reification_class, self.graph.namespaces())
@@ -274,3 +284,15 @@ class ReifiedTripleMaker(ColumnTripleMaker):
 #     """
 #         make triples
 #     """
+
+
+def cell_value_parser(cell_value, graph, is_uri=False):
+    """
+        implement all the conventions for specifying the cell values :
+
+
+    :param cell_value:
+    :param graph:
+    :param is_uri:
+    :return:
+    """

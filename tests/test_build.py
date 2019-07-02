@@ -8,6 +8,7 @@ Email: costezki.eugen@gmail.com
 import unittest
 import pandas as pd
 import numpy as np
+import rdflib
 
 from lam4vb3 import build
 
@@ -64,17 +65,51 @@ class MyTestCase(unittest.TestCase):
             'Changes to be done': 'skos:editorialNote@en',
         }
 
+        self.uri_valued_columns = ['property', 'controlled value _property']
+
         self.graph = build.make_lam_graph()
 
+        self.cell_value_variants_properties = [None, np.nan, "", "literal", "literal_line \nnew_line_literal",
+                                               "skos:prefLabel",
+                                               "skos:prefLabel\nskos:altLabel",
+                                               ]
+        self.cell_value_variants_classes = [None, np.nan, "", "Y", "Y     ", "N  ", "YU", "OU", "O", "N",
+                                            "Y | some comment", "N | some comment", " YU ~ some comment", "yes,",
+                                            "according to text", "no", "value", "value | with a comment",
+                                            "value ~ with another comment", "value1 \n value2",
+                                            "value1 \n value2 | comment",
+                                            "skos:prefLabel \n skos:altLabel | comment", "value1\nvalue2"
+                                            ]
+
+    def test_triple_maker(self):
+        s = build.ColumnTripleMaker(df=self.test_df, column_mapping_dict=self.column_mappings,
+                                    uri_valued_columns=self.uri_valued_columns, graph=self.graph)
+        assert s.handle_subject("skos:Concept") == rdflib.URIRef(
+            "http://www.w3.org/2004/02/skos/core#Concept"), "A concept is a concept"
+        assert s.handle_predicate("Code") == rdflib.URIRef(
+            "http://www.w3.org/2004/02/skos/core#notation"), "The code is a notation"
+        assert s.handle_literal_language_from_predicate_signature("Label") == "en", "English language expected"
+
+    def test_triple_maker_object_handlimg(self):
+        s = build.ColumnTripleMaker(df=self.test_df, column_mapping_dict=self.column_mappings,
+                                    uri_valued_columns=self.uri_valued_columns, graph=self.graph)
+        assert s.handle_object("value", "Label", language="en") == rdflib.Literal("value",
+                                                                                  lang="en"), "'value'@en expected"
+        assert s.handle_object(None, "Label", ) is None, "None expected"
+        assert s.handle_object("skos:prefLabel", "property") == rdflib.URIRef(
+            "http://www.w3.org/2004/02/skos/core#prefLabel"), "skos:prefLabel expected"
+
     def test_simple_triple_maker(self):
-        s = build.SimpleTripleMaker(df=self.test_df, column_mapping_dict=self.column_mappings, graph=self.graph)
+        s = build.ColumnTripleMaker(df=self.test_df, column_mapping_dict=self.column_mappings,
+                                    uri_valued_columns=self.uri_valued_columns, graph=self.graph)
         triples = s.make_column_triples(target_column="Label", )
         print(len(triples))
         assert len(triples) > 4, "Must have some triples generated"
         assert len(self.graph) > 4, "Must have some triples in the graph"
 
     def test_reified_triple_maker(self):
-        s = build.ReifiedTripleMaker(df=self.test_df, column_mapping_dict=self.column_mappings, graph=self.graph)
+        s = build.ReifiedTripleMaker(df=self.test_df, column_mapping_dict=self.column_mappings,
+                                     uri_valued_columns=self.uri_valued_columns, graph=self.graph)
         triples = s.make_column_triples(target_column="Label", )
         assert len(triples) > 14, "Must have some triples generated"
         assert len(self.graph) > 14, "Must have some triples in the graph"
