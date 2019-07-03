@@ -69,17 +69,29 @@ class MyTestCase(unittest.TestCase):
 
         self.graph = build.make_lam_graph()
 
-        self.cell_value_variants_properties = [None, np.nan, "", "literal", "literal_line \nnew_line_literal",
-                                               "skos:prefLabel",
-                                               "skos:prefLabel\nskos:altLabel",
-                                               ]
-        self.cell_value_variants_classes = [None, np.nan, "", "Y", "Y     ", "N  ", "YU", "OU", "O", "N",
-                                            "Y | some comment", "N | some comment", " YU ~ some comment", "yes,",
-                                            "according to text", "no", "value", "value | with a comment",
-                                            "value ~ with another comment", "value1 \n value2",
-                                            "value1 \n value2 | comment",
-                                            "skos:prefLabel \n skos:altLabel | comment", "value1\nvalue2"
-                                            ]
+        # self.cell_value_variants_properties = [None, np.nan, "", "literal", "literal_line \nnew_line_literal",
+        #                                        "skos:prefLabel",
+        #                                        "skos:prefLabel\nskos:altLabel",
+        #                                        ]
+
+        self.multi_line_literals = ["literal", "literal_line \nnew_line_literal",
+                                    "skos:prefLabel",
+                                    "skos:prefLabel\nskos:altLabel", ]
+
+        self.multi_line_uris = ["skos:prefLabel",
+                                "skos:prefLabel\nskos:altLabel\nskos:note", ]
+
+        self.multi_line_parse_value_and_comment_cell_examples = ["value ~ with another comment", "value1 \n value2",
+                                                                 "value1 \n value2 | comment",
+                                                                 "skos:prefLabel \n skos:altLabel ~ comment", ]
+
+        # self.cell_value_variants_classes = [None, np.nan, "", "Y", "Y     ", "N  ", "YU", "OU", "O", "N",
+        #                                     "Y | some comment", "N | some comment", " YU ~ some comment", "yes,",
+        #                                     "according to text", "no", "value", "value | with a comment",
+        #                                     "value ~ with another comment", "value1 \n value2",
+        #                                     "value1 \n value2 | comment",
+        #                                     "skos:prefLabel \n skos:altLabel | comment", "value1\nvalue2"
+        #                                     ]
 
     def test_triple_maker(self):
         s = build.ColumnTripleMaker(df=self.test_df, column_mapping_dict=self.column_mappings,
@@ -113,6 +125,28 @@ class MyTestCase(unittest.TestCase):
         triples = s.make_column_triples(target_column="Label", )
         assert len(triples) > 14, "Must have some triples generated"
         assert len(self.graph) > 14, "Must have some triples in the graph"
+
+    def test_multi_line_values(self):
+        for l in self.multi_line_literals:
+            assert isinstance(build.parse_multi_line_literal_value(l, language="en")[0],
+                              rdflib.Literal), "expecting literals"
+
+    def test_multi_line_uris(self):
+        for l in self.multi_line_uris:
+            assert isinstance(build.parse_multi_line_uri_value(l, self.graph)[0],
+                              rdflib.URIRef), "expecting URIS"
+
+    def test_parse_value_and_comment_cell(self):
+        for l in self.multi_line_parse_value_and_comment_cell_examples:
+            # print( len(build.parse_value_and_comment_cell(l)) )
+            assert len(build.parse_value_and_comment_cell(l)) == 2, "expecting tuples"
+
+        assert build.parse_value_and_comment_cell(self.multi_line_parse_value_and_comment_cell_examples[1])[
+                   1] is None, \
+            "expecting a tuple with second value missing"
+
+        for l in self.multi_line_parse_value_and_comment_cell_examples:
+            assert 1 <= len(build.parse_multi_line_parse_value_and_comment_cell(l)) <= 2, "expecting one or two tuples"
 
 
 if __name__ == '__main__':

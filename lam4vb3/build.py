@@ -4,6 +4,8 @@ Date: 29.06.19
 Author: Eugeniu Costetchi
 Email: costezki.eugen@gmail.com
 """
+import re
+
 import rdflib
 import rdflib as rdf
 import uuid
@@ -161,18 +163,10 @@ class ColumnTripleMaker(TripleMaker):
         return utils.qname_lang(self.column_mapping_dict[column_name])
 
     def handle_object(self, cell_value, target_column, language=None, data_type=None):
-
-        if not cell_value or pd.isna(cell_value):
-            return None
-
-        if target_column in self.uri_valued_columns:
-            return utils.qname_uri(cell_value, self.graph.namespaces())
-        elif language:
-            return rdf.Literal(cell_value, lang=language)
-        elif language:
-            return rdf.Literal(cell_value, datatype=data_type)
-        else:
-            return rdf.Literal(cell_value)
+        if cell_value:
+            if target_column in self.uri_valued_columns:
+                return parse_uri_value(cell_value=cell_value, graph=self.graph)
+            return parse_literal_value(cell_value, language=language, data_type=data_type)
 
     def make_column_triples(self, target_column: "the target column",
                             error_bad_lines: "should the bad lines be silently passed or raised as exceptions" = True,
@@ -280,19 +274,90 @@ class ReifiedTripleMaker(ColumnTripleMaker):
             tuple([r_uri, r_property, oobject]),
         ]
 
+
 # class MultiColumnTripleMaker(TripleMaker):
 #     """
 #         make triples
 #     """
 
 
-def cell_value_parser(cell_value, graph, is_uri=False):
+def parse_literal_value(cell_value, language=None, data_type=None):
     """
-        implement all the conventions for specifying the cell values :
 
+    :param cell_value:
+    :param language:
+    :param data_type:
+    :return:
+    """
+    if language:
+        return rdf.Literal(cell_value, lang=language)
+    elif data_type:
+        return rdf.Literal(cell_value, datatype=data_type)
+    else:
+        return rdf.Literal(cell_value)
+
+
+def parse_uri_value(cell_value, graph):
+    """
+        get an URI from the cell value
+    :param cell_value:
+    :param graph:
+    :return:
+    """
+    return utils.qname_uri(str.strip(cell_value), graph.namespaces())
+
+
+def parse_multi_line_literal_value(cell_value, language=None, data_type=None) -> list:
+    """
+        return a list of literal values separated by line
+    :param cell_value:
+    :param language:
+    :param data_type:
+    :return:
+    """
+    return [parse_literal_value(str.strip(x), language=language, data_type=data_type)
+            for x in re.split(r"\n", cell_value) if x]
+
+
+def parse_multi_line_uri_value(cell_value, graph):
+    """
 
     :param cell_value:
     :param graph:
-    :param is_uri:
     :return:
     """
+    return [parse_uri_value(str.strip(x), graph=graph)
+            for x in re.split(r"\n", cell_value) if x]
+
+
+def parse_value_and_comment_cell(cell_value) -> ("cell value", "cell comment"):
+    """
+        return the tuple (value,comment) spiting the cell_value into the actual value and the comment,
+        which is the part after the special character pipe (|) or tilda (~). If no comment is provided None is returned
+
+        note: not URI or Literal instances are created
+
+        examples:
+            value1 | with a comment
+            value2 ~ with another comment
+
+    :param cell_value:
+    :return:
+    """
+    s = [str.strip(x) for x in re.split(r"[~\|]", cell_value) if x]
+    value = s[0] if s else None
+    comment = s[1] if len(s) > 1 else None
+    return value, comment
+
+
+def parse_multi_line_parse_value_and_comment_cell(cell_value) -> [("cell value", "cell comment")]:
+    """
+        return a list of tuples where each tuple is a (value,comment) split
+
+        note: not URI or Literal instances are created
+
+    :param cell_value:
+    :return:
+    """
+    lines = [str.strip(x) for x in re.split(r"\n", cell_value) if x]
+    return [parse_value_and_comment_cell(x) for x in lines if x]

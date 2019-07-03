@@ -7,6 +7,7 @@ Email: costezki.eugen@gmail.com
 This module deals with loading and generating RDF structures for the metadata/property worksheets
 
 """
+import re
 
 import rdflib
 from rdflib.namespace import RDF, RDFS, SKOS, DCTERMS, OWL, XMLNS, XSD
@@ -70,3 +71,27 @@ def create_concepts(df, graph):
                                                    graph=graph)
         for column_name in LAM_PROPERTIES_DESCRIPTIVE_COLUMNS.keys():
             simple_uri_maker.make_column_triples(target_column=column_name)
+
+
+# def cell_value_parser_property_conventions(cell_value, graph, split_new_lines=True):
+#     """
+#         implement all the conventions for specifying the cell values :
+#         * if it is a uri or controlled value cell, it may contain multiple uris
+#         separated by a line break, i.e. multiple lines in the same cell
+#         * if the cell is a literal comment then it is taken as such
+#
+#     :param cell_value:
+#     :param graph:
+#     :param is_uri:
+#     :return:
+#     """
+#     # property_re = re.compile(r"(None|nan)|([\w:\\\/]+(?:\n|\s)*)")
+#     if split_new_lines:
+#         property_re_uri = re.compile(r"[\n]+")
+#         s = [str.strip(x) for x in property_re_uri.split(str(cell_value)) if x]
+#         if len(s) == 1:
+#             return s[0]
+#         else:
+#             return s
+#
+#     return cell_value
