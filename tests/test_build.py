@@ -85,68 +85,71 @@ class MyTestCase(unittest.TestCase):
                                                                  "value1 \n value2 | comment",
                                                                  "skos:prefLabel \n skos:altLabel ~ comment", ]
 
-        # self.cell_value_variants_classes = [None, np.nan, "", "Y", "Y     ", "N  ", "YU", "OU", "O", "N",
-        #                                     "Y | some comment", "N | some comment", " YU ~ some comment", "yes,",
-        #                                     "according to text", "no", "value", "value | with a comment",
-        #                                     "value ~ with another comment", "value1 \n value2",
-        #                                     "value1 \n value2 | comment",
-        #                                     "skos:prefLabel \n skos:altLabel | comment", "value1\nvalue2"
-        #                                     ]
-
     def test_triple_maker(self):
-        s = build.ColumnTripleMaker(df=self.test_df, column_mapping_dict=self.column_mappings,
-                                    uri_valued_columns=self.uri_valued_columns, graph=self.graph)
+        s = build.PlainColumnTripleMaker(df=self.test_df, column_mapping_dict=self.column_mappings,
+                                         uri_valued_columns=self.uri_valued_columns, graph=self.graph)
         assert s.handle_subject("skos:Concept") == rdflib.URIRef(
             "http://www.w3.org/2004/02/skos/core#Concept"), "A concept is a concept"
         assert s.handle_predicate("Code") == rdflib.URIRef(
             "http://www.w3.org/2004/02/skos/core#notation"), "The code is a notation"
         assert s.handle_literal_language_from_predicate_signature("Label") == "en", "English language expected"
 
-    def test_triple_maker_object_handlimg(self):
-        s = build.ColumnTripleMaker(df=self.test_df, column_mapping_dict=self.column_mappings,
-                                    uri_valued_columns=self.uri_valued_columns, graph=self.graph)
+    def test_triple_maker_object_handling(self):
+        s = build.PlainColumnTripleMaker(df=self.test_df, column_mapping_dict=self.column_mappings,
+                                         uri_valued_columns=self.uri_valued_columns, graph=self.graph)
         assert s.handle_object("value", "Label", language="en") == rdflib.Literal("value",
                                                                                   lang="en"), "'value'@en expected"
         assert s.handle_object(None, "Label", ) is None, "None expected"
         assert s.handle_object("skos:prefLabel", "property") == rdflib.URIRef(
             "http://www.w3.org/2004/02/skos/core#prefLabel"), "skos:prefLabel expected"
 
+    def test_triple_maker_object_multi_line(self):
+        maker = build.PlainColumnTripleMaker(df=self.test_df, column_mapping_dict=self.column_mappings,
+                                             uri_valued_columns=self.uri_valued_columns,
+                                             multi_line_columns=["Label"], graph=self.graph)
+        assert len(
+            maker.handle_object("value1\nvalue2\nvalue3", "Label", language="en")) == 3, "multiple values expected"
+        s = rdflib.URIRef("http://www.w3.org/2004/02/skos/core#s")
+        p = rdflib.URIRef("http://www.w3.org/2004/02/skos/core#p")
+
+        oo = maker.handle_object("value1\nvalue2\nvalue3", "Label", language="en")
+        t = maker.make_cell_triples(s, p, oo)
+        print(t)
+
     def test_simple_triple_maker(self):
-        s = build.ColumnTripleMaker(df=self.test_df, column_mapping_dict=self.column_mappings,
-                                    uri_valued_columns=self.uri_valued_columns, graph=self.graph)
+        s = build.PlainColumnTripleMaker(df=self.test_df, column_mapping_dict=self.column_mappings,
+                                         uri_valued_columns=self.uri_valued_columns, graph=self.graph)
         triples = s.make_column_triples(target_column="Label", )
         print(len(triples))
         assert len(triples) > 4, "Must have some triples generated"
         assert len(self.graph) > 4, "Must have some triples in the graph"
 
     def test_reified_triple_maker(self):
-        s = build.ReifiedTripleMaker(df=self.test_df, column_mapping_dict=self.column_mappings,
-                                     uri_valued_columns=self.uri_valued_columns, graph=self.graph)
+        s = build.ReifiedColumnTripleMaker(df=self.test_df, column_mapping_dict=self.column_mappings,
+                                           uri_valued_columns=self.uri_valued_columns, graph=self.graph)
         triples = s.make_column_triples(target_column="Label", )
         assert len(triples) > 14, "Must have some triples generated"
         assert len(self.graph) > 14, "Must have some triples in the graph"
 
     def test_multi_line_values(self):
         for l in self.multi_line_literals:
-            assert isinstance(build.parse_multi_line_literal_value(l, language="en")[0],
+            assert isinstance(build.parse_multi_line_value(l, language="en")[0],
                               rdflib.Literal), "expecting literals"
 
     def test_multi_line_uris(self):
         for l in self.multi_line_uris:
-            assert isinstance(build.parse_multi_line_uri_value(l, self.graph)[0],
+            assert isinstance(build.parse_multi_line_value(l, graph=self.graph)[0],
                               rdflib.URIRef), "expecting URIS"
 
     def test_parse_value_and_comment_cell(self):
         for l in self.multi_line_parse_value_and_comment_cell_examples:
-            # print( len(build.parse_value_and_comment_cell(l)) )
-            assert len(build.parse_value_and_comment_cell(l)) == 2, "expecting tuples"
+            assert len(build.parse_commented_value(l)) == 2, "expecting tuples"
 
-        assert build.parse_value_and_comment_cell(self.multi_line_parse_value_and_comment_cell_examples[1])[
-                   1] is None, \
+        assert build.parse_commented_value(self.multi_line_parse_value_and_comment_cell_examples[1])[1] is None, \
             "expecting a tuple with second value missing"
 
         for l in self.multi_line_parse_value_and_comment_cell_examples:
-            assert 1 <= len(build.parse_multi_line_parse_value_and_comment_cell(l)) <= 2, "expecting one or two tuples"
+            assert 1 <= len(build.parse_multi_line_commented_value(l)) <= 2, "expecting one or two tuples"
 
 
 if __name__ == '__main__':

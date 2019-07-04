@@ -37,3 +37,15 @@ def qname_lang(qname):
         return the language of this qname provided that the prefix is found in the list of namescapce tuples 
     """
     return parse_qname(qname)[2]
+
+
+def normalise_namespace_mapping_dict(df, prefix_column="prefix", uri_column="uri"):
+    """
+        TODO: unify a common library, this function is taken from rdf finger-printer project
+
+    :param namespace_mapping_dict:
+    :return:
+    """
+    namespace_mapping_dict = (dict(zip(df[prefix_column], df[uri_column])))
+    return {str(k).strip() if str(k).endswith(":") else str(str(k) + ":"): str(v).strip() for k, v in
+            namespace_mapping_dict.items()}
