@@ -16,10 +16,16 @@ import lam4vb3.lam_utils as utils
 import pandas as pd
 import warnings
 
+from lam4vb3 import lam_utils
+
 
 def make_graph(df, prefix_column="prefix", uri_column="uri"):
     """
         init the LAM data graph
+
+    :param uri_column: the column in df that contains base namespace URIs
+    :param prefix_column: the column in df that provides prefixes to be used in qnames
+    :param df: the data frame containing namespace defitions
     """
     graph = rdflib.Graph()
 
@@ -33,10 +39,11 @@ def make_graph(df, prefix_column="prefix", uri_column="uri"):
     graph.bind("xml", rdflib.namespace.XMLNS)
 
     # normalise the prefixes read into a dataframe
+    df.fillna("", inplace=True)
     namespace_mapping_dict = dict(zip(df[prefix_column], df[uri_column]))
     ns_dict = {str(k).replace(":", ""):
                    str(v).strip() if (str(v).endswith("/") or str(v).endswith("#"))
-                   else str(str(k) + ":") for k, v in namespace_mapping_dict.items() if k and v}
+                   else str(str(k) + ":") for k, v in namespace_mapping_dict.items() if v}
 
     for k, v in ns_dict.items():
         graph.bind(k, rdflib.Namespace(v))
@@ -115,7 +122,6 @@ class ColumnTripleMaker(TripleMaker, ABC):
         :param multi_line_columns: which columns should be considered multiline values or single values
         :param uri_valued_columns: columns whose values are URIs, the rest are considered literals
         :param df: the data frame
-        :param uri_column: the column with uris
         :param column_mapping_dict: the mapping dictionary from column titles to rdf predicates e.g. {"column title":"predicate", }
         """
         self.multi_line_columns = multi_line_columns
@@ -267,14 +273,14 @@ class ReifiedColumnTripleMaker(ColumnTripleMaker):
         ]
 
 
-def generate_uri(value, namespace):
-    """
-        strip and replace spaces by dash in the value and then create a uri using the namespace.
-    :param value:
-    :param namespace:
-    :return:
-    """
-    return namespace[str.strip(value).replace(" ", "-")]
+# def generate_uri(value, namespace):
+#     """
+#         strip and replace spaces by dash in the value and then create a uri using the namespace.
+#     :param value:
+#     :param namespace:
+#     :return:
+#     """
+#     return namespace[str.strip(value).replace(" ", "-")]
 
 
 def parse_value(value, graph=None, language=None, data_type=None):
@@ -310,7 +316,7 @@ def parse_multi_line_value(multi_line_value, graph=None, language=None, data_typ
     :return:
     """
     return [parse_value(x, graph=graph, language=language, data_type=data_type)
-            for x in re.split(r"\n", multi_line_value) if x]
+            for x in re.split(r"[\n,]", multi_line_value) if x]
 
 
 def parse_commented_value(commented_value, graph=None, language=None, data_type=None) -> (
@@ -350,3 +356,209 @@ def parse_multi_line_commented_value(multi_line_commented_value, graph=None, lan
     lines = [str.strip(x) for x in re.split(r"\n", multi_line_commented_value) if x]
     return [parse_commented_value(x, graph=graph, language=language, data_type=data_type) for x in lines
             if x]
+
+
+class ReifiedMultiColumnTripleMaker(TripleMaker):
+    """
+
+    """
+
+    def __init__(self, df,
+                 column_mapping_dict,
+                 graph,
+                 target_columns=[],
+                 uri_valued_columns=[],
+                 subject_source="URI",
+                 multi_line_columns=[],
+                 reification_class="lam:AnnotationConfiguration",
+                 reification_property="rdfs:isDefinedBy",
+                 reified_columns=[], ):
+        self.target_columns = target_columns
+        self.reified_columns = reified_columns
+        self.reification_property = reification_property
+        self.reification_class = reification_class
+        self.multi_line_columns = multi_line_columns
+        self.subject_source = subject_source
+        self.uri_valued_columns = uri_valued_columns
+        self.graph = graph
+        self.column_mapping_dict = column_mapping_dict
+        self.df = df
+
+
+class MultiColumnTripleMaker(TripleMaker):
+    """
+
+    """
+
+    def __init__(self, df,
+                 column_mapping_dict,
+                 graph,
+                 target_columns=[],
+                 uri_valued_columns=[],
+                 subject_source="URI",
+                 multi_line_columns=[], ):
+        """
+
+        :param df:
+        :param column_mapping_dict:
+        :param graph:
+        :param target_columns: can contain (a) a column name to use as subject URIs,
+                                (b) if the column does not contain
+                                uris then the values are used to generate random URIs (warning, repeated values will
+                                lead to generation of the same URI and thus to creation of conflated concepts);
+                                (c) if the value is None or the column does not exit then random URIs are generated
+                                based on the row id
+        :param uri_valued_columns:
+        :param subject_source:
+        :param multi_line_columns:
+        """
+
+        self.target_columns = target_columns
+        self.multi_line_columns = multi_line_columns
+        self.subject_source = subject_source
+        self.uri_valued_columns = uri_valued_columns
+        self.graph = graph
+        self.column_mapping_dict = column_mapping_dict
+        self.df = df
+
+    def handle_subject(self, row_index, seed="") -> rdflib.URIRef:
+        """
+        :param seed: an additional seed for random generation
+        :param row_index: index of the target row
+        :return: rdflib.URIRef
+        """
+        # if subject source is a column in the DF then make URI of it.
+        if self.subject_source in self.df.columns:
+            try:
+                # try to parse it as a qualified uri
+                return utils.qname_uri(self.df.loc[row_index, self.subject_source], self.graph.namespaces())
+            except Exception:
+                # if not then dont raise exception but use the values for random generation instead
+                return lam_utils.generate_uuid_uri(self.df.loc[row_index, self.subject_source],
+                                                   seed=str(self.df.head()) + str(seed),
+                                                   graph=self.graph,
+                                                   prefix="res_")
+
+        return lam_utils.generate_uuid_uri(row_index,
+                                           seed=str(self.df.head()) + str(seed),
+                                           graph=self.graph,
+                                           prefix="res_")
+
+    def handle_predicate(self, column_name) -> rdflib.URIRef:
+        return utils.qname_uri(self.column_mapping_dict[column_name], self.graph.namespaces())
+
+    def handle_data_type_from_predicate_signature(self, column_name) -> rdflib.URIRef:
+        # return XSD.string
+        return None
+
+    def handle_literal_language_from_predicate_signature(self, column_name) -> str:
+        return utils.qname_lang(self.column_mapping_dict[column_name])
+
+    def handle_object(self, row_index, target_column, language=None, data_type=None):
+        cell_value = self.df.loc[row_index, target_column]
+
+        if cell_value and pd.notna(cell_value):
+            if target_column in self.multi_line_columns:
+                objects = parse_multi_line_value(cell_value,
+                                                 graph=self.graph if target_column in self.uri_valued_columns else None,
+                                                 language=language,
+                                                 data_type=data_type, )
+                return [x for x in objects if x]
+
+            return parse_value(cell_value,
+                               graph=self.graph if target_column in self.uri_valued_columns else None,
+                               language=language,
+                               data_type=data_type, )
+
+    def make_column_triples(self):
+        # not useful
+        # self.make_triples()
+        pass
+
+    def make_triples(self, error_bad_lines=True, inplace=True):
+        """
+
+        :return:
+        """
+        result_triples = []
+
+        for index, row in self.df.iterrows():
+            row_subject = self.handle_subject(index, seed=str(self.target_columns))
+
+            for column in self.target_columns:
+                try:
+                    column_predicate = self.handle_predicate(column_name=column)
+                    column_data_type = self.handle_data_type_from_predicate_signature(column_name=column)
+                    column_language = self.handle_literal_language_from_predicate_signature(column_name=column)
+                    _object = self.handle_object(row_index=index,
+                                                 target_column=column,
+                                                 language=column_language,
+                                                 data_type=column_data_type)
+                    # if everything si according to the plan, fine
+                    result_triples.extend(self.make_cell_triples(row_subject, column_predicate, _object))
+
+                except Exception:
+                    if error_bad_lines:
+                        raise Exception(
+                            f"Could not create triples for the column {column}. "
+                            f"There is an error ar the row {index} and cell value: {self.df.loc[index, column]}")
+                    else:
+                        warnings.warn(
+                            f"There is an error ar the row {index} column {column}. "
+                            f"Cell value: {self.df.loc[index, column]}")
+                        continue
+
+        #  add triples to the graph
+        if inplace:
+            add_triples_to_graph(result_triples=result_triples, graph=self.graph)
+
+        return result_triples
+
+    def make_cell_triples(self, subject, predicate, oobject):
+        """
+            for a given subject, predicate, object create the triples gor RDF graph.
+            The triple can be simple or reified.
+            @return a list of triple tuples
+        """
+        if isinstance(oobject, list):
+            return [tuple([subject, predicate, o]) for o in oobject if o]
+        elif oobject:
+            return [tuple([subject, predicate, oobject])]
+        return []
+
+    def make_row_triples(self):
+        pass
+
+
+def get_subjects_from_triples(resulting_triples):
+    return list(set([s for s, p, o in resulting_triples]))
+
+
+def apply_values_to_triple_pattern(values, triple_pattern):
+    """
+        triple pattern is a list of triple tuples [(s,p,o) , ...]
+        values is a list of literals or uris
+        for each value the triple pattern is repeated filling in places where the pattern has a None value.
+
+        For example givent the triple pattern [(None,rdf:type,skos:Concept)] abd values [:c1, :c2], generate
+        [(:C1,rdf:type,skos:Concept), (:c2,rdf:type,skos:Concept)]
+    """
+    result_triples = []
+    for value in values:
+        for triple in triple_pattern:
+            s, p, o = triple
+            new_triple = tuple([s if s is not None else value,
+                                p if p is not None else value,
+                                o if o is not None else value, ])
+            result_triples.append(new_triple)
+
+    return result_triples
+
+
+def add_triples_to_graph(result_triples, graph):
+    """
+
+    :return:
+    """
+    for triple in result_triples:
+        graph.add(triple)

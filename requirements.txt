@@ -5,3 +5,4 @@ jupyter
 jupyterlab
 xlrd
 Deprecated
+shortuuid

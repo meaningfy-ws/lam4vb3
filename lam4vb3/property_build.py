@@ -34,7 +34,6 @@ MULTI_LINE_URI_COLUMNS = {
     'controlled value _property': 'sh:class',
 }
 
-
 COLUMN_ANNOTATION_ASSOCIATIONS = [('annotation_1', 'controlled value_annotation_1'),
                                   ('annotation_2', 'controlled value_annotation_2'),
                                   ('annotation_3', 'controlled value_annotation_3'),
@@ -59,39 +58,87 @@ def create_cs(graph):
     graph.add((LAM_MD_CS, SKOS.prefLabel, rdflib.Literal("Document metadata")))
 
 
+# def create_concepts_old(df, graph):
+#     """
+#         for each row create triples for all descriptive columns.
+#     """
+#     for idx, row in df.iterrows():
+#         subject = qname_uri(row[URI_COLUMN], graph.namespaces())
+#         graph.add((subject, RDF.type, SKOS.Concept))
+#         graph.add((subject, SKOS.topConceptOf, LAM_MD_CS))  # supposed to be skos:inScheme
+#
+#         # make literal columns
+#         literal_maker = build.PlainColumnTripleMaker(df,
+#                                                      uri_column=URI_COLUMN,
+#                                                      column_mapping_dict=LITERAL_COLUMNS,
+#                                                      uri_valued_columns=[],
+#                                                      graph=graph)
+#         for column_name in LITERAL_COLUMNS.keys():
+#             literal_maker.make_column_triples(target_column=column_name)
+#
+#         # make uri columns
+#         uri_maker = build.PlainColumnTripleMaker(df,
+#                                                  uri_column=URI_COLUMN,
+#                                                  column_mapping_dict=URI_COLUMNS,
+#                                                  uri_valued_columns=list(URI_COLUMNS.keys()),
+#                                                  graph=graph)
+#         for column_name in URI_COLUMNS.keys():
+#             uri_maker.make_column_triples(target_column=column_name)
+#
+#         # make multi line uri columns
+#         ml_uri_maker = build.PlainColumnTripleMaker(df,
+#                                                     uri_column=URI_COLUMN,
+#                                                     column_mapping_dict=MULTI_LINE_URI_COLUMNS,
+#                                                     uri_valued_columns=list(MULTI_LINE_URI_COLUMNS.keys()),
+#                                                     multi_line_columns=list(MULTI_LINE_URI_COLUMNS.keys()),
+#                                                     graph=graph)
+#         for column_name in MULTI_LINE_URI_COLUMNS.keys():
+#             ml_uri_maker.make_column_triples(target_column=column_name)
+
+
 def create_concepts(df, graph):
-    """
-        for each row create triples for all descriptive columns.
-    """
-    for idx, row in df.iterrows():
-        subject = qname_uri(row[URI_COLUMN], graph.namespaces())
-        graph.add((subject, RDF.type, SKOS.Concept))
-        graph.add((subject, SKOS.topConceptOf, LAM_MD_CS))  # supposed to be skos:inScheme
-
-        # make literal columns
-        literal_maker = build.PlainColumnTripleMaker(df,
-                                                     uri_column=URI_COLUMN,
-                                                     column_mapping_dict=LITERAL_COLUMNS,
-                                                     uri_valued_columns=[],
-                                                     graph=graph)
-        for column_name in LITERAL_COLUMNS.keys():
-            literal_maker.make_column_triples(target_column=column_name)
-
-        # make uri columns
-        uri_maker = build.PlainColumnTripleMaker(df,
-                                                 uri_column=URI_COLUMN,
-                                                 column_mapping_dict=URI_COLUMNS,
-                                                 uri_valued_columns=list(URI_COLUMNS.keys()),
+    # make literal columns
+    literal_maker = build.MultiColumnTripleMaker(df,
+                                                 subject_source=URI_COLUMN,
+                                                 column_mapping_dict=LITERAL_COLUMNS,
+                                                 target_columns=list(LITERAL_COLUMNS.keys()),
+                                                 uri_valued_columns=[],
+                                                 multi_line_columns=[],
                                                  graph=graph)
-        for column_name in URI_COLUMNS.keys():
-            uri_maker.make_column_triples(target_column=column_name)
+    literal_maker.make_triples()
 
-        # make multi line uri columns
-        ml_uri_maker = build.PlainColumnTripleMaker(df,
-                                                    uri_column=URI_COLUMN,
-                                                    column_mapping_dict=MULTI_LINE_URI_COLUMNS,
-                                                    uri_valued_columns=list(MULTI_LINE_URI_COLUMNS.keys()),
-                                                    multi_line_columns=list(MULTI_LINE_URI_COLUMNS.keys()),
-                                                    graph=graph)
-        for column_name in MULTI_LINE_URI_COLUMNS.keys():
-            ml_uri_maker.make_column_triples(target_column=column_name)
+    # make uri columns
+    uri_maker = build.MultiColumnTripleMaker(df,
+                                             subject_source=URI_COLUMN,
+                                             column_mapping_dict=URI_COLUMNS,
+                                             target_columns=list(URI_COLUMNS.keys()),
+                                             uri_valued_columns=list(URI_COLUMNS.keys()),
+                                             multi_line_columns=[],
+                                             graph=graph)
+
+    uri_maker.make_triples()
+
+    # make multi line uri columns
+    ml_uri_maker = build.MultiColumnTripleMaker(df,
+                                                subject_source=URI_COLUMN,
+                                                column_mapping_dict=MULTI_LINE_URI_COLUMNS,
+                                                target_columns=list(MULTI_LINE_URI_COLUMNS.keys()),
+                                                uri_valued_columns=list(MULTI_LINE_URI_COLUMNS.keys()),
+                                                multi_line_columns=list(MULTI_LINE_URI_COLUMNS.keys()),
+                                                graph=graph)
+
+    ml_uri_maker.make_triples()
+
+
+def make_property_worksheet(lam_df_properties, prefixes, output_file):
+    """
+        TODO: work in progress
+    :param lam_df_properties:
+    :param prefixes:
+    :param output_file:
+    :return:
+    """
+    graph = build.make_graph(prefixes)
+    create_cs(graph)
+    create_concepts(lam_df_properties, graph)
+    graph.serialize(str(output_file), format='turtle', )

@@ -7,6 +7,8 @@ Email: costezki.eugen@gmail.com
 
 import re
 
+import shortuuid
+
 
 def parse_qname(qname):
     """
@@ -39,13 +41,7 @@ def qname_lang(qname):
     return parse_qname(qname)[2]
 
 
-def normalise_namespace_mapping_dict(df, prefix_column="prefix", uri_column="uri"):
-    """
-        TODO: unify a common library, this function is taken from rdf finger-printer project
-
-    :param namespace_mapping_dict:
-    :return:
-    """
-    namespace_mapping_dict = (dict(zip(df[prefix_column], df[uri_column])))
-    return {str(k).strip() if str(k).endswith(":") else str(str(k) + ":"): str(v).strip() for k, v in
-            namespace_mapping_dict.items()}
+def generate_uuid_uri(value, graph, seed="", prefix="", suffix=""):
+    local_uid = shortuuid.uuid(name=str(seed) + str(value))
+    qname = ":" + str(prefix).strip() + str(local_uid) + str(suffix).strip()
+    return qname_uri(qname, graph.namespaces())
