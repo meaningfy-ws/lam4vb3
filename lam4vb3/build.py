@@ -387,6 +387,7 @@ class ReifiedMultiColumnTripleMaker(TripleMaker):
 
 class MultiColumnTripleMaker(TripleMaker):
     """
+        This class facilitates building of the RDF statements based on a data frame.
 
     """
 
@@ -396,23 +397,27 @@ class MultiColumnTripleMaker(TripleMaker):
                  target_columns=[],
                  uri_valued_columns=[],
                  subject_source="URI",
+                 subject_class="rdfs:Resource",
                  multi_line_columns=[], ):
         """
 
-        :param df:
-        :param column_mapping_dict:
-        :param graph:
-        :param target_columns: can contain (a) a column name to use as subject URIs,
+        :type subject_class: state the class subject is an instance of.
+        :param df: the source data frame
+        :param column_mapping_dict: a dictionary where the keys are data frame columns and the values
+                        are qualified URIs used as predicates.
+        :param graph: the rdflib graph where namespaces are defined and triples are stored.
+        :param target_columns: columns that should be processed by the builder
+        :param subject_source: can contain (a) a column name to use as subject URIs,
                                 (b) if the column does not contain
                                 uris then the values are used to generate random URIs (warning, repeated values will
                                 lead to generation of the same URI and thus to creation of conflated concepts);
-                                (c) if the value is None or the column does not exit then random URIs are generated
-                                based on the row id
-        :param uri_valued_columns:
-        :param subject_source:
-        :param multi_line_columns:
+                                (c) if left unspecified, i.e. None, or the column does not exist in the data frame
+                                then random URIs are generated based on the row index in the data frame
+        :param uri_valued_columns: names of the columns expected to contain URI values
+        :param multi_line_columns: names of the columns expecting to have multiple lines, and thus shall be interpreted as multi-valued
         """
 
+        self.subject_class = subject_class
         self.target_columns = target_columns
         self.multi_line_columns = multi_line_columns
         self.subject_source = subject_source
@@ -420,6 +425,7 @@ class MultiColumnTripleMaker(TripleMaker):
         self.graph = graph
         self.column_mapping_dict = column_mapping_dict
         self.df = df
+        self._subject_index = None
 
     def handle_subject(self, row_index, seed="") -> rdflib.URIRef:
         """
@@ -455,6 +461,7 @@ class MultiColumnTripleMaker(TripleMaker):
         return utils.qname_lang(self.column_mapping_dict[column_name])
 
     def handle_object(self, row_index, target_column, language=None, data_type=None):
+
         cell_value = self.df.loc[row_index, target_column]
 
         if cell_value and pd.notna(cell_value):
@@ -475,15 +482,25 @@ class MultiColumnTripleMaker(TripleMaker):
         # self.make_triples()
         pass
 
+    def subject_index(self) -> dict:
+        """
+
+        :return: a dictionary of row index and subject created for that row
+        """
+        if not self._subject_index:
+            self._subject_index = {index: self.handle_subject(index, seed=str(self.target_columns))
+                                   for (index, row) in self.df.iterrows()}
+        return self._subject_index
+
     def make_triples(self, error_bad_lines=True, inplace=True):
         """
 
         :return:
         """
         result_triples = []
-
+        row_subject_class = lam_utils.qname_uri(self.subject_class, self.graph.namespaces())
         for index, row in self.df.iterrows():
-            row_subject = self.handle_subject(index, seed=str(self.target_columns))
+            row_subject = self.subject_index()[index]  # self.handle_subject(index, seed=str(self.target_columns))
 
             for column in self.target_columns:
                 try:
@@ -494,8 +511,10 @@ class MultiColumnTripleMaker(TripleMaker):
                                                  target_column=column,
                                                  language=column_language,
                                                  data_type=column_data_type)
-                    # if everything si according to the plan, fine
+                    # if everything is according to the plan, fine
                     result_triples.extend(self.make_cell_triples(row_subject, column_predicate, _object))
+                    # asd also teh class statement
+                    result_triples.append(tuple([row_subject, RDF.type, row_subject_class]))
 
                 except Exception:
                     if error_bad_lines:
@@ -531,6 +550,11 @@ class MultiColumnTripleMaker(TripleMaker):
 
 
 def get_subjects_from_triples(resulting_triples):
+    """
+        provided a list of triples return the list of subjects
+    :param resulting_triples:
+    :return:
+    """
     return list(set([s for s, p, o in resulting_triples]))
 
 
@@ -540,7 +564,7 @@ def apply_values_to_triple_pattern(values, triple_pattern):
         values is a list of literals or uris
         for each value the triple pattern is repeated filling in places where the pattern has a None value.
 
-        For example givent the triple pattern [(None,rdf:type,skos:Concept)] abd values [:c1, :c2], generate
+        For example given the triple pattern [(None,rdf:type,skos:Concept)] abd values [:c1, :c2], generate
         [(:C1,rdf:type,skos:Concept), (:c2,rdf:type,skos:Concept)]
     """
     result_triples = []
@@ -557,8 +581,31 @@ def apply_values_to_triple_pattern(values, triple_pattern):
 
 def add_triples_to_graph(result_triples, graph):
     """
-
+        just add the triples to a graph
     :return:
     """
     for triple in result_triples:
         graph.add(triple)
+
+
+def relate_subject_sets(subject_index, object_index, graph, predicate="skos:related", inline=True):
+    """
+        add triples to the graph connecting concepts to reified annotations
+    :param subject_index:
+    :param object_index:
+    :param predicate:
+    :param graph:
+    :param inline:
+    :return:
+    """
+
+    property_uri = lam_utils.qname_uri(predicate, graph.namespaces())
+    result_triples = []
+
+    for index, subject_uri in subject_index.items():
+        result_triples.append(tuple([subject_uri, property_uri, object_index[index]]))
+
+    if inline:
+        add_triples_to_graph(result_triples, graph)
+
+    return result_triples

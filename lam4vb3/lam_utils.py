@@ -30,7 +30,7 @@ def qname_uri(qname, namespaces):
     try:
         base = [ns for ns in namespaces if ns[0] == prefix][0][1]
     except:
-        raise Exception(f"Invalid or unknown qualified name: {qname}")
+        raise Exception(f"Invalid or unknown qualified name: {qname}. Parsed as {prefix}:{name}@{language}")
     return base + name
 
 

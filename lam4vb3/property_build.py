@@ -12,6 +12,7 @@ import re
 import rdflib
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, XMLNS, XSD
 import lam4vb3.build as build
+from lam4vb3 import lam_utils
 
 from lam4vb3.lam_utils import qname_uri
 
@@ -42,6 +43,23 @@ COLUMN_ANNOTATION_ASSOCIATIONS = [('annotation_1', 'controlled value_annotation_
                                   ('annotation_6', 'controlled value_annotation_6'),
                                   ('annotation_7', 'controlled value_annotation_7'), ]
 
+ANNOTATION_COLUMNS = {
+    "annotation_1": "sh:path",
+    "controlled value_annotation_1": "sh:class",
+    "annotation_2": "sh:path",
+    "controlled value_annotation_2": "sh:class",
+    "annotation_3": "sh:path",
+    "controlled value_annotation_3": "sh:class",
+    "annotation_4": "sh:path",
+    "controlled value_annotation_4": "sh:class",
+    "annotation_5": "sh:path",
+    "controlled value_annotation_5": "sh:class",
+    "annotation_6": "sh:path",
+    "controlled value_annotation_6": "sh:class",
+    "annotation_7": "sh:path",
+    "controlled value_annotation_7": "sh:class",
+}
+
 COLLECTION_COLUMNS = ["Classification level 1", "Classification level 2", "Classification level 3"]
 
 LAM_MD_CS = rdflib.URIRef("http://publications.europa.eu/resources/authority/lam-metadata")
@@ -58,48 +76,11 @@ def create_cs(graph):
     graph.add((LAM_MD_CS, SKOS.prefLabel, rdflib.Literal("Document metadata")))
 
 
-# def create_concepts_old(df, graph):
-#     """
-#         for each row create triples for all descriptive columns.
-#     """
-#     for idx, row in df.iterrows():
-#         subject = qname_uri(row[URI_COLUMN], graph.namespaces())
-#         graph.add((subject, RDF.type, SKOS.Concept))
-#         graph.add((subject, SKOS.topConceptOf, LAM_MD_CS))  # supposed to be skos:inScheme
-#
-#         # make literal columns
-#         literal_maker = build.PlainColumnTripleMaker(df,
-#                                                      uri_column=URI_COLUMN,
-#                                                      column_mapping_dict=LITERAL_COLUMNS,
-#                                                      uri_valued_columns=[],
-#                                                      graph=graph)
-#         for column_name in LITERAL_COLUMNS.keys():
-#             literal_maker.make_column_triples(target_column=column_name)
-#
-#         # make uri columns
-#         uri_maker = build.PlainColumnTripleMaker(df,
-#                                                  uri_column=URI_COLUMN,
-#                                                  column_mapping_dict=URI_COLUMNS,
-#                                                  uri_valued_columns=list(URI_COLUMNS.keys()),
-#                                                  graph=graph)
-#         for column_name in URI_COLUMNS.keys():
-#             uri_maker.make_column_triples(target_column=column_name)
-#
-#         # make multi line uri columns
-#         ml_uri_maker = build.PlainColumnTripleMaker(df,
-#                                                     uri_column=URI_COLUMN,
-#                                                     column_mapping_dict=MULTI_LINE_URI_COLUMNS,
-#                                                     uri_valued_columns=list(MULTI_LINE_URI_COLUMNS.keys()),
-#                                                     multi_line_columns=list(MULTI_LINE_URI_COLUMNS.keys()),
-#                                                     graph=graph)
-#         for column_name in MULTI_LINE_URI_COLUMNS.keys():
-#             ml_uri_maker.make_column_triples(target_column=column_name)
-
-
 def create_concepts(df, graph):
     # make literal columns
     literal_maker = build.MultiColumnTripleMaker(df,
                                                  subject_source=URI_COLUMN,
+                                                 subject_class="skos:Concept",
                                                  column_mapping_dict=LITERAL_COLUMNS,
                                                  target_columns=list(LITERAL_COLUMNS.keys()),
                                                  uri_valued_columns=[],
@@ -110,6 +91,7 @@ def create_concepts(df, graph):
     # make uri columns
     uri_maker = build.MultiColumnTripleMaker(df,
                                              subject_source=URI_COLUMN,
+                                             subject_class="skos:Concept",
                                              column_mapping_dict=URI_COLUMNS,
                                              target_columns=list(URI_COLUMNS.keys()),
                                              uri_valued_columns=list(URI_COLUMNS.keys()),
@@ -121,6 +103,7 @@ def create_concepts(df, graph):
     # make multi line uri columns
     ml_uri_maker = build.MultiColumnTripleMaker(df,
                                                 subject_source=URI_COLUMN,
+                                                subject_class="skos:Concept",
                                                 column_mapping_dict=MULTI_LINE_URI_COLUMNS,
                                                 target_columns=list(MULTI_LINE_URI_COLUMNS.keys()),
                                                 uri_valued_columns=list(MULTI_LINE_URI_COLUMNS.keys()),
@@ -128,6 +111,37 @@ def create_concepts(df, graph):
                                                 graph=graph)
 
     ml_uri_maker.make_triples()
+
+    concept_subject_index = literal_maker.subject_index()
+    # go through the annotation columns and build annotation objects and attach them to concept URIs
+    for column_pair in COLUMN_ANNOTATION_ASSOCIATIONS:
+        annotation_maker1 = build.MultiColumnTripleMaker(df,
+                                                         subject_source=None,
+                                                         subject_class="lam:PropertyAnnotation",
+                                                         column_mapping_dict=ANNOTATION_COLUMNS,
+                                                         target_columns=list(column_pair),
+                                                         uri_valued_columns=list(column_pair),
+                                                         multi_line_columns=[],
+                                                         graph=graph)
+
+        ann_subject_index1 = annotation_maker1.subject_index()
+
+        hang_annotation_subjects_on_concept(concept_subject_index=concept_subject_index,
+                                            annotation_subject_index=ann_subject_index1,
+                                            graph=graph)
+
+
+def hang_annotation_subjects_on_concept(concept_subject_index, annotation_subject_index,
+                                        graph, annotation_property="lam:hasAnnotation", inline=True):
+    """
+        add triples to the graph connecting concepts to reified annotations
+    :return: the resulting triples
+    """
+    return build.relate_subject_sets(concept_subject_index,
+                                     annotation_subject_index,
+                                     graph=graph,
+                                     predicate=annotation_property,
+                                     inline=inline)
 
 
 def make_property_worksheet(lam_df_properties, prefixes, output_file):

@@ -24,151 +24,398 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix skoxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
 @prefix vb: <http://art.uniroma2.it/ontologies/vocbench#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-lamd:res_5DtZLBnAHLPT4jS8ScqZqS a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:dir-eu-legal-act .
+lamd:c_001 a skos:Concept ;
+    cdm:created_by "COM | and Service/DG responsible" ;
+    cdm:resource-type "REG_DRAFT" ;
+    lam:cdm_class cdm:act_preparatory ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/5_XC_OJC> ;
+    skos:editorialNote """Not containing COM or SEC/SWD number
+Not containing "Codified version" in the title
+Those are drafts published in the OJ in the past"""@en ;
+    skos:example "52013XC0806(02)",
+        "Draft Commission Regulation (EU) No …/… of 5 August 2013 amending Regulation (EC) No 1857/2006 as regards its period of application "@en,
+        "Projet de règlement (UE) n ° …/… de la Commission du 5 août 2013 modifiant le règlement (CE) n ° 1857/2006 en ce qui concerne sa durée d’application"@fr ;
+    skosxl:prefLabel lamd:res_eHzZmBgEsmfEk65KP54gQc .
 
-lamd:res_6LU6KfSsWjFedbEwGMej4E a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:subject-matter .
+lamd:c_002 a skos:Concept ;
+    cdm:created_by "COM | and Service/DG responsible" ;
+    cdm:resource-type "DIR_DRAFT" ;
+    lam:cdm_class cdm:act_preparatory ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/5_XC_OJC> ;
+    skos:editorialNote """Not containing COM or SEC/SWD number
+Not containing "Codified version" in the title
+Those are drafts published in the OJ in the past"""@en ;
+    skos:example "31998Y0307(02)",
+        "31998Y0307(02): Draft Commission Directive amending Directive 90/388/EEC in order to ensure that telecommunications networks and cable TV networks owned by a single operator are separate legal entities"@en,
+        "31998Y0307(02): Projet de directive de la Commission modifiant la directive 90/388/CEE en vue de garantir que les réseaux de télécommunications et les réseaux câblés de télévision appartenant à un seul et même opérateur constituent des entités juridiques distinctes"@fr ;
+    skosxl:prefLabel lamd:res_5eAiPS5oNM7QRbemZp8rzF .
 
-lamd:res_88vEpQYpGMr8uGZV4oNyXe a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:country,
-        fd:role-qualifier .
+lamd:c_003 a skos:Concept ;
+    cdm:created_by "COM | and Service/DG responsible" ;
+    cdm:resource-type "COMMUNIC_DRAFT" ;
+    lam:cdm_class cdm:act_preparatory ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/5_XC_OJC> ;
+    skos:editorialNote """Not containing COM or SEC/SWD number
+Those are drafts published in the OJ in the past"""@en ;
+    skos:example """31999Y0626(02)
+C1995/291/06
+31997Y1203(01)""",
+        "31999Y0626(02): Draft communication to operators in the banana sector - Subject: Applications for the registration of operators for 2000 "@en,
+        "31999Y0626(02): Projet de communication aux opérateurs du secteur de la banane - Objet: demandes d'enregistrement des opérateurs pour l'an 2000"@fr ;
+    skosxl:prefLabel lamd:res_VCfamJgTjVfvPzxef7GeQX .
 
-lamd:res_9AeBHePPLWw4ggGLpDWjmJ a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:fd_578 .
+lamd:c_004 a skos:Concept ;
+    cdm:created_by "COM | and Service/DG responsible" ;
+    cdm:resource-type "DECLAR_DRAFT" ;
+    lam:cdm_class cdm:act_preparatory ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/5_XC_OJC> ;
+    skos:editorialNote """Not containing COM or SWD (SEC) number
+Those are drafts published in the OJ in the past"""@en ;
+    skos:example "JOC_1990_044_R_0014_01",
+        "JOC_1990_044_R_0014_01: Draft joint declaration by the ACP States and the Community and its Member States "@en,
+        "JOC_1990_044_R_0014_01: Projet de déclaration conjointe, des États ACP, de la Communauté et de ses États membres "@fr ;
+    skosxl:prefLabel lamd:res_jM6kh4iZk4szeJtwVfKRJG .
 
-lamd:res_C3DSXY9eniY8e2LGefeKpm a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:country,
-        fd:fd_330,
-        fd:fd_335,
-        fd:fd_340,
-        fd:fd_350,
-        fd:fd_361,
-        fd:fd_365,
-        fd:place .
+lamd:c_005 a skos:Concept ;
+    cdm:created_by "EESC" ;
+    cdm:resource-type "OPIN_EXPLOR" ;
+    lam:cdm_class cdm:opinion_other_committee_ecsc ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/5_AE> ;
+    skos:example """52016AE0137
+52014AE4791""",
+        "52014AE4791: Opinion of the European Economic and Social Committee on ‘European immigration policies’ (exploratory opinion) "@en,
+        "52014AE4791: Avis du Comité économique et social européen sur les politiques européennes d'immigration (avis exploratoire) "@fr ;
+    skosxl:prefLabel lamd:res_H7hLHtT6EAkeiva2rmKTVA .
 
-lamd:res_FqdTuun8tCpGEjAcL3KNGg a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:subdivision .
+lamd:c_006 a skos:Concept ;
+    cdm:created_by "EESC" ;
+    cdm:resource-type "OPIN" ;
+    lam:cdm_class cdm:opinion_consultation_eesc ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/5_AE> ;
+    skos:editorialNote """Amendments to the proposal are described in the text - usually under "Specifric comments". There is a reference to a specific part of the proposal and description what should be changed.
 
-lamd:res_G6mxCrWz7qSQHxwvaeLhE5 a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:fd_13,
-        fd:fd_14 .
+There is link to procedure + European Parliament - Legisltive obsetvatory.
 
-lamd:res_Lna2eMkgtfq86hRSemwSiK a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:resource-type .
+Example (52015AE6292):
 
-lamd:res_SvXDirg5XTUSMdPKL33W8d a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:subdivision .
+4.2.5.1    Article 1 — Subject matter and scope
+Procurement of certain online and distance services, such as leasing, should not be excluded from the subject matter and scope.
 
-lamd:res_TgiuhMzcFtgg2BHKjpdBs2 a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:fd_370 .
+4.2.5.2    Article 2 — Definitions
+1. The concept of commercial guarantee should also cover other forms of compensation, otherwise they will not be deemed to be covered by the rules in Article 15.
 
-lamd:res_UyjFmehutzcDyHh77QDUfZ a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:corporate-body,
-        fd:country .
+2. The concept of a tangible movable good has not been positively defined, which gives rise to different interpretations by Member States.
+(...)
 
-lamd:res_XRrDVQm5j9RLCRAfvxDmRG a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:fd_40 .
+4.2.5.3    Article 3 — Level of harmonisation
+The level of harmonisation should be minimum, with all the necessary consequences for the regime."""@en ;
+    skos:example "52015AE6292",
+        "52015AE6292: Opinion of the European Economic and Social Committee on the ‘Proposal for a directive of the European Parliament and of the Council on certain aspects concerning contracts for the supply of digital content’ (COM(2015) 634 final — 2015/0287 (COD)) and the ‘Proposal for a directive of the European Parliament and of the Council on certain aspects concerning contracts for the online and other distance sales of goods’ (COM(2015) 635 final — 2015/0288 (COD))"@en,
+        """52015AE6292:  Avis du Comité économique et social européen sur la «Proposition de directive du Parlement européen et du Conseil concernant certains aspects des contrats de fourniture de contenu numérique»
+[COM(2015) 634 final — 2015/0287 (COD))
+et la
+«Proposition de directive du Parlement européen et du Conseil concernant certains aspects des contrats de ventes en ligne et de toute autre vente à distance de biens»
+[COM(2015) 635 final — 2015/0288 (COD))
+"""@fr ;
+    skosxl:prefLabel lamd:res_JRzkhk5DpVpLxuQ9MjkboY .
 
-lamd:res_XzCVKZcPuUkntK7ZT5LPVK a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:fd_335,
-        fd:fd_350 .
+lamd:c_007 a skos:Concept ;
+    cdm:created_by "EESC" ;
+    cdm:resource-type "OPIN" ;
+    lam:cdm_class cdm:opinion_consultation_eesc ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/5_AE> ;
+    skos:editorialNote "Opinion not proposing amendment - in the opinion, no changes of specific parts of proposal are listed"@en ;
+    skos:example """52015AE1246
+52016AE1268""",
+        "52015AE1246: Opinion of the European Economic and Social Committee on the ‘Proposal for a Regulation of the European Parliament and of the Council amending Regulation (EU) No 1304/2013 of the European Parliament and of the Council on the European Social Fund, as regards an increase of the initial pre-financing amount paid to operational programmes supported by the Youth Employment Initiative’ (COM(2015) 46 final) "@en,
+        "52015AE1246: Avis du Comité économique et social européen sur la «Proposition de règlement du Parlement européen et du Conseil modifiant le règlement (UE) no 1304/2013 du Parlement européen et du Conseil relatif au Fonds social européen afin d’augmenter le montant du préfinancement initial versé aux programmes opérationnels soutenus par l’initiative pour l’emploi des jeunes» [COM(2015) 46 final) "@fr ;
+    skosxl:prefLabel lamd:res_2f6TpqGGizAxuG6pG9CskW .
 
-lamd:res_dEj8drbKSoHTsigouvgLQo a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:language .
+lamd:c_008 a skos:Concept ;
+    cdm:created_by "EESC" ;
+    cdm:resource-type "OWNINI_OPIN" ;
+    lam:cdm_class cdm:opinion_other_committee_ecsc ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/5_IE> ;
+    skos:example """52015IE1360
+52014IE1468""",
+        "52014IE1468: Opinion of the European Economic and Social Committee on ‘Completing EMU — The role of taxation policy’ (Own-initiative opinion)"@en,
+        "52014IE1468: Avis du Comité économique et social européen sur le thème «Achever l’Union économique et monétaire — le rôle de la politique fiscale» (avis d’initiative) "@fr ;
+    skosxl:prefLabel lamd:res_mZ3nsd9PTmWVLHBgU7uNyk .
 
-lamd:res_eMBKDPDMRD5E55bJwyEceG a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:corporate-body,
-        fd:country,
-        fd:fd_110,
-        fd:role-qualifier .
+lamd:c_009 a skos:Concept ;
+    cdm:created_by "EESC" ;
+    cdm:resource-type "OWNINI_OPIN_ADDIT" ;
+    lam:cdm_class cdm:opinion_other_committee_ecsc ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/5_IE> ;
+    skos:example """52013IE6537
+52012IE2321""",
+        "52013IE6537: Opinion of the European Economic and Social Committee on ‘The Single Market Act — identifying missing measures’ (additional opinion) "@en,
+        "52013IE6537: Avis du Comité économique et social européen sur «L'Acte pour le marché unique – Déterminer les mesures manquantes» (supplément d'avis) "@fr ;
+    skosxl:prefLabel lamd:res_M3yi94kSV8MmBNaSbJkHJR .
 
-lamd:res_etz6AxeTiDgQaMHTtXooKY a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:fd_110,
-        fd:legal_proceeding,
-        fd:legal_proceeding_result .
+lamd:c_010 a skos:Concept ;
+    cdm:created_by "CONSIL" ;
+    cdm:resource-type "STAT_REASON" ;
+    lam:cdm_class cdm:position_council ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/5_AG> ;
+    skos:example """52016AG0004(02)
+52015AG0010(02)""",
+        "52016AG0004(02): Statement of Council’s reasons: Position (EU) No 4/2016 of the Council at first reading with a view to the adoption of a Regulation of the European Parliament and of the Council on transmissible animal diseases and amending and repealing certain acts in the area of animal health (‘Animal Health Law’)"@en,
+        "52016AG0004(02): Exposé des motifs du Conseil: Position (UE) no 4/2016 du Conseil en première lecture en vue de l'adoption du règlement du Parlement européen et du Conseil relatif aux maladies animales transmissibles et modifiant et abrogeant certains actes dans le domaine de la santé animale («législation sur la santé animale»)"@fr ;
+    skosxl:prefLabel lamd:res_VpsEwpvE4wez2A3tuUZPVY .
 
-lamd:res_eyb5DCW7h8zzdkeE3G9yi6 a skos:Concept ;
-    dct:created "Today" ;
-    sh:class <http://publications.europa.eu/resource/dataset/eurovoc> .
+lamd:c_011 a skos:Concept ;
+    cdm:created_by "COM | and Service/DG responsible" ;
+    cdm:resource-type "PROP_REG" ;
+    lam:cdm_class cdm:proposal_regulation_ec ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/5_PC_EUR> ;
+    skos:editorialNote """Proposal for an amending regulation - "amending" must follow directly after type and author of proposed act
 
-lamd:res_fXgCr6xgEmEeABa2AvcTZT a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:fd_375 .
+Link to procedure + EP - Legislative observatory"""@en ;
+    skos:example """52019PC0038
+52019PC0208""",
+        """52015PC0487: Proposal for a COUNCIL REGULATION amending Regulation (EU) No 2015/104 as regards certain fishing opportunities
 
-lamd:res_gikoXB5ghdt7ay8YNQgNK5 a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:corporate-body,
-        fd:country,
-        fd:fd_110,
-        fd:role-qualifier .
+COM/2015/0487 final - 2015/0236 (NLE)"""@en,
+        """52015PC0487: Proposition de RÈGLEMENT DU CONSEIL modifiant le règlement (UE) 2015/104 en ce qui concerne certaines possibilités de pêche
 
-lamd:res_hwWd7WAQGtunzcz8wKVmEh a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:subdivision .
+COM/2015/0487 final - 2015/0236 (NLE)"""@fr ;
+    skosxl:prefLabel lamd:res_i9UMS6zC8BbgrbfWQWkAfg .
 
-lamd:res_iNG2hwgb2LwW7SzpHjiU6P a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:language .
+lamd:c_012 a skos:Concept ;
+    cdm:created_by "COM | and Service/DG responsible" ;
+    cdm:resource-type "PROP_REG" ;
+    lam:cdm_class cdm:proposal_regulation_ec ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/5_PC_EUR> ;
+    skos:editorialNote """Proposal for not amending regulation
 
-lamd:res_j9M5xvyaLfm9MgkFgtqFG4 a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:corporate-body,
-        fd:country .
+Link to procedure + EP - Legislative observatory"""@en ;
+    skos:example "52019PC0088",
+        """
 
-lamd:res_m3PXgamM6yHcKarSeFjBum a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:subdivision .
+Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL on certain aspects of railway safety and connectivity with regard to the withdrawal of the United Kingdom of Great Britain and Northern Ireland from the Union
 
-lamd:res_pZba5ZxBRGez8jswnK6Vd3 a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:corporate-body .
+COM/2019/88 final
+"""@en,
+        """
 
-lamd:res_q9eYynsKX7qZZRFtbnuUBa a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:fd_345 .
 
-lamd:res_urHT7WxsuhyHYUzdmTTqrL a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:corporate-body,
-        fd:country,
-        fd:fd_50 .
 
-lamd:res_xwJ6NdT6gP4VqGFMgvQpqA a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:fd_301 .
+Proposition de RÈGLEMENT DU PARLEMENT EUROPÉEN ET DU CONSEIL concernant certains aspects de la sécurité et de la connectivité du transport ferroviaire eu égard au retrait du Royaume-Uni de Grande-Bretagne et d’Irlande du Nord de l’Union
 
-lamd:res_z68c4cnTgT9sFWmzZNXme7 a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:corporate-body .
+COM/2019/88 final
+"""@fr ;
+    skosxl:prefLabel lamd:res_NNyNtMigxZ4kCfNMZBQjMN .
 
-lamd:res_zYgW2CLXaWBasNPNAGtVtY a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:treaty .
+lamd:c_013 a skos:Concept ;
+    cdm:created_by "COM | and Service/DG responsible" ;
+    cdm:resource-type "AMEND_PROP_REG" ;
+    lam:cdm_class cdm:proposal_regulation_ec ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/5_PC_EUR> ;
+    skos:editorialNote """Link to procedure + EP - Legislative observatory
 
-lamd:res_ziRuCVwqoawsYHPvSJXPyE a skos:Concept ;
-    dct:created "Today" ;
-    sh:class fd:fd_400 .
+There might be  a proposal with 2+ subsequent amendments:
+52016PC0408 - 52015PC0350 - 52014PC0343 - how EV should be treated? There are 3 pending proposals, but only 1 act will be adopted - statistics"""@en ;
+    skos:example "52015PC0049",
+        """Amended proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL laying down Union procedures in the field of the common commercial policy in order to ensure the exercise of the Union’s rights under international trade rules, in particular those established under the auspices of the World Trade Organization (codification)
+
+/* COM/2015/049 final - 2014/0174 (COD) */"""@en,
+        """Proposition modifiée de RÈGLEMENT DU PARLEMENT EUROPÉEN ET DU CONSEIL arrêtant des procédures de l’Union en matière de politique commerciale commune en vue d'assurer l'exercice par l’Union des droits qui lui sont conférés par les règles du commerce international, en particulier celles instituées sous l'égide de l'Organisation mondiale du commerce (OMC) (texte codifié)
+/* COM/2015/049 final - 2014/0174 (COD) *"""@fr ;
+    skosxl:prefLabel lamd:res_mwaqM7DjxpiywKSxqnSnAA .
+
+lamd:c_014 a skos:Concept ;
+    cdm:created_by "COM | and Service/DG responsible" ;
+    cdm:resource-type "PROP_DIR" ;
+    lam:cdm_class cdm:proposal_directive_ec ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/5_PC_EUR> ;
+    skos:editorialNote """Link to procedure + EP - Legislative observatory
+
+Proposal for an amending directive - "amending" must follow directly after type and author of proposed act"""@en ;
+    skos:example "52015PC0337",
+        """Proposal for a DIRECTIVE OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL amending Directive 2003/87/EC to enhance cost-effective emission reductions and low-carbon investments
+
+COM/2015/0337 final - 2015/0148 (COD)"""@en,
+        """Proposition de DIRECTIVE DU PARLEMENT EUROPÉEN ET DU CONSEIL modifiant la directive 2003/87/CE afin de renforcer le rapport coût-efficacité des réductions d’émissions et de favoriser les investissements à faible intensité de carbone
+COM/2015/0337 final - 2015/0148 (COD)"""@fr ;
+    skosxl:prefLabel lamd:res_KM6jmQkPJAtSz3MEU3HUUb .
+
+lamd:c_015 a skos:Concept ;
+    cdm:created_by "COM | and Service/DG responsible" ;
+    cdm:resource-type "PROP_DIR" ;
+    lam:cdm_class cdm:proposal_directive_ec ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/5_PC_EUR> ;
+    skos:editorialNote """Proposal for not amending directive
+Link to procedure + EP - Legislative observatory"""@en ;
+    skos:example "52013PC0932",
+        """
+
+Proposal for a DIRECTIVE OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL on port reception facilities for the delivery of waste from ships, repealing Directive 2000/59/EC and amending Directive 2009/16/EC and Directive 2010/65/EU
+
+COM/2018/033 final - 2018/012 (COD)
+"""@en,
+        """
+
+Proposition de DIRECTIVE DU PARLEMENT EUROPÉEN ET DU CONSEIL relative aux installations de réception portuaires pour le dépôt des déchets des navires, abrogeant la directive 2000/59/CE et modifiant la directive 2009/16/CE et la directive 2010/65/UE
+
+COM/2018/033 final - 2018/012 (COD)
+"""@fr ;
+    skosxl:prefLabel lamd:res_bYBWoaCpqLhbJD27x83xkj .
+
+lamd:c_016 a skos:Concept ;
+    cdm:created_by "COM | and Service/DG responsible" ;
+    cdm:resource-type "AMEND_PROP_DIR" ;
+    lam:cdm_class cdm:proposal_directive_ec ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/5_PC_EUR> ;
+    skos:editorialNote "Link to procedure + EP - Legislative observatory "@en ;
+    skos:example "52017PC0637",
+        """
+
+Amended proposal for a DIRECTIVE OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL on certain aspects concerning contracts for the online and other distance sales of goods, amending Regulation (EC) No 2006/2004 of the European Parliament and of the Council and Directive 2009/22/EC of the European Parliament and of the Council and repealing Directive 1999/44/EC of the European Parliament and of the Council
+
+COM/2017/0637 final - 2015/0288 (COD)"""@en,
+        """
+
+Proposition modifiée de DIRECTIVE DU PARLEMENT EUROPÉEN ET DU CONSEIL on certain aspects concerning contracts for the online and other distance sales of goods, amending Regulation (EC) No 2006/2004 of the European Parliament and of the Council and Directive 2009/22/EC of the European Parliament and of the Council and repealing Directive 1999/44/EC of the European Parliament and of the Council
+
+COM/2017/0637 final - 2015/0288 (COD)"""@fr ;
+    skosxl:prefLabel lamd:res_7EZC8NuoPoGfzY2NDojUJc .
+
+lamd:c_017 a skos:Concept ;
+    cdm:created_by "CJ" ;
+    cdm:resource-type "INFO_JUDICIAL" ;
+    lam:cdm_class cdm:info_decision_cjeu ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/6_CA> ;
+    skos:editorialNote """
+judicial infomation EU case law - Court of Justice"""@en ;
+    skos:example "62015CA0058",
+        "Case C-58/15: Judgment of the Court (Sixth Chamber) of 23 December 2015 (request for a preliminary ruling from the Bayerischer Verwaltungsgerichtshof — Germany) — Firma Theodor Pfister v Landkreis Main-Spessart (Reference for a preliminary ruling — Agriculture — Health inspections — Official feed and food controls — Financing of controls — Inspection costs relating to slaughter — Regulation (EC) No 882/2004 — Directive 85/73/EEC — Possibility of levying fees covering the actual cost of inspection, exceeding the fees set by that directive) "@en,
+        "Affaire C-580/14: Ordonnance de la Cour (sixième chambre) du 17 décembre 2015 (demande de décision préjudicielle du Verwaltungsgericht Berlin — Allemagne) — Sandra Bitter, en qualité de mandataire liquidateur de Ziegelwerk Höxter GmbH/Bundesrepublik Deutschland (Renvoi préjudiciel — Directive 2003/87/CE — Système d'échange de quotas d'émission de gaz à effet de serre — Amende sur les émissions excédentaires — Proportionnalité»)"@fr ;
+    skosxl:prefLabel lamd:res_xSYrAAw4cPe8DZ5587oPPT .
+
+lamd:c_018 a skos:Concept ;
+    cdm:created_by "CJ" ;
+    cdm:resource-type "INFO_JUDICIAL" ;
+    lam:cdm_class cdm:info_decision_cjeu ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/6_CB> ;
+    skos:editorialNote """
+judicial infomation EU case law - Court of Justice"""@en ;
+    skos:example "62018CB0373",
+        "Case C-373/18: Order of the Court (First Chamber) of 31 January 2019 (request for a preliminary ruling from the Tribunal Administrativo e Fiscal de Penafiel — Portugal) — Prosa — Produtos e Serviços Agrícolas v Autoridade Tributária e Aduaneira (Reference for a preliminary ruling — Article 99 of the Rules of Procedure of the Court of Justice — Indirect taxes on the raising of capital — Directive 69/335/EEC — Articles 4 and 7 — Incorporation of a capital company — Stamp duty in force on 1 July 1984 — Subsequent abolition of that stamp duty, followed by its reintroduction) "@en,
+        "Affaire C-373/18: Ordonnance de la Cour (première chambre) du 31 janvier 2019 (demande de décision préjudicielle du Tribunal Administrativo e Fiscal de Penafiel — Portugal) — Prosa — Produtos e Serviços Agrícolas/Autoridade Tributária e Aduaneira (Renvoi préjudiciel — Article 99 du règlement de procédure de la Cour — Impôts indirects frappant les rassemblements de capitaux — Directive 69/335/CEE — Articles 4 et 7 — Constitution d’une société de capitaux — Droit de timbre en vigueur au 1er juillet 1984 — Suppression de ce droit de timbre par la suite, puis réintroduction de celui-ci)"@fr ;
+    skosxl:prefLabel lamd:res_H8G2gVNgpE5anPUBvJjDi9 .
+
+lamd:c_019 a skos:Concept ;
+    cdm:created_by "EURUN | and country" ;
+    cdm:resource-type "ARRANG" ;
+    lam:cdm_class cdm:resource_legal ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/2_A_OJL> ;
+    skos:example """22016A0311(01)
+22012A0413(01)""",
+        "Arrangement between the European Union and the Swiss Confederation on the modalities of its participation in the European Asylum Support Office"@en,
+        "ARRANGEMENT entre l'Union européenne et la Confédération suisse sur les modalités de sa participation au bureau européen d'appui en matière d'asile"@fr ;
+    skosxl:prefLabel lamd:res_EQmshvvXCyYJvKwqvaQYUB .
+
+lamd:c_020 a skos:Concept ;
+    cdm:created_by "COM" ;
+    cdm:resource-type "NOTICE" ;
+    lam:cdm_class cdm:act_preparatory ;
+    lam:celex_class <http://publications.europa.eu/resources/authority/celex/5_XC_OJC> ;
+    skos:example "52016XC0430(01)",
+        "Withdrawal of Commission Proposals"@en,
+        "RETRAIT DE PROPOSITIONS DE LA COMMISSION"@fr ;
+    skosxl:prefLabel lamd:res_xCvdkYNPix556s7N46nrxB .
+
+lamd:res_2f6TpqGGizAxuG6pG9CskW a skosxl:Label ;
+    skosxl:literalForm """Opinion of the European Economic and Social Committee on the proposal
+(COM number) 
+(JOIN number)
+(COD number)
+
+Opinion not proposing amendments"""@en .
+
+lamd:res_5eAiPS5oNM7QRbemZp8rzF a skosxl:Label ;
+    skosxl:literalForm "Draft directive"@en .
+
+lamd:res_7EZC8NuoPoGfzY2NDojUJc a skosxl:Label ;
+    skosxl:literalForm """Amended proposal for a directive 
+amendment to proposal
+(COM number)"""@en .
+
+lamd:res_EQmshvvXCyYJvKwqvaQYUB a skosxl:Label ;
+    skosxl:literalForm "Arrangement"@en .
+
+lamd:res_H7hLHtT6EAkeiva2rmKTVA a skosxl:Label ;
+    skosxl:literalForm """Opinion of the European Economic and Social Committee 
+exploratory opinion"""@en .
+
+lamd:res_H8G2gVNgpE5anPUBvJjDi9 a skosxl:Label ;
+    skosxl:literalForm """Order of the Court
+case"""@en .
+
+lamd:res_JRzkhk5DpVpLxuQ9MjkboY a skosxl:Label ;
+    skosxl:literalForm """Opinion of the European Economic and Social Committee on the proposal
+(COM number) 
+(JOIN number)
+(COD number)
+
+Opinion proposing amendments"""@en .
+
+lamd:res_KM6jmQkPJAtSz3MEU3HUUb a skosxl:Label ;
+    skosxl:literalForm """Proposal for an amending directive 
+(COM number)"""@en .
+
+lamd:res_M3yi94kSV8MmBNaSbJkHJR a skosxl:Label ;
+    skosxl:literalForm """Opinion of the European Economic and Social Committee 
+Additional opinion """@en .
+
+lamd:res_NNyNtMigxZ4kCfNMZBQjMN a skosxl:Label ;
+    skosxl:literalForm """Proposal for regulation
+(COM number)"""@en .
+
+lamd:res_VCfamJgTjVfvPzxef7GeQX a skosxl:Label ;
+    skosxl:literalForm "Draft communication"@en .
+
+lamd:res_VpsEwpvE4wez2A3tuUZPVY a skosxl:Label ;
+    skosxl:literalForm """Statement of Council's reasons
+position at first reading with a view to the adoption of
+"""@en .
+
+lamd:res_bYBWoaCpqLhbJD27x83xkj a skosxl:Label ;
+    skosxl:literalForm """Proposal for directive 
+(COM number)"""@en .
+
+lamd:res_eHzZmBgEsmfEk65KP54gQc a skosxl:Label ;
+    skosxl:literalForm "Draft regulation"@en .
+
+lamd:res_i9UMS6zC8BbgrbfWQWkAfg a skosxl:Label ;
+    skosxl:literalForm """Proposal for amending regulation
+(COM number)"""@en .
+
+lamd:res_jM6kh4iZk4szeJtwVfKRJG a skosxl:Label ;
+    skosxl:literalForm """Draft declaration
+joint declaration"""@en .
+
+lamd:res_mZ3nsd9PTmWVLHBgU7uNyk a skosxl:Label ;
+    skosxl:literalForm """Opinion of the European Economic and Social Committee 
+Own-initiative opinion"""@en .
+
+lamd:res_mwaqM7DjxpiywKSxqnSnAA a skosxl:Label ;
+    skosxl:literalForm """Amended proposal for a regulation
+amendment to proposal
+(COM number)"""@en .
+
+lamd:res_xCvdkYNPix556s7N46nrxB a skosxl:Label ;
+    skosxl:literalForm """Withdrawal
+Commission proposals"""@en .
+
+lamd:res_xSYrAAw4cPe8DZ5587oPPT a skosxl:Label ;
+    skosxl:literalForm """Judgment of the Court
+case"""@en .
 
