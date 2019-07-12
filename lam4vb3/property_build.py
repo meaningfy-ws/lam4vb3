@@ -35,13 +35,13 @@ MULTI_LINE_URI_COLUMNS = {
     'controlled value _property': 'sh:class',
 }
 
-COLUMN_ANNOTATION_ASSOCIATIONS = [('annotation_1', 'controlled value_annotation_1'),
-                                  ('annotation_2', 'controlled value_annotation_2'),
-                                  ('annotation_3', 'controlled value_annotation_3'),
-                                  ('annotation_4', 'controlled value_annotation_4'),
-                                  ('annotation_5', 'controlled value_annotation_5'),
-                                  ('annotation_6', 'controlled value_annotation_6'),
-                                  ('annotation_7', 'controlled value_annotation_7'), ]
+COLUMN_ANNOTATION_ASSOCIATIONS = [['annotation_1', 'controlled value_annotation_1'],
+                                  ['annotation_2', 'controlled value_annotation_2'],
+                                  ['annotation_3', 'controlled value_annotation_3'],
+                                  ['annotation_4', 'controlled value_annotation_4'],
+                                  ['annotation_5', 'controlled value_annotation_5'],
+                                  ['annotation_6', 'controlled value_annotation_6'],
+                                  ['annotation_7', 'controlled value_annotation_7'], ]
 
 ANNOTATION_COLUMNS = {
     "annotation_1": "sh:path",
@@ -62,7 +62,8 @@ ANNOTATION_COLUMNS = {
 
 COLLECTION_COLUMNS = ["Classification level 1", "Classification level 2", "Classification level 3"]
 
-LAM_MD_CS = rdflib.URIRef("http://publications.europa.eu/resources/authority/lam-metadata")
+LAM_MD_CS_URI = rdflib.URIRef("http://publications.europa.eu/resources/authority/lam-metadata")
+LAM_MD_CS = "lamd:DocumentProperty"
 
 # a little bit of column management
 URI_COLUMN = 'URI'
@@ -72,63 +73,78 @@ def create_cs(graph):
     """
         create the concept scheme definition
     """
-    graph.add((LAM_MD_CS, RDF.type, SKOS.ConceptScheme))
-    graph.add((LAM_MD_CS, SKOS.prefLabel, rdflib.Literal("Document metadata")))
+    cs = lam_utils.qname_uri(LAM_MD_CS, graph.namespaces())
+    graph.add((cs, RDF.type, SKOS.ConceptScheme))
+    graph.add((cs, SKOS.prefLabel, rdflib.Literal("Document metadata")))
 
 
 def create_concepts(df, graph):
     # make literal columns
-    literal_maker = build.MultiColumnTripleMaker(df,
-                                                 subject_source=URI_COLUMN,
-                                                 subject_class="skos:Concept",
-                                                 column_mapping_dict=LITERAL_COLUMNS,
-                                                 target_columns=list(LITERAL_COLUMNS.keys()),
-                                                 uri_valued_columns=[],
-                                                 multi_line_columns=[],
-                                                 graph=graph)
+    literal_maker = build.ConceptTripleMaker(df,
+                                             subject_source=URI_COLUMN,
+                                             subject_class="skos:Concept",
+                                             subject_in_scheme=LAM_MD_CS,
+                                             column_mapping_dict=LITERAL_COLUMNS,
+                                             target_columns=list(LITERAL_COLUMNS.keys()),
+                                             uri_valued_columns=[],
+                                             multi_line_columns=[],
+                                             graph=graph)
     literal_maker.make_triples()
 
     # make uri columns
-    uri_maker = build.MultiColumnTripleMaker(df,
-                                             subject_source=URI_COLUMN,
-                                             subject_class="skos:Concept",
-                                             column_mapping_dict=URI_COLUMNS,
-                                             target_columns=list(URI_COLUMNS.keys()),
-                                             uri_valued_columns=list(URI_COLUMNS.keys()),
-                                             multi_line_columns=[],
-                                             graph=graph)
+    uri_maker = build.ConceptTripleMaker(df,
+                                         subject_source=URI_COLUMN,
+                                         subject_class="skos:Concept",
+                                         subject_in_scheme=LAM_MD_CS,
+                                         column_mapping_dict=URI_COLUMNS,
+                                         target_columns=list(URI_COLUMNS.keys()),
+                                         uri_valued_columns=list(URI_COLUMNS.keys()),
+                                         multi_line_columns=[],
+                                         graph=graph)
 
     uri_maker.make_triples()
 
     # make multi line uri columns
-    ml_uri_maker = build.MultiColumnTripleMaker(df,
-                                                subject_source=URI_COLUMN,
-                                                subject_class="skos:Concept",
-                                                column_mapping_dict=MULTI_LINE_URI_COLUMNS,
-                                                target_columns=list(MULTI_LINE_URI_COLUMNS.keys()),
-                                                uri_valued_columns=list(MULTI_LINE_URI_COLUMNS.keys()),
-                                                multi_line_columns=list(MULTI_LINE_URI_COLUMNS.keys()),
-                                                graph=graph)
+    ml_uri_maker = build.ConceptTripleMaker(df,
+                                            subject_source=URI_COLUMN,
+                                            subject_class="skos:Concept",
+                                            subject_in_scheme=LAM_MD_CS,
+                                            column_mapping_dict=MULTI_LINE_URI_COLUMNS,
+                                            target_columns=list(MULTI_LINE_URI_COLUMNS.keys()),
+                                            uri_valued_columns=list(MULTI_LINE_URI_COLUMNS.keys()),
+                                            multi_line_columns=list(MULTI_LINE_URI_COLUMNS.keys()),
+                                            graph=graph)
 
     ml_uri_maker.make_triples()
 
-    concept_subject_index = literal_maker.subject_index()
+    # concept_subject_index = literal_maker.row_uri_index()
+
     # go through the annotation columns and build annotation objects and attach them to concept URIs
     for column_pair in COLUMN_ANNOTATION_ASSOCIATIONS:
-        annotation_maker1 = build.MultiColumnTripleMaker(df,
-                                                         subject_source=None,
-                                                         subject_class="lam:PropertyAnnotation",
-                                                         column_mapping_dict=ANNOTATION_COLUMNS,
-                                                         target_columns=list(column_pair),
-                                                         uri_valued_columns=list(column_pair),
-                                                         multi_line_columns=[],
-                                                         graph=graph)
-
-        ann_subject_index1 = annotation_maker1.subject_index()
-
-        hang_annotation_subjects_on_concept(concept_subject_index=concept_subject_index,
-                                            annotation_subject_index=ann_subject_index1,
-                                            graph=graph)
+        # annotation_maker1 = build.PlainTripleMaker(df,
+        #                                            subject_source=list(column_pair),
+        #                                            subject_class="lam:AnnotationConfiguration",
+        #                                            column_mapping_dict=ANNOTATION_COLUMNS,
+        #                                            target_columns=list(column_pair),
+        #                                            uri_valued_columns=list(column_pair),
+        #                                            multi_line_columns=[],
+        #                                            graph=graph)
+        # annotation_maker1.make_triples()
+        # ann_subject_index1 = annotation_maker1.row_uri_index()
+        # hang_annotation_subjects_on_concept(concept_subject_index=concept_subject_index,
+        #                                     annotation_subject_index=ann_subject_index1,
+        #                                     graph=graph)
+        annotation_maker2 = build.ConceptMultiColumnConstraintMaker(df,
+                                                                    constraint_property="lam:hasAnnotationConfiguration",
+                                                                    constraint_class="lam:AnnotationConfiguration",
+                                                                    subject_source="URI",
+                                                                    subject_class="skos:Concept",
+                                                                    column_mapping_dict=ANNOTATION_COLUMNS,
+                                                                    target_columns=column_pair,
+                                                                    uri_valued_columns=column_pair,
+                                                                    multi_line_columns=column_pair,
+                                                                    graph=graph)
+        annotation_maker2.make_triples()
 
 
 def hang_annotation_subjects_on_concept(concept_subject_index, annotation_subject_index,

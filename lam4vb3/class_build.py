@@ -4,6 +4,14 @@ Date: 29.06.19
 Author: Eugeniu Costetchi
 Email: costezki.eugen@gmail.com
 """
+import pandas as pd
+import rdflib
+from rdflib import XSD, RDF, RDFS
+
+from lam4vb3 import build, lam_utils
+
+SHACL = rdflib.Namespace("http://www.w3.org/ns/shacl#")
+LAM = rdflib.Namespace("http://publications.europa.eu/ontology/lam-skos-ap#")
 
 URI_COLUMN = 'URI'
 
@@ -123,3 +131,77 @@ ANNOTATION_COLUMNS = {
     'EV': 'cdm:resource_legal_date_end-of-validity',
     'SG': 'cdm:resource_legal_date_signature',
 }
+
+
+class LAMConstraintTripleMaker(build.MultiColumnTripleMaker):
+
+    def handle_object(self, row_index, target_column, language=None, data_type=None):
+
+        cell_value = self.df.loc[row_index, target_column]
+        graph = self.graph if target_column in self.uri_valued_columns else None
+
+        if cell_value and pd.notna(cell_value):
+            if target_column in self.multi_line_columns:
+                objects = build.parse_multi_line_commented_value(cell_value,
+                                                                 graph=graph,
+                                                                 language=language,
+                                                                 data_type=data_type, )
+                return [x for x in objects if x]
+
+            return [build.parse_commented_value(cell_value,
+                                                graph=graph,
+                                                language=language,
+                                                data_type=data_type, )]
+
+    def handle_cell_subject(self, value):
+        """
+            generate a repeatable cell specific uuid
+        :type value: object
+        :return: an UUID URI
+        """
+
+        return lam_utils.generate_uuid_uri(str(value),
+                                           seed=str(self.df.head()),
+                                           graph=self.graph,
+                                           prefix="res_")
+
+    def make_cell_triples(self, subject, predicate, oobject,):
+
+        cell_subject = self.handle_cell_subject(row_index=str(subject) + str(predicate) + str(oobject))
+        # TODO
+
+        result_triples = [tuple([cell_subject, RDF.type, LAM.PropertyConstraint]),
+                          tuple([cell_subject, SHACL.path, predicate]), ]
+        for obj_value, obj_comment in oobject:
+            if str(obj_value).strip().lower() is "y":
+                result_triples.extend([
+                    tuple([cell_subject, SHACL.name, rdflib.Literal(f"Mandatory {predicate}")]),
+                    tuple([cell_subject, SHACL.minCount, rdflib.Literal("1", datatype=XSD.int)]),
+                ])
+            elif str(obj_value).strip().lower() is "yu":
+                result_triples.extend([
+                    tuple([cell_subject, SHACL.name, rdflib.Literal(f"Mandatory unique {predicate}")]),
+                    tuple([cell_subject, SHACL.minCount, rdflib.Literal("1", datatype=XSD.int)]),
+                    tuple([cell_subject, SHACL.maxCount, rdflib.Literal("1", datatype=XSD.int)]),
+                ])
+            elif str(obj_value).strip().lower() is "o":
+                result_triples.extend([
+                    tuple([cell_subject, SHACL.name, rdflib.Literal(f"Optional {predicate}")]),
+                ])
+            elif str(obj_value).strip().lower() is "ou":
+                result_triples.extend([
+                    tuple([cell_subject, SHACL.name, rdflib.Literal(f"Optional unique {predicate}")]),
+                    tuple([cell_subject, SHACL.maxCount, rdflib.Literal("1", datatype=XSD.int)]),
+                ])
+            elif str(obj_value).strip().lower() is "n":
+                result_triples.extend([
+                    tuple([cell_subject, SHACL.name, rdflib.Literal(f"Forbidden {predicate}")]),
+                    tuple([cell_subject, SHACL.maxCount, rdflib.Literal("0", datatype=XSD.int)]),
+                ])
+            else:
+                result_triples.extend([
+                    tuple([cell_subject, SHACL.maxCount, rdflib.Literal("0", datatype=XSD.int)]),
+                ])
+            if obj_comment:
+                result_triples.append(tuple([cell_subject, RDFS.comment, rdflib.Literal(obj_comment)]))
+        return result_triples
