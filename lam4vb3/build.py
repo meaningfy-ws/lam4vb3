@@ -483,13 +483,11 @@ class MultiColumnTripleMaker(TripleMaker):
                 # if not then dont raise exception but use the values for random generation instead
                 return lam_utils.generate_uuid_uri(self.df.loc[row_index, self.subject_source],
                                                    seed=str(self.df.head()) + str(seed),
-                                                   graph=self.graph,
-                                                   prefix="res_")
+                                                   graph=self.graph, )
 
         return lam_utils.generate_uuid_uri(row_index,
                                            seed=str(self.df.head()) + str(seed),
-                                           graph=self.graph,
-                                           prefix="res_")
+                                           graph=self.graph, )
 
     def handle_predicate(self, column_name) -> rdflib.URIRef:
         return utils.qname_uri(self.column_mapping_dict[column_name], self.graph.namespaces())
@@ -655,8 +653,7 @@ class AbstractTripleMaker(ABC):
             if isinstance(self.subject_source, collections.Iterable) and not isinstance(self.subject_source, str):
                 return lam_utils.generate_uuid_uri(str(row_index) + str(self.subject_source),
                                                    seed=str(self.df.head()) + str(seed),
-                                                   graph=self.graph,
-                                                   prefix="res_")
+                                                   graph=self.graph, )
 
             # if subject source is a column in the DF then make URI of it.
             elif self.subject_source in self.df.columns:
@@ -667,14 +664,12 @@ class AbstractTripleMaker(ABC):
                     # if not then dont raise exception but use the values for random generation instead
                     return lam_utils.generate_uuid_uri(self.df.loc[row_index, self.subject_source],
                                                        seed=str(self.df.head()) + str(seed),
-                                                       graph=self.graph,
-                                                       prefix="res_")
+                                                       graph=self.graph, )
 
         else:
             return lam_utils.generate_uuid_uri(row_index,
                                                seed=str(self.df.head()) + str(seed),
-                                               graph=self.graph,
-                                               prefix="res_")
+                                               graph=self.graph, )
 
     def handle_column_predicate(self, target_column) -> rdflib.URIRef:
         """
@@ -883,7 +878,7 @@ class ConceptTripleMaker(PlainTripleMaker):
     def __init__(self, df,
                  column_mapping_dict,
                  graph,
-                 subject_in_scheme,
+                 subject_in_scheme=None,
                  target_columns=[],
                  uri_valued_columns=[],
                  subject_source="URI",
@@ -891,7 +886,7 @@ class ConceptTripleMaker(PlainTripleMaker):
                  multi_line_columns=[], ):
         """
 
-        :param subject_in_scheme: the concept scheme hosting the subject concept
+        :param subject_in_scheme: the concept scheme hosting the subject concept. Can also be None
         """
         super().__init__(df=df,
                          column_mapping_dict=column_mapping_dict,
@@ -905,10 +900,11 @@ class ConceptTripleMaker(PlainTripleMaker):
         self.subject_in_scheme = subject_in_scheme
 
     def make_row_triples(self, row_index):
-        row_concept_scheme = lam_utils.qname_uri(self.subject_in_scheme, self.graph.namespaces())
-        row_subject = self.handle_row_uri(row_index=row_index, )
         result_triples = super().make_row_triples(row_index=row_index)
-        result_triples.append(tuple([row_subject, SKOS.inScheme, row_concept_scheme]))
+        if self.subject_in_scheme:
+            row_subject = self.handle_row_uri(row_index=row_index, )
+            row_concept_scheme = lam_utils.qname_uri(self.subject_in_scheme, self.graph.namespaces())
+            result_triples.append(tuple([row_subject, SKOS.inScheme, row_concept_scheme]))
         return result_triples
 
 
@@ -961,8 +957,7 @@ class ConceptReifiedValueMaker(ConceptTripleMaker):
                     cell_subject = lam_utils.generate_uuid_uri(
                         str(target_column) + str(row_index) + str(cell_value),
                         seed=str(self.df.head()),
-                        graph=self.graph,
-                        prefix="res_")
+                        graph=self.graph, )
 
                     result_triples.extend([
                         tuple([row_subject, column_predicate, cell_subject]),
@@ -1021,16 +1016,16 @@ class ConceptConstraintMaker(ConceptTripleMaker):
 
         if cell_value and pd.notna(cell_value):
             if target_column in self.multi_line_columns:
-                objects = parse_multi_line_value(cell_value,
-                                                 graph=graph,
-                                                 language=language,
-                                                 data_type=data_type, )
+                objects = parse_multi_line_commented_value(cell_value,
+                                                           graph=graph,
+                                                           language=language,
+                                                           data_type=data_type, )
                 return [x for x in objects if x]
 
-            return [parse_multi_line_value(cell_value,
-                                           graph=graph,
-                                           language=language,
-                                           data_type=data_type, )]
+            return [parse_commented_value(cell_value,
+                                          graph=graph,
+                                          language=language,
+                                          data_type=data_type, )]
         return []
 
     def make_cell_triples(self, row_index, target_column):
@@ -1047,15 +1042,24 @@ class ConceptConstraintMaker(ConceptTripleMaker):
         if cell_values:
             for cell_value, cell_comment in cell_values:
                 if cell_value or cell_comment:
-                    cell_subject = lam_utils.generate_uuid_uri(
-                        str(target_column) + str(row_index) + str(cell_value) + str(cell_comment),
-                        seed=str(self.df.head()),
-                        graph=self.graph,
-                        prefix="pc_")
+
+                    # if only a single cell value is available then use the ["column"] as source of uri.
+                    # it should be the list with a single element, the column name, to be compatible with
+                    # default uri handler.
+                    if len(cell_values) == 1:
+                        cell_subject = lam_utils.generate_uuid_uri(str(row_index) + str([target_column]),
+                                                                   seed=str(self.df.head()) + "",
+                                                                   graph=self.graph, )
+                    else:  # also take the cell value into consideration, in case of multi-line cells
+                        cell_subject = lam_utils.generate_uuid_uri(
+                            str(target_column) + str(row_index) + str(cell_value) + str(cell_comment),
+                            seed=str(self.df.head()),
+                            graph=self.graph, )
 
                     result_triples.extend([tuple([row_subject, constraint_property_uri, cell_subject]),
                                            tuple([cell_subject, RDF.type, constraint_class_uri]),
-                                           tuple([cell_subject, SHACL.path, column_predicate]), ])
+                                           tuple([cell_subject, SHACL.path, column_predicate]),
+                                           ])
                     if cell_comment:
                         result_triples.append(tuple([cell_subject, constraint_comment_uri, cell_comment]))
 
@@ -1088,8 +1092,15 @@ class ConceptConstraintMaker(ConceptTripleMaker):
                             tuple([cell_subject, SHACL.maxCount, rdflib.Literal("0", datatype=XSD.int)]),
                         ])
                     else:
+                        if self.uri_valued_columns:
+                            cell_value_string = self.graph.qname(cell_value)
+                        else:
+                            cell_value_string = str(cell_value)
                         result_triples.extend([
+                            tuple([cell_subject, SHACL.minCount, rdflib.Literal("1", datatype=XSD.int)]),
                             tuple([cell_subject, SHACL.value, cell_value]),
+                            tuple([cell_subject, SHACL.name,
+                                   rdflib.Literal(f"Constraint {predicate} to {cell_value_string}")]),
                         ])
 
         return result_triples
@@ -1149,13 +1160,14 @@ class ConceptMultiColumnConstraintMaker(PlainTripleMaker):
         """
         result_triples = super().make_row_triples(row_index=row_index)
 
+        name = "Annotated with "
+
         row_subject = self.handle_row_uri(row_index)
 
         # target_cells_subject = self.handle_row_uri(row_index, seed=str(self.target_columns))
         target_cells_subject = lam_utils.generate_uuid_uri(str(row_index) + str(self.target_columns),
                                                            seed=str(self.df.head()),
-                                                           graph=self.graph,
-                                                           prefix="res_")
+                                                           graph=self.graph, )
 
         for column in self.target_columns:
             column_predicate = self.handle_column_predicate(target_column=column)
@@ -1163,12 +1175,18 @@ class ConceptMultiColumnConstraintMaker(PlainTripleMaker):
 
             for cell_value in cell_values:
                 if cell_value:
-                    result_triples.extend([tuple([target_cells_subject, column_predicate, cell_value]), ])
+                    name += str(self.graph.qname(cell_value)) + " "
+                    result_triples.extend([tuple([target_cells_subject, column_predicate, cell_value]),
+                                           tuple([target_cells_subject, SHACL.minCount,
+                                                  rdflib.Literal("1", datatype=XSD.int)]),
+                                           ])
 
         if result_triples:
             constraint_property_uri = utils.qname_uri(self.constraint_property, self.graph.namespaces())
             constraint_class_uri = utils.qname_uri(self.constraint_class, self.graph.namespaces())
             result_triples.extend([tuple([row_subject, constraint_property_uri, target_cells_subject]),
-                                   tuple([target_cells_subject, RDF.type, constraint_class_uri]), ])
+                                   tuple([target_cells_subject, RDF.type, constraint_class_uri]),
+                                   tuple([target_cells_subject, SHACL.name,
+                                          rdflib.Literal(str(name).strip(), lang="en")]), ])
 
         return result_triples

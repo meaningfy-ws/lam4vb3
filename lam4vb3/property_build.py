@@ -7,14 +7,10 @@ Email: costezki.eugen@gmail.com
 This module deals with loading and generating RDF structures for the metadata/property worksheets
 
 """
-import re
 
 import rdflib
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, XMLNS, XSD
-import lam4vb3.build as build
-from lam4vb3 import lam_utils
-
-from lam4vb3.lam_utils import qname_uri
+from lam4vb3 import lam_utils, build
 
 LITERAL_COLUMNS = {
     'Code': 'skos:notation',
@@ -28,7 +24,7 @@ LITERAL_COLUMNS = {
 }
 
 URI_COLUMNS = {
-    'property': 'sh:path',
+    'property': 'lam:path',
 }
 
 MULTI_LINE_URI_COLUMNS = {
@@ -62,7 +58,7 @@ ANNOTATION_COLUMNS = {
 
 COLLECTION_COLUMNS = ["Classification level 1", "Classification level 2", "Classification level 3"]
 
-LAM_MD_CS_URI = rdflib.URIRef("http://publications.europa.eu/resources/authority/lam-metadata")
+# LAM_MD_CS_URI = rdflib.URIRef("http://publications.europa.eu/resources/authority/lam-metadata")
 LAM_MD_CS = "lamd:DocumentProperty"
 
 # a little bit of column management
@@ -117,23 +113,8 @@ def create_concepts(df, graph):
 
     ml_uri_maker.make_triples()
 
-    # concept_subject_index = literal_maker.row_uri_index()
-
     # go through the annotation columns and build annotation objects and attach them to concept URIs
     for column_pair in COLUMN_ANNOTATION_ASSOCIATIONS:
-        # annotation_maker1 = build.PlainTripleMaker(df,
-        #                                            subject_source=list(column_pair),
-        #                                            subject_class="lam:AnnotationConfiguration",
-        #                                            column_mapping_dict=ANNOTATION_COLUMNS,
-        #                                            target_columns=list(column_pair),
-        #                                            uri_valued_columns=list(column_pair),
-        #                                            multi_line_columns=[],
-        #                                            graph=graph)
-        # annotation_maker1.make_triples()
-        # ann_subject_index1 = annotation_maker1.row_uri_index()
-        # hang_annotation_subjects_on_concept(concept_subject_index=concept_subject_index,
-        #                                     annotation_subject_index=ann_subject_index1,
-        #                                     graph=graph)
         annotation_maker2 = build.ConceptMultiColumnConstraintMaker(df,
                                                                     constraint_property="lam:hasAnnotationConfiguration",
                                                                     constraint_class="lam:AnnotationConfiguration",
@@ -162,7 +143,6 @@ def hang_annotation_subjects_on_concept(concept_subject_index, annotation_subjec
 
 def make_property_worksheet(lam_df_properties, prefixes, output_file):
     """
-        TODO: work in progress
     :param lam_df_properties:
     :param prefixes:
     :param output_file:

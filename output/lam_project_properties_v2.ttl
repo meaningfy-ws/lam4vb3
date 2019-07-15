@@ -1,0 +1,3463 @@
+@prefix : <http://publications.europa.eu/resources/authority/lam/> .
+@prefix ann: <http://publications.europa.eu/ontology/annotation#> .
+@prefix at: <http://publications.europa.eu/resource/authority/> .
+@prefix atdt: <http://publications.europa.eu/ontology/datatype#> .
+@prefix atmdr: <http://publications.europa.eu/mdr/> .
+@prefix ato: <http://publications.europa.eu/ontology/authority/> .
+@prefix atr: <http://publications.europa.eu/resource/authority/> .
+@prefix cdm: <http://publications.europa.eu/ontology/cdm#> .
+@prefix celexd: <http://publications.europa.eu/resources/authority/celex/> .
+@prefix cobo: <http://publications.europa.eu/resource/authority/corporate-body/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix eurovoc: <http://eurovoc.europa.eu/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix evo: <http://eurovoc.europa.eu/schema#> .
+@prefix fd: <http://publications.europa.eu/resource/authority/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geowgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix lam: <http://publications.europa.eu/ontology/lam-skos-ap#> .
+@prefix lamd: <http://publications.europa.eu/resources/authority/lam/> .
+@prefix lemon: <http://lemon-model.net/lemon#> .
+@prefix lexvo: <http://lexvo.org/ontology#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rety: <http://publications.europa.eu/resource/authority/resource-type/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix vb: <http://art.uniroma2.it/ontologies/vocbench#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+lamd:md_001 a skos:Concept ;
+    lam:path skos:notation ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "CODE" ;
+    skos:prefLabel "Concept code"@en .
+
+lamd:md_002 a skos:Concept ;
+    lam:path skosxl:prefLabel ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "LABEL" ;
+    skos:prefLabel "Label of the concept"@en .
+
+lamd:md_003 a skos:Concept ;
+    lam:path skosxl:prefLabel ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Field used in the cataloguing methodology for  classification and search purposes. Keywords are usually extracted from the titles of documents."@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "KEYWORD" ;
+    skos:prefLabel "Keywords"@en .
+
+lamd:md_004 a skos:Concept ;
+    lam:path skos:example ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Field used in the cataloguing methodology for  information purposes. "@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "EXAMPLE_EN" ;
+    skos:prefLabel "EN example"@en .
+
+lamd:md_005 a skos:Concept ;
+    lam:path skos:example ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Field used in the cataloguing methodology for  information purposes. "@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "EXAMPLE_FR" ;
+    skos:prefLabel "FR example"@en .
+
+lamd:md_006 a skos:Concept ;
+    lam:path skos:editorialNote ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Field used in the cataloguing methodology for  information purposes. It contains different comments related to the specific document type."@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "COMMENT" ;
+    skos:prefLabel "Comment"@en .
+
+lamd:md_007 a skos:Concept ;
+    lam:path skos:example ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Field used in the cataloguing methodology for  information purposes. "@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "EXAMPLE_CELEX" ;
+    skos:prefLabel "Celex example"@en .
+
+lamd:md_008 a skos:Concept ;
+    lam:path lam:cdm_class ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Class or subclass according to CDM."@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "CDM_CLASS" ;
+    skos:prefLabel "cdm class"@en .
+
+lamd:md_009 a skos:Concept ;
+    lam:path cdm:created_by ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "The Author field indicates the name of the institution, the body or the country that produced the act."@en ;
+    skos:editorialNote """(April 2015) For parliamentary questions, the author field contained also the name of the Member of the European Parliament in the past. However, because of missing mapping in the CELLAR, those names are currently not displayed on the new EUR-Lex (April 2015). Possible solutions should be analysed:
+<rdf:Description rdf:nodeID="A2">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+<annot:build_info>cdm:CDM_2.1.7  tdm:1523  xslt:3945 saxon:9.0.0.1J JVM:1.6.0_29 metaconvJar:1.1.9 builddate:06/12/2013 15:38:22</annot:build_info>
+<annot:quality_issue>DATWRO</annot:quality_issue><annot:error_message>Data wrong</annot:error_message>
+<annot:old_value>Urszula Gacek</annot:old_value>
+<owl:annotatedSource rdf:resource="http://publications.europa.eu/resource/celex/92009E000068"/><owl:annotatedTarget rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/OP_DATPRO"/><
+owl:annotatedProperty rdf:resource="http://publications.europa.eu/ontology/cdm#work_created_by_agent"/>
+</rdf:Description>
+
+(10/07/2015) Author to be used in 22015D0921 (Decision No 1/2015 of the EU-EFTA Joint Committee on Common Transit of 11 May 2015 concerning an invitation to the former Yugoslav Republic of Macedonia to accede to the Convention on a common transit procedure [2015/921] )
+Codes referring to EC-EFTA Joint Committee and EEC-EFTA Joint Committee are deprecated in corporate bodies table and there is no successor referring to EU-EFTA Joint Committee.
+Therefore the following strategy must be used in this case:
+In author field, the values referring to the Joint Committee (CMT_JOIN), European Union (EURUN) and EFTA (EFTA) should be used.
+If the horizontal structure of the corporate bodies will be implemented in Cellar and EUR-Lex, value EURUN will not be needed anymore in this case as it is a parent value of CMT_JOIN.
+
+(12/11/2018) Change concerning personal names – they are currently in work_created_by_agent: Personal authors would be under contributed_by (https://webgate.ec.europa.eu/CITnet/jira/browse/CDM-52)
+Another change concerning contributed_by: cdm:work_contributed_by_agent is removed from the notice+index and  only cdm:contributed_by will be indexed&in_notice (https://webgate.ec.europa.eu/CITnet/jira/browse/CDM-119)"""@en ;
+    skos:example "<cdm:work_created_by_agent rdf:resource=\"http://publications.europa.eu/resource/authority/corporate-body/EP\"/>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "AU" ;
+    skos:prefLabel "Author"@en ;
+    skos:scopeNote """For acts of the European Parliament, the Economic and Social Committee or the Committee of the Regions, the field also contains the name of the committee or the competent section.
+
+In addition, this field may contain:
+
+name of the country signing a treaty or agreement (sectors 1/2);
+name of the originating institution;
+for acts issued by the European Parliament, the Economic and Social Committee or the Committee of the Regions it may also contain the name of the relevant committee (if there is no committee then an * is used) and the responsible sections of the Economic and Social Committee;
+other data including how many Member States signed a treaty (the six Member States, the nine Member States, etc.).
+
+There are no concepts created for different association councils (or cooperation councils or joint committees) in the relevant Translation table (corporate body) (e.g. EU – Republic of Moldova Association Council). In such cases, a combination of more generic concepts (Association Council – COUN_ASS, Cooperation Council – COUN_COOP, Joint Committee – CMT_CONJOIN etc.) together with the country name should be used (codes coming from corporate bodies + countries)."""@en ;
+    sh:class fd:corporate-body,
+        fd:country .
+
+lamd:md_010 a skos:Concept ;
+    lam:path cdm:resource-type ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "The type of act in legal terms."@en ;
+    skos:editorialNote """(April 2015) For the time being, both properties mentioned above are used because of technical reasons. For the display and search purposes, only resource_legal_has_type_act_concept_type_act is currently used by the EUR-Lex.
+
+In few months, a complete switch to work_has_resource-type will be done.
+
+(18/09/2015) DECBES: https://webgate.ec.europa.eu/publications/jira/i#browse/LAAION-44"""@en ;
+    skos:example "cdm:work_has_resource-type rdf:resource=\"http://publications.europa.eu/resource/authority/resource-type/REG_IMPL\"/>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "FM" ;
+    skos:prefLabel "Type of act"@en ;
+    skos:scopeNote "Type of act is usually mentioned in the title. "@en ;
+    sh:class fd:resource-type .
+
+lamd:md_011 a skos:Concept ;
+    lam:path cdm:resource_legal_number_corrigendum ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "This field indicates if the document is a corrigendum. It is followed by the sequential number of corrigendum (\"split\")."@en ;
+    skos:example "<cdm:resource_legal_number_corrigendum rdf:datatype=\"http://www.w3.org/2001/XMLSchema#positiveInteger\">1</cdm:resource_legal_number_corrigendum>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "DT_CORR" ;
+    skos:prefLabel "Corrigendum number"@en ;
+    skos:scopeNote """If a document is a corrigendum, it is indicated in the title of document. 
+
+A corrigendum may affect one or more language versions of a document.
+The sequential number of corrigendum must be attributed only after analysing the CELEX numbers of previously published corrigenda related to the same act."""@en .
+
+lamd:md_012 a skos:Concept ;
+    lam:path lam:celex_class ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "DN_CLASS" ;
+    skos:prefLabel "reference to CELEX class"@en .
+
+lamd:md_013 a skos:Concept ;
+    lam:path cdm:resource_legal_id_celex ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "The CELEX number is both a unique document identifier and a classification code, regardless of language. It is used as the basis for cross-referencing of documents in the database as well as for implementing hypertext links."@en ;
+    skos:example "<cdm:resource_legal_id_celex rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">32015D0046</cdm:resource_legal_id_celex>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "DN" ;
+    skos:prefLabel "complete CELEX number value"@en ;
+    skos:scopeNote """CELEX number is composed as follows: 
+
+SyyyyT(T)nnn(n)
+
+S 1 character for the sector (see list below)
+yyyy 4 digits for the year (usually the year of adoption)
+T(T) 1 or 2 characters for the document type (see list below)
+nnnn  4 digits (usually) for the document number
+
+For example, document 32014R1338 is:
+
+a sector 3 document (secondary legislation)   32014R1338
+from 2014        32014R1338
+a regulation       32014R1338 
+published in the OJ under number 1338   32014R1338
+
+Some of the above mentioned partial information is contained in the following metadata fields:
+
+Document type sector (DTS)
+Document type year (DTA)
+Document type type (DTT)
+Document natural number (DT_NUM)
+
+In some instances composed or non-standardised numbers are attributed (especially sector C documents and National implementing measures; but also treaties or parliamentary questions). There is a specific format of CELEX numbers for corrigenda.
+
+Such documents as daily Euro exchange rates, information (OJ-C II) or announcements (OJ-C V) related to concentrations, minutes of the sitting (OJ-C IV) and other notices published in the C series (under OJ-C IV) are covered by sector C; their CELEX numbers are attributed automatically.   
+
+CELEX number is attributed by the legal analysis contractor (based on the analysis) on a daily basis to all acts published in L series of the Official Journal and to some of those published in C series of the Official Journal.   
+
+Any change of an already attributed CELEX number must be approved by the Publications Office.
+
+For some specific collections of documents, CELEX number is attributed by the author or institution responsible (e.g. EU case law – documents from the Court of justice of the European Union)."""@en .
+
+lamd:md_014 a skos:Concept ;
+    lam:path cdm:concept_eurovoc ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "DC" ;
+    skos:prefLabel "EuroVoc"@en ;
+    sh:class <http://publications.europa.eu/resource/dataset/eurovoc> .
+
+lamd:md_015 a skos:Concept ;
+    lam:path cdm:resource_legal_is_about_subject-matter ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "CT" ;
+    skos:prefLabel "Subject matter"@en ;
+    sh:class fd:subject-matter .
+
+lamd:md_016 a skos:Concept ;
+    lam:path cdm:resource_legal_is_about_concept_directory-code ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "CC" ;
+    skos:prefLabel "Directory code"@en ;
+    sh:class fd:dir-eu-legal-act .
+
+lamd:md_017 a skos:Concept ;
+    lam:path cdm:case-law_is_about_concept_new_case-law ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "RJ_NEW" ;
+    skos:prefLabel "Case law directory code"@en ;
+    sh:class fd:fd_578 .
+
+lamd:md_018 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_C9farHujg8AbGYCWUfokgn ;
+    lam:path cdm:work_date_document ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition """It is the date present usually in the title. Date of document is a core metadata and therefore the one most widely available (each notice must contain one document date).
+
+The date of the document might correspond to (an appropriate annotation has to be created): 
+
+- Date of signature (e.g. treaties, international agreements, legislative acts adopted by ordinary legislative procedure or EU general budget (1) ). For those documents, also Date of signature (SG) has to be created (this is not applicable to the legislative acts adopted by ordinary legislative procedure or budget for the time being).
+
+- Date of adoption (e.g. legislative acts adopted by special legislative procedure; non-legislative acts, decisions adopted by the European Parliament). 
+
+- Date of vote (resolutions adopted by the European Parliament, resolutions or opinions adopted by ECSC or COR; resolutions or declarations adopted by bodies created by international agreements). For those documents, also Date of vote (VO) has to be created.
+
+- Date of consolidation  (consolidated legislation) (2)
+
+- Date of introduction (transmission) of a parliamentary question or date of answer (for answers to parliamentary questions), as indicated in the OJ
+
+- Date of publication (Official Journal of the European Union or European Court Reports, consolidated version of treaties and documents not containing any of the dates mentioned above)
+
+The date has format YYYY-MM-DD.
+
+1  Definitive adoption of (amending) budget – acts signed by the president of EP (e.g. 32015B1766).
+2  It refers to the date of applicability of the last amendment included in consolidation"""@en ;
+    skos:editorialNote """2015/12/22:  Decisions of the European Parliament and of the Council on the mobilisation of the European Globalisation Adjustment Fund – e.g. 32015D0738
+Methodology related to those documents will be completed. For the time being, Document date should contain the date from the title + comment "Date of adoption".
+
+2017/06/30: Note from the Legal Service of the Council concerning the date of adoption of the acts adopted under the ordinary legislative procedure
+"""@en ;
+    skos:example "<cdm:work_date_document rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">1973-03-03</cdm:work_date_document>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "DD" ;
+    skos:prefLabel "Document date"@en ;
+    skos:scopeNote """The date might be accompanied by any of the following annotation:
+
+Date of adoption
+Date of transmission
+Date of notification
+Date of publication
+Date of answer
+Date of vote
+Date of signing 
+Entry into force
+
+The document date is usually indicated in the title or in the text of document. 
+
+If any of dates mentioned in Definition (above) is not known, the date of document is equal to the date of publication in the OJ. 
+
+It is preferable to specify the nature of the date of document (date of adoption, date of signing, etc.) by using one of the above mentioned annotations. 
+
+Particular attention should be paid to the following cases:
+
+• Legislative acts adopted by the ordinary legislative procedure – the date present in the title + annotation "Date of signing".
+• Definitive adoption of the budget – the date present in the signature + annotation "Date of signing". 
+• Legislative acts adopted under a special legislative procedure; non-legislative acts – the date present in the title + annotation "Date of adoption". 
+• Treaties, international agreements – the date present in the title or text + annotation "Date of signing" (this is not applicable to the consolidated version of treaties).
+• Resolutions of the European Parliament – the date present in the title + annotation "Date of vote". """@en .
+
+lamd:md_019 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_JsLPf5JgE2CMLRQ3D3esfV,
+        lamd:res_Z4X55uCkSYqHwpjQSeMBu7 ;
+    lam:path cdm:resource_legal_date_entry-into-force ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition """It is a date when the act enters into force or becomes operative.
+
+The date has the format YYYY-MM-DD or 1001-01-01 (a fictional date for documents that take effect by notification; to be changed in a factual date if/when the notification date is known).
+
+The date of effect is also used as an indicator for the production of the Directory of legislation in force and of the Directory of preparatory acts."""@en ;
+    skos:example "<cdm:resource_legal_date_entry-into-force rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2014-01-31</cdm:resource_legal_date_entry-into-force>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "IF" ;
+    skos:prefLabel "Date of effect"@en ;
+    skos:scopeNote """The date of effect must be followed by an annotation specifying the nature of the date as shown below (type_of date): 
+Entry into force (for all acts entering into force – art. 297 of TFEU)
+Takes effect (for all acts taking effect – art. 297 of TFEU)
+Takes partial effect 
+Application (if the date of application is different as the date when the act enters into force/takes effect (see 32014R0376)
+Partial application (e.g. "However, Article 8 shall apply from…" see 32015R0104)
+Provisional application 
+
+
+Entry into force (for all acts entering into force – art. 297 of TFEU, see the next page)
+Takes effect (for all acts taking effect – art. 297 of TFEU, see the next page)
+Takes partial effect 
+Application (If the date of application is different as the date when the act enters into force/takes effect  (see 32014R0376)
+Partial application (e.g. "However, Article 8 shall apply from…" see 32015R0104)
+Provisional application 
+
+There might be also another annotation comment_on_date indicating how the date of effect is counted and which part of the document refers to the date of effect. 
+
+Example 1:
+
+<rdf:Description rdf:nodeID="A1">
+<owl:annotatedSource rdf:resource="http://publications.europa.eu/resource/celex/22015A0319%2801%29"/>
+<owl:annotatedProperty rdf:resource="http://publications.europa.eu/ontology/cdm#resource_legal_date_entry-into-force"/>
+<owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1001-01-01</owl:annotatedTarget>
+<annot:type_of_date>{EV|http://publications.europa.eu/resource/authority/fd_335/EV}</annot:type_of_date>
+<annot:comment_on_date>{V|http://publications.europa.eu/resource/authority/fd_335/V} {ART|http://publications.europa.eu/resource/authority/fd_335/ART} 22</annot:comment_on_date>
+<annot:build_info>cdm:CDM_2.1.7  tdm:1523  xslt:3945 saxon:9.0.0.1J JVM:1.6.0_29 metaconvJar:1.2.0 builddate:27/03/2015 17:57:38</annot:build_info>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+</rdf:Description>
+
+Example 2:
+
+<annot:comment_on_date>{DATPUB|http://publications.europa.eu/resource/authority/fd_335/DATPUB} +20 {V|http://publications.europa.eu/resource/authority/fd_335/V} {ART|http://publications.europa.eu/resource/authority/fd_335/ART} 3</annot:comment_on_date>
+
+The field can include several dates, when the date of entry into force and the date of application are not the same. Each date is accompanied by an indication of the type.
+
+The period of effect of an acts starts at 00.00 on the date indicated. The reference to the date of effect is indicated in the act.
+
+General rules: Entry into force vs Taking effect
+
+General rules for the date of effect are indicated in article 297 of the Treaty on the Functioning of the European Union (twentieth day following the day of publication).
+
+Article 297
+(ex Article 254 TEC)
+
+1. Legislative acts adopted under the ordinary legislative procedure shall be signed by the President of the European Parliament and by the President of the Council.
+
+Legislative acts adopted under a special legislative procedure shall be signed by the President of the institution which adopted them.
+
+Legislative acts shall be published in the Official Journal of the European Union. They shall enter into force on the date specified in them or, in the absence thereof, on the twentieth day following that of their publication.
+
+2. Non-legislative acts adopted in the form of regulations, directives or decisions, when the latter do not specify to whom they are addressed, shall be signed by the President of the institution which adopted them.
+
+Regulations and directives which are addressed to all Member States, as well as decisions which do not specify to whom they are addressed, shall be published in the Official Journal of the European Union. They shall enter into force on the date specified in them or, in the absence thereof, on the twentieth day following that of their publication.
+
+Other directives, and decisions which specify to whom they are addressed, shall be notified to those to whom they are addressed and shall take effect upon such notification.
+
+Please note differences between acts entering into force and acts taking effect (based on the provisions of TFEU article 297 quoted above).
+"""@en .
+
+lamd:md_020 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_bUtqyFy8X6unYB2ignzS5E ;
+    lam:path cdm:resource_legal_date_end-of-validity ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition """It is the date on which the act ceases to be valid.
+
+The date has the format YYYY-MM-DD or 9999-12-31 (a fictional date for documents whose validity is indefinite).
+
+The end of validity date is also used as an indicator for the production of the Directory of legislation in force and of the Directory of preparatory acts."""@en ;
+    skos:editorialNote """2015/09/21: Implicitly repealed amending acts – information form the Legal Service
+
+When a legal act is repealed, it is repealed with all subsequent amendments, even when they are not listed in the repealing act, unless for specific reasons it is expressly provided that certain amending acts are not repealed together with the main act.
+
+2015/09/23: Recommendations from sector 3
+
+Generally, recommendations from sector 3 should not have the end of validity.
+It should be created only if there is another document repealing some of the previous recommendations (e.g. 32014H0897) .
+
+2016/12/15: End of validity of repealed acts
+
+Manual of precedents for acts established within the Council of the EU, 2002:
+
+"3. REPEAL
+
+The repeal of an act or of certain of its provisions means that it/they cease( s) to be in force, either because the arrangements that it/they introduced expire or are replaced by other arrangements, or because the whole act, including all its successive amendments is replaced by a codified/recasted act (*).
+
+Regulation ...... [and Regulation ...... taken in implementation thereof] shall be repealed. 1
+
+Article 3 of Regulation ...... shall be repealed.
+
+NB: In these two cases it is understood that the repeal takes effect on the date of entry into force or, where appropriate, the date of application of the repealing act.
+
+Regulation ...... shall be repealed with effect from ...... [date on which the repealing
+
+Regulation is brought into effect].
+
+NB: In that case, the repeal shall take effect on a date which differs from that of the entry into force of the repealing act."
+
+(*) "Consolidating act" from the original version was replaced by "a codified/recasted act".
+
+ 2017/02/28: Ephemeral acts, fisheries - prohibition of fishing
+
+Change of the methodology for ephemeral acts – EV not to be created.
+
+Documents related to prohibition of fishing – there should be a real EV date inserted, based on the text.
+
+2017/06/29: Information from SJ concerning validity of delegated/implementing acts
+
+A delegated/implementing/comitology act does not automatically get repealed on the repeal of the basic legislative act on the basis of which it got adopted. An act is valid if its legal basis was valid at the time of adoption of the act. Such a delegated/implementing/comitology act would need to be specifically repealed by the Commission
+
+2019/03/15: Association agreements – new Member States 
+
+Notices covering the assiciationagreements with new MS  contain value 31/12/9999 in EV date. Therefore, the in force indicator says "In force".
+We assume the EV date should be equal to the date of accession (minus 1 day); but this assumption has not been confirmed by any relevant authority.
+Based on this, it was decided to remove EV field from such notices.
+See https://webgate.ec.europa.eu/publications/jira/browse/LAAION-540 
+Examples: 22005A0617(02), 22005A0617(01), 22003A0515(01), 21993A1231(18), 21993A1231(15).
+"""@en ;
+    skos:example "<cdm:resource_legal_date_end-of-validity rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">9999-12-31</cdm:resource_legal_date_end-of-validity>" ;
+    skos:historyNote """Acts repealed by a subsequent act
+
+The end of validity date of repealed acts 
+
+• Acts repealed by acts which should be notified
+
+An act is repealed by another act whose legal value depends of the date of notification.
+
+If the notification date is not yet known, the end of validity date of the repealed act should have the following value, accompanied by the comment “repealed by” and the mention of the repealing act:
+
+Date 
+of document: 12/12/2013 
+of effect: 08/01/2014; Entry into force Date pub. +20 See Art 2 
+End of validity date: 31/12/9999 ; Repealed by 32011D0395
+
+That date is to be modified once the notification date of the amending act is known and implemented in its notice.
+
+• Acts declared null and void by a corrigendum
+
+In such cases, the end of validity date is equal to the date of publication of the first act (and not to the date of the corrigendum).
+
+The information must be completed by the creation of an active relation corrigendum → corrected act (for the comment to be added, see Relations).
+
+Example:
+
+Document 32013R1363, published in OJ L 343 of 19.12.2013 (before the corrigendum was published):
+
+Date of document: 12/12/2013
+Date of effect: 08/01/2014; Entry into force Date pub. +20 See Art 2 
+End of validity date: 31/12/9999 
+
+Document 32013R1363R(01) (corrigendum published in OJ L 343 of 20 December 2013) declares the  publication of Commission Delegated Regulation (EU) No 1363/2013 to be considered null and void.
+
+Document 32013R1363 (after the corrigendum 32013R1363R(01) was published):
+
+Date of document: 12/12/2013
+Date of effect: 08/01/2014; Entry into force Date pub. +20 See Art 2 
+End of validity date: 19/12/2013 See 32013R1363R(01) 
+
+Implicitly repealed amending acts
+
+Basic act:   Any act from sector 2, 3, 4 or 5 which has subsequently been modified.
+
+Amending act:  Any act which fully or partially modifies the basic act to which it relates. An amending act can be composed either of provisions which only relate to one basic act ("not-autonomous provisions") or of provisions which relate to more than one or to none basic act, and which produce a legal effect of their own (“autonomous provisions”).
+
+An amending act is deemed implicitly repealed when the basic act to which it relates is repealed and does not explicitly mention that its successive amendments are also repealed, as long as the amending does not contain any autonomous provisions.
+
+The end of validity date of the amending act should be the same as the one of the repealed basic act.
+
+The information must be completed by the creation of an active relation act repealing the basic act → amending act (for implicitly repeals, see Relations).
+
+See also comment (21/9/2015) Implicitly repealed amending acts – information form the Legal Service
+
+Anti-dumping measures
+
+A definitive anti-dumping measure shall expire five years from its imposition or five years from the date of conclusion of the most recent review (Council regulation (EC) No 1225/2009, art. 11.2).
+
+There are two basic scenarios for the amendments concerning the end of validity date of an implementing measure:
+
+Scenario 1:
+
+Publication of: Basic implementing regulation imposing a definitive anti-dumping duty
+
+Date of application = 01-01-2014
+End of validity date = 31-12-2018
+
+Publication of: Implementing regulation amending the basic regulation (not repealing or amending the validity)
+
+Date of application = DD-MM-YYYY
+End of validity date = 31-12-2018
+
+Publication of: Notice of the impending expiry of certain anti-dumping measures
+(Published in OJ before the expiry of the basic regulation.)
+
+No change needed for the end of validity of the basic implementing regulation or the amending regulation.
+
+Scenario 2 (the dates in EV date are to be used successively, following the sequence of events described below):
+
+Publication of: Basic implementing regulation imposing a definitive anti-dumping duty
+
+Date of application = 01-01-2014
+End of validity date = 31-12-2018 
+
+Publication of: Implementing regulation amending the basic regulation (repealing or amending the validity, in this case to 31-12-2019)
+
+Date of application = DD-MM-YYYY
+End of validity date = 31-12-2019  + change of the end of validity date of the basic implementing regulation to be done 
+Publication of: Notice of initiation of partial interim review of the anti-dumping measures
+
+The basic implementing regulation should remain in force pending of the outcome of the review:
+
+The end of validity date of the basic and amending implementing regulations has to be changed, until the review is published (should be changed to 31-12-9999)
+
+Publication of:  New basic implementing regulation imposing a definitive anti-dumping duty
+
+Date of application = 01-04-2020
+End of validity date = 31-03-2025
+
+The end of validity date of the basic (A) and amending implementing (B) regulations has to be changed to the definitive date (31-03-2020 – date of application of the new basic regulation minus one day)."""@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "EV" ;
+    skos:prefLabel "Date of end of validity"@en ;
+    skos:scopeNote """These are the possible cases according to the nature of particular acts: 
+
+- For acts of limited duration: the date of end of validity mentioned in the act. If the act has a specific expiration date, the end of validity date is followed by the comment "See article" where the date is specified):
+
+End of validity date: 30/11/2008; See Art. 9
+
+- Acts of unlimited duration: a fictional date 9999-12-31
+
+- Repealed acts
+
+The current end of validity date of the repealed act has to be changed as follows: 
+
+End of validity date of the repealed act = date of effect of the repealing act (or date of its application if it is different as the date of entry into force ) minus 1 day. 
+
+The end of validity date is followed by the comment "Repealed by" and the Celex identifier of the repealing act. The information is completed by creation of the relation repealing act → repealed act:
+
+End of validity date: 26/01/2013; Repealed by 32013R0075 
+
+- Extention of the validity
+
+If the end of validity of an act has been extended by a subsequent act, the end of the validity date of the amended act has to be changed accordingly. The comment "Ext. valid. by"  and the Celex identifier of the amending act has to be added:
+
+End of validity date: 30/09/2014; Ext. valid. by 32013D0468 
+
+- The acts only repealing (or extending validity of) an earlier act and not containing any other autonomous provisions die in the same day as the repealed act.
+
+Methodology concerning acts repealed by acts which should be notified, acts declared null and void by a corrigendum and implicitly repealed amending acts is explained below in Exceptions and special cases.
+
+- There is no impact to the end of validity date if only a part of the act is repealed by a subsequent act (partial repeal).
+
+- For acts that by their nature have no end of validity: a fictional date 9999-12-31.
+
+- For legislative proposals (drafts, MS initiatives, drafts of general/amending budgets…): 
+
+Fictional date 9999-12-31, to be changed into a factual date when the proposal is adopted (date of adoption of the pursuant legislative act); withdrawn (date of the document stating the withdrawal); rejected (date when the proposal was rejected) or replaced (date of adoption of the amended proposal).
+
+- For acts listed as obsolete in documents from sector 5: the date of validity of obsolete acts = sector 5 document publication date.
+
+Example: 32002R1429 – listed in 52011XC1108(01)
+
+Date of document: 02/08/2002
+
+Date of effect: 01/07/2002; Implementation See Art 7
+
+Date of effect: 06/08/2002; Entry into force Date pub. +3 See Art 7
+
+End of validity date: 08/11/2011; Obsolete See 52011XC1108(01) P 1
+
+- For acts related to the budget and to the specific financial year: such acts have only limited duration (until the end of the relevant financial year).
+
+Example: 32011B0840 
+
+Date of document: 28/10/2011
+Date of effect: 01/01/2011; Entry into force Financial year 2011 
+End of validity date: 31/12/2011; Financial year 2011 
+
+- For acts related to the common agricultural policy or fisheries and to the specific marketing year: such acts have only limited duration (until the end of the relevant marketing year; Definition of the marketing year could be find in article 6 of 32013R1308).
+The same rule and comment should be applied for all acts referring to the specific fishing season (31972R2825).
+
+Examples: 
+32009R0274 (Commission Regulation (EC) No 274/2009 of 2 April 2009 fixing the quantitative limit for the exports of out-of-quota sugar and isoglucose until the end of the 2009/2010 marketing year)
+
+Date of document: 02/04/2009 
+Date of effect: 10/04/2009; Entry into force Date pub. + 7 See Art 3 
+Date of effect: 01/10/2009; Implementation See Art 3 
+End of validity date: 30/09/2010; End of season 2009/2010 comment + year
+
+32016R2361 (Commission Regulation (EU) 2016/2361 of 15 December 2016 establishing a prohibition of fishing for Greater forkbeard in Union and international waters of VIII and IX and Union and international waters of V, VI, VII by vessels flying the flag of Portugal):
+
+Article 1
+Quota exhaustion
+The fishing quota allocated to the Member State referred to in the Annex to this Regulation for the stock referred to therein for 2016 shall be deemed to be exhausted from the date set out in that Annex.
+Date of document: 15/12/2016; Date of adoption
+Date of effect: 23/12/2016; Entry into force Date pub. +1 See Art 3
+End of validity date: 31/12/2016; Period of reference 2016 comment + year
+
+If it is not possible to determinate the exact dates of the marketing/fishing year and if the application of the act is not directly related to the marketing/fishing year, the end of validity should be a fictional date 9999-12-31.
+
+- Ephemeral acts (acts related to day-to-day management of agricultural measures whose titles are printed in light type in OJ cover page): Such acts are generally valid only for a limited period and are automatically repealed by subsequent acts.
+For such acts, EV field should not be created.
+
+There is no in force indicator for ephemeral acts.
+
+- Regulations opening an invitation to tender for specific agricultural products: the end of validity date is usually mentioned in the provisions (The invitation should be open until DD/MM/YYYY).
+
+- Acts concerning the appointments of members for a defined period: the end of validity date is equal to the last day of the period mentioned in the provisions.
+
+Example: 32014D0047
+
+Date of document: 28/01/2014 
+Date of effect: 28/01/2014; Entry into force Date of document See Art 2
+End of validity date: 25/01/2015; End of term of office See Art. 1 
+
+- Anti-dumping measures (explained below in Exceptions and special cases)
+
+- Documents from sector 5: End of validity date is mainly applicable to proposals, drafts, MS initiatives (see point (d) above) or ECB recommendations. 
+
+For different documents from the decision-making process other than proposals, the EV date is applicable only for exceptional cases (e.g. EP legislative resolution repealing/replacing the previous one; no examples in the database)."""@en .
+
+lamd:md_021 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_DBG3Bj2trHkfspbuCHnKoW ;
+    lam:path cdm:legislation_secondary_date_notification ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition """This field contains the date of notification of directives and decisions which specify to whom they are addressed. 
+
+The date has format YYYY-MM-DD."""@en ;
+    skos:editorialNote """2015/10/14: Methodology 
+related to the Council decisions or directives which specify to whom they are addressed and indicating the date of effect was updated (Analytical methodology, point 2).
+
+2017/10/16: EFTA Surveillance Authority Decision having addressees: Date of document (=date of adoption) = the date of notification (and therefore date of effect)
+
+From: Mathisen, Gjermund [mailto:Gjermund.Mathisen@eftasurv.int] 
+Sent: jeudi 12 octobre 2017 11:16
+To: BRKIC Dejan (OP)
+Cc: Jordal, Christian; OP LEGAL ANALYSIS
+Subject: RE: EFTA decisions - date of notification
+
+Dear Mr Brkic, 
+
+We will attempt to add that to our routines, yes. (I note, to be more precise, that I would not expect this to happen every year; it’s more exceptional than that.)
+
+Kind regards, 
+
+Gjermund Mathisen
+Director of Competition and State Aid
+ 
+Rue Belliard 35, 1040 Brussels 
+
+Phone: +32 2 286 18 60 (direct line)
+Phone: +32 2 286 18 21 (assistant)
+E-mail: Gjermund.Mathisen@eftasurv.int 
+www.eftasurv.int 
+
+
+
+From: BRKIC Dejan (OP) [mailto:Dejan.BRKIC@publications.europa.eu] 
+Sent: 12 October 2017 11:04 AM
+To: Mathisen, Gjermund <Gjermund.Mathisen@eftasurv.int>
+Cc: Jordal, Christian <Christian.Jordal@eftasurv.int>; OP LEGAL ANALYSIS <OP-LEGAL-ANALYSIS@publications.europa.eu>
+Subject: RE: EFTA decisions - date of notification
+
+Dear Ms Mathisen,
+
+Thanks a lot for this confirmation.
+It would be good if you could also inform us about those exceptional cases where the date of adoption is not the date of notification. You can do so by sending an e-mail to our functional mailbox 
+OP-LEGAL-ANALYSIS@publications.europa.eu
+
+Kind regards,
+
+Dejan BRKIC
+Legal Analysis and Documentary Management
+_________________ 
+Publications Office of the European Union
+Dissemination and Reuse Directorate
+Documentary Management and Metadata Unit
+
+2985 Luxembourg • LUXEMBOURG
+Tel: +352 2929 42217
+Dejan.BRKIC@publications.europa.eu
+http://publications.europa.eu 
+
+
+
+From: Mathisen, Gjermund [mailto:Gjermund.Mathisen@eftasurv.int] 
+Sent: jeudi 12 octobre 2017 10:10
+To: BRKIC Dejan (OP)
+Cc: Jordal, Christian
+Subject: RE: EFTA decisions - date of notification
+
+Dear Mr Brkic, 
+
+I have had your email below forwarded from the EFTA Secretariat. My apologies for getting back to you so late. 
+
+Indeed, you may assume that any decisions in the field of State Aid or Competition, which are addressed to a specific addressee, be that a State or (a) private party/ies, apply as from the date of adoption. As a rule, we always notify such decisions to the addressee(s) on the date of adoption. If, exceptionally, we should fail to do so, we will notify the EFTA Secretariat of the notification date. 
+
+I hope this answers your question. 
+
+Kind regards, 
+
+Gjermund Mathisen
+Director of Competition and State Aid
+
+
+2019/02/20: If the real date of notification is not known, the date of publication + annotation The act was notified but the date of notification is not available on EUR-Lex – the date of publication is used instead 
+
+<COMMENT_ON_DATE>{titleAndReference.draft.disclaimer.new|http://publications.europa.eu/resource/authority/fd_365/titleAndReference.draft.disclaimer.new}</COMMENT_ON_DATE>
+
+Additionally, if the date of effect depends on the date of notification, the date of publication shall be also used in IF field.
+Example: https://eur-lex.europa.eu/legal-content/EN/ALL/?qid=1550651686388&uri=CELEX:32015D0248 """@en ;
+    skos:example "<cdm:legislation_secondary_date_notification rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2014-01-31</cdm:legislation_secondary_date_notification>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "NF" ;
+    skos:prefLabel "Date of notification"@en ;
+    skos:scopeNote """According to article 297 of TFEU, other directives, and decisions which specify to whom they are addressed, shall be notified to those to whom they are addressed and shall take effect upon such notification.
+
+For above mentioned directives and decisions, the deadline for transposition usually begins to run from the date of notification.
+
+The following cases are possible:
+
+(1) The date of effect is not indicated in the act, it is linked to the date of notification (see 32015D1410):
+
+"This decision shall take effect on the date of its notification."
+
+The date of notification is usually provided to the OP after the publication of the relevant act in the OJ. 
+
+For such cases 01-01-1001 should be inserted to the NF field.
+
+Please note that the Date of effect field (IF) should contain a comment Takes effect (for directives/decisions which specify to whom they are addressed).
+
+The date of notification (as well as the date of effect) will be changed to a real date after receiving it from the relevant service.
+
+(2) The Date of effect (IF) is indicated in the act and it is not linked to the Date of notification (NF) (see 32015D1023):
+
+"This decision shall enter into force on the date following that of its publication in the Official Journal of the European Union."
+
+Some Council acts (decisions or directives which specify to whom they are addressed; but also Decisions of representatives of the governments of the Member States or recommendations) may contain a date of notification not linked to the date of effect (which is indicated in the act). In this case the date of notification will be created after receiving it from the relevant service. The Date of effect field will not be impacted by this change.
+"""@en .
+
+lamd:md_022 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_3XH7oAubkwPc6dX8kHBCdS ;
+    lam:path cdm:date_transposition ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition """Date on which directives (or other acts) have to be implemented by the Member States (transposed into its national law).
+
+List of relevant subproperties:
+cdm:directive_date_transposition
+cdm:decision_date_transposition
+cdm:recommendation_date_transposition
+cdm:recommendation_ecsc_date_transposition
+cdm:regulation_date_transposition
+cdm:cooperation_police-and-judicial_date_transposition"""@en ;
+    skos:example "<cdm:directive_date_transposition rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2014-09-30</cdm:directive_date_transposition>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "TP" ;
+    skos:prefLabel "Date of transposition"@en ;
+    skos:scopeNote """Transposition date as indicated in the text.
+
+This field might contain multiple dates – different deadlines can be provided for different aspects of the directive.
+
+The usual way how the date of transposition is indicated is the following:
+Date of transposition: 30/09/2014; At the latest See Art 2"""@en .
+
+lamd:md_023 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_XtpyeU22g8kVjp724QCdsZ ;
+    lam:path cdm:resource_legal_date_signature ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition """The date of signature field provides the date or dates of the signing of an legislative act, agreement or EU budget. This field may also contain a reference to the place where the agreement was signed.
+
+The date has format YYYY-MM-DD."""@en ;
+    skos:example "<cdm:resource_legal_date_signature rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2014-03-25</cdm:resource_legal_date_signature>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "SG" ;
+    skos:prefLabel "Date of signature"@en ;
+    skos:scopeNote """Date of signature as indicated in the text. The field might contain multiple data (in case of different dates and places of signature).
+
+Date of signature (e.g. treaties, international agreements).
+
+Not applicable to the legislative acts adopted by ordinary legislative procedure or budget for the time being."""@en .
+
+lamd:md_024 a skos:Concept ;
+    lam:path cdm:resource_legal_date_vote ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "This field contains the date of vote on decisions or resolutions of the European Parliament or on committees (EESC/CoR) opinions."@en ;
+    skos:editorialNote "2015/10/14: Sector 2 – resolutions, declarations:  Joint Parliamentary Assembly of the Partnership Agreement concluded between the members of the African, Caribbean and Pacific group of States, of the one part, and the European Community and its Member States, of the other part - Resolution on racism, racial discrimination, xenophobia and related intolerance (ACP-EU 3549/03/fin) 22003P0926(14)"@en ;
+    skos:example "<cdm:resource_legal_date_vote rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2009-03-25</cdm:resource_legal_date_vote>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "VO" ;
+    skos:prefLabel "Date of vote"@en ;
+    skos:scopeNote "The date of vote is indicated in the document or in OJ. The date of vote is identical to the date of document."@en .
+
+lamd:md_025 a skos:Concept ;
+    lam:path cdm:act_preparatory_date_debate ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "The date of debate (date) field is used to index European Parliament resolutions or of committees (EESC/CoR) opinions. "@en ;
+    skos:editorialNote "2015/05/02: There are currently 2 fields duplicating the same information – DB (date of debate) and VO (date of vote). Both of them were used for different notices in the past. Date of debate is usually not indicated in the OJ, there is only information concerning the session (e.g. 109th plenary session, 3—4 December 2014). Both dates should be present in DB field, but it can currently contain only 1 date. This should be clarified with the CELLAR."@en ;
+    skos:example "<cdm:act_preparatory_date_debate rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2013-10-16</cdm:act_preparatory_date_debate>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "DB" ;
+    skos:prefLabel "Date of debate"@en ;
+    skos:scopeNote "The date of debate is indicated in the relevant OJ."@en .
+
+lamd:md_026 a skos:Concept ;
+    lam:path cdm:resource_legal_date_request_opinion ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition """For the Court of Justice of the European Union documents: the field indicates when the document was lodged with the Registrar of the EU Court of Justice (or EFTA Court).
+
+For the Committee of Regions, European Economic and Social Committee: Date on which a proposal is submitted for consultation.
+
+The date has format YYYY-MM-DD."""@en ;
+    skos:example "<cdm:resource_legal_date_request_opinion rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2013-02-19</cdm:resource_legal_date_request_opinion>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "LO" ;
+    skos:prefLabel "Date lodged"@en ;
+    skos:scopeNote """For the EU case law documents (sector 6): analysis provided by Court of Justice of the European Union.
+
+For the documents from sector 5 – the date as indicated in the text:
+
+On 3 July 2013, the Commission decided to consult the European Economic and Social Committee, under Article 304 of the Treaty on the Functioning of the European Union, on the(…)"""@en .
+
+lamd:md_027 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_5impcneMzoDYRWsybRTbxT ;
+    lam:path cdm:resource_legal_date_dispatch ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition """Date of dispatch for transmission to one of the institutions.
+
+The date has format YYYY-MM-DD."""@en ;
+    skos:example "cdm:resource_legal_date_dispatch rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2000-10-26</cdm:resource_legal_date_dispatch>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "DH" ;
+    skos:prefLabel "Date of dispatch"@en ;
+    skos:scopeNote """The date of dispatch field contains:
+
+For sector 5:
+
+Date of transmission of Commission proposals to the Council
+Date of transmission of European Parliament resolutions to parties concerned
+Date of transmission of EESC opinions to the Council and the Commission
+
+The source to be used is related procedure (e.g. date of event "Transmission to Council").
+
+For the legislative proposals (but also other COM or JOIN documents), if the procedure is not yet available, insert the same date as in the document date field (date of dispatch is usually equal to the date of document). If possible, Annotations should be used ("Forwarded to the Council", "Forwarded to the Parliament", etc.).
+
+In some cases, this information can be found in the text.
+
+For sector 9:
+
+Written questions: date of acknowledgment by the recipient
+Oral questions: date of the session
+(If such date is not known, insert the same date as in the document date field.)"""@en .
+
+lamd:md_028 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_aitu5ynMvTDx6NTRfBPvpW ;
+    lam:path cdm:resource_legal_date_deadline ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition """The date of deadline field contains various intermediate deadlines relating to the document.
+
+The date has format YYYY-MM-DD."""@en ;
+    skos:example "<cdm:resource_legal_date_deadline rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2014-12-31</cdm:resource_legal_date_deadline>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "DL" ;
+    skos:prefLabel "Date of deadline"@en ;
+    skos:scopeNote """Deadline/expiry date is mentioned in the act (it is a date other than the implementation date or than the date of end of validity). Several dates per document can be entered. 
+
+The field is used for legislation and is optional.
+
+Special attention has to be paid to "review" clauses in legislation.
+
+Often, such clauses are in the form of an article entitled "Review", rather at the end of the text of the legal act (or international agreement).
+ 
+Example (32013L0050): 
+
+"Article 5
+Review
+
+By 27 November 2015, the Commission shall report on the operation of this Directive to the European Parliament and the Council, including on its impact on small and medium-sized issuers and on the application of sanctions, in particular whether they are effective, proportionate and dissuasive, and shall review the functioning and assess the effectiveness of the retained method for the purposes of calculating the number of voting rights relating to the financial instruments referred to in the first subparagraph of Article 13(1a) of Directive 2004/109/EC.
+
+The report shall be submitted together with a legislative proposal, if appropriate."
+ 
+For such case, an annotation to the deadline must be created, containing value B-19.12 (Review) from FD_305. It should be used for the field "Deadline (DL)" like this:
+ 
+<annot:comment_on_date>{B-19.12|http://publications.europa.eu/resource/authority/fd_335/B-19.12}</annot:comment_on_date>
+"""@en .
+
+lamd:md_029 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_NKboFNTgBLwo6XBLwcmkFc,
+        lamd:res_kbMMiiaidHsW6BFKNLASbJ ;
+    lam:path cdm:question_parliamentary_date_reply ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition """Date of the answer of the institution to a parliamentary question.
+
+The date has format YYYY-MM-DD."""@en ;
+    skos:example "<cdm:question_parliamentary_date_reply rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2013-02-18</cdm:question_parliamentary_date_reply>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "RP" ;
+    skos:prefLabel "Date of reply"@en ;
+    skos:scopeNote """The date of reply field contains:
+
+for written questions, the date of receipt of a reply to the European Parliament;
+for other questions, the date of the debate or written reply."""@en .
+
+lamd:md_030 a skos:Concept ;
+    lam:path cdm:resource_legal_in-force ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "VV" ;
+    skos:prefLabel "In force indicator "@en .
+
+lamd:md_031 a skos:Concept ;
+    lam:path cdm:resource_legal_repertoire ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "REP" ;
+    skos:prefLabel "Directory indicator"@en .
+
+lamd:md_032 a skos:Concept ;
+    lam:path cdm:service_responsible ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "RS" ;
+    skos:prefLabel "Service responsible"@en ;
+    sh:class fd:corporate-body .
+
+lamd:md_033 a skos:Concept ;
+    lam:path cdm:service_associated ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "AS" ;
+    skos:prefLabel "Associated service"@en ;
+    sh:class fd:corporate-body .
+
+lamd:md_034 a skos:Concept ;
+    lam:path cdm:question_parliamentary_asked_by_group_parliamentary ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "AF" ;
+    skos:prefLabel "Political group"@en ;
+    sh:class fd:corporate-body,
+        fd:country .
+
+lamd:md_035 a skos:Concept ;
+    lam:path cdm:resource_legal_information_miscellaneous ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "MI" ;
+    skos:prefLabel "Miscellaneous information"@en ;
+    sh:class fd:fd_400 .
+
+lamd:md_036 a skos:Concept ;
+    lam:path cdm:term_parliamentary ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "LG" ;
+    skos:prefLabel "Parliamentary term"@en .
+
+lamd:md_037 a skos:Concept ;
+    lam:path cdm:resource_legal_position_eesc ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "RI" ;
+    skos:prefLabel "Internal reference"@en .
+
+lamd:md_038 a skos:Concept ;
+    lam:path cdm:stored_by ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "DP" ;
+    skos:prefLabel "Depositary "@en ;
+    sh:class fd:fd_40 .
+
+lamd:md_039 a skos:Concept ;
+    lam:path cdm:addresses ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "AD" ;
+    skos:prefLabel "Addressee "@en ;
+    sh:class fd:corporate-body,
+        fd:country,
+        fd:fd_50 .
+
+lamd:md_040 a skos:Concept ;
+    lam:path cdm:resource_legal_uses_originally_language ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "LF" ;
+    skos:prefLabel "Authentic language"@en ;
+    sh:class fd:language .
+
+lamd:md_041 a skos:Concept ;
+    lam:path cdm:reported_by ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "REPPORTEUR" ;
+    skos:prefLabel "Rapporteur "@en ;
+    sh:class fd:fd_13,
+        fd:fd_14 .
+
+lamd:md_042 a skos:Concept ;
+    lam:path cdm:agreement_international_has_type_comment_concept_type_comment ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "IC" ;
+    skos:prefLabel "Additional information (Internal comment)"@en ;
+    sh:class fd:fd_301 .
+
+lamd:md_043 a skos:Concept ;
+    lam:path cdm:resource_legal_comment_internal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "CM" ;
+    skos:prefLabel "Internal comments"@en .
+
+lamd:md_044 a skos:Concept ;
+    lam:path cdm:preparatory_act_number_session ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "NS" ;
+    skos:prefLabel "Number of session"@en ;
+    sh:class fd:fd_345 .
+
+lamd:md_045 a skos:Concept ;
+    lam:path cdm:resource_legal_based_on_concept_treaty ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "TT" ;
+    skos:prefLabel "Treaty"@en ;
+    sh:class fd:treaty .
+
+lamd:md_046 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_2JFzP336EogiUrVW7hSRtB,
+        lamd:res_3xj9AXbNTXv87rUoDX8SBc,
+        lamd:res_fkMDyU7UvgpzQQ4Xn4vd42,
+        lamd:res_p5NU6a9eCeTWHqwjoWpKWL ;
+    lam:path cdm:resource_legal_based_on_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "LB" ;
+    skos:prefLabel "Link: Legal basis"@en .
+
+lamd:md_047 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_5UfdnX7eR6ZiCstVHN3sHd,
+        lamd:res_TkbhKJhwLNfCenHojNoBLH,
+        lamd:res_cyz95dv9oUuYnXX9arisfP,
+        lamd:res_hemzLGvmHRaaoFKKph7DwX,
+        lamd:res_hrd52SJvwed2noxBxXVDr2,
+        lamd:res_pH74o9PHhbLfW4FjV8DQ3f,
+        lamd:res_svcaHcSZJxZaS9DVCzE4sc ;
+    lam:path cdm:resource_legal_amends_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Amending act → amended act"@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "AMENDMENT" ;
+    skos:prefLabel "Link: Amendment"@en ;
+    skos:scopeNote """Link from: 
+amending act to the amended act (MS)
+amending proposal to amended proposal (EA)"""@en .
+
+lamd:md_048 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_2JetgncsV3ntTugJrWTHkF,
+        lamd:res_4dbyuparz7jPqNMXPhTV4P,
+        lamd:res_8ukhAKeAszVZNPVnwQp982,
+        lamd:res_JgY2F9xoM6jn8Acb5kpLN3,
+        lamd:res_dAmQfRbukQ5T5hggrEESiW,
+        lamd:res_jPdVGb2dKVRBb9pgyDuWmn,
+        lamd:res_mjNLTpEeozfDiu6XWejrvd ;
+    lam:path cdm:resource_legal_adds_to_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ADDITION" ;
+    skos:prefLabel "Link: Adition"@en ;
+    skos:scopeNote """All docs of type Decision of the EEA Joint Committee No 159/2014 of 9 July 2014 amending certain Annexes and Protocols to the EEA Agreement 22014D0159 should have "addition" and not "completion".
+32014R1142 → 32012R0966"""@en .
+
+lamd:md_049 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_CeKu5yV55H6Fb3XJXUp4nZ,
+        lamd:res_LJC8adwDDcf7pBLpetj3Kg,
+        lamd:res_n4kG6rNcaMNy2cSwFRusgM,
+        lamd:res_obzH82xPBesCdqahJPXG9Z,
+        lamd:res_vUGaY8mYVezJSShX5sZQdj,
+        lamd:res_vuDWNijt3Seh624dCXTYHM,
+        lamd:res_x7rSBSMMVBkcLHmKYPf7j7 ;
+    lam:path cdm:resource_legal_repeals_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Repealing act → repealed act"@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "REPEAL" ;
+    skos:prefLabel "Link: Repeal"@en .
+
+lamd:md_050 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_CXscmPymHtACX448vQRQM5,
+        lamd:res_F6SvD9ziWdHtRawxq7mgvL,
+        lamd:res_TnjyFpzmVQNFSCHhMdXqJT,
+        lamd:res_aYheNnpEJPKnZtBwihQHcX,
+        lamd:res_mu2xm69PYgjbvfcLvhZHGC,
+        lamd:res_xVD6L5T2nUGxHbPuLMt42P,
+        lamd:res_zbHrhvuhSPdpT7u3Uc2ps5 ;
+    lam:path cdm:resource_legal_implicitly_repeals_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "REPEAL_IMP" ;
+    skos:prefLabel "Link: Implicit repeal"@en ;
+    skos:scopeNote """See explanation in Implicitly repealed amending acts
+(End of validity date)
+32015R1011 → 32009R0297"""@en .
+
+lamd:md_051 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_A6he2JHjdzepwPR3jBvWCN,
+        lamd:res_DaUtHtNeHkZTWEDgSZvbaP,
+        lamd:res_HME7YWKXZhDvSPmLS25uki,
+        lamd:res_XCxivi5yJ4kV6AHazTSBKY,
+        lamd:res_evFjM87oRiYWeT52gkSZ26,
+        lamd:res_ta8gWmmKVCEs935bJ5H2yY,
+        lamd:res_wx8g3Aq2VSQbimegxnecZc ;
+    lam:path cdm:resource_legal_adopts_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Adopted act → proposal"@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ADOPTION" ;
+    skos:prefLabel "Link: Adoption"@en ;
+    skos:scopeNote "To be used also for Council decisions concerning the conclusion (and/or signing and/or provisional application and/or approval and/or signature) of an international agreement: 32010D0343 →  22010A0622(01)"@en .
+
+lamd:md_052 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_EBasbYFLnyUFWZHZUXCo5d,
+        lamd:res_Kbv4Ufo2KJ9NET3dJrERqm,
+        lamd:res_YFpYSq4LmYHWGzjexPpL7f,
+        lamd:res_eY5DHJFmseqpJLPeiyHZVn,
+        lamd:res_gqnDpJ3Eafxi8fzrngyAo3,
+        lamd:res_nYUngFoXJbEKUmubAv39zR,
+        lamd:res_zSkByx43qkbvSn8U3FugLX ;
+    lam:path cdm:resource_legal_partially_adopts_resource_ ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ADOPTION_PAR" ;
+    skos:prefLabel "Link: Partial adoption"@en ;
+    skos:scopeNote """32014L0086, 32015L0121 → 52013PC0814
+See 2013/0400/CNS"""@en .
+
+lamd:md_053 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_2tnVkFPrcLFMjzQZZoxLw4,
+        lamd:res_4BtGZ9wbJGb2qMaXCp6Jjg,
+        lamd:res_DxbuQbmyLmBipk2YUXnTDb,
+        lamd:res_KuRgpMPTQvkzHnADs6ybNb,
+        lamd:res_PfyDQSu39q382k4DTTR4QF,
+        lamd:res_XjKWrTzrGefZDGDHpH7WKW,
+        lamd:res_moeLvBZAAszRHijsPLgFX3 ;
+    lam:path cdm:resource_legal_extends_application_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "APPLICABILITY_EXT" ;
+    skos:prefLabel "Link: Extention of applicability"@en ;
+    skos:scopeNote """32006D0382 (extension of application of 32001D0890 to the Republic of Malta)
+
+32011D0226 (extension of application of the transitional period)"""@en .
+
+lamd:md_054 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_6cWfLwEFK7Wf4v5XvYd3kN,
+        lamd:res_CZEev7B2sBvGV6Sh84ZN7U,
+        lamd:res_FviESCwDHGUaiqQJLLghJo,
+        lamd:res_VMinXekYWjq45hEnfr6YHN,
+        lamd:res_knmDGTVfBTTM9c2ZfknF9R,
+        lamd:res_oBze9k4VJvmySEJGKrfCd8,
+        lamd:res_sKzRawYNRUufjHrnKuV3nX ;
+    lam:path cdm:resource_legal_completes_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:editorialNote """new EUR-Lex label = Supplement
+or
+Completion / Supplement"""@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "COMPLETION" ;
+    skos:prefLabel "Link: Completion"@en ;
+    skos:scopeNote """To be used also for "supplement"
+Commission Delegated Regulation (EU) No 231/2013 of 19 December 2012 supplementing Directive 2011/61/EU…
+See 32013R0231 → 32011L0061"""@en .
+
+lamd:md_055 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_WrPBMvcFFoXjknz4efBwzH,
+        lamd:res_cbBMVJo7zadq7RkUyV5kcg,
+        lamd:res_egHBcnkhJsZ4QuuLeEqdSJ,
+        lamd:res_et9nSvLDWdeCmrApAMpRHH,
+        lamd:res_hsrXTEEZdTo2Uw4GQhkq5L,
+        lamd:res_utM996jP2fAHdQiJFv5eXZ,
+        lamd:res_xNnj5rDgACb4PGzM2c5HM7 ;
+    lam:path cdm:resource_legal_extends_validity_of_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "VALIDITY_EXT" ;
+    skos:prefLabel "Link: Extention of validity"@en ;
+    skos:scopeNote "32015D0332"@en .
+
+lamd:md_056 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_HF5jxngwURpAPa5ZHBas56,
+        lamd:res_LTek3wsopLqs8zLxPCKY6f,
+        lamd:res_VDVEDKUrhySDfymrSYmara,
+        lamd:res_YUcgZjs4NjXc8F4ic94x5b,
+        lamd:res_ZQm7suWVfcXYzER8nfVx77,
+        lamd:res_rqc6vfUZj4Mz9NHAm2tiUb,
+        lamd:res_wFRm9VtvNbs92RaH5ARvpj ;
+    lam:path cdm:resource_legal_replaces_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Amending act → amended act"@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "REPLACEMENT" ;
+    skos:prefLabel "Link: Replacement"@en ;
+    skos:scopeNote """Acts updating annex (or another part) of previously published act
+32011D0070 → 32001E0931"""@en .
+
+lamd:md_057 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_BswfHayiN28FMHskmWLMFf,
+        lamd:res_GTj9eChf4HfpvSGtXdAjnV,
+        lamd:res_MHQeTZ4sjHZSDSXXkgbjZH,
+        lamd:res_akyVKCXAK474kjs4TdSoWd,
+        lamd:res_paM82a8LmiM3JoPMxpGDV5,
+        lamd:res_sy6oCiBEesum5TXeb4PCNK,
+        lamd:res_wBvoNzAmNTivBn3Kt2ULL2 ;
+    lam:path cdm:resource_legal_corrects_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Corrigendum → corrected act"@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "CORRIGENDUM" ;
+    skos:prefLabel "Link: Corrigendum"@en .
+
+lamd:md_058 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_46bUx6PjF3kRXm5VMMWc2U,
+        lamd:res_QLFabcPjdMDhxjFbG7ywyR,
+        lamd:res_TnNedmH2LZ8WJcDUXmUQMh,
+        lamd:res_XqMDainF4Xa3L9rgBJbeDa,
+        lamd:res_hfgboP7WBBsgjdGNSg95CX,
+        lamd:res_wANtXdvzPQFDS2Jd7nEuiL,
+        lamd:res_wRSsZDmUjGsXbXhyYGzX55 ;
+    lam:path cdm:resource_legal_renders_obsolete_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "OBSOLETE" ;
+    skos:prefLabel "Link: Obsolete"@en ;
+    skos:scopeNote "52010XC1211(07)"@en .
+
+lamd:md_059 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_3rqAbm74LLNgZGWjRZnEmk,
+        lamd:res_7wmgtzSk8Hp8AyBtk2c5dd,
+        lamd:res_89uLkwyFbKPqU62o4XYS7e,
+        lamd:res_NkDAuJVGc7EvRwytWhLEPg,
+        lamd:res_U8fWb5XWzfqkKfwAiGBHzM,
+        lamd:res_YHL9BuYKbCRdBZSrkgWUnD,
+        lamd:res_ytEkuNCru59g9PWw3NuLre ;
+    lam:path cdm:resource_legal_derogates_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:editorialNote "This relation should be completed with an annotation referring to Member State(s) concerned (role2) - Member states - codes in FD_375 to be created"@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "DEROGATION" ;
+    skos:prefLabel "Link: Derogation"@en ;
+    skos:scopeNote """32015D0179 → 32000L0029
+"""@en .
+
+lamd:md_060 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_7WxhFNfzpxvcoDqK6tGHk7,
+        lamd:res_JzWEZ6RZSxFL3NgXAsEJfm,
+        lamd:res_PVKbBEERKaowaXMLWMgish,
+        lamd:res_RnsVktwveLTd3zZssiifcR,
+        lamd:res_U4YQ3yMRBBmuyXHFqxkR7P,
+        lamd:res_bnUXvvbR4jA6YpXVFcaGo5,
+        lamd:res_gELKdi39wwDNX2hdBxYw8f ;
+    lam:path cdm:resource_legal_confirms_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "CONFIRMATION" ;
+    skos:prefLabel "Link: Confirmation"@en ;
+    skos:scopeNote "31988R3283, 31988R1733"@en .
+
+lamd:md_061 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_8usNpp3ddsvx787WHoBXCL,
+        lamd:res_Gj6PfQeGCNeU8k8XNMxnGM,
+        lamd:res_LHfsaQ6bKuFwsecfYCCPvV,
+        lamd:res_N4icxvDZuY8RTyCzoAkDj8,
+        lamd:res_VVNBK6BDd7QVP4Ay2ABtdg,
+        lamd:res_ZWWdrTYnPbVNt9VDak6rNX,
+        lamd:res_kCRqtr48CHqx3pZSnaZChQ ;
+    lam:path cdm:resource_legal_tackles_similar_question_as_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "QUESTION_SIMILAR" ;
+    skos:prefLabel "Link: Similar question"@en ;
+    skos:scopeNote "Used especially in sector 9 in the past"@en .
+
+lamd:md_062 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_2DTvVXtQozwMFvonbRdkhB,
+        lamd:res_MmB7mPhEomBfgm6t4xDPTM,
+        lamd:res_aNGUrQDzuNjz2sLZpzEvm5,
+        lamd:res_dn948bhRjBP2vb6fprMdv9,
+        lamd:res_eP67jv9nUwM5NLUnXeZQ5n,
+        lamd:res_hv8mvLMd9UZw5ePKMHeAN2,
+        lamd:res_mxcxdNXwkk2Fv5MXJQ4f64 ;
+    lam:path cdm:resource_legal_interpretes_authoritatively_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "INTERPRETATION" ;
+    skos:prefLabel "Link: Interpretation"@en ;
+    skos:scopeNote """31996D0555 → 31971R1408
+
+32000D0141 → 31971R1408"""@en .
+
+lamd:md_063 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_7bFD4GHCehAqNn87xpEr9M,
+        lamd:res_KL2eKkWX59oQTWzRPRakDj,
+        lamd:res_PEobMyu3LAxGYSePAKLotH,
+        lamd:res_Q35acFcVcVBoDk5Rc24NUf,
+        lamd:res_TeFxs43KENVCyrzJt7p9d3,
+        lamd:res_vBNHXKRBiAAPUeVvm93QZ8,
+        lamd:res_xqSzcSqyB6A4mGMUzQZ2Aa ;
+    lam:path cdm:resource_legal_implements_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "IMPLEMENTATION" ;
+    skos:prefLabel "Link: Implementation"@en ;
+    skos:scopeNote """Not to be used for relations between implementing and basic act – for such relations, RD field should be used
+32013R0019 →  22012A1221(01)
+Relation 32013R0019 →  22012A1221(01) to be created
+
+All existing relations between basic and implementing acts to be changed"""@en .
+
+lamd:md_064 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_7JhRVK5Ckr8fTHbitTdLsU,
+        lamd:res_89Ksa3U9CmMk2FYsiVroWk,
+        lamd:res_FGwiPyncAuxwrprJwYxwxX,
+        lamd:res_KWx8oizxGqbXhCFm6qYXuU,
+        lamd:res_TotusZYRbXjsLHw3Uw4u6Y,
+        lamd:res_cHw8xneEUhWjaeJez6Jipa,
+        lamd:res_ikKs6UbFgnXHjG4PA8hnjB ;
+    lam:path cdm:resource_legal_reestablishes_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "REESTAB" ;
+    skos:prefLabel "Link: Reestablishes document"@en ;
+    skos:scopeNote "31987R1715 → 31986R3618"@en .
+
+lamd:md_065 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_29AtbUJpTi4pVGS3bxe3QT,
+        lamd:res_2cQw2rsi7psRRQhgrTDx2c,
+        lamd:res_HVvU5wyDKFkT2RLMgaHGnU,
+        lamd:res_iVcMuviQzJqo3htW7nVWKQ,
+        lamd:res_nRrKpWQ2u2hmGi7bZ7jXRS,
+        lamd:res_nVenFfDVJ8CzrQCsoDgadY,
+        lamd:res_tTyCWBWYmthe3QYrETaqXJ ;
+    lam:path cdm:resource_legal_suspends_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "SUSPEND" ;
+    skos:prefLabel "Link: Suspends document"@en ;
+    skos:scopeNote "32009D0383 → 32004R1683"@en .
+
+lamd:md_066 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_2FwSBg7Ws8zJgVsQADwiXe,
+        lamd:res_ZG6PhtSBYGtKTMeekoUF2Y,
+        lamd:res_bsVBAbiMogS6ZZdmmqGSy8,
+        lamd:res_fbo8PhEtRqKBTBqupwhfnN,
+        lamd:res_jxZjEnyQNvF9KPasyQ2hzj,
+        lamd:res_tqqE854GvPTt8KhX7v48Qf,
+        lamd:res_z24bZkmotWBj5tNH7gP8gA ;
+    lam:path cdm:resource_legal_partially_suspends_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "SUSPEND_PAR" ;
+    skos:prefLabel "Link: Partially suspends document"@en ;
+    skos:scopeNote "32013R0298 → 32004R0314"@en .
+
+lamd:md_067 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_PoDgZAu5twCAnmjLdmw9a8,
+        lamd:res_QF2hFkyFwfGqARZxVvqhHi,
+        lamd:res_TmZvicTsTxZYJ7csbW25Xn,
+        lamd:res_eGpgAQecLmDAMCC9z9MUtC,
+        lamd:res_nRTQq2kt4xpWHHfkb7Uoc3,
+        lamd:res_sVzMH8SBST6QpWrwyQGNEV,
+        lamd:res_xDuoRKizNzMv4UqnCPCyeT ;
+    lam:path cdm:resource_legal_defers_application_of_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "APPLICABILITY_DEF" ;
+    skos:prefLabel "Link: Deferrs applicability"@en ;
+    skos:scopeNote "32011R0062"@en .
+
+lamd:md_068 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_3BWBMrZ6hbz5m2L74uRm6h,
+        lamd:res_3yS6GPzJVPCtKhpiWCofZA,
+        lamd:res_DkjMMyNSjkBnocdjeKXQaA,
+        lamd:res_Feei5zZgJEhDSetWDt8sZH,
+        lamd:res_M7kWMiqDr2iNCFDYbXEvja,
+        lamd:res_nvLPBk4MAnLxR7tk55FCfQ,
+        lamd:res_rUAkdgtcoBj4JdozUX4cUi ;
+    lam:path cdm:resource_legal_incorporates_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "INCORPORATION" ;
+    skos:prefLabel "Link: Incorporation"@en ;
+    skos:scopeNote """e.g. international agreement incorporating specific EU legislation
+21994A0103(60) → 31989L0552"""@en .
+
+lamd:md_069 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_8E3tU5omDyTjj4JDfCTF8W,
+        lamd:res_8LFbTwsqHDjXDVtSeJkn22,
+        lamd:res_ZuCTdBrQBTq4i3YCRH4EQA,
+        lamd:res_amPtxySDRoBmrUqHiGmJK5,
+        lamd:res_kEZ8fNFPjyh3hhxyPoPYwN,
+        lamd:res_vDFv7NVWCmpACPwtP8x5mi,
+        lamd:res_wmsbz8RXgYEMuw26WQQvFM ;
+    lam:path cdm:resource_legal_partially_refers_to_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "REFER_PAR" ;
+    skos:prefLabel "Link: Partial referral"@en ;
+    skos:scopeNote "Used especially in sector 9 in the past"@en .
+
+lamd:md_070 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_7BHmnCkCnbJJ4vrGr7gg5c,
+        lamd:res_7fHoVQmPGhKjQCm9vm7jmQ,
+        lamd:res_Rw5FymSeEoYFJoCyAhSpgn,
+        lamd:res_YViZFn6Hn4iWpYBGgRSzin,
+        lamd:res_hHskcEXhX7JuQ73Yak39oQ,
+        lamd:res_hiw5uepNp4ytUf6yERPXAF,
+        lamd:res_yUYKrECy6BPPKHr55nJ5yD ;
+    lam:path cdm:resource_legal_related_question_to_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "QUESTION_RELATED" ;
+    skos:prefLabel "Link: Related question"@en ;
+    skos:scopeNote "Used especially in sector 9 in the past"@en .
+
+lamd:md_071 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_GVWatX6wsPb9SbMdwSQdW6,
+        lamd:res_LPGyHySaXetHobmyGGDbVS,
+        lamd:res_h9C9mk588TUbQNNMQUxEnm,
+        lamd:res_q7DHsFP9nt4FHKjSXNkMph,
+        lamd:res_tVAC2h5wsaMZZTSdGgLtKP,
+        lamd:res_w2a982uLVY5usELnH3eFkn,
+        lamd:res_zh4MWgPEU6LjsJJrDwEboC ;
+    lam:path cdm:resource_resource_legal_contains_ep_opinion_on_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "OPINION_EP" ;
+    skos:prefLabel "Link: EP opinion"@en .
+
+lamd:md_072 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_EXjYZUAZ5iTnBfe5xB2HG9,
+        lamd:res_UYpf3ujDXnX2g3ZLRd29tk,
+        lamd:res_gUeg4pJkNWZemKBmMFctLj,
+        lamd:res_k7JBzmEyTxNcoHfeybL4WN,
+        lamd:res_nwjq4kMP7e9EMwQE98ywH9,
+        lamd:res_tFaRkRcDSJmqNM4fAicwwB,
+        lamd:res_xfmLzx9iqesMPMQEkvBphV ;
+    lam:path cdm:resource_resource_legal_contains_cor_opinion_on_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "OPINION_COR" ;
+    skos:prefLabel "Link: COR opinion"@en .
+
+lamd:md_073 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_HjSkR66ticD5Z8WVG9fM9o,
+        lamd:res_JvvMo7zUJhYnmk6TxvUGzn,
+        lamd:res_PsHHVi5Spp4c3iw2MbbWPT,
+        lamd:res_RF6L5uZS2qAwdGKFZwyEQ8,
+        lamd:res_h6gVgzFwmMHARLjWp5gGzJ,
+        lamd:res_tN2KaiDvhcMEmpHefxD7zH,
+        lamd:res_yWgoNHmJZ6bweYabBEp2Ca ;
+    lam:path cdm:resource_resource_legal_contains_eesc_opinion_on_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "OPINION_EESC" ;
+    skos:prefLabel "LINK: EESC opinion"@en .
+
+lamd:md_074 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_63hDmyQqzz6zQRuSiMkFee,
+        lamd:res_Ef3w6tb3hWHYzJbFFpGZHC,
+        lamd:res_Jmu2KbH7ojpUd9BSi9nFei,
+        lamd:res_kU79zzR62R8dUkhkGJ8WdE,
+        lamd:res_qKo6pgFPpXc6C6wvgsvBnJ,
+        lamd:res_utE3Rhb5Asbw5pn4LXdMGJ,
+        lamd:res_y7EhYh8W8uTtCtrK3udAc6 ;
+    lam:path cdm:resource_resource_legal_influences_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Relation between documnets from the same procedure and the proposal or draft"@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "INFLUENCE" ;
+    skos:prefLabel "Link: Influence"@en ;
+    skos:scopeNote "Create a link from subsequent related document coming from the same procedure to the proposal or the draft."@en .
+
+lamd:md_075 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_D3SmUnZh4QiXWbKdiahAUe,
+        lamd:res_D6cgqxL3jtSQi8mmHtVLb9,
+        lamd:res_LYYEifSKGVPMS9HGq43oXP,
+        lamd:res_R6ioiwrtCug87K98kNjSAg,
+        lamd:res_TEyVCsh4P8pNmEZw5aKPsL,
+        lamd:res_ihTwAgV3it5MbZkKSFFfQh,
+        lamd:res_zfAC2eB8RC7Es8k9Ba45rN ;
+    lam:path cdm:resource_resource_legal_proposes_to_amend_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "AMENDMENT_PRO" ;
+    skos:prefLabel "Link: Amendment proposal"@en .
+
+lamd:md_076 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_VmoK32xyS25AmcTm7Q2c8U,
+        lamd:res_cHoYwgVQCe8A9mPMfM3Nrd ;
+    lam:path cdm:work_cites_work ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "CI" ;
+    skos:prefLabel "Link: Instruments cited"@en .
+
+lamd:md_077 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_9vpQhVRwqFQNzzExJqnnAD,
+        lamd:res_PuySPjxB6YZHxPM9T4dAGE,
+        lamd:res_ziorTa6G8yfFrVSt7SVkQ6 ;
+    lam:path cdm:work_related_to_work ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "RELATION" ;
+    skos:prefLabel "Link: Relation"@en .
+
+lamd:md_078 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_Vfy26SbrG3UqpBY4zHsLKn,
+        lamd:res_Wc3tFupMPaM6Trq9FGV3fV,
+        lamd:res_qDz2eCmfnq8tfP3MMddNMH ;
+    lam:path cdm:resource_legal_associates_agreement_international ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ASSOCIATION" ;
+    skos:prefLabel "Link: International agreement"@en .
+
+lamd:md_079 a skos:Concept ;
+    lam:path cdm:work_part_of_dossier ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:example "<j.0:work_part_of_dossier rdf:resource=\"http://publications.europa.eu/resource/procedure/2015_288\"/>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "PROC" ;
+    skos:prefLabel "ID of relevant procedure"@en ;
+    skos:scopeNote "This is the link to the relevant interinstitutional or internal procedure."@en .
+
+lamd:md_080 a skos:Concept ;
+    lam:path cdm:communication_cjeu_requested_by_agent ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "AP" ;
+    skos:prefLabel "Applicant "@en ;
+    sh:class fd:corporate-body,
+        fd:country,
+        fd:fd_110,
+        fd:role-qualifier .
+
+lamd:md_081 a skos:Concept ;
+    lam:path cdm:communication_cjeu_defended_by_agent ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "DF" ;
+    skos:prefLabel "Defendant "@en ;
+    sh:class fd:corporate-body,
+        fd:country,
+        fd:fd_110,
+        fd:role-qualifier .
+
+lamd:md_082 a skos:Concept ;
+    lam:path cdm:communication_cjeu_has_type_procedure_concept_type_procedure ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "PR" ;
+    skos:prefLabel "Type of procedure"@en ;
+    sh:class fd:fd_110,
+        fd:legal_proceeding,
+        fd:legal_proceeding_result .
+
+lamd:md_083 a skos:Concept ;
+    lam:path cdm:work_originates_in_country ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "NA" ;
+    skos:prefLabel "Nationality of parties"@en ;
+    sh:class fd:country,
+        fd:role-qualifier .
+
+lamd:md_084 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_7JRX77gU9LuP6wcqZHaZAT,
+        lamd:res_F4V6tNtocWrtbGnupQFNpL,
+        lamd:res_JcJpBNgSV7xmHiJrrnYizD,
+        lamd:res_Qo62n5vysGYKbKQnd9Xrv4,
+        lamd:res_SwF5bxgNA7mF9jqw4ykMQJ,
+        lamd:res_WyR4384RDLTVqJZKdhJjZg,
+        lamd:res_mKa9fT99S6GvgXgXLETxhg ;
+    lam:path cdm:communication_case_new_requests_annulment_of_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ANNULMENT_REQ" ;
+    skos:prefLabel "Link: Annulment request"@en .
+
+lamd:md_085 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_EsqjvfXz9JcMa7L47DLQP7,
+        lamd:res_KYMRg6QzyrtBenqXb35cuS,
+        lamd:res_bgRAbXrzwbayRjT5Vepsvi,
+        lamd:res_ePEiFpd8peG9UjCn8wWkWj,
+        lamd:res_efytW2zjhXSGUTTJ69uJKU,
+        lamd:res_uMFgomBH4qAbaLaGoMT8sf,
+        lamd:res_yJzqnG7jdgpNpAN2DPrFd5 ;
+    lam:path cdm:communication_case_new_requests_establishment_of_failure_of_obligation_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "FAILURE_REQ" ;
+    skos:prefLabel "Link: Failure of obligation request"@en .
+
+lamd:md_086 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_FMbPaXCmGw9JJX8bhM5AAT,
+        lamd:res_N4bkZK7smYdgMJnraMCfsC,
+        lamd:res_XHbmSGarFbWFzGA26EfqDR,
+        lamd:res_kWdP3qyo4UBEhSK2t9gQm4,
+        lamd:res_oYyXtjsvFdKtNNwc3it5Ue,
+        lamd:res_pK2vWuGGEwiEX5z8gpkKjj,
+        lamd:res_w6MeyxtkJR8vvqqNtRTXVZ ;
+    lam:path cdm:communication_case_new_requests_inapplicability_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "INAPPLICAB_REQ" ;
+    skos:prefLabel "Link: Inapplicability request"@en .
+
+lamd:md_087 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_8QwxqHgPd2knq5N3mkDrfK,
+        lamd:res_DLnZWr6G5EAkgbMwXpS5Pd,
+        lamd:res_RuvoNo6hrF5tJ37Y2pMHFB,
+        lamd:res_bsxSHRSN9jQJkpcCrdtUij,
+        lamd:res_dK7nHgJf9kVvUwXCoqN3Jo,
+        lamd:res_tXgqZKWjbQSrLJbjxvQCAX,
+        lamd:res_ypoiXTPfqCnAnHwCgC5pBS ;
+    lam:path cdm:communication_case_new_requests_partial_annulment_of_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ANULMENT_PARTIAL_REQ" ;
+    skos:prefLabel "Link: Partial annulment request"@en .
+
+lamd:md_088 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_KTD4BWDghuEMLsjt2mQPc4,
+        lamd:res_KU7DsMHGHPR9QptvAesmCY,
+        lamd:res_RnPkK3DXgdEiQm99Yxab77,
+        lamd:res_am5yVZynNqzhyPbreRLh9k,
+        lamd:res_dGdMmrcev4eCrJvWEmWjcU,
+        lamd:res_osvDqdPiBJ4tTLhzesqa3F,
+        lamd:res_zGGeYjtziYFoq7xonRPYwB ;
+    lam:path cdm:communication_case_new_requests_review_of_decision_case-law ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "REVIEW_REQ" ;
+    skos:prefLabel "Link: Review request"@en .
+
+lamd:md_089 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_5SfCZSe8pZQS6Scr7tiiMc,
+        lamd:res_5iKgMGcT2YDHYUYN3SrRnA,
+        lamd:res_KEmdDwDwc4TcRt57WK7HZn,
+        lamd:res_MZbpz3upfLkrZvdnswZsqc,
+        lamd:res_VVMwSJWnXWzwXwYDafZGpK,
+        lamd:res_XHUGxp7JaCtBWXnuHQPJbg,
+        lamd:res_hA5KJUXnNSrYbaSU6sxGCU ;
+    lam:path cdm:communication_case_new_submits_preliminary_question_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "PRELIMINARY_REQ" ;
+    skos:prefLabel "Link: Preliminary question request"@en .
+
+lamd:md_090 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_BRcVLfJuczcXxM2Lee2rJh,
+        lamd:res_WFAYBtYjkKjgxZaE8rkheK,
+        lamd:res_f7zqqg5sFFxAv4sMUe9xPM,
+        lamd:res_jNHtwYyMRmaox6gknZ66VF,
+        lamd:res_nVfWKDJABVYBujbmjR7Vuh,
+        lamd:res_pcTquUGQdGMrDT43mcyhbS,
+        lamd:res_xfxsA2y9xFbngUDo493HSe ;
+    lam:path cdm:communication_cjeu_communicates_on_case-law ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "COMMUNIC_REQ" ;
+    skos:prefLabel "Link: Communication on CdJ"@en .
+
+lamd:md_091 a skos:Concept ;
+    lam:hasAnnotationConfiguration lamd:res_28YmSqBTgkWFecbK8DZAHT,
+        lamd:res_9dusuVWMjFtGBpyKmP668E,
+        lamd:res_C3GmfdbnTmGYJR8fWhgWQX,
+        lamd:res_Fxa6KMpeXeY4Ur7baTwGkC,
+        lamd:res_QcKSJKMhJyvkkgNECX5zLC,
+        lamd:res_RQv3G7G89cbupmpYrYCVY3,
+        lamd:res_kq3957dim8FdQbrLyj3uin ;
+    lam:path cdm:communication_request_opinion_requests_opinion_on_resource_legal ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "OPINION_REQ" ;
+    skos:prefLabel "Link: Opinion request"@en .
+
+lamd:md_092 a skos:Concept ;
+    lam:path ann:comment_on_date ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Annotation specifying date metadata."@en ;
+    skos:editorialNote "2019/06/25: Differences between ann:comment_on_date and ann:type_of_date are not fully clear"@en ;
+    skos:example """<annot:comment_on_date>{DATSIG|http://publications.europa.eu/resource/authority/fd_365/DATSIG}</annot:comment_on_date>
+
+<annot:comment_on_date>{V|http://publications.europa.eu/resource/authority/fd_335/V} {ART|http://publications.europa.eu/resource/authority/fd_335/ART} 22</annot:comment_on_date>""" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ANN_COD" ;
+    skos:prefLabel "Annotation: Comment on date"@en ;
+    skos:scopeNote """The  translation tables should be used as follows:
+
+DD, NF: fd_365,
+IF: fd_335,
+EV: fd_330,
+TP: fd_361,
+DH: fd_340,
+DL: fd_335,
+RP: fd_350,
+SG: at:place, at:country"""@en ;
+    sh:class fd:country,
+        fd:fd_330,
+        fd:fd_335,
+        fd:fd_340,
+        fd:fd_350,
+        fd:fd_361,
+        fd:fd_365,
+        fd:place .
+
+lamd:md_093 a skos:Concept ;
+    lam:path ann:type_of_date ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Annotation specifying date metadata."@en ;
+    skos:editorialNote "2019/06/25: Differences between ann:comment_on_date and ann:type_of_date are not fully clear"@en ;
+    skos:example "<annot:type_of_date>{EV|http://publications.europa.eu/resource/authority/fd_335/EV}</annot:type_of_date>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ANN_TOD" ;
+    skos:prefLabel "Annotation: Type of date"@en ;
+    skos:scopeNote """The  translation tables should be used as follows:
+
+IF: fd_335,
+RP: fd_350"""@en ;
+    sh:class fd:fd_335,
+        fd:fd_350 .
+
+lamd:md_094 a skos:Concept ;
+    lam:path ann:comment_on_legal_basis ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Annotation specifying the fragments of the treaties or the legal acts constituting the legal basis of the document."@en ;
+    skos:editorialNote "2019/06/25: Replacement of fd_370 by at:subdivision should be considered."@en ;
+    skos:example """very offen a string value is used instead of fd_370
+
+<annot:comment_on_legal_basis>A62P1PTA)</annot:comment_on_legal_basis>""" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ANN_CLB" ;
+    skos:prefLabel "Annotation: Comment on legal basis"@en ;
+    sh:class fd:fd_370 .
+
+lamd:md_095 a skos:Concept ;
+    lam:path ann:article ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Annotation specifying the article of the treaties or the legal acts constituting the legal basis of the document."@en ;
+    skos:example "<annot:article>62</annot:article>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ANN_ART" ;
+    skos:prefLabel "Annotation: Article"@en .
+
+lamd:md_096 a skos:Concept ;
+    lam:path ann:paragraph ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Annotation specifying the paragraph of the treaties or the legal acts constituting the legal basis of the document."@en ;
+    skos:example "<annot:paragraph>1</annot:paragraph>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ANN_PAR" ;
+    skos:prefLabel "Annotation: Paragraph"@en .
+
+lamd:md_097 a skos:Concept ;
+    lam:path ann:subparagraph ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Annotation specifying the subparagraph of the treaties or the legal acts constituting the legal basis of the document."@en ;
+    skos:example "<annot:subparagraph>1</annot:paragraph>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ANN_SUB" ;
+    skos:prefLabel "Annotation: Subparagraph"@en .
+
+lamd:md_098 a skos:Concept ;
+    lam:path ann:type_of_link_target ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "Indicates the type of metadata field (Amendment to or Earlier related instruments or Related documents)"@en ;
+    skos:example "<annot:type_of_link_target>MS</annot:type_of_link_target>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ANN_TLT" ;
+    skos:prefLabel "Annotation: Type of link"@en ;
+    skos:scopeNote """Values to be used:
+MS (Amendment to)
+EA (Earlier related instruments )
+RD (Related documents)"""@en .
+
+lamd:md_099 a skos:Concept ;
+    lam:path ann:role2 ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "This annotation contains an additional comment to the relation."@en ;
+    skos:example "<annot:role2>{D|http://publications.europa.eu/resource/authority/fd_375/D}</annot:role2>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ANN_RL2" ;
+    skos:prefLabel "Annotation: Role2"@en ;
+    sh:class fd:fd_375 .
+
+lamd:md_100 a skos:Concept ;
+    lam:path ann:reference_to_modified_location ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "This annotation indicates which specific part of an act is touched by this act (or its part). "@en ;
+    skos:editorialNote "2019/06/25: Currently linked to fd_370. Replacement by at:subdivision should be considered."@en ;
+    skos:example "<annot:reference_to_modified_location>{AR|http://publications.europa.eu/resource/authority/fd_370/AR} 27</annot:reference_to_modified_location>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ANN_MDL" ;
+    skos:prefLabel "Annotation: Reference to modified location"@en ;
+    sh:class fd:subdivision .
+
+lamd:md_101 a skos:Concept ;
+    lam:path ann:reference_to_modifying_location ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "indicates which specific part of this act touches specific part of  another act, only rarely used in the past."@en ;
+    skos:editorialNote "2019/06/25: Currently linked to fd_370. Replacement by at:subdivision should be considered."@en ;
+    skos:example "<annot:reference_to_modifying_location>{AR|http://publications.europa.eu/resource/authority/fd_370/AR} 27</annot:reference_to_modifying_location>" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ANN_MSL" ;
+    skos:prefLabel "Annotation: Reference to modifying location"@en ;
+    sh:class fd:subdivision .
+
+lamd:md_102 a skos:Concept ;
+    lam:path ann:start_of_validity ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition """This annotation indicates indicates start of validity of a specific amendment  
+This might be equal to the date of entry into force of the amending act or to the date of its application (if the date of application of the amending act or its relevant part is different as its date of entry into force) or might be directly defined in the amending act."""@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ANN_SOV" ;
+    skos:prefLabel "Annotation: Start of validity"@en .
+
+lamd:md_103 a skos:Concept ;
+    lam:path ann:end_of_validity ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "This annotation indicates end of validity of a specific amendment."@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ANN_EOV" ;
+    skos:prefLabel "Annotation: End of validity"@en .
+
+lamd:md_104 a skos:Concept ;
+    lam:path ann:language_list ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "This annotation indicates the language version concerned by a corrigendum (for cdm:resource_legal_corrects_resource_legal)."@en ;
+    skos:editorialNote "2019/06/25: Currently string. Replacement by at:language should be considered."@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ANN_LVL" ;
+    skos:prefLabel "Annotation: Language list"@en ;
+    sh:class fd:language .
+
+lamd:md_105 a skos:Concept ;
+    lam:path ann:fragment_citing_source ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "This annotation indicates specific part of this document where a reference to another document or its part is present."@en ;
+    skos:editorialNote "2019/06/25: Currently string. Replacement by at:subdivision should be considered."@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ANN_FCS" ;
+    skos:prefLabel "Annotation: Fragment citing source"@en ;
+    sh:class fd:subdivision .
+
+lamd:md_106 a skos:Concept ;
+    lam:path ann:fragment_cited_target ;
+    dct:created "2019-07-15"^^xsd:date ;
+    skos:definition "This annotation indicates  to which specific part of an document refers this document."@en ;
+    skos:editorialNote "2019/06/25: Currently string. Replacement by at:subdivision should be considered."@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "ANN_FCT" ;
+    skos:prefLabel "Annotation: Fragment citing target"@en ;
+    sh:class fd:subdivision .
+
+lamd:res_28YmSqBTgkWFecbK8DZAHT a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_29AtbUJpTi4pVGS3bxe3QT a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_2DTvVXtQozwMFvonbRdkhB a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_2FwSBg7Ws8zJgVsQADwiXe a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_2JFzP336EogiUrVW7hSRtB a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:subparagraph"@en ;
+    sh:path ann:subparagraph .
+
+lamd:res_2JetgncsV3ntTugJrWTHkF a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_2cQw2rsi7psRRQhgrTDx2c a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_2tnVkFPrcLFMjzQZZoxLw4 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_3BWBMrZ6hbz5m2L74uRm6h a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_3XH7oAubkwPc6dX8kHBCdS a lam:AnnotationConfiguration ;
+    sh:class fd:fd_361 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:comment_on_date fd:fd_361"@en ;
+    sh:path ann:comment_on_date .
+
+lamd:res_3rqAbm74LLNgZGWjRZnEmk a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_3xj9AXbNTXv87rUoDX8SBc a lam:AnnotationConfiguration ;
+    sh:class fd:fd_370 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:comment_on_legal_basis fd:fd_370"@en ;
+    sh:path ann:comment_on_legal_basis .
+
+lamd:res_3yS6GPzJVPCtKhpiWCofZA a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_46bUx6PjF3kRXm5VMMWc2U a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_4BtGZ9wbJGb2qMaXCp6Jjg a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_4dbyuparz7jPqNMXPhTV4P a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_5SfCZSe8pZQS6Scr7tiiMc a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_5UfdnX7eR6ZiCstVHN3sHd a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_5iKgMGcT2YDHYUYN3SrRnA a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_5impcneMzoDYRWsybRTbxT a lam:AnnotationConfiguration ;
+    sh:class fd:fd_340 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:comment_on_date fd:fd_340"@en ;
+    sh:path ann:comment_on_date .
+
+lamd:res_63hDmyQqzz6zQRuSiMkFee a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_6cWfLwEFK7Wf4v5XvYd3kN a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_7BHmnCkCnbJJ4vrGr7gg5c a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_7JRX77gU9LuP6wcqZHaZAT a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_7JhRVK5Ckr8fTHbitTdLsU a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_7WxhFNfzpxvcoDqK6tGHk7 a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_7bFD4GHCehAqNn87xpEr9M a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_7fHoVQmPGhKjQCm9vm7jmQ a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_7wmgtzSk8Hp8AyBtk2c5dd a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_89Ksa3U9CmMk2FYsiVroWk a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_89uLkwyFbKPqU62o4XYS7e a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_8E3tU5omDyTjj4JDfCTF8W a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_8LFbTwsqHDjXDVtSeJkn22 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_8QwxqHgPd2knq5N3mkDrfK a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_8ukhAKeAszVZNPVnwQp982 a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_8usNpp3ddsvx787WHoBXCL a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_9dusuVWMjFtGBpyKmP668E a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_9vpQhVRwqFQNzzExJqnnAD a lam:AnnotationConfiguration ;
+    sh:class fd:fd_370,
+        fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375 fd:fd_370"@en ;
+    sh:path ann:role2 .
+
+lamd:res_A6he2JHjdzepwPR3jBvWCN a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_BRcVLfJuczcXxM2Lee2rJh a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_BswfHayiN28FMHskmWLMFf a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_C3GmfdbnTmGYJR8fWhgWQX a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_C9farHujg8AbGYCWUfokgn a lam:AnnotationConfiguration ;
+    sh:class fd:fd_365 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:comment_on_date fd:fd_365"@en ;
+    sh:path ann:comment_on_date .
+
+lamd:res_CXscmPymHtACX448vQRQM5 a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_CZEev7B2sBvGV6Sh84ZN7U a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_CeKu5yV55H6Fb3XJXUp4nZ a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_D3SmUnZh4QiXWbKdiahAUe a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_D6cgqxL3jtSQi8mmHtVLb9 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_DBG3Bj2trHkfspbuCHnKoW a lam:AnnotationConfiguration ;
+    sh:class fd:fd_365 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:comment_on_date fd:fd_365"@en ;
+    sh:path ann:comment_on_date .
+
+lamd:res_DLnZWr6G5EAkgbMwXpS5Pd a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_DaUtHtNeHkZTWEDgSZvbaP a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_DkjMMyNSjkBnocdjeKXQaA a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_DxbuQbmyLmBipk2YUXnTDb a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_EBasbYFLnyUFWZHZUXCo5d a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_EXjYZUAZ5iTnBfe5xB2HG9 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_Ef3w6tb3hWHYzJbFFpGZHC a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_EsqjvfXz9JcMa7L47DLQP7 a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_F4V6tNtocWrtbGnupQFNpL a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_F6SvD9ziWdHtRawxq7mgvL a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_FGwiPyncAuxwrprJwYxwxX a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_FMbPaXCmGw9JJX8bhM5AAT a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_Feei5zZgJEhDSetWDt8sZH a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_FviESCwDHGUaiqQJLLghJo a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_Fxa6KMpeXeY4Ur7baTwGkC a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_GTj9eChf4HfpvSGtXdAjnV a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_GVWatX6wsPb9SbMdwSQdW6 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_Gj6PfQeGCNeU8k8XNMxnGM a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_HF5jxngwURpAPa5ZHBas56 a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_HME7YWKXZhDvSPmLS25uki a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_HVvU5wyDKFkT2RLMgaHGnU a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_HjSkR66ticD5Z8WVG9fM9o a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_JcJpBNgSV7xmHiJrrnYizD a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_JgY2F9xoM6jn8Acb5kpLN3 a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_Jmu2KbH7ojpUd9BSi9nFei a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_JsLPf5JgE2CMLRQ3D3esfV a lam:AnnotationConfiguration ;
+    sh:class fd:fd_335 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_date fd:fd_335"@en ;
+    sh:path ann:type_of_date .
+
+lamd:res_JvvMo7zUJhYnmk6TxvUGzn a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_JzWEZ6RZSxFL3NgXAsEJfm a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_KEmdDwDwc4TcRt57WK7HZn a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_KL2eKkWX59oQTWzRPRakDj a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_KTD4BWDghuEMLsjt2mQPc4 a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_KU7DsMHGHPR9QptvAesmCY a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_KWx8oizxGqbXhCFm6qYXuU a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_KYMRg6QzyrtBenqXb35cuS a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_Kbv4Ufo2KJ9NET3dJrERqm a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_KuRgpMPTQvkzHnADs6ybNb a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_LHfsaQ6bKuFwsecfYCCPvV a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_LJC8adwDDcf7pBLpetj3Kg a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_LPGyHySaXetHobmyGGDbVS a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_LTek3wsopLqs8zLxPCKY6f a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_LYYEifSKGVPMS9HGq43oXP a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_M7kWMiqDr2iNCFDYbXEvja a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_MHQeTZ4sjHZSDSXXkgbjZH a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_MZbpz3upfLkrZvdnswZsqc a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_MmB7mPhEomBfgm6t4xDPTM a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_N4bkZK7smYdgMJnraMCfsC a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_N4icxvDZuY8RTyCzoAkDj8 a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_NKboFNTgBLwo6XBLwcmkFc a lam:AnnotationConfiguration ;
+    sh:class fd:fd_350 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_date fd:fd_350"@en ;
+    sh:path ann:type_of_date .
+
+lamd:res_NkDAuJVGc7EvRwytWhLEPg a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_PEobMyu3LAxGYSePAKLotH a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_PVKbBEERKaowaXMLWMgish a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_PfyDQSu39q382k4DTTR4QF a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_PoDgZAu5twCAnmjLdmw9a8 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_PsHHVi5Spp4c3iw2MbbWPT a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_PuySPjxB6YZHxPM9T4dAGE a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_Q35acFcVcVBoDk5Rc24NUf a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_QF2hFkyFwfGqARZxVvqhHi a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_QLFabcPjdMDhxjFbG7ywyR a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_QcKSJKMhJyvkkgNECX5zLC a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_Qo62n5vysGYKbKQnd9Xrv4 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_R6ioiwrtCug87K98kNjSAg a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_RF6L5uZS2qAwdGKFZwyEQ8 a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_RQv3G7G89cbupmpYrYCVY3 a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_RnPkK3DXgdEiQm99Yxab77 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_RnsVktwveLTd3zZssiifcR a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_RuvoNo6hrF5tJ37Y2pMHFB a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_Rw5FymSeEoYFJoCyAhSpgn a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_SwF5bxgNA7mF9jqw4ykMQJ a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_TEyVCsh4P8pNmEZw5aKPsL a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_TeFxs43KENVCyrzJt7p9d3 a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_TkbhKJhwLNfCenHojNoBLH a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_TmZvicTsTxZYJ7csbW25Xn a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_TnNedmH2LZ8WJcDUXmUQMh a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_TnjyFpzmVQNFSCHhMdXqJT a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_TotusZYRbXjsLHw3Uw4u6Y a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_U4YQ3yMRBBmuyXHFqxkR7P a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_U8fWb5XWzfqkKfwAiGBHzM a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_UYpf3ujDXnX2g3ZLRd29tk a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_VDVEDKUrhySDfymrSYmara a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_VMinXekYWjq45hEnfr6YHN a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_VVMwSJWnXWzwXwYDafZGpK a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_VVNBK6BDd7QVP4Ay2ABtdg a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_Vfy26SbrG3UqpBY4zHsLKn a lam:AnnotationConfiguration ;
+    sh:class fd:fd_370,
+        fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375 fd:fd_370"@en ;
+    sh:path ann:role2 .
+
+lamd:res_VmoK32xyS25AmcTm7Q2c8U a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:fragment_cited_target fd:subdivision"@en ;
+    sh:path ann:fragment_cited_target .
+
+lamd:res_WFAYBtYjkKjgxZaE8rkheK a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_Wc3tFupMPaM6Trq9FGV3fV a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_WrPBMvcFFoXjknz4efBwzH a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_WyR4384RDLTVqJZKdhJjZg a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_XCxivi5yJ4kV6AHazTSBKY a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_XHUGxp7JaCtBWXnuHQPJbg a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_XHbmSGarFbWFzGA26EfqDR a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_XjKWrTzrGefZDGDHpH7WKW a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_XqMDainF4Xa3L9rgBJbeDa a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_XtpyeU22g8kVjp724QCdsZ a lam:AnnotationConfiguration ;
+    sh:class fd:country,
+        fd:place ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:comment_on_date fd:place fd:country"@en ;
+    sh:path ann:comment_on_date .
+
+lamd:res_YFpYSq4LmYHWGzjexPpL7f a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_YHL9BuYKbCRdBZSrkgWUnD a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_YUcgZjs4NjXc8F4ic94x5b a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_YViZFn6Hn4iWpYBGgRSzin a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_Z4X55uCkSYqHwpjQSeMBu7 a lam:AnnotationConfiguration ;
+    sh:class fd:fd_335 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:comment_on_date fd:fd_335"@en ;
+    sh:path ann:comment_on_date .
+
+lamd:res_ZG6PhtSBYGtKTMeekoUF2Y a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_ZQm7suWVfcXYzER8nfVx77 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_ZWWdrTYnPbVNt9VDak6rNX a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_ZuCTdBrQBTq4i3YCRH4EQA a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_aNGUrQDzuNjz2sLZpzEvm5 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_aYheNnpEJPKnZtBwihQHcX a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_aitu5ynMvTDx6NTRfBPvpW a lam:AnnotationConfiguration ;
+    sh:class fd:fd_335 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:comment_on_date fd:fd_335"@en ;
+    sh:path ann:comment_on_date .
+
+lamd:res_akyVKCXAK474kjs4TdSoWd a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_am5yVZynNqzhyPbreRLh9k a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_amPtxySDRoBmrUqHiGmJK5 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_bUtqyFy8X6unYB2ignzS5E a lam:AnnotationConfiguration ;
+    sh:class fd:fd_330 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:comment_on_date fd:fd_330"@en ;
+    sh:path ann:comment_on_date .
+
+lamd:res_bgRAbXrzwbayRjT5Vepsvi a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_bnUXvvbR4jA6YpXVFcaGo5 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_bsVBAbiMogS6ZZdmmqGSy8 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_bsxSHRSN9jQJkpcCrdtUij a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_cHoYwgVQCe8A9mPMfM3Nrd a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:fragment_citing_source fd:subdivision"@en ;
+    sh:path ann:fragment_citing_source .
+
+lamd:res_cHw8xneEUhWjaeJez6Jipa a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_cbBMVJo7zadq7RkUyV5kcg a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_cyz95dv9oUuYnXX9arisfP a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_dAmQfRbukQ5T5hggrEESiW a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_dGdMmrcev4eCrJvWEmWjcU a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_dK7nHgJf9kVvUwXCoqN3Jo a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_dn948bhRjBP2vb6fprMdv9 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_eGpgAQecLmDAMCC9z9MUtC a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_eP67jv9nUwM5NLUnXeZQ5n a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_ePEiFpd8peG9UjCn8wWkWj a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_eY5DHJFmseqpJLPeiyHZVn a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_efytW2zjhXSGUTTJ69uJKU a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_egHBcnkhJsZ4QuuLeEqdSJ a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_et9nSvLDWdeCmrApAMpRHH a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_evFjM87oRiYWeT52gkSZ26 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_f7zqqg5sFFxAv4sMUe9xPM a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_fbo8PhEtRqKBTBqupwhfnN a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_fkMDyU7UvgpzQQ4Xn4vd42 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:article"@en ;
+    sh:path ann:article .
+
+lamd:res_gELKdi39wwDNX2hdBxYw8f a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_gUeg4pJkNWZemKBmMFctLj a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_gqnDpJ3Eafxi8fzrngyAo3 a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_h6gVgzFwmMHARLjWp5gGzJ a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_h9C9mk588TUbQNNMQUxEnm a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_hA5KJUXnNSrYbaSU6sxGCU a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_hHskcEXhX7JuQ73Yak39oQ a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_hemzLGvmHRaaoFKKph7DwX a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_hfgboP7WBBsgjdGNSg95CX a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_hiw5uepNp4ytUf6yERPXAF a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_hrd52SJvwed2noxBxXVDr2 a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_hsrXTEEZdTo2Uw4GQhkq5L a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_hv8mvLMd9UZw5ePKMHeAN2 a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_iVcMuviQzJqo3htW7nVWKQ a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_ihTwAgV3it5MbZkKSFFfQh a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_ikKs6UbFgnXHjG4PA8hnjB a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_jNHtwYyMRmaox6gknZ66VF a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_jPdVGb2dKVRBb9pgyDuWmn a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_jxZjEnyQNvF9KPasyQ2hzj a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_k7JBzmEyTxNcoHfeybL4WN a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_kCRqtr48CHqx3pZSnaZChQ a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_kEZ8fNFPjyh3hhxyPoPYwN a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_kU79zzR62R8dUkhkGJ8WdE a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_kWdP3qyo4UBEhSK2t9gQm4 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_kbMMiiaidHsW6BFKNLASbJ a lam:AnnotationConfiguration ;
+    sh:class fd:fd_350 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:comment_on_date fd:fd_350"@en ;
+    sh:path ann:comment_on_date .
+
+lamd:res_knmDGTVfBTTM9c2ZfknF9R a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_kq3957dim8FdQbrLyj3uin a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_mKa9fT99S6GvgXgXLETxhg a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_mjNLTpEeozfDiu6XWejrvd a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_moeLvBZAAszRHijsPLgFX3 a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_mu2xm69PYgjbvfcLvhZHGC a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_mxcxdNXwkk2Fv5MXJQ4f64 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_n4kG6rNcaMNy2cSwFRusgM a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_nRTQq2kt4xpWHHfkb7Uoc3 a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_nRrKpWQ2u2hmGi7bZ7jXRS a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_nVenFfDVJ8CzrQCsoDgadY a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_nVfWKDJABVYBujbmjR7Vuh a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_nYUngFoXJbEKUmubAv39zR a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_nvLPBk4MAnLxR7tk55FCfQ a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_nwjq4kMP7e9EMwQE98ywH9 a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_oBze9k4VJvmySEJGKrfCd8 a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_oYyXtjsvFdKtNNwc3it5Ue a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_obzH82xPBesCdqahJPXG9Z a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_osvDqdPiBJ4tTLhzesqa3F a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_p5NU6a9eCeTWHqwjoWpKWL a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:paragraph"@en ;
+    sh:path ann:paragraph .
+
+lamd:res_pH74o9PHhbLfW4FjV8DQ3f a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_pK2vWuGGEwiEX5z8gpkKjj a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_paM82a8LmiM3JoPMxpGDV5 a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_pcTquUGQdGMrDT43mcyhbS a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_q7DHsFP9nt4FHKjSXNkMph a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_qDz2eCmfnq8tfP3MMddNMH a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_qKo6pgFPpXc6C6wvgsvBnJ a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_rUAkdgtcoBj4JdozUX4cUi a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_rqc6vfUZj4Mz9NHAm2tiUb a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_sKzRawYNRUufjHrnKuV3nX a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_sVzMH8SBST6QpWrwyQGNEV a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_svcaHcSZJxZaS9DVCzE4sc a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_sy6oCiBEesum5TXeb4PCNK a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_tFaRkRcDSJmqNM4fAicwwB a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_tN2KaiDvhcMEmpHefxD7zH a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_tTyCWBWYmthe3QYrETaqXJ a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_tVAC2h5wsaMZZTSdGgLtKP a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_tXgqZKWjbQSrLJbjxvQCAX a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_ta8gWmmKVCEs935bJ5H2yY a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_tqqE854GvPTt8KhX7v48Qf a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_uMFgomBH4qAbaLaGoMT8sf a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_utE3Rhb5Asbw5pn4LXdMGJ a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_utM996jP2fAHdQiJFv5eXZ a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_vBNHXKRBiAAPUeVvm93QZ8 a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_vDFv7NVWCmpACPwtP8x5mi a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_vUGaY8mYVezJSShX5sZQdj a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_vuDWNijt3Seh624dCXTYHM a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_w2a982uLVY5usELnH3eFkn a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_w6MeyxtkJR8vvqqNtRTXVZ a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_wANtXdvzPQFDS2Jd7nEuiL a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_wBvoNzAmNTivBn3Kt2ULL2 a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_wFRm9VtvNbs92RaH5ARvpj a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_wRSsZDmUjGsXbXhyYGzX55 a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_wmsbz8RXgYEMuw26WQQvFM a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_wx8g3Aq2VSQbimegxnecZc a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_x7rSBSMMVBkcLHmKYPf7j7 a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_xDuoRKizNzMv4UqnCPCyeT a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_xNnj5rDgACb4PGzM2c5HM7 a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_xVD6L5T2nUGxHbPuLMt42P a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modified_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modified_location .
+
+lamd:res_xfmLzx9iqesMPMQEkvBphV a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_xfxsA2y9xFbngUDo493HSe a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_xqSzcSqyB6A4mGMUzQZ2Aa a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_y7EhYh8W8uTtCtrK3udAc6 a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_yJzqnG7jdgpNpAN2DPrFd5 a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_yUYKrECy6BPPKHr55nJ5yD a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_yWgoNHmJZ6bweYabBEp2Ca a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:end_of_validity"@en ;
+    sh:path ann:end_of_validity .
+
+lamd:res_ypoiXTPfqCnAnHwCgC5pBS a lam:AnnotationConfiguration ;
+    sh:class fd:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:role2 fd:fd_375"@en ;
+    sh:path ann:role2 .
+
+lamd:res_ytEkuNCru59g9PWw3NuLre a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:type_of_link_target"@en ;
+    sh:path ann:type_of_link_target .
+
+lamd:res_z24bZkmotWBj5tNH7gP8gA a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_zGGeYjtziYFoq7xonRPYwB a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_zSkByx43qkbvSn8U3FugLX a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_zbHrhvuhSPdpT7u3Uc2ps5 a lam:AnnotationConfiguration ;
+    sh:class fd:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:reference_to_modifying_location fd:subdivision"@en ;
+    sh:path ann:reference_to_modifying_location .
+
+lamd:res_zfAC2eB8RC7Es8k9Ba45rN a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:res_zh4MWgPEU6LjsJJrDwEboC a lam:AnnotationConfiguration ;
+    sh:class fd:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:language_list fd:language"@en ;
+    sh:path ann:language_list .
+
+lamd:res_ziorTa6G8yfFrVSt7SVkQ6 a lam:AnnotationConfiguration ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with ann:start_of_validity"@en ;
+    sh:path ann:start_of_validity .
+
+lamd:DocumentProperty a skos:ConceptScheme ;
+    skos:prefLabel "Document metadata" .
+

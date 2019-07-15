@@ -4,11 +4,9 @@ Date: 29.06.19
 Author: Eugeniu Costetchi
 Email: costezki.eugen@gmail.com
 """
-import pandas as pd
 import rdflib
-from rdflib import XSD, RDF, RDFS
-
-from lam4vb3 import build, lam_utils
+from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, XMLNS, XSD
+from lam4vb3 import lam_utils, build
 
 SHACL = rdflib.Namespace("http://www.w3.org/ns/shacl#")
 LAM = rdflib.Namespace("http://publications.europa.eu/ontology/lam-skos-ap#")
@@ -20,20 +18,21 @@ LITERAL_COLUMNS = {
     'EXAMPLE_FR': 'skos:example@fr',
     'COMMENT': 'skos:editorialNote@en',
     'EXAMPLE_CELEX': 'skos:example',
+    'KEYWORD': 'skos:prefLabel@en',
 }
 
-REIFIED_LITERAL_COLUMNS = {
-    'KEYWORD': 'skosxl:literalForm@en',
-}
+# REIFIED_LITERAL_COLUMNS = {
+#     'KEYWORD': 'skosxl:literalForm@en',
+# }
 
 MAPPING_URI_COLUMNS = {
     'CDM_CLASS': 'lam:cdm_class',
     'DN_CLASS': 'lam:celex_class',
+    'FM': 'cdm:resource-type',
 }
 
 MAPPING_VALUE_COMMENT_COLUMNS = {
     'AU': 'cdm:created_by',
-    'FM': 'cdm:resource-type',
 }
 
 CONSTRAINT_VALUE_COMMENT_COLUMNS = {
@@ -132,76 +131,202 @@ ANNOTATION_COLUMNS = {
     'SG': 'cdm:resource_legal_date_signature',
 }
 
+# LAM_MD_CS_URI = rdflib.URIRef("http://publications.europa.eu/resources/authority/lam-document-class")
+LAM_CLASS_CS = "lamd:LegalDocument"
 
-class LAMConstraintTripleMaker(build.MultiColumnTripleMaker):
 
-    def handle_object(self, row_index, target_column, language=None, data_type=None):
+# class LAMConstraintTripleMaker(build.MultiColumnTripleMaker):
+#
+#     def handle_object(self, row_index, target_column, language=None, data_type=None):
+#
+#         cell_value = self.df.loc[row_index, target_column]
+#         graph = self.graph if target_column in self.uri_valued_columns else None
+#
+#         if cell_value and pd.notna(cell_value):
+#             if target_column in self.multi_line_columns:
+#                 objects = build.parse_multi_line_commented_value(cell_value,
+#                                                                  graph=graph,
+#                                                                  language=language,
+#                                                                  data_type=data_type, )
+#                 return [x for x in objects if x]
+#
+#             return [build.parse_commented_value(cell_value,
+#                                                 graph=graph,
+#                                                 language=language,
+#                                                 data_type=data_type, )]
+#
+#     def handle_cell_subject(self, value):
+#         """
+#             generate a repeatable cell specific uuid
+#         :type value: object
+#         :return: an UUID URI
+#         """
+#
+#         return lam_utils.generate_uuid_uri(str(value),
+#                                            seed=str(self.df.head()),
+#                                            graph=self.graph,
+#                                            prefix="res_")
+#
+#     def make_cell_triples(self, subject, predicate, oobject,):
+#
+#         cell_subject = self.handle_cell_subject(row_index=str(subject) + str(predicate) + str(oobject))
+#         # TODO
+#
+#         result_triples = [tuple([cell_subject, RDF.type, LAM.PropertyConstraint]),
+#                           tuple([cell_subject, SHACL.path, predicate]), ]
+#         for obj_value, obj_comment in oobject:
+#             if str(obj_value).strip().lower() is "y":
+#                 result_triples.extend([
+#                     tuple([cell_subject, SHACL.name, rdflib.Literal(f"Mandatory {predicate}")]),
+#                     tuple([cell_subject, SHACL.minCount, rdflib.Literal("1", datatype=XSD.int)]),
+#                 ])
+#             elif str(obj_value).strip().lower() is "yu":
+#                 result_triples.extend([
+#                     tuple([cell_subject, SHACL.name, rdflib.Literal(f"Mandatory unique {predicate}")]),
+#                     tuple([cell_subject, SHACL.minCount, rdflib.Literal("1", datatype=XSD.int)]),
+#                     tuple([cell_subject, SHACL.maxCount, rdflib.Literal("1", datatype=XSD.int)]),
+#                 ])
+#             elif str(obj_value).strip().lower() is "o":
+#                 result_triples.extend([
+#                     tuple([cell_subject, SHACL.name, rdflib.Literal(f"Optional {predicate}")]),
+#                 ])
+#             elif str(obj_value).strip().lower() is "ou":
+#                 result_triples.extend([
+#                     tuple([cell_subject, SHACL.name, rdflib.Literal(f"Optional unique {predicate}")]),
+#                     tuple([cell_subject, SHACL.maxCount, rdflib.Literal("1", datatype=XSD.int)]),
+#                 ])
+#             elif str(obj_value).strip().lower() is "n":
+#                 result_triples.extend([
+#                     tuple([cell_subject, SHACL.name, rdflib.Literal(f"Forbidden {predicate}")]),
+#                     tuple([cell_subject, SHACL.maxCount, rdflib.Literal("0", datatype=XSD.int)]),
+#                 ])
+#             else:
+#                 result_triples.extend([
+#                     tuple([cell_subject, SHACL.maxCount, rdflib.Literal("0", datatype=XSD.int)]),
+#                 ])
+#             if obj_comment:
+#                 result_triples.append(tuple([cell_subject, RDFS.comment, rdflib.Literal(obj_comment)]))
+#         return result_triples
 
-        cell_value = self.df.loc[row_index, target_column]
-        graph = self.graph if target_column in self.uri_valued_columns else None
+def create_cs(graph):
+    """
+        create the concept scheme definition
+    """
+    cs = lam_utils.qname_uri(LAM_CLASS_CS, graph.namespaces())
+    graph.add((cs, RDF.type, SKOS.ConceptScheme))
+    graph.add((cs, SKOS.prefLabel, rdflib.Literal("Document metadata")))
 
-        if cell_value and pd.notna(cell_value):
-            if target_column in self.multi_line_columns:
-                objects = build.parse_multi_line_commented_value(cell_value,
-                                                                 graph=graph,
-                                                                 language=language,
-                                                                 data_type=data_type, )
-                return [x for x in objects if x]
 
-            return [build.parse_commented_value(cell_value,
-                                                graph=graph,
-                                                language=language,
-                                                data_type=data_type, )]
+def create_concepts(df, graph):
+    """
+        create the concepts
+    :param df:
+    :param graph:
+    :return:
+    """
+    # make literal columns
+    literal_maker = build.ConceptTripleMaker(df,
+                                             subject_source=URI_COLUMN,
+                                             subject_class="skos:Concept",
+                                             subject_in_scheme=LAM_CLASS_CS,
+                                             column_mapping_dict=LITERAL_COLUMNS,
+                                             target_columns=list(LITERAL_COLUMNS.keys()),
+                                             uri_valued_columns=[],
+                                             multi_line_columns=[],
+                                             graph=graph)
+    literal_maker.make_triples()
 
-    def handle_cell_subject(self, value):
-        """
-            generate a repeatable cell specific uuid
-        :type value: object
-        :return: an UUID URI
-        """
+    # # make uri columns
+    # uri_maker = build.ConceptTripleMaker(df,
+    #                                      subject_source=URI_COLUMN,
+    #                                      subject_class="skos:Concept",
+    #                                      subject_in_scheme=LAM_CLASS_CS,
+    #                                      column_mapping_dict=MAPPING_URI_COLUMNS,
+    #                                      target_columns=list(MAPPING_URI_COLUMNS.keys()),
+    #                                      uri_valued_columns=list(MAPPING_URI_COLUMNS.keys()),
+    #                                      multi_line_columns=[],
+    #                                      graph=graph)
+    #
+    # uri_maker.make_triples()
 
-        return lam_utils.generate_uuid_uri(str(value),
-                                           seed=str(self.df.head()),
-                                           graph=self.graph,
-                                           prefix="res_")
+    # make constraint from value with comment: Author
+    value_comment_constraint_maker = build.ConceptConstraintMaker(df,
+                                                                  subject_source=URI_COLUMN,
+                                                                  subject_class="skos:Concept",
+                                                                  subject_in_scheme=LAM_CLASS_CS,
+                                                                  constraint_property="lam:hasPropertyConfiguration",
+                                                                  constraint_class="lam:MappingPropertyConfiguration",
+                                                                  constraint_comment="skos:editorialNote",
+                                                                  column_mapping_dict=MAPPING_VALUE_COMMENT_COLUMNS,
+                                                                  target_columns=list(
+                                                                      MAPPING_VALUE_COMMENT_COLUMNS.keys()),
+                                                                  uri_valued_columns=list(
+                                                                      MAPPING_VALUE_COMMENT_COLUMNS.keys()),
+                                                                  multi_line_columns=list(
+                                                                      MAPPING_VALUE_COMMENT_COLUMNS.keys()),
+                                                                  graph=graph)
 
-    def make_cell_triples(self, subject, predicate, oobject,):
+    value_comment_constraint_maker.make_triples()
 
-        cell_subject = self.handle_cell_subject(row_index=str(subject) + str(predicate) + str(oobject))
-        # TODO
+    # make constraint from value with comment: Mapping columns
+    value_comment_constraint_maker1 = build.ConceptConstraintMaker(df,
+                                                                   subject_source=URI_COLUMN,
+                                                                   subject_class="skos:Concept",
+                                                                   subject_in_scheme=LAM_CLASS_CS,
+                                                                   constraint_property="lam:hasPropertyConfiguration",
+                                                                   constraint_class="lam:MappingPropertyConfiguration",
+                                                                   constraint_comment="skos:editorialNote",
+                                                                   column_mapping_dict=MAPPING_URI_COLUMNS,
+                                                                   target_columns=list(MAPPING_URI_COLUMNS.keys()),
+                                                                   uri_valued_columns=list(MAPPING_URI_COLUMNS.keys()),
+                                                                   multi_line_columns=[],
+                                                                   graph=graph)
 
-        result_triples = [tuple([cell_subject, RDF.type, LAM.PropertyConstraint]),
-                          tuple([cell_subject, SHACL.path, predicate]), ]
-        for obj_value, obj_comment in oobject:
-            if str(obj_value).strip().lower() is "y":
-                result_triples.extend([
-                    tuple([cell_subject, SHACL.name, rdflib.Literal(f"Mandatory {predicate}")]),
-                    tuple([cell_subject, SHACL.minCount, rdflib.Literal("1", datatype=XSD.int)]),
-                ])
-            elif str(obj_value).strip().lower() is "yu":
-                result_triples.extend([
-                    tuple([cell_subject, SHACL.name, rdflib.Literal(f"Mandatory unique {predicate}")]),
-                    tuple([cell_subject, SHACL.minCount, rdflib.Literal("1", datatype=XSD.int)]),
-                    tuple([cell_subject, SHACL.maxCount, rdflib.Literal("1", datatype=XSD.int)]),
-                ])
-            elif str(obj_value).strip().lower() is "o":
-                result_triples.extend([
-                    tuple([cell_subject, SHACL.name, rdflib.Literal(f"Optional {predicate}")]),
-                ])
-            elif str(obj_value).strip().lower() is "ou":
-                result_triples.extend([
-                    tuple([cell_subject, SHACL.name, rdflib.Literal(f"Optional unique {predicate}")]),
-                    tuple([cell_subject, SHACL.maxCount, rdflib.Literal("1", datatype=XSD.int)]),
-                ])
-            elif str(obj_value).strip().lower() is "n":
-                result_triples.extend([
-                    tuple([cell_subject, SHACL.name, rdflib.Literal(f"Forbidden {predicate}")]),
-                    tuple([cell_subject, SHACL.maxCount, rdflib.Literal("0", datatype=XSD.int)]),
-                ])
-            else:
-                result_triples.extend([
-                    tuple([cell_subject, SHACL.maxCount, rdflib.Literal("0", datatype=XSD.int)]),
-                ])
-            if obj_comment:
-                result_triples.append(tuple([cell_subject, RDFS.comment, rdflib.Literal(obj_comment)]))
-        return result_triples
+    value_comment_constraint_maker1.make_triples()
+
+    # make constraint from values with comments (according to agreed cardinality specs)
+    value_comment_constraint_maker3 = build.ConceptConstraintMaker(df,
+                                                                   subject_source=URI_COLUMN,
+                                                                   subject_class="skos:Concept",
+                                                                   subject_in_scheme=LAM_CLASS_CS,
+                                                                   constraint_property="lam:hasPropertyConfiguration",
+                                                                   constraint_class="lam:PropertyConfiguration",
+                                                                   constraint_comment="skos:editorialNote",
+                                                                   column_mapping_dict=CONSTRAINT_VALUE_COMMENT_COLUMNS,
+                                                                   target_columns=list(
+                                                                       CONSTRAINT_VALUE_COMMENT_COLUMNS.keys()),
+                                                                   uri_valued_columns=[],
+                                                                   multi_line_columns=[],
+                                                                   graph=graph)
+
+    value_comment_constraint_maker3.make_triples()
+
+    # add annotation constraint statements afferent to property constrain on the Document classes
+    for concept_property_column, property_annotation_column in COLUMN_ANNOTATION_ASSOCIATIONS:
+        # make constraint from value with comment: Cardinality specs on concept property constraints with annotations
+        value_comment_constraint_maker5 = build.ConceptConstraintMaker(df,
+                                                                       subject_source=[concept_property_column],
+                                                                       subject_class="lam:PropertyConfiguration",
+                                                                       subject_in_scheme=None,
+                                                                       constraint_property="lam:hasAnnotationConfiguration",
+                                                                       constraint_class="lam:AnnotationConfiguration",
+                                                                       column_mapping_dict=ANNOTATION_COLUMNS,
+                                                                       target_columns=[property_annotation_column],
+                                                                       uri_valued_columns=[property_annotation_column],
+                                                                       multi_line_columns=[],
+                                                                       graph=graph)
+
+        value_comment_constraint_maker5.make_triples()
+
+
+def make_class_worksheet(lam_df_classes, prefixes, output_file):
+    """
+    :param lam_df_classes:
+    :param prefixes:
+    :param output_file:
+    :return:
+    """
+    graph = build.make_graph(prefixes)
+    create_cs(graph)
+    create_concepts(lam_df_classes, graph)
+    graph.serialize(str(output_file), format='turtle', )

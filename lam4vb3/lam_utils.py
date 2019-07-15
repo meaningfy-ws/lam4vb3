@@ -9,6 +9,9 @@ import re
 
 import shortuuid
 
+URI_UUID_PREFIX = "res_"
+URI_UUID_SUFFIX = ""
+
 
 def parse_qname(qname):
     """
@@ -41,7 +44,7 @@ def qname_lang(qname):
     return parse_qname(qname)[2]
 
 
-def generate_uuid_uri(value, graph, seed="", prefix="", suffix=""):
+def generate_uuid_uri(value, graph, seed="", prefix=URI_UUID_PREFIX, suffix=URI_UUID_SUFFIX):
     local_uid = shortuuid.uuid(name=str(seed) + str(value))
     qname = ":" + str(prefix).strip() + str(local_uid) + str(suffix).strip()
     return qname_uri(qname, graph.namespaces())
