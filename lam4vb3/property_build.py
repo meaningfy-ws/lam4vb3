@@ -24,41 +24,46 @@ LITERAL_COLUMNS = {
 }
 
 URI_COLUMNS = {
-    'property': 'lam:path',
+    'property': 'sh:path',
 }
 
 MULTI_LINE_URI_COLUMNS = {
     'controlled value _property': 'sh:class',
 }
 
-COLUMN_ANNOTATION_ASSOCIATIONS = [['annotation_1', 'controlled value_annotation_1'],
-                                  ['annotation_2', 'controlled value_annotation_2'],
-                                  ['annotation_3', 'controlled value_annotation_3'],
-                                  ['annotation_4', 'controlled value_annotation_4'],
-                                  ['annotation_5', 'controlled value_annotation_5'],
-                                  ['annotation_6', 'controlled value_annotation_6'],
-                                  ['annotation_7', 'controlled value_annotation_7'], ]
+COLUMN_ANNOTATION_ASSOCIATIONS = [['annotation_11', 'controlled value_annotation_1'],
+                                  ['annotation_21', 'controlled value_annotation_2'],
+                                  ['annotation_31', 'controlled value_annotation_3'],
+                                  ['annotation_41', 'controlled value_annotation_4'],
+                                  ['annotation_51', 'controlled value_annotation_5'],
+                                  ['annotation_61', 'controlled value_annotation_6'],
+                                  ['annotation_71', 'controlled value_annotation_7'], ]
 
 ANNOTATION_COLUMNS = {
-    "annotation_1": "sh:path",
+    "annotation_11": "lam:path",
     "controlled value_annotation_1": "sh:class",
-    "annotation_2": "sh:path",
+    "annotation_21": "lam:path",
     "controlled value_annotation_2": "sh:class",
-    "annotation_3": "sh:path",
+    "annotation_31": "lam:path",
     "controlled value_annotation_3": "sh:class",
-    "annotation_4": "sh:path",
+    "annotation_41": "lam:path",
     "controlled value_annotation_4": "sh:class",
-    "annotation_5": "sh:path",
+    "annotation_51": "lam:path",
     "controlled value_annotation_5": "sh:class",
-    "annotation_6": "sh:path",
+    "annotation_61": "lam:path",
     "controlled value_annotation_6": "sh:class",
-    "annotation_7": "sh:path",
+    "annotation_71": "lam:path",
     "controlled value_annotation_7": "sh:class",
 }
 
-COLLECTION_COLUMNS = ["Classification level 1", "Classification level 2", "Classification level 3"]
+COLLECTION_TARGET_COLUMNS = ["Classification level 1", "Classification level 2", ]
 
-# LAM_MD_CS_URI = rdflib.URIRef("http://publications.europa.eu/resources/authority/lam-metadata")
+COLLECTION_COLUMNS = {
+    "Classification level 1": "skos:prefLabel",
+    "Classification level 2": "skos:prefLabel",
+    "Classification level 3": "skos:prefLabel",
+}
+
 LAM_MD_CS = "lamd:DocumentProperty"
 
 # a little bit of column management
@@ -141,6 +146,24 @@ def hang_annotation_subjects_on_concept(concept_subject_index, annotation_subjec
                                      inline=inline)
 
 
+def create_collections(df, graph):
+    """
+
+    :param df:
+    :param graph:
+    :return:
+    """
+    collection_maker = build.ConceptCollectionMaker(df,
+                                                    column_mapping_dict=COLLECTION_COLUMNS,
+                                                    graph=graph,
+                                                    target_columns=COLLECTION_TARGET_COLUMNS,
+                                                    subject_source="URI",
+                                                    subject_class="skos:Concept",
+                                                    membership_predicate="skos:member",
+                                                    collection_class="skos:Collection", )
+    collection_maker.make_triples()
+
+
 def make_property_worksheet(lam_df_properties, prefixes, output_file):
     """
     :param lam_df_properties:
@@ -151,4 +174,5 @@ def make_property_worksheet(lam_df_properties, prefixes, output_file):
     graph = build.make_graph(prefixes)
     create_cs(graph)
     create_concepts(lam_df_properties, graph)
+    create_collections(lam_df_properties, graph)
     graph.serialize(str(output_file), format='turtle', )

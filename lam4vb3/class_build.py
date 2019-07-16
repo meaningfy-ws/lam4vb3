@@ -21,192 +21,146 @@ LITERAL_COLUMNS = {
     'KEYWORD': 'skos:prefLabel@en',
 }
 
-# REIFIED_LITERAL_COLUMNS = {
-#     'KEYWORD': 'skosxl:literalForm@en',
-# }
-
-MAPPING_URI_COLUMNS = {
-    'CDM_CLASS': 'lam:cdm_class',
-    'DN_CLASS': 'lam:celex_class',
-    'FM': 'cdm:resource-type',
-}
-
 MAPPING_VALUE_COMMENT_COLUMNS = {
-    'AU': 'cdm:created_by',
+    'CDM_CLASS': 'lamd:md_CDM_CLASS',
+    'DN_CLASS': 'lamd:md_DN_CLASS',
+    'AU': 'lamd:md_AU',
+    'FM': 'lamd:md_FM',
 }
 
 CONSTRAINT_VALUE_COMMENT_COLUMNS = {
-    'DN': 'cdm:resource_legal_id_celex',
-    'DT_CORR': 'cdm:resource_legal_number_corrigendum',
-    'DC': 'cdm:concept_eurovoc',
-    'CT': 'cdm:resource_legal_is_about_subject-matter',
-    'CC': 'cdm:resource_legal_is_about_concept_directory-code',
-    'RJ_NEW': 'cdm:case-law_is_about_concept_new_case-law',
-    'DD': 'cdm:work_date_document',
-    'IF': 'cdm:resource_legal_date_entry-into-force',
-    'EV': 'cdm:resource_legal_date_end-of-validity',
-    'NF': 'cdm:legislation_secondary_date_notification',
-    'TP': 'cdm:date_transposition',
-    'SG': 'cdm:resource_legal_date_signature',
-    'VO': 'cdm:resource_legal_date_vote',
-    'DB': 'cdm:act_preparatory_date_debate',
-    'LO': 'cdm:resource_legal_date_request_opinion',
-    'DH': 'cdm:resource_legal_date_dispatch',
-    'DL': 'cdm:resource_legal_date_deadline',
-    'RP': 'cdm:question_parliamentary_date_reply',
-    'VV': 'cdm:resource_legal_in-force',
-    'REP': 'cdm:resource_legal_repertoire',
-    'RS': 'cdm:service_responsible',
-    'AS': 'cdm:service_associated',
-    'AF': 'cdm:question_parliamentary_asked_by_group_parliamentary ',
-    'MI': 'cdm:resource_legal_information_miscellaneous',
-    'LG': 'cdm:term_parliamentary ',
-    'RI': 'cdm:resource_legal_position_eesc',
-    'DP': 'cdm:stored_by ',
-    'AD': 'cdm:addresses',
-    'LF': 'cdm:resource_legal_uses_originally_language',
-    'NA': 'cdm:work_originates_in_country',
-    'REPPORTEUR': 'cdm:reported_by',
-    'IC': 'cdm:agreement_international_has_type_comment_concept_type_comment',
-    'CM': 'cdm:resource_legal_comment_internal',
-    'NS': 'cdm:preparatory_act_number_session',
-    'TT': 'cdm:resource_legal_based_on_concept_treaty',
-    'LB': 'cdm:resource_legal_based_on_resource_legal',
-    'AMENDMENT': 'cdm:resource_legal_amends_resource_legal',
-    'ADDITION': 'cdm:resource_legal_adds_to_resource_legal',
-    'REPEAL': 'cdm:resource_legal_repeals_resource_legal',
-    'REPEAL_IMP': 'cdm:resource_legal_implicitly_repeals_resource_legal',
-    'ADOPTION': 'cdm:resource_legal_adopts_resource_legal',
-    'ADOPTION_PAR': 'cdm:resource_legal_partially_adopts_resource_',
-    'APPLICABILITY_EXT': 'cdm:resource_legal_extends_application_resource_legal',
-    'COMPLETION': 'cdm:resource_legal_completes_resource_legal',
-    'VALIDITY_EXT': 'cdm:resource_legal_extends_validity_of_resource_legal',
-    'REPLACEMENT': 'cdm:resource_legal_replaces_resource_legal',
-    'CORRIGENDUM': 'cdm:resource_legal_corrects_resource_legal',
-    'OBSOLETE': 'cdm:resource_legal_renders_obsolete_resource_legal',
-    'DEROGATION': 'cdm:resource_legal_derogates_resource_legal',
-    'CONFIRMATION': 'cdm:resource_legal_confirms_resource_legal',
-    'QUESTION_SIMILAR': 'cdm:resource_legal_tackles_similar_question_as_resource_legal',
-    'INTERPRETATION': 'cdm:resource_legal_interpretes_authoritatively_resource_legal',
-    'IMPLEMENTATION': 'cdm:resource_legal_implements_resource_legal',
-    'REESTAB': 'cdm:resource_legal_reestablishes_resource_legal',
-    'SUSPEND': 'cdm:resource_legal_suspends_resource_legal',
-    'SUSPEND_PAR': 'cdm:resource_legal_partially_suspends_resource_legal',
-    'APPLICABILITY_DEF': 'cdm:resource_legal_defers_application_of_resource_legal',
-    'INCORPORATION': 'cdm:resource_legal_incorporates_resource_legal',
-    'REFER_PAR': 'cdm:resource_legal_partially_refers_to_resource_legal',
-    'QUESTION_RELATED': 'cdm:resource_legal_related_question_to_resource_legal',
-    'OPINION_EP': 'cdm:resource_resource_legal_contains_ep_opinion_on_resource_legal',
-    'OPINION_COR': 'cdm:resource_resource_legal_contains_cor_opinion_on_resource_legal',
-    'OPINION_EESC': 'cdm:resource_resource_legal_contains_eesc_opinion_on_resource_legal',
-    'INFLUENCE': 'cdm:resource_resource_legal_influences_resource_legal',
-    'AMENDMENT_PRO': 'cdm:resource_resource_legal_proposes_to_amend_resource_legal',
-    'CI': 'cdm:work_cites_work',
-    'RELATION': 'cdm:work_related_to_work',
-    'ASSOCIATION': 'cdm:resource_legal_associates_agreement_international',
-    'PROC': 'cdm:work_part_of_dossier',
-    'AP': 'cdm:communication_cjeu_requested_by_agent',
-    'DF': 'cdm:communication_cjeu_defended_by_agent',
-    'PR': 'cdm:communication_cjeu_has_type_procedure_concept_type_procedure',
-    'ANNULMENT_REQ': 'cdm:communication_case_new_requests_annulment_of_resource_legal',
-    'FAILURE_REQ': 'cdm:communication_case_new_requests_establishment_of_failure_of_obligation_resource_legal',
-    'INAPPLICAB_REQ': 'cdm:communication_case_new_requests_inapplicability_resource_legal',
-    'ANULMENT_PARTIAL_REQ': 'cdm:communication_case_new_requests_partial_annulment_of_resource_legal',
-    'REVIEW_REQ': 'cdm:communication_case_new_requests_review_of_decision_case-law',
-    'PRELIMINARY_REQ': 'cdm:communication_case_new_submits_preliminary_question_resource_legal',
-    'COMMUNIC_REQ': 'cdm:communication_cjeu_communicates_on_case-law',
-    'OPINION_REQ': 'cdm:communication_request_opinion_requests_opinion_on_resource_legal',
+    # 'CODE': 'lamd:md_CODE',
+    # 'LABEL': 'lamd:md_LABEL',
+    # 'KEYWORD': 'lamd:md_KEYWORD',
+    # 'EXAMPLE_EN': 'lamd:md_EXAMPLE_EN',
+    # 'EXAMPLE_FR': 'lamd:md_EXAMPLE_FR',
+    # 'COMMENT': 'lamd:md_COMMENT',
+    # 'EXAMPLE_CELEX': 'lamd:md_EXAMPLE_CELEX',
+    # 'CDM_CLASS': 'lamd:md_CDM_CLASS',
+    # 'AU': 'lamd:md_AU',
+    # 'FM': 'lamd:md_FM',
+    # 'DN_CLASS': 'lamd:md_DN_CLASS',
+
+    'DT_CORR': 'lamd:md_DT_CORR',
+    'DN': 'lamd:md_DN',
+    'DC': 'lamd:md_DC',
+    'CT': 'lamd:md_CT',
+    'CC': 'lamd:md_CC',
+    'RJ_NEW': 'lamd:md_RJ_NEW',
+    'DD': 'lamd:md_DD',
+    'IF': 'lamd:md_IF',
+    'EV': 'lamd:md_EV',
+    'NF': 'lamd:md_NF',
+    'TP': 'lamd:md_TP',
+    'SG': 'lamd:md_SG',
+    'VO': 'lamd:md_VO',
+    'DB': 'lamd:md_DB',
+    'LO': 'lamd:md_LO',
+    'DH': 'lamd:md_DH',
+    'DL': 'lamd:md_DL',
+    'RP': 'lamd:md_RP',
+    'VV': 'lamd:md_VV',
+    'REP': 'lamd:md_REP',
+    'RS': 'lamd:md_RS',
+    'AS': 'lamd:md_AS',
+    'AF': 'lamd:md_AF',
+    'MI': 'lamd:md_MI',
+    'LG': 'lamd:md_LG',
+    'RI': 'lamd:md_RI',
+    'DP': 'lamd:md_DP',
+    'AD': 'lamd:md_AD',
+    'LF': 'lamd:md_LF',
+    'REPPORTEUR': 'lamd:md_REPPORTEUR',
+    'IC': 'lamd:md_IC',
+    'CM': 'lamd:md_CM',
+    'NS': 'lamd:md_NS',
+    'TT': 'lamd:md_TT',
+    'LB': 'lamd:md_LB',
+    'AMENDMENT': 'lamd:md_AMENDMENT',
+    'ADDITION': 'lamd:md_ADDITION',
+    'REPEAL': 'lamd:md_REPEAL',
+    'REPEAL_IMP': 'lamd:md_REPEAL_IMP',
+    'ADOPTION': 'lamd:md_ADOPTION',
+    'ADOPTION_PAR': 'lamd:md_ADOPTION_PAR',
+    'APPLICABILITY_EXT': 'lamd:md_APPLICABILITY_EXT',
+    'COMPLETION': 'lamd:md_COMPLETION',
+    'VALIDITY_EXT': 'lamd:md_VALIDITY_EXT',
+    'REPLACEMENT': 'lamd:md_REPLACEMENT',
+    'CORRIGENDUM': 'lamd:md_CORRIGENDUM',
+    'OBSOLETE': 'lamd:md_OBSOLETE',
+    'DEROGATION': 'lamd:md_DEROGATION',
+    'CONFIRMATION': 'lamd:md_CONFIRMATION',
+    'QUESTION_SIMILAR': 'lamd:md_QUESTION_SIMILAR',
+    'INTERPRETATION': 'lamd:md_INTERPRETATION',
+    'IMPLEMENTATION': 'lamd:md_IMPLEMENTATION',
+    'REESTAB': 'lamd:md_REESTAB',
+    'SUSPEND': 'lamd:md_SUSPEND',
+    'SUSPEND_PAR': 'lamd:md_SUSPEND_PAR',
+    'APPLICABILITY_DEF': 'lamd:md_APPLICABILITY_DEF',
+    'INCORPORATION': 'lamd:md_INCORPORATION',
+    'REFER_PAR': 'lamd:md_REFER_PAR',
+    'QUESTION_RELATED': 'lamd:md_QUESTION_RELATED',
+    'OPINION_EP': 'lamd:md_OPINION_EP',
+    'OPINION_COR': 'lamd:md_OPINION_COR',
+    'OPINION_EESC': 'lamd:md_OPINION_EESC',
+    'INFLUENCE': 'lamd:md_INFLUENCE',
+    'AMENDMENT_PRO': 'lamd:md_AMENDMENT_PRO',
+    'CI': 'lamd:md_CI',
+    'RELATION': 'lamd:md_RELATION',
+    'ASSOCIATION': 'lamd:md_ASSOCIATION',
+    'PROC': 'lamd:md_PROC',
+    'AP': 'lamd:md_AP',
+    'DF': 'lamd:md_DF',
+    'PR': 'lamd:md_PR',
+    'NA': 'lamd:md_NA',
+    'ANNULMENT_REQ': 'lamd:md_ANNULMENT_REQ',
+    'FAILURE_REQ': 'lamd:md_FAILURE_REQ',
+    'INAPPLICAB_REQ': 'lamd:md_INAPPLICAB_REQ',
+    'ANULMENT_PARTIAL_REQ': 'lamd:md_ANULMENT_PARTIAL_REQ',
+    'REVIEW_REQ': 'lamd:md_REVIEW_REQ',
+    'PRELIMINARY_REQ': 'lamd:md_PRELIMINARY_REQ',
+    'COMMUNIC_REQ': 'lamd:md_COMMUNIC_REQ',
+    'OPINION_REQ': 'lamd:md_OPINION_REQ',
 }
 
-COLLECTION_COLUMNS = ["Classification level 1", "Classification level 2", "Classification level 3"]
+COLLECTION_TARGET_COLUMNS = ["Classification level 1", "Classification level 2", "Classification level 3"]
+
+COLLECTION_COLUMNS = {
+    "Classification level 1": "skos:prefLabel",
+    "Classification level 2": "skos:prefLabel",
+    "Classification level 3": "skos:prefLabel",
+}
 
 COLUMN_ANNOTATION_ASSOCIATIONS = [('DD', 'ANN_COD(DD)'), ('EV', 'ANN_COD(EV)'), ('SG', 'ANN_COD(SG)'), ]
 
 ANNOTATION_COLUMNS = {
-    'ANN_COD(DD)': 'ann:comment_on_date',
-    'ANN_COD(EV)': 'ann:comment_on_date',
-    'ANN_COD(SG)': 'ann:comment_on_date',
-    'DD': 'cdm:work_date_document',
-    'EV': 'cdm:resource_legal_date_end-of-validity',
-    'SG': 'cdm:resource_legal_date_signature',
+    'ANN_COD(DD)': 'lamd:md_ANN_COD',
+    'ANN_COD(EV)': 'lamd:md_ANN_COD',
+    'ANN_COD(SG)': 'lamd:md_ANN_COD',
+    'DD': 'lamd:md_DD',
+    'EV': 'lamd:md_EV',
+    'SG': 'lamd:md_SG',
 }
 
-# LAM_MD_CS_URI = rdflib.URIRef("http://publications.europa.eu/resources/authority/lam-document-class")
+ANNOTATION_COLUMNS_UNUSED = {
+    'ANN_COD': 'lamd:md_ANN_COD',
+    'ANN_TOD': 'lamd:md_ANN_TOD',
+    'ANN_CLB': 'lamd:md_ANN_CLB',
+    'ANN_ART': 'lamd:md_ANN_ART',
+    'ANN_PAR': 'lamd:md_ANN_PAR',
+    'ANN_SUB': 'lamd:md_ANN_SUB',
+    'ANN_TLT': 'lamd:md_ANN_TLT',
+    'ANN_RL2': 'lamd:md_ANN_RL2',
+    'ANN_MDL': 'lamd:md_ANN_MDL',
+    'ANN_MSL': 'lamd:md_ANN_MSL',
+    'ANN_SOV': 'lamd:md_ANN_SOV',
+    'ANN_EOV': 'lamd:md_ANN_EOV',
+    'ANN_LVL': 'lamd:md_ANN_LVL',
+    'ANN_FCS': 'lamd:md_ANN_FCS',
+    'ANN_FCT': 'lamd:md_ANN_FCT'}
+
 LAM_CLASS_CS = "lamd:LegalDocument"
 
-
-# class LAMConstraintTripleMaker(build.MultiColumnTripleMaker):
-#
-#     def handle_object(self, row_index, target_column, language=None, data_type=None):
-#
-#         cell_value = self.df.loc[row_index, target_column]
-#         graph = self.graph if target_column in self.uri_valued_columns else None
-#
-#         if cell_value and pd.notna(cell_value):
-#             if target_column in self.multi_line_columns:
-#                 objects = build.parse_multi_line_commented_value(cell_value,
-#                                                                  graph=graph,
-#                                                                  language=language,
-#                                                                  data_type=data_type, )
-#                 return [x for x in objects if x]
-#
-#             return [build.parse_commented_value(cell_value,
-#                                                 graph=graph,
-#                                                 language=language,
-#                                                 data_type=data_type, )]
-#
-#     def handle_cell_subject(self, value):
-#         """
-#             generate a repeatable cell specific uuid
-#         :type value: object
-#         :return: an UUID URI
-#         """
-#
-#         return lam_utils.generate_uuid_uri(str(value),
-#                                            seed=str(self.df.head()),
-#                                            graph=self.graph,
-#                                            prefix="res_")
-#
-#     def make_cell_triples(self, subject, predicate, oobject,):
-#
-#         cell_subject = self.handle_cell_subject(row_index=str(subject) + str(predicate) + str(oobject))
-#         # TODO
-#
-#         result_triples = [tuple([cell_subject, RDF.type, LAM.PropertyConstraint]),
-#                           tuple([cell_subject, SHACL.path, predicate]), ]
-#         for obj_value, obj_comment in oobject:
-#             if str(obj_value).strip().lower() is "y":
-#                 result_triples.extend([
-#                     tuple([cell_subject, SHACL.name, rdflib.Literal(f"Mandatory {predicate}")]),
-#                     tuple([cell_subject, SHACL.minCount, rdflib.Literal("1", datatype=XSD.int)]),
-#                 ])
-#             elif str(obj_value).strip().lower() is "yu":
-#                 result_triples.extend([
-#                     tuple([cell_subject, SHACL.name, rdflib.Literal(f"Mandatory unique {predicate}")]),
-#                     tuple([cell_subject, SHACL.minCount, rdflib.Literal("1", datatype=XSD.int)]),
-#                     tuple([cell_subject, SHACL.maxCount, rdflib.Literal("1", datatype=XSD.int)]),
-#                 ])
-#             elif str(obj_value).strip().lower() is "o":
-#                 result_triples.extend([
-#                     tuple([cell_subject, SHACL.name, rdflib.Literal(f"Optional {predicate}")]),
-#                 ])
-#             elif str(obj_value).strip().lower() is "ou":
-#                 result_triples.extend([
-#                     tuple([cell_subject, SHACL.name, rdflib.Literal(f"Optional unique {predicate}")]),
-#                     tuple([cell_subject, SHACL.maxCount, rdflib.Literal("1", datatype=XSD.int)]),
-#                 ])
-#             elif str(obj_value).strip().lower() is "n":
-#                 result_triples.extend([
-#                     tuple([cell_subject, SHACL.name, rdflib.Literal(f"Forbidden {predicate}")]),
-#                     tuple([cell_subject, SHACL.maxCount, rdflib.Literal("0", datatype=XSD.int)]),
-#                 ])
-#             else:
-#                 result_triples.extend([
-#                     tuple([cell_subject, SHACL.maxCount, rdflib.Literal("0", datatype=XSD.int)]),
-#                 ])
-#             if obj_comment:
-#                 result_triples.append(tuple([cell_subject, RDFS.comment, rdflib.Literal(obj_comment)]))
-#         return result_triples
 
 def create_cs(graph):
     """
@@ -254,9 +208,10 @@ def create_concepts(df, graph):
                                                                   subject_source=URI_COLUMN,
                                                                   subject_class="skos:Concept",
                                                                   subject_in_scheme=LAM_CLASS_CS,
-                                                                  constraint_property="lam:hasPropertyConfiguration",
+                                                                  constraint_property="lam:classifyWith",
                                                                   constraint_class="lam:MappingPropertyConfiguration",
                                                                   constraint_comment="skos:editorialNote",
+                                                                  constraint_path_property="lam:path",
                                                                   column_mapping_dict=MAPPING_VALUE_COMMENT_COLUMNS,
                                                                   target_columns=list(
                                                                       MAPPING_VALUE_COMMENT_COLUMNS.keys()),
@@ -268,21 +223,21 @@ def create_concepts(df, graph):
 
     value_comment_constraint_maker.make_triples()
 
-    # make constraint from value with comment: Mapping columns
-    value_comment_constraint_maker1 = build.ConceptConstraintMaker(df,
-                                                                   subject_source=URI_COLUMN,
-                                                                   subject_class="skos:Concept",
-                                                                   subject_in_scheme=LAM_CLASS_CS,
-                                                                   constraint_property="lam:hasPropertyConfiguration",
-                                                                   constraint_class="lam:MappingPropertyConfiguration",
-                                                                   constraint_comment="skos:editorialNote",
-                                                                   column_mapping_dict=MAPPING_URI_COLUMNS,
-                                                                   target_columns=list(MAPPING_URI_COLUMNS.keys()),
-                                                                   uri_valued_columns=list(MAPPING_URI_COLUMNS.keys()),
-                                                                   multi_line_columns=[],
-                                                                   graph=graph)
-
-    value_comment_constraint_maker1.make_triples()
+    # # make constraint from value with comment: Mapping columns
+    # value_comment_constraint_maker1 = build.ConceptConstraintMaker(df,
+    #                                                                subject_source=URI_COLUMN,
+    #                                                                subject_class="skos:Concept",
+    #                                                                subject_in_scheme=LAM_CLASS_CS,
+    #                                                                constraint_property="lam:hasPropertyConfiguration",
+    #                                                                constraint_class="lam:MappingPropertyConfiguration",
+    #                                                                constraint_comment="skos:editorialNote",
+    #                                                                column_mapping_dict=MAPPING_URI_COLUMNS,
+    #                                                                target_columns=list(MAPPING_URI_COLUMNS.keys()),
+    #                                                                uri_valued_columns=list(MAPPING_URI_COLUMNS.keys()),
+    #                                                                multi_line_columns=[],
+    #                                                                graph=graph)
+    #
+    # value_comment_constraint_maker1.make_triples()
 
     # make constraint from values with comments (according to agreed cardinality specs)
     value_comment_constraint_maker3 = build.ConceptConstraintMaker(df,
@@ -292,6 +247,7 @@ def create_concepts(df, graph):
                                                                    constraint_property="lam:hasPropertyConfiguration",
                                                                    constraint_class="lam:PropertyConfiguration",
                                                                    constraint_comment="skos:editorialNote",
+                                                                   constraint_path_property="lam:path",
                                                                    column_mapping_dict=CONSTRAINT_VALUE_COMMENT_COLUMNS,
                                                                    target_columns=list(
                                                                        CONSTRAINT_VALUE_COMMENT_COLUMNS.keys()),
@@ -310,6 +266,7 @@ def create_concepts(df, graph):
                                                                        subject_in_scheme=None,
                                                                        constraint_property="lam:hasAnnotationConfiguration",
                                                                        constraint_class="lam:AnnotationConfiguration",
+                                                                       constraint_path_property="lam:path",
                                                                        column_mapping_dict=ANNOTATION_COLUMNS,
                                                                        target_columns=[property_annotation_column],
                                                                        uri_valued_columns=[property_annotation_column],
@@ -317,6 +274,24 @@ def create_concepts(df, graph):
                                                                        graph=graph)
 
         value_comment_constraint_maker5.make_triples()
+
+
+def create_collections(df, graph):
+    """
+
+    :param df:
+    :param graph:
+    :return:
+    """
+    collection_maker = build.ConceptCollectionMaker(df,
+                                                    column_mapping_dict=COLLECTION_COLUMNS,
+                                                    graph=graph,
+                                                    target_columns=COLLECTION_TARGET_COLUMNS,
+                                                    subject_source="URI",
+                                                    subject_class="skos:Concept",
+                                                    membership_predicate="skos:member",
+                                                    collection_class="skos:Collection", )
+    collection_maker.make_triples()
 
 
 def make_class_worksheet(lam_df_classes, prefixes, output_file):
@@ -329,4 +304,5 @@ def make_class_worksheet(lam_df_classes, prefixes, output_file):
     graph = build.make_graph(prefixes)
     create_cs(graph)
     create_concepts(lam_df_classes, graph)
+    create_collections(lam_df_classes, graph)
     graph.serialize(str(output_file), format='turtle', )
