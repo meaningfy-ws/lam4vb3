@@ -161,14 +161,29 @@ ANNOTATION_COLUMNS_UNUSED = {
 
 LAM_CLASS_CS = "lamd:LegalDocument"
 
+CELEX_CS = "celexd:CelexLegalDocument"
 
-def create_cs(graph):
+LITERAL_CELEX_COLUMNS = {'CODE': 'skos:notation',
+                         'LABEL': 'skos:prefLabel@en',
+                         'EXAMPLE_EN': 'skos:example@en',
+                         'COMMENT': 'skos:editorialNote@en',
+                         }
+
+VALUE_COMMENT_CELEX_COLUMNS = {
+    'DTS': 'lam:dts',
+    'DTT': 'lam:dtt',
+    'DTA': 'lam:dta',
+    'DTN': 'lam:dts',
+}
+
+
+def create_cs(graph, cs=LAM_CLASS_CS, cs_label="Document metadata"):
     """
         create the concept scheme definition
     """
-    cs = lam_utils.qname_uri(LAM_CLASS_CS, graph.namespaces())
+    cs = lam_utils.qname_uri(cs, graph.namespaces())
     graph.add((cs, RDF.type, SKOS.ConceptScheme))
-    graph.add((cs, SKOS.prefLabel, rdflib.Literal("Document metadata")))
+    graph.add((cs, SKOS.prefLabel, rdflib.Literal(cs_label)))
 
 
 def create_concepts(df, graph):
@@ -294,6 +309,44 @@ def create_collections(df, graph):
     collection_maker.make_triples()
 
 
+def create_celex_concepts(df, graph):
+    """
+
+    :param df:
+    :param graph:
+    :return:
+    """
+    # make literal columns
+    literal_maker = build.ConceptTripleMaker(df,
+                                             subject_source=URI_COLUMN,
+                                             subject_class="skos:Concept",
+                                             subject_in_scheme=CELEX_CS,
+                                             column_mapping_dict=LITERAL_CELEX_COLUMNS,
+                                             target_columns=list(LITERAL_CELEX_COLUMNS.keys()),
+                                             uri_valued_columns=[],
+                                             multi_line_columns=list(LITERAL_CELEX_COLUMNS.keys()),
+                                             graph=graph)
+    literal_maker.make_triples()
+
+    # make constraint from values with comments (according to agreed cardinality specs)
+    value_comment_constraint_maker = build.ConceptConstraintMaker(df,
+                                                                  subject_source=URI_COLUMN,
+                                                                  subject_class="skos:Concept",
+                                                                  subject_in_scheme=CELEX_CS,
+                                                                  constraint_property="lam:hasPropertyConfiguration",
+                                                                  constraint_class="lam:PropertyConfiguration",
+                                                                  constraint_comment="skos:editorialNote",
+                                                                  constraint_path_property="lam:path",
+                                                                  column_mapping_dict=VALUE_COMMENT_CELEX_COLUMNS,
+                                                                  target_columns=list(
+                                                                      VALUE_COMMENT_CELEX_COLUMNS.keys()),
+                                                                  uri_valued_columns=[],
+                                                                  multi_line_columns=[],
+                                                                  graph=graph)
+
+    value_comment_constraint_maker.make_triples()
+
+
 def make_class_worksheet(lam_df_classes, prefixes, output_file):
     """
     :param lam_df_classes:
@@ -302,7 +355,21 @@ def make_class_worksheet(lam_df_classes, prefixes, output_file):
     :return:
     """
     graph = build.make_graph(prefixes)
-    create_cs(graph)
+    create_cs(graph, cs=CELEX_CS, cs_label= "LAM classes")
     create_concepts(lam_df_classes, graph)
     create_collections(lam_df_classes, graph)
+    graph.serialize(str(output_file), format='turtle', )
+
+
+def make_celex_class_worksheet(celex_df_classes, prefixes, output_file):
+    """
+
+    :param celex_df_classes:
+    :param prefixes:
+    :param output_file:
+    :return:
+    """
+    graph = build.make_graph(prefixes)
+    create_cs(graph, cs=CELEX_CS, cs_label= "CELEX classes")
+    create_celex_concepts(celex_df_classes, graph)
     graph.serialize(str(output_file), format='turtle', )
