@@ -107,3 +107,6 @@ venv.bak/
 
 # Enterprise architect temp file
 *.ldb
+
+.dita~
+.ditamap~

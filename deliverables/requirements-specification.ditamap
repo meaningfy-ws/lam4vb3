@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
+"bookmap.dtd">
+<bookmap>
+  <title>Requirements Specification for EUR-Lex Legal Analysis Methodology
+  Model</title>
+
+  <bookmeta>
+    <author>Eugeniu Costetchi</author>
+
+    <critdates>
+      <created date="19/07/2019"/>
+    </critdates>
+  </bookmeta>
+
+  <frontmatter>
+    <booklists>
+      <toc/>
+    </booklists>
+  </frontmatter>
+
+  <chapter href="req-intro.dita#req-intro">
+    <topicref href="req-intro.dita#req-intro-2"/>
+
+    <topicref href="req-intro.dita#req-intro-3"/>
+
+    <topicref href="req-intro.dita#req-intro-4"/>
+  </chapter>
+
+  <chapter href="req-lam-context.dita"/>
+
+  <appendix href="???"/>
+
+  <backmatter>
+    <booklists>
+      <indexlist/>
+    </booklists>
+  </backmatter>
+</bookmap>

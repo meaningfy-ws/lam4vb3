@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="front_matter_specifications">
+  <title>Preliminary requirements analysis for the Legal Analysis Methodology
+  project</title>
+
+  <shortdesc>Short DEscription</shortdesc>
+
+  <prolog>
+    <author>Eugeniu Costetchi</author>
+
+    <critdates>
+      <created date="19/07/2019"/>
+    </critdates>
+  </prolog>
+
+  <body>
+    <p/>
+  </body>
+</topic>
