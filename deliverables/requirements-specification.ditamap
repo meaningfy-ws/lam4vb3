@@ -27,7 +27,15 @@
     <topicref href="req-intro.dita#req-intro-4"/>
   </chapter>
 
-  <chapter href="req-lam-context.dita"/>
+  <chapter href="req-lam-context.dita#req-lam-context">
+    <topicref href="req-lam-context.dita#req-lam-context-2"/>
+
+    <topicref href="req-lam-context.dita#req-lam-context-3"/>
+  </chapter>
+
+  <chapter href="req-approach.dita">
+    <topicref href="???"/>
+  </chapter>
 
   <appendix href="???"/>
 
