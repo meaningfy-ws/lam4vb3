@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="req-deliverables-structure">
+  <title>Roadmap</title>
+
+  <body>
+    <p>This section describes the main deliverables that enable the
+    achievement of final goals. </p>
+
+    <p/>
+
+    <section><title>From unstructured to structured data</title><p>In this
+    section, we propose to approach the modelling exercise in two steps.
+    First, creation of a semi-formal representation of the LAM knowledge and
+    then, in an automatic or semi-automatic fashion transform it into a formal
+    representation. </p><p>There are multiple methodologies for creating a
+    domain model or an ontology. All of these methodologies involve the domain
+    experts transmitting their knowledge to an information architect, who then
+    creates a formal representation of the the received knowledge suitable for
+    a particular set of tasks. One of the biggest challenges in this process
+    is incremental growth of accuracy and precision of the expressed knowledge
+    up to the point where statements have a single possible interpretation.
+    Moreover the knowledge expressed in a formal way needs to be agreed upon
+    by the consortium of experts this way becoming a shared common
+    conceptualisation of the domain. </p><p>One of the requirements in the LAM
+    project is to enable domain experts, i.e. people without deep training in
+    knowledge engineering, to edit the LAM model directly in a structured
+    manner. To make this task feasible we propose adoption of a semi-formal
+    knowledge organisation language that allows for organisation of the domain
+    knowledge to a degree but also allows for loose informal relations to be
+    expressed. The most well known and widely adopted knowledge organisation
+    models is the Simple Knowledge Organisation System (SKOS).</p><p>Once the
+    LAM model is expressed in a semi-formal language it is possible, in
+    automatic or semi-automatic fashion, to transform it into a formal
+    ontology, the final goal of the modeling exercise, expressed in OWL2
+    language. In a similar fashion reference documentation of the model can
+    also be generated. Moreover, because the LAM description comprises
+    constraint specifications, these can possibly be expressed as using SHACL
+    language. </p><p/></section>
+  </body>
+</topic>
