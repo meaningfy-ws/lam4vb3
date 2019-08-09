@@ -17,21 +17,21 @@
     <body>
       <p>EUR-Lex legal analysis methodology (LAM) presents and describes the
       use of metadata elements that are relevant for the legal and documentary
-      analysis of the EUR-Lex website's content. </p>
+      analysis of the EUR-Lex website's content.</p>
 
       <p>The metadata elements employed in LAM are taken from the Common Data
-      Model (CDM) of the CELLAR repository of the Publications Office. </p>
+      Model (CDM) of the CELLAR repository of the Publications Office.</p>
 
       <p>CELLAR is an electronic database which contains the documents and
       their related metadata diffused on one of the websites of the
       Publications Office. The CDM is an ontology that describes the concepts
       and relationships (properties/elements) that can exist for the data
-      stored in the CELLAR. </p>
+      stored in the CELLAR.</p>
 
       <p>LAM documentation contains descriptions of classes of legal documents
       and a selection of metadata suitable for describing each document class.
       LAM aims at facilitating the understanding and the use of relevant CDM
-      properties. </p>
+      properties.</p>
 
       <p>LAM gives some basic Definition for the metadata elements, determines
       their cardinality and lists the related properties. It also gives some
@@ -40,7 +40,7 @@
       has to be used when filling in the metadata elements. If a metadata
       element has to be completed with a value coming from a controlled
       vocabulary, it is indicated. If there is no indication, it means that
-      the metadata element can be filled in with free text. </p>
+      the metadata element can be filled in with free text.</p>
     </body>
   </topic>
 
@@ -52,21 +52,59 @@
       the LAM team regarding the data model mainly and potential future
       applications. It also provides an approach for transposing the LAM from
       a plain text documentation into structured data with semi-formal and
-      formal underpinning. </p>
+      formal underpinning.</p>
 
       <p>The benefit of having the LAM represented in a structured form is
       enabling automation of multiple processes, such as document
       classification, metadata validation, metadata enrichment, which
       currently are performed manually by the OP staff or by external
       contractors. Such an automation can lead to significant reductions of
-      cost and reduce the time needed for performing these processes. </p>
+      cost and reduce the time needed for performing these processes.</p>
 
       <p>This document does not intend to provide a detailed functional
       specification for every envisaged element but rather provide a general
       direction and describe the path for reaching different business and
       technical objectives. The main concern, at this stage is to describe how
       a LAM ontology can be created starting from the current state of affairs
-      presented elsewhere in this document. </p>
+      presented elsewhere in this document.</p>
+    </body>
+  </topic>
+
+  <topic id="req-intro-5">
+    <title>Data model scope</title>
+
+    <body>
+      <p>LAM data model should support accounts for the following types of
+      information. </p>
+
+      <ul>
+        <li>description of legal document classes<p/><ul>
+            <li>human readable descriptions</li>
+
+            <li>correspondences to other classifications (CELEX/ELI, CDM,
+            ResourceType etc. ) as (a) mappings and as (b) code grammars</li>
+
+            <li>publication metadata</li>
+          </ul></li>
+
+        <li>description of document metadata</li>
+
+        <li>description of the metadata annotations (property
+        annotations)</li>
+
+        <li>description of LD classification rules (fields to
+        automatically/manually classify LDs)</li>
+
+        <li>description of class shapes i.e. constraints on how the class is
+        instantiated<ul>
+            <li>e.g. specific property value, cardinality constraints, range
+            class, etc.</li>
+          </ul></li>
+
+        <li>descriptions of LD classes and LD property groupings (table of
+        contents in the LAM word document and templates in the LAM webApp
+        description)</li>
+      </ul>
     </body>
   </topic>
 
@@ -74,15 +112,15 @@
     <title>Document Conventions</title>
 
     <body>
-      <p>Application profile - ... </p>
+      <p>Application profile - ...</p>
 
-      <p>LAM model … </p>
+      <p>LAM model …</p>
 
-      <p>LA team, LA sector - OP C2 003 </p>
+      <p>LA team, LA sector - OP C2 003</p>
 
-      <p>Model … </p>
+      <p>Model …</p>
 
-      <p>Ontology ... </p>
+      <p>Ontology ...</p>
     </body>
   </topic>
 </topic>
