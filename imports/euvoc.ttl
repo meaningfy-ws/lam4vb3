@@ -1,0 +1,514 @@
+# baseURI: http://publications.europa.eu/ontology/euvoc
+# imports: http://publications.europa.eu/ontology/euvoc/externalImports
+# imports: http://publications.europa.eu/ontology/euvoc/internalImports
+# prefix: euvoc
+
+@prefix : <http://publications.europa.eu/ontology/euvoc#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix cdm: <http://publications.europa.eu/ontology/cdm#> .
+@prefix cmr: <http://publications.europa.eu/ontology/cdm/cmr#> .
+@prefix dataTypeDefinitions: <http://publications.europa.eu/ontology/euvoc/dataTypeDefinitions#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix extensionDesctiptions: <http://publications.europa.eu/ontology/euvoc/extensionDesctiptions#> .
+@prefix externalImports: <http://publications.europa.eu/ontology/euvoc/externalImports#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
+@prefix geosparqlsf: <http://www.opengis.net/ont/sf#> .
+@prefix geowgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix gml: <http://www.opengis.net/ont/gml#> .
+@prefix legalDescriptions: <http://publications.europa.eu/ontology/euvoc/legalDescriptions> .
+@prefix lemon: <http://lemon-model.net/lemon#> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix linguisticDescriptions: <http://publications.europa.eu/ontology/euvoc/linguisticDescriptions#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix lvont: <http://lexvo.org/ontology#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <http://www.w3.org/ns/person#> .
+@prefix pim: <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdaelements: <http://rdaregistry.info/Elements/c/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix spatialDescriptions: <http://publications.europa.eu/ontology/euvoc/spatialDescriptions#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix tableDescriptions: <http://publications.europa.eu/ontology/euvoc/tableDescriptions#> .
+@prefix temporalDescriptions: <http://publications.europa.eu/ontology/euvoc/temporalDescriptions#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://publications.europa.eu/ontology/euvoc>
+  rdf:type owl:Ontology ;
+  rdfs:comment """Euvoc ontology defines a set of properties used to enrich skos, org and dcat ontologies. 
+
+Properties defined in Euvoc are used by:
+- skos Publications Office application profile (SKOS-AP-EU) 
+- org Publications Office application profile (ORG-AP-OP) 
+- dcat Publications Office application profile (DCAT-AP-OP)
+- cdm ontology used for the CELLAR. The euvoc ontology is imported in cdm ontology starting on version 4 of the cdm ontology"""@en ;
+  rdfs:comment """v1.00 alpha 1 to V1.00 alpha 2
+1) org:classification has a range: OrganizationType
+2) euvoc:xlType change to euvoc:xlClassification
+
+v1.00 alpha 2 to V1.00 alpha 3
+1) property prov:hadPrimarySource not use any more, use dct:source instead
+2) property euvoc:thesStatus is renamed euvoc:status (used for skos:Concept and skos-xl:Label)
+3) property iso:status is added,  euvoc:status (used for skos:Concept and skos-xl:Label)
+4) use euvoc:endDate instead prov:invalidatedAtTime 
+5) use euvoc:startDate instead of prov:generatedAtTime 
+6) foaf:img is removed from org:Organization, use foaf:depiction instead
+
+v1.00 alpha 3 to V1.00 2015/05/06
+1) iso:status is suppressed, we use euvoc:status
+2) http://publications.europa.eu/resource/authority/grammatical-gender is declared as the sexuel gender table and made equivalent to class gender instead of sdmx:sex
+3) dct:creator is suppressed as object property, it was already declared as data property
+
+V1.00 to V1.01 2015/05/08
+1) correct a mistake on a euvoc restriction which was express in the org ontology intead of euvoc
+2) suppress the issued date of the euvoc ontology in the metadata of the ontology
+
+V1.01 to V1.02 2015/05/08
+http://publications.europa.eu/resource/authority/license changed to  http://publications.europa.eu/resource/authority/licence (name of a MDR authority)
+
+V1.02 to V1.03 2015/7/14
+correct mistakes : Concept was declared as equivalent to \"Frequency\" and Concept had cdm subclasses : both were removed
+
+V1.03 to V1.04 2015/7/15
+adding data property endDate and startDate to skos-xl:Label
+delete decrecated classes from vcard ontology. Change the uri of the classes which were defined in cdm namespace to give them a uri in euvoc namespace (corporate, country, place, concept-eurovoc, language). Change on Site class which was defined as a subclass of Document when it is a subclass of Thing.
+
+V1.04 to V1.05 2015/7/15
+added euvoc:startDate and euvoc:endDate to org:Membership instead of Prov properties
+
+V1.05 to V1.06 2015/07/17
+because of extreme delays (up to ~2 hours) during the inference with Pellet
+we removed on skos:Concept and vcard:Kind, but also anywere else the constraint on properties which used owl:onDataRange. To do this the data type is assigned to rdfs:Literal for all the property constraints.
+
+V1.06 to V1.07 2015/07/24
+-euvoc:license property replaces dcterms:license property
+-euvoc:contributor property replaces dcterms:contributor
+-suppression of dcterms properties declaration when they were both declared as annotation and data of object property
+-euvoc does not import void, dcterms, adms ontologies any more, classes and property are redeclared inside euvoc, to avoid potential conflicts coming from those ontologies
+
+v1.07 to V1.08 2015/07/29
+-class Domain changed to DomainEuroVoc
+-ConceptScheme are classified with the property euvoc:domain range DomainEuroVoc
+-Range of dcat:theme is now EuroVoc waiting for the final MDR table
+
+v1.08 to V1.09 2015/10/09
+- Creation of the class DatasetTheme, subclass of skos:Concept, equivalent to MDR table dataset-theme
+- Range of dcat:theme is now DatasetTheme {@en}
+
+v1.09    euvoc.rdf 2015-10-09
+- the state before the redesign
+
+v1.1 2016-09-01
+- split of the ontology into modules: spatialDescription, temporalDescription, linguisticDescription, tableDescription, tableImports and extensionDescription 
+- fuirther extended with SHACL Shapes in another ontology """ ;
+  rdfs:label "EuVoc Ontology" ;
+  owl:imports <http://publications.europa.eu/ontology/euvoc/externalImports> ;
+  owl:imports <http://publications.europa.eu/ontology/euvoc/internalImports> ;
+  owl:versionIRI <http://publications.europa.eu/ontology/euvoc#1.1> ;
+  owl:versionInfo "EuVoc 1.1" ;
+.
+euvoc:XlNotation
+  rdf:type owl:Class ;
+  rdfs:comment "Current value and historical values of skos:notation."@en ;
+  rdfs:label "Notation (reified SKOS notation)" ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty euvoc:endDate ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty euvoc:startDate ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass euvoc:ConceptStatus ;
+      owl:onProperty euvoc:status ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          [
+            rdf:type owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty euvoc:xlCodification ;
+          ]
+          [
+            rdf:type owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty euvoc:xlCodification ;
+          ]
+        ) ;
+    ] ;
+.
+euvoc:XlNote
+  rdf:type owl:Class ;
+  rdfs:comment "Current value and historical values of skos:note"@en ;
+  rdfs:label "Note (reified SKOS note)" ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty euvoc:endDate ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty euvoc:startDate ;
+    ] ;
+.
+euvoc:XlNumericalValue
+  rdf:type owl:Class ;
+  rdfs:comment "Current value and historical values of numerical properties. Used to store current and historical values of euvoc:protocolLevel"@en ;
+  rdfs:label "Numeric Value (Deprecated)" ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty euvoc:endDate ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty euvoc:startDate ;
+    ] ;
+  owl:deprecated "true"^^xsd:boolean ;
+.
+euvoc:XlSemanticRelation
+  rdf:type owl:Class ;
+  rdfs:comment "Current value and historical values of org:hasSubOrganization"@en ;
+  rdfs:label "Semantic Relation (Deprecated)" ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty euvoc:endDate ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty euvoc:startDate ;
+    ] ;
+  owl:deprecated "true"^^xsd:boolean ;
+.
+euvoc:XlType
+  rdf:type owl:Class ;
+  rdfs:comment "Current value and historical values of org:classification."@en ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty euvoc:endDate ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty euvoc:startDate ;
+    ] ;
+.
+euvoc:adoptedEuroCurrencyOn
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "adopted euro currency on" ;
+  rdfs:label "adopted euro currency on" ;
+  rdfs:range xsd:date ;
+  owl:versionInfo "EuVoc 1.1" ;
+.
+euvoc:contactPoint
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "This relationship is mainly designed for WhoIsWho but is also used in MDR NALs." ;
+  rdfs:comment "a relationship ascribing a contact point, usually of the vacrd:Kind type, to an org entity of site, membership or organization types." ;
+  rdfs:label "contact point" ;
+  owl:versionInfo "EuVoc 1.1" ;
+.
+euvoc:context
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "context" ;
+  rdfs:label "context" ;
+  skos:prefLabel "context" ;
+.
+euvoc:contributor
+  rdf:type owl:ObjectProperty ;
+.
+euvoc:domain
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "To indicate the subject of the controlled vocabulary based on the Domain vocabulary, part of EuroVoc"@en ;
+  rdfs:domain skos:ConceptScheme ;
+  rdfs:range euvoc:DomainEurovoc ;
+.
+euvoc:downloadURL
+  rdf:type owl:ObjectProperty ;
+  rdfs:range rdfs:Resource ;
+.
+euvoc:endDate
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Date ending a period of time."@en ;
+.
+euvoc:getsReportingFrom
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "indicates from who the person gets reporting from."@en ;
+  rdfs:range org:Membership ;
+  owl:inverseOf euvoc:reportsTo ;
+.
+euvoc:inhabitantNameForm
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "indicates the relation between  an inhabitant name form and the noun of the place they live in. Both are instances of skosxl:Label."@en ;
+.
+euvoc:isTextual
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "is textual" ;
+  rdfs:domain terms:FileFormat ;
+  rdfs:label "is textual" ;
+  rdfs:range xsd:boolean ;
+  owl:versionInfo "EuVoc 1.1" ;
+.
+euvoc:licenceVersion
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "licence version is intended to express the version of the licences from Licences NAL" ;
+  rdfs:label "licence version" ;
+  rdfs:range xsd:string ;
+  owl:versionInfo "EuVoc 1.1" ;
+.
+euvoc:license
+  rdf:type owl:ObjectProperty ;
+  rdfs:range terms:LicenseDocument ;
+.
+euvoc:managedBy
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "relates a site to the organization which manages it" ;
+  rdfs:domain org:Site ;
+  rdfs:label "managed by" ;
+  rdfs:range org:Organization ;
+  owl:versionInfo "EuVoc 1.1" ;
+.
+euvoc:officeAddress
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "address of the office inside the building. Subproperty of vcard:street-address"@en ;
+  rdfs:subPropertyOf vcard:street-address ;
+.
+euvoc:officialBirthName
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Mainly to manage name of the person before marriage. In the original script."@en ;
+.
+euvoc:officialFamilyName
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The family name of some person.  In the original script."@en ;
+.
+euvoc:officialGivenName
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The given name of some person. In the original script."@en ;
+  rdfs:range rdfs:Literal ;
+.
+euvoc:officialJournalDate
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "official journal date; originally used in treaties table" ;
+  rdfs:label "official journal date" ;
+  rdfs:range xsd:date ;
+  owl:versionInfo "EuVoc 1.1" ;
+.
+euvoc:officialJournalNumber
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "official journal number; originally used in treaty table" ;
+  rdfs:label "official journal number" ;
+  rdfs:range xsd:string ;
+  owl:versionInfo "EuVoc 1.1" ;
+.
+euvoc:officialJournalSeries
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "official journal series; originally used in treaties table" ;
+  rdfs:label "official journal series" ;
+  rdfs:range xsd:string ;
+  owl:versionInfo "EuVoc 1.1" ;
+.
+euvoc:order
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Current value of the order of the resource among its siblings"@en ;
+  rdfs:range xsd:integer ;
+.
+euvoc:orderMethod
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Method used to order the related memberships  and sub-organisations. In 99% of the case the method  is based on the order number, not on alphabetic.xs:simpleType name=\"orderMethod\">, <xs:restriction base=\"xs:string\">, <xs:enumeration value=\"default\"/>, <xs:enumeration value=\"list\"/>, <xs:enumeration value=\"protocolar\"/>, <xs:enumeration value=\"alphabetic\"/>, <xs:enumeration value=\"id\"/>"@en ;
+  rdfs:range rdfs:Literal ;
+.
+euvoc:positionComplement
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Allows to enrich the position with a free text such as \"to the director\", \"in charge of IT”.."@en ;
+  rdfs:range rdfs:Literal ;
+.
+euvoc:positionStatus
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Allows to enrich the function with a controlled value."@en ;
+  rdfs:range euvoc:PositionStatus ;
+.
+euvoc:protocolLevel
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Current value of the protocol-level."@en ;
+  rdfs:range xsd:integer ;
+.
+euvoc:reportsTo
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Indicates the reporting link for example between a director and his assistant.Current value."@en ;
+  rdfs:range org:Membership ;
+.
+euvoc:represents
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "A person in a membership can represent an agent. i.e. a civil servant represents the state in a board of administration, a deputy represents his country at the parliament."@en ;
+  rdfs:range foaf:Agent ;
+.
+euvoc:roleQualification
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Indicates the type of position of the person. i.e. judge, deputy, director… Some business rules are related to this position, like the retention time of the personal information, the publication or not of some of the properties (you don't publish judge telephone number), the publication of the full given name or just the first letter…."@en ;
+  rdfs:range euvoc:RoleQualification ;
+.
+euvoc:startDate
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Date starting a period of time."@en ;
+.
+euvoc:status
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Indicates the status of a skos:Concept or a skosxl:Label, or any resource related to controlled vocabulary management."@en ;
+  rdfs:range euvoc:ConceptStatus ;
+.
+euvoc:xlChangeNote
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "This property is a reified version of the skos:changeNote" ;
+  rdfs:label "xl change note" ;
+  rdfs:range euvoc:XlNote ;
+  rdfs:subPropertyOf euvoc:xlNote ;
+  skos:prefLabel "xl change note" ;
+.
+euvoc:xlClassification
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Relates a resource to the historical values of org:classification."@en ;
+  rdfs:domain org:Organization ;
+  rdfs:range euvoc:XlType ;
+.
+euvoc:xlCodification
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "This property is used to indicates the current and historical value of a skos:notation. It is a property of the class euvc:XlNotation which reifies notation of a resource."@en ;
+  rdfs:domain euvoc:XlNotation ;
+  rdfs:range rdfs:Literal ;
+.
+euvoc:xlDefinition
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Relates a resource to the current and historical values of a skos:note."@en ;
+  rdfs:range euvoc:XlNote ;
+  rdfs:subPropertyOf euvoc:xlNote ;
+.
+euvoc:xlEditorialNote
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "This property is a reified version of the skos:editorialNote" ;
+  rdfs:label "xl editorial note" ;
+  rdfs:range euvoc:XlNote ;
+  rdfs:subPropertyOf euvoc:xlNote ;
+  skos:prefLabel "xl editorial note" ;
+.
+euvoc:xlGetsReportingFrom
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Current value and historical values of the reporting relationship."@en ;
+  rdfs:range euvoc:XlSemanticRelation ;
+  owl:inverseOf euvoc:xlReportsTo ;
+.
+euvoc:xlHasSubOrganization
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Relates an Organization to the current and historical values of org:hasSubOrganization."@en ;
+  rdfs:domain org:Organization ;
+  rdfs:range euvoc:XlSemanticRelation ;
+.
+euvoc:xlHistoryNote
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "This property is a reified version of the skos:historyNote" ;
+  rdfs:label "xl history note" ;
+  rdfs:range euvoc:XlNote ;
+  rdfs:subPropertyOf euvoc:xlNote ;
+  skos:prefLabel "xl history note" ;
+.
+euvoc:xlNotation
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Relates a resource to a Notation value."@en ;
+  rdfs:range euvoc:XlNotation ;
+.
+euvoc:xlNote
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "This property is used to indicates the current and historical value of a note, for example a skos:note"@en ;
+  rdfs:range euvoc:XlNote ;
+.
+euvoc:xlNumericalValue
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "This property is used to indicates the current and historical value of a numerical property. It is a property of euvoc:XlNumericalValue which reifies a numerical property of a resource."@en ;
+  rdfs:domain euvoc:XlNumericalValue ;
+  rdfs:range xsd:integer ;
+  owl:deprecated "true"^^xsd:boolean ;
+.
+euvoc:xlObject
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "When a semantic relationship is reified with euvoc:XlSemanticRelation (used for org:subOrganization or skos:broader for example), this property indicates the object of the relationship. The target of the relationship is indicated with the property euvo::xlTarget."@en ;
+  rdfs:domain euvoc:XlSemanticRelation ;
+  rdfs:range owl:Thing ;
+.
+euvoc:xlOrder
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Current value and historical values of the numerical value giving the order of the organization among its sibling organizations but also sibling memberships."@en ;
+.
+euvoc:xlPositionComplement
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "actual and historical values of the position complemment."@en ;
+  rdfs:range euvoc:XlNote ;
+.
+euvoc:xlProtocolLevel
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Current value and historical values of the protocol-level."@en ;
+  rdfs:domain org:Organization ;
+  rdfs:range euvoc:XlNumericalValue ;
+.
+euvoc:xlReportsTo
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Current value and historical values of the reporting relationship."@en ;
+  rdfs:range euvoc:XlSemanticRelation ;
+.
+euvoc:xlScopeNote
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "This property is a reified version of the skos:scopeNote" ;
+  rdfs:label "xl scope note" ;
+  rdfs:range euvoc:XlNote ;
+  rdfs:subPropertyOf euvoc:xlNote ;
+  skos:prefLabel "xl scope note" ;
+.
+euvoc:xlSubOrganizationOf
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Relates an Organization to the current and historical values of org:subOrganizationOf"@en ;
+  rdfs:domain org:Organization ;
+  rdfs:range euvoc:XlSemanticRelation ;
+.
+euvoc:xlTarget
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "When a semantic relationship is reified with euvoc:XlSemanticRelation (used for org:subOrganization or skos:broader for example), this property indicates the target of the relationship. The object of the relationship is indicated with the property euvo:xlObject."@en ;
+  rdfs:domain euvoc:XlSemanticRelation ;
+  rdfs:range owl:Thing ;
+.
+euvoc:xlTypeValue
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Value of a Type when reified in the class euvo:XlType used to keep historical value of a type (used for org:classification historical values)."@en ;
+  rdfs:domain euvoc:XlType ;
+  rdfs:range skos:Concept ;
+.

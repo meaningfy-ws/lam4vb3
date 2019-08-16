@@ -2,11 +2,9 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
 "topic.dtd">
 <topic id="req-lam-context">
-  <title>State of affairs</title>
+  <title>Context of the project</title>
 
-  <body>
-    <p/>
-  </body>
+  <body/>
 
   <topic id="req-lam-context-2">
     <title>LAM business context</title>
@@ -48,7 +46,7 @@
         <title>Digital assets and operations related to legal analysis
         methodology</title>
 
-        <image align="center" href="../docs/LAM%20context.jpg"
+        <image align="center" href="../../docs/LAM%20context.jpg"
                placement="break" width="5in"/>
       </fig>
 
@@ -66,7 +64,7 @@
 
     <body>
       <p>This section provides an overview on the main stakeholders of the
-      legal analysis methodology. </p>
+      legal analysis methodology.</p>
 
       <p/>
 
@@ -103,7 +101,7 @@
     </body>
   </topic>
 
-  <topic id="???">
+  <topic id="req-lam-context-4">
     <title>LAM data model scope</title>
 
     <body>

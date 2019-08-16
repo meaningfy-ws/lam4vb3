@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="excel-structure">
+  <title>Worksheet structure</title>
+
+  <body>
+    <p>The excel file contains five worksheets: two of them define classes,
+    two of them define properties and one defines namespace prefix mappings.
+    The worksheet is composed of rows and columns. In every worksheet, the
+    first row is the header row. Each cell in the header row denotes how the
+    values in the corresponding columns should be interpreted and processed.
+    Some denotations, as we will see below, signify/represent (a) plain
+    labels, (b) reference keys described in another worksheet, (c) or
+    encodings of functional links between reference keys. The rest of the non
+    empty rows represent distinct definitions comprising value statements in
+    all or most of the columns.</p>
+
+    <p>The columns that represent plain labels, provided lower case, serve a
+    descriptive purpose and most of the time the transformation script uses
+    them as such without much additional processing. Examples of such columns
+    can be found in "LAM metadata worksheet" which contains headers such as
+    "Code", "controlled value property", "annotation1" etc. </p>
+
+    <p>The columns that signify reference keys, provided in upper case, are
+    richer in meaning, which is provided in another worksheet. These sort of
+    columns are used in class definitions only, where the keys in the column
+    header function as references to property definitions. The transformation
+    script takes into consideration the definition linked to the reference key
+    and any additional relations and constraints when processing the column
+    values. Examples of such columns can be found in "Classes Complete"
+    worksheet which contains headers such as "RJ_NEW", "CC", "IF", "EV" etc.
+    </p>
+
+    <p>The columns that encode functional links between reference keys,
+    provided in upper case and round brackets, signify a second order
+    descriptions. They are used for encoding annotations of values provided in
+    another columns. For example the pair of columns "EV" and "ANN_COD(EV)"
+    means that the column "EV" contributes to the description identified at
+    the level of a row whereas the column "ANN_COD(EV)" further extends the
+    description provided by the column "EV" in the form of an annotation. The
+    convention for such notations is <i>"KEY1(KEY2)"</i>, where <i>KEY1</i>
+    acts as a functor applied to <i>KEY2</i>; we read it "KEY1 of KEY2" or
+    "annotation of KEY2 with KEY1". The transformation script processes such
+    column pairs in a special manner tracking two levels of description
+    identification, at the level of the row and at the level of column value,
+    taking into consideration the definition linked to the reference keys, the
+    link between the reference keys and the implied constraints and
+    relationships.</p>
+
+    <p>The worksheet cells, which are slots formed at the intersection of a
+    row and a column provide, the values filling those slots. We distinguish
+    few kinds of cell values each controlled by a set of conventions. The
+    value types are as follows:</p>
+
+    <section><ul>
+        <li>Free text literal</li>
+
+        <li>Short URI notation</li>
+
+        <li>Controlled value</li>
+      </ul><p>The free text literals are Unicode<fn>The Unicode Standard,
+    Version 3, The Unicode Consortium, Addison-Wesley, 2000. <xref
+    format="html" href="http://www.unicode.org/unicode/standard/versions/"
+    scope="external">http://www.unicode.org/unicode/standard/versions/</xref>
+    </fn> strings which should be in Normal Form C<fn> Unicode Normalization
+    Forms, Unicode Standard Annex #15, Mark Davis, Martin Dürst. <xref
+    format="html" href="http://www.unicode.org/unicode/reports/tr15/%20"
+    scope="external">http://www.unicode.org/unicode/reports/tr15/
+    </xref></fn>. The intended meaning of short URI notation is specified by
+    RFC 3986 on Uniform Resource Identifiers<fn>Berners-Lee, Fielding and
+    Masinter (2005), RFC 3986 - Uniform Resource Identifier (URI): Generic
+    Syntax. <xref format="html" href="https://tools.ietf.org/html/rfc3986"
+    scope="external">https://tools.ietf.org/html/rfc3986</xref></fn>. The
+    expected form is short reference URI <i>"prefix:ID",</i> where the prefix
+    (base URI) is formally defined in the document. The short URI form is
+    preferred to absolute (resolved) form URI, the latter being discouraged
+    form usage, nonetheless the transformation script is able to identify and
+    process them as accordingly. Both, the free text literals and the short
+    URI notations can be used as either (a) values of properties (denoted by
+    the column header) or (b) as property constraint definitions. The
+    interpretation depends of the column function described below. </p><p>The
+    last type of values, the controlled values, refer to are a convention of
+    specifying cardinality constraints in the class definitions. This means
+    that the cells with controlled values can not be interpreted as property
+    values but serve only as property constraints. The conventions for
+    cardinality constraints in LAM project are provided in the table
+    below.</p><table>
+        <title>Cardinality constraint conventions</title>
+
+        <tgroup cols="4">
+          <thead>
+            <row>
+              <entry>Name</entry>
+
+              <entry>Cell value</entry>
+
+              <entry>Cardinality meaning</entry>
+
+              <entry>Alternative cell values</entry>
+            </row>
+          </thead>
+
+          <tbody>
+            <row>
+              <entry>mandatory</entry>
+
+              <entry>Y</entry>
+
+              <entry>1..*</entry>
+
+              <entry>yes, y, according to text</entry>
+            </row>
+
+            <row>
+              <entry>mandatory unique</entry>
+
+              <entry>YU</entry>
+
+              <entry>1..1</entry>
+
+              <entry/>
+            </row>
+
+            <row>
+              <entry>optional</entry>
+
+              <entry>O</entry>
+
+              <entry>0..*</entry>
+
+              <entry/>
+            </row>
+
+            <row>
+              <entry>optional unique</entry>
+
+              <entry>OU</entry>
+
+              <entry>0..1</entry>
+
+              <entry/>
+            </row>
+
+            <row>
+              <entry>forbidden</entry>
+
+              <entry>N, &lt;empty cell&gt;</entry>
+
+              <entry>0..0</entry>
+
+              <entry>no, n</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table><p>The worksheet cells can contain <term>commented
+    values</term>. It means that a cell can contain a value (literal, URi or
+    controlled) and in addition a comment on that value. The value is
+    separated from the comment by the pipe (|) character like this: "<i>value
+    | comment</i>". The transformation script uses the pipe character for
+    detecting commented values, and so this character should not be used for
+    any other purpose. </p><p>The worksheet cells can contain <term>multiple
+    values</term>. The new value separator is the new line character (CR/LF).
+    This means that every new line of the cell will be interpreted as a new
+    value for the property indicated by the column header.</p></section>
+
+    <section><title>LAM class definition worksheet</title><p>The worksheet
+    defining LAM classes plays central role in the LAM project as it defines
+    the document classes used in the legal analysis methodology. It comprises
+    of almost a hundred columns, which can be grouped according to meaning and
+    function they play in class definitions. We distinguish the following
+    functions: <i>identification</i>, <i>description</i>, <i>mappings to other
+    classifications</i> and <i>property constraints</i>. All the columns are
+    headed with reference keys defined in the worksheet "LAM metadata"
+    described below.</p><p>The URI column plays the role of universal
+    identifier (as the title suggests) which provides values of the form
+    <i>"prefix:ID"</i>. The prefix is defined in the prefix worksheet,
+    described below, and the ID part is automatically generated.</p><p>The
+    description columns, containing examples, keywords, comments etc.,
+    represent human readable class descriptions. </p></section>
+
+    <section><title>LAM property definition worksheet </title><p/></section>
+
+    <section><title>CELEX class definition worksheet</title><p/></section>
+
+    <section><title>CELEX property definition worksheet</title><p/></section>
+
+    <section><title>Namespace prefix definition
+    worksheet</title><p/></section>
+  </body>
+</topic>
