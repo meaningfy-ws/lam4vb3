@@ -88,8 +88,9 @@
     specifying cardinality constraints in the class definitions. This means
     that the cells with controlled values can not be interpreted as property
     values but serve only as property constraints. The conventions for
-    cardinality constraints in LAM project are provided in the table
-    below.</p><table id="caardinality-constraint">
+    cardinality constraints in LAM project are provided in <xref
+    href="#excel-structure/caardinality-constraint" type="table"/>.</p><table
+        id="caardinality-constraint" scale="70">
         <title>Cardinality constraint conventions</title>
 
         <tgroup cols="4">
@@ -180,7 +181,8 @@
     described below.</p><p>The URI column provides an universal identifier (as
     the title suggests) for the row with values of the form
     <i>"prefix:ID"</i>. The prefix is defined in the prefix worksheet,
-    described below, and the ID part is automatically generated.</p><p>The
+    described in <xref href="#excel-structure/prefix-section"
+    type="section"/>, and the ID part is automatically generated.</p><p>The
     <i>description</i> columns, containing examples, keywords, comments etc.,
     represent human readable class descriptions. Their values essentially are
     simple text literals. The <i>mapping</i> columns provide correspondences
@@ -212,7 +214,7 @@
     constraints on the comment on date property. For example if there is a "O"
     value provided in "ANN_COD(EV)" column then, whenever there is an end of
     date property employed on an instance then, that value, may optionally be
-    annotated with a comment on date. </p>The last three columns
+    annotated with a comment on date.</p>The last three columns
     "Classification level 1" to "Classification level 3" provide a
     classification structure for the defined documents as originally specified
     in the LAM documentation.</section>
@@ -231,11 +233,91 @@
     readable property meaning. "Analytical methodology" is a description of
     how the property contributes to the LAM practice. "Specific cases" and
     "Comments" provide examples, exceptions and additional comments related to
-    property usage. </p><p>The "property" column specifies URI of the
-    equivalent property formally defined in CDM ontology (other namespaces are
-    also accepted). If there is a range constraint to, for example, a
-    controlled vocabulary then it is indicated in the "controlled value
-    property". </p><p>As mentioned, in the description of the <xref
+    property usage. Example values for these columns are provided in <xref
+    href="#excel-structure/example-human-readable" type="table"/>.</p><table
+        id="example-human-readable" scale="70">
+        <title>Example of human readable fields in LAM property
+        definition</title>
+
+        <tgroup cols="6">
+          <colspec colname="1" colnum="1" colwidth="20*"/>
+
+          <colspec colname="2" colnum="2" colwidth="12*"/>
+
+          <colspec colname="3" colnum="3" colwidth="12*"/>
+
+          <colspec colname="4" colnum="4" colwidth="13*"/>
+
+          <colspec colname="5" colnum="5" colwidth="12*"/>
+
+          <colspec colname="6" colnum="6" colwidth="31*"/>
+
+          <thead>
+            <row>
+              <entry>URI</entry>
+
+              <entry>Code</entry>
+
+              <entry>Label</entry>
+
+              <entry>property</entry>
+
+              <entry>controlled value</entry>
+
+              <entry>Definition</entry>
+            </row>
+          </thead>
+
+          <tbody>
+            <row>
+              <entry>lamd:md_EXAMPLE_EN</entry>
+
+              <entry>EXAMPLE_EN</entry>
+
+              <entry>EN example</entry>
+
+              <entry>skos:example@en</entry>
+
+              <entry/>
+
+              <entry>English Example. This field used in the cataloguing
+              methodology for information purposes.</entry>
+            </row>
+
+            <row>
+              <entry>lamd:md_CDM_CLASS</entry>
+
+              <entry>CDM_CLASS</entry>
+
+              <entry>CDM class</entry>
+
+              <entry>lam:cdm_class</entry>
+
+              <entry/>
+
+              <entry>Class or subclass according to CDM.</entry>
+            </row>
+
+            <row>
+              <entry>lamd:md_FM</entry>
+
+              <entry>FM</entry>
+
+              <entry>Type of act</entry>
+
+              <entry>cdm:resource-type</entry>
+
+              <entry>at:resource-type</entry>
+
+              <entry>Type of act is usually mentioned in the title.</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table><p>The "property" column specifies URI of the equivalent
+    property formally defined in CDM ontology (other namespaces are also
+    accepted). If there is a range constraint to, for example, a controlled
+    vocabulary then it is indicated in the "controlled value property".
+    </p><p>As mentioned, in the description of the <xref
     href="#excel-structure/lam-class-definition">LAM class definition
     worksheet</xref>, some CDM properties are annotated to provide extra
     information. The columns "annotation_1" to "annotation_7" specify which
@@ -251,17 +333,134 @@
     classification structure for the defined properties as originally
     specified in the LAM documentation.</p></section>
 
-    <section><title>CELEX class definition worksheet</title><p/></section>
+    <section><title>CELEX class and property definition
+    worksheets</title><p>This worksheet aims at capturing the description of
+    CELEX classes following the logic that has been used to allocate CELEX
+    numbers since the setting-up of the EUR-Lex database (formerly known as
+    CELEX). The CELEX classes are defined as a combination of DTS, DTT, DTA
+    and OJ_ID columns (described below) and are structured on three levels:
+    </p><ol outputclass="upper-roman">
+        <li>DTS classes (CELEX sectors)</li>
 
-    <section><title>CELEX property definition worksheet</title><p>This
-    worksheet, just like the one for LAM propoerties, defines a set of
-    properties used in CELEX class definition. </p></section>
+        <li>DTS*DTT (power product) classes. These classes corresponds to rows
+        in the sector tables describing DTTs of the sectors.</li>
 
-    <section><title>Namespace prefix definition worksheet</title><p>This
-    worksheet provides a mapping between the LAM property definitions and CDM
-    ontology (or another namespace). This worksheet is auxiliary and has a
-    technical role aiding the transformation script. The worksheet is composed
-    of two columns, first the URI of the CDM ontology and the second one the
-    URI of the LAM property. </p></section>
+        <li>DTS*DTT*OJ_ID (power product) classes. These classes correspond to
+        cells in the sector tables describing DTTs for each of the three
+        OJ_IDs of the sector.</li>
+      </ol><p>The CELEX number anatomy is the following <i>DN = &lt;DTS&gt;
+    &lt;DTA&gt; &lt;DTT&gt; &lt;DTN&gt;</i>. Examples of CELEX numbers and how
+    they are composed can be seen in <xref
+    href="#excel-structure/examples-celex" type="table"/>. Where the column
+    name acronyms mean the following: </p><p><ul>
+        <li>DN - the specific instance of CELEX number. Legal document
+        metadata.</li>
+
+        <li>DTS - Sector</li>
+
+        <li>DTT - Document type</li>
+
+        <li>DTA - The year</li>
+
+        <li>DTN - The number</li>
+      </ul></p><table id="examples-celex" scale="70">
+        <title>Examples of CELEX number composition</title>
+
+        <tgroup cols="5">
+          <thead>
+            <row>
+              <entry>DN=</entry>
+
+              <entry>DTS</entry>
+
+              <entry>DTA</entry>
+
+              <entry>DTT</entry>
+
+              <entry>DTN</entry>
+            </row>
+          </thead>
+
+          <tbody>
+            <row>
+              <entry>32019R0001</entry>
+
+              <entry>3</entry>
+
+              <entry>2019</entry>
+
+              <entry>R</entry>
+
+              <entry>0001</entry>
+            </row>
+
+            <row>
+              <entry>C2019/123</entry>
+
+              <entry>C</entry>
+
+              <entry>2019</entry>
+
+              <entry>&lt;empty&gt;</entry>
+
+              <entry>123</entry>
+            </row>
+
+            <row>
+              <entry>52014AE1723</entry>
+
+              <entry>5</entry>
+
+              <entry>2014</entry>
+
+              <entry>AE</entry>
+
+              <entry>1723</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table><p>Properties describing class at each level are as follows.
+    </p><p><b>Level I classes:</b></p><ul>
+        <li>label</li>
+
+        <li>code (=DTS)</li>
+
+        <li>DTS</li>
+
+        <li>definition</li>
+
+        <li>scope note (optional)</li>
+
+        <li>comments (optional)</li>
+      </ul><p><b>Level II classes </b>(same as above plus
+    additionally):</p><ul>
+        <li>*code (=DTS*DTT)</li>
+
+        <li>DTT</li>
+
+        <li>author</li>
+      </ul><b>Level III classes</b> (same as above plus additionally):<ul>
+        <li>*code (=DTS*DTT*OJ_ID)</li>
+
+        <li>OJ_ID (either <i>"OJC"</i>,<i> "OJL" </i>or<i> "EuroLex</i>")</li>
+
+        <li>DTA source of .. (as indicated in CELEXspecification documentation
+        section 1 on general rules)</li>
+
+        <li>DTN source of .. (as indicated in CELEXspecification documentation
+        section 1 on general rules)</li>
+      </ul></section>
+
+    <section><p>The CELEX property definition worksheet, just like the one for
+    LAM properties, defines a set of properties used in CELEX class
+    definition. They are primarily CELEX composition properties but in the
+    current project a few auxiliary properties are used. </p></section>
+
+    <section><title id="prefix-section">Namespace prefix definition
+    worksheet</title><p>This worksheet provides a mapping between the LAM
+    property definitions and CDM ontology (or another namespace). This
+    worksheet is auxiliary and has a technical role aiding the transformation
+    script. The worksheet is composed of two columns, first the URI of the CDM
+    ontology and the second one the URI of the LAM property. </p></section>
   </body>
 </topic>
