@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="ont-req-modelling-stack">
+  <title>Modelling stack</title>
+
+  <body>
+    <p>LAM ontology should describe classes of documents and (application)
+    profiles for each of the classes.</p>
+
+    <p><i>Since the LAM model is insatiable then the model for describing LAM
+    model is a meta-description for the legal document descriptions.</i></p>
+
+    <p/>
+
+    <fig>
+      <title>LAM modeling stack</title>
+
+      <image align="center" href="../../docs/LAM%20meta-model%20structure.jpg"
+             placement="break" scalefit="yes" width="5in"/>
+    </fig>
+  </body>
+</topic>
