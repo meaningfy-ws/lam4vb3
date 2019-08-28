@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="ont-req-end-users">
+  <title>End users</title>
+
+  <body>
+    <p>The main stakeholders and their roles in the legal analysis methodology
+    process are listed below.</p>
+
+    <ul>
+      <li>Legal analysis sector of the European Publications Office <ul>
+          <li>LAM (model) owner</li>
+
+          <li>LAM (model) editor and maintainer/manager</li>
+        </ul></li>
+
+      <li>Legal analysis contractor<ul>
+          <li>instance data creator = LAM model user</li>
+
+          <li>feedback provider (of the LAM model suitability as they deal
+          with the practical cases and concrete document instances. Therefore
+          they need some sort of user friendly interface to LAM to report
+          mistakes, inconsistencies, contradictions, incomplete or ambiguous
+          descriptions etc.)</li>
+        </ul></li>
+
+      <li>GIL-GM forum<ul>
+          <li>discussion group of LAM model design decisions (open questions
+          in the methodology, creation of a new document type, etc.)</li>
+        </ul></li>
+
+      <li>Publication agents and contractors <ul>
+          <li>instance data creator (only for the documents they are mandated
+          to create CLEX code) = LAM model user</li>
+
+          <li>responsible for publishing OJ, therefore they must follow /
+          check the metadata constraints are respected</li>
+        </ul></li>
+    </ul>
+  </body>
+</topic>

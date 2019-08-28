@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="ont-req-scope">
+  <title>Scope</title>
+
+  <body>
+    <p>LAM model should cover similar degree of detail as in the current
+    documentation. It should cover the following types of information.</p>
+
+    <ul>
+      <li>description of legal document classes<ul>
+          <li>human readable descriptions</li>
+
+          <li>correspondences to other classifications (CELEX/ELI, CDM,
+          ResourceType etc.) as (a) mappings and as (b) code grammars</li>
+
+          <li>publication metadata</li>
+        </ul></li>
+
+      <li>description of document metadata</li>
+
+      <li>description of the metadata annotations (property annotations)</li>
+
+      <li>description of LD classification rules (fields to
+      automatically/manually classify LDs)</li>
+
+      <li>description of class shapes i.e. constraints on how the class is
+      instantiated<ul>
+          <li>e.g. specific property value, cardinality constraints, range
+          class, etc.</li>
+        </ul></li>
+
+      <li>descriptions of LD classes and LD property groupings (table of
+      contents in the LAM word document and templates in the LAM webApp
+      description)</li>
+    </ul>
+  </body>
+</topic>
