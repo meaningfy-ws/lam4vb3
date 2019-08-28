@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
+"map.dtd">
+<map>
+  <title>Worksheet structure</title>
+
+  <topicref href="excel-structure-intro.ditamap"/>
+
+  <topicref href="excel-structure.dita"/>
+</map>
