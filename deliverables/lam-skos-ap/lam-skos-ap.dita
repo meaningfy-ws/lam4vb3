@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "technicalContent/dtd/reference.dtd">
+<reference id="EA_Model14x34x47x02x00">
+	<title>lam-skos-ap.xmi</title>
+	<refbody>
+		<section>
+			<title>Literal</title>
+		</section>
+		<section>
+			<title>URI</title>
+		</section>
+		<section>
+			<title>PropertyShape</title>
+			<p>This SHACL class ins employed here as a proxy and not as a real constraint. Most of the elements of the SHACL constraint definition are in place except two:</p>
+			<p>- sh:path that specifies the property that is constrained, is replaced by lam:path which is a reference to DocumentProperty</p>
+			<p>- sh:property that is the means to introduce property constraint to a class definition, is replaced by lam:hasPropertyConfiguration.</p>
+			<table frame="all" colsep="1" rowsep="1">
+				<title>Properties</title>
+				<tgroup cols="4" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="22*"/>
+					<colspec colnum="2" colname="2" colwidth="12*"/>
+					<colspec colnum="3" colname="3" colwidth="10*"/>
+					<colspec colnum="4" colname="4" colwidth="56*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="1">Name</entry>
+							<entry colname="2">Type</entry>
+							<entry colname="3">Cardinality</entry>
+							<entry colname="4">Definition</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="1">sh:description</entry>
+							<entry colname="2">Literal</entry>
+							<entry colname="3">0..*</entry>
+							<entry colname="4"/>
+						</row>
+						<row rowsep="1">
+							<entry colname="1">sh:name</entry>
+							<entry colname="2">Literal</entry>
+							<entry colname="3">1..1</entry>
+							<entry colname="4"/>
+						</row>
+						<row rowsep="1">
+							<entry colname="1"/>
+							<entry colname="2">DocumentProperty</entry>
+							<entry colname="3">1</entry>
+							<entry colname="4"/>
+						</row>
+						<row rowsep="1">
+							<entry colname="1"/>
+							<entry colname="2">AnnotationConfiguration</entry>
+							<entry colname="3">0..*</entry>
+							<entry colname="4">specify how a property can be annotated</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section>
+			<title>Collection</title>
+			<table frame="all" colsep="1" rowsep="1">
+				<title>Properties</title>
+				<tgroup cols="4" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="22*"/>
+					<colspec colnum="2" colname="2" colwidth="12*"/>
+					<colspec colnum="3" colname="3" colwidth="10*"/>
+					<colspec colnum="4" colname="4" colwidth="56*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="1">Name</entry>
+							<entry colname="2">Type</entry>
+							<entry colname="3">Cardinality</entry>
+							<entry colname="4">Definition</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="1">skos:definition</entry>
+							<entry colname="2">Literal</entry>
+							<entry colname="3">0..1</entry>
+							<entry colname="4">
+								<p>Specify how the group is defined.</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1">skos:prefLabel</entry>
+							<entry colname="2">Literal</entry>
+							<entry colname="3">1..1</entry>
+							<entry colname="4"/>
+						</row>
+						<row rowsep="1">
+							<entry colname="1"/>
+							<entry colname="2">Collection</entry>
+							<entry colname="3">0..*</entry>
+							<entry colname="4"/>
+						</row>
+						<row rowsep="1">
+							<entry colname="1"/>
+							<entry colname="2">Concept</entry>
+							<entry colname="3">0..*</entry>
+							<entry colname="4"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section>
+			<title>Concept</title>
+			<table frame="all" colsep="1" rowsep="1">
+				<title>Properties</title>
+				<tgroup cols="4" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="22*"/>
+					<colspec colnum="2" colname="2" colwidth="12*"/>
+					<colspec colnum="3" colname="3" colwidth="10*"/>
+					<colspec colnum="4" colname="4" colwidth="56*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="1">Name</entry>
+							<entry colname="2">Type</entry>
+							<entry colname="3">Cardinality</entry>
+							<entry colname="4">Definition</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="1">skos:prefLabel</entry>
+							<entry colname="2">Literal</entry>
+							<entry colname="3">1..1</entry>
+							<entry colname="4">
+								<p>The &lt;b&gt;main&lt;/b&gt; label of the concept. </p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1"/>
+							<entry colname="2">ConceptScheme</entry>
+							<entry colname="3">1..*</entry>
+							<entry colname="4"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section>
+			<title>ConceptScheme</title>
+			<table frame="all" colsep="1" rowsep="1">
+				<title>Properties</title>
+				<tgroup cols="4" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="22*"/>
+					<colspec colnum="2" colname="2" colwidth="12*"/>
+					<colspec colnum="3" colname="3" colwidth="10*"/>
+					<colspec colnum="4" colname="4" colwidth="56*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="1">Name</entry>
+							<entry colname="2">Type</entry>
+							<entry colname="3">Cardinality</entry>
+							<entry colname="4">Definition</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="1">skos:prefLabel</entry>
+							<entry colname="2">Literal</entry>
+							<entry colname="3">1..1</entry>
+							<entry colname="4"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section>
+			<title>Label</title>
+			<table frame="all" colsep="1" rowsep="1">
+				<title>Properties</title>
+				<tgroup cols="4" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="22*"/>
+					<colspec colnum="2" colname="2" colwidth="12*"/>
+					<colspec colnum="3" colname="3" colwidth="10*"/>
+					<colspec colnum="4" colname="4" colwidth="56*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="1">Name</entry>
+							<entry colname="2">Type</entry>
+							<entry colname="3">Cardinality</entry>
+							<entry colname="4">Definition</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="1">skosxl:literalForm</entry>
+							<entry colname="2">Literal</entry>
+							<entry colname="3">1..1</entry>
+							<entry colname="4"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section>
+			<title>AnnotationConfiguration</title>
+			<p>This class can be used in two ways: </p>
+			<p>- as property(metadata) annotation constraint specifying the controlled list(s) the annotation property can take values from</p>
+			<p>- as property annotation constraint on a specific class specifying the exact value it must take as annotation of the specific property. </p>
+			<p>Superclasses:</p>
+			<sl>
+				<sli>PropertyShape</sli>
+			</sl>
+			<table frame="all" colsep="1" rowsep="1">
+				<title>Properties</title>
+				<tgroup cols="4" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="22*"/>
+					<colspec colnum="2" colname="2" colwidth="12*"/>
+					<colspec colnum="3" colname="3" colwidth="10*"/>
+					<colspec colnum="4" colname="4" colwidth="56*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="1">Name</entry>
+							<entry colname="2">Type</entry>
+							<entry colname="3">Cardinality</entry>
+							<entry colname="4">Definition</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="1">sh:class</entry>
+							<entry colname="2">URI</entry>
+							<entry colname="3">0..*</entry>
+							<entry colname="4"/>
+						</row>
+						<row rowsep="1">
+							<entry colname="1">sh:value</entry>
+							<entry colname="2"/>
+							<entry colname="3">0..1</entry>
+							<entry colname="4">
+								<p>this class </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section>
+			<title>DocumentProperty</title>
+			<p>Superclasses:</p>
+			<sl>
+				<sli>PropertyShape</sli>
+				<sli>Concept</sli>
+			</sl>
+			<table frame="all" colsep="1" rowsep="1">
+				<title>Properties</title>
+				<tgroup cols="4" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="22*"/>
+					<colspec colnum="2" colname="2" colwidth="12*"/>
+					<colspec colnum="3" colname="3" colwidth="10*"/>
+					<colspec colnum="4" colname="4" colwidth="56*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="1">Name</entry>
+							<entry colname="2">Type</entry>
+							<entry colname="3">Cardinality</entry>
+							<entry colname="4">Definition</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="1">sh:class</entry>
+							<entry colname="2">URI</entry>
+							<entry colname="3">0..*</entry>
+							<entry colname="4">
+								<p>one or multiple controlled lists pecified as range class restriction</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1">sh:path</entry>
+							<entry colname="2">URI</entry>
+							<entry colname="3">1..1</entry>
+							<entry colname="4"/>
+						</row>
+						<row rowsep="1">
+							<entry colname="1">skos:definition</entry>
+							<entry colname="2">Literal</entry>
+							<entry colname="3">1..1</entry>
+							<entry colname="4"/>
+						</row>
+						<row rowsep="1">
+							<entry colname="1">skos:example</entry>
+							<entry colname="2">Literal</entry>
+							<entry colname="3">1..1</entry>
+							<entry colname="4"/>
+						</row>
+						<row rowsep="1">
+							<entry colname="1">skos:historyNote</entry>
+							<entry colname="2">Literal</entry>
+							<entry colname="3">0..*</entry>
+							<entry colname="4"/>
+						</row>
+						<row rowsep="1">
+							<entry colname="1">skos:notation</entry>
+							<entry colname="2">Literal</entry>
+							<entry colname="3">1..1</entry>
+							<entry colname="4">
+								<p>code by which this metadata is identified in the LAM data. It is also the column name in Excel file. </p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1">skos:scopeNote</entry>
+							<entry colname="2">Literal</entry>
+							<entry colname="3">0..*</entry>
+							<entry colname="4"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section>
+			<title>DocumentPropertyGroup</title>
+			<p>Superclasses:</p>
+			<sl>
+				<sli>Collection</sli>
+			</sl>
+		</section>
+		<section>
+			<title>LegalDocumentClass</title>
+			<p>Superclasses:</p>
+			<sl>
+				<sli>Concept</sli>
+			</sl>
+			<table frame="all" colsep="1" rowsep="1">
+				<title>Properties</title>
+				<tgroup cols="4" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="22*"/>
+					<colspec colnum="2" colname="2" colwidth="12*"/>
+					<colspec colnum="3" colname="3" colwidth="10*"/>
+					<colspec colnum="4" colname="4" colwidth="56*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="1">Name</entry>
+							<entry colname="2">Type</entry>
+							<entry colname="3">Cardinality</entry>
+							<entry colname="4">Definition</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="1">skos:editorialNote</entry>
+							<entry colname="2">Literal</entry>
+							<entry colname="3">0..*</entry>
+							<entry colname="4"/>
+						</row>
+						<row rowsep="1">
+							<entry colname="1">skos:example</entry>
+							<entry colname="2">Literal</entry>
+							<entry colname="3">0..*</entry>
+							<entry colname="4">
+								<p>Example(s) meant to help user better understand the meaning. </p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1"/>
+							<entry colname="2">MappingPropertyConfiguration</entry>
+							<entry colname="3">0..*</entry>
+							<entry colname="4"/>
+						</row>
+						<row rowsep="1">
+							<entry colname="1"/>
+							<entry colname="2">PropertyConfiguration</entry>
+							<entry colname="3">0..*</entry>
+							<entry colname="4">for each column in the excel file the cell indicates the constraint (cardinality or controlled value) on that column. 
+</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section>
+			<title>LegalDocumentGroup</title>
+			<p>Superclasses:</p>
+			<sl>
+				<sli>Collection</sli>
+			</sl>
+		</section>
+		<section>
+			<title>MappingPropertyConfiguration</title>
+			<p>A constraint on a property meant to classify the Legal document with respect to other existing classification systems.  </p>
+			<p>Superclasses:</p>
+			<sl>
+				<sli>PropertyShape</sli>
+			</sl>
+			<table frame="all" colsep="1" rowsep="1">
+				<title>Properties</title>
+				<tgroup cols="4" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="22*"/>
+					<colspec colnum="2" colname="2" colwidth="12*"/>
+					<colspec colnum="3" colname="3" colwidth="10*"/>
+					<colspec colnum="4" colname="4" colwidth="56*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="1">Name</entry>
+							<entry colname="2">Type</entry>
+							<entry colname="3">Cardinality</entry>
+							<entry colname="4">Definition</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="1">sh:value</entry>
+							<entry colname="2">URI</entry>
+							<entry colname="3">1..*</entry>
+							<entry colname="4">
+								<p>the value(s) of a document property classifying a given document type in terms of another taxonomy. </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section>
+			<title>PropertyConfiguration</title>
+			<p>Superclasses:</p>
+			<sl>
+				<sli>PropertyShape</sli>
+			</sl>
+			<table frame="all" colsep="1" rowsep="1">
+				<title>Properties</title>
+				<tgroup cols="4" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="22*"/>
+					<colspec colnum="2" colname="2" colwidth="12*"/>
+					<colspec colnum="3" colname="3" colwidth="10*"/>
+					<colspec colnum="4" colname="4" colwidth="56*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="1">Name</entry>
+							<entry colname="2">Type</entry>
+							<entry colname="3">Cardinality</entry>
+							<entry colname="4">Definition</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="1">sh:maxCount</entry>
+							<entry colname="2">int</entry>
+							<entry colname="3">0..1</entry>
+							<entry colname="4"/>
+						</row>
+						<row rowsep="1">
+							<entry colname="1">sh:minCount</entry>
+							<entry colname="2">int</entry>
+							<entry colname="3">0..1</entry>
+							<entry colname="4"/>
+						</row>
+						<row rowsep="1">
+							<entry colname="1">skos:editorialNote</entry>
+							<entry colname="2">Literal</entry>
+							<entry colname="3">0..1</entry>
+							<entry colname="4"/>
+						</row>
+						<row rowsep="1">
+							<entry colname="1">value</entry>
+							<entry colname="2">URI</entry>
+							<entry colname="3">0..1</entry>
+							<entry colname="4"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+	</refbody>
+</reference>
