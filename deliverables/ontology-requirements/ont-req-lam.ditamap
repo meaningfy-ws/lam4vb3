@@ -40,7 +40,5 @@
 
   <topicref href="ont-req-modelling-stack.dita"/>
 
-  <topicref href="ont-req-language.dita#ont-req-language"/>
-
   <topicref href="ont-req-requirements.dita#ont-req-requirements"/>
 </map>

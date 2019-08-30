@@ -5,6 +5,79 @@
   <title>Requirements</title>
 
   <body>
-    <p/>
+    <section><title>Non-functional requirements</title><ol>
+        <li>The ontology should support multilingual content in at least
+        English, French, German, Spanish and Italian languages. </li>
+
+        <li>The ontology must be based on the international, European or
+        de-facto standards in existence or under development.</li>
+
+        <li>The ontology should be documented in an intuitive human friendly
+        manner. </li>
+      </ol></section>
+
+    <section><title>Functional requirements</title><ol>
+        <li>What is the a name legal document type? Draft communication, draft
+        directive</li>
+
+        <li>What is the class notation/code if any is assigned? 5_XC_OJL,
+        5_PC_EUR</li>
+
+        <li>What are the comments, examples, notes and other editorial remarks
+        of a legal document class? Examples, change notes, history notes.
+        </li>
+
+        <li>How is the class of legal documents defined? ... is a preparatory
+        act of the commission which ...</li>
+
+        <li>How can be a legal document be classified using other existing
+        classifications? resource-type:REG_DRAFT, cdm:act_preparatory</li>
+
+        <li>What are the hints for classifying a legal document? Keyword:
+        "draft regulation", author: commission</li>
+
+        <li>To which groups document classes belong? Classification level
+        1/2/3</li>
+
+        <li>Which properties can be used to describe a legal document?
+        Specific CDM properties</li>
+
+        <li>How is the property named ? Date of transposition, Date of
+        signature </li>
+
+        <li>What is the formal path of the property? cdm:date_transposition,
+        cdm:resource_legal_date_signature </li>
+
+        <li>What are the comments, examples, notes and other editorial remarks
+        of a property describing legal document? Examples, change notes,
+        history notes.</li>
+
+        <li>What constraints does the property have? Cardinality constraints,
+        range constraints </li>
+
+        <li>What are the values of the constraints for a particular property
+        on a particular class? min cardinality 0, max cardinality 1, value
+        range restricted to FD 14 only, </li>
+
+        <li>How can the constraints be expressed in a human friendly manner?
+        Human friendly text expressing the constraints all together generated
+        using a string template.</li>
+
+        <li>What annotations does the property have?
+        ann:comment_on_legal_basis, ann:type_of_link_target </li>
+
+        <li>What value restrictions does the annotation of a propriety has?
+        at:fd_370, at:subdivision</li>
+
+        <li>What value restrictions does the annotation of a specific property
+        on a specific class? The annotation Comment on date of the property
+        Date Document must be fd_365:DATADOPT for the Draft regulation
+        document type. </li>
+
+        <li>What is the property notation/code if any is assigned? ANN_COD ,
+        AF, DP, LF</li>
+
+        <li>To which groups property belongs? Classification level 1/2</li>
+      </ol></section>
   </body>
 </topic>
