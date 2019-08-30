@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="ap-terminology">
+  <title>Terminology used</title>
+
+  <body>
+    <p>In the following sections, classes and properties are grouped under
+    headings "mandatory", "recommended" and "optional". These terms have the
+    following meaning.</p>
+
+    <ul>
+      <li><term>Mandatory class</term>: a receiver of data MUST be able to
+      process information about instances of the class; a sender of data MUST
+      provide information about instances of the class.</li>
+
+      <li><term>Recommended class</term>: a receiver of data MUST be able to
+      process information about instances of the class; a sender of data MUST
+      provide information about instances of the class, if it is
+      available.</li>
+
+      <li><term>Optional class</term>: a receiver MUST be able to process
+      information about instances of the class; a sender MAY provide the
+      information but is not obliged to do so.</li>
+
+      <li><term>Mandatory property</term>: a receiver MUST be able to process
+      the information for that property; a sender MUST provide the information
+      for that property.</li>
+
+      <li><term>Recommended property</term>: a receiver MUST be able to
+      process the information for that property; a sender SHOULD provide the
+      information for that property if it is available.</li>
+
+      <li><term>Optional property</term>: a receiver MUST be able to process
+      the information for that property; a sender MAY provide the information
+      for that property but is not obliged to do so.</li>
+    </ul>
+
+    <p>The meaning of the terms MUST, MUST NOT, SHOULD and MAY in this section
+    and in the following sections are as defined in RFC 2119<fn>IETF. RFC
+    2119. Key words for use in RFCs to Indicate Requirement Levels. <xref
+    format="html" href="http://www.ietf.org/rfc/rfc2119.txt"
+    scope="external">http://www.ietf.org/rfc/rfc2119.txt</xref></fn>.</p>
+
+    <p>In the given context, the term "processing" means that receivers must
+    accept incoming data and transparently provide these data to applications
+    and services. It does neither imply nor prescribe what applications and
+    services finally do with the data (parse, convert, store, make searchable,
+    display to users, etc.).</p>
+  </body>
+</topic>

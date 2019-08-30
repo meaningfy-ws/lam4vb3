@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="ap-publishing-lod">
+  <title>Publishing linked data</title>
+
+  <body>
+    <p>This Application Profile is intended for use in a <term>Linked
+    Data</term><fn>W3C. Linked Data. <xref format="html"
+    href="http://www.w3.org/standards/semanticweb/data"
+    scope="external">http://www.w3.org/standards/semanticweb/data</xref></fn>
+    environment. Therefore data providers should consider publishing the data
+    assets following the recommendations in the W3C Notes "Best Practice
+    Recipes for Publishing RDF Vocabularies"<fn>W3C. Best Practice Recipes for
+    Publishing RDF Vocabularies. <xref format="html"
+    href="http://www.w3.org/TR/swbp-vocab-pub/"
+    scope="external">http://www.w3.org/TR/swbp-vocab-pub/</xref></fn> , "Best
+    Practices for Publishing Linked Data"<fn>W3C. Best Practices for
+    Publishing Linked Data. <xref format="html"
+    href="https://dvcs.w3.org/hg/gld/raw-file/default/bp/index.html"
+    scope="external">https://dvcs.w3.org/hg/gld/raw-file/default/bp/index.html</xref></fn>
+    and the ISA report "10 Rules for Persistent URIs"<fn>European Commission.
+    Joinup. 10 Rules for Persistent URIs. <xref format="html"
+    href="https://joinup.ec.europa.eu/community/semic/document/10-rules-persistent-uris"
+    scope="external">https://joinup.ec.europa.eu/community/semic/document/10-rules-persistent-uris</xref></fn>
+    .</p>
+  </body>
+</topic>

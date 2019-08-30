@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="ap-skos-versioning">
+  <title>On concept evolution and versioning</title>
+
+  <body>
+    <p>SKOS is a common data model for sharing and linking knowledge
+    organization systems via the Web. It describes means to define concepts
+    and organise them in concept schemes but omits to specify anything about
+    how such organisation should evolve over time. A series of attempts was
+    done to address this issue and a list of references is available on W3C
+    wiki <fn> SKOS/Issues/ConceptEvolution. <xref format="html"
+    href="https://www.w3.org/2001/sw/wiki/SKOS/Issues/ConceptEvolution"
+    scope="external">https://www.w3.org/2001/sw/wiki/SKOS/Issues/ConceptEvolution</xref></fn></p>
+
+    <p>. This section reflects the result of discussions in the MDR team of
+    the Publications Office and addresses a few issues related to evolution of
+    digital assets based on SKOS model. The solutions described below have
+    informative purpose and are not part of the application profile.</p>
+
+    <section><title>Preliminary questions</title><p>Discussing the temporal
+    evolution of SKOS assets is not a trivial task. It can be approached as a
+    whole concept scheme or at the level of individual concepts. Regardless of
+    the approach it is difficult to avoid sliding into the classic problems in
+    metaphysics<fn>van Inwagen, Peter and Sullivan, Meghan, "Metaphysics", The
+    Stanford Encyclopedia of Philosophy (Spring 2018 Edition), Edward N. Zalta
+    (ed.), <xref format="html"
+    href="https://plato.stanford.edu/archives/spr2018/entries/metaphysics/"
+    scope="external">https://plato.stanford.edu/archives/spr2018/entries/metaphysics/</xref></fn>
+    related to time<fn>Markosian, Ned, "Time", The Stanford Encyclopedia of
+    Philosophy (Fall 2016 Edition), Edward N. Zalta (ed.), <xref format="html"
+    href="https://plato.stanford.edu/archives/fall2016/entries/time/"
+    scope="external">https://plato.stanford.edu/archives/fall2016/entries/time/</xref>.</fn>,
+    change<fn>Gallois, Andre, "Identity Over Time", The Stanford Encyclopedia
+    of Philosophy (Winter 2016 Edition), Edward N. Zalta (ed.), <xref
+    format="html"
+    href="https://plato.stanford.edu/archives/win2016/entries/identity-time/"
+    scope="external">https://plato.stanford.edu/archives/win2016/entries/identity-time/</xref>.</fn>
+    and identity<fn>Deutsch, Harry and Garbacz, Pawel, "Relative Identity",
+    The Stanford Encyclopedia of Philosophy (Fall 2018 Edition), Edward N.
+    Zalta (ed.), <xref format="html"
+    href="https://plato.stanford.edu/archives/fall2018/entries/identity-relative/"
+    scope="external">https://plato.stanford.edu/archives/fall2018/entries/identity-relative/</xref></fn>.
+    Although, an alternative and perhaps a useful way of escaping the
+    metaphysical distinctions is taking a semiotic<fn>Atkin, Albert, "Peirce's
+    Theory of Signs", The Stanford Encyclopedia of Philosophy (Summer 2013
+    Edition), Edward N. Zalta (ed.), <xref format="html"
+    href="https://plato.stanford.edu/archives/sum2013/entries/peirce-semiotics/"
+    scope="external">https://plato.stanford.edu/archives/sum2013/entries/peirce-semiotics/</xref>.</fn>
+    standpoint and think about the evolution of signs, "external reality"
+    things and "mental" concepts.</p><p>In the course of Next are provided a
+    few competency questions aimed at clarifying the nature of the asset at
+    hand and thus getting one step closer in making a choice in the versioning
+    strategy that will be outlined later.</p><ul>
+        <li>What is the level of abstraction of managed concepts? Do the
+        concepts represent entities/individuals or more abstract classes of
+        things?</li>
+
+        <li>What is the nature of the described things and what keeps them
+        together in one asset?</li>
+
+        <li>How to distinguish one concept from another one? What are the
+        criteria of judgement?</li>
+
+        <li>For properties beyond SKOS model (employed in the Application
+        Profile) decide which of them are <term>transient</term> (time
+        dependent) and <term>intransigent</term> (time invariant).</li>
+      </ul></section>
+
+    <section><title>Versioning strategies</title><p>The problem of versioning
+    can be kept outside the SKOS content by simply publishing successive
+    evolved versions of a plain asset marking accordingly each dataset with a
+    new version. Otherwise, if the historicity needs to permeate the SKOS
+    content then there are few approaches to do so. </p><p>There is an
+    approach which proposes altering the core SKOS model described by Tennis
+    and Sutton in their paper "Extending the Simple Knowledge Organization
+    System for Concept Management in Vocabulary Development
+    Applications"<fn>Tennis, J. T. and Sutton, S. A. (2008), Extending the
+    simple knowledge organization system for concept management in vocabulary
+    development applications. J. Am. Soc. Inf. Sci., 59: 25-37. doi:<xref
+    format="html" href=" https://doi.org/10.1002/asi.20702"
+    scope="external">10.1002/asi.20702</xref></fn>. This approach suggests
+    describing concepts at two levels: abstract and concrete. It is clean way
+    of distinguishing transient from intransigent aspects of a concept.
+    However, an additional level of complexity is added by this approach
+    making it difficult to employ the model. Also the extension departs from
+    the initially proposed SKOS model and is hardly backwards compatible with
+    the original design. To become practical, a wider adoption of the model is
+    needed along with software support to maintain such descriptions.
+    </p><p>Currently, the SKOS model covers the needs of most users and no
+    versioning extensions are employed. This means that any versioning
+    strategy should not alter the meaning of the original model. At the
+    Publications Office three versioning strategies are considered practical:
+    <i>concept evolution</i>,<i> concept succession</i> and <i>versioning by
+    concept scheme</i>. In the case of "<i>no versioning</i>" a temporal
+    tracking is still available, but in this case as editions of an evolving
+    dataset, meaning that the content of the dataset is temporally
+    agnostic.</p><p>In order to deal with versioning, regardless of the
+    approach, a few properties are deemed useful in order to mark the concept
+    status, mark validity interval of a concept and eventually specify the
+    successor/predecesor of a concept. The next sections describe each of the
+    strategies along with necessary extensions and an example.</p></section>
+
+    <section><title>Concept evolution</title><p>Adopting the <term>concept
+    evolution</term> means that the concept description comprises the entire
+    or partial historical account. In this approach the the concept URI
+    remains stable (fixed) in time while the changes in the property values
+    are incrementally recorded on the concept. The properties must be reified
+    and each record has a validity period to it and (eventually) a status
+    distinguishing between the latest valid value and its historical traces.
+    The strength of this approach is that the URI remains persistent over time
+    (even though its description evolves). The downside of such an approach is
+    the high rick of completely redefining the meaning associated with an URI.
+    In practice it becomes more difficult to maintain a dataset which
+    implements this approach and it is also harder to query at least to
+    determine the latest valid description of the concept.</p></section>
+
+    <p>In order to accommodate the concept versioning, the properties for
+    which the historicity is important or necessary, have to be reified is
+    some way. The recommendations are provided in the "RDF Primer"<fn> Miller,
+    E., &amp; Manola, F. (2004). RDF Primer. <xref format="html"
+    href="https://www.w3.org/TR/rdf-primer/#reification"
+    scope="external">https://www.w3.org/TR/rdf-primer/#deification</xref></fn>
+    and in the "Defining N-ary Relations on the Semantic Web"<fn> Rector, A.,
+    &amp; Noy, N. (2006). Defining N-ary Relations on the Semantic Web. <xref
+    format="html" href="https://www.w3.org/TR/swbp-n-aryRelations/"
+    scope="external">https://www.w3.org/TR/swbp-n-aryRelations/</xref></fn>. A
+    popular reification example for SKOS properties allowing the qualification
+    of concept labels is provided in the SKOS-XL extension<fn>Miles, A. &amp;
+    Isaac A. (2008). SKOS Simple Knowledge Organization System eXtension for
+    Labels (XL). <xref format="html"
+    href="http://www.w3.org/2006/07/SWD/SKOS/xl/"
+    scope="external">http://www.w3.org/2006/07/SWD/SKOS/xl/</xref> </fn>. This
+    extension alone, however is not sufficient to describe the label temporal
+    evolution, and two more properties are necessary: label status and/or
+    label validity interval (start and end date). This approach allows
+    instatiations like the one in the listing below where the concept MARE
+    from <xref format="html"
+    href="http://publications.europa.eu/resource/authority/corporate-body"
+    scope="external">CorporateBody authority table</xref> has several pref
+    labels out of which only the last one is valid and the first two are
+    deprecated each having a validity period.</p>
+
+    <codeblock><xref format="html"
+        href="http://publications.europa.eu/resource/authority/corporate-body/MARE"
+        scope="external">corporate-body:MARE</xref> a skos:Concept ;
+  skosxl:prefLabel [
+    euvoc:startDate "1977-01-01"; 
+    euvoc:endDate "1999-07-30";
+    owl:deprecated "true";
+    skoxl:literalValue "DG XIV Fisheries".
+  ];
+  skoxl:prefLabel [
+    euvoc:startDate "1999-10-01"; 
+    euvoc:endDate "2005-01-12";
+    owl:deprecated "true"; 
+    skosxl:literalValue "Directorate General for Fisheries".
+  ];
+  skoxl:prefLabel [
+    euvoc:startDate "2005-01-13";
+    skosxl:literalValue "Directorate-General for Maritime Affairs and Fisheries".
+  ].</codeblock>
+
+    <section><title>Concept succession</title></section>
+
+    <p>The <term>concept succession</term> differs from the concept evolution.
+    It means that the concept description has no historical account but the
+    concept itself has a validity interval. When the concept description is no
+    longer valid then a new successor concept replaces the current one and the
+    latter becomes deprecated. This implies that the concept URI is maintained
+    stable over time, but when a new concept is created to replace the current
+    one, then the users are encouraged to switch and start using the new
+    URI.</p>
+
+    <p>Concept succession requires a slightly different extension. The need
+    for specifying status and validity interval still remains and in addition
+    there needs to be a way to also specify connection between the old and the
+    new superseding concept. In the listing below is provided an example of
+    how concept succession may be instantiated.</p>
+
+    <codeblock><xref format="html"
+        href="http://publications.europa.eu/resource/authority/corporate-body/EEC"
+        scope="external">corporate-body:EEC</xref> a skos:Concept ;
+  skos:prefLabel "European Economic Community".
+  euvoc:startDate "1958-01-01";
+  euvoc:endDate "1993-10-31";
+  owl:deprecated "true";
+  dct:isReplacedBy corporate-body:EURCOM.
+
+<xref format="html"
+        href="http://publications.europa.eu/resource/authority/corporate-body/EURCOM"
+        scope="external">corporate-body:EURCOM</xref> a skos:Concept ;
+  skos:prefLabel "European Economic Community".
+  euvoc:startDate "1993-11-01"; 
+  euvoc:endDate "2009-11-30";
+  owl:deprecated "true";
+  dct:isReplacedBy corporate-body:EURUN.
+<xref format="html"
+        href="http://publications.europa.eu/resource/authority/corporate-body/EURUN"
+        scope="external">
+corporate-body:EURUN</xref> a skos:Concept ;
+  skos:prefLabel "European Union".
+  euvoc:startDate "2009-12-01".
+
+</codeblock>
+
+    <section><title>Versioning by concept scheme</title><p>In<term> versioning
+    by concept scheme</term> means that the concept scheme function as version
+    marker and container. This approach resembles slightly the "No versioning"
+    approach where the entire dataset is versioned as a whole. The difference
+    is that all version concept scheme are maintained in a single dataset.
+    This way. a concept may belongs to as many version concept schemes for as
+    long it is current and if it is deprecated then it is simply omitted in
+    the future concept schemes. Each version concept scheme provides a
+    description of the validity interval or publication date.</p><p>Versioning
+    by concept scheme does not require any SKOS extensions, at least not for
+    concept descriptions. It is recommended however to describe evolution of
+    concept schemes using similar means as described above for concepts, i.e.
+    employing validity interval, a status and successorship relations. In the
+    listing below is provided an example how versioning by concept scheme may
+    be instantiated. </p><codeblock>nuts-scheme:2010 a skos:ConceptScheme;
+  skos:prefLabel "Nomenclature of territorial units for statistics";
+  owl:versionInfo "version 2010";
+  dct:isReplacedBy nuts-scheme:2013.
+
+nuts-scheme:2013 a skos:ConceptScheme;
+  skos:prefLabel "Nomenclature of territorial units for statistics";
+  owl:versionInfo "version 2013".
+
+nuts-code:UKK42 a skosConcept;
+  skos:prefLabel "Torbay";
+  skos:inScheme nuts-scheme2010;
+  skos:inScheme nuts-scheme2013.
+
+nuts-code:UKD37 a skosConcept;
+  skos:prefLabel "Greater Manchester North East";
+  skos:inScheme nuts-scheme2013.</codeblock></section>
+
+    <p>This section presented three strategies to version the SKOS content.
+    Each of these approaches is supported by this application profile and it
+    is up to the dataset authors to decide how the content evolves in time and
+    is historicity maintained.</p>
+  </body>
+</topic>
