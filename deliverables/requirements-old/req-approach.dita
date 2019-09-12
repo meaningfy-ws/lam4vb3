@@ -5,7 +5,7 @@
   <title>Towards LAM model</title>
 
   <body>
-    <p>The modelling of LAM should be approached in two steps. </p>
+    <p>The modelling of LAM should be approached in two steps.</p>
   </body>
 
   <topic id="req-approach-2">
@@ -20,12 +20,12 @@
     </body>
   </topic>
 
-  <topic id="???">
-    <title>Technologies </title>
+  <topic id="req-approach-4">
+    <title>Technologies</title>
 
     <body>
-      <p>The Semantic Web technological stack is recommended for this project.
-      </p>
+      <p>The Semantic Web technological stack is recommended for this
+      project.</p>
     </body>
   </topic>
 
@@ -45,7 +45,8 @@
       <fig>
         <title>LAM modeling stack</title>
 
-        <image align="center" href="../docs/LAM%20meta-model%20structure.jpg"
+        <image align="center"
+               href="../../docs/LAM%20meta-model%20structure.jpg"
                placement="break" scalefit="yes" width="5in"/>
       </fig>
     </body>

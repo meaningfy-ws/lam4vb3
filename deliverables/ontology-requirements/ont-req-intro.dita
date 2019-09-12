@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="ont-req-intro">
+  <title>Introduction</title>
+
+  <body>
+    <p>This document provides the preliminary requirements specification for
+    developing an ontology for the EUR-Lex Legal Analysis Methodology.</p>
+  </body>
+</topic>

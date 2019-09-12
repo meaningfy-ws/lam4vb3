@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="ont-req-modelling-stack">
+  <title>Modelling stack</title>
+
+  <body>
+    <p>The approach to creating LAM ontology shall be performed in two steps.
+    First the LAM model shall be expressed in a semi formal representation
+    based on SKOS model<fn>Bechhofer, S., &amp; Miles, A. (2009). SKOS Simple
+    Knowledge Organization System Reference. <xref format="html"
+    href="https://www.w3.org/TR/skos-reference/"
+    scope="external">https://www.w3.org/TR/skos-reference/</xref></fn> in
+    order to enable the domain experts maintain the content. Nonetheless, this
+    content must already be sufficiently precise to support in a second step a
+    transformation into a formal KR language such as Web Ontology language
+    (OWL)<fn>Parsia, B., Motik B., &amp; Patel-Schneider P. (2012). OWL 2 Web
+    Ontology Language Structural Specification and Functional-Style Syntax.
+    <xref format="html" href="https://www.w3.org/TR/owl2-syntax/"
+    scope="external">https://www.w3.org/TR/owl2-syntax/</xref> </fn>.
+    <term>SKOS</term> is a common data model for sharing and linking knowledge
+    organization systems via the Web. The SKOS data model provides a standard,
+    low-cost migration path for porting existing knowledge organization
+    systems to the Semantic Web. SKOS also provides a lightweight, intuitive
+    language for developing and sharing new knowledge organization
+    systems.</p>
+
+    <p>In figure below is depicted the process and the main intermediary steps
+    to systematise the LAM knowledge down to a formal ontology. The diagram
+    represents the flowchart for creating the LAM project deliverables, where
+    each bloc signifies as follows. Parallelograms (brown) represent static
+    assets such as input and output data and models. The rectangles with an
+    extra set of bars (blue) represent automatic processes executed by scripts
+    while arrow shaped rectangles (pink) represent manually executed
+    processes. In bold are marked the assets which represents models (i.e.
+    instantiable resources).</p>
+
+    <fig>
+      <title>Approach to create LAM project deliverables</title>
+
+      <image align="center" href="../../docs/lam%20vision.png"
+             id="process-fig" placement="break" width="4in"/>
+    </fig>
+
+    <p>The process starts from unstructured descriptions in the form of Word
+    documents which are organised into tabular form and saved as Excel files.
+    This step is performed by the LAM team, who are mainly legal analysis
+    domain experts, according to a set of conventions described elsewhere and
+    resulting in a semi-structured LAM representation based on SKOS model.
+    This is a bootstrapping step and is performed only once. Next, this data
+    asset is transformed through a script into a knowledge base (KB), which
+    will further be maintained using VocBench3 tool<fn> Stellato, A.,
+    Fiorelli, M., Turbati, A., Lorenzetti, T., Van Gemert, W.,Dechandon, D.,
+    Laaboudi-Spoiden, C., Gerencser, A., Waniart, A.,Costetchi, E., and
+    Keizer, J. (forthcoming). VocBench 3: a Collab-orative Semantic Web Editor
+    for Ontologies, Thesauri and Lexicons.Semantic Web journal. <xref
+    format="html"
+    href="http://www.semantic-web-journal.net/content/vocbench-3-collaborative-semantic-web-editor-ontologies-thesauri-and-lexicons-1"
+    scope="external">link</xref></fn>. <term>VocBench3</term> is a web-based,
+    multilingual, collaborative development platform for managing OWL
+    ontologies, SKOS(XL) thesauri and generic RDF datasets. </p>
+
+    <p>As the SKOS model is fairly simple it does not cover the needs of LAM
+    project; therefore a SKOS extension should guide the structuring of LAM
+    data in VocBench3. This extension should take the form of a SKOS based
+    application profile (AP), which we here call LAM-SKOS-AP. An
+    <term>Application Profile</term> (AP) is a specification that re-uses
+    terms from one or more base standards, adding more specificity by
+    identifying mandatory, recommended and optional elements to be used for a
+    particular application, as well as recommendations for controlled
+    vocabularies to be used. The data expressed using LAM-SKOS-AP constitute a
+    easy to manage proxy for the final model. This means that it can be
+    further transformed through a script into a formal LAM ontology (expressed
+    in OWL2 language) and into a set of formal data shapes (expressed in SHACL
+    language<fn>Knublauch H. &amp; Kontokostas D., (2017). Shapes Constraint
+    Language (SHACL). <xref format="html" href="https://www.w3.org/TR/shacl/"
+    scope="external">https://www.w3.org/TR/shacl/</xref></fn>) .</p>
+
+    <p>In the next figure are depicted all the assets mentioned above and the
+    relations between them. At the top most is the LAM-SKOS-AP which is the
+    application profile for structuring the informal LAM knowledge base. The
+    actual LAM data instantiate of the LAM-SOKS-AP; while the LAM OWL ontology
+    and LAM SHACL shapes are implementations of LAM data (expressed in
+    LAM-SKKPS-AP form). Two legal document instances are provided as examples
+    to highlight the conformance relation to the data shapes underlining the
+    relevance of the SHACL shapes. </p>
+
+    <fig>
+      <title>LAM modeling stack</title>
+
+      <image align="center" href="../../docs/LAM%20meta-model%20structure.jpg"
+             id="meta-model" placement="break" scalefit="yes" width="4in"/>
+    </fig>
+  </body>
+</topic>

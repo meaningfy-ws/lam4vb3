@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
+"map.dtd">
+<map>
+  <title>Ontology requirements specification for Legal Analisys Methodology
+  project</title>
+
+  <topicmeta>
+    <author>Eugeniu Costetchi</author>
+
+    <publisher>Publications Office of the European Union</publisher>
+
+    <critdates>
+      <created date="10/09/2019"/>
+
+      <revised modified="13/09/2019"/>
+    </critdates>
+
+    <prodinfo>
+      <prodname>Ontology requirements specification for Legal Analisys
+      Methodology (LAM) project</prodname>
+
+      <vrmlist>
+        <vrm version="Version 1.0"/>
+      </vrmlist>
+    </prodinfo>
+  </topicmeta>
+
+  <topicref href="ont-req-intro.dita#ont-req-intro"/>
+
+  <topicref href="ont-req-purpose.dita#ont-req-purpose"/>
+
+  <topicref href="ont-req-context.dita#ont-req-context"/>
+
+  <topicref href="ont-req-scope.dita#ont-req-scope"/>
+
+  <topicref href="ont-req-end-users.dita#ont-req-end-users"/>
+
+  <topicref href="ont-req-uses.dita#ont-req-uses"/>
+
+  <topicref href="ont-req-modelling-stack.dita"/>
+
+  <topicref href="ont-req-requirements.dita#ont-req-requirements"/>
+</map>
