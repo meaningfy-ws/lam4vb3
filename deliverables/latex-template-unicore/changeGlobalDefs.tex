@@ -1,0 +1,107 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- Mode: Latex -*- %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% changeGlobalDefs.tex --- 
+%% 
+%% Filename: changeGlobalDefs.tex
+%% Description: 
+%% Authors: Mohamed Ahmed <m.ahmed@cs.ucl.ac.uk> @CHANGE / Emil Slusanschi <emil.slusanschi@cs.pub.ro> @UNICORE
+%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 
+%%% Change log:
+%% $Date$
+%% $Revision$
+%% $Id$
+%% 
+%% Global CHANGE VARS -- these shouldn't really be modified - i.e. leave this
+%% file alone unless you are making changes that effect the all documents. For
+%% local/deliverable relates definitions and macros use the macro.tex file.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\def\consortiumName {Initiative for Modeling the Legal Analysis Methodology}
+\def\change {\consortiumName\ }
+\def\consortiumICT {Framework Contract No 10688}
+
+\def\consortiumLogoLarge{\includegraphics[width=5.5cm]{styles/images/OP-50years-EN}}
+\def\consortiumLogoSmall{\includegraphics[width=2.5cm]{styles/images/OP-50years-EN}}
+\def\h2020LogoLarge{\includegraphics[width=2.5cm]{styles/images/eulawandpublications-en}}
+
+\def\documentNumbering {Page \thepage\ of (\pageref{LastPage})}
+\def\documentCopyright {\copyright\ \consortiumName\ \the\year\ }
+
+
+%\docConfidential{
+%  \noindent\textbf{Disclaimer}\\
+%  This document contains material, which is
+%  copyright of certain UNICORE consortium parties and may not be reproduced or
+%  copied without permission. The information contained in this document is the
+%  proprietary confidential information of certain UNICORE consortium parties and
+%  may not be disclosed except in accordance with the consortium agreement.  \\ 
+%  The commercial use of any information in this document may require a license
+%  from the proprietor of that information. \\ 
+%  Neither the UNICORE consortium as a whole, nor a certain party of the UNICORE
+%  consortium warrant that the information contained in this document is capable
+%  of use, or that use of the information is free from risk, and accept no
+%  liability for loss or damage suffered by any person using the information.
+%  This document does not represent the opinion of the European Community, and the
+%  European Community is not responsible for any use that might be made of its
+%  content. }
+
+\docPublic{
+  \noindent\textbf{Disclaimer}\\
+ 	The views expressed in this report are purely those of the Author(s) and may not, in any circumstances, be interpreted as stating an official position of the European Commission.
+	The European Commission does not guarantee the accuracy of the information included in this study, nor does it accept any responsibility for any use thereof.
+	Reference herein to any specific products, specifications, process, or service by trade name, trademark, manufacturer, or otherwise, does not necessarily
+	constitute or imply its endorsement, recommendation, or favouring by the European Commission.
+	All care has been taken by the author to ensure that s/he has obtained, where necessary, permission to use any parts of manuscript s including illustrations,
+	maps, and graphs, on which intellectual property rights already exist from the titular holder(s) of such rights or from her/his or their legal representative.
+}
+
+\def\documentImpressum{
+  \begin{tabular} {p{4.25cm}p{11.0cm}}
+    \multicolumn{2}{l}{\textbf{Impressum}} \\ 
+%    Full project title        & UNICORE: A Common Code Base and Toolkit for Deployment of Applications to Secure and Reliable Virtual Execution Environments \\ 
+    Workpackage  & Dx.y  document title \\
+    Author       & Eugeniu Costetchi \\
+%    Project Co-ordinator      & Stefan Geyer, infeurope / Juraj Kuba, Publications Office of the European Union  \\
+%    Technical Manager         & Felipe Huici, NEC\\
+    \textbf{Copyright notice} & \copyright\ \the\year\ \consortiumName\ \\
+  \end{tabular}    
+}
+
+% \fancypagestyle{plain}{%
+% \fancyhf{} % clear all header and footer fields
+% \fancyfoot[C]{\bfseries \thepage} % except the center
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}}
+
+\fancypagestyle{changeFrontPage}{%
+\fancyhf{} % clear all header and footer fields
+\lhead{\consortiumLogoLarge}
+\rhead{\title}
+\lfoot{\footnotesize{\consortiumName\ } }
+\rfoot{\footnotesize{\documentNumbering\ }} %
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}}
+
+
+%% header and footer                                   %
+\pagestyle{fancy}                                      %
+\fancyhead{} % clear all header fields                 %
+\fancyhead[RE,LO]{\consortiumLogoSmall}                %
+%\fancyhead[RO,LE]{\documentTitle}                      %
+\fancyhead[RO,LE]{\title}                      %
+\fancyfoot{} % clear all footer fields                 %
+\fancyfoot[RO,LE]{\footnotesize{\documentNumbering\ }} %
+\fancyfoot[RE,LO]{\footnotesize{\consortiumName\ }} %
+\renewcommand{\headrulewidth}{0.4pt}                   %
+\renewcommand{\footrulewidth}{0.4pt}                   %
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% changeGlobalDefs.tex ends here
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

@@ -1,0 +1,104 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- Mode: Latex -*- %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% content.tex --- 
+%% 
+%% Filename: content.tex
+%% Description: 
+%% Authors: Mohamed Ahmed <m.ahmed@cs.ucl.ac.uk> @CHANGE / Emil Slusanschi <emil.slusanschi@cs.pub.ro> @UNICORE
+%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 
+%%% Change log:
+%% $Date$
+%% $Revision$
+%% $Id$
+%% 
+%% The content 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% ------------------------------------------------------------
+%% EXECUTIVE SUMMARY 
+%% ------------------------------------------------------------
+\input{executive-summary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LIST OF AUTHORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{authors}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TABLES OF ... 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+\listoffigures
+\listoftables
+
+% Occasionally you may find that another package defines \cleardoublepage when it
+% is not required. This may cause an unwanted blank page to appear before each
+% glossary. This can be fixed by redefining \glsclearpage:
+% http://theoval.cmp.uea.ac.uk/~nlct/latex/packages/glossaries/glossaries-manual.html
+\renewcommand*{\glsclearpage}{\clearpage}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% print the glossary  %
+%%%%%%%%%%%%%%%%%%%%%%%
+\printglossary[title= Definitions,
+               toctitle=Definitions,
+               style=list,
+               ]
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% print the acronyms  %
+%%%%%%%%%%%%%%%%%%%%%%%
+\printglossary[type=\acronymtype,
+               title=Acronyms,
+               toctitle=Acronyms,
+               style=list
+               ]
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%
+% % print the symbols  %
+% %%%%%%%%%%%%%%%%%%%%%%%
+% \printglossary[type=symbols,
+%                title=Symbols,
+%                toctitle=Symbols,
+%                style=list
+%                ]
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% WORK STARTS HERE ......................................
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-
+%% CHAPTER 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-
+\input{chapter1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-
+%% CHAPTER 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-
+\input{chapter2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-
+%% CHAPTER 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-
+\input{chapter3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-
+%% Add all desired chapters here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-
+%% .......
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-
+%% BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-
+%\addcontentsline{toc}{chapter}{References}
+%\bibliographystyle{ieeetr}
+%\bibliographystyle{plain}
+\bibliographystyle{abbrv}
+%\bibliographystyle{phjcp}
+%%\bibliographystyle{apalike}
+\bibliography{references}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% content.tex ends here
