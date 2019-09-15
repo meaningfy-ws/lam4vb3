@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Worksheet structure</title><link rel="stylesheet" type="text/css" href="resources/xhtml.css" /><meta name="generator" content="XMLmind DITA Converter 3.5.0" />
+   </head>
+   <body>
+      <div class="title-page" id="__TP">
+         <h1 class="document-title">Worksheet structure</h1>
+      </div>
+      <div class="toc-container" id="__TOC">
+         <h1 class="toc-title">Table of Contents</h1>
+         <div class="toc">
+            <div class="toc-entry-container">
+               <p class="toc-section1-entry"><span class="toc-entry-number">1. </span><a href="#excel-structure-intro" class="toc-entry-title">Introduction</a></p>
+            </div>
+            <div class="toc-entry-container">
+               <p class="toc-section1-entry"><span class="toc-entry-number">2. </span><a href="#excel-structure" class="toc-entry-title">Worksheet structure</a></p>
+            </div>
+         </div>
+      </div>
+      <div id="excel-structure-intro" class="topic">
+         <h2 class="section1-title">1. Introduction <span class="topic-navigation-bar"><img class="navigation-icon-disabled" src="resources/previous_disabled.png" alt="Previous topic" title="Previous topic" width="16" height="16" /> <img class="navigation-icon-disabled" src="resources/parent_disabled.png" alt="Parent topic" title="Parent topic" width="16" height="16" /> <img class="navigation-icon-disabled" src="resources/child_disabled.png" alt="Child topic" title="Child topic" width="16" height="16" /> <a href="#excel-structure" class="navigation-link" title="Next topic: Section 2. Worksheet structure"><img class="navigation-icon" src="resources/next.png" alt="Next topic" width="16" height="16" /></a></span></h2>
+         <div class="body">
+            <div class="p">This document explains the structure of worksheets used as input data
+               for the transformation script. The reader should already be familiar with
+               the context of LAM project and the general approach explained
+               elsewhere.
+            </div>
+         </div>
+      </div>
+      <div id="excel-structure" class="topic">
+         <h2 class="section1-title">2. Worksheet structure <span class="topic-navigation-bar"><a href="#excel-structure-intro" class="navigation-link" title="Previous topic: Section 1. Introduction"><img class="navigation-icon" src="resources/previous.png" alt="Previous topic" width="16" height="16" /></a> <img class="navigation-icon-disabled" src="resources/parent_disabled.png" alt="Parent topic" title="Parent topic" width="16" height="16" /> <img class="navigation-icon-disabled" src="resources/child_disabled.png" alt="Child topic" title="Child topic" width="16" height="16" /> <img class="navigation-icon-disabled" src="resources/next_disabled.png" alt="Next topic" title="Next topic" width="16" height="16" /></span></h2>
+         <div class="body">
+            <div class="p">The excel file contains five worksheets: two of them define classes,
+               two of them define properties and one defines namespace prefix mappings.
+               The worksheet is composed of rows and columns. The rows roughly correspond
+               to descriptions of an identifiable entity/element, the columns correspond
+               to predicates (properties) in such descriptions while the cell values to
+               predicate objects. In every worksheet, the first row is the header row.
+               Each header cell denotes how the values in the corresponding columns
+               should be interpreted and processed (predicate specification). Some
+               denotations, as we will see below, signify/represent (a) plain labels, (b)
+               reference keys described in another worksheet, (c) or encodings of
+               functional links between reference keys. The rest of the non empty rows
+               represent distinct definitions comprising value statements in all or most
+               of the columns.
+            </div>
+            <div class="p">The columns that represent plain labels, provided lower case, serve a
+               descriptive purpose and most of the time the transformation script uses
+               them as such without much additional processing. Examples of such columns
+               can be found in "LAM metadata worksheet" which contains headers such as
+               "Code", "controlled value property", "annotation1" etc.
+            </div>
+            <div class="p">The columns that signify reference keys, provided in upper case, are
+               richer in meaning, which is provided in another worksheet. These sort of
+               columns are used in class definitions only, where the keys in the column
+               header function as references to property definitions. The transformation
+               script takes into consideration the definition linked to the reference key
+               and any additional relations and constraints when processing the column
+               values. Examples of such columns can be found in "Classes Complete"
+               worksheet which contains headers such as "RJ_NEW", "CC", "IF", "EV"
+               etc.
+            </div>
+            <div class="p">The columns that encode <dfn class="term">functional links</dfn> between reference
+               keys (using <dfn class="term">function notation</dfn>), provided in upper case and
+               round brackets, signify a second order descriptions. They are used for
+               encoding annotations of values provided in another columns. For example
+               the pair of columns "EV" and "ANN_COD(EV)" means that the column "EV"
+               contributes to the description identified at the level of a row whereas
+               the column "ANN_COD(EV)" further extends the description provided by the
+               column "EV" in the form of an annotation. The convention for such
+               notations is <i class="i">"KEY1(KEY2)"</i>, where <i class="i">KEY1</i> acts as a functor
+               applied to <i class="i">KEY2</i>; we read it "KEY1 of KEY2" or "annotation of KEY2
+               with KEY1". The transformation script processes such column pairs in a
+               special manner tracking two levels of description identification, at the
+               level of the row and at the level of column value, taking into
+               consideration the definition linked to the reference keys, the link
+               between the reference keys and the implied constraints and
+               relationships.
+            </div>
+            <div class="p">The worksheet cells, which are slots formed at the intersection of a
+               row and a column provide, the values filling those slots. We distinguish
+               few kinds of cell values each controlled by a set of conventions. The
+               value types are as follows:
+            </div>
+            <div id="excel-structure__I_ify3nt_" class="section">
+               <ul class="ul">
+                  <li class="li">Free text literal</li>
+                  <li class="li">Short URI notation</li>
+                  <li class="li">Controlled value</li>
+               </ul>
+               <div class="p">The free text literals are Unicode<a href="#I_d39e49_" class="fn-link"><sup class="fn-callout">(1)</sup></a> strings which should be in Normal Form C<a href="#I_d39e55_" class="fn-link"><sup class="fn-callout">(2)</sup></a>. The intended meaning of short URI notation is specified by
+                  RFC 3986 on Uniform Resource Identifiers<a href="#I_d39e60_" class="fn-link"><sup class="fn-callout">(3)</sup></a>. The
+                  expected form is short reference URI <i class="i">"prefix:ID",</i> where the prefix
+                  (base URI) is formally defined in the document. The short URI form is
+                  preferred to absolute (resolved) form URI, the latter being discouraged
+                  form usage, nonetheless the transformation script is able to identify and
+                  process them as accordingly. Both, the free text literals and the short
+                  URI notations can be used as either (a) values of properties (denoted by
+                  the column header) or (b) as property constraint definitions. The
+                  interpretation depends of the column function described below. 
+               </div>
+               <div class="p">The
+                  last type of values, the controlled values, refer to are a convention of
+                  specifying cardinality constraints in the class definitions. This means
+                  that the cells with controlled values can not be interpreted as property
+                  values but serve only as property constraints. The conventions for
+                  cardinality constraints in LAM project are provided in <a href="#excel-structure__caardinality-constraint" class="xref">Table 1</a>.
+               </div>
+               <div id="excel-structure__caardinality-constraint" class="table">
+                  <h4 class="table-title">Table 1. Cardinality constraint conventions</h4>
+                  <table class="tgroup" border="1" width="100%" style="font-size: 70%;">
+                     <thead class="thead table-header-style">
+                        <tr class="row">
+                           <td class="entry">Name</td>
+                           <td class="entry">Cell value</td>
+                           <td class="entry">Cardinality meaning</td>
+                           <td class="entry">Alternative cell values</td>
+                        </tr>
+                     </thead>
+                     <tbody class="tbody">
+                        <tr class="row">
+                           <td class="entry">mandatory</td>
+                           <td class="entry">Y</td>
+                           <td class="entry">1..*</td>
+                           <td class="entry">yes, y, according to text</td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry">mandatory unique</td>
+                           <td class="entry">YU</td>
+                           <td class="entry">1..1</td>
+                           <td class="entry"> </td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry">optional</td>
+                           <td class="entry">O</td>
+                           <td class="entry">0..*</td>
+                           <td class="entry"> </td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry">optional unique</td>
+                           <td class="entry">OU</td>
+                           <td class="entry">0..1</td>
+                           <td class="entry"> </td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry">forbidden</td>
+                           <td class="entry">N, &lt;empty cell&gt;</td>
+                           <td class="entry">0..0</td>
+                           <td class="entry">no, n</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="p">The worksheet cells can contain <dfn class="term">commented
+                     values</dfn>. It means that a cell can contain a value (literal, URi or
+                  controlled) and in addition a comment on that value. The value is
+                  separated from the comment by the pipe (|) character like this: "<i class="i">value
+                     | comment</i>". The transformation script uses the pipe character for
+                  detecting commented values, and so this character should not be used for
+                  any other purpose. 
+               </div>
+               <div class="p">The worksheet cells can contain <dfn class="term">multiple
+                     values</dfn>. The new value separator is the new line character (CR/LF).
+                  This means that every new line of the cell will be interpreted as a new
+                  value for the property indicated by the column header.
+               </div>
+            </div>
+            <div id="excel-structure__I_307w8q_" class="section">
+               <h3 id="excel-structure__lam-class-definition" class="section-title">LAM class definition
+                  worksheet
+               </h3>
+               <div class="p">The worksheet defining LAM classes plays central role
+                  in the LAM project as it defines the document classes used in the legal
+                  analysis methodology. It comprises of almost a hundred columns, which can
+                  be grouped according to meaning and function they play in class
+                  definitions. We distinguish the following functions:
+                  <i class="i">identification</i>, <i class="i">description</i>, <i class="i">mappings </i>to other
+                  classifications and <i class="i">property constraints</i>. All the columns are
+                  headed with reference keys defined in the worksheet "LAM metadata"
+                  described below.
+               </div>
+               <div class="p">The URI column provides an universal identifier (as
+                  the title suggests) for the row with values of the form
+                  <i class="i">"prefix:ID"</i>. The prefix is defined in the prefix worksheet,
+                  described in <a href="#excel-structure__prefix-section" class="xref">Namespace prefix definition
+                     worksheet</a>, and the ID part is automatically generated.
+               </div>
+               <div class="p">The
+                  <i class="i">description</i> columns, containing examples, keywords, comments etc.,
+                  represent human readable class descriptions. Their values essentially are
+                  simple text literals. The <i class="i">mapping</i> columns provide correspondences
+                  between LAM classes and other classifications, in this case the CDM
+                  ontology, the Resource Type authority table, and CELEX classification.
+                  These mappings to other classifications are intended for manually or
+                  eventually automatically determine and/or validate the LAM class to which
+                  a legal document belongs. 
+               </div>
+               <div class="p">The rest of the columns represent
+                  <i class="i">property constraints</i>. In the context of class definition, property
+                  constraints mean that instances of the defined class must respect the
+                  specified constraint. The constraints are provided either as a literal
+                  value, URI or cardinality specification (see <a href="#excel-structure__caardinality-constraint" class="xref">table above</a>). In case of literal
+                  or URI values, the constraints mean that the instances of the class being
+                  defined must provide property statements with exactly same values. If
+                  there are multiple values, then the default interpretation is that of
+                  alternative values either of which should be found among those provided in
+                  the instance data. In case of cardinality specifications, the
+                  interpretation is on the number of times a property is employed for a
+                  given instance. For example, mandatory properties must be employed once or
+                  multiple times, having the minimum cardinality set to one, while optional
+                  unique properties may be employed at most once with minimum cardinality
+                  set to zero and maximum to one. The cardinality constraints do not provide
+                  any indications about the range of values used of a given property.
+                  
+               </div>
+               <div class="p">Some constraints headed by a function notation represent annotation
+                  constraints on a property. For example the column "EV" (date of end of
+                  validity) is annotated with "ANN_COD" (annotation: comment on date) column
+                  written as "ANN_COD(EV)". The values in this column represent cardinality
+                  constraints on the comment on date property. For example if there is a "O"
+                  value provided in "ANN_COD(EV)" column then, whenever there is an end of
+                  date property employed on an instance then, that value, may optionally be
+                  annotated with a comment on date.
+               </div>The last three columns
+               "Classification level 1" to "Classification level 3" provide a
+               classification structure for the defined documents as originally specified
+               in the LAM documentation.
+            </div>
+            <div id="excel-structure__I_8546z_" class="section">
+               <h3 class="section-title">LAM property definition worksheet </h3>
+               <div class="p">The LAM
+                  property definition worksheet defines the meaning to the columns used in
+                  the class definition worksheet(s). As mentioned in the introduction above,
+                  the columns roughly correspond to predicates/properties in the LAM model
+                  and are locally identified by a unique "Code" (usually in capital
+                  letters). The same codes are used as a reference values in the column
+                  headers of the class definition worksheet indicating which property shall
+                  be used from the model for each column. The "Code" is used to generate the
+                  LAM property URI used in the formal statements.
+               </div>
+               <div class="p">The property
+                  definition worksheet is structured as follows. The "Label" column provides
+                  a human friendly property title; the "Definition" provides a human
+                  readable property meaning. "Analytical methodology" is a description of
+                  how the property contributes to the LAM practice. "Specific cases" and
+                  "Comments" provide examples, exceptions and additional comments related to
+                  property usage. Example values for these columns are provided in <a href="#excel-structure__example-human-readable" class="xref">Table 2</a>.
+               </div>
+               <div id="excel-structure__example-human-readable" class="table">
+                  <h4 class="table-title">Table 2. Example of human readable fields in LAM property
+                     definition
+                  </h4>
+                  <table class="tgroup" border="1" width="100%" style="font-size: 70%;">
+                     <colgroup class="colspec" width="20%"></colgroup>
+                     <colgroup class="colspec" width="12%"></colgroup>
+                     <colgroup class="colspec" width="12%"></colgroup>
+                     <colgroup class="colspec" width="13%"></colgroup>
+                     <colgroup class="colspec" width="12%"></colgroup>
+                     <colgroup class="colspec" width="31%"></colgroup>
+                     <thead class="thead table-header-style">
+                        <tr class="row">
+                           <td class="entry">URI</td>
+                           <td class="entry">Code</td>
+                           <td class="entry">Label</td>
+                           <td class="entry">property</td>
+                           <td class="entry">controlled value</td>
+                           <td class="entry">Definition</td>
+                        </tr>
+                     </thead>
+                     <tbody class="tbody">
+                        <tr class="row">
+                           <td class="entry">lamd:md_EXAMPLE_EN</td>
+                           <td class="entry">EXAMPLE_EN</td>
+                           <td class="entry">EN example</td>
+                           <td class="entry">skos:example@en</td>
+                           <td class="entry"> </td>
+                           <td class="entry">English Example. This field used in the cataloguing
+                              methodology for information purposes.
+                           </td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry">lamd:md_CDM_CLASS</td>
+                           <td class="entry">CDM_CLASS</td>
+                           <td class="entry">CDM class</td>
+                           <td class="entry">lam:cdm_class</td>
+                           <td class="entry"> </td>
+                           <td class="entry">Class or subclass according to CDM.</td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry">lamd:md_FM</td>
+                           <td class="entry">FM</td>
+                           <td class="entry">Type of act</td>
+                           <td class="entry">cdm:resource-type</td>
+                           <td class="entry">at:resource-type</td>
+                           <td class="entry">Type of act is usually mentioned in the title.</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="p">The "property" column specifies URI of the equivalent
+                  property formally defined in CDM ontology (other namespaces are also
+                  accepted). If there is a range constraint to, for example, a controlled
+                  vocabulary then it is indicated in the "controlled value property".
+                  
+               </div>
+               <div class="p">As mentioned, in the description of the <a href="#excel-structure__lam-class-definition" class="xref">LAM class definition
+                     worksheet</a>, some CDM properties are annotated to provide extra
+                  information. The columns "annotation_1" to "annotation_7" specify which
+                  CDM annotation properties may be used for the defined property. Columns
+                  "controlled value_annotation_1" to "controlled value_annotation_7" provide
+                  range constraints on the corresponding property. The values in columns
+                  "annotation_11" to "annotation_71" are automatically generated and do not
+                  provide any additional information, but play a technical role for the
+                  transformation script, providing a mapping between the URI of the CDM
+                  property and the URI of the LAM property. The translation pairs are
+                  provided in an auxiliary "mappings" worksheet.
+               </div>
+               <div class="p">The last two columns
+                  "Classification level 1" and "Classification level 2" provide a
+                  classification structure for the defined properties as originally
+                  specified in the LAM documentation.
+               </div>
+            </div>
+            <div id="excel-structure__I_x3mxii_" class="section">
+               <h3 class="section-title">CELEX class and property definition
+                  worksheets
+               </h3>
+               <div class="p">This worksheet aims at capturing the description of
+                  CELEX classes following the logic that has been used to allocate CELEX
+                  numbers since the setting-up of the EUR-Lex database (formerly known as
+                  CELEX). The CELEX classes are defined as a combination of DTS, DTT, DTA
+                  and OJ_ID columns (described below) and are structured on three levels:
+                  
+               </div>
+               <ol class="ol" type="I">
+                  <li class="li">DTS classes (CELEX sectors)</li>
+                  <li class="li">DTS*DTT (power product) classes. These classes corresponds to rows
+                     in the sector tables describing DTTs of the sectors.
+                  </li>
+                  <li class="li">DTS*DTT*OJ_ID (power product) classes. These classes correspond to
+                     cells in the sector tables describing DTTs for each of the three
+                     OJ_IDs of the sector.
+                  </li>
+               </ol>
+               <div class="p">The CELEX number anatomy is the following <i class="i">DN = &lt;DTS&gt;
+                     &lt;DTA&gt; &lt;DTT&gt; &lt;DTN&gt;</i>. Examples of CELEX numbers and how
+                  they are composed can be seen in <a href="#excel-structure__examples-celex" class="xref">Table 3</a>. Where the column
+                  name acronyms mean the following: 
+               </div>
+               <div class="p">
+                  <ul class="ul">
+                     <li class="li">DN - the specific instance of CELEX number. Legal document
+                        metadata.
+                     </li>
+                     <li class="li">DTS - Sector</li>
+                     <li class="li">DTT - Document type</li>
+                     <li class="li">DTA - The year</li>
+                     <li class="li">DTN - The number</li>
+                  </ul>
+               </div>
+               <div id="excel-structure__examples-celex" class="table">
+                  <h4 class="table-title">Table 3. Examples of CELEX number composition</h4>
+                  <table class="tgroup" border="1" width="100%" style="font-size: 70%;">
+                     <thead class="thead table-header-style">
+                        <tr class="row">
+                           <td class="entry">DN=</td>
+                           <td class="entry">DTS</td>
+                           <td class="entry">DTA</td>
+                           <td class="entry">DTT</td>
+                           <td class="entry">DTN</td>
+                        </tr>
+                     </thead>
+                     <tbody class="tbody">
+                        <tr class="row">
+                           <td class="entry">32019R0001</td>
+                           <td class="entry">3</td>
+                           <td class="entry">2019</td>
+                           <td class="entry">R</td>
+                           <td class="entry">0001</td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry">C2019/123</td>
+                           <td class="entry">C</td>
+                           <td class="entry">2019</td>
+                           <td class="entry">&lt;empty&gt;</td>
+                           <td class="entry">123</td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry">52014AE1723</td>
+                           <td class="entry">5</td>
+                           <td class="entry">2014</td>
+                           <td class="entry">AE</td>
+                           <td class="entry">1723</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="p">Properties describing class at each level are as follows.
+                  
+               </div>
+               <div class="p"><b class="b">Level I classes:</b></div>
+               <ul class="ul">
+                  <li class="li">label</li>
+                  <li class="li">code (=DTS)</li>
+                  <li class="li">DTS</li>
+                  <li class="li">definition</li>
+                  <li class="li">scope note (optional)</li>
+                  <li class="li">comments (optional)</li>
+               </ul>
+               <div class="p"><b class="b">Level II classes </b>(same as above plus
+                  additionally):
+               </div>
+               <ul class="ul">
+                  <li class="li">*code (=DTS*DTT)</li>
+                  <li class="li">DTT</li>
+                  <li class="li">author</li>
+               </ul><b class="b">Level III classes</b> (same as above plus additionally):
+               <ul class="ul">
+                  <li class="li">*code (=DTS*DTT*OJ_ID)</li>
+                  <li class="li">OJ_ID (either <i class="i">"OJC"</i>,<i class="i"> "OJL" </i>or<i class="i"> "EuroLex</i>")
+                  </li>
+                  <li class="li">DTA source of .. (as indicated in CELEXspecification documentation
+                     section 1 on general rules)
+                  </li>
+                  <li class="li">DTN source of .. (as indicated in CELEXspecification documentation
+                     section 1 on general rules)
+                  </li>
+               </ul>
+            </div>
+            <div id="excel-structure__I_kl6x4f_" class="section">
+               <div class="p">The CELEX property definition worksheet, just like the one for
+                  LAM properties, defines a set of properties used in CELEX class
+                  definition. They are primarily CELEX composition properties but in the
+                  current project a few auxiliary properties are used. 
+               </div>
+            </div>
+            <div id="excel-structure__I_xfnfvd_" class="section">
+               <h3 id="excel-structure__prefix-section" class="section-title">Namespace prefix definition
+                  worksheet
+               </h3>
+               <div class="p">This worksheet provides a mapping between the LAM
+                  property definitions and CDM ontology (or another namespace). This
+                  worksheet is auxiliary and has a technical role aiding the transformation
+                  script. The worksheet is composed of two columns, first the URI of the CDM
+                  ontology and the second one the URI of the LAM property. 
+               </div>
+            </div>
+         </div>
+      </div>
+      <hr class="footnote-separator" />
+      <table class="fn-layout">
+         <tr>
+            <td valign="baseline"> <sup class="fn-callout">(1)</sup></td>
+            <td valign="baseline" id="I_d39e49_" class="fn">The Unicode Standard,
+               Version 3, The Unicode Consortium, Addison-Wesley, 2000. <a href="http://www.unicode.org/unicode/standard/versions/" class="xref" target="_blank">http://www.unicode.org/unicode/standard/versions/</a>
+               
+            </td>
+         </tr>
+      </table>
+      <table class="fn-layout">
+         <tr>
+            <td valign="baseline"> <sup class="fn-callout">(2)</sup></td>
+            <td valign="baseline" id="I_d39e55_" class="fn"> Unicode Normalization
+               Forms, Unicode Standard Annex #15, Mark Davis, Martin Dürst. <a href="http://www.unicode.org/unicode/reports/tr15/%20" class="xref" target="_blank">http://www.unicode.org/unicode/reports/tr15/
+                  </a></td>
+         </tr>
+      </table>
+      <table class="fn-layout">
+         <tr>
+            <td valign="baseline"> <sup class="fn-callout">(3)</sup></td>
+            <td valign="baseline" id="I_d39e60_" class="fn">Berners-Lee, Fielding and
+               Masinter (2005), RFC 3986 - Uniform Resource Identifier (URI): Generic
+               Syntax. <a href="https://tools.ietf.org/html/rfc3986" class="xref" target="_blank">https://tools.ietf.org/html/rfc3986</a></td>
+         </tr>
+      </table>
+   </body>
+</html>

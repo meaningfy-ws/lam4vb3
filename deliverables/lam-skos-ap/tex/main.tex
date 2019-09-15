@@ -1,0 +1,133 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% DOCUMENT PREAMBLE %%%
+\documentclass[12pt]{report}
+\usepackage[english]{babel}
+%\usepackage{natbib}
+\usepackage{url}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\usepackage[table]{xcolor}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage[colorlinks]{hyperref}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black,
+	colorlinks=true, %set true if you want colored links
+	linktoc=all,     %set to all if you want both sections and subsections linked
+	%	linkcolor=blue,  %choose some color if you want links to stand out
+}
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+
+\title{1}								
+% Title
+\author{ Your name}						
+% Author
+\date{today's date}
+% Date
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\thepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{title1}
+
+%\begin{titlepage}
+%	\centering
+%    \vspace*{0.5 cm}
+%   % \includegraphics[scale = 0.075]{bsulogo.png}\\[1.0 cm]	% University Logo
+%\begin{center}    \textsc{\Large   Mathematical Sciences}\\[2.0 cm]	\end{center}% University Name
+%	\textsc{\Large Individual Report  }\\[0.5 cm]				% Course Code
+%	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+%	{ \huge \bfseries \thetitle}\\
+%	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
+%	
+%	\begin{minipage}{0.4\textwidth}
+%		\begin{flushleft} \large
+%		%	\emph{Submitted To:}\\
+%		%	Name\\
+%          % Affiliation\\
+%           %contact info\\
+%			\end{flushleft}
+%			\end{minipage}~
+%			\begin{minipage}{0.4\textwidth}
+%            
+%			\begin{flushright} \large
+%			\emph{Author :} \\
+%			Eugeniu Costetchi  
+%		\end{flushright}
+%           
+%	\end{minipage}\\[2 cm]
+%	
+%	\includegraphics[scale = 0.5]{images/logos/OP-50years-EN}
+%    
+%    
+%    
+%    
+%	
+%\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\thesection}{\arabic{section}}
+\section{Section 1}
+ 
+
+The paper will look professional and is typed in LaTeX. Make sure the cover page       includes the Project Title, Team Names, Date, and PIC Math Logo (1 point).
+
+Remaining pages should include: (7 points) 
+
+1.Problem summary: state the industrial problem, its context, and its significance; include a list of most important questions to be addressed. State the industrial sponsor of the project. 
+
+2.Statement of your results, with assumptions and questions(one page).
+
+3.Details about your (one of several) approaches to problem; elaborate which questions are important and why; your results and/or anticipations (this is where your mathematics details fit); relevant information from your sources (citing for example \cite{ACAMP}) and what the team is incorporating from each source; details of your solution, if any; relevant tables and graphs (tables and graphs pages do not count towards the page limit). State your work and include references - you might never make use of reference \cite{ACMT} but it is a great paper.
+
+4.Conclusions with questions, implications and ideas for future work
+
+5.Extended Bibliography List (not included in page limit) in the following format: 
+
+[1] Author name(s). Paper title. Journal name, volume XY, pages ab-cd, year. 
+
+6.Acknowledgments page, stating:
+
+“PIC Math is a program of the Mathematical Association of America (MAA) and the Society for Industrial and AppliedMathematics (SIAM). Support is provided by the National Science Foundation (NSF grant DMS-1345499).”
+
+7.Advisor names, etc. 
+
+Flow /Visual Composition/Grammar/Spelling (2 points) 
+
+\newpage
+\section{Acknowledgments}
+
+ PIC Math is a program of the Mathematical Association of America (MAA) and the Society for Industrial and Applied Mathematics (SIAM). Support is provided by the National Science Foundation (NSF grant DMS-1345499).
+\newpage
+ 
+\end{document}
+
+%This template was created by Roza Aceska.
