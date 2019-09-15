@@ -31,7 +31,7 @@
     
     <keydef format="png" href="lam-skos-ap.png" keys="uml-diagram"/>
     <topicref href="lam-skos-ap-introduction.dita"/>
-    <topicref href="../ontology-requirements/ont-req-context.dita"/>
+    <topicref href="../../ontology-requirements/dita/ont-req-context.dita"/>
     <topicref href="lam-skos-ap-used-vocabularies.dita"/>
     <topicref href="ap-graphical-representation.dita"/>
     <topicref href="lam-skos-ap.dita"/>
