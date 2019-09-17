@@ -28,13 +28,13 @@ Running all the cells from the lam2vb3 jupyter notebook will generate the curren
 
 ## Phase 2
 | Key | Value |
-| :--- | :---: |
+| :--- | :--- |
 |Status| planned|
 |Expected delivery| December 2019| 
 
 
 | Work package  | Description |
-| :--- | :---: |
+| :--- | :--- |
 |  WP2.1 | (BugFix1) Bug fixes in LAM-SKOS-AP (errata) and transformation script (Script1) – based on the new findings |
 |  WP2.2 | (Assistance1) Assistance/training for LAM team to edit data in VocBench3 |
 |  WP2.3 | (Model spec2) Transformation rules from LAM-SKOS-AP data into formal LAM ontology and SHACL shapes |
