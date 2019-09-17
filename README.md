@@ -1,9 +1,15 @@
-# Initiative for modelling the Legal Analise Methodology
-Legal Analise Methodology from European Publications Office adapted (transformed) for authoring with VocBench3.
+# Initiative for Modeling the Legal Analysis Methodology
 
-Running all the cells from the lam2vb3 jupyter notebook will generate the current RDF representation of the LAM project.
- 
- 
+
+The aim of the project is to provide a level of formalisation to the Legal Analise Methodology used at the European Publications Office for the legal document metadata. 
+
+The formalisation steps are as follows: 
+- from unstructured text (e.g. word files) to controlled tabular structure (e.g. Excel)
+- from controlled tabular structure to a tailor made SKOS representation, called LAM-SKOS-AP
+- from LAM-SKOS-AP representation to OWL2 formal ontology
+- from LAM-SKOS-AP representation to a structured technical documentation and a user manual
+
+  
 | Key | Value |
 | :--- | :--- | 
 | Project start| June 2019 |
@@ -11,6 +17,8 @@ Running all the cells from the lam2vb3 jupyter notebook will generate the curren
  
  
 # Project deliverables 
+
+The project is split into two phases aiming at providing three kinds of deliverables: documents, transformation scripts and formal data/models. The originally planned deliverables are as follows. 
 
 ## Phase 1
 | Key | Value |
@@ -45,3 +53,7 @@ Running all the cells from the lam2vb3 jupyter notebook will generate the curren
 |  WP2.8 | (Data3) test release of LAM SHACL shapes |
 |  WP2.9 | (Data4) test release of LAM XML & PDF documentation |
 
+
+# Running the scripts 
+
+Running all the cells from the lam2vb3 jupyter notebook will generate the current RDF representation of the LAM project.
