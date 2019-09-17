@@ -1,12 +1,13 @@
-\hypertarget{ariaid-title1}{%
-\section{Requirements}\label{ariaid-title1}}
+\section{Requirements}
+\label{ariaid-title4}
 
-\hypertarget{non-functional-requirements}{%
-\subsection{Non-functional
-requirements}\label{non-functional-requirements}}
+This section provides preliminary requirements for the model of the Legal Analysis Methodology. First are provided the non-functional requirements followed by the functional ones. 
+
+\subsection{Non-functional requirements}
+\label{non-functional-requirements}
 
 \begin{enumerate}
-\tightlist
+
 \item
   The ontology should support multilingual content in at least English,
   French, German, Spanish and Italian languages.
@@ -18,68 +19,51 @@ requirements}\label{non-functional-requirements}}
   manner.
 \end{enumerate}
 
-\hypertarget{functional-requirements}{%
-\subsection{Functional requirements}\label{functional-requirements}}
+\subsection{Functional requirements}
+\label{functional-requirements}
 
 \begin{enumerate}
-\tightlist
+
 \item
-  What is the a name legal document type? Draft communication, draft
+  What is the a name legal document type? \\e.g. Draft communication, draft
   directive
 \item
-  What is the class notation/code if any is assigned? 5\_XC\_OJL,
-  5\_PC\_EUR
+  What is the class notation/code if any is assigned?\\e.g. 5\_XC\_OJL, 5\_PC\_EUR
 \item
-  What are the comments, examples, notes and other editorial remarks of
-  a legal document class? Examples, change notes, history notes.
+  What are the comments, examples, notes and other editorial remarks of a legal document class?\\e.g. Examples, change notes, history notes.
 \item
-  How is the class of legal documents defined? ... is a preparatory act
-  of the commission which ...
+  How is the class of legal documents defined?\\e.g. \dots is a preparatory act of the commission which \dots
 \item
   How can be a legal document be classified using other existing
-  classifications? resource-type:REG\_DRAFT, cdm:act\_preparatory
+  classifications?\\e.g. resource-type:REG\_DRAFT, cdm:act\_preparatory
 \item
-  What are the hints for classifying a legal document? Keyword: "draft
-  regulation", author: commission
+  What are the hints for classifying a legal document?\\e.g. Keyword: ``draft regulation'', author: commission
 \item
-  To which groups document classes belong? Classification level 1/2/3
+  To which groups document classes belong?\\e.g. Classification level 1/2/3
 \item
-  Which properties can be used to describe a legal document? Specific
-  CDM properties
+  Which properties can be used to describe a legal document?\\e.g. Specific CDM properties
 \item
-  How is the property named ? Date of transposition, Date of signature
+  How is the property named?\\e.g. Date of transposition, Date of signature
 \item
-  What is the formal path of the property? cdm:date\_transposition,
+  What is the formal path of the property?\\e.g. cdm:date\_transposition,
   cdm:resource\_legal\_date\_signature
 \item
-  What are the comments, examples, notes and other editorial remarks of
-  a property describing legal document? Examples, change notes, history
-  notes.
+  What are the comments, examples, notes and other editorial remarks of a property describing legal document?\\e.g. Examples, change notes, history notes.
 \item
-  What constraints does the property have? Cardinality constraints,
-  range constraints
+  What constraints does the property have?\\e.g. Cardinality constraints, range constraints
 \item
-  What are the values of the constraints for a particular property on a
-  particular class? min cardinality 0, max cardinality 1, value range
-  restricted to FD 14 only,
+  What are the values of the constraints for a particular property on a particular class?\\e.g. min cardinality 0, max cardinality 1, value range restricted to FD 14 only,
 \item
-  How can the constraints be expressed in a human friendly manner? Human
-  friendly text expressing the constraints all together generated using
-  a string template.
+  How can the constraints be expressed in a human friendly manner?\\e.g. Human friendly text expressing the constraints all together generated using a string template.
 \item
-  What annotations does the property have?
+  What annotations does the property have?\\e.g.
   ann:comment\_on\_legal\_basis, ann:type\_of\_link\_target
 \item
-  What value restrictions does the annotation of a propriety has?
-  at:fd\_370, at:subdivision
+  What value restrictions does the annotation of a propriety has?\\e.g. at:fd\_370, at:subdivision
 \item
-  What value restrictions does the annotation of a specific property on
-  a specific class? The annotation Comment on date of the property Date
-  Document must be fd\_365:DATADOPT for the Draft regulation document
-  type.
+  What value restrictions does the annotation of a specific property on a specific class?\\e.g. The annotation ``Comment on date'' of the property ``Date Document'' must be fd\_365:DATADOPT for the Draft regulation document type.
 \item
-  What is the property notation/code if any is assigned? ANN\_COD , AF,
-  DP, LF
+  What is the property notation/code if any is assigned?\\e.g. ANN\_COD , AF, DP, LF
 \item
-  To which groups property belongs? Classification level 1/2
+  To which groups property belongs?\\e.g. Classification level 1 and 2.
 \end{enumerate}
