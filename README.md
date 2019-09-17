@@ -14,6 +14,8 @@ The formalisation steps are as follows:
 | :--- | :--- | 
 | Project start| June 2019 |
 | Project expected end| December 2019 |
+| Authors | Eugeniu Costetchi |
+| Contributors | Juraj Kuba, Marcin Baryn |
  
  
 # Project deliverables 
