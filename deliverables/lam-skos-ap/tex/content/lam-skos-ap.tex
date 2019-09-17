@@ -1,0 +1,522 @@
+\section{Application profile}\label{ariaid-title11}
+
+This section presents the application profile describing each class and data type. 
+The class descriptions also comprise a list of relevant properties and the configuration in which they may appear in the data.
+
+\subsection{lam:DocumentProperty}
+
+This class aims at describing properties used for describing legal
+documents. It aims at capturing the rules and constraints on permitted
+annotations and controlled lists of values.
+
+This is a proxy class for the formal properties. It is aimed at
+capturing the documental and partially the constraints imposed on this
+property.
+
+\textbf{Superclasses:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \emph{skos:Concept}
+\item
+  \emph{sh:PropertyShape}
+\end{itemize}
+
+{
+	%	\fontsize{10pt}{10pt}
+	\footnotesize
+	\selectfont%\tabcolsep=3pt % hold it local
+	\begin{longtable}[c]{@{}p{3cm}p{2cm}p{2cm}p{7.8cm}@{}}
+		\toprule\addlinespace
+		Name & Type & Cardinality & Definition
+		\\\addlinespace
+		\midrule\endhead
+		sh:class & rdfs:Resource & 0..1 & The condition specified by sh:class is
+		that each value node is a SHACL instance of a given type. This property
+		constraints the range of the values that the property may take.
+		\\\addlinespace
+		sh:path & rdfs:Resource & 1..1 & The property that is formally used in
+		describing the legal documents. Usually a CDM property.
+		\\\addlinespace
+		\bottomrule
+		\addlinespace
+		\caption{Properties of the lam:DocumentProperty class}
+	\end{longtable}
+}
+
+\subsection{lam:LegalDocumentClass}
+
+This class aims at describing a set of legal documents that have in
+common a set of properties. It aims at capturing the rules and
+constraints on legal document properties, metadata elements, and
+cardinality.
+
+\textbf{Superclasses:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \emph{skos:Concept}
+\end{itemize}
+
+{
+	%	\fontsize{10pt}{10pt}
+	\footnotesize
+	\selectfont%\tabcolsep=3pt % hold it local
+	\begin{longtable}[c]{@{}p{3cm}p{3cm}p{2cm}p{5.8cm}@{}}
+		\toprule\addlinespace
+		Name & Type & Cardinality & Definition
+		\\\addlinespace
+		\midrule\endhead
+		lam:hasProperty​Configuration​ & lam:Property​Configuration​ & 1..*​ &
+		The constraint definition for a legal document property. ​
+		\\\addlinespace
+		lam:classify​With​ & lam:Classiffication​Hint​ & 0..*​ &
+		\\\addlinespace
+		\bottomrule
+		\addlinespace
+		\caption{Properties of the lam:LegalDocumentClass class}
+	\end{longtable}
+}
+
+\subsection{lam:LegalDocumentGroup}
+
+A way of grouping legal document classes.
+
+\textbf{Superclasses:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \emph{skos:Collection}
+\end{itemize}
+
+\subsection{lam:LegalPropertyGroup}
+
+A way of grouping properties of the legal documents.
+
+\textbf{Superclasses:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \emph{skos:Collection}
+\end{itemize}
+
+\subsection{lam:AnnotationConfiguration}
+
+Annotation configurations define the constraints on the annotations of
+the legal documents.
+
+\textbf{Superclasses:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \emph{sh:PropertyShape}
+\end{itemize}
+
+{
+	%	\fontsize{10pt}{10pt}
+	\footnotesize
+	\selectfont%\tabcolsep=3pt % hold it local
+	\begin{longtable}[c]{@{}p{3cm}p{2cm}p{2cm}p{7.8cm}@{}}
+		\toprule\addlinespace
+		Name & Type & Cardinality & Definition
+		\\\addlinespace
+		\midrule\endhead
+		sh:class & rdfs:Resource & 1..1 & The condition specified by sh:class is
+		that each value node is a SHACL instance of a given type. This property
+		constraints the range of the values that the property may take.
+		\\\addlinespace
+		sh:hasValue & rdfs:Resource & 1..1 & sh:hasValue specifies the condition
+		that at least one value node is equal to the given RDF term.
+		\\\addlinespace
+		\bottomrule
+		\addlinespace
+		\caption{Properties of the lam:AnnotationConfiguration class}
+	\end{longtable}
+}
+
+\subsection{lam:ClassifficationHint}
+
+This class defines how a document may be automatically assigned as a
+member of a given class of legal documents.
+
+\textbf{Superclasses:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \emph{sh:PropertyShape}
+\end{itemize}
+
+{
+	%	\fontsize{10pt}{10pt}
+	\footnotesize
+	\selectfont%\tabcolsep=3pt % hold it local
+	\begin{longtable}[c]{@{}p{3cm}p{2cm}p{2cm}p{7.8cm}@{}}
+		\toprule\addlinespace
+		Name & Type & Cardinality & Definition
+		\\\addlinespace
+		\midrule\endhead
+		sh:flags & rdfs:Literal & 0..1 & An optional string of flags accepting
+		SPARQL RegEx flags.
+		\\\addlinespace
+		sh:pattern & rdfs:Literal & 1..* & sh:pattern specifies a regular
+		expression that each value node matches to satisfy the condition.
+		
+		It can be plain text or RegEx pattern matching the value of a given
+		lam:property.
+		\\\addlinespace
+		\bottomrule
+		\addlinespace
+		\caption{Properties of the lam:ClassifficationHint class}
+	\end{longtable}
+}
+
+\subsection{lam:Propertyconfiguration}
+
+The Property Configuration define constraints on a lam:DocumentProperty
+for a given lam:DocumentClass
+
+\textbf{Superclasses:}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \emph{sh:PropertyShape}
+\end{itemize}
+
+{
+	%	\fontsize{10pt}{10pt}
+	\footnotesize
+	\selectfont%\tabcolsep=3pt % hold it local
+	\begin{longtable}[c]{@{}p{3cm}p{2cm}p{2cm}p{7.8cm}@{}}
+		\toprule\addlinespace
+		Name & Type & Cardinality & Definition
+		\\\addlinespace
+		\midrule\endhead
+		sh:hasValue & rdfs:Resource & 0..1 & sh:hasValue specifies the condition
+		that at least one value node is equal to the given RDF term.
+		\\\addlinespace
+		sh:maxCount & xsd:int & 0..1 & Maximum cardinality constraint. Formally
+		sh:maxCount specifies the maximum number of value nodes that satisfy the
+		condition.
+		\\\addlinespace
+		sh:minCount & xsd:int & 0..1 & Minimum cardinality constraint. Formally
+		sh:minCount specifies the minimum number of value nodes that satisfy the
+		condition. If the minimum cardinality value is 0 then this constraint is
+		always satisfied and so may be omitted.
+		\\\addlinespace
+		skos:editorialNote & rdfs:Literal & 0..* & A note for an editor,
+		translator or maintainer of the vocabulary.
+		\\\addlinespace
+		\bottomrule
+		\addlinespace
+		\caption{Properties of the lam:Propertyconfiguration class}
+	\end{longtable}
+}
+
+\subsection{skos:ConceptScheme}
+
+A SKOS concept scheme can be viewed as an aggregation of one or more
+SKOS concepts. Semantic relationships (links) between those concepts may
+also be viewed as part of a concept scheme. This definition is, however,
+meant to be suggestive rather than restrictive, and there is some
+flexibility in the formal data model stated below.
+
+Thesauri, classification schemes, subject heading lists, taxonomies,
+`folksonomies', and other types of controlled vocabulary are all
+examples of concept schemes. Concept schemes are also embedded in
+glossaries and terminologies.
+
+{
+	%	\fontsize{10pt}{10pt}
+	\footnotesize
+	\selectfont%\tabcolsep=3pt % hold it local
+	\begin{longtable}[c]{@{}p{3cm}p{2cm}p{2cm}p{7.8cm}@{}}
+		\toprule\addlinespace
+		Name & Type & Cardinality & Definition
+		\\\addlinespace
+		\midrule\endhead
+		owl:versionInfo & rdfs:Literal & 0..1 & An owl:versionInfo statement
+		generally has as its object a string giving information about this
+		version. This statement does not contribute to the logical meaning of
+		the resource.
+		\\\addlinespace
+		skos:prefLabel & rdfs:Literal & 1..1 & The preferred lexical label for a
+		resource, in a given language. No two concepts in the same concept
+		scheme may have the same preferred label in a given language.
+		\\\addlinespace
+		\bottomrule
+		\addlinespace
+		\caption{Properties of the skos:ConceptScheme class}
+	\end{longtable}
+}
+
+\subsection{skos:Concept}
+
+A SKOS concept can be viewed as an idea or notion; a unit of thought.
+However, what constitutes a unit of thought is subjective, and this
+definition is meant to be suggestive, rather than restrictive.
+
+The notion of a SKOS concept is useful when describing the conceptual or
+intellectual structure of a knowledge organization system, and when
+referring to specific ideas or meanings established within a KOS.
+
+Note that, because SKOS is designed to be a vehicle for representing
+semi-formal KOS, such as thesauri and classification schemes, a certain
+amount of flexibility has been built in to the formal definition of this
+class.
+
+{
+	%	\fontsize{10pt}{10pt}
+	\footnotesize
+	\selectfont%\tabcolsep=3pt % hold it local
+	\begin{longtable}[c]{@{}p{3cm}p{2cm}p{2cm}p{7.8cm}@{}}
+		\toprule\addlinespace
+		Name & Type & Cardinality & Definition
+		\\\addlinespace
+		\midrule\endhead
+		owl:deprecated & xsd:boolean & 0..1 & States whether the resource is
+		current or deprecated. By deprecating a resource, it means that it
+		should not be used in new documents.
+		
+		Deprecation is a feature commonly used in versioning software to
+		indicate that a particular feature is preserved for
+		backward-compatibility purposes, but may be phased out in the future.
+		\\\addlinespace
+		skos:altLabel & rdfs:Literal & 0..* & An alternative lexical label for a
+		resource. Acronyms, abbreviations, spelling variants, and irregular
+		plural/singular forms may be included among the alternative labels for a
+		concept.
+		\\\addlinespace
+		skos:changeNote & rdfs:Literal & 0..* & A note about a modification to a
+		concept.
+		\\\addlinespace
+		skos:definition & rdfs:Literal & 0..1 & A statement or formal
+		explanation of the meaning of a concept.
+		\\\addlinespace
+		skos:editorialNote & rdfs:Literal & 0..* & A note for an editor,
+		translator or maintainer of the vocabulary.
+		\\\addlinespace
+		skos:example & rdfs:Literal & 0..* & An example of the use of a concept.
+		\\\addlinespace
+		skos:notation & rdfs:Literal & 0..* & A notation is a string of
+		characters such as ``T58.5'' or ``303.4833'' used to uniquely identify a
+		concept within the scope of a given concept scheme or within a specified
+		context.
+		\\\addlinespace
+		skos:prefLabel & rdfs:Literal & 1..1 & The preferred lexical label for a
+		resource, in a given language. No two concepts in the same concept
+		scheme may have the same preferred label in a given language.
+		\\\addlinespace
+		skos:scopeNote & rdfs:Literal & 0..1 & A note that helps to clarify the
+		meaning of a concept.
+		\\\addlinespace
+		skos:broader & skos:Concept & 0..* & A concept that is more general in
+		meaning. Broader concepts are typically rendered as parents in a concept
+		hierarchy (tree).
+		\\\addlinespace
+		dct:isReplacedBy & skos:Concept & 0..* & A related resource that
+		supplants, displaces, or supersedes the described resource.
+		\\\addlinespace
+		skos:related & skos:Concept & 0..* & A concept with which there is an
+		associative semantic relationship.
+		\\\addlinespace
+		\bottomrule
+		\addlinespace
+		\caption{Properties of the skos:Concept class}
+	\end{longtable}
+}
+
+\subsection{skos:Collection}
+
+A meaningful collection of concepts. Labeled collections can be used
+with collectible semantic relation properties i.e. skos:narrower, where
+you would like a set of concepts to be displayed under a ``node label'' in
+the hierarchy.
+
+{
+	%	\fontsize{10pt}{10pt}
+	\footnotesize
+	\selectfont%\tabcolsep=3pt % hold it local
+	\begin{longtable}[c]{@{}p{3cm}p{2cm}p{2cm}p{7.8cm}@{}}
+		\toprule\addlinespace
+		Name & Type & Cardinality & Definition
+		\\\addlinespace
+		\midrule\endhead
+		skos:definition & rdfs:Literal & 0..1 & A statement or formal
+		explanation of the meaning of a collection.
+		\\\addlinespace
+		skos:prefLabel & rdfs:Literal & 1..1 & The preferred lexical label for a
+		resource, in a given language. No two concepts in the same concept
+		scheme may have the same preferred label in a given language.
+		\\\addlinespace
+		skos:member & skos:Collection & 0..* & A member of a collection.
+		\\\addlinespace
+		\bottomrule
+		\addlinespace
+		\caption{Properties of the skos:Collection class}
+	\end{longtable}
+}
+
+\subsection{rdfs:Resource}
+
+All things described by RDF are called resources, and are instances of
+the class rdfs:Resource. This is the class of everything.
+
+\subsection{sh:PropertyShape}
+
+A property shape is a shape in the shapes graph that is the subject of a
+triple that has sh:path as its predicate. A shape has at most one value
+for sh:path. Each value of sh:path in a shape must be a well-formed
+SHACL property path. 
+
+In LAM-SKOS-AP the role of sh:path is taken by lam:path.
+
+{
+	%	\fontsize{10pt}{10pt}
+	\footnotesize
+	\selectfont%\tabcolsep=3pt % hold it local
+	\begin{longtable}[c]{@{}p{3cm}p{2cm}p{2cm}p{7.8cm}@{}}
+		\toprule\addlinespace
+		Name & Type & Cardinality & Definition
+		\\\addlinespace
+		\midrule\endhead
+		sh:description & rdfs:Literal & 0..* & Property shape may have values
+		for sh:description to provide descriptions of the property in the given
+		context.
+		\\\addlinespace
+		sh:name & rdfs:Literal & 1..1 & Property shapes may have one or more
+		values for sh:name to provide human-readable labels for the property in
+		the target where it appears.
+		\\\addlinespace
+		\bottomrule
+		\addlinespace
+		\caption{Properties of the sh:PropertyShape class}
+	\end{longtable}
+}
+
+\subsection{euvoc:XlNotation}
+
+A notation is a string of characters used to uniquely identify a concept
+within a specified context.
+
+Like the skosxl:Label class reifies SKOS label statements, XlNotation
+reifies SKOS notation statements. This class permits, if needed, to
+maintain the historical view of the values and add additional provenance
+descriptions.
+{
+	%	\fontsize{10pt}{10pt}
+	\footnotesize
+	\selectfont%\tabcolsep=3pt % hold it local
+	\begin{longtable}[c]{@{}p{3cm}p{2cm}p{2cm}p{7.8cm}@{}}
+		\toprule\addlinespace
+		Name & Type & Cardinality & Definition
+		\\\addlinespace
+		\midrule\endhead
+		dct:created & xsd:date & 0..1 & Date of creation of the resource.
+		\\\addlinespace
+		dct:modified & xsd:date & 0..1 & Date of modification of the resource.
+		\\\addlinespace
+		euvoc:endDate & xsd:date & 0..1 & End of the validity period. If a
+		resource has an end date then it must be marked as deprecated.
+		\\\addlinespace
+		euvoc:startDate & xsd:date & 0..1 & Beginning of the validity period.
+		\\\addlinespace
+		owl:deprecated & xsd:boolean & 0..1 & States whether the resource is
+		current or deprecated. By deprecating a resource, it means that it
+		should not be used in new documents.
+		
+		Deprecation is a feature commonly used in versioning software to
+		indicate that a particular feature is preserved for
+		backward-compatibility purposes, but may be phased out in the future.
+		\\\addlinespace
+		rdf:value & rdfs:Literal & 1..1 & The literal form of the notation.
+		\\\addlinespace
+		dct:type & skos:Concept & 1..1 & Specify the context where a specified
+		notation is considered unique.
+		\\\addlinespace
+		\bottomrule
+		\addlinespace
+		\caption{Properties of the euvoc:XlNotation class}
+	\end{longtable}
+}
+
+\subsection{euvoc:XlNote}
+
+Like the skosxl:Label class reifies SKOS label statements, XlNote
+reifies SKOS note statements (i.e. skos:editorialNote, skos:example,
+skos:historyNote, skos:definition, skos:scopeNote and skos:changeNote).
+This class permits, if needed, to maintain the historical view of the
+values and add additional provenance descriptions.
+
+{
+	%	\fontsize{10pt}{10pt}
+	\footnotesize
+	\selectfont%\tabcolsep=3pt % hold it local
+	\begin{longtable}[c]{@{}p{3cm}p{2cm}p{2cm}p{7.8cm}@{}}
+		\toprule\addlinespace
+		Name & Type & Cardinality & Definition
+		\\\addlinespace
+		\midrule\endhead
+		dct:created & xsd:date & 0..1 & Date of creation of the resource.
+		\\\addlinespace
+		dct:modified & xsd:date & 0..1 & Date of modification of the resource.
+		\\\addlinespace
+		dct:source & rdfs:Resource & 0..1 & A related resource from which the
+		described resource is derived.
+		
+		The described resource may be derived from the related resource in whole
+		or in part. Recommended best practice is to identify the related
+		resource by means of a string conforming to a formal identification
+		system.
+		\\\addlinespace
+		owl:deprecated & xsd:boolean & 0..1 & States whether the resource is
+		current or deprecated. By deprecating a resource, it means that it
+		should not be used in new documents.
+		
+		Deprecation is a feature commonly used in versioning software to
+		indicate that a particular feature is preserved for
+		backward-compatibility purposes, but may be phased out in the future.
+		\\\addlinespace
+		rdf:value & rdfs:Literal & 1..1 & The literal form of the note.
+		\\\addlinespace
+		\bottomrule
+		\addlinespace
+		\caption{Properties of the euvoc:XlNote class}
+	\end{longtable}
+}
+
+
+\subsection{rdfs:Literal}
+
+The class rdfs:Literal is the class of literal values such as strings
+and integers. Property values such as textual strings are examples of
+RDF literals.
+
+\subsection{xsd:boolean}
+
+The boolean data type is used to specify a true or false value.
+
+\subsection{xsd:date}
+
+The date data type is used to specify a date. The date is specified in
+the following form ``YYYY-MM-DD'' where:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  YYYY indicates the year
+\item
+  MM indicates the month
+\item
+  DD indicates the day
+\end{itemize}
+
+Note: All components are required!
+
+\subsection{xsd:int}

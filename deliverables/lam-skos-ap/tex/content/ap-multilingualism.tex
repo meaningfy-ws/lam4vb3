@@ -1,0 +1,33 @@
+
+\section{Multilingual aspects}
+\label{ariaid-title14}
+
+Multilingual aspects related to this Application Profile concern all
+properties whose contents are expressed as strings with human-readable
+text. Wherever such properties are used, the string values are of one of
+two types:
+
+\begin{itemize}
+\item
+  The string is free text. Examples are descriptions and labels. Such
+  text may be translated into several languages.
+\item
+  The string is an appellation of a ``named entity''. Examples are names
+  of organisations or persons. These names may have parallel versions in
+  other languages but those versions don't need to be literal
+  translations.
+\end{itemize}
+
+Wherever values of properties are expressed with either type of string,
+the property can be repeated with translations in the case of free text
+and with parallel versions in case of named entities. For free text, the
+language tag is mandatory. For named entities, the language tag is
+optional and should only be provided if the parallel version of the name
+is strictly associated with a particular language. For example, the name
+``European Union'' has parallel versions in all official languages of the
+union, while a name like ``W3C'' is not associated with a particular
+language and has no parallel versions.
+
+How multilingual information is handled by the receiver applications,
+for example in indexing and user interfaces, is outside of the scope of
+this Application Profile.
