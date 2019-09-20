@@ -6,3 +6,4 @@ jupyterlab
 xlrd
 Deprecated
 shortuuid
+pathlib

@@ -6,7 +6,8 @@ Email: costezki.eugen@gmail.com
 """
 import rdflib
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, XMLNS, XSD
-from lam4vb3 import lam_utils, build
+# from lam4vb3 import lam_utils, build
+import lam_utils, build
 
 SHACL = rdflib.Namespace("http://www.w3.org/ns/shacl#")
 LAM = rdflib.Namespace("http://publications.europa.eu/ontology/lam-skos-ap#")
