@@ -22,6 +22,8 @@
 \usepackage{footnote}
 \usepackage{setspace}
 \usepackage{lscape}
+\usepackage{calc}
+\usepackage{mwe}
 
 \usepackage[tableposition=below]{caption}
 \captionsetup[longtable]{skip=1em}
@@ -57,22 +59,31 @@
 \let\thedate\@date
 \makeatother
 
-\pagestyle{fancy}
-\fancyhf{}
-\rhead{\theauthor}
-\lhead{\thetitle}
-\cfoot{\thepage}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\lhead{\DelAuthor}
+%\rhead{\DelTitle}
+%\cfoot{\thepage}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Title Page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{title}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \tableofcontents
 \pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\slshape\DelAuthor}
+\lhead{\slshape\nouppercase{\rightmark}}
+\cfoot{\thepage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\thesection}{\arabic{section}}
