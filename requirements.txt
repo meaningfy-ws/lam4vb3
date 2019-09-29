@@ -7,3 +7,4 @@ xlrd
 Deprecated
 shortuuid
 pathlib
+pylode
