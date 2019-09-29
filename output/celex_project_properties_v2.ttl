@@ -32,6 +32,7 @@
 @prefix fd_396: <http://publications.europa.eu/resource/authority/fd_396/> .
 @prefix fd_400: <http://publications.europa.eu/resource/authority/fd_400/> .
 @prefix fd_578: <http://publications.europa.eu/resource/authority/fd_578/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix lam: <http://publications.europa.eu/ontology/lam-skos-ap#> .
 @prefix lamd: <http://publications.europa.eu/resources/authority/lam/> .
 @prefix language: <http://publications.europa.eu/resource/authority/language/> .
@@ -54,29 +55,32 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 celexd:md_CODE a skos:Concept ;
-    dct:created "2019-09-20"^^xsd:date ;
+    dct:created "2019-09-27"^^xsd:date ;
+    dct:type "data property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "CODE" ;
     skos:prefLabel "Concept code"@en ;
     sh:path skos:notation .
 
 celexd:md_LABEL a skos:Concept ;
-    dct:created "2019-09-20"^^xsd:date ;
+    dct:created "2019-09-27"^^xsd:date ;
+    dct:type "data property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "LABEL" ;
     skos:prefLabel "Label of the concept"@en ;
     sh:path skosxl:prefLabel .
 
-lamd:res_hQwpi4WvynW4YCPtBF93s7 a skos:Collection ;
+lamd:res_YpiHNJhJhgurqMybACWRZd a skos:Collection ;
+    skos:member lamd:res_h9ci2wPXrcUXBh9JkkHzUY ;
+    skos:prefLabel "References" .
+
+lamd:res_wnXwwMsdDjR6LCvSG4smXH a skos:Collection ;
     skos:member celexd:md_OJ_ID ;
     skos:prefLabel "Publication reference" .
 
-lamd:res_yqfMaB7wXNtQ4QmWtiDCJf a skos:Collection ;
-    skos:member lamd:res_ZMHkjRxJAmuCfMHTtXN79D ;
-    skos:prefLabel "References" .
-
 celexd:md_DTA a skos:Concept ;
-    dct:created "2019-09-20"^^xsd:date ;
+    dct:created "2019-09-27"^^xsd:date ;
+    dct:type "data property" ;
     skos:definition "The year attributed to the document (internal number or ppf number)."@en ;
     skos:example "<cdm:resource_legal_year rdf:datatype=\"http://www.w3.org/2001/XMLSchema#gYear\">2014</cdm:resource_legal_year>" ;
     skos:inScheme lamd:DocumentProperty ;
@@ -96,7 +100,8 @@ for sector 9: the year the question was introduced."""@en ;
     sh:path lam:dta .
 
 celexd:md_DTN a skos:Concept ;
-    dct:created "2019-09-20"^^xsd:date ;
+    dct:created "2019-09-27"^^xsd:date ;
+    dct:type "data property" ;
     skos:definition """A sequential number representing the original reference number of the act.
 
 In some instances composed or non-standardised numbers are attributed (e.g. treaties)."""@en ;
@@ -114,7 +119,8 @@ For a corrigendum an “R” is added to the four digits (see CELEX type corrige
     sh:path lam:dtn .
 
 celexd:md_DTS a skos:Concept ;
-    dct:created "2019-09-20"^^xsd:date ;
+    dct:created "2019-09-27"^^xsd:date ;
+    dct:type "data property" ;
     skos:definition "The quite diverse origin of the different document types within EUR-Lex is reflected by the sector structure of the database."@en ;
     skos:example "<j.0:resource_legal_id_sector rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">2</j.0:resource_legal_id_sector>" ;
     skos:inScheme lamd:DocumentProperty ;
@@ -136,7 +142,8 @@ E  EFTA documents"""@en ;
     sh:path lam:dts .
 
 celexd:md_DTT a skos:Concept ;
-    dct:created "2019-09-20"^^xsd:date ;
+    dct:created "2019-09-27"^^xsd:date ;
+    dct:type "data property" ;
     skos:definition """One or two letter code specifying the type of document. 
 
 This metadata is related to another metadata field Author (created by). Celex type of sector 6 documents (EU case law) refers also to the author of document. Celex type of sector 1 documents refers to a specific treaty. """@en ;
@@ -147,7 +154,8 @@ This metadata is related to another metadata field Author (created by). Celex ty
     sh:path lam:dtt .
 
 celexd:md_OJ_ID a skos:Concept ;
-    dct:created "2019-09-20"^^xsd:date ;
+    dct:created "2019-09-27"^^xsd:date ;
+    dct:type "data property" ;
     skos:definition """Identifier of the Official Journal in which was the document published.
 
 The OJ identifier contains several parts:
@@ -160,7 +168,7 @@ The OJ identifier contains several parts:
     skos:prefLabel "ID of the Official Journal"@en ;
     sh:path cdm:resource_legal_published_in_official-journal .
 
-lamd:res_ZMHkjRxJAmuCfMHTtXN79D a skos:Collection ;
+lamd:res_h9ci2wPXrcUXBh9JkkHzUY a skos:Collection ;
     skos:member celexd:md_DTA,
         celexd:md_DTN,
         celexd:md_DTS,

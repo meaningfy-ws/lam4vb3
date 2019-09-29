@@ -242,7 +242,9 @@ columns are provided in Table \ref{tab:ex1}.
 The ``property'' column specifies URI of the equivalent property formally
 defined in CDM ontology (other namespaces are also accepted). If there
 is a range constraint to, for example, a controlled vocabulary then it
-is indicated in the ``controlled value property'' 
+is indicated in the ``controlled value property''.
+
+The ``property type'' column indicate a formal constraint on how the property can be instantiated. Two options are available: ``object property'', which means that the range is always an URI and ``data property'', which means that the range is always a literal. This specifications corresponds to OWL2 semantics of owl:ObjectProperty and owl:DataProperty. If left unspecified, the fallback is the rdf:Property semantics, but this option is strongly discouraged. 
 
 As mentioned, in Section \ref{sec:lam-class-definition}, some CDM properties are annotated to provide
 extra information. The columns ``annotation\_1'' to ``annotation\_7'' specify which CDM annotation properties may be used for the defined
@@ -257,6 +259,8 @@ property. The translation pairs are provided in an auxiliary ``mappings'' worksh
 The last two columns ``Classification level 1'' and ``Classification level
 2'' provide a classification structure for the defined properties as
 originally specified in the LAM documentation.
+
+
 
 \subsection{CELEX class and property definition}
 

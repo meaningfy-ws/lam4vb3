@@ -160,7 +160,7 @@ ANNOTATION_COLUMNS_UNUSED = {
     'ANN_FCS': 'lamd:md_ANN_FCS',
     'ANN_FCT': 'lamd:md_ANN_FCT'}
 
-LAM_CLASS_CS = "lamd:LegalDocument"
+LAM_CLASS_CS = "lamd:LAMLegalDocument"
 
 CELEX_CS = "celexd:CelexLegalDocument"
 
@@ -356,7 +356,7 @@ def make_class_worksheet(lam_df_classes, prefixes, output_file):
     :return:
     """
     graph = build.make_graph(prefixes)
-    create_cs(graph, cs=CELEX_CS, cs_label= "LAM classes")
+    create_cs(graph, cs=LAM_CLASS_CS, cs_label= "LAM classes")
     create_concepts(lam_df_classes, graph)
     create_collections(lam_df_classes, graph)
     graph.serialize(str(output_file), format='turtle', )

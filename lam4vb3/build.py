@@ -6,20 +6,18 @@ Email: costezki.eugen@gmail.com
 """
 import collections
 import re
-
-import rdflib
 # import rdflib as rdf
 import uuid
-from rdflib.namespace import RDF, RDFS, SKOS, DCTERMS, OWL, XMLNS, XSD
-from abc import ABC, abstractmethod
-
-# import lam4vb3.lam_utils as lam_utils
-import pandas as pd
-from datetime import date
 import warnings
-import types
+from abc import ABC, abstractmethod
+from datetime import date
+
 # from lam4vb3 import lam_utils
 import lam_utils
+# import lam4vb3.lam_utils as lam_utils
+import pandas as pd
+import rdflib
+from rdflib.namespace import RDF, SKOS, DCTERMS, XSD
 
 SHACL = rdflib.Namespace("http://www.w3.org/ns/shacl#")
 

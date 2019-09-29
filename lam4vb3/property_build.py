@@ -22,6 +22,7 @@ LITERAL_COLUMNS = {
     'Specific cases': 'skos:historyNote@en',
     'Comments': 'skos:editorialNote@en',
     'Changes to be done': 'skos:editorialNote@en',
+    'property type': 'dct:type',
 }
 
 URI_COLUMNS = {
