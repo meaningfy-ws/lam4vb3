@@ -56,6 +56,36 @@ The project is split into two phases aiming at providing three kinds of delivera
 |  WP2.9 | (Data4) test release of LAM XML & PDF documentation |
 
 
-# Running the scripts 
+# Running the script Deliverable wp1.3  
+  This script  transforms an Excel file (compliant to specification in wp1.4) into RDF representation structured according to LAM-SKOS-AP application profile (described in wp1.2). 
 
-Running all the cells from the lam2vb3 jupyter notebook will generate the current RDF representation of the LAM project.
+## Installation 
+
+This transformation script is provided as a Jupyter Notebook. To run it is necessary to have Python 3.6+ installed along with [Jupyter Notebook](https://jupyter.org/install) or preferably [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html).
+
+To install Jupyter Lab please refer to [the installation manual](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html).  
+
+
+In addition the libraries listed in the *requirements.txt* file should be installed by running the following command.  
+
+```shell script
+pip install -r ./requirements.txt
+```
+
+## Usage
+ 
+Run the Jupyter Lab and then execute all the cells in the notebook file *lam2vb3_v1.ipynb*.
+The script, by default, searches for an excel file in the *./doc/semi-structured* folder and outputs RDF data in Turtle format in the *./output* folder. 
+
+It is possible to modify the input/output parameters by updating the constants in the first cell. 
+```Python
+INPUT_FILE = 'path/to/the/file'
+OUTPUT_FILE_LAM_PROPERTIES = 'path/to/the/file' 
+OUTPUT_FILE_LAM_CLASSES = 'path/to/the/file'
+OUTPUT_FILE_CELEX_CLASSES = 'path/to/the/file'
+OUTPUT_FILE_CELEX_PROPERTIES = 'path/to/the/file'
+``` 
+
+
+
+
