@@ -8,3 +8,4 @@ Deprecated
 shortuuid
 pathlib
 pylode
+click
