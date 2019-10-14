@@ -74,6 +74,7 @@ pip install -r ./requirements.txt
 
 ## Usage
  
+### Jupyer notebook
 Run the Jupyter Lab and then execute all the cells in the notebook file *lam2vb3_v1.ipynb*.
 The script, by default, searches for an excel file in the *./doc/semi-structured* folder and outputs RDF data in Turtle format in the *./output* folder. 
 
@@ -85,6 +86,18 @@ OUTPUT_FILE_LAM_CLASSES = 'path/to/the/file'
 OUTPUT_FILE_CELEX_CLASSES = 'path/to/the/file'
 OUTPUT_FILE_CELEX_PROPERTIES = 'path/to/the/file'
 ``` 
+
+###  Command line
+It is possible to run the same transformation operation using the command line. To run it simply execute
+
+```shell script
+cd lam4vb3
+python excrl2rdf.py 
+```
+
+This script by default expects to find the input file in the same folder as the Jupyter notebook 
+*./doc/semi-structured* and writes the results in the *./output*. 
+
 
 
 
