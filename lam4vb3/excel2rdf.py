@@ -124,7 +124,7 @@ def transform_files_in_folder(input, output):
     logging.info(f"Output: {out_}")
     logging.info(f"Executing the transformation for each Excel file (*.xlsx) in the input folder")
 
-    logging.info(f"Files: {file_list}")
+    # logging.info(f"Files: {file_list}")
 
     for file_path in file_list:
         logging.info(f"> Transforming {file_path.name}")
@@ -133,6 +133,8 @@ def transform_files_in_folder(input, output):
         except Exception:
             logging.exception("Could not transform the file. Most likely it does not respect "
                               "the conventions. Please update and try again. ", exc_info=True)
+        logging.info(f"> Moving the input file {file_path.name} into the output folder {out_} ")
+        shutil.move(str(file_path), str(out_))
 
 
 if __name__ == '__main__':

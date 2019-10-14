@@ -102,5 +102,7 @@ For example the following parameters shall generate complete output for *LAM_met
 python ./lam4vb3/excel2rdf.py ./docs/semi-structured/ ./output
 ```
 
+After the processing each input file is moved into the output folder as well. Leaving the input folder clean.
+This gives the possibility of installing a cron task to continuously monitor a particular input folder. 
 
 
