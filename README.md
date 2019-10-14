@@ -91,14 +91,16 @@ OUTPUT_FILE_CELEX_PROPERTIES = 'path/to/the/file'
 It is possible to run the same transformation operation using the command line. To run it simply execute
 
 ```shell script
-cd lam4vb3
-python excrl2rdf.py 
+python ./lam4vb3/excel2rdf.py ./path/to/input/folder ./path/to/output/folder
 ```
 
-This script by default expects to find the input file in the same folder as the Jupyter notebook 
-*./doc/semi-structured* and writes the results in the *./output*. 
+This script takes all Excel files (*.xlsx) from an input folder, transforms them into LAM-SKOS-AP RDF and writes them 
+into the output folder.
+For example the following parameters shall generate complete output for *LAM_metadata_04_ECO.xlsx*: input *./doc/semi-structured* and output  *./output*. 
 
-
+```shell script
+python ./lam4vb3/excel2rdf.py ./docs/semi-structured/ ./output
+```
 
 
 

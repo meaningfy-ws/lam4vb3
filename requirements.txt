@@ -9,3 +9,4 @@ shortuuid
 pathlib
 pylode
 click
+shutil

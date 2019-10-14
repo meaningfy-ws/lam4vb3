@@ -6,6 +6,8 @@ Email: costezki.eugen@gmail.com
 """
 
 import pathlib
+import shutil
+
 import build
 import pandas as pd
 import property_build
@@ -31,18 +33,26 @@ LAM_CLASSES_WS_NAME = "Classes complete"
 CELEX_PROPERTIES_WS_NAME = "CELEX metadata"
 CELEX_CLASSES_WS_NAME = "CELEX classes"
 
+LAM_p = "lam_project_properties_v2.ttl"
+LAM_c = "lam_project_classes_v2.ttl"
+CELEX_c = "celex_project_classes_v2.ttl"
+CELEX_p = "celex_project_properties_v2.ttl"
+
 logging.basicConfig()
 logging.getLogger().setLevel(logging.INFO)
 
 
-@click.command()
-@click.option('--input_f', help='The path to input file')
-def transform(input_f=None):
+def transform_file(input_f, output_f):
     """
+    :param output_f:
     :param input_f:
     :return:
     """
     input_file = pathlib.Path(input_f).resolve() if input_f else INPUT_FILE
+
+    output_f = output_f / input_f.stem
+    shutil.rmtree(output_f, ignore_errors=True)
+    output_f.mkdir()
 
     logging.info(f"Opening the file {input_file}")
 
@@ -66,33 +76,64 @@ def transform(input_f=None):
     start_time = time.time()
     logging.info(f"Transforming the CELEX classes into RDF.")
     celex_df_classes['DTS'] = celex_df_classes['DTS'].apply(str)
-    class_build.make_celex_class_worksheet(celex_df_classes, prefixes, OUTPUT_FILE_CELEX_CLASSES)
+    class_build.make_celex_class_worksheet(celex_df_classes, prefixes, output_f / CELEX_c)
     logging.info(
-        f"Successfully completed the transformation. The output is written into {OUTPUT_FILE_CELEX_CLASSES}")
+        f"Successfully completed the transformation. The output is written into {output_f / CELEX_c}")
     logging.info(f"Elapsed {(time.time() - start_time)} seconds")
 
     start_time = time.time()
     logging.info(f"Transforming the CELEX properties into RDF.")
-    property_build.make_property_worksheet(celex_df_properties, prefixes, OUTPUT_FILE_CELEX_PROPERTIES)
+    property_build.make_property_worksheet(celex_df_properties, prefixes, output_f / CELEX_p)
     logging.info(
-        f"Successfully completed the transformation. The output is written into {OUTPUT_FILE_CELEX_PROPERTIES}")
+        f"Successfully completed the transformation. The output is written into {output_f / CELEX_p}")
     logging.info(f"Elapsed {(time.time() - start_time)} seconds")
 
     start_time = time.time()
     logging.info(f"Transforming the LAM properties into RDF.")
-    property_build.make_property_worksheet(lam_df_properties, prefixes, OUTPUT_FILE_LAM_PROPERTIES)
-    logging.info(f"Successfully completed the transformation. The output is written into {OUTPUT_FILE_LAM_PROPERTIES}")
+    property_build.make_property_worksheet(lam_df_properties, prefixes, output_f / LAM_p)
+    logging.info(f"Successfully completed the transformation. The output is written into {output_f / LAM_p}")
     logging.info(f"Elapsed {(time.time() - start_time)} seconds")
 
     start_time = time.time()
     logging.info(f"Transforming the LAM classes into RDF.")
-    class_build.make_class_worksheet(lam_df_classes, prefixes, OUTPUT_FILE_LAM_CLASSES)
+    class_build.make_class_worksheet(lam_df_classes, prefixes, output_f / LAM_c)
     logging.info(
-        f"Successfully completed the transformation. The output is written into {OUTPUT_FILE_LAM_CLASSES}")
+        f"Successfully completed the transformation. The output is written into {output_f / LAM_c}")
     logging.info(f"Elapsed {(time.time() - start_time)} seconds")
 
     start_time = time.time()
 
 
+@click.command()
+@click.argument("input", type=click.Path(exists=True, file_okay=False, dir_okay=True))
+@click.argument("output", type=click.Path(exists=True, file_okay=False, dir_okay=True))
+def transform_files_in_folder(input, output):
+    """
+        takes all Excel files from an input folder, transforms them into LAM-SKOS-AP RDF
+        and writes them into the output folder.
+    :param input:
+    :param output:
+    :return:
+    """
+    in_ = pathlib.Path(input).resolve()
+    out_ = pathlib.Path(output).resolve()
+
+    file_list = list(in_.glob("*.xlsx*"))
+
+    logging.info(f"Input: {in_}")
+    logging.info(f"Output: {out_}")
+    logging.info(f"Executing the transformation for each Excel file (*.xlsx) in the input folder")
+
+    logging.info(f"Files: {file_list}")
+
+    for file_path in file_list:
+        logging.info(f"> Transforming {file_path.name}")
+        try:
+            transform_file(file_path, out_)
+        except Exception:
+            logging.exception("Could not transform the file. Most likely it does not respect "
+                              "the conventions. Please update and try again. ", exc_info=True)
+
+
 if __name__ == '__main__':
-    transform()
+    transform_files_in_folder()
