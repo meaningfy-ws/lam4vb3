@@ -16,6 +16,7 @@ import logging
 import rdflib
 from rdflib.namespace import RDF, RDFS, SKOS, DCTERMS, OWL, XMLNS, XSD
 from datetime import date
+import time
 
 # INPUT_FILE = pathlib.Path("../docs/semi-structured/LAM_metadata_03.xlsx").resolve()
 INPUT_FILE = pathlib.Path("../docs/semi-structured/LAM_metadata_04_ECO.xlsx").resolve()
@@ -29,6 +30,9 @@ LAM_PROPERTIES_WS_NAME = "LAM metadata"
 LAM_CLASSES_WS_NAME = "Classes complete"
 CELEX_PROPERTIES_WS_NAME = "CELEX metadata"
 CELEX_CLASSES_WS_NAME = "CELEX classes"
+
+logging.basicConfig()
+logging.getLogger().setLevel(logging.INFO)
 
 
 @click.command()
@@ -59,25 +63,35 @@ def transform(input_f=None):
     logging.info(f"Finished reading {len(prefixes)} Prefix definitions")
     # transforming and writing the output
 
-    logging.info(f"Transforming the LAM properties into RDF.")
-    property_build.make_property_worksheet(lam_df_properties, prefixes, OUTPUT_FILE_LAM_PROPERTIES)
-    logging.info(f"Successfully completed the transformation. The output is written into {OUTPUT_FILE_LAM_PROPERTIES}")
-
-    logging.info(f"Transforming the LAM classes into RDF.")
-    class_build.make_class_worksheet(lam_df_classes, prefixes, OUTPUT_FILE_LAM_CLASSES)
-    logging.info(
-        f"Successfully completed the transformation. The output is written into {OUTPUT_FILE_LAM_CLASSES}")
-
+    start_time = time.time()
     logging.info(f"Transforming the CELEX classes into RDF.")
     celex_df_classes['DTS'] = celex_df_classes['DTS'].apply(str)
     class_build.make_celex_class_worksheet(celex_df_classes, prefixes, OUTPUT_FILE_CELEX_CLASSES)
     logging.info(
         f"Successfully completed the transformation. The output is written into {OUTPUT_FILE_CELEX_CLASSES}")
+    logging.info(f"Elapsed {(time.time() - start_time)} seconds")
 
+    start_time = time.time()
     logging.info(f"Transforming the CELEX properties into RDF.")
     property_build.make_property_worksheet(celex_df_properties, prefixes, OUTPUT_FILE_CELEX_PROPERTIES)
     logging.info(
         f"Successfully completed the transformation. The output is written into {OUTPUT_FILE_CELEX_PROPERTIES}")
+    logging.info(f"Elapsed {(time.time() - start_time)} seconds")
+
+    start_time = time.time()
+    logging.info(f"Transforming the LAM properties into RDF.")
+    property_build.make_property_worksheet(lam_df_properties, prefixes, OUTPUT_FILE_LAM_PROPERTIES)
+    logging.info(f"Successfully completed the transformation. The output is written into {OUTPUT_FILE_LAM_PROPERTIES}")
+    logging.info(f"Elapsed {(time.time() - start_time)} seconds")
+
+    start_time = time.time()
+    logging.info(f"Transforming the LAM classes into RDF.")
+    class_build.make_class_worksheet(lam_df_classes, prefixes, OUTPUT_FILE_LAM_CLASSES)
+    logging.info(
+        f"Successfully completed the transformation. The output is written into {OUTPUT_FILE_LAM_CLASSES}")
+    logging.info(f"Elapsed {(time.time() - start_time)} seconds")
+
+    start_time = time.time()
 
 
 if __name__ == '__main__':
