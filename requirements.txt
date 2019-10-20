@@ -9,4 +9,4 @@ shortuuid
 pathlib
 pylode
 click
-shutil
+rdf2gremlin
