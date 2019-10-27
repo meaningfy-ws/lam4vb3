@@ -1,0 +1,12 @@
+{% extends "doc.html" %}
+{% import "fragment_utils.html" as fragment %}
+
+
+{% block main %}
+    <h1>Class definition</h1>
+    {% for concept in data["skos:Concept"] %}
+        {{ fragment.build_concept(data["skos:Concept"]  ) }}
+    {% endfor %}
+
+{% endblock %}
+

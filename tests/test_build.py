@@ -14,6 +14,7 @@ from lam4vb3 import build
 
 
 class MyTestCase(unittest.TestCase):
+    # TODO: make it run with the current code, or build a new test suite
 
     def setUp(self) -> None:
         self.test_df = pd.DataFrame.from_dict(

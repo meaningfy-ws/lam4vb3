@@ -7,15 +7,12 @@ Email: costezki.eugen@gmail.com
 
 import unittest
 import logging
-import pathlib
-
 import rdf2g
 import rdflib
-from pprint import pprint
-from gremlin_python.process.graph_traversal import __
+import lam4vb3
 
-LAM_PROPERTY_EXAMPLE = pathlib.Path("../output/lam_project_properties_v2.ttl").resolve()
-LAM_CLASS_EXAMPLE = pathlib.Path("../output/lam_project_classes_v2.ttl").resolve()
+LAM_PROPERTY_EXAMPLE = lam4vb3.LAM_PROPERTIES_TTL
+LAM_CLASS_EXAMPLE = lam4vb3.LAM_CLASSES_TTL
 
 
 class MyTestCase(unittest.TestCase):

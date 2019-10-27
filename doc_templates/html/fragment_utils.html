@@ -1,0 +1,49 @@
+{% macro build_concept(concept) -%}
+    <h2 id="#{{ concept["iri"] }}">{{ concept["skos:prefLabel"] }}<sup title="Concept">C</sup></h2>
+    <section>
+        {{ build_metadata(concept) }}
+        {{ build_editorial_content(concept) }}
+    </section>
+{%- endmacro %}
+
+{% macro build_metadata(resource) -%}
+    <dl>
+        {{ build_description_item(resource, "iri", "Resource IRI" ,True) }}
+        {{ build_description_item(resource, "dct:created", "Created" ,False) }}
+        {{ build_description_item(resource, "dct:identifier", "Identifier" ,False) }}
+        {{ build_description_item(resource, "skos:notation", "Notation" ,False) }}
+    </dl>
+{%- endmacro %}
+
+{% macro build_editorial_content(resource) -%}
+    <dl>
+        {{ build_description_item_editorial(resource, "skos:definition", "Definition" ,False) }}
+        {{ build_description_item_editorial(resource, "skos:scopeNote", "Scope note" ,False) }}
+        {{ build_description_item_editorial(resource, "skos:example", "Example" ,True) }}
+        {{ build_description_item_editorial(resource, "skos:editorialNote", "Editorial note" ,False) }}
+        {{ build_description_item_editorial(resource, "skos:historyNote", "History note" ,False) }}
+        {{ build_description_item_editorial(resource, "skos:changeNote", "Change note" ,False) }}
+    </dl>
+{%- endmacro %}
+
+{% macro build_description_item(resource, key, term, urlize=False) -%}
+    {% if resource[key] %}
+        <dt title="{{ key }}">{{ term }}</dt>
+        {% if urlize %}
+            <dd title="{{ key }}">{{ resource[key] | urlize(target='_blank') }}</dd>
+        {% else %}
+            <dd title="{{ key }}">{{ resource[key] }}</dd>
+        {% endif %}
+    {% endif %}
+{%- endmacro %}
+
+{% macro build_description_item_editorial(resource, key, term, codify=False) -%}
+    {% if resource[key] %}
+        <dt title="{{ key }}">{{ term }}</dt>
+        {% if codify %}
+            <dd title="{{ key }}"><code>{{ resource[key]|e|replace("\n","<br/>") }}</code></dd>
+        {% else %}
+            <dd title="{{ key }}">{{ resource[key]|e|replace("\n","<br/>") }}</dd>
+        {% endif %}
+    {% endif %}
+{%- endmacro %}

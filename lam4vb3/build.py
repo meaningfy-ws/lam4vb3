@@ -6,18 +6,15 @@ Email: costezki.eugen@gmail.com
 """
 import collections
 import re
-# import rdflib as rdf
 import uuid
 import warnings
 from abc import ABC, abstractmethod
 from datetime import date
-
-# from lam4vb3 import lam_utils
-import lam_utils
-# import lam4vb3.lam_utils as lam_utils
 import pandas as pd
 import rdflib
 from rdflib.namespace import RDF, SKOS, DCTERMS, XSD
+
+from lam4vb3 import lam_utils
 
 SHACL = rdflib.Namespace("http://www.w3.org/ns/shacl#")
 
@@ -1162,7 +1159,7 @@ class ConceptMultiColumnConstraintMaker(PlainTripleMaker):
         :return:
         """
 
-        result_triples=[]
+        result_triples = []
         name = "Annotated with "
 
         row_subject = self.handle_row_uri(row_index)

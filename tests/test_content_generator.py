@@ -6,7 +6,9 @@ Email: costezki.eugen@gmail.com
 """
 import shutil
 import unittest
-from lam2doc.abstract_generator import *
+
+from lam2doc import CONCEPT_QNAME, CONCEPT_SCHEME_QNAME
+from lam2doc.content_generator import LAMGremlinGenerator
 from tests import LAM_PROPERTY_EXAMPLE, LAM_PROPERTY_CONTENT_JSON, LAM_PROPERTY_CONTENT_XML
 
 

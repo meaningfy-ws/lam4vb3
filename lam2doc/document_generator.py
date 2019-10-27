@@ -8,6 +8,7 @@ from pathlib import Path
 
 import jinja2
 
+from lam2doc import HTML_TEMPLATE_FOLDER
 from lam2doc.abstract_generator import ContentGenerator
 
 
@@ -16,7 +17,7 @@ class JinjaGenerator(ContentGenerator):
         generate HTML document from a given data content
     """
 
-    def __init__(self, main_template_name: str, template_folder: Path, data: dict = None,
+    def __init__(self, main_template_name: str, template_folder: Path = HTML_TEMPLATE_FOLDER, data: dict = None,
                  configuration: dict = None, ) -> None:
         """
             Document builder form a template using two top level data contexts: `data` and `configuration`.
