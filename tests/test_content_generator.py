@@ -4,21 +4,10 @@ Date: 20.10.19
 Author: Eugeniu Costetchi
 Email: costezki.eugen@gmail.com
 """
-
+import shutil
 import unittest
-from lam2doc.content_generator import *
-
-LAM_PROPERTY_EXAMPLE = (
-        pathlib.Path(__file__).resolve().parent.parent / "output/lam_project_properties_v2.ttl").resolve()
-
-LAM_CLASS_EXAMPLE = (
-        pathlib.Path(__file__).resolve().parent.parent / "output/lam_project_classes_v2.ttl").resolve()
-
-LAM_PROPERTY_CONTENT_JSON = (
-        pathlib.Path(__file__).resolve().parent.parent / "output/lam_project_properties.json").resolve()
-
-LAM_CLASS_CONTENT_JSON = (
-        pathlib.Path(__file__).resolve().parent.parent / "output/lam_project_classes.json").resolve()
+from lam2doc.abstract_generator import *
+from tests import LAM_PROPERTY_EXAMPLE, LAM_PROPERTY_CONTENT_JSON, LAM_PROPERTY_CONTENT_XML
 
 
 class MyTestCase(unittest.TestCase):
@@ -37,8 +26,15 @@ class MyTestCase(unittest.TestCase):
         assert CONCEPT_SCHEME_QNAME in content, "no concept scheme known"
         assert len(content[CONCEPT_SCHEME_QNAME]) > 0, "no concept scheme loaded"
 
-    def test_serialisation(self):
+    def test_serialisation_json(self):
+        shutil.rmtree(str(LAM_PROPERTY_CONTENT_JSON), ignore_errors=True)
         self.gen.to_json(str(LAM_PROPERTY_CONTENT_JSON))
+        assert LAM_PROPERTY_CONTENT_JSON.exists(), "File not created"
+
+    def test_serialisation_xml(self):
+        shutil.rmtree(str(LAM_PROPERTY_CONTENT_XML), ignore_errors=True)
+        self.gen.to_xml(str(LAM_PROPERTY_CONTENT_XML))
+        assert LAM_PROPERTY_CONTENT_XML.exists(), "File not created"
 
 
 if __name__ == '__main__':

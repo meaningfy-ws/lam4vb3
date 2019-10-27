@@ -6,8 +6,7 @@ Email: costezki.eugen@gmail.com
 """
 import rdflib
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, XMLNS, XSD
-# from lam4vb3 import lam_utils, build
-import lam_utils, build
+from lam4vb3 import lam_utils, build
 
 SHACL = rdflib.Namespace("http://www.w3.org/ns/shacl#")
 LAM = rdflib.Namespace("http://publications.europa.eu/ontology/lam-skos-ap#")
@@ -356,7 +355,7 @@ def make_class_worksheet(lam_df_classes, prefixes, output_file):
     :return:
     """
     graph = build.make_graph(prefixes)
-    create_cs(graph, cs=LAM_CLASS_CS, cs_label= "LAM classes")
+    create_cs(graph, cs=LAM_CLASS_CS, cs_label="LAM classes")
     create_concepts(lam_df_classes, graph)
     create_collections(lam_df_classes, graph)
     graph.serialize(str(output_file), format='turtle', )
@@ -371,6 +370,6 @@ def make_celex_class_worksheet(celex_df_classes, prefixes, output_file):
     :return:
     """
     graph = build.make_graph(prefixes)
-    create_cs(graph, cs=CELEX_CS, cs_label= "CELEX classes")
+    create_cs(graph, cs=CELEX_CS, cs_label="CELEX classes")
     create_celex_concepts(celex_df_classes, graph)
     graph.serialize(str(output_file), format='turtle', )

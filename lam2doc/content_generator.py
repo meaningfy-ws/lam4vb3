@@ -1,33 +1,16 @@
 """
 contentGenerator
-Date: 18.10.19
+Date: 27.10.19
 Author: Eugeniu Costetchi
 Email: costezki.eugen@gmail.com
 """
 
-from abc import ABC, abstractmethod
+import dicttoxml
 import rdf2g
-import logging
-import pathlib
 import json
-
 import rdflib
-
-CONCEPT_SCHEME_QNAME = "skos:ConceptScheme"
-CONCEPT_QNAME = "skos:Concept"
-
-
-class ContentGenerator(ABC):
-    """
-    generic data content generator
-    """
-
-    @abstractmethod
-    def generate(self):
-        """
-        Generates the data content object from a data source
-        :return: dict
-        """
+from lam2doc import CONCEPT_SCHEME_QNAME, CONCEPT_QNAME
+from lam2doc.abstract_generator import ContentGenerator
 
 
 class LAMGremlinGenerator(ContentGenerator):
@@ -53,33 +36,33 @@ class LAMGremlinGenerator(ContentGenerator):
         # self.query_dict = {"skos:ConceptScheme": "skos:ConceptScheme",
         #                    "skos:Concept": "skos:Concept"}
 
-    def generate(self, force=False):
+    def __generate_tree(self, node_type, default_max_depth=3):
+        css = rdf2g.get_nodes_of_type(self.g, node_type)
+        css_trees = [rdf2g.generate_traversal_tree(self.g, cs, default_max_depth) for cs in css]
+        css_exp_tees = [rdf2g.expand_tree(self.g, cs_tree) for cs_tree in css_trees]
+        # flatten the dicts
+        css_exp_tees = [i[0] if len(i) == 1 else i for i in css_exp_tees]
+        self.content[node_type] = css_exp_tees
+
+    def generate(self, force=False, ):
         if force:
             self.content = None
 
         if not self.content:
             self.content = {}
-
             # look for skos:ConceptSchemes
-            css = rdf2g.get_nodes_of_type(self.g, CONCEPT_SCHEME_QNAME)
-            css_trees = [rdf2g.generate_traversal_tree(self.g, cs, 1) for cs in css]
-            css_exp_tees = [rdf2g.expand_tree(self.g, cs_tree) for cs_tree in css_trees]
-            # flatten the dicts
-            css_exp_tees = [i[0] if len(i) > 1 else i for i in css_exp_tees]
-            self.content[CONCEPT_SCHEME_QNAME] = css_exp_tees
-
-            # look for skos:ConceptSchemes
-            cs = rdf2g.get_nodes_of_type(self.g, CONCEPT_QNAME)
-            cs_trees = [rdf2g.generate_traversal_tree(self.g, c) for c in cs]
-            cs_exp_tees = [rdf2g.expand_tree(self.g, c_tree) for c_tree in cs_trees]
-            cs_exp_tees = [i[0] if len(i) > 1 else i for i in cs_exp_tees]
-            self.content[CONCEPT_QNAME] = cs_exp_tees
-
+            self.__generate_tree(CONCEPT_SCHEME_QNAME)
+            # look for skos:Concept
+            self.__generate_tree(CONCEPT_QNAME)
         return self.content
 
     def to_json(self, output_file_name):
-        if not self.content:
-            self.generate()
+        with open(str(output_file_name), "w") as json_file:
+            json.dump(self.generate(), json_file)
 
-        with open(output_file_name, "w") as json_file:
-            json.dump(self.content, json_file)
+    def to_xml(self, output_file_name):
+        with open(str(output_file_name), "wb") as xml_file:
+            xml_file.write(dicttoxml.dicttoxml(self.generate(), attr_type=True, cdata=True))
+
+    def serialise(self, output_file):
+        self.to_json(output_file)

@@ -1,8 +1,6 @@
 uuid
 rdflib
 pandas
-jupyter
-jupyterlab
 xlrd
 Deprecated
 shortuuid
@@ -10,3 +8,5 @@ pathlib
 pylode
 click
 rdf2gremlin
+dicttoxml
+jinja2
