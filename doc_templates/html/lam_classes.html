@@ -2,10 +2,21 @@
 {% import "fragment_utils.html" as fragment %}
 
 
+{% block header %}
+<h1 class="title"> LAM class specification </h1>
+        <h2>[Standard specification]</h2>
+        <div class="authors col-span">
+            <div class="author">
+                <div>Publications Office of the European Union </div>
+            </div>
+        </div>
+{% endblock %}
+
+
 {% block main %}
     <h1>Class definition</h1>
     {% for concept in data["skos:Concept"] %}
-        {{ fragment.build_concept(data["skos:Concept"]  ) }}
+        {{ fragment.build_lam_property_concept(concept) }}
     {% endfor %}
 
 {% endblock %}

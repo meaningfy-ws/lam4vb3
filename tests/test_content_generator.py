@@ -9,7 +9,8 @@ import unittest
 
 from lam2doc import CONCEPT_QNAME, CONCEPT_SCHEME_QNAME
 from lam2doc.content_generator import LAMGremlinGenerator
-from tests import LAM_PROPERTY_EXAMPLE, LAM_PROPERTY_CONTENT_JSON, LAM_PROPERTY_CONTENT_XML
+from tests import LAM_PROPERTY_EXAMPLE, LAM_PROPERTY_CONTENT_JSON, LAM_PROPERTY_CONTENT_XML, LAM_CLASS_CONTENT_JSON, \
+    LAM_CLASS_EXAMPLE
 
 
 class MyTestCase(unittest.TestCase):
@@ -32,6 +33,12 @@ class MyTestCase(unittest.TestCase):
         shutil.rmtree(str(LAM_PROPERTY_CONTENT_JSON), ignore_errors=True)
         self.gen.to_json(str(LAM_PROPERTY_CONTENT_JSON))
         assert LAM_PROPERTY_CONTENT_JSON.exists(), "File not created"
+
+    def test_serialisation_json_2(self):
+        class_gen = LAMGremlinGenerator(str(LAM_CLASS_EXAMPLE))
+        shutil.rmtree(str(LAM_CLASS_CONTENT_JSON), ignore_errors=True)
+        class_gen.to_json(str(LAM_CLASS_CONTENT_JSON))
+        assert LAM_CLASS_CONTENT_JSON.exists(), "File not created"
 
     def test_serialisation_xml(self):
         shutil.rmtree(str(LAM_PROPERTY_CONTENT_XML), ignore_errors=True)

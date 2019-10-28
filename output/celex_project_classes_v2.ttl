@@ -55,11 +55,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 celexd:c_2_A_OJC a skos:Concept ;
-    lam:hasPropertyConfiguration lamd:res_8kMJqXxNfMYwhcTpuQoMmZ,
-        lamd:res_S6gupptV432R4VeDS86Wug,
-        lamd:res_jSbuztS5KZU9gRzVTMa8P3,
-        lamd:res_s2pHtDxNaBgYQjYkzA2HeD ;
-    dct:created "2019-09-27"^^xsd:date ;
+    lam:hasPropertyConfiguration lamd:res_2wadZ8PxEVBL9VPACnG94b,
+        lamd:res_E6shdojQFSQ4s5ZZs2FkWQ,
+        lamd:res_HUJaMo9E4PMD5XpEzCsfWZ,
+        lamd:res_fRmRJ6kQU4eo8VnBNnQJ8c ;
+    dct:created "2019-10-14"^^xsd:date ;
     skos:editorialNote "Last publication in OJ-C in 2012"@en ;
     skos:example "22012A1013(01): Monetary Agreement between the European Union and the Principality of Monaco"@en ;
     skos:inScheme celexd:CelexLegalDocument ;
@@ -67,22 +67,22 @@ celexd:c_2_A_OJC a skos:Concept ;
     skos:prefLabel "Agreements with Member or non-member States  or international organisations"@en .
 
 celexd:c_2_A_OJL a skos:Concept ;
-    lam:hasPropertyConfiguration lamd:res_ADBPiW4Tjsbsbw2XQsxhvS,
-        lamd:res_DwVfW8bxwbxbm7vUiz72wR,
-        lamd:res_gQZwzbVDppW5fzufQLEwuW,
-        lamd:res_sGemVvk2FRMGYTsoyQbBgn ;
-    dct:created "2019-09-27"^^xsd:date ;
+    lam:hasPropertyConfiguration lamd:res_7gVMrPY6NuowTLhBowbEFf,
+        lamd:res_RbxoYXESTVPSvy9giaXEMV,
+        lamd:res_bT5M9XCpE2iabXrdB8h3Md,
+        lamd:res_tv3uzMDdA9SUuVEcBX7AXL ;
+    dct:created "2019-10-14"^^xsd:date ;
     skos:example "22014A1121(01): Agreement between the European Union and Ukraine on the status of the European Union Advisory Mission for Civilian Security Sector Reform Ukraine (EUAM Ukraine)"@en ;
     skos:inScheme celexd:CelexLegalDocument ;
     skos:notation "2_A_OJL" ;
     skos:prefLabel "Agreements with Member or non-member States  or international organisations"@en .
 
 celexd:c_5_AE a skos:Concept ;
-    lam:hasPropertyConfiguration lamd:res_9iXjaPssLgHz7bke8PC3oc,
-        lamd:res_Me9rTHJP2gpR8DcLipxpmK,
-        lamd:res_TAVdfLakgKd2arEuUsRwSD,
-        lamd:res_pTKp69BGuM9dKVRwRz5WXH ;
-    dct:created "2019-09-27"^^xsd:date ;
+    lam:hasPropertyConfiguration lamd:res_GHkWgAbjKy3zGcCEMnbvPC,
+        lamd:res_rvC7PyiccDhSkBdZNG2E58,
+        lamd:res_xYJWQAaUZ4RiFuvkJ6kJdm,
+        lamd:res_xg3CsAPNpv8uKB9ftC6QBk ;
+    dct:created "2019-10-14"^^xsd:date ;
     skos:editorialNote " code AC was gradually replaced by the new codes AE and IE."@en,
         " the descriptor AC was used for the opinions of the Economic and Social Committee. As code C was reserved for Commission documents"@en,
         "Between 1958 and 2000"@en ;
@@ -92,11 +92,11 @@ celexd:c_5_AE a skos:Concept ;
     skos:prefLabel "Opinions on consultation of the European Economic and Social Committee"@en .
 
 celexd:c_5_AG a skos:Concept ;
-    lam:hasPropertyConfiguration lamd:res_EEzVzV5MDyEmMAiJz5SnGR,
-        lamd:res_PKiuXtQ3nuhy85vp9DxcuY,
-        lamd:res_QgChwnmokLy4NXC462NRz6,
-        lamd:res_Rxt8d2pZNce8Z7yPNPN3mn ;
-    dct:created "2019-09-27"^^xsd:date ;
+    lam:hasPropertyConfiguration lamd:res_RjiibtBaexQa5rRf3vuZsW,
+        lamd:res_VGoyiprhkYPmCCR4Zb4YaR,
+        lamd:res_rirj3xpvXA5LBFv4VnFMR8,
+        lamd:res_stDtazgEuN9Jdzt2HgyLSM ;
+    dct:created "2019-10-14"^^xsd:date ;
     skos:editorialNote "Before 1999: The CELEX numbers of all acts were based on the date of publication followed by a split number."@en ;
     skos:example "52015AG0010(01) Position (EU) No 10/2015 of the Council at first reading with a view to the adoption of a Regulation of the European Parliament and of the Council amending Council Regulation (EC) No 515/97 …"@en,
         "52015AG0010(02) Statement of Council's reasons: Position (EU) No 10/2015 of the Council at first reading with a view to the adoption of a Regulation of the European Parliament and of the Council amending Council Regulation (EC) No 515/97 …"@en ;
@@ -105,11 +105,11 @@ celexd:c_5_AG a skos:Concept ;
     skos:prefLabel "5*AG Council positions and statement of reasons"@en .
 
 celexd:c_5_IE a skos:Concept ;
-    lam:hasPropertyConfiguration lamd:res_7PETYe34FsZ5oeQcCKumNi,
-        lamd:res_HHKp9b5fYwrCsSXZyyvDXR,
-        lamd:res_RLYSQnJHb87Skmh6kycRTk,
-        lamd:res_koTUr3UptRAgzhRU7fgWZY ;
-    dct:created "2019-09-27"^^xsd:date ;
+    lam:hasPropertyConfiguration lamd:res_8MqF6TbNpNN85SzAGuhEpE,
+        lamd:res_J5HR8GYTJJ7rDt3W9q4R9c,
+        lamd:res_ftLDEi9E8Zc4ZE3Hj7UKvB,
+        lamd:res_zmu3g5oqFTc4BSqqF7cVKX ;
+    dct:created "2019-10-14"^^xsd:date ;
     skos:editorialNote " code AC was gradually replaced by the new codes AE and IE."@en,
         " the descriptor AC was used for the opinions of the Economic and Social Committee. As code C was reserved for Commission documents"@en,
         "Between 1958 and 2000"@en ;
@@ -119,11 +119,11 @@ celexd:c_5_IE a skos:Concept ;
     skos:prefLabel "Own-initiative opinions of the European Economic and Social Committee "@en .
 
 celexd:c_5_PC_EUR a skos:Concept ;
-    lam:hasPropertyConfiguration lamd:res_E9rXAHaJ2nycF75BYNLWEQ,
-        lamd:res_KLaq2CbgXo9yXDitr3uXbZ,
-        lamd:res_QiLgkdvFjKQKfxm54HE32a,
-        lamd:res_sQbJD9uMdU74d75JvgcaJa ;
-    dct:created "2019-09-27"^^xsd:date ;
+    lam:hasPropertyConfiguration lamd:res_FWPqFNRmCwfnLKuuGaSFdJ,
+        lamd:res_Sg5y3aTfu64dE8Rp3DqJum,
+        lamd:res_nhev7JRVbCQxZ777HmygbC,
+        lamd:res_ymNnMqe3dmHKEUkVCn9rxJ ;
+    dct:created "2019-10-14"^^xsd:date ;
     skos:editorialNote "Also communications from the Commission concerning the position of the Council (belonging to an interinstitutional procedure) are in this group (e.g. 52015PC0128)."@en ;
     skos:example " the Republic of Estonia"@en,
         " …"@en,
@@ -135,33 +135,33 @@ celexd:c_5_PC_EUR a skos:Concept ;
         "COM - legislative proposals"@en .
 
 celexd:c_5_XC_OJC a skos:Concept ;
-    lam:hasPropertyConfiguration lamd:res_9bs6AgCnGF6NksLSP8D3Mi,
-        lamd:res_FnvnTfL2xvcuCeQGeXY7LV,
-        lamd:res_aYQuzBXaGCJ3UvQursDgRR,
-        lamd:res_vbSu9MqeZHARR3EUEuGWZY ;
-    dct:created "2019-09-27"^^xsd:date ;
+    lam:hasPropertyConfiguration lamd:res_LvtpPEnseWXsFQ9toiQCGi,
+        lamd:res_iZ7hDR4PQqXSCnARy3J6pR,
+        lamd:res_xcMkzvXJdapuV4eyMdrq32,
+        lamd:res_ySSM4GTeHvwBkjVZ6wXTRY ;
+    dct:created "2019-10-14"^^xsd:date ;
     skos:example "52014XC1205(01): Authorisation for State aid pursuant to Articles 107 and 108 of the Treaty on the Functioning of the European Union — Cases where the Commission raises no objections Text with EEA relevance"@en ;
     skos:inScheme celexd:CelexLegalDocument ;
     skos:notation "5_XC_OJC" ;
     skos:prefLabel "Other documents of the Commission OJ-C"@en .
 
 celexd:c_5_XC_OJL a skos:Concept ;
-    lam:hasPropertyConfiguration lamd:res_AGhLszCEL4w46NoYhNFdwT,
-        lamd:res_dw2SgxKqvWsuWqgzg5GdFW,
-        lamd:res_qL9pexfJX7ZqnRXVxP5mui,
-        lamd:res_srZbjNcmogi6fuZnRXgTeg ;
-    dct:created "2019-09-27"^^xsd:date ;
+    lam:hasPropertyConfiguration lamd:res_JPts4Hx7xY9g2Yup8Fj7kD,
+        lamd:res_N3AuoMgsUVr5auqTpWd8yW,
+        lamd:res_NVLhaYFaT9qpQuCsi4xgmd,
+        lamd:res_fPJecLyfw65ooVuEKkcwfC ;
+    dct:created "2019-10-14"^^xsd:date ;
     skos:example "52011XC0514(01): Commission’s statements"@en ;
     skos:inScheme celexd:CelexLegalDocument ;
     skos:notation "5_XC_OJL" ;
     skos:prefLabel "Other documents of the Commission OJ-L"@en .
 
 celexd:c_6_CA a skos:Concept ;
-    lam:hasPropertyConfiguration lamd:res_2q8aWYAgHuxdBkCAntXiWn,
-        lamd:res_UPEjpsbUUUk7LpQg5bP3YM,
-        lamd:res_uJYfwco3Ce6YZnyuHnWKXE,
-        lamd:res_ze6iZcHpXmGvMSyKecasS9 ;
-    dct:created "2019-09-27"^^xsd:date ;
+    lam:hasPropertyConfiguration lamd:res_W4Ct7EVFcBKF9N5ipbfmaB,
+        lamd:res_gC6tjwZJWedhfXMbWiFYv5,
+        lamd:res_qrGNAJFafHhets95M3G8N3,
+        lamd:res_uyx4VThWmrrWden5wg4Mq7 ;
+    dct:created "2019-10-14"^^xsd:date ;
     skos:editorialNote "The communications from the Court published before  1 January 2008 were classified under sector C."@en ;
     skos:example "62014CA0348: Case C-348/14: Judgment of the Court (Sixth Chamber) of 9 July 2015 (request for a preliminary ruling from the Judecătoria Câmpulung — Romania) — Maria Bucura v SC Bancpost SA (Reference for a preliminary ruling — Consumer protection — Directive 87/102/EEC…"@en ;
     skos:inScheme celexd:CelexLegalDocument ;
@@ -169,261 +169,261 @@ celexd:c_6_CA a skos:Concept ;
     skos:prefLabel "Judicial information: Judgment"@en .
 
 celexd:c_6_CB a skos:Concept ;
-    lam:hasPropertyConfiguration lamd:res_9XtmKiBLpC9q7y5EfXErB9,
-        lamd:res_HbpyADG9VWF6Gi5kqMbGbC,
-        lamd:res_VjN5oxpphnQjaLUX2wxKCo,
-        lamd:res_cuwLJez4bwUjqRxP3JN5M8 ;
-    dct:created "2019-09-27"^^xsd:date ;
+    lam:hasPropertyConfiguration lamd:res_3ocEfTuTx3ZX58XnuEH87S,
+        lamd:res_KNJcncMG6AYw3oSecUTfi5,
+        lamd:res_U74TQaYWmwQfXZugCosq2D,
+        lamd:res_mJEocyqcrtsuhR2mPbGw4K ;
+    dct:created "2019-10-14"^^xsd:date ;
     skos:editorialNote "The communications from the Court published before  1 January 2008 were classified under sector C."@en ;
     skos:example "62014CB0124: Case C-124/14: Order of the President of the Court of 23 January 2015 — European Commission v Italian Republic"@en ;
     skos:inScheme celexd:CelexLegalDocument ;
     skos:notation "6_CB" ;
     skos:prefLabel "Judicial information: Order"@en .
 
-lamd:res_2q8aWYAgHuxdBkCAntXiWn a lam:PropertyConfiguration ;
-    lam:path lam:dts ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dts to 6" ;
-    sh:value "6" .
-
-lamd:res_7PETYe34FsZ5oeQcCKumNi a lam:PropertyConfiguration ;
-    lam:path lam:dts ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dts to 5" ;
-    sh:value "5" .
-
-lamd:res_8kMJqXxNfMYwhcTpuQoMmZ a lam:PropertyConfiguration ;
-    lam:path lam:dta ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dta to Date of publication" ;
-    sh:value "Date of publication" .
-
-lamd:res_9XtmKiBLpC9q7y5EfXErB9 a lam:PropertyConfiguration ;
-    lam:path lam:dta ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dta to Case number" ;
-    sh:value "Case number" .
-
-lamd:res_9bs6AgCnGF6NksLSP8D3Mi a lam:PropertyConfiguration ;
-    lam:path lam:dta ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dta to Date of publication" ;
-    sh:value "Date of publication" .
-
-lamd:res_9iXjaPssLgHz7bke8PC3oc a lam:PropertyConfiguration ;
-    lam:path lam:dts ;
-    skos:editorialNote " EESC-2014-01723-00-00-AC-TRA: it is not mentioned in the Official Journal. It can be found on ECSC web page." ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dts to Internal number " ;
-    sh:value "Internal number " .
-
-lamd:res_ADBPiW4Tjsbsbw2XQsxhvS a lam:PropertyConfiguration ;
+lamd:res_2wadZ8PxEVBL9VPACnG94b a lam:PropertyConfiguration ;
     lam:path lam:dts ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on lam:dts to Date of publication" ;
     sh:value "Date of publication" .
 
-lamd:res_AGhLszCEL4w46NoYhNFdwT a lam:PropertyConfiguration ;
-    lam:path lam:dts ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dts to Date of publication" ;
-    sh:value "Date of publication" .
-
-lamd:res_DwVfW8bxwbxbm7vUiz72wR a lam:PropertyConfiguration ;
+lamd:res_3ocEfTuTx3ZX58XnuEH87S a lam:PropertyConfiguration ;
     lam:path lam:dtt ;
     sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dtt to A" ;
-    sh:value "A" .
+    sh:name "Constraint on lam:dtt to CB" ;
+    sh:value "CB" .
 
-lamd:res_E9rXAHaJ2nycF75BYNLWEQ a lam:PropertyConfiguration ;
-    lam:path lam:dts ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dts to COM number" ;
-    sh:value "COM number" .
-
-lamd:res_EEzVzV5MDyEmMAiJz5SnGR a lam:PropertyConfiguration ;
+lamd:res_7gVMrPY6NuowTLhBowbEFf a lam:PropertyConfiguration ;
     lam:path lam:dta ;
     sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dta to Official No (PPF)" ;
-    sh:value "Official No (PPF)" .
+    sh:name "Constraint on lam:dta to Date of publication" ;
+    sh:value "Date of publication" .
 
-lamd:res_FnvnTfL2xvcuCeQGeXY7LV a lam:PropertyConfiguration ;
-    lam:path lam:dtt ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dtt to XC" ;
-    sh:value "XC" .
-
-lamd:res_HHKp9b5fYwrCsSXZyyvDXR a lam:PropertyConfiguration ;
+lamd:res_8MqF6TbNpNN85SzAGuhEpE a lam:PropertyConfiguration ;
     lam:path lam:dtt ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on lam:dtt to IE" ;
     sh:value "IE" .
 
-lamd:res_HbpyADG9VWF6Gi5kqMbGbC a lam:PropertyConfiguration ;
+lamd:res_E6shdojQFSQ4s5ZZs2FkWQ a lam:PropertyConfiguration ;
+    lam:path lam:dtt ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dtt to A" ;
+    sh:value "A" .
+
+lamd:res_FWPqFNRmCwfnLKuuGaSFdJ a lam:PropertyConfiguration ;
     lam:path lam:dts ;
     sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dts to 6" ;
-    sh:value "6" .
-
-lamd:res_KLaq2CbgXo9yXDitr3uXbZ a lam:PropertyConfiguration ;
-    lam:path lam:dta ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dta to COM number" ;
+    sh:name "Constraint on lam:dts to COM number" ;
     sh:value "COM number" .
 
-lamd:res_Me9rTHJP2gpR8DcLipxpmK a lam:PropertyConfiguration ;
-    lam:path lam:dtt ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dtt to AE" ;
-    sh:value "AE" .
-
-lamd:res_PKiuXtQ3nuhy85vp9DxcuY a lam:PropertyConfiguration ;
-    lam:path lam:dtt ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dtt to AG" ;
-    sh:value "AG" .
-
-lamd:res_QgChwnmokLy4NXC462NRz6 a lam:PropertyConfiguration ;
-    lam:path lam:dts ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dts to 5" ;
-    sh:value "5" .
-
-lamd:res_QiLgkdvFjKQKfxm54HE32a a lam:PropertyConfiguration ;
-    lam:path lam:dts ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dts to 5" ;
-    sh:value "5" .
-
-lamd:res_RLYSQnJHb87Skmh6kycRTk a lam:PropertyConfiguration ;
+lamd:res_GHkWgAbjKy3zGcCEMnbvPC a lam:PropertyConfiguration ;
     lam:path lam:dts ;
     skos:editorialNote " EESC-2014-01723-00-00-AC-TRA: it is not mentioned in the Official Journal. It can be found on ECSC web page." ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on lam:dts to Internal number " ;
     sh:value "Internal number " .
 
-lamd:res_Rxt8d2pZNce8Z7yPNPN3mn a lam:PropertyConfiguration ;
+lamd:res_HUJaMo9E4PMD5XpEzCsfWZ a lam:PropertyConfiguration ;
+    lam:path lam:dts ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dts to 2" ;
+    sh:value "2" .
+
+lamd:res_J5HR8GYTJJ7rDt3W9q4R9c a lam:PropertyConfiguration ;
+    lam:path lam:dts ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dts to 5" ;
+    sh:value "5" .
+
+lamd:res_JPts4Hx7xY9g2Yup8Fj7kD a lam:PropertyConfiguration ;
+    lam:path lam:dta ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dta to Date of publication" ;
+    sh:value "Date of publication" .
+
+lamd:res_KNJcncMG6AYw3oSecUTfi5 a lam:PropertyConfiguration ;
+    lam:path lam:dts ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dts to 6" ;
+    sh:value "6" .
+
+lamd:res_LvtpPEnseWXsFQ9toiQCGi a lam:PropertyConfiguration ;
+    lam:path lam:dtt ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dtt to XC" ;
+    sh:value "XC" .
+
+lamd:res_N3AuoMgsUVr5auqTpWd8yW a lam:PropertyConfiguration ;
+    lam:path lam:dts ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dts to 5" ;
+    sh:value "5" .
+
+lamd:res_NVLhaYFaT9qpQuCsi4xgmd a lam:PropertyConfiguration ;
+    lam:path lam:dtt ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dtt to XC" ;
+    sh:value "XC" .
+
+lamd:res_RbxoYXESTVPSvy9giaXEMV a lam:PropertyConfiguration ;
+    lam:path lam:dts ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dts to Date of publication" ;
+    sh:value "Date of publication" .
+
+lamd:res_RjiibtBaexQa5rRf3vuZsW a lam:PropertyConfiguration ;
+    lam:path lam:dtt ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dtt to AG" ;
+    sh:value "AG" .
+
+lamd:res_Sg5y3aTfu64dE8Rp3DqJum a lam:PropertyConfiguration ;
+    lam:path lam:dtt ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dtt to PC" ;
+    sh:value "PC" .
+
+lamd:res_U74TQaYWmwQfXZugCosq2D a lam:PropertyConfiguration ;
+    lam:path lam:dts ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dts to Case number" ;
+    sh:value "Case number" .
+
+lamd:res_VGoyiprhkYPmCCR4Zb4YaR a lam:PropertyConfiguration ;
     lam:path lam:dts ;
     skos:editorialNote " There is a split number – (01) for position of the Council, (02) for statement of Council´s reasons." ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on lam:dts to Official No (PPF)" ;
     sh:value "Official No (PPF)" .
 
-lamd:res_S6gupptV432R4VeDS86Wug a lam:PropertyConfiguration ;
-    lam:path lam:dts ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dts to Date of publication" ;
-    sh:value "Date of publication" .
-
-lamd:res_TAVdfLakgKd2arEuUsRwSD a lam:PropertyConfiguration ;
-    lam:path lam:dta ;
-    skos:editorialNote " EESC-2014-01723-00-00-AC-TRA: it is not mentioned in the Official Journal. It can be found on ECSC web page." ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dta to Internal number " ;
-    sh:value "Internal number " .
-
-lamd:res_UPEjpsbUUUk7LpQg5bP3YM a lam:PropertyConfiguration ;
+lamd:res_W4Ct7EVFcBKF9N5ipbfmaB a lam:PropertyConfiguration ;
     lam:path lam:dtt ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on lam:dtt to CA" ;
     sh:value "CA" .
 
-lamd:res_VjN5oxpphnQjaLUX2wxKCo a lam:PropertyConfiguration ;
+lamd:res_bT5M9XCpE2iabXrdB8h3Md a lam:PropertyConfiguration ;
     lam:path lam:dts ;
     sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dts to Case number" ;
-    sh:value "Case number" .
+    sh:name "Constraint on lam:dts to 2" ;
+    sh:value "2" .
 
-lamd:res_aYQuzBXaGCJ3UvQursDgRR a lam:PropertyConfiguration ;
+lamd:res_fPJecLyfw65ooVuEKkcwfC a lam:PropertyConfiguration ;
     lam:path lam:dts ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on lam:dts to Date of publication" ;
     sh:value "Date of publication" .
 
-lamd:res_cuwLJez4bwUjqRxP3JN5M8 a lam:PropertyConfiguration ;
-    lam:path lam:dtt ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dtt to CB" ;
-    sh:value "CB" .
-
-lamd:res_dw2SgxKqvWsuWqgzg5GdFW a lam:PropertyConfiguration ;
+lamd:res_fRmRJ6kQU4eo8VnBNnQJ8c a lam:PropertyConfiguration ;
     lam:path lam:dta ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on lam:dta to Date of publication" ;
     sh:value "Date of publication" .
 
-lamd:res_gQZwzbVDppW5fzufQLEwuW a lam:PropertyConfiguration ;
-    lam:path lam:dts ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dts to 2" ;
-    sh:value "2" .
-
-lamd:res_jSbuztS5KZU9gRzVTMa8P3 a lam:PropertyConfiguration ;
-    lam:path lam:dts ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dts to 2" ;
-    sh:value "2" .
-
-lamd:res_koTUr3UptRAgzhRU7fgWZY a lam:PropertyConfiguration ;
+lamd:res_ftLDEi9E8Zc4ZE3Hj7UKvB a lam:PropertyConfiguration ;
     lam:path lam:dta ;
     skos:editorialNote " EESC-2014-01723-00-00-AC-TRA: it is not mentioned in the Official Journal. It can be found on ECSC web page." ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on lam:dta to Internal number " ;
     sh:value "Internal number " .
 
-lamd:res_pTKp69BGuM9dKVRwRz5WXH a lam:PropertyConfiguration ;
+lamd:res_gC6tjwZJWedhfXMbWiFYv5 a lam:PropertyConfiguration ;
     lam:path lam:dts ;
     sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dts to 5" ;
-    sh:value "5" .
+    sh:name "Constraint on lam:dts to 6" ;
+    sh:value "6" .
 
-lamd:res_qL9pexfJX7ZqnRXVxP5mui a lam:PropertyConfiguration ;
-    lam:path lam:dts ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dts to 5" ;
-    sh:value "5" .
-
-lamd:res_s2pHtDxNaBgYQjYkzA2HeD a lam:PropertyConfiguration ;
-    lam:path lam:dtt ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dtt to A" ;
-    sh:value "A" .
-
-lamd:res_sGemVvk2FRMGYTsoyQbBgn a lam:PropertyConfiguration ;
+lamd:res_iZ7hDR4PQqXSCnARy3J6pR a lam:PropertyConfiguration ;
     lam:path lam:dta ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on lam:dta to Date of publication" ;
     sh:value "Date of publication" .
 
-lamd:res_sQbJD9uMdU74d75JvgcaJa a lam:PropertyConfiguration ;
-    lam:path lam:dtt ;
+lamd:res_mJEocyqcrtsuhR2mPbGw4K a lam:PropertyConfiguration ;
+    lam:path lam:dta ;
     sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dtt to PC" ;
-    sh:value "PC" .
-
-lamd:res_srZbjNcmogi6fuZnRXgTeg a lam:PropertyConfiguration ;
-    lam:path lam:dtt ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dtt to XC" ;
-    sh:value "XC" .
-
-lamd:res_uJYfwco3Ce6YZnyuHnWKXE a lam:PropertyConfiguration ;
-    lam:path lam:dts ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Constraint on lam:dts to Case number" ;
+    sh:name "Constraint on lam:dta to Case number" ;
     sh:value "Case number" .
 
-lamd:res_vbSu9MqeZHARR3EUEuGWZY a lam:PropertyConfiguration ;
+lamd:res_nhev7JRVbCQxZ777HmygbC a lam:PropertyConfiguration ;
     lam:path lam:dts ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on lam:dts to 5" ;
     sh:value "5" .
 
-lamd:res_ze6iZcHpXmGvMSyKecasS9 a lam:PropertyConfiguration ;
+lamd:res_qrGNAJFafHhets95M3G8N3 a lam:PropertyConfiguration ;
     lam:path lam:dta ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on lam:dta to Case number" ;
     sh:value "Case number" .
+
+lamd:res_rirj3xpvXA5LBFv4VnFMR8 a lam:PropertyConfiguration ;
+    lam:path lam:dta ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dta to Official No (PPF)" ;
+    sh:value "Official No (PPF)" .
+
+lamd:res_rvC7PyiccDhSkBdZNG2E58 a lam:PropertyConfiguration ;
+    lam:path lam:dts ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dts to 5" ;
+    sh:value "5" .
+
+lamd:res_stDtazgEuN9Jdzt2HgyLSM a lam:PropertyConfiguration ;
+    lam:path lam:dts ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dts to 5" ;
+    sh:value "5" .
+
+lamd:res_tv3uzMDdA9SUuVEcBX7AXL a lam:PropertyConfiguration ;
+    lam:path lam:dtt ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dtt to A" ;
+    sh:value "A" .
+
+lamd:res_uyx4VThWmrrWden5wg4Mq7 a lam:PropertyConfiguration ;
+    lam:path lam:dts ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dts to Case number" ;
+    sh:value "Case number" .
+
+lamd:res_xYJWQAaUZ4RiFuvkJ6kJdm a lam:PropertyConfiguration ;
+    lam:path lam:dta ;
+    skos:editorialNote " EESC-2014-01723-00-00-AC-TRA: it is not mentioned in the Official Journal. It can be found on ECSC web page." ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dta to Internal number " ;
+    sh:value "Internal number " .
+
+lamd:res_xcMkzvXJdapuV4eyMdrq32 a lam:PropertyConfiguration ;
+    lam:path lam:dts ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dts to Date of publication" ;
+    sh:value "Date of publication" .
+
+lamd:res_xg3CsAPNpv8uKB9ftC6QBk a lam:PropertyConfiguration ;
+    lam:path lam:dtt ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dtt to AE" ;
+    sh:value "AE" .
+
+lamd:res_ySSM4GTeHvwBkjVZ6wXTRY a lam:PropertyConfiguration ;
+    lam:path lam:dts ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dts to 5" ;
+    sh:value "5" .
+
+lamd:res_ymNnMqe3dmHKEUkVCn9rxJ a lam:PropertyConfiguration ;
+    lam:path lam:dta ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dta to COM number" ;
+    sh:value "COM number" .
+
+lamd:res_zmu3g5oqFTc4BSqqF7cVKX a lam:PropertyConfiguration ;
+    lam:path lam:dts ;
+    skos:editorialNote " EESC-2014-01723-00-00-AC-TRA: it is not mentioned in the Official Journal. It can be found on ECSC web page." ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lam:dts to Internal number " ;
+    sh:value "Internal number " .
 
 celexd:CelexLegalDocument a skos:ConceptScheme ;
     skos:prefLabel "CELEX classes" .

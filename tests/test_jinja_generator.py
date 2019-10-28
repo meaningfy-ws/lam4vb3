@@ -10,7 +10,7 @@ import unittest
 from pprint import pprint
 
 from lam2doc.document_generator import JinjaGenerator
-from tests import LAM_HELLO_WORLD_HTML, LAM_PROPERTY_CONTENT_JSON, LAM_PROPERTIES_HTML
+from tests import LAM_HELLO_WORLD_HTML, LAM_PROPERTY_CONTENT_JSON, LAM_PROPERTIES_HTML, LAM_CLASSES_HTML
 
 
 class MyTestCase(unittest.TestCase):
@@ -26,13 +26,19 @@ class MyTestCase(unittest.TestCase):
         gen.serialise(LAM_HELLO_WORLD_HTML)
         assert LAM_HELLO_WORLD_HTML.exists(), " No file created"
 
-    def test_lam_skosxl(self):
+    def test_lam_property_generation(self):
         gen = JinjaGenerator(main_template_name="lam_properties.html", data=self.properties_data)
         assert gen.generate(), "No page generated"
         shutil.rmtree(str(LAM_PROPERTIES_HTML), ignore_errors=True)
         gen.serialise(LAM_PROPERTIES_HTML)
         assert LAM_PROPERTIES_HTML.exists(), " No file created"
 
+    def test_lam_class_generation(self):
+        gen = JinjaGenerator(main_template_name="lam_classes.html", data=self.properties_data)
+        assert gen.generate(), "No page generated"
+        shutil.rmtree(str(LAM_CLASSES_HTML), ignore_errors=True)
+        gen.serialise(LAM_CLASSES_HTML)
+        assert LAM_CLASSES_HTML.exists(), " No file created"
 
 if __name__ == '__main__':
     unittest.main()

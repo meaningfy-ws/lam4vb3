@@ -1,0 +1,2826 @@
+{
+  "skos:ConceptScheme": [
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+      "skos:prefLabel": "LAM classes",
+      "@id": 4519,
+      "@label": "lamd:LAMLegalDocument",
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+        "@id": 8651,
+        "@label": "skos:ConceptScheme"
+      }
+    }
+  ],
+  "skos:Concept": [
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_010",
+      "skos:prefLabel": "Statement of Council's reasons\nposition at first reading with a view to the adoption of\n",
+      "dct:created": "2019-10-14",
+      "skos:example": "52016AG0004(02)\n52015AG0010(02)",
+      "@id": 3808,
+      "@label": "lamd:c_010",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_xQwFib3xREvUZqv4WXwdLA",
+        "sh:maxCount": "0",
+        "sh:name": "Forbidden lamd:md_COMPLETION",
+        "@id": 5024,
+        "@label": "lamd:res_xQwFib3xREvUZqv4WXwdLA",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_COMPLETION",
+          "@id": 3968,
+          "@label": "lamd:md_COMPLETION"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_stY8MY27PaDaKAQ9hQQPNA",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_AU to corporate-body:CONSIL",
+        "@id": 7327,
+        "@label": "lamd:res_stY8MY27PaDaKAQ9hQQPNA",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/corporate-body/CONSIL",
+          "@id": 9495,
+          "@label": "corporate-body:CONSIL"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_AU",
+          "@id": 3990,
+          "@label": "lamd:md_AU"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_044",
+      "skos:prefLabel": "Opinion\nCommission\nnuclear energy\nradioactive waste",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "AU_CODED = COM AND (DTS=3 AND DTT=A) ORDER BY XC DESC",
+      "skos:example": "Commission Opinion of 29 October 2015 relating to the plan for the disposal of radioactive waste arising from decommissioning stages III and IV of the Bohunice A-1 Nuclear Power Plant, located in the Slovak Republic ",
+      "@id": 3819,
+      "@label": "lamd:c_044",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_JnMBUZhJSorrPptdK8UbKM",
+        "sh:name": "Forbidden lamd:md_OPINION_REQ",
+        "sh:maxCount": "0",
+        "@id": 19781,
+        "@label": "lamd:res_JnMBUZhJSorrPptdK8UbKM",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_OPINION_REQ",
+          "@id": 3920,
+          "@label": "lamd:md_OPINION_REQ"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_PFUYdmRq5YsZTYv4iT6eJF",
+        "sh:name": "Constraint on lamd:md_AU to corporate-body:ENER",
+        "sh:minCount": "1",
+        "@id": 11754,
+        "@label": "lamd:res_PFUYdmRq5YsZTYv4iT6eJF",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/corporate-body/ENER",
+          "@id": 13439,
+          "@label": "corporate-body:ENER"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_AU",
+          "@id": 3990,
+          "@label": "lamd:md_AU"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_027",
+      "skos:prefLabel": "Notice\nEFTA Surveillance Authority \nCartel cases",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "TI~(EFTA Surveillance Authority CASE cartel) OR (Notice on immunity from fines) ORDER BY XC DESC",
+      "skos:example": "E2014C0220(01)\nE2003C0116(03)\nE2009C1203(01)",
+      "@id": 3843,
+      "@label": "lamd:c_027",
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_oUGrX5pPokHJXMezqrP6dn",
+        "sh:maxCount": "0",
+        "sh:name": "Forbidden lamd:md_IC",
+        "@id": 14270,
+        "@label": "lamd:res_oUGrX5pPokHJXMezqrP6dn",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_IC",
+          "@id": 6462,
+          "@label": "lamd:md_IC"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_RYyg3JdqXPQK72mLbzHgSN",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_FM to resource-type:COMMUNIC",
+        "@id": 3915,
+        "@label": "lamd:res_RYyg3JdqXPQK72mLbzHgSN",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_FM",
+          "@id": 5057,
+          "@label": "lamd:md_FM"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/resource-type/COMMUNIC",
+          "@id": 10996,
+          "@label": "rety:COMMUNIC"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_034",
+      "skos:prefLabel": "Statement of the Council's reasons\nposition at first reading with a view to the adoption of",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Celex number contains split (02)\nLink to procedure + EP - Legislative observatory\n\n\nDN=\"5*AG*(02)\" ORDER BY XC DESC",
+      "skos:example": "Statement of Council\u2019s reasons: Position (EU) No 4/2016 of the Council at first reading with a view to the adoption of a Regulation of the European Parliament and of the Council on transmissible animal diseases and amending and repealing certain acts in the area of animal health (\u2018Animal Health Law\u2019)",
+      "@id": 3860,
+      "@label": "lamd:c_034",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_w625iWJ7jStuQsNAbogc92",
+        "sh:maxCount": "0",
+        "sh:name": "Forbidden lamd:md_LF",
+        "@id": 19052,
+        "@label": "lamd:res_w625iWJ7jStuQsNAbogc92",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_LF",
+          "@id": 4692,
+          "@label": "lamd:md_LF"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_9w5j3BS9zQFrSeKYuF5pB3",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_CDM_CLASS to cdm:resource_legal",
+        "@id": 6057,
+        "@label": "lamd:res_9w5j3BS9zQFrSeKYuF5pB3",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/ontology/cdm#resource_legal",
+          "@id": 4735,
+          "@label": "cdm:resource_legal"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_CDM_CLASS",
+          "@id": 6237,
+          "@label": "lamd:md_CDM_CLASS"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_016",
+      "skos:prefLabel": "Amended proposal for a directive \namendment to proposal\n(COM number)",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Link to procedure + EP - Legislative observatory ",
+      "skos:example": "\n\nAmended proposal for a DIRECTIVE OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL on certain aspects concerning contracts for the online and other distance sales of goods, amending Regulation (EC) No 2006/2004 of the European Parliament and of the Council and Directive 2009/22/EC of the European Parliament and of the Council and repealing Directive 1999/44/EC of the European Parliament and of the Council\n\nCOM/2017/0637 final - 2015/0288 (COD)",
+      "@id": 3865,
+      "@label": "lamd:c_016",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_evt7Snk92vs8vzLLzi2seU",
+        "sh:name": "Forbidden lamd:md_DF",
+        "sh:maxCount": "0",
+        "@id": 6509,
+        "@label": "lamd:res_evt7Snk92vs8vzLLzi2seU",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DF",
+          "@id": 4672,
+          "@label": "lamd:md_DF"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_CnGuvw8H3J5UrGB8Pjq5T4",
+        "sh:name": "Constraint on lamd:md_AU to corporate-body:COM",
+        "sh:minCount": "1",
+        "skos:editorialNote": " and Service/DG responsible",
+        "@id": 6710,
+        "@label": "lamd:res_CnGuvw8H3J5UrGB8Pjq5T4",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_AU",
+          "@id": 3990,
+          "@label": "lamd:md_AU"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/corporate-body/COM",
+          "@id": 7620,
+          "@label": "corporate-body:COM"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_005",
+      "skos:prefLabel": "Opinion of the European Economic and Social Committee \nexploratory opinion",
+      "dct:created": "2019-10-14",
+      "skos:example": "52016AE0137\n52014AE4791",
+      "@id": 3891,
+      "@label": "lamd:c_005",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_QrGJfgn5eQwYVJAv7xfpQC",
+        "sh:name": "Mandatory lamd:md_DC",
+        "sh:minCount": "1",
+        "@id": 13298,
+        "@label": "lamd:res_QrGJfgn5eQwYVJAv7xfpQC",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DC",
+          "@id": 7314,
+          "@label": "lamd:md_DC"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_FDHmbhYgMkpcwj8NaZrSu9",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_DN_CLASS to celexd:c_5_AE",
+        "@id": 10154,
+        "@label": "lamd:res_FDHmbhYgMkpcwj8NaZrSu9",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DN_CLASS",
+          "@id": 6650,
+          "@label": "lamd:md_DN_CLASS"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resources/authority/celex/c_5_AE",
+          "@id": 27181,
+          "@label": "celexd:c_5_AE"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_024",
+      "skos:prefLabel": "EFTA Surveillance Authority decision\nclosing the formal investigation\nState aid ",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "AU_CODED = EFTA_SUC AND (TI~decision to close formal investigation) ORDER BY XC DESC",
+      "skos:example": "EFTA Surveillance Authority Decision No 94/17/COL of 31 May 2017 closing the formal investigation into the exemption rule for ambulant services under the scheme on differentiated social security contributions 2014-2020 (Norway) [2018/595]",
+      "@id": 3899,
+      "@label": "lamd:c_024",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_ZM28Pj6fG4RcJVAYSiMmb6",
+        "sh:maxCount": "0",
+        "sh:name": "Forbidden lamd:md_COMPLETION",
+        "@id": 20028,
+        "@label": "lamd:res_ZM28Pj6fG4RcJVAYSiMmb6",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_COMPLETION",
+          "@id": 3968,
+          "@label": "lamd:md_COMPLETION"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_2DAtkT7rZs7pM752BBxuTb",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_AU to corporate-body:EFTA_SUC",
+        "@id": 6539,
+        "@label": "lamd:res_2DAtkT7rZs7pM752BBxuTb",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_AU",
+          "@id": 3990,
+          "@label": "lamd:md_AU"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/corporate-body/EFTA_SUC",
+          "@id": 14332,
+          "@label": "corporate-body:EFTA_SUC"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_032",
+      "skos:prefLabel": "European Parliament\nDecision on the closure of the accounts of the general budget of the European Union\nfinancial year",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "TI~decision closure of the accounts of the general budget ORDER BY XC DESC",
+      "skos:example": "32015B1623",
+      "@id": 3904,
+      "@label": "lamd:c_032",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_MNW5QtvaoWZxZnSH3NpVqm",
+        "sh:maxCount": "0",
+        "sh:name": "Forbidden lamd:md_DP",
+        "@id": 15805,
+        "@label": "lamd:res_MNW5QtvaoWZxZnSH3NpVqm",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DP",
+          "@id": 7461,
+          "@label": "lamd:md_DP"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_HBAokXoe42btob5JLxxdZD",
+        "sh:name": "Constraint on lamd:md_AU to corporate-body:EP",
+        "sh:minCount": "1",
+        "@id": 4938,
+        "@label": "lamd:res_HBAokXoe42btob5JLxxdZD",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/corporate-body/EP",
+          "@id": 24786,
+          "@label": "corporate-body:EP"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_AU",
+          "@id": 3990,
+          "@label": "lamd:md_AU"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_018",
+      "skos:prefLabel": "Order of the Court\ncase",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "\njudicial infomation EU case law - Court of Justice",
+      "skos:example": "Case C-373/18: Order of the Court (First Chamber) of 31 January 2019 (request for a preliminary ruling from the Tribunal Administrativo e Fiscal de Penafiel \u2014 Portugal) \u2014 Prosa \u2014 Produtos e Servi\u00e7os Agr\u00edcolas v Autoridade Tribut\u00e1ria e Aduaneira (Reference for a preliminary ruling \u2014 Article 99 of the Rules of Procedure of the Court of Justice \u2014 Indirect taxes on the raising of capital \u2014 Directive 69/335/EEC \u2014 Articles 4 and 7 \u2014 Incorporation of a capital company \u2014 Stamp duty in force on 1 July 1984 \u2014 Subsequent abolition of that stamp duty, followed by its reintroduction) ",
+      "@id": 3929,
+      "@label": "lamd:c_018",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_P4cv3rt4jiUTzEet62ZLTf",
+        "sh:name": "Forbidden lamd:md_ANULMENT_PARTIAL_REQ",
+        "sh:maxCount": "0",
+        "@id": 6426,
+        "@label": "lamd:res_P4cv3rt4jiUTzEet62ZLTf",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_ANULMENT_PARTIAL_REQ",
+          "@id": 4125,
+          "@label": "lamd:md_ANULMENT_PARTIAL_REQ"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_As4CDRZ6qxGvfVoW96FLMP",
+        "sh:name": "Constraint on lamd:md_CDM_CLASS to cdm:info_decision_cjeu",
+        "sh:minCount": "1",
+        "@id": 6848,
+        "@label": "lamd:res_As4CDRZ6qxGvfVoW96FLMP",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_CDM_CLASS",
+          "@id": 6237,
+          "@label": "lamd:md_CDM_CLASS"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/ontology/cdm#info_decision_cjeu",
+          "@id": 15895,
+          "@label": "cdm:info_decision_cjeu"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_030",
+      "skos:prefLabel": "Council\nAnnual Report  \nArticle 8(2) of Council Common Position 2008/944/CFSP \ncontrol of exports of military technology and equipment",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "TI~annual report according to article ORDER BY XC DESC",
+      "skos:example": "Vingti\u00e8me rapport annuel \u00e9tabli en application de l\u2019article 8, paragraphe 2, de la position commune 2008/944/PESC du Conseil d\u00e9finissant des r\u00e8gles communes r\u00e9gissant le contr\u00f4le des exportations de technologie et d\u2019\u00e9quipements militaires\nST/13586/2018/INIT",
+      "@id": 3937,
+      "@label": "lamd:c_030",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_CiyZYqG6SPVEvQdomkVseh",
+        "sh:maxCount": "0",
+        "sh:name": "Forbidden lamd:md_RI",
+        "@id": 22278,
+        "@label": "lamd:res_CiyZYqG6SPVEvQdomkVseh",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_RI",
+          "@id": 6106,
+          "@label": "lamd:md_RI"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_YpqxHEpRQDj4X2dLLYchKM",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_CDM_CLASS to cdm:resource_legal",
+        "@id": 6552,
+        "@label": "lamd:res_YpqxHEpRQDj4X2dLLYchKM",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_CDM_CLASS",
+          "@id": 6237,
+          "@label": "lamd:md_CDM_CLASS"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/ontology/cdm#resource_legal",
+          "@id": 4735,
+          "@label": "cdm:resource_legal"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_031",
+      "skos:prefLabel": "Initiation of proceedings (Case M)\n\n(Information - merger)",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "TI~Initiation of proceedings Case M ORDER BY XC DESC",
+      "skos:example": "52019M9014(01)\n52019M9064(01)\n52019M9076(01)",
+      "@id": 4002,
+      "@label": "lamd:c_031",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_83oDjFdGVgTKtYvNsfzCZD",
+        "sh:value": "subject-matter:MERG\nsubject-matter:CONC",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_CT to subject-matter:MERG\nsubject-matter:CONC",
+        "@id": 4956,
+        "@label": "lamd:res_83oDjFdGVgTKtYvNsfzCZD",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_CT",
+          "@id": 4958,
+          "@label": "lamd:md_CT"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_7gpdnHJCBx5cs2hh5MURXP",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_DN_CLASS to celexd:c_5_M_OJC",
+        "@id": 4156,
+        "@label": "lamd:res_7gpdnHJCBx5cs2hh5MURXP",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resources/authority/celex/c_5_M_OJC",
+          "@id": 34724,
+          "@label": "celexd:c_5_M_OJC"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DN_CLASS",
+          "@id": 6650,
+          "@label": "lamd:md_DN_CLASS"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_014",
+      "skos:prefLabel": "Proposal for an amending directive \n(COM number)",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Link to procedure + EP - Legislative observatory\n\nProposal for an amending directive - \"amending\" must follow directly after type and author of proposed act",
+      "skos:example": "Proposition de DIRECTIVE DU PARLEMENT EUROP\u00c9EN ET DU CONSEIL modifiant la directive 2003/87/CE afin de renforcer le rapport co\u00fbt-efficacit\u00e9 des r\u00e9ductions d\u2019\u00e9missions et de favoriser les investissements \u00e0 faible intensit\u00e9 de carbone\nCOM/2015/0337 final - 2015/0148 (COD)",
+      "@id": 4047,
+      "@label": "lamd:c_014",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_nFE5LkzmubwVBBYQbkeRM3",
+        "sh:name": "Optional lamd:md_CI ",
+        "@id": 22538,
+        "@label": "lamd:res_nFE5LkzmubwVBBYQbkeRM3",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_CI",
+          "@id": 4637,
+          "@label": "lamd:md_CI"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_9YYX9irwuuoH58MsqAztj9",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_AU to corporate-body:COM",
+        "skos:editorialNote": " and Service/DG responsible",
+        "@id": 4702,
+        "@label": "lamd:res_9YYX9irwuuoH58MsqAztj9",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/corporate-body/COM",
+          "@id": 7620,
+          "@label": "corporate-body:COM"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_AU",
+          "@id": 3990,
+          "@label": "lamd:md_AU"
+        },
+        "rdf:type": {
+          "iri": "http://publications.europa.eu/ontology/lam-skos-ap#MappingPropertyConfiguration",
+          "@id": 4850,
+          "@label": "lam:MappingPropertyConfiguration"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_036",
+      "skos:prefLabel": "EEA EFTA\nlist\nmarketing authorisations\nMedicinal products\nregulation (EC) No 1907/2006 REACH",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "TI~marketing authorisations EEA EFTA AND DTT=G ORDER BY XC DESC",
+      "skos:example": "E2018G0830(01)\nE2018G0830(02)",
+      "@id": 4082,
+      "@label": "lamd:c_036",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_uThJGPhyWPgSk8ZaRJpqtB",
+        "sh:name": "Forbidden lamd:md_NS",
+        "sh:maxCount": "0",
+        "@id": 8886,
+        "@label": "lamd:res_uThJGPhyWPgSk8ZaRJpqtB",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_NS",
+          "@id": 4428,
+          "@label": "lamd:md_NS"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_n5dd6QWz4tJRiXgtTxgDt8",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_FM to resource-type:NOTICE",
+        "@id": 11021,
+        "@label": "lamd:res_n5dd6QWz4tJRiXgtTxgDt8",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/resource-type/NOTICE",
+          "@id": 11023,
+          "@label": "rety:NOTICE"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_FM",
+          "@id": 5057,
+          "@label": "lamd:md_FM"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_023",
+      "skos:prefLabel": "EFTA Surveillance Authority\nState aid \nDecision to open a formal investigation\nInvitation to submit comments\n",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "In fact this is just the invitation to submit comments following the decision to initiate proceedings pursuant to Article 1(2) of Part I of Protocol 3 to the Agreement between the EFTA States on the Establishment of a Surveillance Authority and a Court of Justice",
+      "skos:example": "E2019C0822(01)",
+      "@id": 4096,
+      "@label": "lamd:c_023",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_5yxWo9f8wsqSzX3MERAiHc",
+        "sh:name": "Forbidden lamd:md_RI",
+        "sh:maxCount": "0",
+        "@id": 27773,
+        "@label": "lamd:res_5yxWo9f8wsqSzX3MERAiHc",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_RI",
+          "@id": 6106,
+          "@label": "lamd:md_RI"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_PdbBhUhRr8MJYS89pE7WBQ",
+        "sh:name": "Constraint on lamd:md_CDM_CLASS to cdm:legislation_secondary",
+        "sh:minCount": "1",
+        "@id": 11256,
+        "@label": "lamd:res_PdbBhUhRr8MJYS89pE7WBQ",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_CDM_CLASS",
+          "@id": 6237,
+          "@label": "lamd:md_CDM_CLASS"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/ontology/cdm#legislation_secondary",
+          "@id": 7783,
+          "@label": "cdm:legislation_secondary"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_028",
+      "skos:prefLabel": "Summary of Decision\nEFTA Surveillance Authority",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "TI~Summary of the EFTA Surveillance Authority Decision ORDER BY XC DESC",
+      "skos:example": "Summary of the EFTA Surveillance Authority Decision No 605/08/COL of 17 September 2008 relating to a proceeding pursuant to Article 53 of the EEA Agreement (Case 61291 Liechtensteinische Kraftwerke Anstalt and Telecom Liechtenstein AG) (Text with EEA relevance )",
+      "@id": 4179,
+      "@label": "lamd:c_028",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_nFC4xz545vdha4znk3CjQn",
+        "sh:name": "Optional lamd:md_REPLACEMENT ",
+        "@id": 7286,
+        "@label": "lamd:res_nFC4xz545vdha4znk3CjQn",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_REPLACEMENT",
+          "@id": 5323,
+          "@label": "lamd:md_REPLACEMENT"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_i6HTwfsfsNBinY3V7FeCkd",
+        "sh:name": "Constraint on lamd:md_DN_CLASS to celexd:c_E_C_OJC",
+        "sh:minCount": "1",
+        "@id": 23110,
+        "@label": "lamd:res_i6HTwfsfsNBinY3V7FeCkd",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DN_CLASS",
+          "@id": 6650,
+          "@label": "lamd:md_DN_CLASS"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resources/authority/celex/c_E_C_OJC",
+          "@id": 14516,
+          "@label": "celexd:c_E_C_OJC"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_037",
+      "skos:prefLabel": "European Commission\nAuthorisation for State aid pursuant to Articles 107 and 108 TFEU\nExcept for products falling under Annex I of the Treaty\nNotice",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Not coveirng similar documents related to the agriculture products from TFEU Annex I\n\nTI~Authorisation for State aid pursuant to Articles 107 and 108 except for products falling under Annex I of the Treaty ORDER BY XC DESC",
+      "skos:example": "Authorisation for State aid pursuant to Articles 107 and 108 of the Treaty on the Functioning of the European Union \u2014 Cases where the Commission raises no objections (Text with EEA relevance, except for products falling under Annex I of the Treaty)",
+      "@id": 4185,
+      "@label": "lamd:c_037",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_VRdtotHu7wBSgD6oeVEyob",
+        "sh:maxCount": "0",
+        "sh:name": "Forbidden lamd:md_COMMUNIC_REQ",
+        "@id": 9543,
+        "@label": "lamd:res_VRdtotHu7wBSgD6oeVEyob",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_COMMUNIC_REQ",
+          "@id": 5099,
+          "@label": "lamd:md_COMMUNIC_REQ"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_mMsG28YStky7rEmX3RQbPb",
+        "sh:name": "Constraint on lamd:md_AU to corporate-body:COM",
+        "sh:minCount": "1",
+        "@id": 14236,
+        "@label": "lamd:res_mMsG28YStky7rEmX3RQbPb",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_AU",
+          "@id": 3990,
+          "@label": "lamd:md_AU"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/corporate-body/COM",
+          "@id": 7620,
+          "@label": "corporate-body:COM"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_038",
+      "skos:prefLabel": "Resolution \nCouncil\nrepresentatives of the Member States",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "(DTS=4 AND DTT=Y) AND AU_CODED = GOVREP AND TI~resolution ORDER BY XC DESC",
+      "skos:example": "42019Y0607(01)\n42019Y0605(01)\n42018Y1218(01)",
+      "@id": 4209,
+      "@label": "lamd:c_038",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_SWz9Xd6jXWhriu5Hm8qy4L",
+        "sh:name": "Forbidden lamd:md_PRELIMINARY_REQ",
+        "sh:maxCount": "0",
+        "@id": 14599,
+        "@label": "lamd:res_SWz9Xd6jXWhriu5Hm8qy4L",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_PRELIMINARY_REQ",
+          "@id": 4777,
+          "@label": "lamd:md_PRELIMINARY_REQ"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_RY3XcFuJuof6aKhDsGpxN5",
+        "sh:name": "Constraint on lamd:md_FM to resource-type:RES",
+        "sh:minCount": "1",
+        "@id": 10590,
+        "@label": "lamd:res_RY3XcFuJuof6aKhDsGpxN5",
+        "rdf:type": {
+          "iri": "http://publications.europa.eu/ontology/lam-skos-ap#MappingPropertyConfiguration",
+          "@id": 4850,
+          "@label": "lam:MappingPropertyConfiguration"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_FM",
+          "@id": 5057,
+          "@label": "lamd:md_FM"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/resource-type/RES",
+          "@id": 26826,
+          "@label": "rety:RES"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_001",
+      "skos:prefLabel": "Draft regulation",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Not containing COM or SEC/SWD number\nNot containing \"Codified version\" in the title\nThose are drafts published in the OJ in the past",
+      "skos:example": "Draft Commission Regulation (EU) No \u2026/\u2026 of 5 August 2013 amending Regulation (EC) No 1857/2006 as regards its period of application ",
+      "@id": 4214,
+      "@label": "lamd:c_001",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_YNfWzgAcfbrWwACirBS5T8",
+        "sh:maxCount": "0",
+        "sh:name": "Forbidden lamd:md_IMPLEMENTATION",
+        "@id": 6448,
+        "@label": "lamd:res_YNfWzgAcfbrWwACirBS5T8",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_IMPLEMENTATION",
+          "@id": 4117,
+          "@label": "lamd:md_IMPLEMENTATION"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_eEeVp6wtCvrhMuwuqVdd6A",
+        "sh:name": "Constraint on lamd:md_AU to corporate-body:COM",
+        "sh:minCount": "1",
+        "skos:editorialNote": " and Service/DG responsible",
+        "@id": 6211,
+        "@label": "lamd:res_eEeVp6wtCvrhMuwuqVdd6A",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_AU",
+          "@id": 3990,
+          "@label": "lamd:md_AU"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/corporate-body/COM",
+          "@id": 7620,
+          "@label": "corporate-body:COM"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_015",
+      "skos:prefLabel": "Proposal for directive \n(COM number)",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Proposal for not amending directive\nLink to procedure + EP - Legislative observatory",
+      "skos:example": "\n\nProposal for a DIRECTIVE OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL on port reception facilities for the delivery of waste from ships, repealing Directive 2000/59/EC and amending Directive 2009/16/EC and Directive 2010/65/EU\n\nCOM/2018/033 final - 2018/012 (COD)\n",
+      "@id": 4250,
+      "@label": "lamd:c_015",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_vZ8i8K6y4nc4e4swsCYJb8",
+        "sh:name": "Forbidden lamd:md_INTERPRETATION",
+        "sh:maxCount": "0",
+        "@id": 15070,
+        "@label": "lamd:res_vZ8i8K6y4nc4e4swsCYJb8",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_INTERPRETATION",
+          "@id": 4360,
+          "@label": "lamd:md_INTERPRETATION"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_WJw5XAwaGLyrRMB2LCJTCA",
+        "sh:name": "Constraint on lamd:md_FM to resource-type:PROP_DIR",
+        "sh:minCount": "1",
+        "@id": 5849,
+        "@label": "lamd:res_WJw5XAwaGLyrRMB2LCJTCA",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_FM",
+          "@id": 5057,
+          "@label": "lamd:md_FM"
+        },
+        "rdf:type": {
+          "iri": "http://publications.europa.eu/ontology/lam-skos-ap#MappingPropertyConfiguration",
+          "@id": 4850,
+          "@label": "lam:MappingPropertyConfiguration"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/resource-type/PROP_DIR",
+          "@id": 25696,
+          "@label": "rety:PROP_DIR"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_011",
+      "skos:prefLabel": "Proposal for amending regulation\n(COM number)",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Proposal for an amending regulation - \"amending\" must follow directly after type and author of proposed act\n\nLink to procedure + EP - Legislative observatory",
+      "skos:example": "52015PC0487: Proposition de R\u00c8GLEMENT DU CONSEIL modifiant le r\u00e8glement (UE) 2015/104 en ce qui concerne certaines possibilit\u00e9s de p\u00eache\n\nCOM/2015/0487 final - 2015/0236 (NLE)",
+      "@id": 4261,
+      "@label": "lamd:c_011",
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_UDuxznChFMTNYnLdfYpS9C",
+        "sh:name": "Constraint on lamd:md_DN_CLASS to celexd:c_5_PC_EUR",
+        "sh:minCount": "1",
+        "@id": 10004,
+        "@label": "lamd:res_UDuxznChFMTNYnLdfYpS9C",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DN_CLASS",
+          "@id": 6650,
+          "@label": "lamd:md_DN_CLASS"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resources/authority/celex/c_5_PC_EUR",
+          "@id": 28634,
+          "@label": "celexd:c_5_PC_EUR"
+        }
+      },
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_4rLXg2ob2QzozKHqTGBxHn",
+        "sh:name": "Forbidden lamd:md_INAPPLICAB_REQ",
+        "sh:maxCount": "0",
+        "@id": 12387,
+        "@label": "lamd:res_4rLXg2ob2QzozKHqTGBxHn",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_INAPPLICAB_REQ",
+          "@id": 6204,
+          "@label": "lamd:md_INAPPLICAB_REQ"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_040",
+      "skos:prefLabel": "Conclusions \nCouncil \nRepresentatives of the Governments of the Member States",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "TI~conclusions council AND AU=CONSIL AND GOVREP AND DTT=XG ORDER BY XC DESC",
+      "skos:example": "Conclusions of the Council and of the Representatives of the Governments of the Member States, meeting within the Council, on enhancing integrity, transparency and good governance in major sport events\n\nConclusions of the Council and of the Representatives of the Governments of the Member States, meeting within the Council, on a Work Plan for Culture (2015-2018) ",
+      "@id": 4281,
+      "@label": "lamd:c_040",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_phrU3YSUcGwCQiqgn9rVBD",
+        "sh:name": "Mandatory lamd:md_CT",
+        "sh:minCount": "1",
+        "@id": 21415,
+        "@label": "lamd:res_phrU3YSUcGwCQiqgn9rVBD",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_CT",
+          "@id": 4958,
+          "@label": "lamd:md_CT"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_pwQFQnjagpbdoDTj87dFCQ",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_DN_CLASS to celexd:c_5_XG_OJC",
+        "@id": 16038,
+        "@label": "lamd:res_pwQFQnjagpbdoDTj87dFCQ",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resources/authority/celex/c_5_XG_OJC",
+          "@id": 13914,
+          "@label": "celexd:c_5_XG_OJC"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DN_CLASS",
+          "@id": 6650,
+          "@label": "lamd:md_DN_CLASS"
+        },
+        "rdf:type": {
+          "iri": "http://publications.europa.eu/ontology/lam-skos-ap#MappingPropertyConfiguration",
+          "@id": 4850,
+          "@label": "lam:MappingPropertyConfiguration"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_049",
+      "skos:prefLabel": "Protocol \nadditional\ninternational agreement",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Usually amendments to an international agreement (link - amendment); or only a new protocol to be added to the agreement (link - addition)\n\n(TI~Protocol additional) AND DTS_SUBDOM = INTER_AGREE AND DTT=A ORDER BY XC DESC",
+      "skos:example": "22015A0731(01)\n22018A1220(01)\n22018A0622(02)",
+      "@id": 4309,
+      "@label": "lamd:c_049",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_ERRHTgAgfzkdXjapQZi8TU",
+        "sh:name": "Optional lamd:md_MI ",
+        "@id": 12959,
+        "@label": "lamd:res_ERRHTgAgfzkdXjapQZi8TU",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_MI",
+          "@id": 7119,
+          "@label": "lamd:md_MI"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_JQXyUqSH5np39K9EXaMA5h",
+        "sh:name": "Constraint on lamd:md_AU to corporate-body:EURUN",
+        "sh:minCount": "1",
+        "skos:editorialNote": " and country",
+        "@id": 8334,
+        "@label": "lamd:res_JQXyUqSH5np39K9EXaMA5h",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/corporate-body/EURUN",
+          "@id": 18913,
+          "@label": "corporate-body:EURUN"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_AU",
+          "@id": 3990,
+          "@label": "lamd:md_AU"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_051",
+      "skos:prefLabel": "Summary of European Union decisions\nSummary of European Union decision\n Directive 2001/83/EC\n Directive 2001/82/EC\nmedicinal products",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "TI~Summary of European Union decisions on marketing authorisations 2001/83 ORDER BY XC DESC",
+      "skos:example": "52019XC0726(03)\n52019XC0628(02)\n52019XC0524(07)",
+      "@id": 4325,
+      "@label": "lamd:c_051",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_yvDbwMhpsyZGAjtJPFckVA",
+        "sh:name": "Mandatory lamd:md_LB",
+        "sh:minCount": "1",
+        "skos:editorialNote": " 32001L0082 - A38\n32001L0083 - A34",
+        "@id": 9112,
+        "@label": "lamd:res_yvDbwMhpsyZGAjtJPFckVA",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_LB",
+          "@id": 6984,
+          "@label": "lamd:md_LB"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_FJdwM2YtmSbFw7BdkqcPVS",
+        "sh:name": "Constraint on lamd:md_CDM_CLASS to cdm:resource_legal",
+        "sh:minCount": "1",
+        "@id": 4964,
+        "@label": "lamd:res_FJdwM2YtmSbFw7BdkqcPVS",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_CDM_CLASS",
+          "@id": 6237,
+          "@label": "lamd:md_CDM_CLASS"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/ontology/cdm#resource_legal",
+          "@id": 4735,
+          "@label": "cdm:resource_legal"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_043",
+      "skos:prefLabel": "Opinion\nCouncil\nEuropean Monetary Union EMU",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Last published in 2013\nLink to procedure\nEP - Legislative observatory\n\nThere are some cases with Celex 5*XG (should be corrected?):\n\n52002XG0221(01)\n52001XG0410(02)\n52001XG0410(04)\n\nAU_CODED = CONSIL AND (DTS=3 AND DTT=A) ORDER BY XC DESC",
+      "skos:example": "Council opinion of 10 December 2013 on the Economic Partnership Programme of the Netherlands ",
+      "@id": 4350,
+      "@label": "lamd:c_043",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_F3LsSrCV8ZnHWDfpKQHbkD",
+        "sh:name": "Forbidden lamd:md_QUESTION_SIMILAR",
+        "sh:maxCount": "0",
+        "@id": 11229,
+        "@label": "lamd:res_F3LsSrCV8ZnHWDfpKQHbkD",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_QUESTION_SIMILAR",
+          "@id": 4796,
+          "@label": "lamd:md_QUESTION_SIMILAR"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_7x77MpBmEbEDEmXVBgmyPY",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_AU to corporate-body:CONSIL",
+        "@id": 9493,
+        "@label": "lamd:res_7x77MpBmEbEDEmXVBgmyPY",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/corporate-body/CONSIL",
+          "@id": 9495,
+          "@label": "corporate-body:CONSIL"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_AU",
+          "@id": 3990,
+          "@label": "lamd:md_AU"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_048",
+      "skos:prefLabel": "Protocol \namending \ninternational agreement",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Usually amendments to an international agreement (link - amendment)\n\n(TI~Protocol amending) AND DTS_SUBDOM = INTER_AGREE AND DTT=A ORDER BY XC DESC",
+      "skos:example": "PROTOCOLE\nmodifiant l'accord euro-m\u00e9diterran\u00e9en relatif aux services a\u00e9riens entre l'Union europ\u00e9enne et ses \u00c9tats membres, d'une part, et le Royaume hach\u00e9mite de Jordanie, d'autre part, pour tenir compte de l'adh\u00e9sion \u00e0 l'Union europ\u00e9enne de la R\u00e9publique de Croatie",
+      "@id": 4366,
+      "@label": "lamd:c_048",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_c6zwuqZL9FaLaADmkKRL9k",
+        "sh:name": "Forbidden lamd:md_INCORPORATION",
+        "sh:maxCount": "0",
+        "@id": 12541,
+        "@label": "lamd:res_c6zwuqZL9FaLaADmkKRL9k",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_INCORPORATION",
+          "@id": 4319,
+          "@label": "lamd:md_INCORPORATION"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_DfvT48tcwJrMT4fwhQxWjJ",
+        "sh:name": "Constraint on lamd:md_DN_CLASS to celexd:c_2_A_OJL",
+        "sh:minCount": "1",
+        "@id": 3835,
+        "@label": "lamd:res_DfvT48tcwJrMT4fwhQxWjJ",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DN_CLASS",
+          "@id": 6650,
+          "@label": "lamd:md_DN_CLASS"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resources/authority/celex/c_2_A_OJL",
+          "@id": 3837,
+          "@label": "celexd:c_2_A_OJL"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_022",
+      "skos:prefLabel": "EFTA Surveillance Authority\nState aid \nInvitation to submit comments\n",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "following the decision to initiate proceedings pursuant to Article 1(2) of Part I of Protocol 3 to the Agreement between the EFTA States on the Establishment of a Surveillance Authority and a Court of Justice",
+      "skos:example": "Invitation to submit comments pursuant to Article 1(2) of Part I of Protocol 3 to the Agreement between the EFTA States on the Establishment of a Surveillance Authority and a Court of Justice on state aid issues",
+      "@id": 4431,
+      "@label": "lamd:c_022",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_ELQbF8mu6wZVWipCwLRQhi",
+        "sh:maxCount": "0",
+        "sh:name": "Forbidden lamd:md_LG",
+        "@id": 10127,
+        "@label": "lamd:res_ELQbF8mu6wZVWipCwLRQhi",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_LG",
+          "@id": 7984,
+          "@label": "lamd:md_LG"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_MwFs7SgfFmKwjNLeFebizn",
+        "sh:name": "Constraint on lamd:md_FM to resource-type:ANNOUNC",
+        "sh:minCount": "1",
+        "@id": 7710,
+        "@label": "lamd:res_MwFs7SgfFmKwjNLeFebizn",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/resource-type/ANNOUNC",
+          "@id": 14393,
+          "@label": "rety:ANNOUNC"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_FM",
+          "@id": 5057,
+          "@label": "lamd:md_FM"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_009",
+      "skos:prefLabel": "Opinion of the European Economic and Social Committee \nAdditional opinion ",
+      "dct:created": "2019-10-14",
+      "skos:example": "52013IE6537: Avis du Comit\u00e9 \u00e9conomique et social europ\u00e9en sur \u00abL'Acte pour le march\u00e9 unique \u2013 D\u00e9terminer les mesures manquantes\u00bb (suppl\u00e9ment d'avis) ",
+      "@id": 4457,
+      "@label": "lamd:c_009",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_aT3KQruDJRip4H29CzQh8D",
+        "sh:name": "Optional lamd:md_REPLACEMENT ",
+        "@id": 26413,
+        "@label": "lamd:res_aT3KQruDJRip4H29CzQh8D",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_REPLACEMENT",
+          "@id": 5323,
+          "@label": "lamd:md_REPLACEMENT"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_E2uohuQzzVZMfnmo2gJPQ2",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_CDM_CLASS to cdm:opinion_other_committee_ecsc",
+        "@id": 18555,
+        "@label": "lamd:res_E2uohuQzzVZMfnmo2gJPQ2",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/ontology/cdm#opinion_other_committee_ecsc",
+          "@id": 11782,
+          "@label": "cdm:opinion_other_committee_ecsc"
+        },
+        "rdf:type": {
+          "iri": "http://publications.europa.eu/ontology/lam-skos-ap#MappingPropertyConfiguration",
+          "@id": 4850,
+          "@label": "lam:MappingPropertyConfiguration"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_CDM_CLASS",
+          "@id": 6237,
+          "@label": "lamd:md_CDM_CLASS"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_035",
+      "skos:prefLabel": "Summary of the opinion \nEuropean Data Protection Supervisor ",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Link to procedure + EP - Legislative observatory\n\nTI~Summary of the Opinion of the European Data Protection Supervisor ORDER BY XC DESC",
+      "skos:example": "R\u00e9sum\u00e9 de l\u2019avis du contr\u00f4leur europ\u00e9en de la protection des donn\u00e9es sur la proposition de r\u00e8glement relatif au syst\u00e8me ECRIS-TCN",
+      "@id": 4471,
+      "@label": "lamd:c_035",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_Vvavyei7qdW8LhyLvkevVE",
+        "sh:name": "Forbidden lamd:md_RJ_NEW",
+        "sh:maxCount": "0",
+        "@id": 18383,
+        "@label": "lamd:res_Vvavyei7qdW8LhyLvkevVE",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_RJ_NEW",
+          "@id": 5131,
+          "@label": "lamd:md_RJ_NEW"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_WnevWJjSRrFg3KQknLhwmM",
+        "sh:name": "Constraint on lamd:md_CDM_CLASS to cdm:work",
+        "sh:minCount": "1",
+        "@id": 7181,
+        "@label": "lamd:res_WnevWJjSRrFg3KQknLhwmM",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/ontology/cdm#work",
+          "@id": 23151,
+          "@label": "cdm:work"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_CDM_CLASS",
+          "@id": 6237,
+          "@label": "lamd:md_CDM_CLASS"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_041",
+      "skos:prefLabel": "Statement\nJoint statement\nParliament\nCouncil\nCommission",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "usually published in OJC, but 32019C0712(01) published in OJL\nFM_CODED = STAT AND (TI~STATEMENT AND AU=CONSIL) ORDER BY XC DESC",
+      "skos:example": "32019C0725(01)\n32019C0712(01)\n32019C0711(01)",
+      "@id": 4476,
+      "@label": "lamd:c_041",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_w6ejDxrNFnYMzqCiNvTsvP",
+        "sh:name": "Optional lamd:md_RELATION ",
+        "@id": 5404,
+        "@label": "lamd:res_w6ejDxrNFnYMzqCiNvTsvP",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_RELATION",
+          "@id": 5406,
+          "@label": "lamd:md_RELATION"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_AgA9qNf8HfZx2cSKiuKgRE",
+        "sh:name": "Constraint on lamd:md_CDM_CLASS to cdm:resource_legal",
+        "sh:minCount": "1",
+        "@id": 14431,
+        "@label": "lamd:res_AgA9qNf8HfZx2cSKiuKgRE",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_CDM_CLASS",
+          "@id": 6237,
+          "@label": "lamd:md_CDM_CLASS"
+        },
+        "rdf:type": {
+          "iri": "http://publications.europa.eu/ontology/lam-skos-ap#MappingPropertyConfiguration",
+          "@id": 4850,
+          "@label": "lam:MappingPropertyConfiguration"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/ontology/cdm#resource_legal",
+          "@id": 4735,
+          "@label": "cdm:resource_legal"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_047",
+      "skos:prefLabel": "Participation agreement\nEuropean Union",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Usually between EU and Swiss concerning CFSP\n\nTI~\"participation agreement\" AND DTS_SUBDOM = INTER_AGREE ORDER BY XC DESC",
+      "skos:example": "ACCORD DE PARTICIPATION\nentre l'Union europ\u00e9enne et la Conf\u00e9d\u00e9ration suisse relatif \u00e0 la participation de la Conf\u00e9d\u00e9ration suisse \u00e0 la mission de conseil de l'Union europ\u00e9enne sur la r\u00e9forme du secteur de la s\u00e9curit\u00e9 civile en Ukraine (EUAM UKRAINE)",
+      "@id": 4517,
+      "@label": "lamd:c_047",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_AxUEM2WfHUueH75fjyJ8JK",
+        "sh:maxCount": "0",
+        "sh:name": "Forbidden lamd:md_LG",
+        "@id": 6771,
+        "@label": "lamd:res_AxUEM2WfHUueH75fjyJ8JK",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_LG",
+          "@id": 7984,
+          "@label": "lamd:md_LG"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_39suz8W4YxKQBdFoPcVnhc",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_DN_CLASS to celexd:c_2_A_OJL",
+        "@id": 4974,
+        "@label": "lamd:res_39suz8W4YxKQBdFoPcVnhc",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resources/authority/celex/c_2_A_OJL",
+          "@id": 3837,
+          "@label": "celexd:c_2_A_OJL"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DN_CLASS",
+          "@id": 6650,
+          "@label": "lamd:md_DN_CLASS"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_021",
+      "skos:prefLabel": "European Commission\nState aid \nInvitation to submit comments pursuant to Article 108(2) TFEU\nAnnouncement",
+      "dct:created": "2019-10-14",
+      "skos:example": "Aide d\u2019\u00c9tat \u2014 Belgique \u2014 Aide d\u2019\u00c9tat SA.37667 (2015/C) (ex 2015/NN) \u2014 Syst\u00e8me belge de d\u00e9cisions fiscales anticip\u00e9es relatives aux b\u00e9n\u00e9fices exc\u00e9dentaires \u2014 Article 185, paragraphe 2, point b), du Code des imp\u00f4ts sur les revenus 1992 (\u00abCIR 92\u00bb) \u2014 Invitation \u00e0 pr\u00e9senter des observations en application de l'article 108, paragraphe 2, du trait\u00e9 sur le fonctionnement de l'Union europ\u00e9enneTexte pr\u00e9sentant de l'int\u00e9r\u00eat pour l'EEE ",
+      "@id": 4550,
+      "@label": "lamd:c_021",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_gYNTwian67AXdsyXdqdAzd",
+        "sh:name": "Forbidden lamd:md_LO",
+        "sh:maxCount": "0",
+        "@id": 13434,
+        "@label": "lamd:res_gYNTwian67AXdsyXdqdAzd",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_LO",
+          "@id": 4583,
+          "@label": "lamd:md_LO"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_nAJqBFSaRFFex3GTRJ8vvb",
+        "sh:name": "Constraint on lamd:md_DN_CLASS to celexd:c_5_XC_OJC",
+        "sh:minCount": "1",
+        "@id": 23159,
+        "@label": "lamd:res_nAJqBFSaRFFex3GTRJ8vvb",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resources/authority/celex/c_5_XC_OJC",
+          "@id": 4566,
+          "@label": "celexd:c_5_XC_OJC"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DN_CLASS",
+          "@id": 6650,
+          "@label": "lamd:md_DN_CLASS"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_012",
+      "skos:prefLabel": "Proposal for regulation\n(COM number)",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Proposal for not amending regulation\n\nLink to procedure + EP - Legislative observatory",
+      "skos:example": "52019PC0088",
+      "@id": 4561,
+      "@label": "lamd:c_012",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_jqHGWh4csW9Ev8UcRWzxx9",
+        "sh:name": "Forbidden lamd:md_COMPLETION",
+        "sh:maxCount": "0",
+        "@id": 16749,
+        "@label": "lamd:res_jqHGWh4csW9Ev8UcRWzxx9",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_COMPLETION",
+          "@id": 3968,
+          "@label": "lamd:md_COMPLETION"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_Vh3inRBVzfjsKGjau6Y9Co",
+        "sh:name": "Constraint on lamd:md_DN_CLASS to celexd:c_5_PC_EUR",
+        "sh:minCount": "1",
+        "@id": 10491,
+        "@label": "lamd:res_Vh3inRBVzfjsKGjau6Y9Co",
+        "rdf:type": {
+          "iri": "http://publications.europa.eu/ontology/lam-skos-ap#MappingPropertyConfiguration",
+          "@id": 4850,
+          "@label": "lam:MappingPropertyConfiguration"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DN_CLASS",
+          "@id": 6650,
+          "@label": "lamd:md_DN_CLASS"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resources/authority/celex/c_5_PC_EUR",
+          "@id": 28634,
+          "@label": "celexd:c_5_PC_EUR"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_042",
+      "skos:prefLabel": "Statement\nCommission",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "usually published in OJC, but 32017C0131(01) published in OJL\n\n(TI~STATEMENT AND AU=COM NOT CONSIL) AND FM_CODED = STAT ORDER BY XC DESC",
+      "skos:example": "32019C0425(01)\n32018C0807(01)",
+      "@id": 4592,
+      "@label": "lamd:c_042",
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_QVb9bb5snK4HmVzd8x4tDd",
+        "sh:name": "Constraint on lamd:md_AU to corporate-body:COM",
+        "sh:minCount": "1",
+        "@id": 5389,
+        "@label": "lamd:res_QVb9bb5snK4HmVzd8x4tDd",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_AU",
+          "@id": 3990,
+          "@label": "lamd:md_AU"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/corporate-body/COM",
+          "@id": 7620,
+          "@label": "corporate-body:COM"
+        }
+      },
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_PtpY2tgkH7h7Wcj4s6Ex33",
+        "sh:maxCount": "0",
+        "sh:name": "Forbidden lamd:md_REPPORTEUR",
+        "@id": 6716,
+        "@label": "lamd:res_PtpY2tgkH7h7Wcj4s6Ex33",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_REPPORTEUR",
+          "@id": 6718,
+          "@label": "lamd:md_REPPORTEUR"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_033",
+      "skos:prefLabel": "Council\nPosition of the Council at first reading with a view to the adoption of",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Celex number contains split (01)\nLink to procedure + EP - Legislative observatory\n\nDN=\"5*AG*(01)\" ORDER BY XC DESC",
+      "skos:example": "52018AG0001(01)\n52017AG0006(01)",
+      "@id": 4619,
+      "@label": "lamd:c_033",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_r7AajN5ccgkWdySrPMb7WH",
+        "sh:maxCount": "0",
+        "sh:name": "Forbidden lamd:md_NA",
+        "@id": 9993,
+        "@label": "lamd:res_r7AajN5ccgkWdySrPMb7WH",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_NA",
+          "@id": 5584,
+          "@label": "lamd:md_NA"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_3iV9nhH8tzfs63q24AK5C4",
+        "sh:name": "Constraint on lamd:md_FM to resource-type:POSIT",
+        "sh:minCount": "1",
+        "@id": 10916,
+        "@label": "lamd:res_3iV9nhH8tzfs63q24AK5C4",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_FM",
+          "@id": 5057,
+          "@label": "lamd:md_FM"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/resource-type/POSIT",
+          "@id": 17449,
+          "@label": "rety:POSIT"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_004",
+      "skos:prefLabel": "Draft declaration\njoint declaration",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Not containing COM or SWD (SEC) number\nThose are drafts published in the OJ in the past",
+      "skos:example": "Draft joint declaration by the ACP States and the Community and its Member States ",
+      "@id": 4630,
+      "@label": "lamd:c_004",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_FhtcQRLPaYEDXJBiGXPCi6",
+        "sh:name": "Optional lamd:md_ADOPTION_PAR ",
+        "@id": 14581,
+        "@label": "lamd:res_FhtcQRLPaYEDXJBiGXPCi6",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_ADOPTION_PAR",
+          "@id": 4743,
+          "@label": "lamd:md_ADOPTION_PAR"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_kT4ViKYVFnQCZeDuebzhAd",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_AU to corporate-body:COM",
+        "skos:editorialNote": " and Service/DG responsible",
+        "@id": 15030,
+        "@label": "lamd:res_kT4ViKYVFnQCZeDuebzhAd",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_AU",
+          "@id": 3990,
+          "@label": "lamd:md_AU"
+        },
+        "rdf:type": {
+          "iri": "http://publications.europa.eu/ontology/lam-skos-ap#MappingPropertyConfiguration",
+          "@id": 4850,
+          "@label": "lam:MappingPropertyConfiguration"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/corporate-body/COM",
+          "@id": 7620,
+          "@label": "corporate-body:COM"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_002",
+      "skos:prefLabel": "Draft directive",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Not containing COM or SEC/SWD number\nNot containing \"Codified version\" in the title\nThose are drafts published in the OJ in the past",
+      "skos:example": "Draft Commission Directive amending Directive 90/388/EEC in order to ensure that telecommunications networks and cable TV networks owned by a single operator are separate legal entities",
+      "@id": 4755,
+      "@label": "lamd:c_002",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_xx9r8Q7hGLSpiLzFFhY6xK",
+        "sh:name": "Optional lamd:md_IC ",
+        "@id": 6243,
+        "@label": "lamd:res_xx9r8Q7hGLSpiLzFFhY6xK",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_IC",
+          "@id": 6462,
+          "@label": "lamd:md_IC"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_zcQPoUERR4jCaEZAyjC4Zd",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_DN_CLASS to celexd:c_5_XC_OJC",
+        "@id": 7096,
+        "@label": "lamd:res_zcQPoUERR4jCaEZAyjC4Zd",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DN_CLASS",
+          "@id": 6650,
+          "@label": "lamd:md_DN_CLASS"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resources/authority/celex/c_5_XC_OJC",
+          "@id": 4566,
+          "@label": "celexd:c_5_XC_OJC"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_013",
+      "skos:prefLabel": "Amended proposal for a regulation\namendment to proposal\n(COM number)",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Link to procedure + EP - Legislative observatory\n\nThere might be  a proposal with 2+ subsequent amendments:\n52016PC0408 - 52015PC0350 - 52014PC0343 - how EV should be treated? There are 3 pending proposals, but only 1 act will be adopted - statistics",
+      "skos:example": "Proposition modifi\u00e9e de R\u00c8GLEMENT DU PARLEMENT EUROP\u00c9EN ET DU CONSEIL arr\u00eatant des proc\u00e9dures de l\u2019Union en mati\u00e8re de politique commerciale commune en vue d'assurer l'exercice par l\u2019Union des droits qui lui sont conf\u00e9r\u00e9s par les r\u00e8gles du commerce international, en particulier celles institu\u00e9es sous l'\u00e9gide de l'Organisation mondiale du commerce (OMC) (texte codifi\u00e9)\n/* COM/2015/049 final - 2014/0174 (COD) *",
+      "@id": 4789,
+      "@label": "lamd:c_013",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_LBUvprx6TKPQeKJ32XW7DB",
+        "sh:name": "Forbidden lamd:md_REFER_PAR",
+        "sh:maxCount": "0",
+        "@id": 17661,
+        "@label": "lamd:res_LBUvprx6TKPQeKJ32XW7DB",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_REFER_PAR",
+          "@id": 5982,
+          "@label": "lamd:md_REFER_PAR"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_L93yqGuQ8oAk5oTsbZRHpP",
+        "sh:name": "Constraint on lamd:md_AU to corporate-body:COM",
+        "sh:minCount": "1",
+        "skos:editorialNote": " and Service/DG responsible",
+        "@id": 15698,
+        "@label": "lamd:res_L93yqGuQ8oAk5oTsbZRHpP",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/corporate-body/COM",
+          "@id": 7620,
+          "@label": "corporate-body:COM"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_AU",
+          "@id": 3990,
+          "@label": "lamd:md_AU"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_017",
+      "skos:prefLabel": "Judgment of the Court\ncase",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "\njudicial infomation EU case law - Court of Justice",
+      "skos:example": "62015CA0058",
+      "@id": 4806,
+      "@label": "lamd:c_017",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_N6sc68xQZBtzR9FRUxWy7a",
+        "sh:name": "Forbidden lamd:md_NS",
+        "sh:maxCount": "0",
+        "@id": 7037,
+        "@label": "lamd:res_N6sc68xQZBtzR9FRUxWy7a",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_NS",
+          "@id": 4428,
+          "@label": "lamd:md_NS"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_T46dcYWQXtrp2Y2mLDzjSB",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_DN_CLASS to celexd:c_6_CA",
+        "@id": 17688,
+        "@label": "lamd:res_T46dcYWQXtrp2Y2mLDzjSB",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DN_CLASS",
+          "@id": 6650,
+          "@label": "lamd:md_DN_CLASS"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resources/authority/celex/c_6_CA",
+          "@id": 25097,
+          "@label": "celexd:c_6_CA"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_003",
+      "skos:prefLabel": "Draft communication",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Not containing COM or SEC/SWD number\nThose are drafts published in the OJ in the past",
+      "skos:example": "Draft communication to operators in the banana sector - Subject: Applications for the registration of operators for 2000 ",
+      "@id": 4809,
+      "@label": "lamd:c_003",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_d2Tgv7kPRMojVJ2vevD5pC",
+        "sh:maxCount": "0",
+        "sh:name": "Forbidden lamd:md_DH",
+        "@id": 13920,
+        "@label": "lamd:res_d2Tgv7kPRMojVJ2vevD5pC",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DH",
+          "@id": 5495,
+          "@label": "lamd:md_DH"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_WGVqA2N7puSXZDvra4TbT3",
+        "sh:name": "Constraint on lamd:md_FM to resource-type:COMMUNIC_DRAFT",
+        "sh:minCount": "1",
+        "@id": 6895,
+        "@label": "lamd:res_WGVqA2N7puSXZDvra4TbT3",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_FM",
+          "@id": 5057,
+          "@label": "lamd:md_FM"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/resource-type/COMMUNIC_DRAFT",
+          "@id": 17301,
+          "@label": "rety:COMMUNIC_DRAFT"
+        },
+        "rdf:type": {
+          "iri": "http://publications.europa.eu/ontology/lam-skos-ap#MappingPropertyConfiguration",
+          "@id": 4850,
+          "@label": "lam:MappingPropertyConfiguration"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_050",
+      "skos:prefLabel": "Summary of European Union decisions\nSummary of European Union decision\nRegulation (EC) No 726/2004\nmedicinal products",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "(TI~Summary of European Union decisions on marketing authorisations 726/2004) AND DTS_SUBDOM = PRE_ACTS ORDER BY XC DESC",
+      "skos:example": "R\u00e9sum\u00e9 des d\u00e9cisions de l\u2019Union europ\u00e9enne relatives aux autorisations de mise sur le march\u00e9 des m\u00e9dicaments du 1er juillet 2018 au 31 juillet 2018 [Publi\u00e9 en vertu de l\u2019article 13 ou de l\u2019article 38 du r\u00e8glement (CE) n\u00b0 726/2004 du Parlement europ\u00e9en et du Conseil]",
+      "@id": 4840,
+      "@label": "lamd:c_050",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_G8sze33BgUZC5uTq6fmqHB",
+        "sh:name": "Forbidden lamd:md_AF",
+        "sh:maxCount": "0",
+        "@id": 14104,
+        "@label": "lamd:res_G8sze33BgUZC5uTq6fmqHB",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_AF",
+          "@id": 8911,
+          "@label": "lamd:md_AF"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_yqZJB2bdB438C2MY73yx2B",
+        "sh:name": "Constraint on lamd:md_AU to corporate-body:COM",
+        "sh:minCount": "1",
+        "@id": 7618,
+        "@label": "lamd:res_yqZJB2bdB438C2MY73yx2B",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_AU",
+          "@id": 3990,
+          "@label": "lamd:md_AU"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/corporate-body/COM",
+          "@id": 7620,
+          "@label": "corporate-body:COM"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_008",
+      "skos:prefLabel": "Opinion of the European Economic and Social Committee \nOwn-initiative opinion",
+      "dct:created": "2019-10-14",
+      "skos:example": "52015IE1360\n52014IE1468",
+      "@id": 4856,
+      "@label": "lamd:c_008",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_B2BWxHCMWU2qZFBmopZh6V",
+        "sh:maxCount": "0",
+        "sh:name": "Forbidden lamd:md_NA",
+        "@id": 20687,
+        "@label": "lamd:res_B2BWxHCMWU2qZFBmopZh6V",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_NA",
+          "@id": 5584,
+          "@label": "lamd:md_NA"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_3KJo9kGQiGD5emt5J3xUFX",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_DN_CLASS to celexd:c_5_IE",
+        "@id": 10108,
+        "@label": "lamd:res_3KJo9kGQiGD5emt5J3xUFX",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resources/authority/celex/c_5_IE",
+          "@id": 6941,
+          "@label": "celexd:c_5_IE"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DN_CLASS",
+          "@id": 6650,
+          "@label": "lamd:md_DN_CLASS"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_019",
+      "skos:prefLabel": "Arrangement\nEuropean Union",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "arrangement between EU and third country\n\nDTS_SUBDOM = INTER_AGREE AND (TI~arrangement between) ORDER BY XC DESC",
+      "skos:example": "Arrangement between the European Union and the Swiss Confederation on the modalities of its participation in the European Asylum Support Office",
+      "@id": 4933,
+      "@label": "lamd:c_019",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_ndmLgPPPbqmNiPB53HJYNN",
+        "sh:name": "Forbidden lamd:md_INTERPRETATION",
+        "sh:maxCount": "0",
+        "@id": 12289,
+        "@label": "lamd:res_ndmLgPPPbqmNiPB53HJYNN",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_INTERPRETATION",
+          "@id": 4360,
+          "@label": "lamd:md_INTERPRETATION"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_Z3anc525hgbQyG8y6mhrs2",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_AU to corporate-body:EURUN",
+        "skos:editorialNote": " and country",
+        "@id": 18836,
+        "@label": "lamd:res_Z3anc525hgbQyG8y6mhrs2",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/corporate-body/EURUN",
+          "@id": 18913,
+          "@label": "corporate-body:EURUN"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_AU",
+          "@id": 3990,
+          "@label": "lamd:md_AU"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_006",
+      "skos:prefLabel": "Opinion of the European Economic and Social Committee on the proposal\n(COM number) \n(JOIN number)\n(COD number)\n\nOpinion proposing amendments",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Amendments to the proposal are described in the text - usually under \"Specifric comments\". There is a reference to a specific part of the proposal and description what should be changed.\n\nThere is link to procedure + European Parliament - Legisltive obsetvatory.\n\nExample (52015AE6292):\n\n4.2.5.1    Article 1 \u2014 Subject matter and scope\nProcurement of certain online and distance services, such as leasing, should not be excluded from the subject matter and scope.\n\n4.2.5.2    Article 2 \u2014 Definitions\n1. The concept of commercial guarantee should also cover other forms of compensation, otherwise they will not be deemed to be covered by the rules in Article 15.\n\n2. The concept of a tangible movable good has not been positively defined, which gives rise to different interpretations by Member States.\n(...)\n\n4.2.5.3    Article 3 \u2014 Level of harmonisation\nThe level of harmonisation should be minimum, with all the necessary consequences for the regime.",
+      "skos:example": "52015AE6292: Opinion of the European Economic and Social Committee on the \u2018Proposal for a directive of the European Parliament and of the Council on certain aspects concerning contracts for the supply of digital content\u2019 (COM(2015) 634 final \u2014 2015/0287 (COD)) and the \u2018Proposal for a directive of the European Parliament and of the Council on certain aspects concerning contracts for the online and other distance sales of goods\u2019 (COM(2015) 635 final \u2014 2015/0288 (COD))",
+      "@id": 5179,
+      "@label": "lamd:c_006",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_9EnMorjnnmSAH4qD8bVQQM",
+        "sh:maxCount": "0",
+        "sh:name": "Forbidden lamd:md_LF",
+        "@id": 8573,
+        "@label": "lamd:res_9EnMorjnnmSAH4qD8bVQQM",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_LF",
+          "@id": 4692,
+          "@label": "lamd:md_LF"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_qAVfxzem6pMebnXJ5mEqhX",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_CDM_CLASS to cdm:opinion_consultation_eesc",
+        "@id": 18173,
+        "@label": "lamd:res_qAVfxzem6pMebnXJ5mEqhX",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/ontology/cdm#opinion_consultation_eesc",
+          "@id": 14451,
+          "@label": "cdm:opinion_consultation_eesc"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_CDM_CLASS",
+          "@id": 6237,
+          "@label": "lamd:md_CDM_CLASS"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_045",
+      "skos:prefLabel": "Information communicated by Member States \nSummary information\nState aid granted \nRegulation (EC) No 1857/2006 \nRegulation (EC) No 736/2008\nRegulation (EC) No 800/2008",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "TI~communicated by Member States regarding State aid granted ORDER BY XC DESC",
+      "skos:example": "Information communicated by Member States regarding State aid granted under Commission Regulation (EC) No 1857/2006 on the application of Articles 87 and 88 of the Treaty to State aid to small and medium-sized enterprises active in the production of agricultural products and amending Regulation (EC) No 70/2001\n\nSummary information communicated by Member States regarding State aid granted under Commission Regulation (EC) No 736/2008 on the application of Articles 87 and 88 of the Treaty to State aid to small and medium",
+      "@id": 5207,
+      "@label": "lamd:c_045",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_ViSxX9PYbd5Vno4c2Xc87B",
+        "sh:maxCount": "0",
+        "sh:name": "Forbidden lamd:md_APPLICABILITY_DEF",
+        "@id": 7308,
+        "@label": "lamd:res_ViSxX9PYbd5Vno4c2Xc87B",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_APPLICABILITY_DEF",
+          "@id": 4344,
+          "@label": "lamd:md_APPLICABILITY_DEF"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_SyjKWLPBKPZxMEoCdXVYxh",
+        "sh:name": "Constraint on lamd:md_DN_CLASS to celexd:c_5_XC_OJC",
+        "sh:minCount": "1",
+        "@id": 4193,
+        "@label": "lamd:res_SyjKWLPBKPZxMEoCdXVYxh",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DN_CLASS",
+          "@id": 6650,
+          "@label": "lamd:md_DN_CLASS"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resources/authority/celex/c_5_XC_OJC",
+          "@id": 4566,
+          "@label": "celexd:c_5_XC_OJC"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_039",
+      "skos:prefLabel": "Council\nconclusions",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "TI~conclusions council AND AU=CONSIL NOT GOVREP AND DTT=XG ORDER BY XC DESC",
+      "skos:example": "Council conclusions on enhancing cross-sectorial policy cooperation to effectively address socio-economic challenges facing young people \n\nConclusions of the Council on the definition of a 2020 vision for the European research area\n\nCouncil conclusions on food product improvement\n\nCouncil conclusions on \u2018Lessons learned for Public Health from the Ebola outbreak in West Africa \u2014 Health Security in the European Union\u2019",
+      "@id": 5277,
+      "@label": "lamd:c_039",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_NzrniNJvd7sMsZE3pay8zB",
+        "sh:name": "Optional lamd:md_ADDITION ",
+        "@id": 17642,
+        "@label": "lamd:res_NzrniNJvd7sMsZE3pay8zB",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_ADDITION",
+          "@id": 4306,
+          "@label": "lamd:md_ADDITION"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_8pksfpvhp4RAxpRS5LYYWG",
+        "sh:name": "Constraint on lamd:md_CDM_CLASS to cdm:resource_legal",
+        "sh:minCount": "1",
+        "@id": 17440,
+        "@label": "lamd:res_8pksfpvhp4RAxpRS5LYYWG",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_CDM_CLASS",
+          "@id": 6237,
+          "@label": "lamd:md_CDM_CLASS"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/ontology/cdm#resource_legal",
+          "@id": 4735,
+          "@label": "cdm:resource_legal"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_007",
+      "skos:prefLabel": "Opinion of the European Economic and Social Committee on the proposal\n(COM number) \n(JOIN number)\n(COD number)\n\nOpinion not proposing amendments",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "Opinion not proposing amendment - in the opinion, no changes of specific parts of proposal are listed",
+      "skos:example": "52015AE1246\n52016AE1268",
+      "@id": 5365,
+      "@label": "lamd:c_007",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_QNyipLoredU6598JW3sGWQ",
+        "sh:name": "Mandatory lamd:md_RI",
+        "sh:minCount": "1",
+        "skos:editorialNote": " internal number, for example AVIS-SECTION 2014/4791 FIN ",
+        "@id": 20471,
+        "@label": "lamd:res_QNyipLoredU6598JW3sGWQ",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_RI",
+          "@id": 6106,
+          "@label": "lamd:md_RI"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_v43QE6LtpjLVdFo2FC3Gw4",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_CDM_CLASS to cdm:opinion_consultation_eesc",
+        "@id": 6662,
+        "@label": "lamd:res_v43QE6LtpjLVdFo2FC3Gw4",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/ontology/cdm#opinion_consultation_eesc",
+          "@id": 14451,
+          "@label": "cdm:opinion_consultation_eesc"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_CDM_CLASS",
+          "@id": 6237,
+          "@label": "lamd:md_CDM_CLASS"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_025",
+      "skos:prefLabel": "EFTA Surveillance Authority\nNo state aid within the meaning of Article 61(1) of the EEA agreement",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "AU_CODED = EFTA_SUC AND (TI~No state aid within the meaning of) ORDER BY XC DESC",
+      "skos:example": "Absence d\u2019aide d\u2019\u00c9tat au sens de l\u2019article 61, paragraphe 1, de l\u2019accord EEE",
+      "@id": 5448,
+      "@label": "lamd:c_025",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_tzKxae9CLUTW2aEc82giQW",
+        "sh:name": "Forbidden lamd:md_CORRIGENDUM",
+        "sh:maxCount": "0",
+        "@id": 6406,
+        "@label": "lamd:res_tzKxae9CLUTW2aEc82giQW",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_CORRIGENDUM",
+          "@id": 4527,
+          "@label": "lamd:md_CORRIGENDUM"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_CSpbGQDPBntJXN4QBHcA6D",
+        "sh:name": "Constraint on lamd:md_AU to corporate-body:EFTA_SUC",
+        "sh:minCount": "1",
+        "@id": 11827,
+        "@label": "lamd:res_CSpbGQDPBntJXN4QBHcA6D",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/corporate-body/EFTA_SUC",
+          "@id": 14332,
+          "@label": "corporate-body:EFTA_SUC"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_AU",
+          "@id": 3990,
+          "@label": "lamd:md_AU"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_026",
+      "skos:prefLabel": "Communication\nNotice\nEFTA Surveillance Authority\nArticle 27(4)",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "TI~(EFTA Surveillance Authority) AND (\"27(4)\") ORDER BY XC DESC",
+      "skos:example": "Communication de l\u2019Autorit\u00e9 de surveillance AELE publi\u00e9e conform\u00e9ment \u00e0 l\u2019article 27, paragraphe 4, du chapitre II du protocole 4 de l\u2019accord Surveillance et Cour de justice (Affaire n\u00b0 76958 \u2014 Color Line/Municipalit\u00e9 de Sandefjord) \u2014 Engagements offerts par la municipalit\u00e9 de Sandefjord",
+      "@id": 5692,
+      "@label": "lamd:c_026",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_JxXUD7TbqyjT9k273KHZsK",
+        "dct:created": "2019-10-14",
+        "sh:name": "Mandatory unique lamd:md_DD",
+        "sh:maxCount": "1",
+        "sh:minCount": "1",
+        "@id": 6391,
+        "@label": "lamd:res_JxXUD7TbqyjT9k273KHZsK",
+        "lam:hasAnnotationConfiguration": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/res_Z84ko7b3E5AmaVKajt6zre",
+          "sh:minCount": "1",
+          "sh:name": "Constraint on lamd:md_ANN_COD to fd_365:DATPUB",
+          "@id": 10549,
+          "@label": "lamd:res_Z84ko7b3E5AmaVKajt6zre",
+          "sh:value": {
+            "iri": "http://publications.europa.eu/resource/authority/fd_365/DATPUB",
+            "@id": 5003,
+            "@label": "fd_365:DATPUB"
+          }
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DD",
+          "@id": 4405,
+          "@label": "lamd:md_DD"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_df7qtz6R8T738FoMuc8KRT",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_FM to corporate-body:ANNOUNC",
+        "@id": 15143,
+        "@label": "lamd:res_df7qtz6R8T738FoMuc8KRT",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_FM",
+          "@id": 5057,
+          "@label": "lamd:md_FM"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/corporate-body/ANNOUNC",
+          "@id": 28518,
+          "@label": "corporate-body:ANNOUNC"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_029",
+      "skos:prefLabel": "Information notice\nEFTA Surveillance Authority\nArticle 17(5) of Regulation (EC) No 1008/2008\n Article 16(4) of Regulation (EC) No 1008/2008\n common rules for the operation of air services",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "TI~Information notice from the EFTA Surveillance Authority ORDER BY XC DESC",
+      "skos:example": "E2019C0207(01)\nE2016C0602(02)\nE2016C0915(01)",
+      "@id": 5870,
+      "@label": "lamd:c_029",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_5AjwhTwEZiMRACkLQVuMSn",
+        "sh:name": "Forbidden lamd:md_AS",
+        "sh:maxCount": "0",
+        "@id": 9212,
+        "@label": "lamd:res_5AjwhTwEZiMRACkLQVuMSn",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_AS",
+          "@id": 3805,
+          "@label": "lamd:md_AS"
+        }
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_wqTitA7pGvQjbQajP8vUQk",
+        "sh:name": "Constraint on lamd:md_FM to resource-type:NOTIF",
+        "sh:minCount": "1",
+        "@id": 17676,
+        "@label": "lamd:res_wqTitA7pGvQjbQajP8vUQk",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resource/authority/resource-type/NOTIF",
+          "@id": 17678,
+          "@label": "rety:NOTIF"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_FM",
+          "@id": 5057,
+          "@label": "lamd:md_FM"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_046",
+      "skos:prefLabel": "Commission notice\nDecision to close the formal investigation procedure \nState aid\nArticles 107 to 109 of the Treaty on the Functioning of the European Union",
+      "dct:created": "2019-10-14",
+      "skos:editorialNote": "TI~Decision formal investigation procedure withdrawal State aid AND DTS=5 ORDER BY XC DESC",
+      "skos:example": "52016XC1207(04)\n52016XC1012(02)\n52015XC0123(02)",
+      "@id": 6072,
+      "@label": "lamd:c_046",
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_RLqLf77L8cFz9CXRXRZqA4",
+        "sh:name": "Forbidden lamd:md_VO",
+        "sh:maxCount": "0",
+        "@id": 18682,
+        "@label": "lamd:res_RLqLf77L8cFz9CXRXRZqA4",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_VO",
+          "@id": 4170,
+          "@label": "lamd:md_VO"
+        }
+      },
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_KeLx3NG92yPnExg6VrkqnX",
+        "sh:minCount": "1",
+        "sh:name": "Constraint on lamd:md_CDM_CLASS to cdm:resource_legal",
+        "@id": 19019,
+        "@label": "lamd:res_KeLx3NG92yPnExg6VrkqnX",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_CDM_CLASS",
+          "@id": 6237,
+          "@label": "lamd:md_CDM_CLASS"
+        },
+        "sh:value": {
+          "iri": "http://publications.europa.eu/ontology/cdm#resource_legal",
+          "@id": 4735,
+          "@label": "cdm:resource_legal"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    },
+    {
+      "iri": "http://publications.europa.eu/resources/authority/lam/c_020",
+      "skos:prefLabel": "Withdrawal\nCommission proposals",
+      "dct:created": "2019-10-14",
+      "skos:example": "52016XC0430(01)",
+      "@id": 6493,
+      "@label": "lamd:c_020",
+      "lam:classifyWith": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_QCJ2qpf6GmsUx5NYa8CfWC",
+        "sh:name": "Constraint on lamd:md_DN_CLASS to celexd:c_5_XC_OJC",
+        "sh:minCount": "1",
+        "@id": 15671,
+        "@label": "lamd:res_QCJ2qpf6GmsUx5NYa8CfWC",
+        "sh:value": {
+          "iri": "http://publications.europa.eu/resources/authority/celex/c_5_XC_OJC",
+          "@id": 4566,
+          "@label": "celexd:c_5_XC_OJC"
+        },
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_DN_CLASS",
+          "@id": 6650,
+          "@label": "lamd:md_DN_CLASS"
+        }
+      },
+      "lam:hasPropertyConfiguration": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/res_faGayBqgHzYDMbKwVyAbNF",
+        "sh:maxCount": "0",
+        "sh:name": "Forbidden lamd:md_COMPLETION",
+        "@id": 5370,
+        "@label": "lamd:res_faGayBqgHzYDMbKwVyAbNF",
+        "lam:path": {
+          "iri": "http://publications.europa.eu/resources/authority/lam/md_COMPLETION",
+          "@id": 3968,
+          "@label": "lamd:md_COMPLETION"
+        }
+      },
+      "rdf:type": {
+        "iri": "http://www.w3.org/2004/02/skos/core#Concept",
+        "@id": 6902,
+        "@label": "skos:Concept"
+      },
+      "skos:inScheme": {
+        "iri": "http://publications.europa.eu/resources/authority/lam/LAMLegalDocument",
+        "skos:prefLabel": "LAM classes",
+        "@id": 4519,
+        "@label": "lamd:LAMLegalDocument",
+        "rdf:type": {
+          "iri": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+          "@id": 8651,
+          "@label": "skos:ConceptScheme"
+        }
+      }
+    }
+  ]
+}

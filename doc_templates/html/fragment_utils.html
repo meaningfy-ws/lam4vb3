@@ -6,7 +6,26 @@
     </section>
 {%- endmacro %}
 
+{% macro build_lam_property_concept(concept) -%}
+    <h2 id="{{ concept["iri"] }}">{{ concept["skos:prefLabel"] }}<sup title="Concept">C</sup></h2>
+    <section>
+        {{ build_metadata(concept) }}
+        {{ build_editorial_content(concept) }}
+        {{ build_formal_content_lam_properties(concept) }}
+    </section>
+{%- endmacro %}
+
+{% macro build_lam_class_concept(concept) -%}
+    <h2 id="{{ concept["iri"] }}">{{ concept["skos:prefLabel"] }}<sup title="Concept">C</sup></h2>
+    <section>
+        {{ build_metadata(concept) }}
+        {{ build_editorial_content(concept) }}
+        {{ build_formal_content_lam_classes(concept) }}
+    </section>
+{%- endmacro %}
+
 {% macro build_metadata(resource) -%}
+    {# should be used inside <section> element   #}
     <dl>
         {{ build_description_item(resource, "iri", "Resource IRI" ,True) }}
         {{ build_description_item(resource, "dct:created", "Created" ,False) }}
@@ -16,6 +35,7 @@
 {%- endmacro %}
 
 {% macro build_editorial_content(resource) -%}
+    {# should be used inside <section> element   #}
     <dl>
         {{ build_description_item_editorial(resource, "skos:definition", "Definition" ,False) }}
         {{ build_description_item_editorial(resource, "skos:scopeNote", "Scope note" ,False) }}
@@ -26,7 +46,154 @@
     </dl>
 {%- endmacro %}
 
+{% macro build_formal_content_lam_properties(resource) -%}
+    {# should be used inside <section> element   #}
+    {# includes lam property specific content   #}
+    <dl>
+        {#       TODO: continue here #}
+    </dl>
+{%- endmacro %}
+
+{% macro build_formal_content_lam_properties(resource) -%}
+    {# should be used inside <section> element   #}
+    {# includes lam property specific content   #}
+    <dl>
+        {% if resource["sh:path"] %}
+            <dt>Property</dt>
+            <dd><a href="{{ resource["sh:path"]["iri"] }}">{{ resource["sh:path"]["@label"] }}</a></dd>
+        {% endif %}
+
+        {% if resource["sh:class"] %}
+            <dt>Range class constraint</dt>
+            <dd><a href="{{ resource["sh:class"]["iri"] }}">{{ resource["sh:class"]["@label"] }}</a></dd>
+        {% endif %}
+
+        {% if resource["lam:hasAnnotationConfiguration"] %}
+
+            <dt>Annotation configuration</dt>
+
+            {% if resource["lam:hasAnnotationConfiguration"] is mapping %}
+                <dd>
+                    {{ build_annotation_property_class_as_p_tags(resource["lam:hasAnnotationConfiguration"]) }}
+                </dd>
+            {% elif resource["lam:hasAnnotationConfiguration"] is iterable and
+                    resource["lam:hasAnnotationConfiguration"] is not string %}
+                {% for annotation_configuration in resource["lam:hasAnnotationConfiguration"] %}
+                    <dd>
+                        {{ build_annotation_property_class_as_p_tags(annotation_configuration) }}
+                    </dd>
+                {% endfor %}
+            {% else %}
+                <p> Error, you should not see this text</p>
+            {% endif %}
+        {% endif %}
+    </dl>
+{%- endmacro %}
+
+{% macro build_annotation_property_class_as_dl_tag(annotation_property) -%}
+    {# should be used inside the <dl> element #}
+    <p><em>{{ annotation_property["sh:name"] }}</em><sup
+            title="Annotation Configuration">AC</sup></p>
+    <dl>
+    <dt>Property</dt>
+    <dd>
+        <a href="#{{ annotation_property["lam:path"]["iri"] }}">{{ annotation_property["lam:path"]["@label"] }}</a>
+    </dd>
+    <dt>Cardinality</dt>
+    <dd>
+        [min: {{ annotation_property["sh:minCount"] if annotation_property["sh:minCount"] else "0" }},
+        max: {{ annotation_property["sh:maxCount"] if annotation_property["sh:maxCount"] else "*" }}]
+    </dd>
+    {% if annotation_property["sh:class"] %}
+        <dt>Range class</dt>
+        <dd>
+            <a href="{{ annotation_property["sh:class"]["iri"] }}">
+                {{ annotation_property["sh:class"]["@label"] }}
+            </a>
+        </dd>
+    {% endif %}
+    {% if annotation_property["sh:value"] %}
+        <dt>Range class</dt>
+        <dd>
+            <a href="{{ annotation_property["sh:class"]["iri"] }}">
+                {{ annotation_property["sh:class"]["@label"] }}
+            </a>
+        </dd>
+    {% endif %}
+{%- endmacro %}
+
+{% macro build_annotation_property_class_as_p_tags(annotation_property) -%}
+    {# should be used inside the <dl> element #}
+    <em>{{ annotation_property["sh:name"] }}<sup
+            title="Annotation Configuration">AC</sup></em><br/>
+    property:
+    <a href="#{{ annotation_property["lam:path"]["iri"] }}">{{ annotation_property["lam:path"]["@label"] }}</a>,
+    min: {{ annotation_property["sh:minCount"] if annotation_property["sh:minCount"] else "0" }},
+    max: {{ annotation_property["sh:maxCount"] if annotation_property["sh:maxCount"] else "*" }}
+    {% if annotation_property["sh:class"] %}
+        , class: <a href="{{ annotation_property["sh:class"]["iri"] }}">
+        {{ annotation_property["sh:class"]["@label"] }} </a>
+    {% endif %}
+    {% if annotation_property["sh:value"] %}
+        , value: <a href="{{ annotation_property["sh:value"]["iri"] }}">
+        {{ annotation_property["sh:value"]["@label"] }} </a>
+    {% endif %}
+
+{%- endmacro %}
+
+{% macro build_annotation_property_class_as_table_tag(annotation_property) -%}
+    {# should be used inside the <dl> element #}
+    <table>
+        <thead>
+        <tr>
+            <td colspan="2" class="fa-align-left">
+                {{ annotation_property["sh:name"] }}<sup title="Annotation Configuration">AC</sup>
+            </td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Property</td>
+            <td>
+                <a href="#{{ annotation_property["lam:path"]["iri"] }}">{{ annotation_property["lam:path"]["@label"] }}</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Cardinality</td>
+            <td>[min: {{ annotation_property["sh:minCount"] if annotation_property["sh:minCount"] else "0" }},
+                max: {{ annotation_property["sh:maxCount"] if annotation_property["sh:maxCount"] else "*" }}]
+            </td>
+        </tr>
+
+        {% if annotation_property["sh:class"] %}
+            <tr>
+                <td>Range class</td>
+                <td>
+                    <a href="{{ annotation_property["sh:class"]["iri"] }}">
+                        {{ annotation_property["sh:class"]["@label"] }}
+                    </a>
+                </td>
+            </tr>
+        {% endif %}
+        {% if annotation_property["sh:value"] %}
+            <tr>
+                <td>Range class</td>
+                <td>
+                    <a href="{{ annotation_property["sh:class"]["iri"] }}">
+                        {{ annotation_property["sh:class"]["@label"] }}
+                    </a>
+                </td>
+            </tr>
+        {% endif %}
+
+        </tbody>
+    </table>
+{%- endmacro %}
+
+
+
 {% macro build_description_item(resource, key, term, urlize=False) -%}
+    {# should be used inside the <dl> element #}
     {% if resource[key] %}
         <dt title="{{ key }}">{{ term }}</dt>
         {% if urlize %}
