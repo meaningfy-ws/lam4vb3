@@ -10,7 +10,8 @@ import unittest
 from pprint import pprint
 
 from lam2doc.document_generator import JinjaGenerator
-from tests import LAM_HELLO_WORLD_HTML, LAM_PROPERTY_CONTENT_JSON, LAM_PROPERTIES_HTML, LAM_CLASSES_HTML
+from tests import LAM_HELLO_WORLD_HTML, LAM_PROPERTY_CONTENT_JSON, LAM_PROPERTIES_HTML, LAM_CLASSES_HTML, \
+    LAM_CLASS_CONTENT_JSON
 
 
 class MyTestCase(unittest.TestCase):
@@ -18,6 +19,8 @@ class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         with LAM_PROPERTY_CONTENT_JSON.open("r") as property_file:
             self.properties_data = json.load(property_file)
+        with LAM_CLASS_CONTENT_JSON.open("r") as property_file:
+            self.classes_data = json.load(property_file)
 
     def test_hello_world(self):
         gen = JinjaGenerator(main_template_name="hello_world.html")
@@ -34,7 +37,7 @@ class MyTestCase(unittest.TestCase):
         assert LAM_PROPERTIES_HTML.exists(), " No file created"
 
     def test_lam_class_generation(self):
-        gen = JinjaGenerator(main_template_name="lam_classes.html", data=self.properties_data)
+        gen = JinjaGenerator(main_template_name="lam_classes.html", data=self.classes_data)
         assert gen.generate(), "No page generated"
         shutil.rmtree(str(LAM_CLASSES_HTML), ignore_errors=True)
         gen.serialise(LAM_CLASSES_HTML)
