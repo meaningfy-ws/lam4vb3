@@ -54,7 +54,9 @@ The project is split into two phases aiming at providing three kinds of delivera
 |  WP2.6 | (Script4) Script to transform LAM-SKOS-AP data into a structured document (e.g. DITA) for PDF/HTML/DocBook disseminations |
 |  WP2.7 | (Data2) test release of LAM OWL ontology |
 |  WP2.8 | (Data3) test release of LAM SHACL shapes |
-|  WP2.9 | (Data4) test release of LAM XML & PDF documentation |
+|  WP2.9 | (Data4) test release of LAM XML & PDF documentation | 
+|        | Example [LAM properties HTML](http://htmlpreview.github.io/?https://github.com/eu-vocabularies/lam4vb3/blob/master/output/lam_properties.html)  |
+|        | Example [LAM classes HTML](http://htmlpreview.github.io/?https://github.com/eu-vocabularies/lam4vb3/blob/master/output/lam_classes.html) |
 
 
 # Running the script Deliverable wp1.3  
