@@ -16,7 +16,7 @@
 {% block main %}
     <h1>Class definition</h1>
     {% for concept in data["skos:Concept"] %}
-        {{ fragment.build_lam_property_concept(concept) }}
+        {{ fragment.build_lam_class_concept(concept) }}
     {% endfor %}
 
 {% endblock %}

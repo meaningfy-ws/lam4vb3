@@ -3,6 +3,9 @@
 <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/stylesheets/jquery.tocify.min.css">
+
     <link rel="stylesheet" href="css/pubcss-acm-sig.css">
     <link rel="stylesheet" media="screen" href="css/screen.css">
     <link rel="stylesheet" media="print" href="css/print.css">
@@ -37,6 +40,8 @@
         <em>structure, specification, LAM </em>
     </div>
 
+    <!-- <div id="toc"></div> #} -->
+
     {% block main %}
         Hello there. Main section here.
     {% endblock %}
@@ -56,7 +61,19 @@
 
 <!-- some more scripts before the end of the document -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
+
+<script>
+    $(function () {
+        //Calls the tocify method on your HTML div.
+        $("#toc").tocify();
+    });
+</script>
+-->
 
 </body>
 </html>

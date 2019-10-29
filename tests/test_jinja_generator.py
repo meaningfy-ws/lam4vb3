@@ -43,5 +43,6 @@ class MyTestCase(unittest.TestCase):
         gen.serialise(LAM_CLASSES_HTML)
         assert LAM_CLASSES_HTML.exists(), " No file created"
 
+
 if __name__ == '__main__':
     unittest.main()

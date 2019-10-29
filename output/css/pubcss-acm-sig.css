@@ -1,6 +1,6 @@
 @charset "UTF-8";
 a[href^="#"] {
-  color: inherit;
+  /*color: inherit;*/
   content: target-counter(attr(href, url), reference);
   text-decoration: none; }
   a[href^="#"]::before {

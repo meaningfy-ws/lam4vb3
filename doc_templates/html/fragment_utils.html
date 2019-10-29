@@ -10,7 +10,7 @@
     <h2 id="{{ concept["iri"] }}">{{ concept["skos:prefLabel"] }}<sup title="Concept">C</sup></h2>
     <section>
         {{ build_metadata(concept) }}
-        {{ build_editorial_content(concept) }}
+        {{ build_editorial_content_lam_properties(concept) }}
         {{ build_formal_content_lam_properties(concept) }}
     </section>
 {%- endmacro %}
@@ -39,6 +39,18 @@
     <dl>
         {{ build_description_item_editorial(resource, "skos:definition", "Definition" ,False) }}
         {{ build_description_item_editorial(resource, "skos:scopeNote", "Scope note" ,False) }}
+        {{ build_description_item_editorial(resource, "skos:example", "Example" ,False) }}
+        {{ build_description_item_editorial(resource, "skos:editorialNote", "Editorial note" ,False) }}
+        {{ build_description_item_editorial(resource, "skos:historyNote", "History note" ,False) }}
+        {{ build_description_item_editorial(resource, "skos:changeNote", "Change note" ,False) }}
+    </dl>
+{%- endmacro %}
+
+{% macro build_editorial_content_lam_properties(resource) -%}
+    {# should be used inside <section> element   #}
+    <dl>
+        {{ build_description_item_editorial(resource, "skos:definition", "Definition" ,False) }}
+        {{ build_description_item_editorial(resource, "skos:scopeNote", "Scope note" ,False) }}
         {{ build_description_item_editorial(resource, "skos:example", "Example" ,True) }}
         {{ build_description_item_editorial(resource, "skos:editorialNote", "Editorial note" ,False) }}
         {{ build_description_item_editorial(resource, "skos:historyNote", "History note" ,False) }}
@@ -46,11 +58,13 @@
     </dl>
 {%- endmacro %}
 
-{% macro build_formal_content_lam_properties(resource) -%}
+{% macro build_formal_content_lam_classes(resource) -%}
     {# should be used inside <section> element   #}
     {# includes lam property specific content   #}
     <dl>
-        {#       TODO: continue here #}
+        {{ build_description_item_editorial(resource, "skos:prefLabel", "Keywords" ,False) }}
+        {{ build_formal_constraint_content(resource, "lam:classifyWith", "Defining configuration") }}
+        {{ build_formal_constraint_content(resource, "lam:hasPropertyConfiguration", "Property configuration") }}
     </dl>
 {%- endmacro %}
 
@@ -58,148 +72,129 @@
     {# should be used inside <section> element   #}
     {# includes lam property specific content   #}
     <dl>
-        {% if resource["sh:path"] %}
-            <dt>Property</dt>
-            <dd><a href="{{ resource["sh:path"]["iri"] }}">{{ resource["sh:path"]["@label"] }}</a></dd>
-        {% endif %}
+        {{ build_description_item_iri(resource, "sh:path", "Formal property", label_key="@label", relative_url=False) }}
+        {{ build_description_item_iri(resource, "sh:class", "Range class constraint", label_key="@label", relative_url=False) }}
+        {{ build_formal_constraint_content(resource, "lam:hasAnnotationConfiguration", "Annotation configuration") }}
+    </dl>
+{%- endmacro %}
 
-        {% if resource["sh:class"] %}
-            <dt>Range class constraint</dt>
-            <dd><a href="{{ resource["sh:class"]["iri"] }}">{{ resource["sh:class"]["@label"] }}</a></dd>
-        {% endif %}
 
-        {% if resource["lam:hasAnnotationConfiguration"] %}
-
-            <dt>Annotation configuration</dt>
-
-            {% if resource["lam:hasAnnotationConfiguration"] is mapping %}
+{% macro build_formal_constraint_content(resource, constraint_key, constraint_term) -%}
+    {# should be used inside <dl> element   #}
+    {% if resource[constraint_key] %}
+        <dt>{{ constraint_term }}</dt>
+        {% if resource[constraint_key] is mapping %}
+            <dd>
+                {{ build_property_configuration(resource[constraint_key]) }}
+            </dd>
+        {% elif resource[constraint_key] is iterable and
+                    resource[constraint_key] is not string %}
+            {% for annotation_configuration in resource[constraint_key] %}
                 <dd>
-                    {{ build_annotation_property_class_as_p_tags(resource["lam:hasAnnotationConfiguration"]) }}
+                    {{ build_property_configuration(annotation_configuration) }}
                 </dd>
-            {% elif resource["lam:hasAnnotationConfiguration"] is iterable and
-                    resource["lam:hasAnnotationConfiguration"] is not string %}
-                {% for annotation_configuration in resource["lam:hasAnnotationConfiguration"] %}
-                    <dd>
-                        {{ build_annotation_property_class_as_p_tags(annotation_configuration) }}
-                    </dd>
-                {% endfor %}
-            {% else %}
-                <p> Error, you should not see this text</p>
-            {% endif %}
+            {% endfor %}
+        {% else %}
+            <p> Error, you should not see this text</p>
         {% endif %}
-    </dl>
+    {% endif %}
 {%- endmacro %}
+
 
 {% macro build_annotation_property_class_as_dl_tag(annotation_property) -%}
     {# should be used inside the <dl> element #}
     <p><em>{{ annotation_property["sh:name"] }}</em><sup
             title="Annotation Configuration">AC</sup></p>
     <dl>
-    <dt>Property</dt>
-    <dd>
-        <a href="#{{ annotation_property["lam:path"]["iri"] }}">{{ annotation_property["lam:path"]["@label"] }}</a>
-    </dd>
-    <dt>Cardinality</dt>
-    <dd>
-        [min: {{ annotation_property["sh:minCount"] if annotation_property["sh:minCount"] else "0" }},
-        max: {{ annotation_property["sh:maxCount"] if annotation_property["sh:maxCount"] else "*" }}]
-    </dd>
-    {% if annotation_property["sh:class"] %}
-        <dt>Range class</dt>
+        <dt>Property</dt>
         <dd>
-            <a href="{{ annotation_property["sh:class"]["iri"] }}">
-                {{ annotation_property["sh:class"]["@label"] }}
-            </a>
+            <a href="#{{ annotation_property["lam:path"]["iri"] }}">{{ annotation_property["lam:path"]["@label"] }}</a>
         </dd>
-    {% endif %}
-    {% if annotation_property["sh:value"] %}
-        <dt>Range class</dt>
+        <dt>Cardinality</dt>
         <dd>
-            <a href="{{ annotation_property["sh:class"]["iri"] }}">
-                {{ annotation_property["sh:class"]["@label"] }}
-            </a>
+            [min: {{ annotation_property["sh:minCount"] if annotation_property["sh:minCount"] else "0" }},
+            max: {{ annotation_property["sh:maxCount"] if annotation_property["sh:maxCount"] else "*" }}]
         </dd>
-    {% endif %}
-{%- endmacro %}
-
-{% macro build_annotation_property_class_as_p_tags(annotation_property) -%}
-    {# should be used inside the <dl> element #}
-    <em>{{ annotation_property["sh:name"] }}<sup
-            title="Annotation Configuration">AC</sup></em><br/>
-    property:
-    <a href="#{{ annotation_property["lam:path"]["iri"] }}">{{ annotation_property["lam:path"]["@label"] }}</a>,
-    min: {{ annotation_property["sh:minCount"] if annotation_property["sh:minCount"] else "0" }},
-    max: {{ annotation_property["sh:maxCount"] if annotation_property["sh:maxCount"] else "*" }}
-    {% if annotation_property["sh:class"] %}
-        , class: <a href="{{ annotation_property["sh:class"]["iri"] }}">
-        {{ annotation_property["sh:class"]["@label"] }} </a>
-    {% endif %}
-    {% if annotation_property["sh:value"] %}
-        , value: <a href="{{ annotation_property["sh:value"]["iri"] }}">
-        {{ annotation_property["sh:value"]["@label"] }} </a>
-    {% endif %}
-
-{%- endmacro %}
-
-{% macro build_annotation_property_class_as_table_tag(annotation_property) -%}
-    {# should be used inside the <dl> element #}
-    <table>
-        <thead>
-        <tr>
-            <td colspan="2" class="fa-align-left">
-                {{ annotation_property["sh:name"] }}<sup title="Annotation Configuration">AC</sup>
-            </td>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Property</td>
-            <td>
-                <a href="#{{ annotation_property["lam:path"]["iri"] }}">{{ annotation_property["lam:path"]["@label"] }}</a>
-            </td>
-        </tr>
-        <tr>
-            <td>Cardinality</td>
-            <td>[min: {{ annotation_property["sh:minCount"] if annotation_property["sh:minCount"] else "0" }},
-                max: {{ annotation_property["sh:maxCount"] if annotation_property["sh:maxCount"] else "*" }}]
-            </td>
-        </tr>
-
         {% if annotation_property["sh:class"] %}
-            <tr>
-                <td>Range class</td>
-                <td>
-                    <a href="{{ annotation_property["sh:class"]["iri"] }}">
-                        {{ annotation_property["sh:class"]["@label"] }}
-                    </a>
-                </td>
-            </tr>
+            <dt>Range class</dt>
+            <dd>
+                <a href="{{ annotation_property["sh:class"]["iri"] }}">
+                    {{ annotation_property["sh:class"]["@label"] }}
+                </a>
+            </dd>
         {% endif %}
         {% if annotation_property["sh:value"] %}
-            <tr>
-                <td>Range class</td>
-                <td>
-                    <a href="{{ annotation_property["sh:class"]["iri"] }}">
-                        {{ annotation_property["sh:class"]["@label"] }}
-                    </a>
-                </td>
-            </tr>
+            <dt>Range class</dt>
+            <dd>
+                <a href="{{ annotation_property["sh:class"]["iri"] }}">
+                    {{ annotation_property["sh:class"]["@label"] }}
+                </a>
+            </dd>
         {% endif %}
-
-        </tbody>
-    </table>
+    </dl>
 {%- endmacro %}
 
+{% macro build_property_configuration(property_configuration) -%}
+    {# should be used inside the <dd> tag #}
+    <em>{{ property_configuration["sh:name"] }}<sup
+            title="Property Configuration">AC</sup></em><br/>
+    &nbsp;&nbsp; property
+    <a href="#{{ property_configuration["lam:path"]["iri"] }}">{{ property_configuration["lam:path"]["@label"] }}</a>
+    min {{ property_configuration["sh:minCount"] if property_configuration["sh:minCount"] else "0" }}
+    max {{ property_configuration["sh:maxCount"] if property_configuration["sh:maxCount"] else "*" }}
+    {% if property_configuration["sh:class"] %}
+        class <a href="{{ property_configuration["sh:class"]["iri"] }}">
+        {{ property_configuration["sh:class"]["@label"] }} </a>
+    {% endif %}
+    {% if property_configuration["sh:value"] %}
+        value <a href="{{ property_configuration["sh:value"]["iri"] }}">
+        {{ property_configuration["sh:value"]["@label"] }} </a>
+    {% endif %}
+{%- endmacro %}
 
 
 {% macro build_description_item(resource, key, term, urlize=False) -%}
     {# should be used inside the <dl> element #}
     {% if resource[key] %}
         <dt title="{{ key }}">{{ term }}</dt>
-        {% if urlize %}
-            <dd title="{{ key }}">{{ resource[key] | urlize(target='_blank') }}</dd>
+
+        {% if resource[key] is iterable and resource[key] is not string %}
+            {% for value in resource[key] %}
+                {% if urlize %}
+                    <dd title="{{ key }}">{{ value | urlize(target='_blank') }}</dd>
+                {% else %}
+                    <dd title="{{ key }}">{{ value }}</dd>
+                {% endif %}
+            {% endfor %}
         {% else %}
-            <dd title="{{ key }}">{{ resource[key] }}</dd>
+            {% if urlize %}
+                <dd title="{{ key }}">{{ resource[key] | urlize(target='_blank') }}</dd>
+            {% else %}
+                <dd title="{{ key }}">{{ resource[key] }}</dd>
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{%- endmacro %}
+
+{% macro build_description_item_iri(resource, key, term, label_key="@label", relative_url=True) -%}
+    {# should be used inside the <dl> element #}
+    {% if resource[key] %}
+        <dt title="{{ key }}">{{ term }}</dt>
+
+        {% if resource[key] is iterable and resource[key] is not string and resource[key] is not mapping %}
+            {% for value in resource[key] %}
+                <dd title="{{ key }}">
+                    <a href="{{ '#' if relative_url else '' ~ value["iri"] }}">
+                        {{ value[label_key] }}
+                    </a>
+                </dd>
+            {% endfor %}
+        {% else %}
+            <dd title="{{ key }}">
+                <a href="{{ '#' if relative_url else '' ~ resource[key]["iri"] }}">
+                    {{ resource[key][label_key] }}
+                </a>
+            </dd>
         {% endif %}
     {% endif %}
 {%- endmacro %}
