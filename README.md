@@ -25,22 +25,23 @@ The project is split into two phases aiming at providing three kinds of delivera
 ## Phase 1
 | Key | Value |
 | :--- | :--- | 
-| Status | ongoing |
-| Expected delivery| October 2019|
+| Status | Finished |
+| Expected delivery | October 2019|
+| Delivered | 2nd of October 2019|
 
 | Work package | Description |
 | :--- | :--- |
-|  WP1.1 | (Doc1) Requirements specification - A preliminary requirement specification for LAM project (based on the preliminary analisys) |
-|  WP1.2 | (Model spec1) LAM-SKOS-AP model - A model to structure LAM data suitable for loading into VocBench3 |
-|  WP1.3 | (Script1) Excel to LAM-SKOS-AP transformation script  - A command line script to transform the Structured Excel files into LAM-SKOS-AP suitable for loading into VB3 |
-|  WP1.4 | (Doc2) Documentation of Excel structure - Specification of how the excel files should be structured in order to undergo the transformation, i.e. the description of the input data for the script. |
-|  WP1.5 | (Data1) LAM data and loading it into VocBench 3 – Load and setup data in VocBench3 OP environment |
+|  WP1.1 | [(Doc1)](deliverables/wp1-1-ontology-requirements/main.pdf) Requirements specification - A preliminary requirement specification for LAM project (based on the preliminary analisys) |
+|  WP1.2 | [(Model spec1)](deliverables/wp1-2-lam-skos-ap/main.pdf) LAM-SKOS-AP model - A model to structure LAM data suitable for loading into VocBench3 |
+|  WP1.3 | [(Script1)](lam4vb3/excel2rdf.py) Excel to LAM-SKOS-AP transformation script  - A command line script to transform the Structured Excel files into LAM-SKOS-AP suitable for loading into VB3 |
+|  WP1.4 | [(Doc2)](deliverables/wp1-4-excel-structure/main.pdf) Documentation of Excel structure - Specification of how the excel files should be structured in order to undergo the transformation, i.e. the description of the input data for the script. |
+|  WP1.5 | [(Data1)](output) LAM data and loading it into VocBench 3 – Load and setup data in VocBench3 OP environment |
 
 ## Phase 2
 | Key | Value |
 | :--- | :--- |
-|Status| planned|
-|Expected delivery| December 2019| 
+|Status| ongoing |
+|Expected delivery | December 2019| 
 
 
 | Work package  | Description |
