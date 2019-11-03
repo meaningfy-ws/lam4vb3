@@ -20,4 +20,5 @@ LAM_HELLO_WORLD_HTML = (THIS_PROJECT / "output/lam_hello_world.html").resolve()
 LAM_PROPERTIES_HTML = (THIS_PROJECT / "output/lam_properties.html").resolve()
 LAM_CLASSES_HTML = (THIS_PROJECT / "output/lam_classes.html").resolve()
 
-
+LAM_OWL_TTL = (THIS_PROJECT / "output/lam_owl.ttl").resolve()
+LAM_OWL_HTML = (THIS_PROJECT / "output/lam_owl.html").resolve()
