@@ -11,4 +11,4 @@ click
 rdf2gremlin
 dicttoxml
 jinja2
-jupyterlab
+jupyter
