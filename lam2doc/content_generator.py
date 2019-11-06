@@ -56,6 +56,17 @@ class LAMGremlinGenerator(ContentGenerator):
             self.__generate_tree(CONCEPT_QNAME)
         return self.content
 
+    def sort(self, key, by=None, ascending=True):
+        """
+            provide json path
+        :param key:
+        :param by:
+        :param ascending:
+        :return:
+        """
+        pass
+
+
     def to_json(self, output_file_name):
         with open(str(output_file_name), "w") as json_file:
             json.dump(self.generate(), json_file)

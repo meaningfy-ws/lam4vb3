@@ -45,6 +45,9 @@ class MyTestCase(unittest.TestCase):
         self.gen.to_xml(str(LAM_PROPERTY_CONTENT_XML))
         assert LAM_PROPERTY_CONTENT_XML.exists(), "File not created"
 
+    def test_sort(self):
+        # TODO TBD
+        pass
 
 if __name__ == '__main__':
     unittest.main()
