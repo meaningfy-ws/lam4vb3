@@ -7,7 +7,7 @@ Email: costezki.eugen@gmail.com
 import shutil
 import unittest
 
-from lam2doc import CONCEPT_QNAME, CONCEPT_SCHEME_QNAME
+from lam2doc import CONCEPT_QNAME, CONCEPT_SCHEME_QNAME, COLLECTION_QNAME
 from lam2doc.content_generator import LAMGremlinGenerator
 from tests import LAM_PROPERTY_EXAMPLE, LAM_PROPERTY_CONTENT_JSON, LAM_PROPERTY_CONTENT_XML, LAM_CLASS_CONTENT_JSON, \
     LAM_CLASS_EXAMPLE
@@ -28,6 +28,8 @@ class MyTestCase(unittest.TestCase):
         assert len(content[CONCEPT_QNAME]) > 0, "no concepts loaded"
         assert CONCEPT_SCHEME_QNAME in content, "no concept scheme known"
         assert len(content[CONCEPT_SCHEME_QNAME]) > 0, "no concept scheme loaded"
+        assert COLLECTION_QNAME in content, "no collection known"
+        assert len(content[COLLECTION_QNAME]) > 0, "no collection loaded"
 
     def test_serialisation_json(self):
         shutil.rmtree(str(LAM_PROPERTY_CONTENT_JSON), ignore_errors=True)
@@ -45,9 +47,6 @@ class MyTestCase(unittest.TestCase):
         self.gen.to_xml(str(LAM_PROPERTY_CONTENT_XML))
         assert LAM_PROPERTY_CONTENT_XML.exists(), "File not created"
 
-    def test_sort(self):
-        # TODO TBD
-        pass
 
 if __name__ == '__main__':
     unittest.main()

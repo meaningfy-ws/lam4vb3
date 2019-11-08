@@ -15,7 +15,7 @@
 
 {% block main %}
     <h1>Property definition</h1>
-    {% for concept in data["skos:Concept"] %}
+    {% for concept in data["skos:Concept"]|sort(attribute='skos:prefLabel')  %}
         {{ fragment.build_lam_property_concept(concept) }}
     {% endfor %}
 

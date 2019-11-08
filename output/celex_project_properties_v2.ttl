@@ -55,7 +55,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 celexd:md_CODE a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "CODE" ;
@@ -63,7 +63,7 @@ celexd:md_CODE a skos:Concept ;
     sh:path skos:notation .
 
 celexd:md_LABEL a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "LABEL" ;
@@ -79,7 +79,7 @@ lamd:res_wnXwwMsdDjR6LCvSG4smXH a skos:Collection ;
     skos:prefLabel "Publication reference" .
 
 celexd:md_DTA a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "The year attributed to the document (internal number or ppf number)."@en ;
     skos:example "<cdm:resource_legal_year rdf:datatype=\"http://www.w3.org/2001/XMLSchema#gYear\">2014</cdm:resource_legal_year>" ;
@@ -100,7 +100,7 @@ for sector 9: the year the question was introduced."""@en ;
     sh:path lam:dta .
 
 celexd:md_DTN a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """A sequential number representing the original reference number of the act.
 
@@ -119,7 +119,7 @@ For a corrigendum an “R” is added to the four digits (see CELEX type corrige
     sh:path lam:dtn .
 
 celexd:md_DTS a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "The quite diverse origin of the different document types within EUR-Lex is reflected by the sector structure of the database."@en ;
     skos:example "<j.0:resource_legal_id_sector rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">2</j.0:resource_legal_id_sector>" ;
@@ -142,7 +142,7 @@ E  EFTA documents"""@en ;
     sh:path lam:dts .
 
 celexd:md_DTT a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """One or two letter code specifying the type of document. 
 
@@ -154,7 +154,7 @@ This metadata is related to another metadata field Author (created by). Celex ty
     sh:path lam:dtt .
 
 celexd:md_OJ_ID a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Identifier of the Official Journal in which was the document published.
 
