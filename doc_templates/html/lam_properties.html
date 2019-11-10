@@ -3,21 +3,26 @@
 
 
 {% block header %}
-<h1 class="title"> LAM property specification </h1>
-        <h2>[Standard specification]</h2>
-        <div class="authors col-span">
-            <div class="author">
-                <div>Publications Office of the European Union </div>
-            </div>
+    <h1 class="title"> LAM property specification </h1>
+    <h2>[Standard specification]</h2>
+    <div class="authors col-span">
+        <div class="author">
+            <div>Publications Office of the European Union</div>
         </div>
+    </div>
 {% endblock %}
 
 
 {% block main %}
-    <h1>Property definition</h1>
-    {% for concept in data["skos:Concept"]|sort(attribute='skos:prefLabel')  %}
-        {{ fragment.build_lam_property_concept(concept) }}
-    {% endfor %}
 
+    {% include "properties_intro.html" ignore missing with context %}
+    {% include "properties_collections.html" ignore missing with context %}
+
+{#    <div id="properties">#}
+{#        <h1>Property definition</h1>#}
+{#        {% for concept in data["skos:Concept"]|sort(attribute='skos:prefLabel') %}#}
+{#            {{ fragment.build_lam_property_concept(concept) }}#}
+{#        {% endfor %}#}
+{#    </div>#}
 {% endblock %}
 

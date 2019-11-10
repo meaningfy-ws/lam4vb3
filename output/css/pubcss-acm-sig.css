@@ -13,12 +13,25 @@ a[href^="#"] {
       content: ""; }
     a[href^="#"].section::after {
       content: ''; }
+
   a[href^="#"].subsection {
     content: target-counter(attr(href, url), section) "." target-counter(attr(href, url), subsection); }
     a[href^="#"].subsection::before {
       content: ""; }
     a[href^="#"].subsection::after {
       content: ''; }
+
+  /* :bug fix attemnpt*/
+
+  a[href^="#"].subsubsection {
+    content: target-counter(attr(href, url), section) "." target-counter(attr(href, url), subsection) "." target-counter(attr(href, url), subsubsection); }
+    a[href^="#"].subsubsection::before {
+      content: ""; }
+    a[href^="#"].subsubsection::after {
+      content: ''; }
+  /**/
+
+
   a[href^="#"].subsubsubsection {
     content: target-counter(attr(href, url), section) "." target-counter(attr(href, url), subsection) "." target-counter(attr(href, url), subsubsection) "." target-counter(attr(href, url), subsubsubsection); }
     a[href^="#"].subsubsubsection::before {
@@ -228,13 +241,13 @@ h3:not(.counter-skip) {
   counter-increment: subsubsection; }
 
 h4:not(.counter-skip) {
-  counter-increment: subsubsection; }
-
-h5:not(.counter-skip) {
   counter-increment: subsubsubsection; }
 
-h6:not(.counter-skip) {
+h5:not(.counter-skip) {
   counter-increment: subsubsubsubsection; }
+
+h6:not(.counter-skip) {
+  counter-increment: subsubsubsubsubsection; }
 
 h1.counter-reset {
   counter-increment: section; }
@@ -246,13 +259,13 @@ h3.counter-reset {
   counter-increment: subsubsection; }
 
 h4.counter-reset {
-  counter-increment: subsubsection; }
-
-h5.counter-reset {
   counter-increment: subsubsubsection; }
 
-h6.counter-reset {
+h5.counter-reset {
   counter-increment: subsubsubsubsection; }
+
+h6.counter-reset {
+  counter-increment: subsubsubsubsubsection; }
 
 h1:not(.counter-skip)::before {
   content: "" "" counter(section, decimal) ""; }
@@ -264,13 +277,13 @@ h3:not(.counter-skip)::before {
   content: "" "" counter(section, decimal) "." counter(subsection, decimal) "." counter(subsubsection, decimal) ""; }
 
 h4:not(.counter-skip)::before {
-  content: "" "" counter(section, decimal) "." counter(subsection, decimal) "." counter(subsubsection, decimal) "." counter(subsubsection, decimal) ""; }
+  content: "" "" counter(section, decimal) "." counter(subsection, decimal) "." counter(subsubsection, decimal) "." counter(subsubsubsection, decimal) ""; }
 
 h5:not(.counter-skip)::before {
-  content: "" "" counter(section, decimal) "." counter(subsection, decimal) "." counter(subsubsection, decimal) "." counter(subsubsection, decimal) "." counter(subsubsubsection, decimal) ""; }
+  content: "" "" counter(section, decimal) "." counter(subsection, decimal) "." counter(subsubsection, decimal) "." counter(subsubsubsection, decimal) "." counter(subsubsubsubsection, decimal) ""; }
 
 h6:not(.counter-skip)::before {
-  content: "" "" counter(section, decimal) "." counter(subsection, decimal) "." counter(subsubsection, decimal) "." counter(subsubsection, decimal) "." counter(subsubsubsection, decimal) "." counter(subsubsubsubsection, decimal) ""; }
+  content: "" "" counter(section, decimal) "." counter(subsection, decimal) "." counter(subsubsection, decimal) "." counter(subsubsubsection, decimal) "." counter(subsubsubsubsection, decimal) "." counter(subsubsubsubsubsection, decimal) ""; }
 
 .page-break-after {
   break-after: always; }
@@ -292,11 +305,11 @@ h1 + h2,
 h1 + * > h2:first-child {
   margin-top: 0; }
 
-h3,
-h4 {
-  font-style: italic;
-  font-weight: normal;
-  margin: 1.33333em 0 0; }
+/*h3,*/
+/*h4 {*/
+/*  font-style: italic;*/
+/*  font-weight: normal;*/
+/*  margin: 1.33333em 0 0; }*/
 
 header {
   column-span: all;
