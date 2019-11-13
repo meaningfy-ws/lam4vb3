@@ -54,131 +54,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-lamd:md_CDM_CLASS a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
-    dct:type "object property" ;
-    skos:definition "Class or subclass according to CDM."@en ;
-    skos:inScheme lamd:DocumentProperty ;
-    skos:notation "CDM_CLASS" ;
-    skos:prefLabel "cdm class"@en ;
-    sh:path lam:cdm_class .
-
-lamd:md_CODE a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
-    dct:type "data property" ;
-    skos:inScheme lamd:DocumentProperty ;
-    skos:notation "CODE" ;
-    skos:prefLabel "Concept code"@en ;
-    sh:path skos:notation .
-
-lamd:md_COMMENT a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
-    dct:type "data property" ;
-    skos:definition "Field used in the cataloguing methodology for  information purposes. It contains different comments related to the specific document type."@en ;
-    skos:inScheme lamd:DocumentProperty ;
-    skos:notation "COMMENT" ;
-    skos:prefLabel "Comment"@en ;
-    sh:path skos:editorialNote .
-
-lamd:md_DN_CLASS a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
-    dct:type "object property" ;
-    skos:inScheme lamd:DocumentProperty ;
-    skos:notation "DN_CLASS" ;
-    skos:prefLabel "reference to CELEX class"@en ;
-    sh:path lam:celex_class .
-
-lamd:md_EXAMPLE_CELEX a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
-    dct:type "data property" ;
-    skos:definition "Field used in the cataloguing methodology for  information purposes. "@en ;
-    skos:inScheme lamd:DocumentProperty ;
-    skos:notation "EXAMPLE_CELEX" ;
-    skos:prefLabel "Celex example"@en ;
-    sh:path skos:example .
-
-lamd:md_EXAMPLE_EN a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
-    dct:type "data property" ;
-    skos:definition "Field used in the cataloguing methodology for  information purposes. "@en ;
-    skos:inScheme lamd:DocumentProperty ;
-    skos:notation "EXAMPLE_EN" ;
-    skos:prefLabel "EN example"@en ;
-    sh:path skos:example .
-
-lamd:md_EXAMPLE_FR a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
-    dct:type "data property" ;
-    skos:definition "Field used in the cataloguing methodology for  information purposes. "@en ;
-    skos:inScheme lamd:DocumentProperty ;
-    skos:notation "EXAMPLE_FR" ;
-    skos:prefLabel "FR example"@en ;
-    sh:path skos:example .
-
-lamd:md_KEYWORD a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
-    dct:type "data property" ;
-    skos:definition "Field used in the cataloguing methodology for  classification and search purposes. Keywords are usually extracted from the titles of documents."@en ;
-    skos:inScheme lamd:DocumentProperty ;
-    skos:notation "KEYWORD" ;
-    skos:prefLabel "Keywords"@en ;
-    sh:path skos:prefLabel .
-
-lamd:md_LABEL a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
-    dct:type "data property" ;
-    skos:inScheme lamd:DocumentProperty ;
-    skos:notation "LABEL" ;
-    skos:prefLabel "Label of the concept"@en ;
-    sh:path skos:prefLabel .
-
-lamd:res_DA5ffvRXRBEFYBLHW6CPAm a skos:Collection ;
-    skos:member lamd:md_ANN_ART,
-        lamd:md_ANN_CLB,
-        lamd:md_ANN_COD,
-        lamd:md_ANN_EOV,
-        lamd:md_ANN_FCS,
-        lamd:md_ANN_FCT,
-        lamd:md_ANN_LVL,
-        lamd:md_ANN_MDL,
-        lamd:md_ANN_MSL,
-        lamd:md_ANN_PAR,
-        lamd:md_ANN_RL2,
-        lamd:md_ANN_SOV,
-        lamd:md_ANN_SUB,
-        lamd:md_ANN_TLT,
-        lamd:md_ANN_TOD ;
-    skos:prefLabel "Annotations" .
-
-lamd:res_EWYhrgkfWmQ7SnNqYxhJyY a skos:Collection ;
-    skos:member lamd:md_OJ_ID ;
-    skos:prefLabel "Publication reference" .
-
-lamd:res_EsuLhY8gVwov8NkvLaoGae a skos:Collection ;
-    skos:member lamd:md_AP,
-        lamd:md_DF,
-        lamd:md_NA,
-        lamd:md_PR ;
-    skos:prefLabel "Case law properties" .
-
-lamd:res_L7ymFAYDEnrV9xAVSLM6wP a skos:Collection ;
-    skos:member lamd:res_6TS7EdvJBmuEdgYaY9Qg8C,
-        lamd:res_6gKtzsqZETiLeQDPmhJa66,
-        lamd:res_7vu5K7JGyUpgsZ6yiJm7PL,
-        lamd:res_CZoLZRukMWnx3sxN5ZP36a,
-        lamd:res_SK9Q82RYWYpYxUSzYhFZ5n,
-        lamd:res_Svm78k9d3NZiKgPmpDAtDd,
-        lamd:res_tiGTkBUYfugUYzUN96fFyX ;
-    skos:prefLabel "Relationships between documents" .
-
-lamd:res_RJWXLEq3sERmZbVnJDyKKA a skos:Collection ;
-    skos:member lamd:md_CC,
-        lamd:md_CT,
-        lamd:md_DC,
-        lamd:md_RJ_NEW ;
-    skos:prefLabel "Classification" .
-
-lamd:res_ZCogEeTDGL8N3Zu9HrbgZJ a skos:Collection ;
+lamd:res_5devgfmFzoWFEQ5jM8SHLW a skos:Collection ;
     skos:member lamd:md_DB,
         lamd:md_DD,
         lamd:md_DH,
@@ -193,7 +69,14 @@ lamd:res_ZCogEeTDGL8N3Zu9HrbgZJ a skos:Collection ;
         lamd:md_VO ;
     skos:prefLabel "Dates" .
 
-lamd:res_dh79FEgbzY3EcaqK95u2SB a skos:Collection ;
+lamd:res_A8qJ6vdsSE2BMSVyxoM65D a skos:Collection ;
+    skos:member lamd:md_CC,
+        lamd:md_CT,
+        lamd:md_DC,
+        lamd:md_RJ_NEW ;
+    skos:prefLabel "Classification" .
+
+lamd:res_HkiQRSMxN94Xzvp4gNvJoe a skos:Collection ;
     skos:member lamd:md_AD,
         lamd:md_AF,
         lamd:md_AS,
@@ -212,15 +95,66 @@ lamd:res_dh79FEgbzY3EcaqK95u2SB a skos:Collection ;
         lamd:md_RI,
         lamd:md_RS,
         lamd:md_VV,
-        lamd:res_6HkZYdxUXJ4dAPAHfG82Mn ;
+        lamd:res_7SDUXKedZiXFzcWTJKfJn9 ;
     skos:prefLabel "Miscellaneous information" .
 
-lamd:res_sHdXMVrjc9qXULA48KKU52 a skos:Collection ;
-    skos:member lamd:res_QLyxabjDZWcWpD3NUDqoiL ;
+lamd:res_M4pLaNX3v5RG43i4XcZhv5 a skos:Collection ;
+    skos:member lamd:res_aVRf7P8BoajLe2k5a8BtQ6 ;
     skos:prefLabel "References" .
 
+lamd:res_iJxzgWd3UL8GEnXweVtPAk a skos:Collection ;
+    skos:member lamd:md_ANN_ART,
+        lamd:md_ANN_CLB,
+        lamd:md_ANN_COD,
+        lamd:md_ANN_EOV,
+        lamd:md_ANN_FCS,
+        lamd:md_ANN_FCT,
+        lamd:md_ANN_LVL,
+        lamd:md_ANN_MDL,
+        lamd:md_ANN_MSL,
+        lamd:md_ANN_PAR,
+        lamd:md_ANN_RL2,
+        lamd:md_ANN_SOV,
+        lamd:md_ANN_SUB,
+        lamd:md_ANN_TLT,
+        lamd:md_ANN_TOD ;
+    skos:prefLabel "Annotations" .
+
+lamd:res_juuFjKFSWWpaxvaRsRqYYj a skos:Collection ;
+    skos:member lamd:res_CsP5NXXesf4AyggDT8E8T4,
+        lamd:res_HWSugYfzXLH3EwPwKxvAte,
+        lamd:res_SnH5GdN5t6wBqib2CUBFYL,
+        lamd:res_ZgHFRSUVnTABrSUDJwdh7A,
+        lamd:res_kHfaspMbZpCVopv3ksmviB,
+        lamd:res_u7kDseKZh7pTdRA7bTSm5o,
+        lamd:res_x5R9HnsgnUJiUXx5qXiACP ;
+    skos:prefLabel "Relationships between documents" .
+
+lamd:res_kMM2gdSwrTBK5wgpUpE3SR a skos:Collection ;
+    skos:member lamd:md_CDM_CLASS,
+        lamd:md_CODE,
+        lamd:md_COMMENT,
+        lamd:md_DN_CLASS,
+        lamd:md_EXAMPLE_CELEX,
+        lamd:md_EXAMPLE_EN,
+        lamd:md_EXAMPLE_FR,
+        lamd:md_KEYWORD,
+        lamd:md_LABEL ;
+    skos:prefLabel "Default" .
+
+lamd:res_naDB6CbZ8jz7szfM9FbazF a skos:Collection ;
+    skos:member lamd:md_AP,
+        lamd:md_DF,
+        lamd:md_NA,
+        lamd:md_PR ;
+    skos:prefLabel "Case law properties" .
+
+lamd:res_rfdPiPGPLT7mievuXCgSGG a skos:Collection ;
+    skos:member lamd:md_OJ_ID ;
+    skos:prefLabel "Publication reference" .
+
 lamd:md_AD a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Where available this field contains the name of the State, institution, organisation or individual to whom the act is addressed (addressee of parliamentary resolutions; addressee of legislation in general, and MTF decisions in particular).
 This field is applicable to European Parliamentary questions, resolutions and opinions, as well as for  Merger Task Force decisions. It is also used to index Commission decisions."""@en ;
@@ -275,14 +209,14 @@ The field contains descriptors. The values permitted correspond to the codes of 
     sh:path cdm:addresses .
 
 lamd:md_ADDITION a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_A86Dp2Mx6psaQZEiWPd9NN,
-        lamd:res_M3TXsjAJWxXUGPmnX6Np2G,
-        lamd:res_TCvwPH748CDJzyNCDyGDaU,
-        lamd:res_X5Dw4bS2rQ3UFruDfxtLKj,
-        lamd:res_cs68TNCb7VxDHkCjFSQzoc,
-        lamd:res_yToSTLABEuctuRj6f4Pkgg,
-        lamd:res_yqUbyHyPbz3yKJqoaMPGXL ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_3aNTkzRD7gxUeU2jUzy3jd,
+        lamd:res_5E2LCMeUDas99rtWCeowR8,
+        lamd:res_EPtAxwppNPNgEfVUUwz54d,
+        lamd:res_GiaMaByaFKiDVndUHPMVJU,
+        lamd:res_TBvJzovBGDBnmNXCBx4rbj,
+        lamd:res_fj3dxDEaLnpvS56moh9koU,
+        lamd:res_mQWDSthL4WrPELPk7UXbkh ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Addition (JJ)
 This link contains the CELEX numbers of earlier acts modified by the given act (addition to).
@@ -309,14 +243,14 @@ famille"""@en ;
     sh:path cdm:resource_legal_adds_to_resource_legal .
 
 lamd:md_ADOPTION a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_8MoFjoXJCs4q57kxBLXyxV,
-        lamd:res_X5r529y5xMaheAvtBy7wCj,
-        lamd:res_dVMVxGBksKSMqRYMs2Pib2,
-        lamd:res_gcEKdFKttGm3ZV3YnKcqzK,
-        lamd:res_nkhzqS6kt8SNa6ySLgzJka,
-        lamd:res_qStLDxgAxuKuwTWy5tm8eQ,
-        lamd:res_vj4SLSG6fy7hHSqUadJR9B ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_4k8NM7ngvWG3psaDp5DrtA,
+        lamd:res_AY7e5Lp96wjTqRqSxkQfGY,
+        lamd:res_CVVZ6WViQbZ9toZYeMJBE7,
+        lamd:res_D98xmgQ22eP3SbEGkPuhEc,
+        lamd:res_DHhgk8vpGBi2TnhJWg8XEW,
+        lamd:res_axzQxU7h5QaLpfWCHnDmDe,
+        lamd:res_ySvy9fZuno9iaCc9Ytt6J7 ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Adoption (YD)
 This link contains the CELEX numbers of proposal adopted by the given act (when proposal becomes the final act).
@@ -339,14 +273,14 @@ start_of_validity"""@en ;
     sh:path cdm:resource_legal_adopts_resource_legal .
 
 lamd:md_ADOPTION_PAR a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_2D4KjqbL7hzmTB2msnhsNb,
-        lamd:res_4gueKshiA7eLiZkapiyET8,
-        lamd:res_CJc5DBD6GpyiXL2SMxcYhb,
-        lamd:res_F9ujuThJBpRL2HNZMMQHYY,
-        lamd:res_JosT6Z39vyw73jPffyT29a,
-        lamd:res_Sorfa8CPNiNiDBCE7r85fY,
-        lamd:res_utCWK9HWLwcez2cZUz8hU3 ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_Hsk8nbKYwzUjyNDyCjpKeN,
+        lamd:res_UK7GGjaoPp4a5CADwXPKsm,
+        lamd:res_XERdozWotZvqsjXZ6Lzvib,
+        lamd:res_gkvTrFTzqt8mcw74R4LMbC,
+        lamd:res_oLQqo9rJYZ6STyDa7J6ZJ8,
+        lamd:res_oNLmo98LWdaeFr2KG7SbE5,
+        lamd:res_sdqc3m7xgvbnqvG4iovatj ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Partial adoption (YDP)
 This link contains the CELEX numbers of proposal partially adopted by the given act (when parts of proposal become the final act).
@@ -370,7 +304,7 @@ start_of_validity"""@en ;
     sh:path cdm:resource_legal_partially_adopts_resource_ .
 
 lamd:md_AF a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """This field refers to the political affiliation and nationality of the Member of the European Parliament who asked the question.  
 (Political groups represent various political tendencies within the Parliament. Each is represented in the Conference of Presidents by its chairperson, who also has the task of explaining the group’s position on issues under discussion at plenary sessions). """@en ;
@@ -384,14 +318,14 @@ lamd:md_AF a skos:Concept ;
     sh:path cdm:question_parliamentary_asked_by_group_parliamentary .
 
 lamd:md_AMENDMENT a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_LyGSTdubzDrxYwPnmJ8KLN,
-        lamd:res_VMhHGQjJUYX3h8VYZYJyc9,
-        lamd:res_WMfq33pHQq8kyyvGRoAfo8,
-        lamd:res_Wzu5gSVam8qsR7KLonaknH,
-        lamd:res_YpuiFhbXrnYARcvZK44a95,
-        lamd:res_cSfh6PCiz8Wnywf5AdRduD,
-        lamd:res_pQaxXdsG9R3QzFgjwVRxSo ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_ApczJV7sum7zNcCmN4uYeL,
+        lamd:res_BfXybYjwpaKzg9B5pbU7F9,
+        lamd:res_XvbDJ2EWh68QUVfqJKFFkQ,
+        lamd:res_bPozGZ6FpEN6YqfqfBKk5n,
+        lamd:res_eJjnPhsKCL3xZuJ4CEmV6F,
+        lamd:res_j93eM6xB96fLaJKFrRridP,
+        lamd:res_nQcGDmyMnAyNHJLvvLoaWG ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Amendment (MM)
 This link contains the CELEX numbers of earlier acts modified by the given act.
@@ -416,14 +350,14 @@ famille"""@en ;
     sh:path cdm:resource_legal_amends_resource_legal .
 
 lamd:md_AMENDMENT_PRO a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_3yKqFrBCUBhiWttqprEjRG,
-        lamd:res_6MB9unM6cxNmvUrCW3Usw2,
-        lamd:res_DLieU4oTo9ZxdJNE5u2UfG,
-        lamd:res_N4qsdGpUVygRqaW5S3hWBY,
-        lamd:res_RYp2BUtdRwFNkpvqbLSdDZ,
-        lamd:res_oCqN4k3Kz8HdrFJ6kEzhYc,
-        lamd:res_qo9ZXEvWapwjvhpQPCUUnL ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_88NXEYkpRkcp9UhxGSAKAc,
+        lamd:res_9NGseVyPhmZFkngR7sQHX6,
+        lamd:res_AjXi7Ypq9jchFWsUttJoo9,
+        lamd:res_QxwLTCDAV43GBjpdfzFdYL,
+        lamd:res_YCoP3ViGgCDAfbAtK3QNDe,
+        lamd:res_ijVh8safEhMmTeDxosNSBM,
+        lamd:res_xTytBGaa6dgXbTGDVMEF7P ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "AMENDMENT_PRO" ;
@@ -431,14 +365,14 @@ lamd:md_AMENDMENT_PRO a skos:Concept ;
     sh:path cdm:resource_resource_legal_proposes_to_amend_resource_legal .
 
 lamd:md_ANNULMENT_REQ a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_45EkudznDEquKHyo9Zu9VN,
-        lamd:res_642uuXXHYojqMtiMoQYXYF,
-        lamd:res_H5rE47hMyuztrZJHWEznyg,
-        lamd:res_Wv3Y6YFsVR2PAFA65QMiXX,
-        lamd:res_uMSanEXfaKgcqViNJjnReC,
-        lamd:res_wmkxtNAETFJuiFhESLr24J,
-        lamd:res_wrqhZCs5rx7a3ohDk76vFh ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_9JsTSefWQm2EmcrSbcWiVC,
+        lamd:res_AtWRzo3ZA4qZ4tyhEEcTJG,
+        lamd:res_CJgBJU9dLWmtQSqjVWbjA2,
+        lamd:res_G6cqY52dPyQh8fFfAep2oE,
+        lamd:res_Kd8f8eQQ2dQDifahseACmY,
+        lamd:res_hZ5No4hB4mfbjBTHepwT4R,
+        lamd:res_s5FpHmYBqECfpPjVbYHdcU ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "ANNULMENT_REQ" ;
@@ -446,14 +380,14 @@ lamd:md_ANNULMENT_REQ a skos:Concept ;
     sh:path cdm:communication_case_new_requests_annulment_of_resource_legal .
 
 lamd:md_ANULMENT_PARTIAL_REQ a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_7P8f5DenMHZa2KovkJZBNh,
-        lamd:res_NdfYL5n52oMwdPMaCTVF5X,
-        lamd:res_RZKesBxLVhxJAhUqrkvEkV,
-        lamd:res_n4CVEJTPMPZybukUArpeXH,
-        lamd:res_p9RfgsrAG9jHnXSh8XfyAL,
-        lamd:res_sW99jvndaKrVFYYEkbGtvZ,
-        lamd:res_wExjFCFNnqq9Yr8zm87bmk ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_6XKUYfQdXFzBV6x5BeQvC5,
+        lamd:res_JT4bps3ZjumevmhsxRHtvM,
+        lamd:res_XWQ7M6Ah8pvbrnuX66EZBR,
+        lamd:res_ZPLfwLsyKZGJgyAeEtMgGg,
+        lamd:res_he9ij6gV6ZBK547gVYfPA6,
+        lamd:res_rZr26N6vJPcPeW9oAw4ZmV,
+        lamd:res_xUJ42rj3gPrRHEwtppEH7K ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "ANULMENT_PARTIAL_REQ" ;
@@ -461,7 +395,7 @@ lamd:md_ANULMENT_PARTIAL_REQ a skos:Concept ;
     sh:path cdm:communication_case_new_requests_partial_annulment_of_resource_legal .
 
 lamd:md_AP a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "AP" ;
@@ -473,14 +407,14 @@ lamd:md_AP a skos:Concept ;
     sh:path cdm:communication_cjeu_requested_by_agent .
 
 lamd:md_APPLICABILITY_DEF a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_LB5YLt9Cnob9tP3QjqydK8,
-        lamd:res_TcxXPvMvcAvbEq9yCjm7Ui,
-        lamd:res_TzxRNTswVCycX892xHnY5Q,
-        lamd:res_USWMeSmrxuQU53zNPmGCUM,
-        lamd:res_W5xbG6KcBqZffCmawfXNqS,
-        lamd:res_YoPF5m5jd5WGqgNDT3mtPM,
-        lamd:res_siZrf3ByLjKUuB2U8W57qR ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_8LsBwPQ6XoAvDjBjV94qe2,
+        lamd:res_9R42TdzYQhqHVmepGj5F54,
+        lamd:res_EdaU45gXzNpVWsz4tNo2Rk,
+        lamd:res_Zgi5GgHArig8qTcDX9HifQ,
+        lamd:res_dYTaVHnZ5ocCCMksNd2BSH,
+        lamd:res_p6LnkV2pvNnm7euhocVS8D,
+        lamd:res_wh6FejEVVHoBwBbWEEqKjG ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "APPLICABILITY_DEF" ;
@@ -489,14 +423,14 @@ lamd:md_APPLICABILITY_DEF a skos:Concept ;
     sh:path cdm:resource_legal_defers_application_of_resource_legal .
 
 lamd:md_APPLICABILITY_EXT a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_48W7trNTLT25hdEvi25GV6,
-        lamd:res_Civs5NjPgTcG9LcVfmTNKd,
-        lamd:res_R378JXqnXvvon2YEuh9fYE,
-        lamd:res_S2kdMynVrykegMdXkNzkBa,
-        lamd:res_exVZDvms3ETE5oDVVRjaJe,
-        lamd:res_fSaBkTLPwQUkzFm5h4yVaR,
-        lamd:res_rpvZZCwtjH6XQwBGFb6FfU ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_CbJgrVDMpX7TepeQYdiSte,
+        lamd:res_JDy5Pi5dtxSwnSWQNCnjun,
+        lamd:res_JQawhdTmgQH5GsXPUvrHHF,
+        lamd:res_QgdkpDysHzBwenc25N66ye,
+        lamd:res_RgFKT6FviBmE94ys4McwhC,
+        lamd:res_osCuDExBa9DFMrMxTgffAQ,
+        lamd:res_r2BovzqCzcWnp8JJTCYzKN ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Extension of application (EE)
 This link contains the CELEX numbers of earlier acts modified by the given act (extension of aplication).
@@ -525,7 +459,7 @@ famille"""@en ;
     sh:path cdm:resource_legal_extends_application_resource_legal .
 
 lamd:md_AS a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field indicates a co-author of a Commission proposal (Commission DG or DGs)."@en ;
     skos:editorialNote "04/11/2019: Check cdm properties, which are still used?"@en,
@@ -548,10 +482,10 @@ In addition to acronyms (made up of letters, derived mainly from the FR) the old
     sh:path cdm:service_associated .
 
 lamd:md_ASSOCIATION a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_2kP5ob4v7kuMaQzUkTwT5e,
-        lamd:res_PGVHwfRX3kay6FyZawQdL5,
-        lamd:res_pvdSmeWFn94GN9uFuYXjcR ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_Rq9vKHkNpjnxEHfujcQbaN,
+        lamd:res_W5vnnS2sYWpg9cAL9sthy4,
+        lamd:res_urohdk8sbwPDjwr8crnnSi ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "ASSOCIATION" ;
@@ -559,7 +493,7 @@ lamd:md_ASSOCIATION a skos:Concept ;
     sh:path cdm:resource_legal_associates_agreement_international .
 
 lamd:md_AU a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "The Author field indicates the name of the institution, the body or the country that produced the act."@en ;
     skos:editorialNote """April 2015: For parliamentary questions, the author field contained also the name of the Member of the European Parliament in the past. However, because of missing mapping in the CELLAR, those names are currently not displayed on the new EUR-Lex. Possible solutions should be analysed.
@@ -601,7 +535,7 @@ EU treaties and international agreements: name of the country (countries) signin
     sh:path cdm:created_by .
 
 lamd:md_CC a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Directory is a numerical classification tool. It offers access to EU law by subject.
 
@@ -827,10 +761,19 @@ The minimum number of directory codes that can be assigned to a document is one 
     sh:class at:dir-eu-legal-act ;
     sh:path cdm:resource_legal_is_about_concept_directory-code .
 
+lamd:md_CDM_CLASS a skos:Concept ;
+    dct:created "2019-11-08"^^xsd:date ;
+    dct:type "object property" ;
+    skos:definition "Class or subclass according to CDM."@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "CDM_CLASS" ;
+    skos:prefLabel "cdm class"@en ;
+    sh:path lam:cdm_class .
+
 lamd:md_CI a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_ErXs7SdUQgBPd95QL3dLAJ,
-        lamd:res_NgmUuaXRbrUq5Joa9gANWg ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_HiW9Z6ojZ8tyKEJe44K9Wj,
+        lamd:res_dTcsZzJo3Zqj8cr2qZyrCd ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "CI" ;
@@ -838,7 +781,7 @@ lamd:md_CI a skos:Concept ;
     sh:path cdm:work_cites_work .
 
 lamd:md_CM a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "This field contains diverse data that have been added to facilitate the work of the units of the European Union."@en ;
     skos:editorialNote "04/11/2019: Check wheather this field and values MAN are still useful or not."@en,
@@ -865,15 +808,32 @@ Internal comment is currently not displayed on the EUR-Lex.
 """@en ;
     sh:path cdm:resource_legal_comment_internal .
 
+lamd:md_CODE a skos:Concept ;
+    dct:created "2019-11-08"^^xsd:date ;
+    dct:type "data property" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "CODE" ;
+    skos:prefLabel "Concept code"@en ;
+    sh:path skos:notation .
+
+lamd:md_COMMENT a skos:Concept ;
+    dct:created "2019-11-08"^^xsd:date ;
+    dct:type "data property" ;
+    skos:definition "Field used in the cataloguing methodology for  information purposes. It contains different comments related to the specific document type."@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "COMMENT" ;
+    skos:prefLabel "Comment"@en ;
+    sh:path skos:editorialNote .
+
 lamd:md_COMMUNIC_REQ a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_2hSF3FKa7epXjKqTLcrRz4,
-        lamd:res_7V9VLPsxRh2FXVZbbqNujN,
-        lamd:res_7VZrWeXhLi6Tfp8FENuKBV,
-        lamd:res_UJpRfzKqfg6Piodx4CMH8W,
-        lamd:res_cHB27sGVFcRvmDNyGEzE6c,
-        lamd:res_puoCCEYgQtamcXX554skr3,
-        lamd:res_za2oGF2RNpJLWBiDsqa9QX ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_8mMBHhKnmQUievgN8mf7uU,
+        lamd:res_9vTQCCZe4HoUuHVVDAo5jZ,
+        lamd:res_EcWS7z3LcZQZXLYJGvuKyh,
+        lamd:res_KcVmGcscDPSETKEdyvHvDF,
+        lamd:res_g3TPgPC5yXftN8RVviJwai,
+        lamd:res_jRZpq86vhAznuopoQ9493o,
+        lamd:res_pdj48X262AMpr6w3G5v8n4 ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "COMMUNIC_REQ" ;
@@ -881,14 +841,14 @@ lamd:md_COMMUNIC_REQ a skos:Concept ;
     sh:path cdm:communication_cjeu_communicates_on_case-law .
 
 lamd:md_COMPLETION a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_6XbYi4Xx4qJfbVvtaG6VnP,
-        lamd:res_K4YogDMKi2JezgzEoQg8ES,
-        lamd:res_QSxhTqpVtcUw6qc77rHx4Z,
-        lamd:res_XKeY4fN3Bt5nFiY3yynNQA,
-        lamd:res_gs4NCbg8i2hv8YBBMux2LE,
-        lamd:res_hcTK9uJDMSUEfkaKMkPgWn,
-        lamd:res_pL6nUSNvgTHKJ5GzpWHxW2 ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_9roMtBdVhqj5VBPNX7Sj5a,
+        lamd:res_BMpFcdP6YZtBeQkCxcRYjK,
+        lamd:res_LPP3PEFYWv56LFe3L76E3D,
+        lamd:res_c8fMR7GwPZHToPUExVgkuG,
+        lamd:res_g3NA6qP3uzRk24kC7sFt8R,
+        lamd:res_h5M2NoBpEQz8ZSwVqxCKdF,
+        lamd:res_wZDe2ghgqhzjHpLbL5E2xf ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Completion (CC)
 This link contains the CELEX numbers of earlier acts modified by the given act (completion).
@@ -920,14 +880,14 @@ famille"""@en ;
     sh:path cdm:resource_legal_completes_resource_legal .
 
 lamd:md_CONFIRMATION a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_BradmeGgoegbEryvdP7Mt6,
-        lamd:res_DBPsowLLYRKa9drjNqjVWD,
-        lamd:res_WhafhPBomT4KdzytBEpXhL,
-        lamd:res_eQejFiTmwYyBG6UaKt9Eig,
-        lamd:res_qrBNVsds8WPrLGsVWUzzx4,
-        lamd:res_wRkSh9GdcZTdaPbiZxuhpP,
-        lamd:res_y2J3apbhXJiycTQanAZGwS ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_69Hq5EsVVuih6Un6g8fcoV,
+        lamd:res_EBiF2MPFZztYCvv6Lyshim,
+        lamd:res_NGyGw4qquhzZAvEaNSTUs7,
+        lamd:res_aGYTioH9ojuLFF7no3NbTC,
+        lamd:res_cZN2MDwPRXeF3FijMUBsSm,
+        lamd:res_pPBhqwEs2wysSMsK7JnHZf,
+        lamd:res_ptPqPAw2zmHoe785zrMkDN ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "CONFIRMATION" ;
@@ -936,14 +896,14 @@ lamd:md_CONFIRMATION a skos:Concept ;
     sh:path cdm:resource_legal_confirms_resource_legal .
 
 lamd:md_CORRIGENDUM a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_APUK2iT7Dbrpv7MGymKCoX,
-        lamd:res_CVHzCqdo5LrDm5BdnxdeJ7,
-        lamd:res_DwAX2sk5iB74j7PA8r2NGU,
-        lamd:res_GQT9WAXaf7iKnvzYDr3jPo,
-        lamd:res_kWUYuenCn74FeTabTuBeiL,
-        lamd:res_yLuLyNVyR6L5MrLRYb7eJU,
-        lamd:res_yV5aadbqr7kQbhLQcQb256 ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_BDSC8CQkGCXmAxPfQR6SrG,
+        lamd:res_FJqN5rb7EWn8LEv8kVFPsC,
+        lamd:res_UEJdXzs32sYeGWPKtVTj8n,
+        lamd:res_cZDaAEkifMkyMEshdiYKTV,
+        lamd:res_iKrff58aY87UbvZ46V5AZk,
+        lamd:res_jWTo5ag7nqzy3Rwn57xeo5,
+        lamd:res_zEre8Z6nSJk9R4XNoHmrhM ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Corrigendum (RC)
 This link contains the CELEX numbers of earlier acts corrected by the given act.
@@ -971,7 +931,7 @@ famille"""@en ;
     sh:path cdm:resource_legal_corrects_resource_legal .
 
 lamd:md_CT a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Subject matter is a classification tool containing alphabetically structured list of over 200 keywords. It is based on the subdivisions of the treaties and on the areas of activity of the institutions. The descriptors are less specific than those used in the Directory code but provide a general overview of the content of the document."@en ;
     skos:example "<cdm:resource_legal_is_about_subject-matter rdf:resource=\"http://publications.europa.eu/resource/authority/fd_070/UD\"/>" ;
@@ -1006,7 +966,7 @@ For directives, use also approximation of laws.
     sh:path cdm:resource_legal_is_about_subject-matter .
 
 lamd:md_DB a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Date of debate is used to index European Parliament resolutions or of committees (EESC/CoR) opinions. 
 The date has format YYYY-MM-DD."""@en ;
@@ -1020,7 +980,7 @@ The date has format YYYY-MM-DD."""@en ;
     sh:path cdm:act_preparatory_date_debate .
 
 lamd:md_DC a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """EuroVoc is a multilingual and multi-disciplinary thesaurus which covers the field of activity of the European Union. It was originally built up specifically for processing the documentary information of the EU institutions, but is largely used outside the EU institutions as well. 
 
@@ -1403,8 +1363,8 @@ Within a large indexing team, a centralized checking stage is recommended to be 
     sh:path cdm:concept_eurovoc .
 
 lamd:md_DD a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_P856eQeH7h4rX9SeArt7NZ ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_zmf4UvsU7R3KGczxVqWcGg ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """It is the date present usually in document´s title. Date of document is a core metadata and therefore the one most widely available (each notice must contain one document date).
 
@@ -1541,14 +1501,14 @@ Particular attention should be paid to the following cases:
     sh:path cdm:work_date_document .
 
 lamd:md_DEROGATION a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_Hz3gPmbEJxyez4meDYmARC,
-        lamd:res_N7iKUnN9mLyhfuScWQ4Ao9,
-        lamd:res_Scbmu7788qTqfszE8MLukN,
-        lamd:res_TZLWcL43w4sxKQtGETbhwb,
-        lamd:res_k53xrTWUSEbvE4NfnPhe3a,
-        lamd:res_kNPp6EFTyZV3Rn9H69qC48,
-        lamd:res_t2HBSMWB4sB6iMUqvN6vEM ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_ARYPJY5cJfeWrXpkc8g6PH,
+        lamd:res_ZEVkD2XVBwwJsEJe4SNeM9,
+        lamd:res_jJL8rmb4VFe2PVWX2jj78h,
+        lamd:res_nBta7yzvzgnye6Xoi5Radh,
+        lamd:res_qhyGMAskRU3SP2MG9wFpR9,
+        lamd:res_uJpweGch3AMcdP4DKtKs9H,
+        lamd:res_wV4Xdz8BqP56PdC2fJMEZi ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:editorialNote "This relation should be completed with an annotation referring to Member State(s) concerned (role2) - Member states - codes in FD_375 to be created"@en ;
     skos:inScheme lamd:DocumentProperty ;
@@ -1559,7 +1519,7 @@ lamd:md_DEROGATION a skos:Concept ;
     sh:path cdm:resource_legal_derogates_resource_legal .
 
 lamd:md_DF a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "DF" ;
@@ -1571,8 +1531,8 @@ lamd:md_DF a skos:Concept ;
     sh:path cdm:communication_cjeu_defended_by_agent .
 
 lamd:md_DH a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_tSAGERF6o69FaxdVLXeDG7 ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_wjtihvZPtBA8ntKvG6PUX9 ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Date of dispatch for transmission to one of the institutions.
 
@@ -1602,8 +1562,8 @@ Oral questions: date of the session
     sh:path cdm:resource_legal_date_dispatch .
 
 lamd:md_DL a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_iL3pY5MPqe8XdKfSf8fzAa ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_PS3CT5hDTZMKyuLGvTGFSD ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Date of deadline field contains various intermediate deadlines relating to the document.
 
@@ -1635,7 +1595,7 @@ For such case, an annotation to the deadline must be created, containing value B
     sh:path cdm:resource_legal_date_deadline .
 
 lamd:md_DN a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "The CELEX number is both a unique document identifier and a classification code, regardless of language. It is used as the basis for cross-referencing of documents in the database as well as for implementing hypertext links."@en ;
     skos:example "<cdm:resource_legal_id_celex rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">32015D0046</cdm:resource_legal_id_celex>" ;
@@ -1676,8 +1636,16 @@ Any change of an already attributed CELEX number must be approved by the Publica
 For some specific collections of documents, CELEX number is attributed by the author or institution responsible (e.g. EU case law – documents from the Court of justice of the European Union)."""@en ;
     sh:path cdm:resource_legal_id_celex .
 
+lamd:md_DN_CLASS a skos:Concept ;
+    dct:created "2019-11-08"^^xsd:date ;
+    dct:type "object property" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "DN_CLASS" ;
+    skos:prefLabel "reference to CELEX class"@en ;
+    sh:path lam:celex_class .
+
 lamd:md_DP a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field is most frequently used in Sector 2 where it contains the name of the depositary of an international agreement."@en ;
     skos:editorialNote "04/11/2019: Check cdm properties"@en,
@@ -1694,7 +1662,7 @@ lamd:md_DP a skos:Concept ;
     sh:path cdm:stored_by .
 
 lamd:md_DTA a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "The year attributed to the document (internal number or ppf number)."@en ;
     skos:example "<cdm:resource_legal_year rdf:datatype=\"http://www.w3.org/2001/XMLSchema#gYear\">2014</cdm:resource_legal_year>" ;
@@ -1715,7 +1683,7 @@ for sector 9: the year the question was introduced."""@en ;
     sh:path lam:dta .
 
 lamd:md_DTN a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """A sequential number representing the original reference number of the act.
 
@@ -1734,7 +1702,7 @@ For a corrigendum an “R” is added to the four digits (see CELEX type corrige
     sh:path lam:dtn .
 
 lamd:md_DTS a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "The quite diverse origin of the different document types within EUR-Lex is reflected by the sector structure of the database."@en ;
     skos:example "<j.0:resource_legal_id_sector rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">2</j.0:resource_legal_id_sector>" ;
@@ -1757,7 +1725,7 @@ E  EFTA documents"""@en ;
     sh:path lam:dts .
 
 lamd:md_DTT a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """One or two letter code specifying the type of document. 
 
@@ -1769,7 +1737,7 @@ This metadata is related to another metadata field Author (created by). Celex ty
     sh:path lam:dtt .
 
 lamd:md_DT_CORR a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "This field indicates if the document is a corrigendum. The number inserted indicates the serial number of corrigendum. It is then displayed in the celex number of corrigendum as \"split\" number in the brackets."@en ;
     skos:example "<cdm:resource_legal_number_corrigendum rdf:datatype=\"http://www.w3.org/2001/XMLSchema#positiveInteger\">1</cdm:resource_legal_number_corrigendum>" ;
@@ -1784,8 +1752,8 @@ The sequential number of corrigendum must be attributed only after analysing the
     sh:path cdm:resource_legal_number_corrigendum .
 
 lamd:md_EV a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_PukuBSzHyhdJa7NbsjXshY ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_Aftpitk5sesJ6crMAuU5sF ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """It is the date on which the act ceases to be valid.
 
@@ -2027,15 +1995,42 @@ End of validity date: 25/01/2015; End of term of office See Art. 1
 For different documents from the decision-making process other than proposals, the EV date is applicable only for exceptional cases (e.g. EP legislative resolution repealing/replacing the previous one; no examples in the database)."""@en ;
     sh:path cdm:resource_legal_date_end-of-validity .
 
+lamd:md_EXAMPLE_CELEX a skos:Concept ;
+    dct:created "2019-11-08"^^xsd:date ;
+    dct:type "data property" ;
+    skos:definition "Field used in the cataloguing methodology for  information purposes. "@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "EXAMPLE_CELEX" ;
+    skos:prefLabel "Celex example"@en ;
+    sh:path skos:example .
+
+lamd:md_EXAMPLE_EN a skos:Concept ;
+    dct:created "2019-11-08"^^xsd:date ;
+    dct:type "data property" ;
+    skos:definition "Field used in the cataloguing methodology for  information purposes. "@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "EXAMPLE_EN" ;
+    skos:prefLabel "EN example"@en ;
+    sh:path skos:example .
+
+lamd:md_EXAMPLE_FR a skos:Concept ;
+    dct:created "2019-11-08"^^xsd:date ;
+    dct:type "data property" ;
+    skos:definition "Field used in the cataloguing methodology for  information purposes. "@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "EXAMPLE_FR" ;
+    skos:prefLabel "FR example"@en ;
+    sh:path skos:example .
+
 lamd:md_FAILURE_REQ a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_98H9pBhsvtrHJ7QEuZDwV6,
-        lamd:res_fqzv8HiAaBQif9Y8UDETU5,
-        lamd:res_h2XzVfqQvUDXXcPjf6FZ8V,
-        lamd:res_htD4GzAzas8UUAWBJ9SYVX,
-        lamd:res_mZqxSoAXnvhDHxmpqL6ZJ5,
-        lamd:res_tggisRx7bupnHwMmEy4K2k,
-        lamd:res_yX38XqcTnRmkiezFS2DJYU ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_DjNzbRa3k7Przq8HeXVwwS,
+        lamd:res_FPs3WKr27f2spz6RYWh3a3,
+        lamd:res_KxzrPvzRbM4XLNyjbCReS4,
+        lamd:res_bJ7Sh4vm9waCeXuwCG3VP6,
+        lamd:res_iiNY62mypik9htF2F7TmRR,
+        lamd:res_oRrtRd5rxMStyjfoHa6W8Z,
+        lamd:res_s4nAh3Ku3M5huJA36s2RCT ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "FAILURE_REQ" ;
@@ -2043,7 +2038,7 @@ lamd:md_FAILURE_REQ a skos:Concept ;
     sh:path cdm:communication_case_new_requests_establishment_of_failure_of_obligation_resource_legal .
 
 lamd:md_FM a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field refers to the type of act. The type is usually indicated in the title of an act. However, the value used in Type of act might not be the same as the one used in the title, as this metadata shall describe the document type in legal terms."@en ;
     skos:editorialNote """April 2015: For the time being, both properties cdm:work_has_resource-type as well as cdm:resource_legal_has_type_act_concept_type_act shall be used because of technical reasons. For the display and search purposes, only cdm:resource_legal_has_type_act_concept_type_act is currently used by the EUR-Lex.
@@ -2061,7 +2056,7 @@ There should be only one value attributed except of corrigenda where two differe
     sh:path cdm:resource-type .
 
 lamd:md_IC a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Comments/additional details of international agreements and decisions taken by bodies created by these agreements."@en ;
     skos:editorialNote "04/11/2019: Check how this field is used and whether it is needed or not. Check also IMMC."@en ;
@@ -2078,9 +2073,9 @@ The field contains descriptors. The values permitted correspond to the codes of 
     sh:path cdm:agreement_international_has_type_comment_concept_type_comment .
 
 lamd:md_IF a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_LS37bDuSDoUjqhmbQaH3dN,
-        lamd:res_q3rVsGgmxU7yvNSS6oso5j ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_daJTbz5USgAA67J7Ei685A,
+        lamd:res_pVLESHNsgo58dV7QnQiAUj ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """It is a date when the act enters into force or becomes operative.
 
@@ -2244,14 +2239,14 @@ Date of notification: 27/06/2012"""@en ;
     sh:path cdm:resource_legal_date_entry-into-force .
 
 lamd:md_IMPLEMENTATION a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_Ak4mGQgub7qFTzc7GJZG6d,
-        lamd:res_JoUpCistkjby4zdYEFLgJC,
-        lamd:res_QapTMVw6eFKC4LYGSs3NAP,
-        lamd:res_YekEBioSA9xUwQFFgzbpMC,
-        lamd:res_adCTVuhz4qkXMYnQuxjDa9,
-        lamd:res_eTP6njZ6cujPtVa73md8qZ,
-        lamd:res_xLRHQEb9RWxDeUmsQh7VAk ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_2sjb25gGpFNQgv42BYAL5W,
+        lamd:res_5ArTJMG4idNvSGurcpToXU,
+        lamd:res_638Jyrg5jfjtA68KztNfXU,
+        lamd:res_GV8GPNdkETsVXoeHWVh8uH,
+        lamd:res_NshuzX7UuPy88CT7WWiGu3,
+        lamd:res_WpQ7MdFJdKSK4f9r8dhABF,
+        lamd:res_qYQqfGuP3FPWUJTvAevqFh ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "IMPLEMENTATION" ;
@@ -2264,14 +2259,14 @@ All existing relations between basic and implementing acts to be changed"""@en ;
     sh:path cdm:resource_legal_implements_resource_legal .
 
 lamd:md_INAPPLICAB_REQ a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_4bDcbAUSYox7xeGLxRd7Hd,
-        lamd:res_9et9FqmczatzSZxJ7iQNye,
-        lamd:res_9iLCgcxB3R9Y8wvvYbJbEB,
-        lamd:res_BE9wgtbCNLTBoBByNB2eDZ,
-        lamd:res_fiknQdERF2fgQzkPisdsyZ,
-        lamd:res_qwLgPTUmzVJsf3B42zpMv8,
-        lamd:res_xcqWrpJUzvcTxVBnE7jYXE ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_G87pFtBkoqkZX9AXx68fm9,
+        lamd:res_HZPWvEicqkpXjUyMJ99tX3,
+        lamd:res_amQaSzhyk4hkQqmNJtq2Vo,
+        lamd:res_io2TtTKi8qi87feXvXx4R7,
+        lamd:res_jRpCAgn3WFffJDGFQeyygc,
+        lamd:res_owSt6wAsJu6MCBqFznfR3J,
+        lamd:res_uHU2BiHwEnrA5S4UHgQ8cS ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "INAPPLICAB_REQ" ;
@@ -2279,14 +2274,14 @@ lamd:md_INAPPLICAB_REQ a skos:Concept ;
     sh:path cdm:communication_case_new_requests_inapplicability_resource_legal .
 
 lamd:md_INCORPORATION a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_5gBBxtHnqzAnHYEMmKfY2S,
-        lamd:res_BHK2rjuBQphHToFr8EASs3,
-        lamd:res_EFjEcDJC3UVmp9MN3TyTLa,
-        lamd:res_FJrt9TRC2GiyVXCP5vQNGa,
-        lamd:res_LkzxHMQrchPv7sLLQGRUy3,
-        lamd:res_MUAJoQJJbxAtfecGCcRcJD,
-        lamd:res_gyrA7vyqnXLCyPajLxNJMK ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_6LshsJX4rPzq8FPf6BvZc6,
+        lamd:res_7xANKUYLtM77LMabZHFGoE,
+        lamd:res_KhDAq89Dvbqq82Bo3dyqfA,
+        lamd:res_V7HaFF8j57FM9PzFwgZAqD,
+        lamd:res_iicvu6xUHaSpfXYmuLnbYW,
+        lamd:res_seEPw2sBs7M2Cpm4P88wLC,
+        lamd:res_x2sARNHMEuN7adhzioGRqC ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "INCORPORATION" ;
@@ -2296,14 +2291,14 @@ lamd:md_INCORPORATION a skos:Concept ;
     sh:path cdm:resource_legal_incorporates_resource_legal .
 
 lamd:md_INFLUENCE a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_SNPNcYYieVEnvusbELdA8a,
-        lamd:res_Y3QL4S6C9JzfSjiKw37JDY,
-        lamd:res_eVDHmsu3ukyVYoak9atd7a,
-        lamd:res_i8vmfDrBbhEx8dh35NjCfM,
-        lamd:res_kwadPsKs2BBwiNg2CAUuu8,
-        lamd:res_rq6iXXBR2yZ6GB5ED7FxvT,
-        lamd:res_wgPpqjy8XnCfkEbbsCTDd7 ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_CeNMU2fR6LXv2fkLtZa2zC,
+        lamd:res_Dc6bQB4rsPqwKMaaPVdLid,
+        lamd:res_GFuDigoRu5ruqvA6WdaGLg,
+        lamd:res_Sugc6KvNtUFQ4XSDh6QEq6,
+        lamd:res_htViKpPVaJxjqMAPiq7DEn,
+        lamd:res_t5jaBZajFQWvLrT3tWB2NZ,
+        lamd:res_yn43n8mKjjwzmQW9WkcRx5 ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Relation between documnets from the same procedure and the proposal or draft"@en ;
     skos:inScheme lamd:DocumentProperty ;
@@ -2313,14 +2308,14 @@ lamd:md_INFLUENCE a skos:Concept ;
     sh:path cdm:resource_resource_legal_influences_resource_legal .
 
 lamd:md_INTERPRETATION a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_4xAoWBH8fbEUtMcJeV4TRS,
-        lamd:res_LDEieFdUZfq4kqAgfNmafD,
-        lamd:res_MrfWouwjbiRJ2xhDMN4JTV,
-        lamd:res_Qip2onb4ay5ZpdJUBP7LEY,
-        lamd:res_UZNrERXa3ZehdEYBiGUsbn,
-        lamd:res_X4zkCwnFWdTiBvkL3wQQA9,
-        lamd:res_XhVLgQ8BkLw9GphpPyjTcA ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_ANVYaxUMm6Pa4QZCtKxWTP,
+        lamd:res_B44FZC77ov8QaUUyjURo8W,
+        lamd:res_MTg5kQABzRZtq9efXDMxKj,
+        lamd:res_QcRaab3fNQspWBQQ3chfPP,
+        lamd:res_Xb8rzLAjJMGtRTrfDLPxH6,
+        lamd:res_cT4AmkhqAikfxzeGwj4KUR,
+        lamd:res_jsPB24jiPqEMz2YpdKrCqd ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "INTERPRETATION" ;
@@ -2330,12 +2325,29 @@ lamd:md_INTERPRETATION a skos:Concept ;
 32000D0141 → 31971R1408"""@en ;
     sh:path cdm:resource_legal_interpretes_authoritatively_resource_legal .
 
+lamd:md_KEYWORD a skos:Concept ;
+    dct:created "2019-11-08"^^xsd:date ;
+    dct:type "data property" ;
+    skos:definition "Field used in the cataloguing methodology for  classification and search purposes. Keywords are usually extracted from the titles of documents."@en ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "KEYWORD" ;
+    skos:prefLabel "Keywords"@en ;
+    sh:path skos:prefLabel .
+
+lamd:md_LABEL a skos:Concept ;
+    dct:created "2019-11-08"^^xsd:date ;
+    dct:type "data property" ;
+    skos:inScheme lamd:DocumentProperty ;
+    skos:notation "LABEL" ;
+    skos:prefLabel "Label of the concept"@en ;
+    sh:path skos:prefLabel .
+
 lamd:md_LB a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_2vdTLgsdn8dvJkRjuzZaaX,
-        lamd:res_2w4XxscY2PKByL6guVxxhH,
-        lamd:res_AXHsfEMhVeKD7QAPpm39fV,
-        lamd:res_LGk4iPPAAtmc8BpYESZ2Vg ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_MCaQU5ZfejQviNWM2DhvZN,
+        lamd:res_MHYyMkHzVcArsK63paVDag,
+        lamd:res_XpjsRASJTJsPJU2yE2sgpF,
+        lamd:res_gwHgHnMoeMEJLr9re9yjCP ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This link contains identifier (CELEX, eli, cellar id,…) of the act(s) constituting the legal basis of the document."@en ;
     skos:editorialNote """10/07/2015: Legal basis – documents referring to a protocol attached to the treaties 
@@ -2382,7 +2394,7 @@ The legal basis for EFTA case law is usually a specific article of EFTA agreemen
     sh:path cdm:resource_legal_based_on_resource_legal .
 
 lamd:md_LF a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field indicates the authentic language version of an act or a European Court case. It indicates also the language of the corrigenda (this is applicable only from April 2015)."@en ;
     skos:example "<cdm:resource_legal_uses_originally_language rdf:resource=\"http://publications.europa.eu/resource/authority/language/SPA\"/>" ;
@@ -2398,7 +2410,7 @@ This field is relevant also for the communications on EU case law and corrigenda
     sh:path cdm:resource_legal_uses_originally_language .
 
 lamd:md_LG a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "This field concerns documents emanating from the European Parliament, specifically EP questions (Sector 9) and resolutions (Sector 5)."@en ;
     skos:editorialNote """04/11/2019: Check the values used in this field
@@ -2419,7 +2431,7 @@ This field was introduced during the first legislature, i.e. the first universal
     sh:path cdm:term_parliamentary .
 
 lamd:md_LO a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Court of Justice of the European Union documents: the field indicates when the document was lodged with the Registrar of the EU Court of Justice (or EFTA Court).
 
@@ -2439,7 +2451,7 @@ On 3 July 2013, the Commission decided to consult the European Economic and Soci
     sh:path cdm:resource_legal_date_request_opinion .
 
 lamd:md_MI a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field contains general miscellaneous information that varies greatly according to the type of document and EUR-Lex sector."@en ;
     skos:example "<cdm:resource_legal_information_miscellaneous rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">JOIN 2014/0034</cdm:resource_legal_information_miscellaneous>" ;
@@ -2494,7 +2506,7 @@ The CELEX number of the directive or ECSC recommendation concerned by the Member
     sh:path cdm:resource_legal_information_miscellaneous .
 
 lamd:md_NA a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "NA" ;
@@ -2504,8 +2516,8 @@ lamd:md_NA a skos:Concept ;
     sh:path cdm:work_originates_in_country .
 
 lamd:md_NF a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_jeya5kD8EUfChbVzeCPo53 ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_k276KZA4sG7CovVQybqVpU ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """This field contains the date of notification of directives and decisions which specify to whom they are addressed. 
 
@@ -2618,7 +2630,7 @@ Some Council acts (decisions or directives which specify to whom they are addres
     sh:path cdm:legislation_secondary_date_notification .
 
 lamd:md_NS a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field provides the date of the debate or the session for European Parliament resolutions, Economic and Social Committee and CR opinions and resolutions."@en ;
     skos:editorialNote """12/12/2018: Changes in cdm proerties EURLEXNEW-3672 The following cdm properies shall be depricated:
@@ -2639,14 +2651,14 @@ lamd:md_NS a skos:Concept ;
     sh:path cdm:preparatory_act_number_session .
 
 lamd:md_OBSOLETE a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_8rDReWX9gqiM2ytz8Mf6z4,
-        lamd:res_MuEwFT7gBDytCBUN6qgdtd,
-        lamd:res_P6faDWEHxQykYTrafth7hF,
-        lamd:res_R8hqmX7jzif9S95h6rmfud,
-        lamd:res_U6XktjmViHH9hh8dgPbxeN,
-        lamd:res_VvqEahmPdfsLSUSiY4wpF3,
-        lamd:res_XqUTr4EHhsAw8dH4pVcMdV ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_PBstK9Xd8eSQBPxRLr6PCe,
+        lamd:res_UMrvFAsPDJgEWv5VWow2on,
+        lamd:res_Uri6rnVMWoNVhXqKJ2TgJ6,
+        lamd:res_VZQKBBqaEXoaWFYxsaMEea,
+        lamd:res_pJrJeS6Mr9KEiQVJdAxFWi,
+        lamd:res_q5TLNhwAef6yTYc5ALmnej,
+        lamd:res_qYtCKgBoYcTF4uVev82FmC ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "OBSOLETE" ;
@@ -2655,7 +2667,7 @@ lamd:md_OBSOLETE a skos:Concept ;
     sh:path cdm:resource_legal_renders_obsolete_resource_legal .
 
 lamd:md_OJ_ID a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Identifier of the Official Journal in which was the document published.
 
@@ -2670,14 +2682,14 @@ The OJ identifier contains several parts:
     sh:path cdm:resource_legal_published_in_official-journal .
 
 lamd:md_OPINION_COR a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_4SibQcZtj7SPczsHyXW8m3,
-        lamd:res_4yERcVNVQ4pcxZt9U6ukMS,
-        lamd:res_A8ucYjdNnwBKvsXdP34kaS,
-        lamd:res_APmTF85Pb26nhdanZhXf7H,
-        lamd:res_KB2m5cp6Ts6CghgtfpWev7,
-        lamd:res_UCTdAV577z3DhCm7Kn7bEW,
-        lamd:res_cUGMbRpgroyU6Z4NRrP8zM ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_AFPo5jiWov6MVksjGHCScJ,
+        lamd:res_BGQfGoArsZNg9MjPiKdoum,
+        lamd:res_PuAhaAsNYCba8EGo3uBpog,
+        lamd:res_WgXbHHKwRS4zKVFqchfukF,
+        lamd:res_c3TkmgyT2jsXFCXhmoAdf4,
+        lamd:res_eX2ZCPWBbaYd4fUiZVdgLm,
+        lamd:res_gFaGr6YoeCqU29ozaphhGZ ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "OPINION_COR" ;
@@ -2685,14 +2697,14 @@ lamd:md_OPINION_COR a skos:Concept ;
     sh:path cdm:resource_resource_legal_contains_cor_opinion_on_resource_legal .
 
 lamd:md_OPINION_EESC a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_5T3bKv74evcq59NzZgTyv4,
-        lamd:res_7AagbrCHG2uYgZwJv9TB7J,
-        lamd:res_RcDUTXk9GVVsHuRaWo7CGn,
-        lamd:res_VMA3RzC2hCFHC9vUBXUgbD,
-        lamd:res_ZmWRmKHBR35xFDJ8ocfJVh,
-        lamd:res_bPsfNrqWHU3riPDhX36guZ,
-        lamd:res_jkwAj8efeUnouWD4eLq3ec ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_8aahFMoBQvyHmyrp7cCUSW,
+        lamd:res_PtxpW52BrxcNEnYz5vfKtH,
+        lamd:res_TugfkHQZ9b5GEt4vb487nQ,
+        lamd:res_aZFzvpE5Us5cjB9SPE6wd4,
+        lamd:res_jBpWUNRS2snauanwcFdsJM,
+        lamd:res_oMQti4NtVDHK7uo3xTafFe,
+        lamd:res_te6o7Wgy2SLCJ7qCdDYFak ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "OPINION_EESC" ;
@@ -2700,14 +2712,14 @@ lamd:md_OPINION_EESC a skos:Concept ;
     sh:path cdm:resource_resource_legal_contains_eesc_opinion_on_resource_legal .
 
 lamd:md_OPINION_EP a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_FsduSDPA2Qh96LLX2EWv3h,
-        lamd:res_GL5aD8rD8riZRYWJRneZbf,
-        lamd:res_Hv3jUGP6H6V497duYJctdM,
-        lamd:res_WQimUY3WBBmtDEwndJM9Pn,
-        lamd:res_ovBApBWiK8d2zuzxbYzPf2,
-        lamd:res_p3Z8zn2Ys2faUFZpCxMK7h,
-        lamd:res_tgKWASFJtMVbx4L8cZtPbc ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_4HqLzqLnjQxcYRBuKkCEej,
+        lamd:res_4wnP6Dg82ZSVQNyhkCN9X2,
+        lamd:res_HifvDCQ4tUnUvMmkx2zoLc,
+        lamd:res_MGu48wmr8dQpjpEDPAcUPS,
+        lamd:res_aAo8BKcRBNJUsXjfXgHhoi,
+        lamd:res_sXDDKygpyTtg2Ma3Y2pfZZ,
+        lamd:res_xoYYdznf3tqyxEskhMioFX ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "OPINION_EP" ;
@@ -2715,14 +2727,14 @@ lamd:md_OPINION_EP a skos:Concept ;
     sh:path cdm:resource_resource_legal_contains_ep_opinion_on_resource_legal .
 
 lamd:md_OPINION_REQ a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_AeCPYfroRehdaHV4QqhzBh,
-        lamd:res_MhLSzGVvfLJpBxvD9fcm4e,
-        lamd:res_nS3aY73j6ea4v3nX2EvHXL,
-        lamd:res_nZKqdXNxi3CffVeJitedNP,
-        lamd:res_pcc6nweGh93SxQH3DtALNb,
-        lamd:res_vSzm5Me8KWfYDDgSff3FsN,
-        lamd:res_wiggmaD2u5AL3mNUWfTiFk ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_9P8y2NwJJAHe9FoWPVkzBG,
+        lamd:res_Mh9AtUDqsXM9Y9H42Cm4WP,
+        lamd:res_R2oK4PfXqMYXRA3rpqfUmF,
+        lamd:res_brcpYhUPxZ944fSGXRnnJL,
+        lamd:res_vuQPSXBfYe9gdgSqXpYmCK,
+        lamd:res_vvWWBVho6ZJAkZLT2BHvB7,
+        lamd:res_ym28t6BeXCVqWVBc4usxHV ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "OPINION_REQ" ;
@@ -2730,7 +2742,7 @@ lamd:md_OPINION_REQ a skos:Concept ;
     sh:path cdm:communication_request_opinion_requests_opinion_on_resource_legal .
 
 lamd:md_PR a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "PR" ;
@@ -2741,14 +2753,14 @@ lamd:md_PR a skos:Concept ;
     sh:path cdm:communication_cjeu_has_type_procedure_concept_type_procedure .
 
 lamd:md_PRELIMINARY_REQ a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_9EraKsi6MYjjBd5ucSoQ3U,
-        lamd:res_FpF3cSgCWHuPwyputoHaki,
-        lamd:res_Ke364UpykwNKBvYGDbj7BS,
-        lamd:res_Ptc2DqZ6iDFupeLdQgWyeN,
-        lamd:res_jPFXUMmRFHpa3JtGuqxmvi,
-        lamd:res_jUBLdN4Ypc42kGHycyMfZQ,
-        lamd:res_ksTo4JoqCivLSbHBT59c7G ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_VSbd6cFUK6jiSm2rDjsJpf,
+        lamd:res_XW7VRgU6cdnat6ysUNnczE,
+        lamd:res_Xu4Mx4mNgkHduVxd92ac65,
+        lamd:res_YcEowruAtTFFpMAVJk5mqC,
+        lamd:res_jLo8PnKSVUyV9EGqeviHwP,
+        lamd:res_mnGze6TeYLE7aBu5m7PG9b,
+        lamd:res_nF22bq4ATiKGQvVjtzV76E ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "PRELIMINARY_REQ" ;
@@ -2756,7 +2768,7 @@ lamd:md_PRELIMINARY_REQ a skos:Concept ;
     sh:path cdm:communication_case_new_submits_preliminary_question_resource_legal .
 
 lamd:md_PROC a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:example "<j.0:work_part_of_dossier rdf:resource=\"http://publications.europa.eu/resource/procedure/2015_288\"/>" ;
     skos:inScheme lamd:DocumentProperty ;
@@ -2766,14 +2778,14 @@ lamd:md_PROC a skos:Concept ;
     sh:path cdm:work_part_of_dossier .
 
 lamd:md_QUESTION_RELATED a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_DGgMtePikYWJG5e7TRZ88o,
-        lamd:res_HzDREmPCsydVTroc8aGtAQ,
-        lamd:res_JTd3TKMdHEwZDKBWksvem4,
-        lamd:res_QWfm9jLFaNZuuuY8CVYDYh,
-        lamd:res_SpL7meP3PcTcvoRWdhpeD3,
-        lamd:res_fjptuikH7GSJyJm9qVKMqd,
-        lamd:res_hkWftps6yoovLhqZBuupDn ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_4GWgm5z6aZowc9Rxy56x4E,
+        lamd:res_BrsEDk4uq9NNv5Qp27DQh9,
+        lamd:res_JVNudTzKNwCLsWjWrHxAmD,
+        lamd:res_Xtod5473h783ARtjBpH2TT,
+        lamd:res_iQZRmZZm4fiYmKkMnAKoWT,
+        lamd:res_kJZfXrHs4TbbZuzvtMhLW7,
+        lamd:res_p9jLs7fYVRpkqa5wXj4YCb ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "QUESTION_RELATED" ;
@@ -2782,14 +2794,14 @@ lamd:md_QUESTION_RELATED a skos:Concept ;
     sh:path cdm:resource_legal_related_question_to_resource_legal .
 
 lamd:md_QUESTION_SIMILAR a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_28GxSSZFrHeCP8nUdpufFh,
-        lamd:res_7ipc3voQpR25obrniE7sKg,
-        lamd:res_CyYJFLhid7UbBCbcotNMwi,
-        lamd:res_SV23dXopR8NrhuJE9fZ5BA,
-        lamd:res_XPBUT2fbSetVuMsVneWtKn,
-        lamd:res_ebXxzE4JJiNAJtUXALvDRb,
-        lamd:res_mnaXQLDY7TnxRhMiQwm3Vf ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_2aER47d5ozs5H9YwKRWdpe,
+        lamd:res_4WqZ6HNUqP8iveXxiPBqsM,
+        lamd:res_7SntReBsDnXzY7FHJXyA24,
+        lamd:res_MsbbgttFQY7A7k3w2qmGFR,
+        lamd:res_UGmdZvAhFDvtTNdQBHAp98,
+        lamd:res_hbP4ADWBc8JvNvtbRufuUk,
+        lamd:res_yQCFwJeXvZHvufbHpQPhha ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "QUESTION_SIMILAR" ;
@@ -2798,14 +2810,14 @@ lamd:md_QUESTION_SIMILAR a skos:Concept ;
     sh:path cdm:resource_legal_tackles_similar_question_as_resource_legal .
 
 lamd:md_REESTAB a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_3ynug9zVFyisuBfE3ZSMvZ,
-        lamd:res_5fcP7L2feA9HQxjKau22CQ,
-        lamd:res_PW4yjyFaNFg6kYR5PYNqLk,
-        lamd:res_Y4QsWU5YMQ8eravSEVuG5Z,
-        lamd:res_cQ7Dv2EGuaLMNPV5qrTwSi,
-        lamd:res_tSFUEWwA3gwU6NxAN33fim,
-        lamd:res_tZkHZUmbfc4NggPmQEjGN9 ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_F2YBhf5fdCJREz5zgHeHGC,
+        lamd:res_WwfWcdC5dwEKpqcfbnZLWa,
+        lamd:res_YXhdyKvbxEjbWYDUy658A6,
+        lamd:res_cd8HVhTEMAwVV6piycN9UR,
+        lamd:res_kiHC5pD4zqnx9HenJe7gUF,
+        lamd:res_tXJQwhePnkQrWMXfWJrBmF,
+        lamd:res_wmgKN3pgyFDzyXG3JTm3A8 ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "REESTAB" ;
@@ -2814,14 +2826,14 @@ lamd:md_REESTAB a skos:Concept ;
     sh:path cdm:resource_legal_reestablishes_resource_legal .
 
 lamd:md_REFER_PAR a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_BNxH95VX35VkcM7CHjA8i8,
-        lamd:res_CcHcpYGosYpCPoyxSPquJm,
-        lamd:res_bKgrywecEpvkrJXzafrUp3,
-        lamd:res_cFH93T5oGb7emqPmukkZhB,
-        lamd:res_h9nks5qCHynDHaTrZKyqTd,
-        lamd:res_mzc5G2nH2j7uibbkzrpEtV,
-        lamd:res_yzS8UEdKqZHhHyCK8DdstG ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_ENGZkfFJDASujjnxqQttZc,
+        lamd:res_FLUBA4GewZbgKWKWMtR7jP,
+        lamd:res_hxpunqAvbNtFxDhkPbfwxe,
+        lamd:res_iWRavn9Q829vqgRQMgwMuL,
+        lamd:res_qFCn38ZUQW8aNbMAPT395X,
+        lamd:res_tWehNSKidDHtynXCE97zqb,
+        lamd:res_vVQF67uWBbhS3wk8he4WoA ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "REFER_PAR" ;
@@ -2830,10 +2842,10 @@ lamd:md_REFER_PAR a skos:Concept ;
     sh:path cdm:resource_legal_partially_refers_to_resource_legal .
 
 lamd:md_RELATION a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_9bRKaQhS6fNQ336Foz6uMe,
-        lamd:res_fosnGANPsZGZoDYL9Yy7vg,
-        lamd:res_uXByKHzuMHcFYQ8jM4JCeH ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_LcmFBLEDqitywigzB62T2E,
+        lamd:res_bFz8d4YnSThtXwPG7aBxvD,
+        lamd:res_sXoWUhRaigoD9UbB36k2oc ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "RELATION" ;
@@ -2841,7 +2853,7 @@ lamd:md_RELATION a skos:Concept ;
     sh:path cdm:work_related_to_work .
 
 lamd:md_REP a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Indicator for the extraction of titles for the production of the Directory.
 This field indicates whether an act is basing (containing anonomous provisions) or amending (not containing antonomous provisions and just amending previous act(s))."""@en ;
@@ -2883,14 +2895,14 @@ Corrigenda, ephemeral acts and acts whose only content is the repeal of a basic 
     sh:path cdm:resource_legal_repertoire .
 
 lamd:md_REPEAL a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_DAPyKcfpC5ajhyKnssrHfk,
-        lamd:res_PiPwk83fT8pmK3ncPX9Sxn,
-        lamd:res_hCdcXKPTrvCGBF8eSEB83V,
-        lamd:res_iPvGFkwPkZ5m6iNf3Arrsi,
-        lamd:res_uSPqXXjLG7fa98TVchunkK,
-        lamd:res_wUJvvbPH42EJUyMnMsP4pA,
-        lamd:res_zt8GEprCDVytUxjqRCmJ7m ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_4dys87zp4qpT5fN4hMYfXR,
+        lamd:res_DSUyA5qQNSoBQmXPNptKiM,
+        lamd:res_TUK6Xi2wVYKmMm7JXjtTQa,
+        lamd:res_XUF7MmDXGRMEv5mxAFWCy9,
+        lamd:res_Yi7bAyoGfD33MdK8EGbctQ,
+        lamd:res_ZtAmKgGo4JJ26aUhL9Hyvc,
+        lamd:res_a5FYtxQFmHQG83aqevPKEQ ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Repeal (AA)
 This link contains the CELEX numbers of earlier acts repealed by the given act.
@@ -2914,14 +2926,14 @@ famille"""@en ;
     sh:path cdm:resource_legal_repeals_resource_legal .
 
 lamd:md_REPEAL_IMP a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_FGgwrbz25VsUEwXB7T8aGk,
-        lamd:res_VjgC83HFxuZmQCTptKQtHk,
-        lamd:res_VofikwFhWKoJTtgPcm8h94,
-        lamd:res_b7VSYUzwqnujn4UfuZwQmU,
-        lamd:res_fKcpobS2L9Y4cBJHV7Nem2,
-        lamd:res_goPut6WBciSPzf2Zb2cSLE,
-        lamd:res_oeViW9TRF7oT2w5WFbiTgB ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_5rAnhUp3Yi3ni5oVSZAcLh,
+        lamd:res_9r54RQynMDuzeXWhtD2oLQ,
+        lamd:res_Nd9TYSH7zrsF9bC6V2BUcb,
+        lamd:res_SzahcL4DFcbQXhXrydQyEg,
+        lamd:res_WzxtChBQJWNt4PDHadQQET,
+        lamd:res_huT9RgyJRR7yUmdGCLjie7,
+        lamd:res_ncTZ3uTFdtdMBvcdtFG6S8 ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Implicit repeal (AI)
 This link contains the CELEX numbers of earlier acts repealed by the given act.
@@ -2949,14 +2961,14 @@ famille"""@en ;
     sh:path cdm:resource_legal_implicitly_repeals_resource_legal .
 
 lamd:md_REPLACEMENT a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_2rbsinZFGwt9oNBx9yPhHW,
-        lamd:res_AW8pahXSWvTcwHXJpS27Vk,
-        lamd:res_GMoWu4NkKrXkFjmpEqSsnB,
-        lamd:res_KJR9TpvNe2Mkw7TE7FmnvS,
-        lamd:res_V6zVGvCsQGFyUreC5neX9U,
-        lamd:res_jJ4HbDudUPC6RTGzKJvhvN,
-        lamd:res_mDqgJvwfWmFStu4ECBQFD9 ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_EjBjUgiRdtCiAbW8HE7J58,
+        lamd:res_bJbfGGfUZRoyENhhrhQu3h,
+        lamd:res_cgz6ANnjVJCb4tfDWK4Laj,
+        lamd:res_kpxB7V8Bkqq6UpM9NsoPmn,
+        lamd:res_uRYqdYMbzxBDmyfhsRaYhJ,
+        lamd:res_ucFZzgSXB4KrMGUw9ziLJE,
+        lamd:res_zLvTyrugNVotDWNqDTGEEG ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Replacement (RR)
 This link contains the CELEX numbers of earlier acts modified by the given act (replacement).
@@ -2985,7 +2997,7 @@ famille"""@en ;
     sh:path cdm:resource_legal_replaces_resource_legal .
 
 lamd:md_REPPORTEUR a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field contains a name of the person (EP member or member of CoR or EESC) who reports on the relevant act."@en ;
     skos:editorialNote """04/11/2019: cdm properties
@@ -3013,14 +3025,14 @@ lamd:md_REPPORTEUR a skos:Concept ;
     sh:path cdm:reported_by .
 
 lamd:md_REVIEW_REQ a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_2AkkZVcHTDzcrVRxFg98jM,
-        lamd:res_EkGaAeNRLUHJq48kCScJNE,
-        lamd:res_UL2S8iSZ2csqone4J6nZ6B,
-        lamd:res_XN6e3cXUvivSfPfv2PwvS5,
-        lamd:res_Zkino75vXXxx3rhcVtLaQK,
-        lamd:res_boisjD4gCrcogmAV333bYg,
-        lamd:res_tYAE99HHpy5qxQRQMkPAr9 ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_Bjg7muFYEQUmzXsNL7ztu9,
+        lamd:res_E6M3D7QofZWTCYvM4aEF7f,
+        lamd:res_VWqbgEJ55FLNwb9y9vRSb8,
+        lamd:res_ZaxtQoaaYTwTUx2MeXMB9Y,
+        lamd:res_ciw9NVqURqm53xhah4PrX2,
+        lamd:res_eMuGrQREXgp8YAQW5vCbYC,
+        lamd:res_mJbPK22UKpR2rJzpwDSoTQ ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "REVIEW_REQ" ;
@@ -3028,7 +3040,7 @@ lamd:md_REVIEW_REQ a skos:Concept ;
     sh:path cdm:communication_case_new_requests_review_of_decision_case-law .
 
 lamd:md_RI a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Internal reference used for sector 5 documents from EESC."@en ;
     skos:editorialNote "04/11/2019: Check how this field is used and whether it is needed or not. Check also IMMC."@en ;
@@ -3039,7 +3051,7 @@ lamd:md_RI a skos:Concept ;
     sh:path cdm:resource_legal_position_eesc .
 
 lamd:md_RJ_NEW a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """EU Case law directory code is a specific directory classification for EU case law. 
 
@@ -3056,9 +3068,9 @@ There are two different version of the EU case law directory:
     sh:path cdm:case-law_is_about_concept_new_case-law .
 
 lamd:md_RP a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_kabt3n3Jhv5iBXYnhsSKVM,
-        lamd:res_mGjAMgiA4tT2WVKAgQYesa ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_9srjpAZwnC4o8AoLAqHhgC,
+        lamd:res_9zgbLxRRWyomNUnEhY3Wck ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Date of the answer of the institution to a parliamentary question.
 
@@ -3073,7 +3085,7 @@ The date has format YYYY-MM-DD."""@en ;
     sh:path cdm:question_parliamentary_date_reply .
 
 lamd:md_RS a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "The Commission DG or DGs, author of a Commission proposal. "@en ;
     skos:editorialNote """04/11/2019: Check cdm properties, which are still used?
@@ -3104,8 +3116,8 @@ The source to be used is legislative procedure (Leading service - cdm:event_lega
     sh:path cdm:service_responsible .
 
 lamd:md_SG a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_PuaBp4Qn275EZwuifdEsN9 ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_9BZbdNWMSJokkH8obFtRp8 ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Date of signature field provides the date or dates of the signing of an legislative act, agreement or EU budget. This field may also contain a reference to the place where the agreement was signed.
 
@@ -3123,14 +3135,14 @@ Not applicable to the legislative acts adopted by ordinary legislative procedure
     sh:path cdm:resource_legal_date_signature .
 
 lamd:md_SUSPEND a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_7Y7CtsNq9dmiUg6XvsjtX4,
-        lamd:res_9bYUeLFZzpznvEuFGHLzbb,
-        lamd:res_BceLmmGXj96xidxzTV8JnC,
-        lamd:res_L6cFGSUZKtGBFqVgkbjLC7,
-        lamd:res_PRHTRf8Vq2cqwiXnBbQuoD,
-        lamd:res_dUJNzqJUfYNoi2A2gyneMb,
-        lamd:res_qVSUCfFWtDUKhZQ3MfWPjD ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_2vTFz7HLPY649XPre6fji5,
+        lamd:res_G2p6RRfMGEWEniD3UZXTsH,
+        lamd:res_WPKZAmz95seCiEq22mbnH3,
+        lamd:res_qLqh4Ln2LfaP2BFrebE2KV,
+        lamd:res_s9uVoGX2EoMpGktU2rDnMK,
+        lamd:res_tUjiP2LqLcPBQ6nnXAxWjN,
+        lamd:res_vPB7FGwyok3o6HVyYiBuRh ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "SUSPEND" ;
@@ -3139,14 +3151,14 @@ lamd:md_SUSPEND a skos:Concept ;
     sh:path cdm:resource_legal_suspends_resource_legal .
 
 lamd:md_SUSPEND_PAR a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_9h4wLWtfcuJvAe8VwohENN,
-        lamd:res_JZf7QfySQSNjBKwGayPUhn,
-        lamd:res_PagJe4SHtb8oKpe6nj9TyP,
-        lamd:res_Ta69XMWUo5AfViNRdqu26b,
-        lamd:res_WFWSUYh5if4aYoVhk7c84o,
-        lamd:res_Y9rWPHsg9njgPTfWR7QUbj,
-        lamd:res_hJ6xCJ7FP8T5uqVaYX8beK ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_EGFzgfP7EzBEWZDeFGTcNL,
+        lamd:res_Jhe9QLMjSnxwJq4MQRPWX7,
+        lamd:res_XukC7mRvTx8kGf95gwugMH,
+        lamd:res_Zizv2rPHLMTa2rB8Z2hmnT,
+        lamd:res_dozXJTzBVpXJRMCHHD9iNE,
+        lamd:res_ft5hew5Md6ghqbd6ZGpeKe,
+        lamd:res_mfaYj8upynuctrkPX6kXGc ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "SUSPEND_PAR" ;
@@ -3155,8 +3167,8 @@ lamd:md_SUSPEND_PAR a skos:Concept ;
     sh:path cdm:resource_legal_partially_suspends_resource_legal .
 
 lamd:md_TP a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_apJH76hRa7hR4ztzfHzw3b ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_2A2x4kt6zXMwG2DpMpniDX ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Date on which directives (or other acts) have to be implemented by the Member States (transposed into its national law)."@en ;
     skos:editorialNote """31/10/2019: List of relevant subproperties:
@@ -3181,7 +3193,7 @@ Date of transposition: 30/09/2014; At the latest See Art 2
     sh:path cdm:date_transposition .
 
 lamd:md_TT a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "The treaty field contains the name of the treaty/treaties that form the legal basis under which the document has been adopted. This field is linked to the Treaties authority table; no CELEX numbers are used. "@en ;
     skos:editorialNote """04/11/2019: Property cdm:resource_legal_based_on_treaty was used in the past, it has been depricated and replaced by
@@ -3195,14 +3207,14 @@ cdm:resource_legal_based_on_concept_treaty"""@en ;
     sh:path cdm:resource_legal_based_on_concept_treaty .
 
 lamd:md_VALIDITY_EXT a skos:Concept ;
-    lam:hasAnnotationConfiguration lamd:res_8n6HGRB8ee6qLbnG9c5nAV,
-        lamd:res_A2EDQSKpX2poQWpyzoQwNe,
-        lamd:res_LGJBvBzicgKPzXhCEs5uKD,
-        lamd:res_NbweEjazqAuhNcJHtSi2FW,
-        lamd:res_hsG69VZteaBXK74dvpLpEJ,
-        lamd:res_qVVuwWAzrL5YLVp6E3msZ2,
-        lamd:res_xJmLfqV5H2CGnaTdt8sJoc ;
-    dct:created "2019-11-05"^^xsd:date ;
+    lam:hasAnnotationConfiguration lamd:res_AAfojpnQwJfthssgo78BMh,
+        lamd:res_MqZ3BeoroLEVnnY4QF4o45,
+        lamd:res_P2g3ATjFQs4Z8CH3f9GJW7,
+        lamd:res_bupmC4qKfeLWZGqtfNuDEX,
+        lamd:res_gzm8iFuQCR7pbkxQpazMvh,
+        lamd:res_tHwjVcLUnGsD8tRWWCLQi5,
+        lamd:res_xSAxKeZLwudwLf2x9bt2kQ ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Extension of validity (PP)
 This link contains the CELEX numbers of earlier acts modified by the given act (extension of validity).
@@ -3230,7 +3242,7 @@ famille"""@en ;
     sh:path cdm:resource_legal_extends_validity_of_resource_legal .
 
 lamd:md_VO a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """This field contains the date of vote on decisions or resolutions of the European Parliament or on committees (EESC/CoR) opinions.
 
@@ -3244,7 +3256,7 @@ The date has format YYYY-MM-DD."""@en ;
     sh:path cdm:resource_legal_date_vote .
 
 lamd:md_VV a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Indicator whether a piece of legislation still in force or not in force."@en ;
     skos:editorialNote """04/11/2019: GIL-GM Acts annuled by CdJ decision - VV field - proposal to be prepared
@@ -3277,138 +3289,653 @@ Ephemeral notices are excluded (value EPH present in manifestation_official-jour
 For acts entering into force in the future, the value is false. """@en ;
     sh:path cdm:resource_legal_in-force .
 
-lamd:res_28GxSSZFrHeCP8nUdpufFh a lam:AnnotationConfiguration ;
+lamd:res_2A2x4kt6zXMwG2DpMpniDX a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:class at:fd_361 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_COD at:fd_361"@en .
+
+lamd:res_2aER47d5ozs5H9YwKRWdpe a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_2sjb25gGpFNQgv42BYAL5W a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_2vTFz7HLPY649XPre6fji5 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_3aNTkzRD7gxUeU2jUzy3jd a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_4GWgm5z6aZowc9Rxy56x4E a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_4HqLzqLnjQxcYRBuKkCEej a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
 
-lamd:res_2AkkZVcHTDzcrVRxFg98jM a lam:AnnotationConfiguration ;
+lamd:res_4WqZ6HNUqP8iveXxiPBqsM a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_4dys87zp4qpT5fN4hMYfXR a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
 
-lamd:res_2D4KjqbL7hzmTB2msnhsNb a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
+lamd:res_4k8NM7ngvWG3psaDp5DrtA a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
 
-lamd:res_2hSF3FKa7epXjKqTLcrRz4 a lam:AnnotationConfiguration ;
+lamd:res_4wnP6Dg82ZSVQNyhkCN9X2 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_EOV"@en .
 
-lamd:res_2kP5ob4v7kuMaQzUkTwT5e a lam:AnnotationConfiguration ;
+lamd:res_5ArTJMG4idNvSGurcpToXU a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_5E2LCMeUDas99rtWCeowR8 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_5rAnhUp3Yi3ni5oVSZAcLh a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_638Jyrg5jfjtA68KztNfXU a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_69Hq5EsVVuih6Un6g8fcoV a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_6LshsJX4rPzq8FPf6BvZc6 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_6XKUYfQdXFzBV6x5BeQvC5 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_7SDUXKedZiXFzcWTJKfJn9 a skos:Collection ;
+    skos:member lamd:md_TT ;
+    skos:prefLabel "Treaty" .
+
+lamd:res_7SntReBsDnXzY7FHJXyA24 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_7xANKUYLtM77LMabZHFGoE a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_88NXEYkpRkcp9UhxGSAKAc a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_8LsBwPQ6XoAvDjBjV94qe2 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_8aahFMoBQvyHmyrp7cCUSW a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_8mMBHhKnmQUievgN8mf7uU a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_9BZbdNWMSJokkH8obFtRp8 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:class at:country,
+        at:place ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_COD at:place at:country"@en .
+
+lamd:res_9JsTSefWQm2EmcrSbcWiVC a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_9NGseVyPhmZFkngR7sQHX6 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_9P8y2NwJJAHe9FoWPVkzBG a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_9R42TdzYQhqHVmepGj5F54 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_9r54RQynMDuzeXWhtD2oLQ a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_9roMtBdVhqj5VBPNX7Sj5a a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_9srjpAZwnC4o8AoLAqHhgC a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TOD ;
+    sh:class at:fd_350 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TOD at:fd_350"@en .
+
+lamd:res_9vTQCCZe4HoUuHVVDAo5jZ a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_9zgbLxRRWyomNUnEhY3Wck a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:class at:fd_350 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_COD at:fd_350"@en .
+
+lamd:res_AAfojpnQwJfthssgo78BMh a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_AFPo5jiWov6MVksjGHCScJ a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_ANVYaxUMm6Pa4QZCtKxWTP a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_ARYPJY5cJfeWrXpkc8g6PH a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_AY7e5Lp96wjTqRqSxkQfGY a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_Aftpitk5sesJ6crMAuU5sF a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:class at:fd_330 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_COD at:fd_330"@en .
+
+lamd:res_AjXi7Ypq9jchFWsUttJoo9 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_ApczJV7sum7zNcCmN4uYeL a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_AtWRzo3ZA4qZ4tyhEEcTJG a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_B44FZC77ov8QaUUyjURo8W a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_BDSC8CQkGCXmAxPfQR6SrG a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_BGQfGoArsZNg9MjPiKdoum a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_BMpFcdP6YZtBeQkCxcRYjK a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_BfXybYjwpaKzg9B5pbU7F9 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_Bjg7muFYEQUmzXsNL7ztu9 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_BrsEDk4uq9NNv5Qp27DQh9 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_CJgBJU9dLWmtQSqjVWbjA2 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_CVVZ6WViQbZ9toZYeMJBE7 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_CbJgrVDMpX7TepeQYdiSte a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_CeNMU2fR6LXv2fkLtZa2zC a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_CsP5NXXesf4AyggDT8E8T4 a skos:Collection ;
+    skos:member lamd:md_ADOPTION,
+        lamd:md_ADOPTION_PAR ;
+    skos:prefLabel "Amendment to" .
+
+lamd:res_D98xmgQ22eP3SbEGkPuhEc a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_DHhgk8vpGBi2TnhJWg8XEW a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_DSUyA5qQNSoBQmXPNptKiM a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_Dc6bQB4rsPqwKMaaPVdLid a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_DjNzbRa3k7Przq8HeXVwwS a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_E6M3D7QofZWTCYvM4aEF7f a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_EBiF2MPFZztYCvv6Lyshim a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_EGFzgfP7EzBEWZDeFGTcNL a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_ENGZkfFJDASujjnxqQttZc a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_EPtAxwppNPNgEfVUUwz54d a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_EcWS7z3LcZQZXLYJGvuKyh a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_EdaU45gXzNpVWsz4tNo2Rk a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_EjBjUgiRdtCiAbW8HE7J58 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_F2YBhf5fdCJREz5zgHeHGC a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_FJqN5rb7EWn8LEv8kVFPsC a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_FLUBA4GewZbgKWKWMtR7jP a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_FPs3WKr27f2spz6RYWh3a3 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_G2p6RRfMGEWEniD3UZXTsH a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_G6cqY52dPyQh8fFfAep2oE a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_G87pFtBkoqkZX9AXx68fm9 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_GFuDigoRu5ruqvA6WdaGLg a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_GV8GPNdkETsVXoeHWVh8uH a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_GiaMaByaFKiDVndUHPMVJU a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_HWSugYfzXLH3EwPwKxvAte a skos:Collection ;
+    skos:member lamd:md_LB ;
+    skos:prefLabel "Legal basis" .
+
+lamd:res_HZPWvEicqkpXjUyMJ99tX3 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_HiW9Z6ojZ8tyKEJe44K9Wj a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_FCT ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_FCT at:subdivision"@en .
+
+lamd:res_HifvDCQ4tUnUvMmkx2zoLc a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_Hsk8nbKYwzUjyNDyCjpKeN a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_JDy5Pi5dtxSwnSWQNCnjun a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_JQawhdTmgQH5GsXPUvrHHF a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_JT4bps3ZjumevmhsxRHtvM a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_JVNudTzKNwCLsWjWrHxAmD a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_Jhe9QLMjSnxwJq4MQRPWX7 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_KcVmGcscDPSETKEdyvHvDF a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_Kd8f8eQQ2dQDifahseACmY a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_KhDAq89Dvbqq82Bo3dyqfA a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_KxzrPvzRbM4XLNyjbCReS4 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_LPP3PEFYWv56LFe3L76E3D a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_LcmFBLEDqitywigzB62T2E a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_MCaQU5ZfejQviNWM2DhvZN a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SUB ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SUB"@en .
+
+lamd:res_MGu48wmr8dQpjpEDPAcUPS a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_MHYyMkHzVcArsK63paVDag a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_CLB ;
+    sh:class at:fd_370 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_CLB at:fd_370"@en .
+
+lamd:res_MTg5kQABzRZtq9efXDMxKj a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_Mh9AtUDqsXM9Y9H42Cm4WP a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_MqZ3BeoroLEVnnY4QF4o45 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_MsbbgttFQY7A7k3w2qmGFR a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_NGyGw4qquhzZAvEaNSTUs7 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_Nd9TYSH7zrsF9bC6V2BUcb a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_NshuzX7UuPy88CT7WWiGu3 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_P2g3ATjFQs4Z8CH3f9GJW7 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_PBstK9Xd8eSQBPxRLr6PCe a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_PS3CT5hDTZMKyuLGvTGFSD a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:class at:fd_335 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_COD at:fd_335"@en .
+
+lamd:res_PtxpW52BrxcNEnYz5vfKtH a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_PuAhaAsNYCba8EGo3uBpog a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_QcRaab3fNQspWBQQ3chfPP a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_QgdkpDysHzBwenc25N66ye a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_QxwLTCDAV43GBjpdfzFdYL a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_R2oK4PfXqMYXRA3rpqfUmF a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_RgFKT6FviBmE94ys4McwhC a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_Rq9vKHkNpjnxEHfujcQbaN a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
     sh:class at:fd_370,
         at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375 at:fd_370"@en .
 
-lamd:res_2rbsinZFGwt9oNBx9yPhHW a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_2vdTLgsdn8dvJkRjuzZaaX a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_CLB ;
-    sh:class at:fd_370 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_CLB at:fd_370"@en .
-
-lamd:res_2w4XxscY2PKByL6guVxxhH a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_ART ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_ART"@en .
-
-lamd:res_3yKqFrBCUBhiWttqprEjRG a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_3ynug9zVFyisuBfE3ZSMvZ a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_45EkudznDEquKHyo9Zu9VN a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_48W7trNTLT25hdEvi25GV6 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_4SibQcZtj7SPczsHyXW8m3 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_4bDcbAUSYox7xeGLxRd7Hd a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_4gueKshiA7eLiZkapiyET8 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_4xAoWBH8fbEUtMcJeV4TRS a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_4yERcVNVQ4pcxZt9U6ukMS a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_5T3bKv74evcq59NzZgTyv4 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_5fcP7L2feA9HQxjKau22CQ a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_5gBBxtHnqzAnHYEMmKfY2S a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_642uuXXHYojqMtiMoQYXYF a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_6HkZYdxUXJ4dAPAHfG82Mn a skos:Collection ;
-    skos:member lamd:md_TT ;
-    skos:prefLabel "Treaty" .
-
-lamd:res_6MB9unM6cxNmvUrCW3Usw2 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_6TS7EdvJBmuEdgYaY9Qg8C a skos:Collection ;
+lamd:res_SnH5GdN5t6wBqib2CUBFYL a skos:Collection ;
     skos:member lamd:md_ANNULMENT_REQ,
         lamd:md_ANULMENT_PARTIAL_REQ,
         lamd:md_COMMUNIC_REQ,
@@ -3419,13 +3946,824 @@ lamd:res_6TS7EdvJBmuEdgYaY9Qg8C a skos:Collection ;
         lamd:md_REVIEW_REQ ;
     skos:prefLabel "Case affecting" .
 
-lamd:res_6XbYi4Xx4qJfbVvtaG6VnP a lam:AnnotationConfiguration ;
+lamd:res_Sugc6KvNtUFQ4XSDh6QEq6 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_SzahcL4DFcbQXhXrydQyEg a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_TBvJzovBGDBnmNXCBx4rbj a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_TUK6Xi2wVYKmMm7JXjtTQa a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
 
-lamd:res_6gKtzsqZETiLeQDPmhJa66 a skos:Collection ;
+lamd:res_TugfkHQZ9b5GEt4vb487nQ a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_UEJdXzs32sYeGWPKtVTj8n a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_UGmdZvAhFDvtTNdQBHAp98 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_UK7GGjaoPp4a5CADwXPKsm a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_UMrvFAsPDJgEWv5VWow2on a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_Uri6rnVMWoNVhXqKJ2TgJ6 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_V7HaFF8j57FM9PzFwgZAqD a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_VSbd6cFUK6jiSm2rDjsJpf a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_VWqbgEJ55FLNwb9y9vRSb8 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_VZQKBBqaEXoaWFYxsaMEea a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_W5vnnS2sYWpg9cAL9sthy4 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_WPKZAmz95seCiEq22mbnH3 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_WgXbHHKwRS4zKVFqchfukF a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_WpQ7MdFJdKSK4f9r8dhABF a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_WwfWcdC5dwEKpqcfbnZLWa a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_WzxtChBQJWNt4PDHadQQET a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_XERdozWotZvqsjXZ6Lzvib a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_XUF7MmDXGRMEv5mxAFWCy9 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_XW7VRgU6cdnat6ysUNnczE a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_XWQ7M6Ah8pvbrnuX66EZBR a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_Xb8rzLAjJMGtRTrfDLPxH6 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_XpjsRASJTJsPJU2yE2sgpF a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_ART ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_ART"@en .
+
+lamd:res_Xtod5473h783ARtjBpH2TT a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_Xu4Mx4mNgkHduVxd92ac65 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_XukC7mRvTx8kGf95gwugMH a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_XvbDJ2EWh68QUVfqJKFFkQ a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_YCoP3ViGgCDAfbAtK3QNDe a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_YXhdyKvbxEjbWYDUy658A6 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_YcEowruAtTFFpMAVJk5mqC a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_Yi7bAyoGfD33MdK8EGbctQ a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_ZEVkD2XVBwwJsEJe4SNeM9 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_ZPLfwLsyKZGJgyAeEtMgGg a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_ZaxtQoaaYTwTUx2MeXMB9Y a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_ZgHFRSUVnTABrSUDJwdh7A a skos:Collection ;
+    skos:member lamd:md_CI ;
+    skos:prefLabel "Instruments cited" .
+
+lamd:res_Zgi5GgHArig8qTcDX9HifQ a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_Zizv2rPHLMTa2rB8Z2hmnT a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_ZtAmKgGo4JJ26aUhL9Hyvc a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_a5FYtxQFmHQG83aqevPKEQ a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_aAo8BKcRBNJUsXjfXgHhoi a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_aGYTioH9ojuLFF7no3NbTC a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_aVRf7P8BoajLe2k5a8BtQ6 a skos:Collection ;
+    skos:member lamd:md_DN,
+        lamd:md_DTA,
+        lamd:md_DTN,
+        lamd:md_DTS,
+        lamd:md_DTT,
+        lamd:md_DT_CORR ;
+    skos:prefLabel "Celex number" .
+
+lamd:res_aZFzvpE5Us5cjB9SPE6wd4 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_amQaSzhyk4hkQqmNJtq2Vo a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_axzQxU7h5QaLpfWCHnDmDe a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_bFz8d4YnSThtXwPG7aBxvD a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_bJ7Sh4vm9waCeXuwCG3VP6 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_bJbfGGfUZRoyENhhrhQu3h a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_bPozGZ6FpEN6YqfqfBKk5n a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_brcpYhUPxZ944fSGXRnnJL a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_bupmC4qKfeLWZGqtfNuDEX a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_c3TkmgyT2jsXFCXhmoAdf4 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_c8fMR7GwPZHToPUExVgkuG a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_cT4AmkhqAikfxzeGwj4KUR a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_cZDaAEkifMkyMEshdiYKTV a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_cZN2MDwPRXeF3FijMUBsSm a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_cd8HVhTEMAwVV6piycN9UR a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_cgz6ANnjVJCb4tfDWK4Laj a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_ciw9NVqURqm53xhah4PrX2 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_dTcsZzJo3Zqj8cr2qZyrCd a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_FCS ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_FCS at:subdivision"@en .
+
+lamd:res_dYTaVHnZ5ocCCMksNd2BSH a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_daJTbz5USgAA67J7Ei685A a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TOD ;
+    sh:class at:fd_335 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TOD at:fd_335"@en .
+
+lamd:res_dozXJTzBVpXJRMCHHD9iNE a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_eJjnPhsKCL3xZuJ4CEmV6F a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_eMuGrQREXgp8YAQW5vCbYC a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_eX2ZCPWBbaYd4fUiZVdgLm a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_fj3dxDEaLnpvS56moh9koU a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_ft5hew5Md6ghqbd6ZGpeKe a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_g3NA6qP3uzRk24kC7sFt8R a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_g3TPgPC5yXftN8RVviJwai a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_gFaGr6YoeCqU29ozaphhGZ a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_gkvTrFTzqt8mcw74R4LMbC a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_gwHgHnMoeMEJLr9re9yjCP a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_PAR ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_PAR"@en .
+
+lamd:res_gzm8iFuQCR7pbkxQpazMvh a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_h5M2NoBpEQz8ZSwVqxCKdF a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_hZ5No4hB4mfbjBTHepwT4R a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_hbP4ADWBc8JvNvtbRufuUk a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_he9ij6gV6ZBK547gVYfPA6 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_htViKpPVaJxjqMAPiq7DEn a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_huT9RgyJRR7yUmdGCLjie7 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_hxpunqAvbNtFxDhkPbfwxe a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_iKrff58aY87UbvZ46V5AZk a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_iQZRmZZm4fiYmKkMnAKoWT a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_iWRavn9Q829vqgRQMgwMuL a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_iiNY62mypik9htF2F7TmRR a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_iicvu6xUHaSpfXYmuLnbYW a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_ijVh8safEhMmTeDxosNSBM a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_io2TtTKi8qi87feXvXx4R7 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_j93eM6xB96fLaJKFrRridP a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_jBpWUNRS2snauanwcFdsJM a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_jJL8rmb4VFe2PVWX2jj78h a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_jLo8PnKSVUyV9EGqeviHwP a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_jRZpq86vhAznuopoQ9493o a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_jRpCAgn3WFffJDGFQeyygc a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_jWTo5ag7nqzy3Rwn57xeo5 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_jsPB24jiPqEMz2YpdKrCqd a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_k276KZA4sG7CovVQybqVpU a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:class at:fd_365 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_COD at:fd_365"@en .
+
+lamd:res_kHfaspMbZpCVopv3ksmviB a skos:Collection ;
+    skos:member lamd:md_ASSOCIATION,
+        lamd:md_RELATION ;
+    skos:prefLabel "Related documents" .
+
+lamd:res_kJZfXrHs4TbbZuzvtMhLW7 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_kiHC5pD4zqnx9HenJe7gUF a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_kpxB7V8Bkqq6UpM9NsoPmn a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_mJbPK22UKpR2rJzpwDSoTQ a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_mQWDSthL4WrPELPk7UXbkh a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_mfaYj8upynuctrkPX6kXGc a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_mnGze6TeYLE7aBu5m7PG9b a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_nBta7yzvzgnye6Xoi5Radh a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_nF22bq4ATiKGQvVjtzV76E a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_nQcGDmyMnAyNHJLvvLoaWG a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_ncTZ3uTFdtdMBvcdtFG6S8 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_oLQqo9rJYZ6STyDa7J6ZJ8 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_oMQti4NtVDHK7uo3xTafFe a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_oNLmo98LWdaeFr2KG7SbE5 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_oRrtRd5rxMStyjfoHa6W8Z a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_osCuDExBa9DFMrMxTgffAQ a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_owSt6wAsJu6MCBqFznfR3J a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_p6LnkV2pvNnm7euhocVS8D a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_p9jLs7fYVRpkqa5wXj4YCb a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_pJrJeS6Mr9KEiQVJdAxFWi a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_pPBhqwEs2wysSMsK7JnHZf a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_pVLESHNsgo58dV7QnQiAUj a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:class at:fd_335 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_COD at:fd_335"@en .
+
+lamd:res_pdj48X262AMpr6w3G5v8n4 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_ptPqPAw2zmHoe785zrMkDN a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_q5TLNhwAef6yTYc5ALmnej a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_qFCn38ZUQW8aNbMAPT395X a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_qLqh4Ln2LfaP2BFrebE2KV a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_qYQqfGuP3FPWUJTvAevqFh a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TLT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+
+lamd:res_qYtCKgBoYcTF4uVev82FmC a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_qhyGMAskRU3SP2MG9wFpR9 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_r2BovzqCzcWnp8JJTCYzKN a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_rZr26N6vJPcPeW9oAw4ZmV a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_LVL ;
+    sh:class at:language ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
+
+lamd:res_s4nAh3Ku3M5huJA36s2RCT a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_s5FpHmYBqECfpPjVbYHdcU a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_s9uVoGX2EoMpGktU2rDnMK a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
+
+lamd:res_sXDDKygpyTtg2Ma3Y2pfZZ a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_sXoWUhRaigoD9UbB36k2oc a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_370,
+        at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375 at:fd_370"@en .
+
+lamd:res_sdqc3m7xgvbnqvG4iovatj a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_seEPw2sBs7M2Cpm4P88wLC a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_t5jaBZajFQWvLrT3tWB2NZ a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_tHwjVcLUnGsD8tRWWCLQi5 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MSL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+
+lamd:res_tUjiP2LqLcPBQ6nnXAxWjN a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_tWehNSKidDHtynXCE97zqb a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_tXJQwhePnkQrWMXfWJrBmF a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_te6o7Wgy2SLCJ7qCdDYFak a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_u7kDseKZh7pTdRA7bTSm5o a skos:Collection ;
     skos:member lamd:md_ADDITION,
         lamd:md_AMENDMENT,
         lamd:md_APPLICABILITY_DEF,
@@ -3451,585 +4789,90 @@ lamd:res_6gKtzsqZETiLeQDPmhJa66 a skos:Collection ;
     skos:prefLabel """Amendment to,
 Earlier related instruments""" .
 
-lamd:res_7AagbrCHG2uYgZwJv9TB7J a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
+lamd:res_uHU2BiHwEnrA5S4UHgQ8cS a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
     sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
 
-lamd:res_7P8f5DenMHZa2KovkJZBNh a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_7V9VLPsxRh2FXVZbbqNujN a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_7VZrWeXhLi6Tfp8FENuKBV a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_7Y7CtsNq9dmiUg6XvsjtX4 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_7ipc3voQpR25obrniE7sKg a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_7vu5K7JGyUpgsZ6yiJm7PL a skos:Collection ;
-    skos:member lamd:md_LB ;
-    skos:prefLabel "Legal basis" .
-
-lamd:res_8MoFjoXJCs4q57kxBLXyxV a lam:AnnotationConfiguration ;
+lamd:res_uJpweGch3AMcdP4DKtKs9H a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
 
-lamd:res_8n6HGRB8ee6qLbnG9c5nAV a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_8rDReWX9gqiM2ytz8Mf6z4 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_98H9pBhsvtrHJ7QEuZDwV6 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_9EraKsi6MYjjBd5ucSoQ3U a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_9bRKaQhS6fNQ336Foz6uMe a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_9bYUeLFZzpznvEuFGHLzbb a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_9et9FqmczatzSZxJ7iQNye a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_9h4wLWtfcuJvAe8VwohENN a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_9iLCgcxB3R9Y8wvvYbJbEB a lam:AnnotationConfiguration ;
+lamd:res_uRYqdYMbzxBDmyfhsRaYhJ a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
 
-lamd:res_A2EDQSKpX2poQWpyzoQwNe a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_A86Dp2Mx6psaQZEiWPd9NN a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_A8ucYjdNnwBKvsXdP34kaS a lam:AnnotationConfiguration ;
+lamd:res_ucFZzgSXB4KrMGUw9ziLJE a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_SOV"@en .
 
-lamd:res_APUK2iT7Dbrpv7MGymKCoX a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
+lamd:res_urohdk8sbwPDjwr8crnnSi a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_SOV ;
     sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
+    sh:name "Annotated with lamd:md_ANN_SOV"@en .
 
-lamd:res_APmTF85Pb26nhdanZhXf7H a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_AW8pahXSWvTcwHXJpS27Vk a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_AXHsfEMhVeKD7QAPpm39fV a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SUB ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SUB"@en .
-
-lamd:res_AeCPYfroRehdaHV4QqhzBh a lam:AnnotationConfiguration ;
+lamd:res_vPB7FGwyok3o6HVyYiBuRh a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
 
-lamd:res_Ak4mGQgub7qFTzc7GJZG6d a lam:AnnotationConfiguration ;
+lamd:res_vVQF67uWBbhS3wk8he4WoA a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_SOV"@en .
 
-lamd:res_BE9wgtbCNLTBoBByNB2eDZ a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_BHK2rjuBQphHToFr8EASs3 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_BNxH95VX35VkcM7CHjA8i8 a lam:AnnotationConfiguration ;
+lamd:res_vuQPSXBfYe9gdgSqXpYmCK a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_SOV"@en .
 
-lamd:res_BceLmmGXj96xidxzTV8JnC a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_BradmeGgoegbEryvdP7Mt6 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_CJc5DBD6GpyiXL2SMxcYhb a lam:AnnotationConfiguration ;
+lamd:res_vvWWBVho6ZJAkZLT2BHvB7 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
 
-lamd:res_CVHzCqdo5LrDm5BdnxdeJ7 a lam:AnnotationConfiguration ;
+lamd:res_wV4Xdz8BqP56PdC2fJMEZi a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_EOV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_EOV"@en .
+
+lamd:res_wZDe2ghgqhzjHpLbL5E2xf a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
 
-lamd:res_CZoLZRukMWnx3sxN5ZP36a a skos:Collection ;
-    skos:member lamd:md_ASSOCIATION,
-        lamd:md_RELATION ;
-    skos:prefLabel "Related documents" .
-
-lamd:res_CcHcpYGosYpCPoyxSPquJm a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_Civs5NjPgTcG9LcVfmTNKd a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_CyYJFLhid7UbBCbcotNMwi a lam:AnnotationConfiguration ;
+lamd:res_wh6FejEVVHoBwBbWEEqKjG a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
 
-lamd:res_DAPyKcfpC5ajhyKnssrHfk a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_DBPsowLLYRKa9drjNqjVWD a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_DGgMtePikYWJG5e7TRZ88o a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_DLieU4oTo9ZxdJNE5u2UfG a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_DwAX2sk5iB74j7PA8r2NGU a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_EFjEcDJC3UVmp9MN3TyTLa a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_EkGaAeNRLUHJq48kCScJNE a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_ErXs7SdUQgBPd95QL3dLAJ a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_FCT ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_FCT at:subdivision"@en .
-
-lamd:res_F9ujuThJBpRL2HNZMMQHYY a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_FGgwrbz25VsUEwXB7T8aGk a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_FJrt9TRC2GiyVXCP5vQNGa a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_FpF3cSgCWHuPwyputoHaki a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_FsduSDPA2Qh96LLX2EWv3h a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_GL5aD8rD8riZRYWJRneZbf a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_GMoWu4NkKrXkFjmpEqSsnB a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_GQT9WAXaf7iKnvzYDr3jPo a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_H5rE47hMyuztrZJHWEznyg a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_Hv3jUGP6H6V497duYJctdM a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_Hz3gPmbEJxyez4meDYmARC a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_HzDREmPCsydVTroc8aGtAQ a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_JTd3TKMdHEwZDKBWksvem4 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_JZf7QfySQSNjBKwGayPUhn a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_JoUpCistkjby4zdYEFLgJC a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_JosT6Z39vyw73jPffyT29a a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_K4YogDMKi2JezgzEoQg8ES a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_KB2m5cp6Ts6CghgtfpWev7 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_KJR9TpvNe2Mkw7TE7FmnvS a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_Ke364UpykwNKBvYGDbj7BS a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_L6cFGSUZKtGBFqVgkbjLC7 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_LB5YLt9Cnob9tP3QjqydK8 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_LDEieFdUZfq4kqAgfNmafD a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_LGJBvBzicgKPzXhCEs5uKD a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_LGk4iPPAAtmc8BpYESZ2Vg a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_PAR ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_PAR"@en .
-
-lamd:res_LS37bDuSDoUjqhmbQaH3dN a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TOD ;
-    sh:class at:fd_335 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TOD at:fd_335"@en .
-
-lamd:res_LkzxHMQrchPv7sLLQGRUy3 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_LyGSTdubzDrxYwPnmJ8KLN a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_M3TXsjAJWxXUGPmnX6Np2G a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_MUAJoQJJbxAtfecGCcRcJD a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_MhLSzGVvfLJpBxvD9fcm4e a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_MrfWouwjbiRJ2xhDMN4JTV a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_MuEwFT7gBDytCBUN6qgdtd a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_N4qsdGpUVygRqaW5S3hWBY a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_N7iKUnN9mLyhfuScWQ4Ao9 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_NbweEjazqAuhNcJHtSi2FW a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_NdfYL5n52oMwdPMaCTVF5X a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_NgmUuaXRbrUq5Joa9gANWg a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_FCS ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_FCS at:subdivision"@en .
-
-lamd:res_P6faDWEHxQykYTrafth7hF a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_P856eQeH7h4rX9SeArt7NZ a lam:AnnotationConfiguration ;
+lamd:res_wjtihvZPtBA8ntKvG6PUX9 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_COD ;
-    sh:class at:fd_365 ;
+    sh:class at:fd_340 ;
     sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_COD at:fd_365"@en .
+    sh:name "Annotated with lamd:md_ANN_COD at:fd_340"@en .
 
-lamd:res_PGVHwfRX3kay6FyZawQdL5 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_PRHTRf8Vq2cqwiXnBbQuoD a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_PW4yjyFaNFg6kYR5PYNqLk a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_PagJe4SHtb8oKpe6nj9TyP a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_PiPwk83fT8pmK3ncPX9Sxn a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_Ptc2DqZ6iDFupeLdQgWyeN a lam:AnnotationConfiguration ;
+lamd:res_wmgKN3pgyFDzyXG3JTm3A8 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
 
-lamd:res_PuaBp4Qn275EZwuifdEsN9 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_COD ;
-    sh:class at:country,
-        at:place ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_COD at:place at:country"@en .
-
-lamd:res_PukuBSzHyhdJa7NbsjXshY a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_COD ;
-    sh:class at:fd_330 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_COD at:fd_330"@en .
-
-lamd:res_QLyxabjDZWcWpD3NUDqoiL a skos:Collection ;
-    skos:member lamd:md_DN,
-        lamd:md_DTA,
-        lamd:md_DTN,
-        lamd:md_DTS,
-        lamd:md_DTT,
-        lamd:md_DT_CORR ;
-    skos:prefLabel "Celex number" .
-
-lamd:res_QSxhTqpVtcUw6qc77rHx4Z a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_QWfm9jLFaNZuuuY8CVYDYh a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_QapTMVw6eFKC4LYGSs3NAP a lam:AnnotationConfiguration ;
+lamd:res_x2sARNHMEuN7adhzioGRqC a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_TLT"@en .
 
-lamd:res_Qip2onb4ay5ZpdJUBP7LEY a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_R378JXqnXvvon2YEuh9fYE a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_R8hqmX7jzif9S95h6rmfud a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_RYp2BUtdRwFNkpvqbLSdDZ a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_RZKesBxLVhxJAhUqrkvEkV a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_RcDUTXk9GVVsHuRaWo7CGn a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_S2kdMynVrykegMdXkNzkBa a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_SK9Q82RYWYpYxUSzYhFZ5n a skos:Collection ;
+lamd:res_x5R9HnsgnUJiUXx5qXiACP a skos:Collection ;
     skos:member lamd:md_AMENDMENT_PRO,
         lamd:md_INFLUENCE,
         lamd:md_OPINION_COR,
@@ -4037,901 +4880,70 @@ lamd:res_SK9Q82RYWYpYxUSzYhFZ5n a skos:Collection ;
         lamd:md_OPINION_EP ;
     skos:prefLabel "Earlier related instruments" .
 
-lamd:res_SNPNcYYieVEnvusbELdA8a a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_SV23dXopR8NrhuJE9fZ5BA a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_Scbmu7788qTqfszE8MLukN a lam:AnnotationConfiguration ;
+lamd:res_xSAxKeZLwudwLf2x9bt2kQ a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_EOV"@en .
 
-lamd:res_Sorfa8CPNiNiDBCE7r85fY a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_SpL7meP3PcTcvoRWdhpeD3 a lam:AnnotationConfiguration ;
+lamd:res_xTytBGaa6dgXbTGDVMEF7P a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
 
-lamd:res_Svm78k9d3NZiKgPmpDAtDd a skos:Collection ;
-    skos:member lamd:md_ADOPTION,
-        lamd:md_ADOPTION_PAR ;
-    skos:prefLabel "Amendment to" .
-
-lamd:res_TCvwPH748CDJzyNCDyGDaU a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_TZLWcL43w4sxKQtGETbhwb a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
+lamd:res_xUJ42rj3gPrRHEwtppEH7K a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
 
-lamd:res_Ta69XMWUo5AfViNRdqu26b a lam:AnnotationConfiguration ;
+lamd:res_xoYYdznf3tqyxEskhMioFX a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_MDL ;
+    sh:class at:subdivision ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
+
+lamd:res_yQCFwJeXvZHvufbHpQPhha a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_RL2 ;
+    sh:class at:fd_375 ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
+
+lamd:res_ySvy9fZuno9iaCc9Ytt6J7 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_TLT"@en .
 
-lamd:res_TcxXPvMvcAvbEq9yCjm7Ui a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_TzxRNTswVCycX892xHnY5Q a lam:AnnotationConfiguration ;
+lamd:res_ym28t6BeXCVqWVBc4usxHV a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_EOV"@en .
 
-lamd:res_U6XktjmViHH9hh8dgPbxeN a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_UCTdAV577z3DhCm7Kn7bEW a lam:AnnotationConfiguration ;
+lamd:res_yn43n8mKjjwzmQW9WkcRx5 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
 
-lamd:res_UJpRfzKqfg6Piodx4CMH8W a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_UL2S8iSZ2csqone4J6nZ6B a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_USWMeSmrxuQU53zNPmGCUM a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_UZNrERXa3ZehdEYBiGUsbn a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_V6zVGvCsQGFyUreC5neX9U a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_VMA3RzC2hCFHC9vUBXUgbD a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_VMhHGQjJUYX3h8VYZYJyc9 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_VjgC83HFxuZmQCTptKQtHk a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_VofikwFhWKoJTtgPcm8h94 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_VvqEahmPdfsLSUSiY4wpF3 a lam:AnnotationConfiguration ;
+lamd:res_zEre8Z6nSJk9R4XNoHmrhM a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
 
-lamd:res_W5xbG6KcBqZffCmawfXNqS a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_WFWSUYh5if4aYoVhk7c84o a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_WMfq33pHQq8kyyvGRoAfo8 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_WQimUY3WBBmtDEwndJM9Pn a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_WhafhPBomT4KdzytBEpXhL a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_Wv3Y6YFsVR2PAFA65QMiXX a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_Wzu5gSVam8qsR7KLonaknH a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_X4zkCwnFWdTiBvkL3wQQA9 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_X5Dw4bS2rQ3UFruDfxtLKj a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_X5r529y5xMaheAvtBy7wCj a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_XKeY4fN3Bt5nFiY3yynNQA a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_XN6e3cXUvivSfPfv2PwvS5 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_XPBUT2fbSetVuMsVneWtKn a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_XhVLgQ8BkLw9GphpPyjTcA a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_XqUTr4EHhsAw8dH4pVcMdV a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_Y3QL4S6C9JzfSjiKw37JDY a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_Y4QsWU5YMQ8eravSEVuG5Z a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_Y9rWPHsg9njgPTfWR7QUbj a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_YekEBioSA9xUwQFFgzbpMC a lam:AnnotationConfiguration ;
+lamd:res_zLvTyrugNVotDWNqDTGEEG a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_EOV"@en .
 
-lamd:res_YoPF5m5jd5WGqgNDT3mtPM a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_YpuiFhbXrnYARcvZK44a95 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_Zkino75vXXxx3rhcVtLaQK a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_ZmWRmKHBR35xFDJ8ocfJVh a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_adCTVuhz4qkXMYnQuxjDa9 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_apJH76hRa7hR4ztzfHzw3b a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_COD ;
-    sh:class at:fd_361 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_COD at:fd_361"@en .
-
-lamd:res_b7VSYUzwqnujn4UfuZwQmU a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_bKgrywecEpvkrJXzafrUp3 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_bPsfNrqWHU3riPDhX36guZ a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_boisjD4gCrcogmAV333bYg a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_cFH93T5oGb7emqPmukkZhB a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_cHB27sGVFcRvmDNyGEzE6c a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_cQ7Dv2EGuaLMNPV5qrTwSi a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_cSfh6PCiz8Wnywf5AdRduD a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_cUGMbRpgroyU6Z4NRrP8zM a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_cs68TNCb7VxDHkCjFSQzoc a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_dUJNzqJUfYNoi2A2gyneMb a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_dVMVxGBksKSMqRYMs2Pib2 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_eQejFiTmwYyBG6UaKt9Eig a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_eTP6njZ6cujPtVa73md8qZ a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_eVDHmsu3ukyVYoak9atd7a a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_ebXxzE4JJiNAJtUXALvDRb a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_exVZDvms3ETE5oDVVRjaJe a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_fKcpobS2L9Y4cBJHV7Nem2 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_fSaBkTLPwQUkzFm5h4yVaR a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_fiknQdERF2fgQzkPisdsyZ a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_fjptuikH7GSJyJm9qVKMqd a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_fosnGANPsZGZoDYL9Yy7vg a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_370,
-        at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375 at:fd_370"@en .
-
-lamd:res_fqzv8HiAaBQif9Y8UDETU5 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_gcEKdFKttGm3ZV3YnKcqzK a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_goPut6WBciSPzf2Zb2cSLE a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_gs4NCbg8i2hv8YBBMux2LE a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_gyrA7vyqnXLCyPajLxNJMK a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_h2XzVfqQvUDXXcPjf6FZ8V a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_h9nks5qCHynDHaTrZKyqTd a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_hCdcXKPTrvCGBF8eSEB83V a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_hJ6xCJ7FP8T5uqVaYX8beK a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_hcTK9uJDMSUEfkaKMkPgWn a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_hkWftps6yoovLhqZBuupDn a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_hsG69VZteaBXK74dvpLpEJ a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_htD4GzAzas8UUAWBJ9SYVX a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_i8vmfDrBbhEx8dh35NjCfM a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_iL3pY5MPqe8XdKfSf8fzAa a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_COD ;
-    sh:class at:fd_335 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_COD at:fd_335"@en .
-
-lamd:res_iPvGFkwPkZ5m6iNf3Arrsi a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_jJ4HbDudUPC6RTGzKJvhvN a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_jPFXUMmRFHpa3JtGuqxmvi a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_jUBLdN4Ypc42kGHycyMfZQ a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_jeya5kD8EUfChbVzeCPo53 a lam:AnnotationConfiguration ;
+lamd:res_zmf4UvsU7R3KGczxVqWcGg a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_COD ;
     sh:class at:fd_365 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Annotated with lamd:md_ANN_COD at:fd_365"@en .
 
-lamd:res_jkwAj8efeUnouWD4eLq3ec a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_k53xrTWUSEbvE4NfnPhe3a a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_kNPp6EFTyZV3Rn9H69qC48 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_kWUYuenCn74FeTabTuBeiL a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_kabt3n3Jhv5iBXYnhsSKVM a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_COD ;
-    sh:class at:fd_350 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_COD at:fd_350"@en .
-
-lamd:res_ksTo4JoqCivLSbHBT59c7G a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_kwadPsKs2BBwiNg2CAUuu8 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_mDqgJvwfWmFStu4ECBQFD9 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_mGjAMgiA4tT2WVKAgQYesa a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TOD ;
-    sh:class at:fd_350 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TOD at:fd_350"@en .
-
-lamd:res_mZqxSoAXnvhDHxmpqL6ZJ5 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_mnaXQLDY7TnxRhMiQwm3Vf a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_mzc5G2nH2j7uibbkzrpEtV a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_n4CVEJTPMPZybukUArpeXH a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_nS3aY73j6ea4v3nX2EvHXL a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_nZKqdXNxi3CffVeJitedNP a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_nkhzqS6kt8SNa6ySLgzJka a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_oCqN4k3Kz8HdrFJ6kEzhYc a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_oeViW9TRF7oT2w5WFbiTgB a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_ovBApBWiK8d2zuzxbYzPf2 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_p3Z8zn2Ys2faUFZpCxMK7h a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_p9RfgsrAG9jHnXSh8XfyAL a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_pL6nUSNvgTHKJ5GzpWHxW2 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_pQaxXdsG9R3QzFgjwVRxSo a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_pcc6nweGh93SxQH3DtALNb a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_puoCCEYgQtamcXX554skr3 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_pvdSmeWFn94GN9uFuYXjcR a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_q3rVsGgmxU7yvNSS6oso5j a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_COD ;
-    sh:class at:fd_335 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_COD at:fd_335"@en .
-
-lamd:res_qStLDxgAxuKuwTWy5tm8eQ a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_qVSUCfFWtDUKhZQ3MfWPjD a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_qVVuwWAzrL5YLVp6E3msZ2 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_qo9ZXEvWapwjvhpQPCUUnL a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_qrBNVsds8WPrLGsVWUzzx4 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_qwLgPTUmzVJsf3B42zpMv8 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_rpvZZCwtjH6XQwBGFb6FfU a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_rq6iXXBR2yZ6GB5ED7FxvT a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_sW99jvndaKrVFYYEkbGtvZ a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_siZrf3ByLjKUuB2U8W57qR a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_t2HBSMWB4sB6iMUqvN6vEM a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_tSAGERF6o69FaxdVLXeDG7 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_COD ;
-    sh:class at:fd_340 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_COD at:fd_340"@en .
-
-lamd:res_tSFUEWwA3gwU6NxAN33fim a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_tYAE99HHpy5qxQRQMkPAr9 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_tZkHZUmbfc4NggPmQEjGN9 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_tgKWASFJtMVbx4L8cZtPbc a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_tggisRx7bupnHwMmEy4K2k a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_tiGTkBUYfugUYzUN96fFyX a skos:Collection ;
-    skos:member lamd:md_CI ;
-    skos:prefLabel "Instruments cited" .
-
-lamd:res_uMSanEXfaKgcqViNJjnReC a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_uSPqXXjLG7fa98TVchunkK a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_uXByKHzuMHcFYQ8jM4JCeH a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_utCWK9HWLwcez2cZUz8hU3 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_vSzm5Me8KWfYDDgSff3FsN a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_vj4SLSG6fy7hHSqUadJR9B a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_wExjFCFNnqq9Yr8zm87bmk a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_wRkSh9GdcZTdaPbiZxuhpP a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_wUJvvbPH42EJUyMnMsP4pA a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_wgPpqjy8XnCfkEbbsCTDd7 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_wiggmaD2u5AL3mNUWfTiFk a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_wmkxtNAETFJuiFhESLr24J a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_wrqhZCs5rx7a3ohDk76vFh a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_SOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_SOV"@en .
-
-lamd:res_xJmLfqV5H2CGnaTdt8sJoc a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_xLRHQEb9RWxDeUmsQh7VAk a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_xcqWrpJUzvcTxVBnE7jYXE a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_y2J3apbhXJiycTQanAZGwS a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_LVL ;
-    sh:class at:language ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_LVL at:language"@en .
-
-lamd:res_yLuLyNVyR6L5MrLRYb7eJU a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
-lamd:res_yToSTLABEuctuRj6f4Pkgg a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MSL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MSL at:subdivision"@en .
-
-lamd:res_yV5aadbqr7kQbhLQcQb256 a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_EOV ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_EOV"@en .
-
-lamd:res_yX38XqcTnRmkiezFS2DJYU a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_TLT ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_TLT"@en .
-
-lamd:res_yqUbyHyPbz3yKJqoaMPGXL a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_yzS8UEdKqZHhHyCK8DdstG a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_za2oGF2RNpJLWBiDsqa9QX a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_RL2 ;
-    sh:class at:fd_375 ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
-
-lamd:res_zt8GEprCDVytUxjqRCmJ7m a lam:AnnotationConfiguration ;
-    lam:path lamd:md_ANN_MDL ;
-    sh:class at:subdivision ;
-    sh:minCount "1"^^xsd:int ;
-    sh:name "Annotated with lamd:md_ANN_MDL at:subdivision"@en .
-
 lamd:md_ANN_ART a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation specifying the article of the treaties or the legal acts constituting the legal basis of the document."@en ;
     skos:example "<annot:article>62</annot:article>" ;
@@ -4941,7 +4953,7 @@ lamd:md_ANN_ART a skos:Concept ;
     sh:path ann:article .
 
 lamd:md_ANN_CLB a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation specifying the fragments of the treaties or the legal acts constituting the legal basis of the document."@en ;
     skos:editorialNote "2019/06/25: Replacement of fd_370 by at:subdivision should be considered."@en ;
@@ -4955,7 +4967,7 @@ lamd:md_ANN_CLB a skos:Concept ;
     sh:path ann:comment_on_legal_basis .
 
 lamd:md_ANN_FCS a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation indicates specific part of this document where a reference to another document or its part is present."@en ;
     skos:editorialNote "2019/06/25: Currently string. Replacement by at:subdivision should be considered."@en ;
@@ -4966,7 +4978,7 @@ lamd:md_ANN_FCS a skos:Concept ;
     sh:path ann:fragment_citing_source .
 
 lamd:md_ANN_FCT a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation indicates  to which specific part of an document refers this document."@en ;
     skos:editorialNote "2019/06/25: Currently string. Replacement by at:subdivision should be considered."@en ;
@@ -4977,7 +4989,7 @@ lamd:md_ANN_FCT a skos:Concept ;
     sh:path ann:fragment_cited_target .
 
 lamd:md_ANN_PAR a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation specifying the paragraph of the treaties or the legal acts constituting the legal basis of the document."@en ;
     skos:example "<annot:paragraph>1</annot:paragraph>" ;
@@ -4987,7 +4999,7 @@ lamd:md_ANN_PAR a skos:Concept ;
     sh:path ann:paragraph .
 
 lamd:md_ANN_SUB a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation specifying the subparagraph of the treaties or the legal acts constituting the legal basis of the document."@en ;
     skos:example "<annot:subparagraph>1</annot:paragraph>" ;
@@ -4997,7 +5009,7 @@ lamd:md_ANN_SUB a skos:Concept ;
     sh:path ann:subparagraph .
 
 lamd:md_ANN_TOD a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation specifying date metadata."@en ;
     skos:editorialNote "2019/06/25: Differences between ann:comment_on_date and ann:type_of_date are not fully clear"@en ;
@@ -5014,7 +5026,7 @@ RP: fd_350"""@en ;
     sh:path ann:type_of_date .
 
 lamd:md_ANN_COD a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation specifying date metadata."@en ;
     skos:editorialNote "2019/06/25: Differences between ann:comment_on_date and ann:type_of_date are not fully clear"@en ;
@@ -5045,7 +5057,7 @@ SG: at:place, at:country"""@en ;
     sh:path ann:comment_on_date .
 
 lamd:md_ANN_EOV a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation indicates end of validity of a specific amendment."@en ;
     skos:inScheme lamd:DocumentProperty ;
@@ -5054,7 +5066,7 @@ lamd:md_ANN_EOV a skos:Concept ;
     sh:path ann:end_of_validity .
 
 lamd:md_ANN_LVL a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation indicates the language version concerned by a corrigendum (for cdm:resource_legal_corrects_resource_legal)."@en ;
     skos:editorialNote "2019/06/25: Currently string. Replacement by at:language should be considered."@en ;
@@ -5065,7 +5077,7 @@ lamd:md_ANN_LVL a skos:Concept ;
     sh:path ann:language_list .
 
 lamd:md_ANN_MDL a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation indicates which specific part of an act is touched by this act (or its part). "@en ;
     skos:editorialNote "2019/06/25: Currently linked to fd_370. Replacement by at:subdivision should be considered."@en ;
@@ -5077,7 +5089,7 @@ lamd:md_ANN_MDL a skos:Concept ;
     sh:path ann:reference_to_modified_location .
 
 lamd:md_ANN_MSL a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "indicates which specific part of this act touches specific part of  another act, only rarely used in the past."@en ;
     skos:editorialNote "2019/06/25: Currently linked to fd_370. Replacement by at:subdivision should be considered."@en ;
@@ -5089,7 +5101,7 @@ lamd:md_ANN_MSL a skos:Concept ;
     sh:path ann:reference_to_modifying_location .
 
 lamd:md_ANN_RL2 a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation contains an additional comment to the relation."@en ;
     skos:example "<annot:role2>{D|http://publications.europa.eu/resource/authority/fd_375/D}</annot:role2>" ;
@@ -5100,7 +5112,7 @@ lamd:md_ANN_RL2 a skos:Concept ;
     sh:path ann:role2 .
 
 lamd:md_ANN_SOV a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """This annotation indicates indicates start of validity of a specific amendment  
 This might be equal to the date of entry into force of the amending act or to the date of its application (if the date of application of the amending act or its relevant part is different as its date of entry into force) or might be directly defined in the amending act."""@en ;
@@ -5110,7 +5122,7 @@ This might be equal to the date of entry into force of the amending act or to th
     sh:path ann:start_of_validity .
 
 lamd:md_ANN_TLT a skos:Concept ;
-    dct:created "2019-11-05"^^xsd:date ;
+    dct:created "2019-11-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Indicates the type of metadata field (Amendment to or Earlier related instruments or Related documents)"@en ;
     skos:example "<annot:type_of_link_target>MS</annot:type_of_link_target>" ;

@@ -24,3 +24,8 @@ class ContentGenerator(ABC):
         """
             write the generated content into a file
         """
+
+    def sort(self, key, ascending=True):
+        """
+            sort the content according to the given key
+        """

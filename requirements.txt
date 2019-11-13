@@ -12,3 +12,4 @@ rdf2gremlin
 dicttoxml
 jinja2
 jupyter
+jsonpath-ng

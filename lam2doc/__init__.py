@@ -8,6 +8,8 @@ import pathlib
 
 CONCEPT_SCHEME_QNAME = "skos:ConceptScheme"
 CONCEPT_QNAME = "skos:Concept"
+COLLECTION_QNAME = "skos:Collection"
+
 
 THIS_PROJECT = pathlib.Path(__file__).resolve().parent.parent
 HTML_TEMPLATE_FOLDER = (THIS_PROJECT / "doc_templates/html").resolve()
