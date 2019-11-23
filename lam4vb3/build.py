@@ -863,6 +863,51 @@ class PlainTripleMaker(AbstractTripleMaker):
         return []
 
 
+class InverseTripleMaker(AbstractTripleMaker):
+    """
+        Builds triples from columns (which must contain URI references) to the row URI.
+        The cells are assumed to be always URIs.
+    """
+
+    def __init__(self, df,
+                 column_mapping_dict,
+                 graph,
+                 target_columns=[],
+                 subject_source="URI",
+                 ):
+        super().__init__(df=df,
+                         column_mapping_dict=column_mapping_dict,
+                         graph=graph,
+                         target_columns=target_columns,
+                         uri_valued_columns=target_columns,
+                         subject_source=subject_source,
+                         subject_class="rdfs:Resource",
+                         multi_line_columns=[])
+
+    def make_column_triples(self, target_column):
+        return []
+
+    def make_row_triples(self, row_index):
+        return []
+
+    def make_cell_triples(self, row_index, target_column):
+        row_subject = self.handle_row_uri(row_index=row_index)
+        column_predicate = self.handle_column_predicate(target_column=target_column)
+
+        return [tuple([cell_value, column_predicate, row_subject])
+                for cell_value in self.handle_cell_value(row_index, target_column)
+                if cell_value]
+
+    def handle_cell_value(self, row_index, target_column):
+        cell_value = self.df.loc[row_index, target_column]
+        if cell_value and pd.notna(cell_value):
+            return [parse_value(cell_value,
+                                graph=self.graph,
+                                language=None,
+                                data_type=None, )]
+        return []
+
+
 class ConceptTripleMaker(PlainTripleMaker):
     """
         Creates literals/uri statements from cell values attached to a concept using the following pattern
@@ -1193,8 +1238,10 @@ class ConceptMultiColumnConstraintMaker(PlainTripleMaker):
         return result_triples
 
 
+
 class ConceptCollectionMaker(PlainTripleMaker):
     """
+        @Deprecated
         creates from the target columns collections and adds the concept to the last collection.
         The target column list is assumed to represent a sequence of subsumtions where the first
         is the most coarse and the last the most granular collection.
@@ -1218,6 +1265,7 @@ class ConceptCollectionMaker(PlainTripleMaker):
         :param subject_source:
         :param subject_class:
         """
+        warnings.warn("deprecated", DeprecationWarning)
         super().__init__(df=df,
                          column_mapping_dict=column_mapping_dict,
                          graph=graph,

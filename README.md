@@ -35,7 +35,7 @@ The project is split into two phases aiming at providing three kinds of delivera
 |  WP1.2 | [(Model spec1)](deliverables/wp1-2-lam-skos-ap/main.pdf) LAM-SKOS-AP model - A model to structure LAM data suitable for loading into VocBench3 |
 |  WP1.3 | [(Script1)](lam4vb3/excel2rdf.py) Excel to LAM-SKOS-AP transformation script  - A command line script to transform the Structured Excel files into LAM-SKOS-AP suitable for loading into VB3 |
 |  WP1.4 | [(Doc2)](deliverables/wp1-4-excel-structure/main.pdf) Documentation of Excel structure - Specification of how the excel files should be structured in order to undergo the transformation, i.e. the description of the input data for the script. |
-|  WP1.5 | [(Data1)](output) LAM data and loading it into VocBench 3 – Load and setup data in VocBench3 OP environment |
+|  WP1.5 | [(Data1)](data) LAM data and loading it into VocBench 3 – Load and setup data in VocBench3 OP environment |
 
 ## Phase 2
 | Key | Value |

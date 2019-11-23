@@ -13,11 +13,8 @@ import click
 import logging
 import time
 
-from lam4vb3 import LAM_PROPERTIES_WS_NAME, LAM_CLASSES_WS_NAME, CELEX_PROPERTIES_WS_NAME, CELEX_CLASSES_WS_NAME, \
-    class_build, CELEX_c, CELEX_p, LAM_p, LAM_c, property_build
-
-logging.basicConfig()
-logging.getLogger().setLevel(logging.INFO)
+from lam4vb3 import LAM_PROPERTIES_WS_NAME, LAM_CLASSES_WS_NAME, CELEX_CLASSES_WS_NAME, \
+    class_build, CELEX_c, LAM_p, LAM_c, property_build, LAM_PROPERTY_CLASSIFICATION
 
 
 def transform_file(input_file, output_folder):
@@ -41,34 +38,33 @@ def transform_file(input_file, output_folder):
     lam_df_classes = pd.read_excel(input_file, sheet_name=LAM_CLASSES_WS_NAME, header=[0], na_values=[""],
                                    keep_default_na=False)
     logging.info(f"Finished reading {len(lam_df_classes)} LAM class definitions")
-    celex_df_properties = pd.read_excel(input_file, sheet_name=CELEX_PROPERTIES_WS_NAME, header=[0], na_values=[""],
-                                        keep_default_na=False)
-    logging.info(f"Finished reading {len(celex_df_properties)} CELEX property definitions")
+    # celex_df_properties = pd.read_excel(input_file, sheet_name=CELEX_PROPERTIES_WS_NAME, header=[0], na_values=[""],
+    #                                     keep_default_na=False)
+    # logging.info(f"Finished reading {len(celex_df_properties)} CELEX property definitions")
     celex_df_classes = pd.read_excel(input_file, sheet_name=CELEX_CLASSES_WS_NAME, header=[0], na_values=[""],
                                      keep_default_na=False)
     logging.info(f"Finished reading {len(celex_df_classes)} CELEX class definitions")
     prefixes = pd.read_excel(input_file, sheet_name=4, header=[0], na_values=[""], keep_default_na=False)
     logging.info(f"Finished reading {len(prefixes)} Prefix definitions")
+
+    lam_df_property_classification = pd.read_excel(input_file, sheet_name=LAM_PROPERTY_CLASSIFICATION, header=[0],
+                                                   na_values=[""], keep_default_na=False)
+    logging.info(f"Finished reading {len(lam_df_property_classification)} LAM property classification definitions")
     # transforming and writing the output
 
     start_time = time.time()
     logging.info(f"Transforming the CELEX classes into RDF.")
     celex_df_classes['DTS'] = celex_df_classes['DTS'].apply(str)
+    celex_df_classes['CODE'] = celex_df_classes['CODE'].apply(str)
     class_build.make_celex_class_worksheet(celex_df_classes, prefixes, output_folder / CELEX_c)
     logging.info(
         f"Successfully completed the transformation. The output is written into {output_folder / CELEX_c}")
     logging.info(f"Elapsed {(time.time() - start_time)} seconds")
 
     start_time = time.time()
-    logging.info(f"Transforming the CELEX properties into RDF.")
-    property_build.make_property_worksheet(celex_df_properties, prefixes, output_folder / CELEX_p)
-    logging.info(
-        f"Successfully completed the transformation. The output is written into {output_folder / CELEX_p}")
-    logging.info(f"Elapsed {(time.time() - start_time)} seconds")
-
-    start_time = time.time()
     logging.info(f"Transforming the LAM properties into RDF.")
-    property_build.make_property_worksheet(lam_df_properties, prefixes, output_folder / LAM_p)
+    property_build.make_property_worksheet(lam_df_properties, lam_df_property_classification, prefixes,
+                                           output_folder / LAM_p)
     logging.info(f"Successfully completed the transformation. The output is written into {output_folder / LAM_p}")
     logging.info(f"Elapsed {(time.time() - start_time)} seconds")
 
@@ -78,7 +74,6 @@ def transform_file(input_file, output_folder):
     logging.info(
         f"Successfully completed the transformation. The output is written into {output_folder / LAM_c}")
     logging.info(f"Elapsed {(time.time() - start_time)} seconds")
-
     start_time = time.time()
 
 
@@ -89,8 +84,8 @@ def transform_files_in_folder(input, output):
     """
         takes all Excel files from an input folder, transforms them into LAM-SKOS-AP RDF
         and writes them into the output folder.
-    :param input:
-    :param output:
+    :param input: the folder with excel files
+    :param output: the folder with RDF files
     :return:
     """
     in_ = pathlib.Path(input).resolve()

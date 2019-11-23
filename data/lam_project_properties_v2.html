@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/stylesheets/jquery.tocify.min.css">
+
+    <link rel="stylesheet" href="css/pubcss-acm-sig.css">
+    <link rel="stylesheet" media="screen" href="css/screen.css">
+    <link rel="stylesheet" media="print" href="css/print.css">
+
+    <title>Document generated with lam2doc</title>
+</head>
+
+<!-- visible document starts here -->
+<body>
+
+<header class="counter-skip">
+    
+    <h1 class="title"> LAM property specification </h1>
+    <h2>[Standard specification]</h2>
+    <div class="authors col-span">
+        <div class="author">
+            <div>Publications Office of the European Union</div>
+        </div>
+    </div>
+
+</header>
+
+
+<main>
+    <div class="abstract counter-skip">
+        <h1>Abstract</h1>
+        <p>This document provides an automatically generated specification of Legal Analysis Methodology.</p>
+        <h2>Keywords</h2>
+        <em>structure, specification, LAM </em>
+    </div>
+
+    <!-- <div id="toc"></div> #} -->
+
+    
+
+    <h1 id="introduction">Introduction</h1>
+<section>
+    <p>This methodology presents and describes the use of metadata elements that are relevant for the legal and
+        documentary
+        analysis of the EUR-Lex website's content.</p>
+    <p>The metadata elements listed in this document are taken from the Common Data Model (CDM) of the CELLAR
+        repository
+        of
+        the Publications Office.</p>
+    <p>The CELLAR is an electronic database which contains the documents and their related metadata diffused on one
+        of
+        the
+        websites of the Publications Office. The CDM is an ontology that describes the concepts and relationships
+        (properties/elements) that can exist for the data stored in the CELLAR.
+    </p>
+    <p>This document does not contain all the properties of the CDM, but only those that are used in the context of
+        the
+        legal and documentary analysis. The purpose of this selection is to facilitate the understanding and the use
+        of
+        the
+        relevant CDM properties; however, it is necessary to be familiar with the whole structure of the CDM. The
+        CDM –
+        which is the primary source for the concepts and relations present in the CELLAR - is available in rdf
+        format.
+        Its
+        documentation is available in html format.</p>
+    <p>This methodology gives some basic Definition for the metadata elements, determines their cardinality and
+        lists
+        the
+        related properties. It also gives some methodological rules concerning the use of the elements in different
+        contexts
+        during the legal analysis.</p>
+    <p>The document also describes which kind of data has to be used when filling in the metadata elements. If a
+        metadata
+        element has to be completed with a value coming from a controlled vocabulary, it is indicated. If there is
+        no
+        indication, it means that the metadata element can be filled in with free text.</p>
+    <p>Controlled vocabularies may have different forms, such as thesauri (e.g. EuroVoc), classifications (e.g.
+        Directory
+        codes), authority tables (e.g. Resource types, Corporates bodies), Translation tables (e.g. FD_375), etc.
+        The
+        Publications Office manages and provides several kinds of controlled vocabularies in order to harmonise and
+        standardise the use of the codes and their associated labels.</p>
+    <p>The MDR website of the Publications Office contains a number of Named Authority Lists (NAL's), also known as
+        (Common) Authority Tables (CAT's) and some Translation tables (FD tables) as well. They are available in
+        several
+        formats (SKOS, XML, HTML) and contain a closed list of language independent codes and their associated
+        labels in
+        each linguistic version.</p>
+    <p> EuroVoc, the EU's multilingual and multidisciplinary thesaurus is a special controlled vocabulary which is
+        used
+        for
+        content indexation. It is also available and downloadable from the MDR website, but has its own website as
+        well.
+    </p>
+
+
+    <p>The values that are put in the metadata elements are used for search purposes in the database and especially
+        on
+        EUR-Lex. The legal and documentary analysis of documents diffused on EUR-Lex serves this purpose: the
+        objective
+        is
+        to assign to the documents as many relevant metadata as necessary in order to facilitate their retrieval
+        from
+        the
+        database and to set up the existing relations between them. The correct and thorough legal and documentary
+        analysis
+        contributes to provide the users of the EUR-Lex website with high quality information on the consulted
+        documents
+        and
+        with relevant and satisfactory search results.</p>
+
+</section>
+    
+
+
+
+
+
+
+
+<h1>Property definitions</h1>
+
+
+
+
+<section>
+    
+        
+    
+
+        <h2 id="http://publications.europa.eu/resources/authority/lam/clas_REF">
+            References<sup title="Collection">Col</sup>
+        </h2>
+        <section>
+            <p>lvl 2 collection metadata</p>
+
+            
+                
+                    
+                
+                    
+                
+                
+                    
+    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/clas_CLX">
+            Celex number<sup title="Collection">Col</sup>
+        </h3>
+        <section>
+            <p>lvl 3 collection metadata</p>
+
+            
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_DTS">
+            CELEX sector<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_DTT">
+            CELEX type<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_DN_CLASS">
+            reference to CELEX class<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_DN">
+            complete CELEX number value<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_DTN">
+            CELEX number - source<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_DT_CORR">
+            Corrigendum number<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_DTA">
+            CELEX year - source<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+            
+        </section>
+    
+                
+                    
+    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/clas_OTHER_REF">
+            Other identifiers<sup title="Collection">Col</sup>
+        </h3>
+        <section>
+            <p>lvl 3 collection metadata</p>
+
+            
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_OJ_ID">
+            ID of the Official Journal<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_ELI">
+            European Legislative Identifier (ELI)<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_ECLI">
+            European Case-law Identifier (ECLI)<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+            
+        </section>
+    
+                
+            
+        </section>
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+    
+
+        <h2 id="http://publications.europa.eu/resources/authority/lam/clas_DATE">
+            Dates<sup title="Collection">Col</sup>
+        </h2>
+        <section>
+            <p>lvl 2 collection metadata</p>
+
+            
+                
+                    
+                
+                    
+                
+                
+                    
+    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/clas_DPROP">
+            Dates properties<sup title="Collection">Col</sup>
+        </h3>
+        <section>
+            <p>lvl 3 collection metadata</p>
+
+            
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_DD">
+            Document date<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_LO">
+            Date lodged<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_VO">
+            Date of vote<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_RP">
+            Date of reply<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_DH">
+            Date of dispatch<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_DB">
+            Date of debate<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_DL">
+            Date of deadline<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_IF">
+            Date of effect<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_SG">
+            Date of signature<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_TP">
+            Date of transposition<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_NF">
+            Date of notification<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_EV">
+            Date of end of validity<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+            
+        </section>
+    
+                
+                    
+    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/clas_DANNOT">
+            Dates annotations<sup title="Collection">Col</sup>
+        </h3>
+        <section>
+            <p>lvl 3 collection metadata</p>
+
+            
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_ANN_TOD">
+            Annotation: Type of date<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h4 id="http://publications.europa.eu/resources/authority/lam/md_ANN_COD">
+            Annotation: Comment on date<sup title="Property">Prop</sup>
+        </h4>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                
+                    
+    
+                
+                    
+    
+                
+            
+        </section>
+    
+                
+            
+        </section>
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+    
+
+        <h2 id="http://publications.europa.eu/resources/authority/lam/clas_CLAS">
+            Classifications<sup title="Collection">Col</sup>
+        </h2>
+        <section>
+            <p>lvl 2 collection metadata</p>
+
+            
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_RJ_NEW">
+            Case law directory code<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_CC">
+            Directory code<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_CT">
+            Subject matter<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_DC">
+            EuroVoc<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+            
+        </section>
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+    
+
+        <h2 id="http://publications.europa.eu/resources/authority/lam/clas_ESI">
+            Essential information<sup title="Collection">Col</sup>
+        </h2>
+        <section>
+            <p>lvl 2 collection metadata</p>
+
+            
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_FM">
+            Type of act<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_REP">
+            Directory indicator<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_AU">
+            Author<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_VV">
+            In force indicator <sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+            
+        </section>
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+    
+
+        <h2 id="http://publications.europa.eu/resources/authority/lam/clas_MIS">
+            Miscellaneous information<sup title="Collection">Col</sup>
+        </h2>
+        <section>
+            <p>lvl 2 collection metadata</p>
+
+            
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_DP">
+            Depositary <sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_AS">
+            Associated service<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_RI">
+            Internal reference<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_LG">
+            Parliamentary term<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_AD">
+            Addressee <sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_TT">
+            Treaty<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_CM">
+            Internal comments<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_PROC">
+            ID of relevant procedure<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_RS">
+            Service responsible<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_REPPORTEUR">
+            Rapporteur <sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_AF">
+            Political group<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_IC">
+            Additional information (Internal comment)<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_CDM_CLASS">
+            cdm class<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_NS">
+            Number of session<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_MI">
+            Miscellaneous information<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_LF">
+            Authentic language<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+            
+        </section>
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+    
+
+        <h2 id="http://publications.europa.eu/resources/authority/lam/clas_CDJ">
+            Case-law miscellaneous information<sup title="Collection">Col</sup>
+        </h2>
+        <section>
+            <p>lvl 2 collection metadata</p>
+
+            
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_DF">
+            Defendant <sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_NA">
+            Nationality of parties<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_AP">
+            Applicant <sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_PR">
+            Type of procedure<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+            
+        </section>
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+    
+
+        <h2 id="http://publications.europa.eu/resources/authority/lam/clas_EDIT">
+            Editorial properties<sup title="Collection">Col</sup>
+        </h2>
+        <section>
+            <p>lvl 2 collection metadata</p>
+
+            
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_LABEL">
+            Label of the concept<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_KEYWORD">
+            Keywords<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_ORDER">
+            Order<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_COMMENT">
+            Comment<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_PARENT">
+            Parent<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_EXAMPLE_CELEX">
+            Celex example<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_EXAMPLE_EN">
+            EN example<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                    
+
+        <h3 id="http://publications.europa.eu/resources/authority/lam/md_EXAMPLE_FR">
+            FR example<sup title="Property">Prop</sup>
+        </h3>
+        <section>
+            <p>content</p>
+        </section>
+    
+                
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+                    
+    
+                
+            
+        </section>
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+</section>
+
+
+
+
+
+
+
+
+</main>
+
+<footer>
+    <div class="footer-copyright">
+        <div class="container">
+            <br><br><br>
+            <p class="center-align"> This document has been automatically generated by the lam2doc tool</p>
+            <p class="footer-copyright center-align">&copy; Copyright 2019,<a
+                    href="https://github.com/eu-vocabularies/lam4vb3">Initiative for Modelling the Legal Analysis
+                Methodology</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- some more scripts before the end of the document -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
+
+<script>
+    $(function () {
+        //Calls the tocify method on your HTML div.
+        $("#toc").tocify();
+    });
+</script>
+-->
+
+</body>
+</html>

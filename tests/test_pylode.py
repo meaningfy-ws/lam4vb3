@@ -10,7 +10,7 @@ import unittest
 import pylode
 import rdflib
 
-from tests import LAM_OWL_TTL, LAM_OWL_HTML
+from lam2doc import LAM_OWL_TTL, LAM_OWL_HTML
 
 
 class MyTestCase(unittest.TestCase):

@@ -18,7 +18,8 @@ LITERAL_COLUMNS = {
     'EXAMPLE_FR': 'skos:example@fr',
     'COMMENT': 'skos:editorialNote@en',
     'EXAMPLE_CELEX': 'skos:example',
-    'KEYWORD': 'skos:prefLabel@en',
+    'KEYWORD': 'skos:altLabel@en',
+    'LABEL': 'skos:prefLabel@en',
 }
 
 MAPPING_VALUE_COMMENT_COLUMNS = {
@@ -359,6 +360,7 @@ def make_class_worksheet(lam_df_classes, prefixes, output_file):
     create_concepts(lam_df_classes, graph)
     create_collections(lam_df_classes, graph)
     graph.serialize(str(output_file), format='turtle', )
+    return graph
 
 
 def make_celex_class_worksheet(celex_df_classes, prefixes, output_file):
@@ -369,7 +371,12 @@ def make_celex_class_worksheet(celex_df_classes, prefixes, output_file):
     :param output_file:
     :return:
     """
+    # ugly column type correction, TODO: make more elegant and generic
+    celex_df_classes['DTS'] = celex_df_classes['DTS'].apply(str)
+    celex_df_classes['CODE'] = celex_df_classes['CODE'].apply(str)
+    #
     graph = build.make_graph(prefixes)
     create_cs(graph, cs=CELEX_CS, cs_label="CELEX classes")
     create_celex_concepts(celex_df_classes, graph)
     graph.serialize(str(output_file), format='turtle', )
+    return graph

@@ -23,13 +23,13 @@ class LAMGremlinGenerator(ContentGenerator):
 
     """
 
-    def __init__(self, rdf_file, connection_string=rdf2g.DEFAULT_LOCAL_CONNECTION_STRING, ):
+    def __init__(self, rdf_file, connection_string=rdf2g.DEFAULT_LOCAL_CONNECTION_STRING, generate_collections=False):
 
         self.content = None
 
         self.g = rdf2g.setup_graph(connection_string)
+        self.generate_collections = generate_collections
         rdf2g.clear_graph(self.g)
-
         self.rdf_graph = rdflib.Graph()
         self.rdf_graph.parse(str(rdf_file), format=rdflib.util.guess_format(str(rdf_file)))
         rdf2g.clear_graph(self.g)
@@ -68,10 +68,11 @@ class LAMGremlinGenerator(ContentGenerator):
             self.__generate_tree_by_type(CONCEPT_SCHEME_QNAME)
             # look for skos:Concept
             self.__generate_tree_by_type(CONCEPT_QNAME)
-            # look for skos:Collections
-            self.__generate_tree(for_nodes=self.__get_top_collections(),
-                                 content_key=COLLECTION_QNAME,
-                                 default_max_depth=6)
+            if self.generate_collections:
+                # look for skos:Collections
+                self.__generate_tree(for_nodes=self.__get_top_collections(),
+                                     content_key=COLLECTION_QNAME,
+                                     default_max_depth=6)
         return self.content
 
     def to_json(self, output_file_name):
