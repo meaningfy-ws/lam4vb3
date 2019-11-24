@@ -51,7 +51,7 @@ The project is split into two phases aiming at providing three kinds of delivera
 |  WP2.3 | (Model spec2) Transformation rules from LAM-SKOS-AP data into formal LAM ontology and SHACL shapes |
 |  WP2.4 | (Script2) Script to transform LAM-SKOS-AP data into formal LAM OWL ontology  – the desired LAM ontology |
 |  WP2.5 | (Script3) Script to transform LAM-SKOS-AP data into formal LAM SHACL shapes– the desired shapes for validation purposes |
-|  WP2.6 | (Script4) Script to transform LAM-SKOS-AP data into a structured document (e.g. DITA) for PDF/HTML/DocBook disseminations |
+|  WP2.6 | [(Script4)](lam2doc) Script to transform LAM-SKOS-AP data into a structured document (e.g. DITA) for PDF/HTML/DocBook disseminations |
 |  WP2.7 | (Data2) test release of LAM OWL ontology |
 |  WP2.8 | (Data3) test release of LAM SHACL shapes |
 |  WP2.9 | (Data4) test release of LAM XML & PDF documentation | 
