@@ -1,0 +1,15 @@
+{#
+    this template expects the variables:
+    * class - definition of the class object
+#}
+
+{% import "fragment_utils.html" as fragment %}
+
+<dl>
+    {#    {{ fragment.build_description_item_iri(property, "sh:path", "Formal property", label_key="@label", relative_url=False) }}#}
+    {#    {{ fragment.build_description_item_iri(property, "sh:class", "Range class constraint", label_key="@label", relative_url=False) }}#}
+    {#    {{ fragment.build_formal_constraint_content(property, "lam:hasAnnotationConfiguration", "Annotation configuration") }}#}
+    {{ fragment.build_description_item_editorial(class, "skos:prefLabel", "Keywords" ,False) }}
+    {{ fragment.build_formal_constraint_content(class, "lam:classifyWith", "Defining configuration") }}
+    {{ fragment.build_formal_constraint_content(class, "lam:hasPropertyConfiguration", "Property configuration") }}
+</dl>

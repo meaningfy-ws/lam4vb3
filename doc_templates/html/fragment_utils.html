@@ -89,7 +89,7 @@
             </dd>
         {% elif resource[constraint_key] is iterable and
                     resource[constraint_key] is not string %}
-            {% for annotation_configuration in resource[constraint_key] %}
+            {% for annotation_configuration in resource[constraint_key]|sort(attribute='sh:name') %}
                 <dd>
                     {{ build_property_configuration(annotation_configuration) }}
                 </dd>
@@ -147,8 +147,12 @@
         {{ property_configuration["sh:class"]["@label"] }} </a>
     {% endif %}
     {% if property_configuration["sh:value"] %}
-        value <a href="{{ property_configuration["sh:value"]["iri"] }}">
-        {{ property_configuration["sh:value"]["@label"] }} </a>
+        {% if property_configuration["sh:value"] is string %}
+            value {{ property_configuration["sh:value"] }}
+        {% else %}
+            value <a href="{{ property_configuration["sh:value"]["iri"] }}">
+            {{ property_configuration["sh:value"]["@label"] }} </a>
+        {% endif %}
     {% endif %}
 {%- endmacro %}
 

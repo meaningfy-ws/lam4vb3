@@ -15,7 +15,8 @@ logging.getLogger().setLevel(logging.INFO)
 THIS_PROJECT = pathlib.Path(__file__).resolve().parent.parent
 
 # INPUT_EXCEL_FILE = (THIS_PROJECT / "docs" / "semi-structured" / "LAM_metadata_04_ECO.xlsx").resolve()
-INPUT_EXCEL_FILE = (THIS_PROJECT / "docs" / "semi-structured" / "LAM_metadata_20191120_ECO.xlsx").resolve()
+# INPUT_EXCEL_FILE = (THIS_PROJECT / "docs" / "semi-structured" / "LAM_metadata_20191120_ECO.xlsx").resolve()
+INPUT_EXCEL_FILE = (THIS_PROJECT / "docs" / "semi-structured" / "LAM_metadata_20191124_ECO.xlsx").resolve()
 
 LAM_p = "lam_project_properties_v2.ttl"
 LAM_c = "lam_project_classes_v2.ttl"
