@@ -2,13 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    {#    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">#}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    {#    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.theme.min.css">#}
+
+
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/stylesheets/jquery.tocify.min.css">
 
     <link rel="stylesheet" href="css/pubcss-acm-sig.css">
     <link rel="stylesheet" media="screen" href="css/screen.css">
     <link rel="stylesheet" media="print" href="css/print.css">
+    <link rel="stylesheet" href="css/toc_adjustments.css">
 
     <title>{{ configuration.title if configuration.title else "Document generated with lam2doc" }}</title>
 </head>
@@ -18,7 +24,7 @@
 
 <header class="counter-skip">
     {% block header %}
-        <h1 class="title"> Document specification </h1>
+        <h1 class="title skip-toc"> Document specification </h1>
         <h2>[Specification]</h2>
         <div class="authors col-span">
             <div class="author">
@@ -34,13 +40,13 @@
 
 <main>
     <div class="abstract counter-skip">
-        <h1>Abstract</h1>
+        <h1 class="skip-toc">Abstract</h1>
         <p>This document provides an automatically generated specification of Legal Analysis Methodology.</p>
         <h2>Keywords</h2>
         <em>structure, specification, LAM </em>
     </div>
 
-    <!-- <div id="toc"></div> #} -->
+    <div id="toc"></div>
 
     {% block main %}
         Hello there. Main section here.
@@ -60,20 +66,25 @@
 </footer>
 
 <!-- some more scripts before the end of the document -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+{#<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>#}
 
-<!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
 
 <script>
     $(function () {
         //Calls the tocify method on your HTML div.
-        $("#toc").tocify();
+        $("#toc").tocify({
+            selectors: "h1,h2,h3,h4,h5",
+            theme: "bootstrap",
+            hashGenerator: "pretty",
+            ignoreSelector: ".title, .skip-toc"
+        });
     });
 </script>
--->
+
 
 </body>
 </html>

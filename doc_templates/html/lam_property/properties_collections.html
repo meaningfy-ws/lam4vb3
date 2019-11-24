@@ -4,25 +4,26 @@
 {% macro build_in_collection_property(property, lvl=2) -%}
 
     {% if "rdf:type" in property and property["rdf:type"]["iri"] == "http://www.w3.org/2004/02/skos/core#Concept" %}
-
-        <h{{ lvl }} id="{{ property["iri"] }}">
-            {{ property["skos:prefLabel"] }}<sup title="Property">Prop</sup>
-        </h{{ lvl }}>
-        <section>
-            <p>content</p>
-        </section>
+        {% set property = property %}
+        {% set lvl = lvl %}
+        {% include "lam_property/property.html" with context %}
     {% endif %}
 {%- endmacro %}
 
-{% macro build_collection(collection, lvl=2) -%}
+{% macro build_collection(collection, lvl=1) -%}
     {%- set next_lvl = lvl + 1 %}
     {% if "rdf:type" in collection and collection["rdf:type"]["iri"] == "http://www.w3.org/2004/02/skos/core#Collection" %}
 
         <h{{ lvl }} id="{{ collection["iri"] }}">
-            {{ collection["skos:prefLabel"] }}<sup title="Collection">Col</sup>
+            {{ collection["skos:prefLabel"] }}<sup title="Collection">[Col]</sup>
         </h{{ lvl }}>
+
         <section>
-            <p>lvl {{ lvl }} collection metadata</p>
+            {% with resource= collection %}
+                {# transferting the variable name #}
+                {% include "common/metadata.html" with context %}
+                {% include "common/editorial_content.html" with context %}
+            {% endwith %}
 
             {% if collection["skos:member"] is mapping %}
                 {{ build_in_collection_property(collection["skos:member"], lvl = next_lvl) }}
@@ -41,33 +42,14 @@
 {%- endmacro %}
 
 
-<h1>Property definitions</h1>
+{#<h1>Property definitions</h1>#}
 {#{% for concept in data["skos:Concept"]|sort(attribute='skos:prefLabel') %}#}
 {#    {{ fragment.build_lam_property_concept(concept) }}#}
 {#{% endfor %}#}
 
-<section>
-    {% for collection_lvl1 in data["skos:Collection"]|sort(attribute='euvoc:order') %}
-        {{ build_collection(collection_lvl1) }}
-        {#        <h2> {{ collection_lvl1["skos:prefLabel"] }} </h2>#}
-        {#        <section>#}
-        {#            <p>lvl1: here go, metadata of the collection</p>#}
-        {#            <p>lvl1: here go, property definitions</p>#}
-        {#            <p>lvl1: here go, lvl2 collections</p>#}
-        {##}
-        {#            {% if collection_lvl1["skos:member"] is mapping %}#}
-        {#                <h3>{{ collection_lvl1["skos:member"]["skos:prefLabel"] }}</h3>#}
-        {#                <section>#}
-        {#                    lvl2 text#}
-        {#                </section>#}
-        {#            {% elif collection_lvl1["skos:member"] is iterable and collection_lvl1["skos:member"] is not string %}#}
-        {#                {% for collection_lvl2 in collection_lvl1["skos:member"] %}#}
-        {#                    <h3> {{ collection_lvl2["skos:prefLabel"] }} </h3>#}
-        {#                    <section>#}
-        {#                        lvl2 txt#}
-        {#                    </section>#}
-        {#                {% endfor %}#}
-        {#            {% endif %}#}
-        {#        </section>#}
-    {% endfor %}
-</section>
+{#<section>#}
+{% for collection_lvl1 in data["skos:Collection"]|sort(attribute='euvoc:order') %}
+    {{ build_collection(collection_lvl1) }}
+
+{% endfor %}
+{#</section>#}

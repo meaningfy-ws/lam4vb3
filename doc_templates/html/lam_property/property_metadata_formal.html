@@ -1,0 +1,12 @@
+{#
+    this template expects the variables:
+    * property - definition of the propeorty object
+#}
+
+{% import "fragment_utils.html" as fragment %}
+
+<dl>
+    {{ fragment.build_description_item_iri(property, "sh:path", "Formal property", label_key="@label", relative_url=False) }}
+    {{ fragment.build_description_item_iri(property, "sh:class", "Range class constraint", label_key="@label", relative_url=False) }}
+    {{ fragment.build_formal_constraint_content(property, "lam:hasAnnotationConfiguration", "Annotation configuration") }}
+</dl>

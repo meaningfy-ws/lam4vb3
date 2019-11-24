@@ -1,0 +1,14 @@
+{#
+    this template expects the variables:
+    * resource - definition of the propeorty object
+#}
+
+{% import "fragment_utils.html" as fragment %}
+
+<dl>
+    {{ fragment.build_description_item(resource, "iri", "Resource IRI" ,True) }}
+    {{ fragment.build_description_item(resource, "dct:created", "Created" ,False) }}
+    {{ fragment.build_description_item(resource, "dct:identifier", "Identifier" ,False) }}
+    {{ fragment.build_description_item(resource, "skos:notation", "Notation" ,False) }}
+
+</dl>

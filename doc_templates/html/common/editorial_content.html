@@ -1,0 +1,15 @@
+{#
+    this template expects the variables:
+    * resource - definition of the propeorty object
+#}
+
+{% import "fragment_utils.html" as fragment %}
+
+<dl>
+    {{ fragment.build_description_item_editorial(resource, "skos:definition", "Definition" ,False) }}
+    {{ fragment.build_description_item_editorial(resource, "skos:scopeNote", "Scope note" ,False) }}
+    {{ fragment.build_description_item_editorial(resource, "skos:example", "Example" ,True) }}
+    {{ fragment.build_description_item_editorial(resource, "skos:editorialNote", "Editorial note" ,False) }}
+    {{ fragment.build_description_item_editorial(resource, "skos:historyNote", "History note" ,False) }}
+    {{ fragment.build_description_item_editorial(resource, "skos:changeNote", "Change note" ,False) }}
+</dl>

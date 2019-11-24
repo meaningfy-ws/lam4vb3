@@ -1,0 +1,22 @@
+{#
+    this template expects the variable
+    * property - definition of the propeorty object
+    * lvl - level of the H# header
+#}
+
+{% import "fragment_utils.html" as fragment %}
+
+<h{{ lvl }} id="{{ property["iri"] }}">
+    {{ property["skos:prefLabel"] }}<sup title="Property">[Prop]</sup>
+</h{{ lvl }}>
+
+
+<section>
+    {% with resource = property %}
+        {# transferting the variable name #}
+        {% include "common/metadata.html" with context %}
+        {% include "common/editorial_content.html" with context %}
+    {% endwith %}
+
+    {% include "lam_property/property_metadata_formal.html" with context %}
+</section>

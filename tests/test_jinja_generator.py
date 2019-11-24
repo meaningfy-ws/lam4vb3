@@ -9,7 +9,7 @@ import shutil
 import unittest
 from pprint import pprint
 
-from lam2doc import LAM_PROPERTIES_JSON, LAM_CLASSES_HTML, LAM_PROPERTIES_HTML, CELEX_CLASSES_JSON
+from lam2doc import LAM_PROPERTIES_JSON, LAM_CLASSES_HTML, LAM_PROPERTIES_HTML, CELEX_CLASSES_JSON, LAM_CLASSES_JSON
 from lam2doc.document_generator import JinjaGenerator
 from tests import LAM_HELLO_WORLD_HTML
 
@@ -19,7 +19,7 @@ class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         with LAM_PROPERTIES_JSON.open("r") as property_file:
             self.properties_data = json.load(property_file)
-        with LAM_PROPERTIES_JSON.open("r") as property_file:
+        with LAM_CLASSES_JSON.open("r") as property_file:
             self.classes_data = json.load(property_file)
         with CELEX_CLASSES_JSON.open("r") as property_file:
             self.celex_classes_data = json.load(property_file)
