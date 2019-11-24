@@ -55,8 +55,8 @@ The project is split into two phases aiming at providing three kinds of delivera
 |  WP2.7 | (Data2) test release of LAM OWL ontology |
 |  WP2.8 | (Data3) test release of LAM SHACL shapes |
 |  WP2.9 | (Data4) test release of LAM XML & PDF documentation | 
-|        | Example [LAM properties HTML](http://htmlpreview.github.io/?https://github.com/eu-vocabularies/lam4vb3/blob/master/output/lam_properties.html)  |
-|        | Example [LAM classes HTML](http://htmlpreview.github.io/?https://github.com/eu-vocabularies/lam4vb3/blob/master/output/lam_classes.html) |
+|        | Example [LAM properties HTML](http://htmlpreview.github.io/?https://github.com/eu-vocabularies/lam4vb3/blob/master/data/lam_project_properties_v2.html)  |
+|        | Example [LAM classes HTML](http://htmlpreview.github.io/?https://github.com/eu-vocabularies/lam4vb3/blob/master/data/lam_classes.html) |
 
 
 # Running the script Deliverable wp1.3  
