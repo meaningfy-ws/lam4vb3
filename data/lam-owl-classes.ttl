@@ -1,0 +1,1086 @@
+@prefix : <http://publications.europa.eu/resources/authority/lam/> .
+@prefix ann: <http://publications.europa.eu/ontology/annotation#> .
+@prefix at: <http://publications.europa.eu/resource/authority/> .
+@prefix atdt: <http://publications.europa.eu/ontology/datatype#> .
+@prefix ato: <http://publications.europa.eu/ontology/authority/> .
+@prefix cdm: <http://publications.europa.eu/ontology/cdm#> .
+@prefix celexd: <http://publications.europa.eu/resources/authority/celex/> .
+@prefix cobo: <http://publications.europa.eu/resource/authority/corporate-body/> .
+@prefix country: <http://publications.europa.eu/resource/authority/country/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dir-eu-legal-act: <http://publications.europa.eu/resource/authority/dir-eu-legal-act/> .
+@prefix eurovoc: <http://eurovoc.europa.eu/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix evo: <http://eurovoc.europa.eu/schema#> .
+@prefix fd_040: <http://publications.europa.eu/resource/authority/fd_040/> .
+@prefix fd_100: <http://publications.europa.eu/resource/authority/fd_100/> .
+@prefix fd_130: <http://publications.europa.eu/resource/authority/fd_130/> .
+@prefix fd_301: <http://publications.europa.eu/resource/authority/fd_301/> .
+@prefix fd_330: <http://publications.europa.eu/resource/authority/fd_330/> .
+@prefix fd_335: <http://publications.europa.eu/resource/authority/fd_335/> .
+@prefix fd_340: <http://publications.europa.eu/resource/authority/fd_340/> .
+@prefix fd_345: <http://publications.europa.eu/resource/authority/fd_345/> .
+@prefix fd_350: <http://publications.europa.eu/resource/authority/fd_350/> .
+@prefix fd_361: <http://publications.europa.eu/resource/authority/fd_361/> .
+@prefix fd_365: <http://publications.europa.eu/resource/authority/fd_365/> .
+@prefix fd_370: <http://publications.europa.eu/resource/authority/fd_370/> .
+@prefix fd_375: <http://publications.europa.eu/resource/authority/fd_375/> .
+@prefix fd_395: <http://publications.europa.eu/resource/authority/fd_395/> .
+@prefix fd_396: <http://publications.europa.eu/resource/authority/fd_396/> .
+@prefix fd_400: <http://publications.europa.eu/resource/authority/fd_400/> .
+@prefix fd_578: <http://publications.europa.eu/resource/authority/fd_578/> .
+@prefix lam: <http://publications.europa.eu/ontology/lam-skos-ap#> .
+@prefix language: <http://publications.europa.eu/resource/authority/language/> .
+@prefix ns1: <http://publications.europa.eu/resources/authority/celex/3> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix place: <http://publications.europa.eu/resource/authority/place/> .
+@prefix procjur: <http://publications.europa.eu/resource/authority/procjur/> .
+@prefix procresult: <http://publications.europa.eu/resource/authority/procresult/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix resource-type: <http://publications.europa.eu/resource/authority/resource-type/> .
+@prefix role-qualifier: <http://publications.europa.eu/resource/authority/role-qualifier/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix subject-matter: <http://publications.europa.eu/resource/authority/subject-matter/> .
+@prefix treaty: <http://publications.europa.eu/resource/authority/treaty/> .
+@prefix vb: <http://art.uniroma2.it/ontologies/vocbench#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:LAMLegalDocument a owl:Class;
+  rdfs:label "LAM classes";
+  skos:prefLabel "LAM classes" .
+
+:c_001 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment "52013XC0806(02)", "Draft Commission Regulation (EU) No …/… of 5 August 2013 amending Regulation (EC) No 1857/2006 as regards its period of application "@en,
+    """Not containing COM or SEC/SWD number
+Not containing \"Codified version\" in the title
+Those are drafts published in the OJ in the past"""@en,
+    "Projet de règlement (UE) n ° …/… de la Commission du 5 août 2013 modifiant le règlement (CE) n ° 1857/2006 en ce qui concerne sa durée d’application"@fr;
+  rdfs:label "Draft regulation"@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """Not containing COM or SEC/SWD number
+Not containing \"Codified version\" in the title
+Those are drafts published in the OJ in the past"""@en;
+  skos:prefLabel "Draft regulation"@en .
+
+:c_002 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment "31998Y0307(02)", "Draft Commission Directive amending Directive 90/388/EEC in order to ensure that telecommunications networks and cable TV networks owned by a single operator are separate legal entities"@en,
+    """Not containing COM or SEC/SWD number
+Not containing \"Codified version\" in the title
+Those are drafts published in the OJ in the past"""@en,
+    "Projet de directive de la Commission modifiant la directive 90/388/CEE en vue de garantir que les réseaux de télécommunications et les réseaux câblés de télévision appartenant à un seul et même opérateur constituent des entités juridiques distinctes"@fr;
+  rdfs:label "Draft directive"@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """Not containing COM or SEC/SWD number
+Not containing \"Codified version\" in the title
+Those are drafts published in the OJ in the past"""@en;
+  skos:prefLabel "Draft directive"@en .
+
+:c_003 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """31999Y0626(02)
+C1995/291/06
+31997Y1203(01)""", "Draft communication to operators in the banana sector - Subject: Applications for the registration of operators for 2000 "@en,
+    """Not containing COM or SEC/SWD number
+Those are drafts published in the OJ in the past"""@en,
+    "Projet de communication aux opérateurs du secteur de la banane - Objet: demandes d'enregistrement des opérateurs pour l'an 2000"@fr;
+  rdfs:label "Draft communication"@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """Not containing COM or SEC/SWD number
+Those are drafts published in the OJ in the past"""@en;
+  skos:prefLabel "Draft communication"@en .
+
+:c_004 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment "Draft joint declaration by the ACP States and the Community and its Member States "@en,
+    "JOC_1990_044_R_0014_01", """Not containing COM or SWD (SEC) number
+Those are drafts published in the OJ in the past"""@en,
+    "Projet de déclaration conjointe, des États ACP, de la Communauté et de ses États membres "@fr;
+  rdfs:label """Draft declaration
+joint declaration"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """Not containing COM or SWD (SEC) number
+Those are drafts published in the OJ in the past"""@en;
+  skos:prefLabel """Draft declaration
+joint declaration"""@en .
+
+:c_005 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment "52014AE4791: Avis du Comité économique et social européen sur les politiques européennes d'immigration (avis exploratoire) "@fr,
+    "52014AE4791: Opinion of the European Economic and Social Committee on ‘European immigration policies’ (exploratory opinion) "@en,
+    """52016AE0137
+52014AE4791""";
+  rdfs:label """Opinion of the European Economic and Social Committee 
+exploratory opinion"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:prefLabel """Opinion of the European Economic and Social Committee 
+exploratory opinion"""@en .
+
+:c_006 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment "52015AE6292", """52015AE6292:  Avis du Comité économique et social européen sur la «Proposition de directive du Parlement européen et du Conseil concernant certains aspects des contrats de fourniture de contenu numérique»
+[COM(2015) 634 final — 2015/0287 (COD))
+et la
+«Proposition de directive du Parlement européen et du Conseil concernant certains aspects des contrats de ventes en ligne et de toute autre vente à distance de biens»
+[COM(2015) 635 final — 2015/0288 (COD))
+"""@fr,
+    "52015AE6292: Opinion of the European Economic and Social Committee on the ‘Proposal for a directive of the European Parliament and of the Council on certain aspects concerning contracts for the supply of digital content’ (COM(2015) 634 final — 2015/0287 (COD)) and the ‘Proposal for a directive of the European Parliament and of the Council on certain aspects concerning contracts for the online and other distance sales of goods’ (COM(2015) 635 final — 2015/0288 (COD))"@en,
+    """Amendments to the proposal are described in the text - usually under \"Specifric comments\". There is a reference to a specific part of the proposal and description what should be changed.
+
+There is link to procedure + European Parliament - Legisltive obsetvatory.
+
+Example (52015AE6292):
+
+4.2.5.1    Article 1 — Subject matter and scope
+Procurement of certain online and distance services, such as leasing, should not be excluded from the subject matter and scope.
+
+4.2.5.2    Article 2 — Definitions
+1. The concept of commercial guarantee should also cover other forms of compensation, otherwise they will not be deemed to be covered by the rules in Article 15.
+
+2. The concept of a tangible movable good has not been positively defined, which gives rise to different interpretations by Member States.
+(...)
+
+4.2.5.3    Article 3 — Level of harmonisation
+The level of harmonisation should be minimum, with all the necessary consequences for the regime."""@en;
+  rdfs:label """Opinion of the European Economic and Social Committee on the proposal
+(COM number) 
+(JOIN number)
+(COD number)
+
+Opinion proposing amendments"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """Amendments to the proposal are described in the text - usually under \"Specifric comments\". There is a reference to a specific part of the proposal and description what should be changed.
+
+There is link to procedure + European Parliament - Legisltive obsetvatory.
+
+Example (52015AE6292):
+
+4.2.5.1    Article 1 — Subject matter and scope
+Procurement of certain online and distance services, such as leasing, should not be excluded from the subject matter and scope.
+
+4.2.5.2    Article 2 — Definitions
+1. The concept of commercial guarantee should also cover other forms of compensation, otherwise they will not be deemed to be covered by the rules in Article 15.
+
+2. The concept of a tangible movable good has not been positively defined, which gives rise to different interpretations by Member States.
+(...)
+
+4.2.5.3    Article 3 — Level of harmonisation
+The level of harmonisation should be minimum, with all the necessary consequences for the regime."""@en;
+  skos:prefLabel """Opinion of the European Economic and Social Committee on the proposal
+(COM number) 
+(JOIN number)
+(COD number)
+
+Opinion proposing amendments"""@en .
+
+:c_007 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """52015AE1246
+52016AE1268""", "52015AE1246: Avis du Comité économique et social européen sur la «Proposition de règlement du Parlement européen et du Conseil modifiant le règlement (UE) no 1304/2013 du Parlement européen et du Conseil relatif au Fonds social européen afin d’augmenter le montant du préfinancement initial versé aux programmes opérationnels soutenus par l’initiative pour l’emploi des jeunes» [COM(2015) 46 final) "@fr,
+    "52015AE1246: Opinion of the European Economic and Social Committee on the ‘Proposal for a Regulation of the European Parliament and of the Council amending Regulation (EU) No 1304/2013 of the European Parliament and of the Council on the European Social Fund, as regards an increase of the initial pre-financing amount paid to operational programmes supported by the Youth Employment Initiative’ (COM(2015) 46 final) "@en,
+    "Opinion not proposing amendment - in the opinion, no changes of specific parts of proposal are listed"@en;
+  rdfs:label """Opinion of the European Economic and Social Committee on the proposal
+(COM number) 
+(JOIN number)
+(COD number)
+
+Opinion not proposing amendments"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "Opinion not proposing amendment - in the opinion, no changes of specific parts of proposal are listed"@en;
+  skos:prefLabel """Opinion of the European Economic and Social Committee on the proposal
+(COM number) 
+(JOIN number)
+(COD number)
+
+Opinion not proposing amendments"""@en .
+
+:c_008 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment "52014IE1468: Avis du Comité économique et social européen sur le thème «Achever l’Union économique et monétaire — le rôle de la politique fiscale» (avis d’initiative) "@fr,
+    "52014IE1468: Opinion of the European Economic and Social Committee on ‘Completing EMU — The role of taxation policy’ (Own-initiative opinion)"@en,
+    """52015IE1360
+52014IE1468""";
+  rdfs:label """Opinion of the European Economic and Social Committee 
+Own-initiative opinion"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:prefLabel """Opinion of the European Economic and Social Committee 
+Own-initiative opinion"""@en .
+
+:c_009 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """52013IE6537
+52012IE2321""", "52013IE6537: Avis du Comité économique et social européen sur «L'Acte pour le marché unique – Déterminer les mesures manquantes» (supplément d'avis) "@fr,
+    "52013IE6537: Opinion of the European Economic and Social Committee on ‘The Single Market Act — identifying missing measures’ (additional opinion) "@en;
+  rdfs:label """Opinion of the European Economic and Social Committee 
+Additional opinion"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:prefLabel """Opinion of the European Economic and Social Committee 
+Additional opinion"""@en .
+
+:c_010 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """52016AG0004(02)
+52015AG0010(02)""", "52016AG0004(02): Exposé des motifs du Conseil: Position (UE) no 4/2016 du Conseil en première lecture en vue de l'adoption du règlement du Parlement européen et du Conseil relatif aux maladies animales transmissibles et modifiant et abrogeant certains actes dans le domaine de la santé animale («législation sur la santé animale»)"@fr,
+    "52016AG0004(02): Statement of Council’s reasons: Position (EU) No 4/2016 of the Council at first reading with a view to the adoption of a Regulation of the European Parliament and of the Council on transmissible animal diseases and amending and repealing certain acts in the area of animal health (‘Animal Health Law’)"@en;
+  rdfs:label """Statement of Council's reasons
+position at first reading with a view to the adoption of"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:prefLabel """Statement of Council's reasons
+position at first reading with a view to the adoption of"""@en .
+
+:c_011 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """52015PC0487: Proposal for a COUNCIL REGULATION amending Regulation (EU) No 2015/104 as regards certain fishing opportunities
+
+COM/2015/0487 final - 2015/0236 (NLE)"""@en,
+    """52015PC0487: Proposition de RÈGLEMENT DU CONSEIL modifiant le règlement (UE) 2015/104 en ce qui concerne certaines possibilités de pêche
+
+COM/2015/0487 final - 2015/0236 (NLE)"""@fr,
+    """52019PC0038
+52019PC0208""", """Proposal for an amending regulation - \"amending\" must follow directly after type and author of proposed act
+
+Link to procedure + EP - Legislative observatory"""@en;
+  rdfs:label """Proposal for amending regulation
+(COM number)"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """Proposal for an amending regulation - \"amending\" must follow directly after type and author of proposed act
+
+Link to procedure + EP - Legislative observatory"""@en;
+  skos:prefLabel """Proposal for amending regulation
+(COM number)"""@en .
+
+:c_012 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """
+
+
+
+Proposition de RÈGLEMENT DU PARLEMENT EUROPÉEN ET DU CONSEIL concernant certains aspects de la sécurité et de la connectivité du transport ferroviaire eu égard au retrait du Royaume-Uni de Grande-Bretagne et d’Irlande du Nord de l’Union
+
+COM/2019/88 final
+"""@fr,
+    """
+
+Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL on certain aspects of railway safety and connectivity with regard to the withdrawal of the United Kingdom of Great Britain and Northern Ireland from the Union
+
+COM/2019/88 final
+"""@en,
+    "52019PC0088", """Proposal for not amending regulation
+
+Link to procedure + EP - Legislative observatory"""@en;
+  rdfs:label """Proposal for regulation
+(COM number)"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """Proposal for not amending regulation
+
+Link to procedure + EP - Legislative observatory"""@en;
+  skos:prefLabel """Proposal for regulation
+(COM number)"""@en .
+
+:c_013 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment "52015PC0049", """Amended proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL laying down Union procedures in the field of the common commercial policy in order to ensure the exercise of the Union’s rights under international trade rules, in particular those established under the auspices of the World Trade Organization (codification)
+
+/* COM/2015/049 final - 2014/0174 (COD) */"""@en,
+    """Link to procedure + EP - Legislative observatory
+
+There might be  a proposal with 2+ subsequent amendments:
+52016PC0408 - 52015PC0350 - 52014PC0343 - how EV should be treated? There are 3 pending proposals, but only 1 act will be adopted - statistics"""@en,
+    """Proposition modifiée de RÈGLEMENT DU PARLEMENT EUROPÉEN ET DU CONSEIL arrêtant des procédures de l’Union en matière de politique commerciale commune en vue d'assurer l'exercice par l’Union des droits qui lui sont conférés par les règles du commerce international, en particulier celles instituées sous l'égide de l'Organisation mondiale du commerce (OMC) (texte codifié)
+/* COM/2015/049 final - 2014/0174 (COD) *"""@fr;
+  rdfs:label """Amended proposal for a regulation
+amendment to proposal
+(COM number)"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """Link to procedure + EP - Legislative observatory
+
+There might be  a proposal with 2+ subsequent amendments:
+52016PC0408 - 52015PC0350 - 52014PC0343 - how EV should be treated? There are 3 pending proposals, but only 1 act will be adopted - statistics"""@en;
+  skos:prefLabel """Amended proposal for a regulation
+amendment to proposal
+(COM number)"""@en .
+
+:c_014 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment "52015PC0337", """Link to procedure + EP - Legislative observatory
+
+Proposal for an amending directive - \"amending\" must follow directly after type and author of proposed act"""@en,
+    """Proposal for a DIRECTIVE OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL amending Directive 2003/87/EC to enhance cost-effective emission reductions and low-carbon investments
+
+COM/2015/0337 final - 2015/0148 (COD)"""@en,
+    """Proposition de DIRECTIVE DU PARLEMENT EUROPÉEN ET DU CONSEIL modifiant la directive 2003/87/CE afin de renforcer le rapport coût-efficacité des réductions d’émissions et de favoriser les investissements à faible intensité de carbone
+COM/2015/0337 final - 2015/0148 (COD)"""@fr;
+  rdfs:label """Proposal for an amending directive 
+(COM number)"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """Link to procedure + EP - Legislative observatory
+
+Proposal for an amending directive - \"amending\" must follow directly after type and author of proposed act"""@en;
+  skos:prefLabel """Proposal for an amending directive 
+(COM number)"""@en .
+
+:c_015 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """
+
+Proposal for a DIRECTIVE OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL on port reception facilities for the delivery of waste from ships, repealing Directive 2000/59/EC and amending Directive 2009/16/EC and Directive 2010/65/EU
+
+COM/2018/033 final - 2018/012 (COD)
+"""@en,
+    """
+
+Proposition de DIRECTIVE DU PARLEMENT EUROPÉEN ET DU CONSEIL relative aux installations de réception portuaires pour le dépôt des déchets des navires, abrogeant la directive 2000/59/CE et modifiant la directive 2009/16/CE et la directive 2010/65/UE
+
+COM/2018/033 final - 2018/012 (COD)
+"""@fr,
+    "52013PC0932", """Proposal for not amending directive
+Link to procedure + EP - Legislative observatory"""@en;
+  rdfs:label """Proposal for directive 
+(COM number)"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """Proposal for not amending directive
+Link to procedure + EP - Legislative observatory"""@en;
+  skos:prefLabel """Proposal for directive 
+(COM number)"""@en .
+
+:c_016 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """
+
+Amended proposal for a DIRECTIVE OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL on certain aspects concerning contracts for the online and other distance sales of goods, amending Regulation (EC) No 2006/2004 of the European Parliament and of the Council and Directive 2009/22/EC of the European Parliament and of the Council and repealing Directive 1999/44/EC of the European Parliament and of the Council
+
+COM/2017/0637 final - 2015/0288 (COD)"""@en,
+    """
+
+Proposition modifiée de DIRECTIVE DU PARLEMENT EUROPÉEN ET DU CONSEIL on certain aspects concerning contracts for the online and other distance sales of goods, amending Regulation (EC) No 2006/2004 of the European Parliament and of the Council and Directive 2009/22/EC of the European Parliament and of the Council and repealing Directive 1999/44/EC of the European Parliament and of the Council
+
+COM/2017/0637 final - 2015/0288 (COD)"""@fr,
+    "52017PC0637", "Link to procedure + EP - Legislative observatory "@en;
+  rdfs:label """Amended proposal for a directive 
+amendment to proposal
+(COM number)"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "Link to procedure + EP - Legislative observatory "@en;
+  skos:prefLabel """Amended proposal for a directive 
+amendment to proposal
+(COM number)"""@en .
+
+:c_017 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """
+judicial infomation EU case law - Court of Justice"""@en, "62015CA0058",
+    "Affaire C-580/14: Ordonnance de la Cour (sixième chambre) du 17 décembre 2015 (demande de décision préjudicielle du Verwaltungsgericht Berlin — Allemagne) — Sandra Bitter, en qualité de mandataire liquidateur de Ziegelwerk Höxter GmbH/Bundesrepublik Deutschland (Renvoi préjudiciel — Directive 2003/87/CE — Système d'échange de quotas d'émission de gaz à effet de serre — Amende sur les émissions excédentaires — Proportionnalité»)"@fr,
+    "Case C-58/15: Judgment of the Court (Sixth Chamber) of 23 December 2015 (request for a preliminary ruling from the Bayerischer Verwaltungsgerichtshof — Germany) — Firma Theodor Pfister v Landkreis Main-Spessart (Reference for a preliminary ruling — Agriculture — Health inspections — Official feed and food controls — Financing of controls — Inspection costs relating to slaughter — Regulation (EC) No 882/2004 — Directive 85/73/EEC — Possibility of levying fees covering the actual cost of inspection, exceeding the fees set by that directive) "@en;
+  rdfs:label """Judgment of the Court
+case"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """
+judicial infomation EU case law - Court of Justice"""@en;
+  skos:prefLabel """Judgment of the Court
+case"""@en .
+
+:c_018 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """
+judicial infomation EU case law - Court of Justice"""@en, "62018CB0373",
+    "Affaire C-373/18: Ordonnance de la Cour (première chambre) du 31 janvier 2019 (demande de décision préjudicielle du Tribunal Administrativo e Fiscal de Penafiel — Portugal) — Prosa — Produtos e Serviços Agrícolas/Autoridade Tributária e Aduaneira (Renvoi préjudiciel — Article 99 du règlement de procédure de la Cour — Impôts indirects frappant les rassemblements de capitaux — Directive 69/335/CEE — Articles 4 et 7 — Constitution d’une société de capitaux — Droit de timbre en vigueur au 1er juillet 1984 — Suppression de ce droit de timbre par la suite, puis réintroduction de celui-ci)"@fr,
+    "Case C-373/18: Order of the Court (First Chamber) of 31 January 2019 (request for a preliminary ruling from the Tribunal Administrativo e Fiscal de Penafiel — Portugal) — Prosa — Produtos e Serviços Agrícolas v Autoridade Tributária e Aduaneira (Reference for a preliminary ruling — Article 99 of the Rules of Procedure of the Court of Justice — Indirect taxes on the raising of capital — Directive 69/335/EEC — Articles 4 and 7 — Incorporation of a capital company — Stamp duty in force on 1 July 1984 — Subsequent abolition of that stamp duty, followed by its reintroduction) "@en;
+  rdfs:label """Order of the Court
+case"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """
+judicial infomation EU case law - Court of Justice"""@en;
+  skos:prefLabel """Order of the Court
+case"""@en .
+
+:c_019 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """22016A0311(01)
+22012A0413(01)
+22014A0611(02)
+22014A0412(01)""", "ARRANGEMENT entre l'Union européenne et la Confédération suisse sur les modalités de sa participation au bureau européen d'appui en matière d'asile"@fr,
+    "Arrangement between the European Union and the Swiss Confederation on the modalities of its participation in the European Asylum Support Office"@en,
+    """arrangement between EU and third country
+
+DTS_SUBDOM = INTER_AGREE AND (TI~arrangement between) ORDER BY XC DESC"""@en;
+  rdfs:label """Arrangement
+European Union"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """arrangement between EU and third country
+
+DTS_SUBDOM = INTER_AGREE AND (TI~arrangement between) ORDER BY XC DESC"""@en;
+  skos:prefLabel """Arrangement
+European Union"""@en .
+
+:c_020 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment "52016XC0430(01)", "RETRAIT DE PROPOSITIONS DE LA COMMISSION"@fr, "Withdrawal of Commission Proposals"@en;
+  rdfs:label """Withdrawal
+Commission proposals"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:prefLabel """Withdrawal
+Commission proposals"""@en .
+
+:c_021 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """52015XC0605(05)
+52013XC0823(07)
+52014XC0801(02)""", "Aide d’État — Belgique — Aide d’État SA.37667 (2015/C) (ex 2015/NN) — Système belge de décisions fiscales anticipées relatives aux bénéfices excédentaires — Article 185, paragraphe 2, point b), du Code des impôts sur les revenus 1992 («CIR 92») — Invitation à présenter des observations en application de l'article 108, paragraphe 2, du traité sur le fonctionnement de l'Union européenneTexte présentant de l'intérêt pour l'EEE "@fr,
+    "State aid — Belgium — State aid SA.37667 (2015/C) (ex 2015/NN) — Excess profit tax ruling system in Belgium — Article 185§ 2(b) CIR92 — Invitation to submit comments pursuant to Article 108(2) of the Treaty on the Functioning of the European Union (Text with EEA relevance)"@en;
+  rdfs:label """European Commission
+State aid 
+Invitation to submit comments pursuant to Article 108(2) TFEU
+Announcement"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:prefLabel """European Commission
+State aid 
+Invitation to submit comments pursuant to Article 108(2) TFEU
+Announcement"""@en .
+
+:c_022 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """E2019C0613(01)
+E2019C0523(01)""", "Invitation to submit comments pursuant to Article 1(2) of Part I of Protocol 3 to the Agreement between the EFTA States on the Establishment of a Surveillance Authority and a Court of Justice on state aid issues"@en,
+    "Invitation à présenter des observations en application de l’article 1er, paragraphe 2, de la partie I du protocole 3 de l’accord entre les États de l’AELE relatif à l’institution d’une Autorité de surveillance et d’une Cour de justice, concernant des questions relatives à des aides d’État"@fr,
+    "following the decision to initiate proceedings pursuant to Article 1(2) of Part I of Protocol 3 to the Agreement between the EFTA States on the Establishment of a Surveillance Authority and a Court of Justice"@en;
+  rdfs:label """EFTA Surveillance Authority
+State aid 
+Invitation to submit comments"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "following the decision to initiate proceedings pursuant to Article 1(2) of Part I of Protocol 3 to the Agreement between the EFTA States on the Establishment of a Surveillance Authority and a Court of Justice"@en;
+  skos:prefLabel """EFTA Surveillance Authority
+State aid 
+Invitation to submit comments"""@en .
+
+:c_023 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """Decision No 052/19/COL of 10 July 2019 to open a formal investigation into Farsund Vekst (Case 83835)
+Invitation to submit comments pursuant to Article 1(2) of Part I of Protocol 3 to the Agreement between the EFTA States on the Establishment of a Surveillance Authority and a Court of Justice on state aid issues
+(2019/C 284/04)"""@en,
+    "Décision n° 052/19/COL du 10 juillet 2019 d’ouvrir une procédure formelle d’examen concernant Farsund Vekst (affaire 83835) — Invitation à présenter des observations, en application de l’article 1er, paragraphe 2, de la partie I du protocole 3 de l’accord entre les États de l’AELE relatif à l’institution d’une Autorité de surveillance et d’une Cour de justice, concernant des questions relatives à des aides d’État"@fr,
+    "E2019C0822(01)", "In fact this is just the invitation to submit comments following the decision to initiate proceedings pursuant to Article 1(2) of Part I of Protocol 3 to the Agreement between the EFTA States on the Establishment of a Surveillance Authority and a Court of Justice"@en;
+  rdfs:label """EFTA Surveillance Authority
+State aid 
+Decision to open a formal investigation
+Invitation to submit comments"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "In fact this is just the invitation to submit comments following the decision to initiate proceedings pursuant to Article 1(2) of Part I of Protocol 3 to the Agreement between the EFTA States on the Establishment of a Surveillance Authority and a Court of Justice"@en;
+  skos:prefLabel """EFTA Surveillance Authority
+State aid 
+Decision to open a formal investigation
+Invitation to submit comments"""@en .
+
+:c_024 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment "AU_CODED = EFTA_SUC AND (TI~decision to close formal investigation) ORDER BY XC DESC"@en,
+    "Décision de l'Autorité de surveillance AELE n° 94/17/COL du 31 mai 2017 clôturant la procédure formelle d'examen relative à la dérogation pour les services ambulatoires dans le cadre du régime de cotisations de sécurité sociale différenciées 2014-2020 (Norvège) [2018/595]"@fr,
+    """E2017C0094
+E2017C0081
+E2016C0061""", "EFTA Surveillance Authority Decision No 94/17/COL of 31 May 2017 closing the formal investigation into the exemption rule for ambulant services under the scheme on differentiated social security contributions 2014-2020 (Norway) [2018/595]"@en;
+  rdfs:label """EFTA Surveillance Authority decision
+closing the formal investigation
+State aid"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "AU_CODED = EFTA_SUC AND (TI~decision to close formal investigation) ORDER BY XC DESC"@en;
+  skos:prefLabel """EFTA Surveillance Authority decision
+closing the formal investigation
+State aid"""@en .
+
+:c_025 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment "AU_CODED = EFTA_SUC AND (TI~No state aid within the meaning of) ORDER BY XC DESC"@en,
+    "Absence d’aide d’État au sens de l’article 61, paragraphe 1, de l’accord EEE"@fr,
+    """E2019C0620(01)
+E2019C0606(01)
+E2018C1011(01)""", "No state aid within the meaning of Article 61(1) of the EEA Agreement"@en;
+  rdfs:label """EFTA Surveillance Authority
+No state aid within the meaning of Article 61(1) of the EEA agreement"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "AU_CODED = EFTA_SUC AND (TI~No state aid within the meaning of) ORDER BY XC DESC"@en;
+  skos:prefLabel """EFTA Surveillance Authority
+No state aid within the meaning of Article 61(1) of the EEA agreement"""@en .
+
+:c_026 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment "Communication de l’Autorité de surveillance AELE publiée conformément à l’article 27, paragraphe 4, du chapitre II du protocole 4 de l’accord Surveillance et Cour de justice (Affaire n° 76958 — Color Line/Municipalité de Sandefjord) — Engagements offerts par la municipalité de Sandefjord"@fr,
+    "Communication from the EFTA Surveillance Authority published pursuant to Article 27(4) of Chapter II, Protocol 4 of the Surveillance and Court Agreement (Case No 76958 — Color Line/Sandefjord Municipality) — Commitments offered by Sandefjord Municipality"@en,
+    """E2016C0428(02)
+E2016C0428(01)
+E2008C0515(03)""", "TI~(EFTA Surveillance Authority) AND (\"27(4)\") ORDER BY XC DESC"@en;
+  rdfs:label """Communication
+Notice
+EFTA Surveillance Authority
+Article 27(4)"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "TI~(EFTA Surveillance Authority) AND (\"27(4)\") ORDER BY XC DESC"@en;
+  skos:prefLabel """Communication
+Notice
+EFTA Surveillance Authority
+Article 27(4)"""@en .
+
+:c_027 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """Communication de l’Autorité de surveillance AELE relative aux procédures de transaction engagées en vue de l'adoption de décisions en vertu des articles 7 et 23 du chapitre II du protocole 4 de l’accord Surveillance et Cour de justice dans les affaires d'entente
+
+Communication sur l'immunité d'amendes et la réduction de leur montant dans les affaires portant sur des ententes"""@fr,
+    """E2014C0220(01)
+E2003C0116(03)
+E2009C1203(01)""", """EFTA Surveillance Authority notice on the conduct of settlement procedures in view of the adoption of Decisions pursuant to Article 7 and Article 23 of Chapter II of Protocol 4 to the Surveillance and Court Agreement in cartel cases
+
+Notice on immunity from fines and reduction of fines in cartel cases"""@en,
+    "TI~(EFTA Surveillance Authority CASE cartel) OR (Notice on immunity from fines) ORDER BY XC DESC"@en;
+  rdfs:label """Notice
+EFTA Surveillance Authority 
+Cartel cases"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "TI~(EFTA Surveillance Authority CASE cartel) OR (Notice on immunity from fines) ORDER BY XC DESC"@en;
+  skos:prefLabel """Notice
+EFTA Surveillance Authority 
+Cartel cases"""@en .
+
+:c_028 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """E2012C0621(04)
+E2009C0618(01)
+E2006C0280""", "Résumé de la décision n o 605/08/COL de l'Autorité de surveillance AELE du 17 septembre 2008 relative à une procédure d'application de l'article 53 de l'accord EEE (Affaire 61291 Liechtensteinische Kraftwerke Anstalt et Telecom Liechtenstein AG) (Texte présentant de l'intérêt pour l'EEE )"@fr,
+    "Summary of the EFTA Surveillance Authority Decision No 605/08/COL of 17 September 2008 relating to a proceeding pursuant to Article 53 of the EEA Agreement (Case 61291 Liechtensteinische Kraftwerke Anstalt and Telecom Liechtenstein AG) (Text with EEA relevance )"@en,
+    "TI~Summary of the EFTA Surveillance Authority Decision ORDER BY XC DESC"@en;
+  rdfs:label """Summary of Decision
+EFTA Surveillance Authority"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "TI~Summary of the EFTA Surveillance Authority Decision ORDER BY XC DESC"@en;
+  skos:prefLabel """Summary of Decision
+EFTA Surveillance Authority"""@en .
+
+:c_029 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """Avis d’information de l’Autorité de surveillance AELE fondé sur l’article 17, paragraphe 5, du règlement (CE) n° 1008/2008 du Parlement européen et du Conseil établissant des règles communes pour l’exploitation de services aériens dans la Communauté — Appel d’offres portant sur l’exploitation de services aériens réguliers conformément aux obligations de service public
+
+Avis d’information de l’Autorité de surveillance AELE fondé sur l’article 16, paragraphe 4, du règlement (CE) n° 1008/2008 du Parlement européen et du Conseil établissant des règles communes pour l’exploitation de services aériens dans la Communauté — Suppression d’obligations de service public portant sur des services aériens réguliers"""@fr,
+    """E2019C0207(01)
+E2016C0602(02)
+E2016C0915(01)""", """Information notice from the EFTA Surveillance Authority based on Article 17(5) of Regulation (EC) No 1008/2008 of the European Parliament and of the Council on common rules for the operation of air services in the Community — Invitation to tender in respect of the operation of scheduled air services in accordance with public service obligations
+
+Information notice from the EFTA Surveillance Authority based on Article 16(4) of Regulation (EC) No 1008/2008 of the European Parliament and of the Council on common rules for the operation of air services in the Community — Repeal of public service obligations in respect of scheduled air services"""@en,
+    "TI~Information notice from the EFTA Surveillance Authority ORDER BY XC DESC"@en;
+  rdfs:label """Information notice
+EFTA Surveillance Authority
+Article 17(5) of Regulation (EC) No 1008/2008
+ Article 16(4) of Regulation (EC) No 1008/2008
+ common rules for the operation of air services"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "TI~Information notice from the EFTA Surveillance Authority ORDER BY XC DESC"@en;
+  skos:prefLabel """Information notice
+EFTA Surveillance Authority
+Article 17(5) of Regulation (EC) No 1008/2008
+ Article 16(4) of Regulation (EC) No 1008/2008
+ common rules for the operation of air services"""@en .
+
+:c_030 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """52018XG1214(01)
+52018XG1031(01)
+52018XG0214(01)""", "TI~annual report according to article ORDER BY XC DESC"@en,
+    """Twentieth Annual Report according to Article 8(2) of Council Common Position 2008/944/CFSP defining common rules governing the control of exports of military technology and equipment
+ST/13586/2018/INIT"""@en,
+    """Vingtième rapport annuel établi en application de l’article 8, paragraphe 2, de la position commune 2008/944/PESC du Conseil définissant des règles communes régissant le contrôle des exportations de technologie et d’équipements militaires
+ST/13586/2018/INIT"""@fr;
+  rdfs:label """Council
+Annual Report  
+Article 8(2) of Council Common Position 2008/944/CFSP 
+control of exports of military technology and equipment"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "TI~annual report according to article ORDER BY XC DESC"@en;
+  skos:prefLabel """Council
+Annual Report  
+Article 8(2) of Council Common Position 2008/944/CFSP 
+control of exports of military technology and equipment"""@en .
+
+:c_031 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """52019M9014(01)
+52019M9064(01)
+52019M9076(01)""", "Engagement de procédure (Affaire M.7477 — Halliburton/Baker Hughes) "@fr,
+    "Initiation of proceedings (Case M.7477 — Halliburton/Baker Hughes) (Text with EEA relevance) "@en,
+    "TI~Initiation of proceedings Case M ORDER BY XC DESC"@en;
+  rdfs:label """Initiation of proceedings (Case M)
+
+(Information - merger)"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "TI~Initiation of proceedings Case M ORDER BY XC DESC"@en;
+  skos:prefLabel """Initiation of proceedings (Case M)
+
+(Information - merger)"""@en .
+
+:c_032 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment "32015B1623", "Decision (EU, Euratom) 2015/1623 of the European Parliament of 29 April 2015 on the closure of the accounts of the general budget of the European Union for the financial year 2013, Section III — Commission "@en,
+    "Décision (UE, Euratom) 2015/1623 du Parlement européen du 29 avril 2015 sur la clôture des comptes du budget général de l'Union européenne relatifs à l'exercice 2013, section III — Commission"@fr,
+    "TI~decision closure of the accounts of the general budget ORDER BY XC DESC"@en;
+  rdfs:label """European Parliament
+Decision on the closure of the accounts of the general budget of the European Union
+financial year"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "TI~decision closure of the accounts of the general budget ORDER BY XC DESC"@en;
+  skos:prefLabel """European Parliament
+Decision on the closure of the accounts of the general budget of the European Union
+financial year"""@en .
+
+:c_033 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment "52015AG0016(01): Position (EU) No 16/2015 of the Council at first reading with a view to the adoption of a Directive of the European Parliament and of the Council to approximate the laws of the Member States relating to trade marks Adopted by the Council on 10 November 2015 (Text with EEA relevance)"@en,
+    "52015AG0016(01): Position (EU) No 16/2015 of the Council at first reading with a view to the adoption of a Directive of the European Parliament and of the Council to approximate the laws of the Member States relating to trade marks Adopted by the Council on 10 November 2015 (Text with EEA relevance) "@fr,
+    """52018AG0001(01)
+52017AG0006(01)""", """Celex number contains split (01)
+Link to procedure + EP - Legislative observatory
+
+DN=\"5*AG*(01)\" ORDER BY XC DESC"""@en;
+  rdfs:label """Council
+Position of the Council at first reading with a view to the adoption of"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """Celex number contains split (01)
+Link to procedure + EP - Legislative observatory
+
+DN=\"5*AG*(01)\" ORDER BY XC DESC"""@en;
+  skos:prefLabel """Council
+Position of the Council at first reading with a view to the adoption of"""@en .
+
+:c_034 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """52018AG0001(02)
+52017AG0006(02)""", """Celex number contains split (02)
+Link to procedure + EP - Legislative observatory
+
+
+DN=\"5*AG*(02)\" ORDER BY XC DESC"""@en,
+    "Exposé des motifs du Conseil: Position (UE) no 4/2016 du Conseil en première lecture en vue de l'adoption du règlement du Parlement européen et du Conseil relatif aux maladies animales transmissibles et modifiant et abrogeant certains actes dans le domaine de la santé animale («législation sur la santé animale»)"@fr,
+    "Statement of Council’s reasons: Position (EU) No 4/2016 of the Council at first reading with a view to the adoption of a Regulation of the European Parliament and of the Council on transmissible animal diseases and amending and repealing certain acts in the area of animal health (‘Animal Health Law’)"@en;
+  rdfs:label """Statement of the Council's reasons
+position at first reading with a view to the adoption of"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """Celex number contains split (02)
+Link to procedure + EP - Legislative observatory
+
+
+DN=\"5*AG*(02)\" ORDER BY XC DESC"""@en;
+  skos:prefLabel """Statement of the Council's reasons
+position at first reading with a view to the adoption of"""@en .
+
+:c_035 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """52019XX0603(01)
+52019XX0603(02)
+52019XX0416(01)""", """Link to procedure + EP - Legislative observatory
+
+TI~Summary of the Opinion of the European Data Protection Supervisor ORDER BY XC DESC"""@en,
+    "Résumé de l’avis du contrôleur européen de la protection des données sur la proposition de règlement relatif au système ECRIS-TCN"@fr,
+    "Summary of the Opinion of the European Data Protection Supervisor on the proposal for a Regulation on ECRIS-TCN"@en;
+  rdfs:label """Summary of the opinion 
+European Data Protection Supervisor"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """Link to procedure + EP - Legislative observatory
+
+TI~Summary of the Opinion of the European Data Protection Supervisor ORDER BY XC DESC"""@en;
+  skos:prefLabel """Summary of the opinion 
+European Data Protection Supervisor"""@en .
+
+:c_036 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """E2018G0830(01)
+E2018G0830(02)""", "Medicinal products — List of marketing authorisations granted by the EEA EFTA States for the second half of 2017"@en,
+    "Médicaments — Liste des autorisations de mise sur le marché octroyées par les États de l’AELE membres de l’EEE au cours du second semestre 2017"@fr,
+    "TI~marketing authorisations EEA EFTA AND DTT=G ORDER BY XC DESC"@en;
+  rdfs:label """EEA EFTA
+list
+marketing authorisations
+Medicinal products
+regulation (EC) No 1907/2006 REACH"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "TI~marketing authorisations EEA EFTA AND DTT=G ORDER BY XC DESC"@en;
+  skos:prefLabel """EEA EFTA
+list
+marketing authorisations
+Medicinal products
+regulation (EC) No 1907/2006 REACH"""@en .
+
+:c_037 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """52019XC0621(04)
+52019XC0614(04)""", "Authorisation for State aid pursuant to Articles 107 and 108 of the Treaty on the Functioning of the European Union — Cases where the Commission raises no objections (Text with EEA relevance, except for products falling under Annex I of the Treaty)"@en,
+    "Autorisation des aides d'État dans le cadre des dispositions des articles 107 et 108 du traité sur le fonctionnement de l'Union européenne — Cas à l'égard desquels la Commission ne soulève pas d'objection"@fr,
+    """Not coveirng similar documents related to the agriculture products from TFEU Annex I
+
+TI~Authorisation for State aid pursuant to Articles 107 and 108 except for products falling under Annex I of the Treaty ORDER BY XC DESC"""@en;
+  rdfs:label """European Commission
+Authorisation for State aid pursuant to Articles 107 and 108 TFEU
+Except for products falling under Annex I of the Treaty
+Notice"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """Not coveirng similar documents related to the agriculture products from TFEU Annex I
+
+TI~Authorisation for State aid pursuant to Articles 107 and 108 except for products falling under Annex I of the Treaty ORDER BY XC DESC"""@en;
+  skos:prefLabel """European Commission
+Authorisation for State aid pursuant to Articles 107 and 108 TFEU
+Except for products falling under Annex I of the Treaty
+Notice"""@en .
+
+:c_038 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment "(DTS=4 AND DTT=Y) AND AU_CODED = GOVREP AND TI~resolution ORDER BY XC DESC"@en,
+    """42019Y0607(01)
+42019Y0605(01)
+42018Y1218(01)""", """Resolution of the Council and of the representatives of the Member States meeting within the Council establishing guidelines on the governance of the EU Youth Dialogue — European Union Youth Strategy 2019-2027
+ST/9149/2019/INIT"""@en,
+    """Résolution du Conseil et des représentants des États membres réunis au sein du Conseil établissant des lignes directrices pour la gouvernance du dialogue de l’Union européenne en faveur de la jeunesse — Stratégie de l’Union européenne en faveur de la jeunesse 2019-2027
+ST/9149/2019/INIT"""@fr;
+  rdfs:label """Resolution 
+Council
+representatives of the Member States"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "(DTS=4 AND DTT=Y) AND AU_CODED = GOVREP AND TI~resolution ORDER BY XC DESC"@en;
+  skos:prefLabel """Resolution 
+Council
+representatives of the Member States"""@en .
+
+:c_039 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """52015XG0527(01)
+52016XG0723(01)
+52015XG1217(02)
+52009XG0131(01)""",
+    """Conclusions du Conseil: «Renforcer la coopération intersectorielle afin de résoudre efficacement les difficultés socioéconomiques rencontrées par les jeunes»
+
+Conclusions du Conseil sur la définition d'une «Vision 2020 pour l'Espace européen de la recherche»
+
+Conclusions du Conseil sur l’amélioration des produits alimentaires
+
+Conclusions du Conseil «Enseignements tirés de l’épidémie d’Ebola en Afrique de l’Ouest en ce qui concerne la santé publique — Sécurité sanitaire dans l’Union européenne»"""@fr,
+    """Council conclusions on enhancing cross-sectorial policy cooperation to effectively address socio-economic challenges facing young people 
+
+Conclusions of the Council on the definition of a 2020 vision for the European research area
+
+Council conclusions on food product improvement
+
+Council conclusions on ‘Lessons learned for Public Health from the Ebola outbreak in West Africa — Health Security in the European Union’"""@en,
+    "TI~conclusions council AND AU=CONSIL NOT GOVREP AND DTT=XG ORDER BY XC DESC"@en;
+  rdfs:label """Council
+conclusions"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "TI~conclusions council AND AU=CONSIL NOT GOVREP AND DTT=XG ORDER BY XC DESC"@en;
+  skos:prefLabel """Council
+conclusions"""@en .
+
+:c_040 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """52014XG1223(02)
+52016XG0614(03)""", """Conclusions du Conseil et des représentants des gouvernements des États membres, réunis au sein du Conseil, sur le renforcement de l’intégrité, de la transparence et de la bonne gouvernance dans le cadre des grandes manifestations sportives
+
+Conclusions du Conseil et des représentants des gouvernements des États membres, réunis au sein du Conseil, sur un programme de travail (2015-2018) en faveur de la culture"""@fr,
+    """Conclusions of the Council and of the Representatives of the Governments of the Member States, meeting within the Council, on enhancing integrity, transparency and good governance in major sport events
+
+Conclusions of the Council and of the Representatives of the Governments of the Member States, meeting within the Council, on a Work Plan for Culture (2015-2018) """@en,
+    "TI~conclusions council AND AU=CONSIL AND GOVREP AND DTT=XG ORDER BY XC DESC"@en;
+  rdfs:label """Conclusions 
+Council 
+Representatives of the Governments of the Member States"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "TI~conclusions council AND AU=CONSIL AND GOVREP AND DTT=XG ORDER BY XC DESC"@en;
+  skos:prefLabel """Conclusions 
+Council 
+Representatives of the Governments of the Member States"""@en .
+
+:c_041 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """32019C0725(01)
+32019C0712(01)
+32019C0711(01)""", """Déclaration commune du Parlement, du Conseil et de la Commission relative au règlement (UE) 2019/1243 du Parlement européen et du Conseil du 20 juin 2019 adaptant aux articles 290 et 291 du traité sur le fonctionnement de l’Union européenne une série d’actes juridiques prévoyant le recours à la procédure de réglementation avec contrôle
+ST/9424/2019/ADD/1"""@fr,
+    """Joint Statement by the Parliament, the Council and the Commission relating to Regulation (EU) 2019/1243 of the European Parliament and of the Council of 20 June 2019 adapting a number of legal acts providing for the use of the regulatory procedure with scrutiny to Articles 290 and 291 of the Treaty on the Functioning of the European Union
+ST/9424/2019/ADD/1"""@en,
+    """usually published in OJC, but 32019C0712(01) published in OJL
+FM_CODED = STAT AND (TI~STATEMENT AND AU=CONSIL) ORDER BY XC DESC"""@en;
+  rdfs:label """Statement
+Joint statement
+Parliament
+Council
+Commission"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """usually published in OJC, but 32019C0712(01) published in OJL
+FM_CODED = STAT AND (TI~STATEMENT AND AU=CONSIL) ORDER BY XC DESC"""@en;
+  skos:prefLabel """Statement
+Joint statement
+Parliament
+Council
+Commission"""@en .
+
+:c_042 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """32019C0425(01)
+32018C0807(01)""", "Déclaration de la Commission relative au règlement (UE) 2019/632 du Parlement européen et du Conseil modifiant le règlement (UE) no 952/2013 afin de prolonger l’utilisation transitoire de moyens autres que les procédés informatiques de traitement des données prévus par le code des douanes de l’Union et à la déclaration commune du Parlement européen et du Conseil s’y rapportant"@fr,
+    "Statement of the Commission relating to Regulation (EU) 2019/632 of the European Parliament and the Council amending Regulation (EU) No 952/2013 to prolong the transitional use of means other than electronic data-processing techniques provided for in the Union Customs Code and to the joint statement of the European Parliament and the Council thereon"@en,
+    """usually published in OJC, but 32017C0131(01) published in OJL
+
+(TI~STATEMENT AND AU=COM NOT CONSIL) AND FM_CODED = STAT ORDER BY XC DESC"""@en;
+  rdfs:label """Statement
+Commission"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """usually published in OJC, but 32017C0131(01) published in OJL
+
+(TI~STATEMENT AND AU=COM NOT CONSIL) AND FM_CODED = STAT ORDER BY XC DESC"""@en;
+  skos:prefLabel """Statement
+Commission"""@en .
+
+:c_043 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """32013A1218(02)
+32013A1218(01)
+32013A1217(02)""", "AVIS DU CONSEIL du 10 décembre 2013 concernant le programme de partenariat économique des Pays-Bas"@fr,
+    "Council opinion of 10 December 2013 on the Economic Partnership Programme of the Netherlands "@en,
+    """Last published in 2013
+Link to procedure
+EP - Legislative observatory
+
+There are some cases with Celex 5*XG (should be corrected?):
+
+52002XG0221(01)
+52001XG0410(02)
+52001XG0410(04)
+
+AU_CODED = CONSIL AND (DTS=3 AND DTT=A) ORDER BY XC DESC"""@en;
+  rdfs:label """Opinion
+Council
+European Monetary Union EMU"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """Last published in 2013
+Link to procedure
+EP - Legislative observatory
+
+There are some cases with Celex 5*XG (should be corrected?):
+
+52002XG0221(01)
+52001XG0410(02)
+52001XG0410(04)
+
+AU_CODED = CONSIL AND (DTS=3 AND DTT=A) ORDER BY XC DESC"""@en;
+  skos:prefLabel """Opinion
+Council
+European Monetary Union EMU"""@en .
+
+:c_044 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """32015A1031(01)
+32019A0520(01)
+32018A0911(01)""", "AU_CODED = COM AND (DTS=3 AND DTT=A) ORDER BY XC DESC"@en,
+    "Avis de la Commission du 29 octobre 2015 concernant le projet de rejet d’effluents radioactifs résultant des phases III et IV du déclassement du réacteur A-1 de la centrale nucléaire de Bohunice, en République slovaque"@fr,
+    "Commission Opinion of 29 October 2015 relating to the plan for the disposal of radioactive waste arising from decommissioning stages III and IV of the Bohunice A-1 Nuclear Power Plant, located in the Slovak Republic "@en;
+  rdfs:label """Opinion
+Commission
+nuclear energy
+radioactive waste"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "AU_CODED = COM AND (DTS=3 AND DTT=A) ORDER BY XC DESC"@en;
+  skos:prefLabel """Opinion
+Commission
+nuclear energy
+radioactive waste"""@en .
+
+:c_045 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """52014XC0221(06)
+52014XC0416(07)""", """Information communicated by Member States regarding State aid granted under Commission Regulation (EC) No 1857/2006 on the application of Articles 87 and 88 of the Treaty to State aid to small and medium-sized enterprises active in the production of agricultural products and amending Regulation (EC) No 70/2001
+
+Summary information communicated by Member States regarding State aid granted under Commission Regulation (EC) No 736/2008 on the application of Articles 87 and 88 of the Treaty to State aid to small and medium"""@en,
+    """Renseignements communiqués par les États membres sur les aides d'État accordées conformément au règlement (CE) no 1857/2006 de la Commission concernant l'application des articles 87 et 88 du traité aux aides d'État accordées aux petites et moyennes entreprises actives dans la production de produits agricoles et modifiant le règlement (CE) no 70/2001
+
+Renseignements communiqués par les États membres sur les aides d'État accordées conformément au règlement (CE) no 736/2008 de la Commission concernant l'application des articles 87 et 88 du traité aux aides d'État accordées aux petites et moyennes entreprises actives dans les secteurs de la production, de la transformation et de la commercialisation de produits de la pêche"""@fr,
+    "TI~communicated by Member States regarding State aid granted ORDER BY XC DESC"@en;
+  rdfs:label """Information communicated by Member States 
+Summary information
+State aid granted 
+Regulation (EC) No 1857/2006 
+Regulation (EC) No 736/2008
+Regulation (EC) No 800/2008"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "TI~communicated by Member States regarding State aid granted ORDER BY XC DESC"@en;
+  skos:prefLabel """Information communicated by Member States 
+Summary information
+State aid granted 
+Regulation (EC) No 1857/2006 
+Regulation (EC) No 736/2008
+Regulation (EC) No 800/2008"""@en .
+
+:c_046 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """52016XC1207(04)
+52016XC1012(02)
+52015XC0123(02)""", """Decision to close the formal investigation procedure after withdrawal by Member State — State aid — Greece (Articles 107 to 109 of the Treaty on the Functioning of the European Union) — Commission notice pursuant to Article 108(2) of the TFEU — Withdrawal of notification — State aid SA.35608 14/C (ex 14/N) — Hellenic Post (ELTA) — Compensation for the financing of the universal postal service (Text with EEA relevance )
+C/2016/7689"""@en,
+    """Décision de clore la procédure formelle d’examen après retrait par l’État membre — Aide d’État — Grèce (Articles 107 à 109 du traité sur le fonctionnement de l’Union européenne) — Communication de la Commission conformément à l’article 108, paragraphe 2, du TFUE — Retrait de notification — Aide d’État SA.35608 (14/C) (ex 14/N) — Hellenic Post (ELTA) — Compensation pour le financement du service postal universel (Texte présentant de l'intérêt pour l'EEE )
+C/2016/7689"""@fr,
+    "TI~Decision formal investigation procedure withdrawal State aid AND DTS=5 ORDER BY XC DESC"@en;
+  rdfs:label """Commission notice
+Decision to close the formal investigation procedure 
+State aid
+Articles 107 to 109 of the Treaty on the Functioning of the European Union"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "TI~Decision formal investigation procedure withdrawal State aid AND DTS=5 ORDER BY XC DESC"@en;
+  skos:prefLabel """Commission notice
+Decision to close the formal investigation procedure 
+State aid
+Articles 107 to 109 of the Treaty on the Functioning of the European Union"""@en .
+
+:c_047 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """22016A0420(01)
+22016A0421(01)
+22014A0712(01)""", """ACCORD DE PARTICIPATION
+entre l'Union européenne et la Confédération suisse relatif à la participation de la Confédération suisse à la mission de conseil de l'Union européenne sur la réforme du secteur de la sécurité civile en Ukraine (EUAM UKRAINE)"""@fr,
+    "Participation Agreement between the European Union and the Swiss Confederation on the participation of the Swiss Confederation in the European Union Advisory Mission for Civilian Security Sector Reform in Ukraine (EUAM Ukraine)"@en,
+    """Usually between EU and Swiss concerning CFSP
+
+TI~\"participation agreement\" AND DTS_SUBDOM = INTER_AGREE ORDER BY XC DESC"""@en;
+  rdfs:label """Participation agreement
+European Union"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """Usually between EU and Swiss concerning CFSP
+
+TI~\"participation agreement\" AND DTS_SUBDOM = INTER_AGREE ORDER BY XC DESC"""@en;
+  skos:prefLabel """Participation agreement
+European Union"""@en .
+
+:c_048 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """22016A0521(01)
+22019A0508(01)
+22019A0426(01)""", """PROTOCOLE
+modifiant l'accord euro-méditerranéen relatif aux services aériens entre l'Union européenne et ses États membres, d'une part, et le Royaume hachémite de Jordanie, d'autre part, pour tenir compte de l'adhésion à l'Union européenne de la République de Croatie"""@fr,
+    "Protocol amending the Euro-Mediterranean Aviation Agreement between the European Union and its Member States, of the one part, and the Hashemite Kingdom of Jordan, of the other part, to take account of the accession to the European Union of the Republic of Croatia"@en,
+    """Usually amendments to an international agreement (link - amendment)
+
+(TI~Protocol amending) AND DTS_SUBDOM = INTER_AGREE AND DTT=A ORDER BY XC DESC"""@en;
+  rdfs:label """Protocol 
+amending 
+international agreement"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """Usually amendments to an international agreement (link - amendment)
+
+(TI~Protocol amending) AND DTS_SUBDOM = INTER_AGREE AND DTT=A ORDER BY XC DESC"""@en;
+  skos:prefLabel """Protocol 
+amending 
+international agreement"""@en .
+
+:c_049 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """22015A0731(01)
+22018A1220(01)
+22018A0622(02)""", "Additional Protocol to the Trade Agreement between the European Union and its Member States, of the one part, and Colombia and Peru, of the other part, to take account of the accession of the Republic of Croatia to the European Union"@en,
+    "Protocole additionnel à l'accord commercial entre l'Union européenne et ses États membres, d'une part, et la Colombie et le Pérou, d'autre part, en vue de tenir compte de l'adhésion de la République de Croatie à l'Union européenne"@fr,
+    """Usually amendments to an international agreement (link - amendment); or only a new protocol to be added to the agreement (link - addition)
+
+(TI~Protocol additional) AND DTS_SUBDOM = INTER_AGREE AND DTT=A ORDER BY XC DESC"""@en;
+  rdfs:label """Protocol 
+additional
+international agreement"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote """Usually amendments to an international agreement (link - amendment); or only a new protocol to be added to the agreement (link - addition)
+
+(TI~Protocol additional) AND DTS_SUBDOM = INTER_AGREE AND DTT=A ORDER BY XC DESC"""@en;
+  skos:prefLabel """Protocol 
+additional
+international agreement"""@en .
+
+:c_050 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment "(TI~Summary of European Union decisions on marketing authorisations 726/2004) AND DTS_SUBDOM = PRE_ACTS ORDER BY XC DESC"@en,
+    """52019XC0726(02)
+52019XC0628(01)
+52019XC0524(06)
+52019XC0503(05)""", "Résumé des décisions de l’Union européenne relatives aux autorisations de mise sur le marché des médicaments du 1er juillet 2018 au 31 juillet 2018 [Publié en vertu de l’article 13 ou de l’article 38 du règlement (CE) n° 726/2004 du Parlement européen et du Conseil]"@fr,
+    "Summary of European Union decisions on marketing authorisations in respect of medicinal products from 1 July 2018 to 31 July 2018 (Published pursuant to Article 13 or Article 38 of Regulation (EC) No 726/2004 of the European Parliament and of the Council)"@en;
+  rdfs:label """Summary of European Union decisions
+Summary of European Union decision
+Regulation (EC) No 726/2004
+medicinal products"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "(TI~Summary of European Union decisions on marketing authorisations 726/2004) AND DTS_SUBDOM = PRE_ACTS ORDER BY XC DESC"@en;
+  skos:prefLabel """Summary of European Union decisions
+Summary of European Union decision
+Regulation (EC) No 726/2004
+medicinal products"""@en .
+
+:c_051 a owl:Class;
+  dct:created "2019-08-27"^^xsd:date;
+  dct:modified "2019-11-24"^^xsd:date;
+  rdfs:comment """52019XC0726(03)
+52019XC0628(02)
+52019XC0524(07)""", "Résumé des décisions de l’Union européenne relatives aux autorisations de mise sur le marché des médicaments du 1er juin 2019 au 30 juin 2019 (Décisions prises conformément à l’article 34 de la directive 2001/83/CE ou à l’article 38 de la directive 2001/82/CE)"@fr,
+    "Summary of European Union decisions on marketing authorisations in respect of medicinal products from 1 June 2019 to 30 June 2019 (Decisions taken pursuant to Article 34 of Directive 2001/83/EC or Article 38 of Directive 2001/82/EC)"@en,
+    "TI~Summary of European Union decisions on marketing authorisations 2001/83 ORDER BY XC DESC"@en;
+  rdfs:label """Summary of European Union decisions
+Summary of European Union decision
+ Directive 2001/83/EC
+ Directive 2001/82/EC
+medicinal products"""@en;
+  rdfs:subClassOf :LAMLegalDocument;
+  skos:editorialNote "TI~Summary of European Union decisions on marketing authorisations 2001/83 ORDER BY XC DESC"@en;
+  skos:prefLabel """Summary of European Union decisions
+Summary of European Union decision
+ Directive 2001/83/EC
+ Directive 2001/82/EC
+medicinal products"""@en .
