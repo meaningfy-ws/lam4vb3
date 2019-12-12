@@ -50,26 +50,27 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://publications.europa.eu/ontology/lam> a owl:Ontology;
-  dct:contributor _:node1dqi3ksr9x1 .
+  dct:contributor _:node1drsvua48x1 .
 
-_:node1dqi3ksr9x1 a <http://xmlns.com/foaf/0.1/Person>;
+_:node1drsvua48x1 a <http://xmlns.com/foaf/0.1/Person>;
   rdfs:seeAlso <http://costezki.ro#me>;
   <http://xmlns.com/foaf/0.1/homepage> <http://costezki.ro/>;
   <http://xmlns.com/foaf/0.1/name> "Eugeniu Costetchi" .
 
 <http://publications.europa.eu/ontology/lam> dct:license <https://creativecommons.org/licenses/by/4.0/>;
-  dct:modiefied "2019-11-25T21:22:04.417+01:00"^^xsd:dateTime;
+  dct:modiefied "2019-12-12T13:04:39.287+01:00"^^xsd:dateTime;
   rdfs:comment "This ontology is automatically generated from the LAM-SKOS-AP representation of Legal Analisys Methodology"@en;
   rdfs:label "Legal Analisys Ontology"@en;
+  owl:imports <http://purl.org/dc/terms/>, <http://www.w3.org/2004/02/skos/core>;
   skos:prefLabel "Legal Analisys Ontology"@en;
-  <http://xmlns.com/foaf/0.1/maker> _:node1dqi3ksr9x2 .
+  <http://xmlns.com/foaf/0.1/maker> _:node1drsvua48x2 .
 
-_:node1dqi3ksr9x2 rdfs:seeAlso cobo:PUBL;
+_:node1drsvua48x2 rdfs:seeAlso cobo:PUBL;
   <http://xmlns.com/foaf/0.1/homepage> <http://publications.europa.eu>;
   <http://xmlns.com/foaf/0.1/name> "Publications Office of the European Union"@en .
 
 skos:prefLabel a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "Field used in the cataloguing methodology for  classification and search purposes. Keywords are usually extracted from the titles of documents."@en,
     "KEYWORD", "LABEL";
   rdfs:label "Keywords"@en, "Label of the concept"@en;
@@ -79,7 +80,7 @@ skos:prefLabel a owl:DatatypeProperty;
   skos:prefLabel "Keywords"@en, "Label of the concept"@en .
 
 euvoc:order a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "ORDER", "The order among siblings under a common parent"@en;
   rdfs:label "Order"@en;
   skos:definition "The order among siblings under a common parent"@en;
@@ -88,7 +89,7 @@ euvoc:order a owl:DatatypeProperty;
   skos:prefLabel "Order"@en .
 
 skos:member a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "CLASSIFICATION";
   rdfs:label "Classification"@en;
   skos:exactMatch :md_CLASSIFICATION;
@@ -96,7 +97,7 @@ skos:member a owl:ObjectProperty;
   skos:prefLabel "Classification"@en .
 
 skos:notation a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "CODE";
   rdfs:label "Concept code"@en;
   skos:exactMatch :md_CODE;
@@ -104,15 +105,15 @@ skos:notation a owl:DatatypeProperty;
   skos:prefLabel "Concept code"@en .
 
 skos:definition a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
-  rdfs:comment "DEF";
+  dct:modified "2019-12-12"^^xsd:date;
+  rdfs:comment "DESCRIPTION";
   rdfs:label "Definition"@en;
-  skos:exactMatch :md_DEF;
-  skos:notation "DEF";
+  skos:exactMatch :md_DESCRIPTION;
+  skos:notation "DESCRIPTION";
   skos:prefLabel "Definition"@en .
 
 skos:editorialNote a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "COMMENT", "Field used in the cataloguing methodology for  information purposes. It contains different comments related to the specific document type."@en;
   rdfs:label "Comment"@en;
   skos:definition "Field used in the cataloguing methodology for  information purposes. It contains different comments related to the specific document type."@en;
@@ -121,7 +122,7 @@ skos:editorialNote a owl:DatatypeProperty;
   skos:prefLabel "Comment"@en .
 
 skos:example a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "EXAMPLE_CELEX", "EXAMPLE_EN", "EXAMPLE_FR", "Field used in the cataloguing methodology for  information purposes. "@en;
   rdfs:label "Celex example"@en, "EN example"@en, "FR example"@en;
   skos:definition "Field used in the cataloguing methodology for  information purposes. "@en;
@@ -130,7 +131,7 @@ skos:example a owl:DatatypeProperty;
   skos:prefLabel "Celex example"@en, "EN example"@en, "FR example"@en .
 
 cdm:addresses a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """(13/07/2015): New code <LIBELLE CODE=\"CH\">Switzerland</LIBELLE> was created in FD_050. Should be used also in this document: 32015D1056
 
 (03/05/2016): Metadata field Addressee should not cover cases like Communications to the European Parliament and the Council or EP resolutions (to be forwarded to the Council, Commission and national parliaments).
@@ -223,7 +224,7 @@ The field contains descriptors. The values permitted correspond to the codes of 
 """@en .
 
 cdm:resource_legal_adds_to_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "ADDITION", """Addition (JJ)
 This link contains the CELEX number of earlier acts modified by the given act (addition to).
 It is a link from: 
@@ -262,7 +263,7 @@ language_list
 famille"""@en .
 
 cdm:resource_legal_adopts_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "ADOPTION", """Adoption (YD)
 This link contains the CELEX number of proposal adopted by the given act (when proposal becomes the final act).
 It is a link from: 
@@ -293,7 +294,7 @@ reference_to_modifying_location
 start_of_validity"""@en .
 
 cdm:resource_legal_partially_adopts_resource_ a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """32014L0086, 32015L0121 → 52013PC0814
 See 2013/0400/CNS
 
@@ -326,7 +327,7 @@ reference_to_modifying_location
 start_of_validity"""@en .
 
 cdm:question_parliamentary_asked_by_group_parliamentary a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "AF", "The political group is mentioned in the text. "@en, """This field refers to the political affiliation and nationality of the Member of the European Parliament who asked the question.  
 (Political groups represent various political tendencies within the Parliament. Each is represented in the Conference of Presidents by its chairperson, who also has the task of explaining the group’s position on issues under discussion at plenary sessions). """@en;
   rdfs:label "Political group"@en;
@@ -338,7 +339,7 @@ cdm:question_parliamentary_asked_by_group_parliamentary a owl:ObjectProperty;
   skos:scopeNote "The political group is mentioned in the text. "@en .
 
 cdm:resource_legal_amends_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "AMENDMENT", """Amendment (MM)
 This link contains the CELEX number of earlier acts modified by the given act.
 It is a link from: 
@@ -377,7 +378,7 @@ language_list
 famille"""@en .
 
 cdm:resource_resource_legal_proposes_to_amend_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "AMENDMENT_PRO", """Proposal to amend (PM)
 Link from the Commission proposal or draft of an (amending) act to the act that should be subject of amendments. This link contains the CELEX number of the act intended to be amended (displayed under Earlier related instruments - EA)."""@en,
     """When creating this link, the following annotations should be used:
@@ -406,7 +407,7 @@ language_list
 famille"""@en .
 
 cdm:communication_case_new_requests_annulment_of_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "ANNULMENT_REQ", """Annulment request (KL)
 
 This is a link from announcements on EU case law published in the Official Journal (infromation about new case) to the legal act(s) that are requested to be completely annuled by the Court decision."""@en;
@@ -419,7 +420,7 @@ This is a link from announcements on EU case law published in the Official Journ
   skos:prefLabel "Link: Annulment request"@en .
 
 ann:article a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "ANN_ART", "Annotation specifying the article of the treaties or the legal acts constituting the legal basis of the document."@en;
   rdfs:label "Annotation: Article"@en;
   skos:definition "Annotation specifying the article of the treaties or the legal acts constituting the legal basis of the document."@en;
@@ -428,7 +429,7 @@ ann:article a owl:ObjectProperty;
   skos:prefLabel "Annotation: Article"@en .
 
 ann:comment_on_legal_basis a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "2019/06/25: Replacement of fd_370 by at:subdivision should be considered."@en,
     "ANN_CLB", "Annotation specifying the fragments of the treaties or the legal acts constituting the legal basis of the document."@en;
   rdfs:label "Annotation: Comment on legal basis"@en;
@@ -439,7 +440,7 @@ ann:comment_on_legal_basis a owl:ObjectProperty;
   skos:prefLabel "Annotation: Comment on legal basis"@en .
 
 ann:comment_on_date a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "2019/06/25: Differences between ann:comment_on_date and ann:type_of_date are not fully clear"@en,
     "ANN_COD", "Annotation specifying date metadata."@en, """The  translation tables should be used as follows:
 
@@ -469,7 +470,7 @@ RP: fd_350,
 SG: at:place, at:country"""@en .
 
 ann:end_of_validity a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "ANN_EOV", "This annotation indicates end of validity of a specific amendment."@en;
   rdfs:label "Annotation: End of validity"@en;
   skos:definition "This annotation indicates end of validity of a specific amendment."@en;
@@ -478,7 +479,7 @@ ann:end_of_validity a owl:ObjectProperty;
   skos:prefLabel "Annotation: End of validity"@en .
 
 ann:fragment_citing_source a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "2019/06/25: Currently string. Replacement by at:subdivision should be considered."@en,
     "ANN_FCS", "This annotation indicates specific part of this document where a reference to another document or its part is present."@en;
   rdfs:label "Annotation: Fragment citing source"@en;
@@ -489,7 +490,7 @@ ann:fragment_citing_source a owl:ObjectProperty;
   skos:prefLabel "Annotation: Fragment citing source"@en .
 
 ann:fragment_cited_target a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "2019/06/25: Currently string. Replacement by at:subdivision should be considered."@en,
     "ANN_FCT", "This annotation indicates  to which specific part of an document refers this document."@en;
   rdfs:label "Annotation: Fragment citing target"@en;
@@ -500,7 +501,7 @@ ann:fragment_cited_target a owl:ObjectProperty;
   skos:prefLabel "Annotation: Fragment citing target"@en .
 
 ann:language_list a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "2019/06/25: Currently string. Replacement by at:language should be considered."@en,
     "ANN_LVL", "This annotation indicates the language version concerned by a corrigendum (for cdm:resource_legal_corrects_resource_legal)."@en;
   rdfs:label "Annotation: Language list"@en;
@@ -511,7 +512,7 @@ ann:language_list a owl:ObjectProperty;
   skos:prefLabel "Annotation: Language list"@en .
 
 ann:reference_to_modified_location a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "2019/06/25: Currently linked to fd_370. Replacement by at:subdivision should be considered."@en,
     "ANN_MDL", "This annotation indicates which specific part of an act is touched by this act (or its part). "@en;
   rdfs:label "Annotation: Reference to modified location"@en;
@@ -522,7 +523,7 @@ ann:reference_to_modified_location a owl:ObjectProperty;
   skos:prefLabel "Annotation: Reference to modified location"@en .
 
 ann:reference_to_modifying_location a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "2019/06/25: Currently linked to fd_370. Replacement by at:subdivision should be considered."@en,
     "ANN_MSL", "Annotation indicating which specific part of this act touches specific part of  another act, only rarely used in the past."@en;
   rdfs:label "Annotation: Reference to modifying location"@en;
@@ -533,7 +534,7 @@ ann:reference_to_modifying_location a owl:ObjectProperty;
   skos:prefLabel "Annotation: Reference to modifying location"@en .
 
 ann:paragraph a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "ANN_PAR", "Annotation specifying the paragraph of the treaties or the legal acts constituting the legal basis of the document."@en;
   rdfs:label "Annotation: Paragraph"@en;
   skos:definition "Annotation specifying the paragraph of the treaties or the legal acts constituting the legal basis of the document."@en;
@@ -542,7 +543,7 @@ ann:paragraph a owl:ObjectProperty;
   skos:prefLabel "Annotation: Paragraph"@en .
 
 ann:role2 a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "ANN_RL2", "This annotation contains an additional comment to the relation."@en;
   rdfs:label "Annotation: Role2"@en;
   skos:definition "This annotation contains an additional comment to the relation."@en;
@@ -551,7 +552,7 @@ ann:role2 a owl:ObjectProperty;
   skos:prefLabel "Annotation: Role2"@en .
 
 ann:start_of_validity a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "ANN_SOV", """This annotation indicates indicates start of validity of a specific amendment  
 This might be equal to the date of entry into force of the amending act or to the date of its application (if the date of application of the amending act or its relevant part is different as its date of entry into force) or might be directly defined in the amending act."""@en;
   rdfs:label "Annotation: Start of validity"@en;
@@ -562,7 +563,7 @@ This might be equal to the date of entry into force of the amending act or to th
   skos:prefLabel "Annotation: Start of validity"@en .
 
 ann:subparagraph a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "ANN_SUB", "Annotation specifying the subparagraph of the treaties or the legal acts constituting the legal basis of the document."@en;
   rdfs:label "Annotation: Subparagraph"@en;
   skos:definition "Annotation specifying the subparagraph of the treaties or the legal acts constituting the legal basis of the document."@en;
@@ -571,7 +572,7 @@ ann:subparagraph a owl:ObjectProperty;
   skos:prefLabel "Annotation: Subparagraph"@en .
 
 ann:type_of_link_target a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "ANN_TLT", "Indicates the type of metadata field (Amendment to or Earlier related instruments or Related documents)"@en,
     """Values to be used:
 MS (Amendment to)
@@ -588,7 +589,7 @@ EA (Earlier related instruments )
 RD (Related documents)"""@en .
 
 ann:type_of_date a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "2019/06/25: Differences between ann:comment_on_date and ann:type_of_date are not fully clear"@en,
     "ANN_TOD", "Annotation specifying date metadata."@en, """The  translation tables should be used as follows:
 
@@ -606,7 +607,7 @@ IF: fd_335,
 RP: fd_350"""@en .
 
 cdm:communication_case_new_requests_partial_annulment_of_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "ANULMENT_PARTIAL_REQ", """Partial annulment request (DL)
 
 This is a link from announcements on EU case law published in the Official Journal (infromation about new case) to the legal act(s) that are requested to be partially annuled by the Court decision."""@en;
@@ -619,7 +620,7 @@ This is a link from announcements on EU case law published in the Official Journ
   skos:prefLabel "Link: Partial annulment request"@en .
 
 cdm:communication_cjeu_requested_by_agent a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "AP", """Applicant as indicated in the title of sector 6 documents or in the text:
 
 Action brought on 16 August 2019 – Micreos Food Safety v Commission (Case T-568/19)
@@ -650,7 +651,7 @@ This field is not applicable to preliminary rulings.
 Information about applicant or defendant is present also in the alternative title (NOM_USUEL)."""@en .
 
 cdm:resource_legal_defers_application_of_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "32011R0062"@en, "APPLICABILITY_DEF", """Defers application of (TT)
 This link contains the CELEX number of earlier acts modified by the given act (deferring aplication).
 It is a link from: 
@@ -666,7 +667,7 @@ amending act to the amended act (displayed under Amendment to - MS)"""@en;
   skos:scopeNote "32011R0062"@en .
 
 cdm:resource_legal_extends_application_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """32006D0382 (extension of application of 32001D0890 to the Republic of Malta)
 32011D0226 (extension of application of the transitional period)
 Sector 5: 52018XC1219(01)
@@ -709,7 +710,7 @@ language_list
 famille"""@en .
 
 cdm:service_associated a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "04/11/2019: Check cdm properties, which are still used?"@en, "AS", """The fields contain codes corresponding to the acronyms of the Commission DG's.  The source is list of acronyms for the DGs of the Commission (see Inter-institutional Style Guide point 9.6) or corporate body authority table.
 In addition to acronyms (made up of letters, derived mainly from the FR) the old DG numbers were used for the documents of the time before the restructuring. The source o be used are legislative procedures (associated service - cdm:event_legal_associated_with_institution). In some cases, this information can be found in the text. Another source might be Vista. (Vista is an internal system for Commission staff. It offers an overview of the Commission decision-making process. It gives access to non-classified Commission documents and to related procedural information.)"""@en,
     "This field indicates a co-author of a Commission proposal (Commission DG or DGs)."@en,
@@ -740,7 +741,7 @@ In addition to acronyms (made up of letters, derived mainly from the FR) the old
 In addition to acronyms (made up of letters, derived mainly from the FR) the old DG numbers were used for the documents of the time before the restructuring. The source o be used are legislative procedures (associated service - cdm:event_legal_associated_with_institution). In some cases, this information can be found in the text. Another source might be Vista. (Vista is an internal system for Commission staff. It offers an overview of the Commission decision-making process. It gives access to non-classified Commission documents and to related procedural information.)"""@en .
 
 cdm:resource_legal_associates_agreement_international a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "32010D0343 - 22010A0622(01)"@en, "ASSOCIATION", """Related international agreement (RG)
 This is link between Council decision concerning the conclusion (and/or signing and/or provisional application and/or approval and/or signature) of an international agreement and the international agreement concerned"""@en;
   rdfs:label "Link: International agreement"@en;
@@ -752,7 +753,7 @@ This is link between Council decision concerning the conclusion (and/or signing 
   skos:scopeNote "32010D0343 - 22010A0622(01)"@en .
 
 cdm:created_by a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "AU", """April 2015: For parliamentary questions, the author field contained also the name of the Member of the European Parliament in the past. However, because of missing mapping in the CELLAR, those names are currently not displayed on the new EUR-Lex. Possible solutions should be analysed.
 
 <rdf:Description rdf:nodeID=\"A2\">
@@ -821,7 +822,7 @@ When possible (for example acts of the European Commission, European Parliament,
 EU treaties and international agreements: name of the country (countries) signing a treaty or an agreement should be indicated."""@en .
 
 cdm:resource_legal_is_about_concept_directory-code a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """
 In order to maintain consistency, some rules must be respected by the indexation:
 
@@ -1262,7 +1263,7 @@ The minimum number of directory codes that can be assigned to a document is one 
 """@en .
 
 lam:cdm_class a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "CDM_CLASS", "Class or subclass according to CDM."@en;
   rdfs:label "cdm class"@en;
   skos:definition "Class or subclass according to CDM."@en;
@@ -1271,7 +1272,7 @@ lam:cdm_class a owl:ObjectProperty;
   skos:prefLabel "cdm class"@en .
 
 cdm:work_cites_work a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "CI", """Contradictory to the relations grouped under MS, EA, AJ or RD, the passive version of this relation cdm:work_cited_by_work is not available on EUR-Lex (and thus not displayed and not searchable).
 Only acts not mentioned in MS, EA, AJ, RD or LB fields should be inserted to this field. If possible, also number of article/paragraph/subparagraph (or any other subpart) should be mentioned in the annotation.
 Documents cited in annexes are not concerned by this field.
@@ -1298,7 +1299,7 @@ fragment_citing_source indicates specific part of this document where a referenc
 fragment_cited_target indicates to which specific part of an document refers this document """@en .
 
 cdm:resource_legal_comment_internal a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "04/11/2019: Check wheather this field and values MAN are still useful or not."@en,
     "28/02/2017:  New value for ephemeral documents introduced (EPH). "@en, "CM", """Several comments and identification codes for management purposes. 
 
@@ -1342,7 +1343,7 @@ Internal comment is currently not displayed on the EUR-Lex.
 """@en .
 
 cdm:communication_cjeu_communicates_on_case-law a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "COMMUNIC_REQ", """Related EU case law document (JL)
 
 This is a link from announcements on EU case law published in the Official Journal (infromation about new case) to the complete text of CdJ decision (judgment, order, AG opinion)"""@en;
@@ -1355,7 +1356,7 @@ This is a link from announcements on EU case law published in the Official Journ
   skos:prefLabel "Link: Communication on CdJ"@en .
 
 cdm:resource_legal_completes_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """04/11/2019: new EUR-Lex label = Supplement
 or
 Completion / Supplement"""@en,
@@ -1404,7 +1405,7 @@ language_list
 famille"""@en .
 
 cdm:resource_legal_confirms_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "05/11/2019: Rarerly used, to be checked if it is needed"@en, "31988R3283, 31988R1733"@en,
     "CONFIRMATION", """Confirmation (FF)
 
@@ -1420,7 +1421,7 @@ This link contains the CELEX number of earlier acts confirmed by the given act (
   skos:scopeNote "31988R3283, 31988R1733"@en .
 
 cdm:resource_legal_corrects_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "CORRIGENDUM", """Corrigendum (RC)
 This link contains the CELEX number of earlier acts corrected by the given act.
 It is a link from: 
@@ -1461,7 +1462,7 @@ language_list (if there are all linguistic versions concerned by the same corrig
 famille"""@en .
 
 cdm:resource_legal_is_about_subject-matter a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "CT", """Classification of a document by using of Subject matter descriptors must be based on the analysis of the content of the document.
 
 The list of descriptors covers the chapters of the treaties and areas of EU activities. This classification is rather general, it becomes more specific in the areas of agricultural and customs duties.
@@ -1518,7 +1519,7 @@ For directives, use also approximation of laws.
 """@en .
 
 cdm:act_preparatory_date_debate a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "02/05/2015: There are currently two fields duplicating the same information – DB (date of debate) and VO (date of vote). Both were used for different notices in the past. Date of debate is usually not indicated in the OJ, there is only information concerning the session (e.g. 109th plenary session, 3—4 December 2014). Both dates should be present in DB field, but it can currently contain only one date. This should be clarified with the CELLAR."@en,
     "31/10/2019: Clarification concerning differences and use cases for date of vote and date of debate. How are those dates treated in IMMC?"@en,
     "DB", """Date of debate is used to index European Parliament resolutions or of committees (EESC/CoR) opinions. 
@@ -1535,7 +1536,7 @@ The date has format YYYY-MM-DD."""@en;
   skos:scopeNote "The date of debate is indicated in the relevant OJ."@en .
 
 cdm:concept_eurovoc a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "DC", """EuroVoc is a multilingual and multi-disciplinary thesaurus which covers the field of activity of the European Union. It was originally built up specifically for processing the documentary information of the EU institutions, but is largely used outside the EU institutions as well. 
 
 The aim of EuroVoc is to provide the information management and dissemination services with a coherent indexing tool for the effective management of their documentary resources and to enable users to carry out documentary searches using controlled vocabulary.
@@ -2288,7 +2289,7 @@ Within a large indexing team, a centralized checking stage is recommended to be 
 """@en .
 
 cdm:work_date_document a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """2015/12/22:  Decisions of the European Parliament and of the Council on the mobilisation of the European Globalisation Adjustment Fund – e.g. 32015D0738
 Methodology related to those documents will be completed. For the time being, Document date should contain the date from the title + comment \"Date of adoption\".
 
@@ -2551,7 +2552,7 @@ Particular attention should be paid to the following cases:
 • Resolutions of the European Parliament – the date present in the title + annotation Date of vote. """@en .
 
 cdm:resource_legal_derogates_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """32015D0179 → 32000L0029
 
 When creating this link, the following annotations should be used:
@@ -2592,7 +2593,7 @@ language_list
 famille"""@en .
 
 cdm:communication_cjeu_defended_by_agent a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "DF", """Defendant as indicated in the title of sector 6 documents or in the text:
 
 Action brought on 16 August 2019 – Micreos Food Safety v Commission (Case T-568/19)
@@ -2623,7 +2624,7 @@ This field is not applicable to preliminary rulings.
 Information about applicant or defendant is present also in the alternative title (NOM_USUEL)."""@en .
 
 cdm:resource_legal_date_dispatch a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "31/10/2019: How is this date treated in IMMC?"@en, "DH", """Date of dispatch for transmission to one of the institutions.
 
 The date has format YYYY-MM-DD."""@en,
@@ -2671,7 +2672,7 @@ Oral questions: date of the session
 (If such date is not known, insert the same date as in the document date field.)"""@en .
 
 cdm:resource_legal_date_deadline a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "DL", """Date of deadline field contains various intermediate deadlines relating to the document.
 
 The date has format YYYY-MM-DD."""@en,
@@ -2724,7 +2725,7 @@ For such case, an annotation to the deadline must be created, containing value B
 <annot:comment_on_date>{B-19.12|http://publications.europa.eu/resource/authority/fd_335/B-19.12}</annot:comment_on_date>"""@en .
 
 cdm:resource_legal_id_celex a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """CELEX number is composed as follows: 
 
 SyyyyT(T)nnn(n)
@@ -2797,7 +2798,7 @@ Any change of an already attributed CELEX number must be approved by the Publica
 For some specific collections of documents, CELEX number is attributed by the author or institution responsible (e.g. EU case law – documents from the Court of justice of the European Union)."""@en .
 
 lam:celex_class a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "DN_CLASS";
   rdfs:label "reference to CELEX class"@en;
   skos:exactMatch :md_DN_CLASS;
@@ -2805,7 +2806,7 @@ lam:celex_class a owl:ObjectProperty;
   skos:prefLabel "reference to CELEX class"@en .
 
 cdm:stored_by a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "04/11/2019: Check cdm properties"@en, """04/11/2019: cdm properties:
 *cdm:treaty_stored_by_agent
 *cdm:legislation_complementary_stored_by_agent
@@ -2824,7 +2825,7 @@ cdm:stored_by a owl:ObjectProperty;
   skos:scopeNote "Depositary as indicated in the text. It might be state, government, institution or other organisation."@en .
 
 lam:dta a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "DTA", """General rule: year referenced in the document. It is usually based on the natural number of document, on the internal number of document attributed by author, or on the date of publication.
 
 The CELEX year represents:
@@ -2855,7 +2856,7 @@ for sector 7: the year of adoption of corresponding directive,
 for sector 9: the year the question was introduced."""@en .
 
 lam:dtn a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """A sequential number representing the original reference number of the act.
 
 In some instances composed or non-standardised numbers are attributed (e.g. treaties)."""@en,
@@ -2882,7 +2883,7 @@ Numbers in parentheses (called \"splits\" – e.g. (01), (02), …) may be added
 For a corrigendum an “R” is added to the four digits (see CELEX type corrigendum)."""@en .
 
 lam:dts a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "DTS", """Documents in EUR-Lex fall into one of 12 sectors.
 1  Treaties
 2  International agreements
@@ -2917,7 +2918,7 @@ C  Other documents published in the Official Journal C series
 E  EFTA documents"""@en .
 
 lam:dtt a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "DTT", """This one or two letters code refers to a specific type of document as indicated in the CELEX number. 
 
 In some cases, this metadata is related to another metadata field Form (FM), Author (AU) Author. 
@@ -2932,7 +2933,7 @@ Celex type of sector 1 documents refers to a specific treaty. """@en;
   skos:prefLabel "CELEX type"@en .
 
 cdm:resource_legal_number_corrigendum a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "DT_CORR", """If a document is a corrigendum, it is usually indicated in the title of document. Also the text of the document must be analysed.
 
 A corrigendum may affect one or more language versions of a document.
@@ -2951,7 +2952,7 @@ A corrigendum may affect one or more language versions of a document.
 The sequential number of corrigendum must be attributed only after analysing the CELEX numbers of previously published corrigenda related to the same act."""@en .
 
 cdm:case-law_ecli a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "ECLI";
   rdfs:label "European Case-law Identifier (ECLI)"@en;
   skos:exactMatch :md_ECLI;
@@ -2959,7 +2960,7 @@ cdm:case-law_ecli a owl:DatatypeProperty;
   skos:prefLabel "European Case-law Identifier (ECLI)"@en .
 
 cdm:resource_legal_eli a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "ELI";
   rdfs:label "European Legislative Identifier (ELI)"@en;
   skos:exactMatch :md_ELI;
@@ -2967,7 +2968,7 @@ cdm:resource_legal_eli a owl:DatatypeProperty;
   skos:prefLabel "European Legislative Identifier (ELI)"@en .
 
 cdm:resource_legal_date_end-of-validity a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """2015/09/21: Implicitly repealed amending acts – information form the Legal Service
 When a legal act is repealed, it is repealed with all subsequent amendments, even when they are not listed in the repealing act, unless for specific reasons it is expressly provided that certain amending acts are not repealed together with the main act.
 
@@ -3443,7 +3444,7 @@ For different documents from the decision-making process other than proposals, t
 
 cdm:communication_case_new_requests_establishment_of_failure_of_obligation_resource_legal
   a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "FAILURE_REQ", """Request to establish failure to fulfil an obligation (FL)
 
 This is a link from announcements on EU case law published in the Official Journal (infromation about new case) to the legal act(s) establishing the obligation(s) discussed int he case."""@en;
@@ -3456,7 +3457,7 @@ This is a link from announcements on EU case law published in the Official Journ
   skos:prefLabel "Link: Failure of obligation request"@en .
 
 cdm:resource-type a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """April 2015: For the time being, both properties cdm:work_has_resource-type as well as cdm:resource_legal_has_type_act_concept_type_act shall be used because of technical reasons. For the display and search purposes, only cdm:resource_legal_has_type_act_concept_type_act is currently used by the EUR-Lex.
 
 In few months, a complete switch to cdm:work_has_resource-type will be done.
@@ -3479,7 +3480,7 @@ In few months, a complete switch to cdm:work_has_resource-type will be done.
 There should be only one value attributed except of corrigenda where two different values shall be used: (1) corrigendum and (2) the same value as available in the corrected act."""@en .
 
 cdm:agreement_international_has_type_comment_concept_type_comment a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "04/11/2019: Check how this field is used and whether it is needed or not. Check also IMMC."@en,
     "Comments/additional details of international agreements and decisions taken by bodies created by these agreements."@en,
     "IC", """Information about type of agreement, clause, declaration or about body/bodies created by the agreement.
@@ -3500,7 +3501,7 @@ The field is mandatory for agreements and optional for decisions of bodies creat
 The field contains descriptors. The values permitted correspond to the codes of EUR-Lex Translation table FD_301."""@en .
 
 cdm:resource_legal_date_entry-into-force a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """12/03/2019: GIL-GM Provisional application of international agreements (P/12032019/4b)
 The OP raised a question regarding how to proceed when the date of provisional application is earlier than the date of entry into force in the context of international agreements. The participants agreed that the date of effect should be set according to the date of provisional application so the act would be in force. Further date of effect fields (e.g. related to notification of ratification) could be added later on if necessary."""@en,
     "IF", """It is a date when the act enters into force or becomes operative.
@@ -3817,7 +3818,7 @@ Date of effect: 27/06/2012; Takes effect  Date notif.
 Date of notification: 27/06/2012"""@en .
 
 cdm:resource_legal_implements_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """07/11/2019: What to do with this relation?
 We would need a clear link between implementing/delegated acts and basic acts, but how to define which are acts are real implementing cases - see OPXHD-110447"""@en,
     "IMPLEMENTATION", """Implementation (OO)
@@ -3845,7 +3846,7 @@ Relation 32013R0019 →  22012A1221(01) to be created
 All existing relations between basic and implementing acts to be changed"""@en .
 
 cdm:communication_case_new_requests_inapplicability_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "INAPPLICAB_REQ", """Inapplicability request (IL)
 
 This is a link from announcements on EU case law published in the Official Journal (infromation about new case) to the legal act(s) that are requested to be declared as inapplicable by the Court decision."""@en;
@@ -3858,7 +3859,7 @@ This is a link from announcements on EU case law published in the Official Journ
   skos:prefLabel "Link: Inapplicability request"@en .
 
 cdm:resource_legal_incorporates_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "08/11/2019: It seems there was only one particular case - EEA agreement (?)"@en,
     "INCORPORATION", "Incorporation (RE)"@en, """e.g. international agreement incorporating specific EU legislation
 21994A0103(60) → 31989L0552"""@en;
@@ -3872,7 +3873,7 @@ cdm:resource_legal_incorporates_resource_legal a owl:ObjectProperty;
 21994A0103(60) → 31989L0552"""@en .
 
 cdm:resource_resource_legal_influences_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """Create a link from subsequent related document coming from the same procedure to the proposal or the draft.
 To be used for different documents issued during a legislative procedure by EP, CoR, EESC, ECB, European Data Protector, Court of Auditors, European Ombudsman, Council and referring to the Commission proposal."""@en,
     "INFLUENCE", """Part of the same procedure (PE)
@@ -3887,7 +3888,7 @@ Link between documnets from the same procedure and the proposal or draft. This l
 To be used for different documents issued during a legislative procedure by EP, CoR, EESC, ECB, European Data Protector, Court of Auditors, European Ombudsman, Council and referring to the Commission proposal."""@en .
 
 cdm:resource_legal_interpretes_authoritatively_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """31996D0555 → 31971R1408
 32000D0141 → 31971R1408
 
@@ -3919,7 +3920,7 @@ reference_to_modifying_location
 start_of_validity"""@en .
 
 cdm:resource_legal_based_on_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """10/07/2015: Legal basis – documents referring to a protocol attached to the treaties 
 
 22015D0921 (Rules of procedure of the General Court)
@@ -3984,7 +3985,7 @@ EFTA documents should contain LB if it is mentioned in the title or in the text.
 The legal basis for EFTA case law is usually a specific article of EFTA agreement mentioned in the text.  For any act concerned by the EFTA case law and mentioned in the text, CI relation has to be used. """@en .
 
 cdm:resource_legal_uses_originally_language a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "LF", """The languages indicated as authentic in the document.
 
 For document authentic in all official languages, the field remains empty.
@@ -4003,7 +4004,7 @@ For document authentic in all official languages, the field remains empty.
 This field is relevant also for the communications on EU case law and corrigenda."""@en .
 
 cdm:term_parliamentary a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """04/11/2019: Check the values used in this field
 FD_285
 n.a. (#string) However, only codes are exposed (not decoded), so 01, 02, etc. 
@@ -4034,7 +4035,7 @@ This field was introduced during the first legislature, i.e. the first universal
 """@en .
 
 cdm:resource_legal_date_request_opinion a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "31/10/2019: Clarify the description & methodology. How is this date treated in IMMC?"@en,
     """Court of Justice of the European Union documents: the field indicates when the document was lodged with the Registrar of the EU Court of Justice (or EFTA Court).
 
@@ -4064,7 +4065,7 @@ Documents from sector 5 – the date as indicated in the text:
 On 3 July 2013, the Commission decided to consult the European Economic and Social Committee, under Article 304 of the Treaty on the Functioning of the European Union, on (…)"""@en .
 
 cdm:resource_legal_information_miscellaneous a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """Judgment of the Court of 14 December 2000 Parfums Christian Dior SA v TUK Consultancy BV and Assco Gerüste GmbH and Rob van Dijk v Wilhelm Layher GmbH & Co. KG and Layher BV.
 References for a preliminary ruling: Arrondissementsrechtbank 's-Gravenhage and Hoge Raad der Nederlanden - Netherlands.
 Agreement establishing the World Trade Organisation - TRIPs Agreement - Article 177 of the EC Treaty (now Article 234 EC) - Jurisdiction of the Court of Justice - Article 50 of the TRIPs Agreement - Provisional measures - Interpretation - Direct effect.
@@ -4161,7 +4162,7 @@ The CELEX number of the directive or ECSC recommendation concerned by the Member
 """@en .
 
 cdm:work_originates_in_country a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "EU case law: The analysis is provided by CdJ."@en, "NA", "This field is relevant for EU case law and national case law. It is not relevant for announcements on EU case law published in the Official Journal. It  shows the country of origin of the applicant, the defendant or the court referring the case (EU case-law). "@en;
   rdfs:label "Nationality of parties"@en;
   skos:definition "This field is relevant for EU case law and national case law. It is not relevant for announcements on EU case law published in the Official Journal. It  shows the country of origin of the applicant, the defendant or the court referring the case (EU case-law). "@en;
@@ -4171,7 +4172,7 @@ cdm:work_originates_in_country a owl:ObjectProperty;
   skos:scopeNote "EU case law: The analysis is provided by CdJ."@en .
 
 cdm:legislation_secondary_date_notification a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """14/10/2015: Methodology 
 related to the Council decisions or directives which specify to whom they are addressed and indicating the date of effect was updated (Analytical methodology, point 2).
 
@@ -4386,7 +4387,7 @@ Some Council acts (decisions or directives which specify to whom they are addres
 """@en .
 
 cdm:preparatory_act_number_session a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """12/12/2018: Changes in cdm proerties EURLEXNEW-3672 The following cdm properies shall be depricated:
 *cdm:opinion_eesc_number_session
 *cdm:act_other_cor_number_session
@@ -4414,7 +4415,7 @@ cdm:preparatory_act_number_session a owl:ObjectProperty;
   skos:scopeNote "The number of session is usually indicated in the text."@en .
 
 cdm:resource_legal_renders_obsolete_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """Declares as obsolete (CA)
 
 This link contains the CELEX number of earlier acts modified by the given act (obsolete).
@@ -4455,7 +4456,7 @@ language_list
 famille"""@en .
 
 cdm:resource_legal_published_in_official-journal a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """Identifier of the Official Journal in which was the document published.
 
 The OJ identifier contains several parts:
@@ -4475,7 +4476,7 @@ The OJ identifier contains several parts:
   skos:prefLabel "ID of the Official Journal"@en .
 
 cdm:resource_resource_legal_contains_cor_opinion_on_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "08/11/2019: It is still used by AION"@en, """COR Opinion (XR)
 Link from CoR opinion to relevant Commission proposal. This link contains the CELEX number of the Commission proposal (displayed under Earlier related instruments - EA).
 This link was used in the past, it should be replaced by cdm:resource_legal_influences_resource_legal"""@en,
@@ -4490,7 +4491,7 @@ This link was used in the past, it should be replaced by cdm:resource_legal_infl
   skos:prefLabel "Link: COR opinion"@en .
 
 cdm:resource_resource_legal_contains_eesc_opinion_on_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "08/11/2019: It is still used by AION"@en, """EESC Opinion (XC)
 Link from EESC opinion to relevant Commission proposal. This link contains the CELEX number of the Commission proposal (displayed under Earlier related instruments - EA).
 This link was used in the past, it should be replaced by cdm:resource_legal_influences_resource_legal"""@en,
@@ -4505,7 +4506,7 @@ This link was used in the past, it should be replaced by cdm:resource_legal_infl
   skos:prefLabel "LINK: EESC opinion"@en .
 
 cdm:resource_resource_legal_contains_ep_opinion_on_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "08/11/2019: It is still used by AION"@en, """EP Opinion (XP)
 Link from EP resolution to relevant Commission proposal. This link contains the CELEX number of the Commission proposal (displayed under Earlier related instruments - EA).
 This link was used in the past, it should be replaced by cdm:resource_legal_influences_resource_legal"""@en,
@@ -4520,7 +4521,7 @@ This link was used in the past, it should be replaced by cdm:resource_legal_infl
   skos:prefLabel "Link: EP opinion"@en .
 
 cdm:communication_request_opinion_requests_opinion_on_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "OPINION_REQ", """Request for opinion (KL)
 
 This is a link from announcements on EU case law published in the Official Journal (infromation about new case) to the Commission proposals on which the opinion of CdJ is requested"""@en;
@@ -4533,7 +4534,7 @@ This is a link from announcements on EU case law published in the Official Journ
   skos:prefLabel "Link: Opinion request"@en .
 
 skos:broader a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "PARENT";
   rdfs:label "Parent"@en;
   skos:exactMatch :md_PARENT;
@@ -4541,7 +4542,7 @@ skos:broader a owl:ObjectProperty;
   skos:prefLabel "Parent"@en .
 
 cdm:communication_cjeu_has_type_procedure_concept_type_procedure a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "PR", """The type of procedure is usually indicated in the title or in the text (here Action for annulment):
 
 Form of order sought
@@ -4560,7 +4561,7 @@ The applicant claims that the Court should:
 - annul the decisions of the Director General for Health and Food Safety of 17 June 2019, forming a unity, by which the Commission: a) definitively refrained from..."""@en .
 
 cdm:communication_case_new_submits_preliminary_question_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "PRELIMINARY_REQ", """Submits a preliminary question about (QL)
 
 This is a link from announcements on EU case law published in the Official Journal (infromation about new case) to the legal act(s) that are requested to be explained by the Court decision. To be used only for preliminary rulings."""@en;
@@ -4573,7 +4574,7 @@ This is a link from announcements on EU case law published in the Official Journ
   skos:prefLabel "Link: Preliminary question request"@en .
 
 cdm:work_part_of_dossier a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "Link to related procedure (interinstitutional or internal). It contains the identificator of the procedure ."@en,
     "PROC";
   rdfs:label "ID of relevant procedure"@en;
@@ -4583,7 +4584,7 @@ cdm:work_part_of_dossier a owl:DatatypeProperty;
   skos:prefLabel "ID of relevant procedure"@en .
 
 cdm:resource_legal_related_question_to_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "08/11/2019: There are also sector 3 documents linked by this relation (?) What is difference between similar question (HH) and related question (VV)?"@en,
     "QUESTION_RELATED", """Related question (VV)
 This link contains the CELEX number of related parliamentary question earlier published on EUR-Lex (displayed under Amendment to - MS)"""@en;
@@ -4596,7 +4597,7 @@ This link contains the CELEX number of related parliamentary question earlier pu
   skos:prefLabel "Link: Related question"@en .
 
 cdm:resource_legal_tackles_similar_question_as_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "08/11/2019: What is difference between similar question (HH) and related question (VV)?"@en,
     "QUESTION_SIMILAR", """Similar question (HH)
 
@@ -4613,7 +4614,7 @@ Link in sector 9 between similar parliamentary questions (displayed under Amendm
   skos:scopeNote "Used in sector 9 in the past"@en .
 
 cdm:resource_legal_reestablishes_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "07/11/2019: Mainly older acts containing \"re-establishing\" in the title - check DTS=3 AND TI~\"re-establishing\" OR \"reestablishing\" ORDER BY XC DESC"@en,
     "31987R1715 → 31986R3618"@en, "REESTAB", "Re-establishment (RP) - mainly tarif preferences https://eur-lex.europa.eu/eli/reg/2012/978/oj#d1e721-1-1"@en;
   rdfs:label "Link: Reestablishes document"@en;
@@ -4625,7 +4626,7 @@ cdm:resource_legal_reestablishes_resource_legal a owl:ObjectProperty;
   skos:scopeNote "31987R1715 → 31986R3618"@en .
 
 cdm:resource_legal_partially_refers_to_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "Partial referral (QQ)"@en, "REFER_PAR", "Used especially in sector 9 in the past"@en;
   rdfs:label "Link: Partial referral"@en;
   skos:definition "Partial referral (QQ)"@en;
@@ -4635,7 +4636,7 @@ cdm:resource_legal_partially_refers_to_resource_legal a owl:ObjectProperty;
   skos:scopeNote "Used especially in sector 9 in the past"@en .
 
 cdm:work_related_to_work a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """26/6/2017: Changes related to the links between merger control documents (point 5 above)
 Changes related to the Council decision concerning the conclusion (and/or signing and/or provisional application and/or approval and/or signature) of an international agreement (point 4 above) – already in production
 
@@ -4758,7 +4759,7 @@ Such cases should be covered by the following relation (with annotation type_of_
 """@en .
 
 cdm:resource_legal_repertoire a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "04/11/2019: Check basic acts containing \"amending\" at the end of the title; many of them could be indexed with LIE "@en,
     """18/2/2019: Discussion with AION regarding Join practical guide, points 8.3 and 19
 REP: Autonomous act containing \"subsidiary\" amendments (32005R0396 or 31992L0096). At the end of the title, “amending” can be found.
@@ -4831,7 +4832,7 @@ For amending acts containing also autonomous provisions: It is not possible to i
 Corrigenda, ephemeral acts and acts whose only content is the repeal of a basic act should not be indexed, neither with REP nor with LIE. """@en .
 
 cdm:resource_legal_repeals_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "REPEAL", """Repeal (AA)
 This link contains the CELEX number of earlier acts repealed by the given act.
 It is a link from: 
@@ -4864,7 +4865,7 @@ language_list
 famille"""@en .
 
 cdm:resource_legal_implicitly_repeals_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """Implicit repeal (AI)
 This link contains the CELEX number of earlier acts repealed by the given act.
 It is a link from: 
@@ -4905,7 +4906,7 @@ language_list
 famille"""@en .
 
 cdm:resource_legal_replaces_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "04/11/2019: Check how partial replacement is treated"@en, """Acts updating annex (or another part) of previously published act
 32011D0070 → 32001E0931
 
@@ -4947,7 +4948,7 @@ language_list
 famille"""@en .
 
 cdm:reported_by a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """04/11/2019: cdm properties
 *cdm:resolution_legislative_ep_reported_by_person
 *cdm:document_budget_ep_reported_by_person
@@ -4987,7 +4988,7 @@ cdm:reported_by a owl:ObjectProperty;
   skos:scopeNote "The name of the rapporteur-general, rapporteur or Member of the European Parliament (MEP) is usually written in the text. As a general rule only surnames of Members of Parliament are entered in the author field. First names are added to distinguish between two or more entries under the same name."@en .
 
 cdm:communication_case_new_requests_review_of_decision_case-law a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "REVIEW_REQ", """Request to review the judgment (RL)
 
 This is a link from announcements on EU case law published in the Official Journal (infromation about new case) to the earlier CdJ case law decision(s) that are requested to be reviewed by the Court decision."""@en;
@@ -5000,7 +5001,7 @@ This is a link from announcements on EU case law published in the Official Journ
   skos:prefLabel "Link: Review request"@en .
 
 cdm:resource_legal_position_eesc a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "04/11/2019: Check how this field is used and whether it is needed or not. Check also IMMC."@en,
     "Internal reference used for sector 5 documents from EESC."@en, "RI";
   rdfs:label "Internal reference"@en;
@@ -5011,7 +5012,7 @@ cdm:resource_legal_position_eesc a owl:DatatypeProperty;
   skos:prefLabel "Internal reference"@en .
 
 cdm:case-law_is_about_concept_new_case-law a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """EU Case law directory code is a specific directory classification for EU case law. 
 
 There are two different version of the EU case law directory:
@@ -5032,7 +5033,7 @@ There are two different version of the EU case law directory:
   skos:scopeNote "The analysis is provided by the Court of Justice of the European Union."@en .
 
 cdm:question_parliamentary_date_reply a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """Date of the answer of the institution to a parliamentary question.
 
 The date has format YYYY-MM-DD."""@en,
@@ -5051,7 +5052,7 @@ The date has format YYYY-MM-DD."""@en;
 • for other questions, the date of the debate or written reply."""@en .
 
 cdm:service_responsible a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """04/11/2019: Check cdm properties, which are still used?
 
 04/11/2019: Author field also contain name of responsible DG. In such cases RS just duplicates this information. Check how it is treated in IMMC."""@en,
@@ -5099,7 +5100,7 @@ In addition to acronyms (made up of letters, derived mainly from the FR) the old
 The source to be used is legislative procedure (Leading service - cdm:event_legal_responsibility_of_institution; Joint leading service - cdm:event_legal_joint-responsibility_of_institution). In some cases, this information can be found in the text. Another source might be Vista. (Vista is an internal system for Commission staff. It offers an overview of the Commission decision-making process. It gives access to non-classified Commission documents and to related procedural information.)"""@en .
 
 cdm:resource_legal_date_signature a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "31/10/2019: Check if this date shall be also available in legislative acts & budget"@en,
     """Date of signature as indicated in the text. The field might contain multiple data (in case of different dates and places of signature).
 
@@ -5125,7 +5126,7 @@ Date of signature (e.g. treaties, international agreements).
 Not applicable to the legislative acts adopted by ordinary legislative procedure or budget (for the time being - 2018)."""@en .
 
 cdm:resource_legal_suspends_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "32009D0383 → 32004R1683"@en, "SUSPEND", "Suspension (SS) - mainly tarif preferences https://eur-lex.europa.eu/eli/reg/2012/978/oj#d1e721-1-1 or rstrictive measures"@en;
   rdfs:label "Link: Suspends document"@en;
   skos:definition "Suspension (SS) - mainly tarif preferences https://eur-lex.europa.eu/eli/reg/2012/978/oj#d1e721-1-1 or rstrictive measures"@en;
@@ -5135,7 +5136,7 @@ cdm:resource_legal_suspends_resource_legal a owl:ObjectProperty;
   skos:scopeNote "32009D0383 → 32004R1683"@en .
 
 cdm:resource_legal_partially_suspends_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "08/11/2019: Diferences between suspension and partial suspension? Is this really needed?"@en,
     "32013R0298 → 32004R0314"@en, "Partial suspension (SP) - similar as Suspension"@en,
     "SUSPEND_PAR";
@@ -5148,7 +5149,7 @@ cdm:resource_legal_partially_suspends_resource_legal a owl:ObjectProperty;
   skos:scopeNote "32013R0298 → 32004R0314"@en .
 
 cdm:date_transposition a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """31/10/2019: List of relevant subproperties:
 cdm:directive_date_transposition
 cdm:decision_date_transposition
@@ -5187,7 +5188,7 @@ Date of transposition: 30/09/2014; At the latest See Art 2
 """@en .
 
 cdm:resource_legal_based_on_concept_treaty a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """04/11/2019: Property cdm:resource_legal_based_on_treaty was used in the past, it has been depricated and replaced by
 cdm:resource_legal_based_on_concept_treaty"""@en,
     "TT", "The name of the treaty/treaties that form the legal basis is mentioned in the text (visa of legislative act)."@en,
@@ -5202,7 +5203,7 @@ cdm:resource_legal_based_on_concept_treaty"""@en;
   skos:scopeNote "The name of the treaty/treaties that form the legal basis is mentioned in the text (visa of legislative act)."@en .
 
 cdm:resource_legal_extends_validity_of_resource_legal a owl:ObjectProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "04/11/2019: Check 52017XC1223(01) - is this relation relevant?"@en,
     """32015D0332
 sector 5: 52017XC1223(01)
@@ -5244,7 +5245,7 @@ language_list
 famille"""@en .
 
 cdm:resource_legal_date_vote a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment "2015/10/14: Date of vote in sector 2 – resolutions, declarations:  Joint Parliamentary Assembly of the Partnership Agreement concluded between the members of the African, Caribbean and Pacific group of States, of the one part, and the European Community and its Member States, of the other part - Resolution on racism, racial discrimination, xenophobia and related intolerance (ACP-EU 3549/03/fin) 22003P0926(14)"@en,
     "The date of vote is indicated in the document or in OJ."@en, """This field contains the date of vote on decisions or resolutions of the European Parliament or on committees (EESC/CoR) opinions.
 
@@ -5261,7 +5262,7 @@ The date has format YYYY-MM-DD."""@en;
   skos:scopeNote "The date of vote is indicated in the document or in OJ."@en .
 
 cdm:resource_legal_in-force a owl:DatatypeProperty;
-  dct:modified "2019-11-23"^^xsd:date;
+  dct:modified "2019-12-12"^^xsd:date;
   rdfs:comment """04/11/2019: GIL-GM Acts annuled by CdJ decision - VV field - proposal to be prepared
 The legal analysis methodology does not follow up on the annulments of legal acts by judgments of the Court of Justice. Currently the date of end of validity of those acts remains indefinite; therefore, they remain marked as 'in force'.
 

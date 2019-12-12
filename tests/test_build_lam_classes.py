@@ -11,7 +11,7 @@ import pandas as pd
 from rdflib.namespace import SKOS
 
 from lam4vb3 import INPUT_EXCEL_FILE, PREFIX_WS_NAME, LAM_CLASSES_WS_NAME, class_build, \
-    LAM_CLASSES_TTL
+    LAM_CLASSES_TTL, LAM_CLASS_CLASSIFICATION_WS_NAME
 
 
 class MyTestCase(unittest.TestCase):
@@ -19,11 +19,16 @@ class MyTestCase(unittest.TestCase):
         self.lam_df_classes = pd.read_excel(INPUT_EXCEL_FILE, sheet_name=LAM_CLASSES_WS_NAME, header=[0],
                                             na_values=[""],
                                             keep_default_na=False)
+        self.lam_df_class_classification = pd.read_excel(INPUT_EXCEL_FILE,
+                                                         sheet_name=LAM_CLASS_CLASSIFICATION_WS_NAME,
+                                                         header=[0], na_values=[""], keep_default_na=False)
+
         self.prefixes = pd.read_excel(INPUT_EXCEL_FILE, sheet_name=PREFIX_WS_NAME,
                                       header=[0], na_values=[""], keep_default_na=False)
 
     def test_generating_classes(self):
-        graph = class_build.make_class_worksheet(self.lam_df_classes, self.prefixes, LAM_CLASSES_TTL)
+        graph = class_build.make_class_worksheet(self.lam_df_classes, self.lam_df_class_classification, self.prefixes,
+                                                 LAM_CLASSES_TTL)
 
         assert (None, None, SKOS.Collection) in graph, "No collections defined"
         assert (None, None, SKOS.Concept) in graph, "No concepts defined"

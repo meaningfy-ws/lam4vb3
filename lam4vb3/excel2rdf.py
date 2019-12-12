@@ -14,7 +14,7 @@ import logging
 import time
 
 from lam4vb3 import LAM_PROPERTIES_WS_NAME, LAM_CLASSES_WS_NAME, CELEX_CLASSES_WS_NAME, \
-    class_build, CELEX_c, LAM_p, LAM_c, property_build, LAM_PROPERTY_CLASSIFICATION
+    class_build, CELEX_c, LAM_p, LAM_c, property_build, LAM_PROPERTY_CLASSIFICATION_WS_NAME
 
 
 def transform_file(input_file, output_folder):
@@ -47,7 +47,7 @@ def transform_file(input_file, output_folder):
     prefixes = pd.read_excel(input_file, sheet_name=4, header=[0], na_values=[""], keep_default_na=False)
     logging.info(f"Finished reading {len(prefixes)} Prefix definitions")
 
-    lam_df_property_classification = pd.read_excel(input_file, sheet_name=LAM_PROPERTY_CLASSIFICATION, header=[0],
+    lam_df_property_classification = pd.read_excel(input_file, sheet_name=LAM_PROPERTY_CLASSIFICATION_WS_NAME, header=[0],
                                                    na_values=[""], keep_default_na=False)
     logging.info(f"Finished reading {len(lam_df_property_classification)} LAM property classification definitions")
     # transforming and writing the output

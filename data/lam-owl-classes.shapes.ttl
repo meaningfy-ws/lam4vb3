@@ -51,22 +51,22 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://publications.europa.eu/shape/lam> a owl:Ontology;
-  dct:contributor _:node1dqibuus9x1 .
+  dct:contributor _:node1drsvv2m2x1 .
 
-_:node1dqibuus9x1 a <http://xmlns.com/foaf/0.1/Person>;
+_:node1drsvv2m2x1 a <http://xmlns.com/foaf/0.1/Person>;
   rdfs:seeAlso <http://costezki.ro#me>;
   <http://xmlns.com/foaf/0.1/homepage> <http://costezki.ro/>;
   <http://xmlns.com/foaf/0.1/name> "Eugeniu Costetchi" .
 
 <http://publications.europa.eu/shape/lam> dct:license <https://creativecommons.org/licenses/by/4.0/>;
-  dct:modiefied "2019-11-25T23:47:22.778+01:00"^^xsd:dateTime;
+  dct:modiefied "2019-12-12T13:05:04.332+01:00"^^xsd:dateTime;
   rdfs:comment "These SHACL shape definitiosn are automatically generated from the LAM-SKOS-AP representation of Legal Analisys Methodology"@en;
   rdfs:label "Legal Analisys Shapes"@en;
   owl:imports <http://purl.org/dc/terms/>, <http://www.w3.org/2004/02/skos/core>, <http://www.w3.org/ns/shacl>;
   skos:prefLabel "Legal Analisys Shapes"@en;
-  <http://xmlns.com/foaf/0.1/maker> _:node1dqibuus9x2 .
+  <http://xmlns.com/foaf/0.1/maker> _:node1drsvv2m2x2 .
 
-_:node1dqibuus9x2 rdfs:seeAlso cobo:PUBL;
+_:node1drsvv2m2x2 rdfs:seeAlso cobo:PUBL;
   <http://xmlns.com/foaf/0.1/homepage> <http://publications.europa.eu>;
   <http://xmlns.com/foaf/0.1/name> "Publications Office of the European Union"@en .
 

@@ -6,7 +6,7 @@ Email: costezki.eugen@gmail.com
 """
 import rdflib
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, XMLNS, XSD
-from lam4vb3 import lam_utils, build
+from lam4vb3 import lam_utils, build, collection_build
 
 SHACL = rdflib.Namespace("http://www.w3.org/ns/shacl#")
 LAM = rdflib.Namespace("http://publications.europa.eu/ontology/lam-skos-ap#")
@@ -124,13 +124,14 @@ CONSTRAINT_VALUE_COMMENT_COLUMNS = {
     'OPINION_REQ': 'lamd:md_OPINION_REQ',
 }
 
-COLLECTION_TARGET_COLUMNS = ["Classification level 1", "Classification level 2", "Classification level 3"]
+# COLLECTION_TARGET_COLUMNS = ["Classification level 1", "Classification level 2", "Classification level 3"]
+#
+# COLLECTION_COLUMNS = {
+#     "Classification level 1": "skos:prefLabel",
+#     "Classification level 2": "skos:prefLabel",
+#     "Classification level 3": "skos:prefLabel",
+# }
 
-COLLECTION_COLUMNS = {
-    "Classification level 1": "skos:prefLabel",
-    "Classification level 2": "skos:prefLabel",
-    "Classification level 3": "skos:prefLabel",
-}
 
 COLUMN_ANNOTATION_ASSOCIATIONS = [('DD', 'ANN_COD(DD)'), ('EV', 'ANN_COD(EV)'), ('SG', 'ANN_COD(SG)'), ]
 
@@ -292,22 +293,22 @@ def create_concepts(df, graph):
         value_comment_constraint_maker5.make_triples()
 
 
-def create_collections(df, graph):
-    """
-
-    :param df:
-    :param graph:
-    :return:
-    """
-    collection_maker = build.ConceptCollectionMaker(df,
-                                                    column_mapping_dict=COLLECTION_COLUMNS,
-                                                    graph=graph,
-                                                    target_columns=COLLECTION_TARGET_COLUMNS,
-                                                    subject_source="URI",
-                                                    subject_class="skos:Concept",
-                                                    membership_predicate="skos:member",
-                                                    collection_class="skos:Collection", )
-    collection_maker.make_triples()
+# def create_collections(df, graph):
+#     """
+#
+#     :param df:
+#     :param graph:
+#     :return:
+#     """
+#     collection_maker = build.ConceptCollectionMaker(df,
+#                                                     column_mapping_dict=COLLECTION_COLUMNS,
+#                                                     graph=graph,
+#                                                     target_columns=COLLECTION_TARGET_COLUMNS,
+#                                                     subject_source="URI",
+#                                                     subject_class="skos:Concept",
+#                                                     membership_predicate="skos:member",
+#                                                     collection_class="skos:Collection", )
+#     collection_maker.make_triples()
 
 
 def create_celex_concepts(df, graph):
@@ -325,7 +326,7 @@ def create_celex_concepts(df, graph):
                                              column_mapping_dict=LITERAL_CELEX_COLUMNS,
                                              target_columns=list(LITERAL_CELEX_COLUMNS.keys()),
                                              uri_valued_columns=[],
-                                             multi_line_columns=list(LITERAL_CELEX_COLUMNS.keys()),
+                                             multi_line_columns=[],
                                              graph=graph)
     literal_maker.make_triples()
 
@@ -348,8 +349,9 @@ def create_celex_concepts(df, graph):
     value_comment_constraint_maker.make_triples()
 
 
-def make_class_worksheet(lam_df_classes, prefixes, output_file):
+def make_class_worksheet(lam_df_classes, lam_df_class_classification, prefixes, output_file):
     """
+    :param lam_df_class_classification:
     :param lam_df_classes:
     :param prefixes:
     :param output_file:
@@ -357,15 +359,19 @@ def make_class_worksheet(lam_df_classes, prefixes, output_file):
     """
     graph = build.make_graph(prefixes)
     create_cs(graph, cs=LAM_CLASS_CS, cs_label="LAM classes")
+    # create_collections(lam_df_classes, graph)
+    collection_build.create_collections(lam_df_class_classification, graph)
+    collection_build.add_concept_to_collection(lam_df_classes, graph)
+
     create_concepts(lam_df_classes, graph)
-    create_collections(lam_df_classes, graph)
     graph.serialize(str(output_file), format='turtle', )
     return graph
 
 
-def make_celex_class_worksheet(celex_df_classes, prefixes, output_file):
+def make_celex_class_worksheet(celex_df_classes, celex_df_classes_classification, prefixes, output_file):
     """
 
+    :param celex_df_classes_classification:
     :param celex_df_classes:
     :param prefixes:
     :param output_file:
@@ -374,9 +380,16 @@ def make_celex_class_worksheet(celex_df_classes, prefixes, output_file):
     # ugly column type correction, TODO: make more elegant and generic
     celex_df_classes['DTS'] = celex_df_classes['DTS'].apply(str)
     celex_df_classes['CODE'] = celex_df_classes['CODE'].apply(str)
+    # ugly column type correction, TODO: make more elegant and generic
+    celex_df_classes['DTS'] = celex_df_classes['DTS'].apply(str)
+    celex_df_classes_classification['CODE'] = celex_df_classes_classification['CODE'].apply(str)
     #
     graph = build.make_graph(prefixes)
     create_cs(graph, cs=CELEX_CS, cs_label="CELEX classes")
     create_celex_concepts(celex_df_classes, graph)
+
+    collection_build.add_concept_to_collection(celex_df_classes, graph)
+    collection_build.create_collections(celex_df_classes_classification, graph)
+
     graph.serialize(str(output_file), format='turtle', )
     return graph

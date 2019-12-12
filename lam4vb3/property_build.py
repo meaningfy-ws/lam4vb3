@@ -68,7 +68,7 @@ ANNOTATION_COLUMNS = {
 #     "Classification level 3": "skos:prefLabel",
 # }
 
-COLLECTION_COLUMNS = {"CLASSIFICATION": "skos:member", }
+# COLLECTION_COLUMNS = {"CLASSIFICATION": "skos:member", }
 
 LAM_MD_CS = "lamd:DocumentProperty"
 
@@ -139,21 +139,6 @@ def create_concepts(df, graph):
         annotation_maker2.make_triples()
 
 
-def add_concept_to_collection(df, graph):
-    """
-        add the concept to a collection as an inverse relation from the cell to the row subject.
-    :param df:
-    :param graph:
-    :return:
-    """
-    im = build.InverseTripleMaker(df=df,
-                                  column_mapping_dict=COLLECTION_COLUMNS,
-                                  graph=graph,
-                                  target_columns=COLLECTION_COLUMNS.keys(),
-                                  subject_source="URI", )
-    im.make_triples()
-
-
 def hang_annotation_subjects_on_concept(concept_subject_index, annotation_subject_index,
                                         graph, annotation_property="lam:hasAnnotation", inline=True):
     """
@@ -197,8 +182,7 @@ def make_property_worksheet(lam_df_properties, lam_df_property_classification, p
     graph = build.make_graph(prefixes)
     create_cs(graph)
     create_concepts(lam_df_properties, graph)
-    add_concept_to_collection(lam_df_properties, graph)
-    # create_collections(lam_df_properties, graph)
+    collection_build.add_concept_to_collection(lam_df_properties, graph)
     collection_build.create_collections(lam_df_property_classification, graph)
     graph.serialize(str(output_file), format='turtle', )
     return graph

@@ -19,6 +19,7 @@ class MyTestCase(unittest.TestCase):
         self.rdf_graph = rdflib.Graph()
         self.rdf_graph.parse(str(LAM_OWL_TTL), format="ttl")
 
+    @unittest.skip("PyLode is not so interesting for the moment")
     def test_running_pylode(self):
         h = pylode.MakeHtml()
         h.G = self.rdf_graph

@@ -11,7 +11,7 @@ import pandas as pd
 from rdflib.namespace import SKOS
 
 from lam4vb3 import INPUT_EXCEL_FILE, LAM_PROPERTIES_WS_NAME, property_build, PREFIX_WS_NAME, LAM_PROPERTIES_TTL, \
-    LAM_PROPERTY_CLASSIFICATION
+    LAM_PROPERTY_CLASSIFICATION_WS_NAME
 
 
 class MyTestCase(unittest.TestCase):
@@ -19,7 +19,8 @@ class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.lam_df_properties = pd.read_excel(INPUT_EXCEL_FILE, sheet_name=LAM_PROPERTIES_WS_NAME,
                                                header=[0], na_values=[""], keep_default_na=False)
-        self.lam_df_property_classification = pd.read_excel(INPUT_EXCEL_FILE, sheet_name=LAM_PROPERTY_CLASSIFICATION,
+        self.lam_df_property_classification = pd.read_excel(INPUT_EXCEL_FILE,
+                                                            sheet_name=LAM_PROPERTY_CLASSIFICATION_WS_NAME,
                                                             header=[0], na_values=[""], keep_default_na=False)
         self.prefixes = pd.read_excel(INPUT_EXCEL_FILE, sheet_name=PREFIX_WS_NAME,
                                       header=[0], na_values=[""], keep_default_na=False)
