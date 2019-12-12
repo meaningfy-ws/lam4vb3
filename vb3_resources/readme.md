@@ -1,3 +1,7 @@
+# Introduction
+ this file contains definition of custom forms for the LAM project in VB3. The imports specified 
+ below are needed for a clearer user experience.  
+
 # Imports
 
 * LAM-SKOS-AP model
