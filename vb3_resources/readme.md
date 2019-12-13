@@ -13,12 +13,12 @@
 
 Prefix definitions:
 ```turtle
-prefix lam: <http://publications.europa.eu/ontology/lam-skos-ap#> 
-prefix sh:   <http://www.w3.org/ns/shacl#> 
-prefix dct:  <http://purl.org/dc/terms/> 
-prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> 
-prefix cdm:  <http://publications.europa.eu/ontology/cdm#> 
+prefix cdm:  <http://publications.europa.eu/ontology/cdm#>
 prefix ann:  <http://publications.europa.eu/ontology/annotation#> 
+prefix dct:  <http://purl.org/dc/terms/>
+prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> 
+prefix sh:   <http://www.w3.org/ns/shacl#> 
+prefix lam: <http://publications.europa.eu/ontology/lam-skos-ap#> 
 ```
 
 # Custom forms (PEARL definitions)
@@ -52,7 +52,7 @@ rule it.uniroma2.art.semanticturkey.customform.form.annotationConfiguration id:a
 		nameLit literal(coda:langString($nameLang)) userPrompt/name .
 		path uri userPrompt/path .
 		min literal^^xsd:integer userPrompt/min .
-		max litera## Properties annotation l^^xsd:integer userPrompt/max .
+		max literal^^xsd:integer userPrompt/max .
 		class uri userPrompt/class .
 		value uri userPrompt/value .
 	}
