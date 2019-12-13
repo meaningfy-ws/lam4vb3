@@ -124,6 +124,8 @@ CONSTRAINT_VALUE_COMMENT_COLUMNS = {
     'OPINION_REQ': 'lamd:md_OPINION_REQ',
 }
 
+URI_CELEX_COLUMNS = {'PARENT': 'skos:broader', }
+
 # COLLECTION_TARGET_COLUMNS = ["Classification level 1", "Classification level 2", "Classification level 3"]
 #
 # COLLECTION_COLUMNS = {
@@ -329,6 +331,19 @@ def create_celex_concepts(df, graph):
                                              multi_line_columns=[],
                                              graph=graph)
     literal_maker.make_triples()
+
+    # # make uri columns
+    uri_maker = build.ConceptTripleMaker(df,
+                                         subject_source=URI_COLUMN,
+                                         subject_class="skos:Concept",
+                                         subject_in_scheme=LAM_CLASS_CS,
+                                         column_mapping_dict=URI_CELEX_COLUMNS,
+                                         target_columns=list(URI_CELEX_COLUMNS.keys()),
+                                         uri_valued_columns=list(URI_CELEX_COLUMNS.keys()),
+                                         multi_line_columns=[],
+                                         graph=graph)
+
+    uri_maker.make_triples()
 
     # make constraint from values with comments (according to agreed cardinality specs)
     value_comment_constraint_maker = build.ConceptConstraintMaker(df,
