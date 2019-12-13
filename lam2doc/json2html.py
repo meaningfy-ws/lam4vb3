@@ -10,8 +10,8 @@ import pathlib
 import shutil
 import time
 import click
-import doc_templates
 
+from lam2doc import STATIC_FILES
 from lam2doc.document_generator import JinjaGenerator
 
 try:
@@ -33,19 +33,17 @@ def transform(input_file, template):
     """
     in_ = pathlib.Path(input_file).resolve()
     out_ = in_.parent / in_.stem
-    out_.mkdir(exist_ok=True)
     out_file_ = out_ / "main.html"  # (out_ / in_.stem).with_suffix("." + frm)
 
-    # print(list(pkg_resources.path(doc_templates, "html")))
-    print(pkg_resources.read_text("doc_templates/html", 'doc.html'))
+    # add the static files
+    shutil.rmtree(out_)
+    shutil.copytree(STATIC_FILES, out_)
 
     start_time = time.time()
     with in_.open("r") as file_:
         properties_data = json.load(file_)
         gen = JinjaGenerator(main_template_name=template + ".html", data=properties_data)
         gen.serialise(out_file_)
-
-    # TODO: add the static files
 
     logging.info(f"Successfully completed the transformation. The output is written into {out_}")
     logging.info(f"Elapsed {(time.time() - start_time)} seconds")

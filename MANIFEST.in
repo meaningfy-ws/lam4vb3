@@ -1,0 +1,2 @@
+recursive-include doc_templates
+recursive-include lam2doc/doc_templates
