@@ -49,14 +49,14 @@ The project is split into two phases aiming at providing three kinds of delivera
 |  WP2.1 | [(BugFix1)](https://github.com/eu-vocabularies/lam4vb3/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed) Bug fixes in LAM-SKOS-AP (errata) and transformation script (Script1) – based on the new findings |
 |  WP2.2 | (Assistance1) Assistance/training for LAM team to edit data in VocBench3 |
 |  WP2.3 | (Model spec2) Transformation rules from LAM-SKOS-AP data into formal LAM ontology and SHACL shapes |
-|  WP2.4 | [(Script2)](linkedpipes) Script to transform LAM-SKOS-AP data into formal LAM OWL ontology  – the desired LAM ontology |
-|  WP2.5 | [(Script3)](linkedpipes) Script to transform LAM-SKOS-AP data into formal LAM SHACL shapes– the desired shapes for validation purposes |
+|  WP2.4 | [(Script2)](deliverables/wp2-4-script-lam-skos-ap-2-owl) Script to transform LAM-SKOS-AP data into formal LAM OWL ontology  – the desired LAM ontology |
+|  WP2.5 | [(Script3)](deliverables/wp2-5-script-lam-skos-ap-2-shacl) Script to transform LAM-SKOS-AP data into formal LAM SHACL shapes– the desired shapes for validation purposes |
 |  WP2.6 | [(Script4)](lam2doc) Script to transform LAM-SKOS-AP data into a structured document (e.g. DITA) for PDF/HTML/DocBook disseminations |
-|  WP2.7 | [(Data2)](data/lam-owl-proprieties.ttl) test release of LAM OWL ontology |
-|  WP2.8 | [(Data3)](data/lam-owl-classes.shapes.ttl) test release of LAM SHACL shapes |
-|  WP2.9 | (Data4) test release of LAM HTML documentation | 
-|        | Example [LAM properties HTML](http://htmlpreview.github.io/?https://github.com/eu-vocabularies/lam4vb3/blob/master/data/lam_project_properties_v2.html)  |
-|        | Example [LAM classes HTML](http://htmlpreview.github.io/?https://github.com/eu-vocabularies/lam4vb3/blob/master/data/lam_project_classes_v2.html) |
+|  WP2.7 | [(Data2)](deliverables/wp2-7-lam-ontology-data) test release of LAM OWL ontology |
+|  WP2.8 | [(Data3)](deliverables/wp2-8-lam-shapes-data) test release of LAM SHACL shapes |
+|  WP2.9 | [(Data4)](deliverables/wp2-9-lam-documentation-data) test release of LAM HTML documentation | 
+|        | Example [LAM properties HTML](http://htmlpreview.github.io/?https://github.com/eu-vocabularies/lam4vb3/blob/master/deliverables/wp2-9-lam-documentation-data/lam_project_properties_v2/main.html)  |
+|        | Example [LAM classes HTML](http://htmlpreview.github.io/?https://github.com/eu-vocabularies/lam4vb3/blob/master/deliverables/wp2-9-lam-documentation-data/lam_project_classes_v2/main.html) |
 
 
 # Running the script Deliverable wp1.3  
