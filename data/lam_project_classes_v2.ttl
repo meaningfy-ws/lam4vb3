@@ -56,7 +56,7 @@
 
 lamd:clc_AGREE a skos:Collection ;
     euvoc:order "2" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "Agreements between EU (and its Memeber States) and third countries or international organisations; celex sector 2"@en ;
     skos:member lamd:c_019,
         lamd:c_047,
@@ -67,7 +67,7 @@ lamd:clc_AGREE a skos:Collection ;
 
 lamd:clc_CASE a skos:Collection ;
     euvoc:order "5" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "Case law from Court of Justice of the EU and judicial informations published in OJ; celex sector 6"@en ;
     skos:member lamd:c_017,
         lamd:c_018 ;
@@ -76,7 +76,7 @@ lamd:clc_CASE a skos:Collection ;
 
 lamd:clc_CDOC a skos:Collection ;
     euvoc:order "7" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "Documents concerning State aid, mergers and concentrations; notices and informations from EU institutions and bodies or from the member states published mainly in OJ-C; celex sector C or 5"@en ;
     skos:member lamd:clc_COTHER,
         lamd:clc_CRDS,
@@ -87,7 +87,7 @@ lamd:clc_CDOC a skos:Collection ;
 
 lamd:clc_EFTA a skos:Collection ;
     euvoc:order "6" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "EFTA and EEA documents; celex sector E"@en ;
     skos:member lamd:c_022,
         lamd:c_023,
@@ -103,7 +103,7 @@ lamd:clc_EFTA a skos:Collection ;
 
 lamd:clc_LEGAL a skos:Collection ;
     euvoc:order "3" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "Legislative and non-legislative acts; complementary acts; celex sector 3 and 4"@en ;
     skos:member lamd:clc_3OTHER,
         lamd:clc_LEGIS,
@@ -113,7 +113,7 @@ lamd:clc_LEGAL a skos:Collection ;
 
 lamd:clc_PREPDOC a skos:Collection ;
     euvoc:order "4" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "Commission proposals and related documents coming from legislative procedure; drafts"@en ;
     skos:member lamd:clc_5OTHER,
         lamd:clc_COM,
@@ -127,7 +127,7 @@ lamd:clc_PREPDOC a skos:Collection ;
 
 lamd:clc_TREATY a skos:Collection ;
     euvoc:order "1" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "EU treaties; celex sector 1"@en ;
     skos:notation "TREATY" ;
     skos:prefLabel "Treaties"@en .
@@ -166,7 +166,7 @@ lamd:c_001 a skos:Concept ;
         lamd:res_uCGdR7MokEsw9onDTvGPXV,
         lamd:res_w7VLdcQG6tZYVsU6LSBiKA,
         lamd:res_znHnEd28u6BxH442QyjpWD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel "Draft regulation"@en ;
     skos:editorialNote """Not containing COM or SEC/SWD number
 Not containing "Codified version" in the title
@@ -211,7 +211,7 @@ lamd:c_002 a skos:Concept ;
         lamd:res_xhUE5Yb6MVcbpC3fHmBq67,
         lamd:res_ycD7AgDEmYc5dFqxeQ4E6X,
         lamd:res_zYqX4kZeskGQ7GMMj7cUVZ ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel "Draft directive"@en ;
     skos:editorialNote """Not containing COM or SEC/SWD number
 Not containing "Codified version" in the title
@@ -256,7 +256,7 @@ lamd:c_003 a skos:Concept ;
         lamd:res_sBPJczqforeTrDnVuNXGWU,
         lamd:res_tZ5g6UpTpLiBqQJnenV7KG,
         lamd:res_ynmNQ6obQr4936VwykdZ5i ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel "Draft communication"@en ;
     skos:editorialNote """Not containing COM or SEC/SWD number
 Those are drafts published in the OJ in the past"""@en ;
@@ -302,7 +302,7 @@ lamd:c_004 a skos:Concept ;
         lamd:res_skPwGfKPXG6FAuBvPD9ZSY,
         lamd:res_v4GfqmKNQwYHsy5U7NgDK7,
         lamd:res_vTRizRogwHSfLJFo4SG3tE ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Draft declaration
 joint declaration"""@en ;
     skos:editorialNote """Not containing COM or SWD (SEC) number
@@ -343,7 +343,7 @@ lamd:c_005 a skos:Concept ;
         lamd:res_sN9mLDN4ShYKVPcnuzSgK5,
         lamd:res_sSdrp9amVkBYrKbEXjSzTN,
         lamd:res_wsR8eiSho5V75HpwYgYLTR ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Opinion of the European Economic and Social Committee 
 exploratory opinion"""@en ;
     skos:example """52016AE0137
@@ -384,7 +384,7 @@ lamd:c_006 a skos:Concept ;
         lamd:res_uMYubcQfmrZNsEzpCShwke,
         lamd:res_vmwkupxziNwZbUpiMn9yMH,
         lamd:res_zdRcnqaSf3EoW3s7nZfTfD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Opinion of the European Economic and Social Committee on the proposal
 (COM number) 
 (JOIN number)
@@ -453,7 +453,7 @@ lamd:c_007 a skos:Concept ;
         lamd:res_vrd68bj3ifFAovgiV2GRsE,
         lamd:res_wwPk7rciYjgSKR2a9RpV8c,
         lamd:res_xSiWRLcWuSYAKCUSdAWeNj ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Opinion of the European Economic and Social Committee on the proposal
 (COM number) 
 (JOIN number)
@@ -502,7 +502,7 @@ lamd:c_008 a skos:Concept ;
         lamd:res_uV6N7ckFWwdqurZiZSC8SY,
         lamd:res_yXMpvbBoXnBScCW5oqu9E9,
         lamd:res_zuDmGeoJ64N7ZhnDstU6GK ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Opinion of the European Economic and Social Committee 
 Own-initiative opinion"""@en ;
     skos:example """52015IE1360
@@ -542,7 +542,7 @@ lamd:c_009 a skos:Concept ;
         lamd:res_yoiaXVRsmtxgCzinqZx3bN,
         lamd:res_ywAus56fx9sGfjBCqyhEMh,
         lamd:res_zjLQG4in6QHfy4hCNwUdRe ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Opinion of the European Economic and Social Committee 
 Additional opinion """@en ;
     skos:example """52013IE6537
@@ -572,7 +572,7 @@ lamd:c_010 a skos:Concept ;
         lamd:res_pArv22kGSFGpxH8L6zw7bh,
         lamd:res_v6vSu7KUTRzoRnCndL5V5R,
         lamd:res_znEn9caZ6MD3KS2KnwNhrX ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Statement of Council's reasons
 position at first reading with a view to the adoption of
 """@en ;
@@ -609,7 +609,7 @@ lamd:c_011 a skos:Concept ;
         lamd:res_rx4t6hQkqqotbF6x3tqKCE,
         lamd:res_sgqkpYkswCh2brQmPC5dPU,
         lamd:res_srofruxZYWUzPgT8u89VG6 ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Proposal for amending regulation
 (COM number)"""@en ;
     skos:editorialNote """Proposal for an amending regulation - "amending" must follow directly after type and author of proposed act
@@ -651,7 +651,7 @@ lamd:c_012 a skos:Concept ;
         lamd:res_wGPrGv4yM2JxschTZJwimc,
         lamd:res_xbQzT35BXGv2sY5jnS7dBQ,
         lamd:res_zsbEniF3337oke5WwvxUoh ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Proposal for regulation
 (COM number)"""@en ;
     skos:editorialNote """Proposal for not amending regulation
@@ -702,7 +702,7 @@ lamd:c_013 a skos:Concept ;
         lamd:res_rBNXkt9HosXHfuBntpBZke,
         lamd:res_rQQQp7es7y8AsJtLmgdEon,
         lamd:res_xrgE9trB7sTbFd7FuknmPL ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Amended proposal for a regulation
 amendment to proposal
 (COM number)"""@en ;
@@ -746,7 +746,7 @@ lamd:c_014 a skos:Concept ;
         lamd:res_w8Dtv4W6XoD83M2P8zpTzR,
         lamd:res_xdm2a7W8bjUujKJ7AATJpj,
         lamd:res_yukGTZW3gTdheiCVhHun9k ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Proposal for an amending directive 
 (COM number)"""@en ;
     skos:editorialNote """Link to procedure + EP - Legislative observatory
@@ -786,7 +786,7 @@ lamd:c_015 a skos:Concept ;
         lamd:res_xF5YezqdqQcGcFMFBiARz6,
         lamd:res_yFPW4rvNiqgJCeji3WDpFf,
         lamd:res_zNSvLqGBks4XJFesFuYb3d ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Proposal for directive 
 (COM number)"""@en ;
     skos:editorialNote """Proposal for not amending directive
@@ -834,7 +834,7 @@ lamd:c_016 a skos:Concept ;
         lamd:res_oPDTcagKGZqLygwxhRWiSZ,
         lamd:res_uGCWqxgpVB55gxT2tpJQoH,
         lamd:res_ynxc7QbkiLvUMgLwMRJC6g ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Amended proposal for a directive 
 amendment to proposal
 (COM number)"""@en ;
@@ -872,7 +872,7 @@ lamd:c_017 a skos:Concept ;
         lamd:res_uKaAwL4vjhjgFyzcEUx9nd,
         lamd:res_vjd29gErUURJiQCaubm5q7,
         lamd:res_y5hp7yTGcaLsngsJFPPMUa ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Judgment of the Court
 case"""@en ;
     skos:editorialNote """
@@ -901,7 +901,7 @@ lamd:c_018 a skos:Concept ;
         lamd:res_iMUxtbw4ocuuBGLRx3982L,
         lamd:res_meCxcreK9C7MCcQFdcRqEP,
         lamd:res_yQzfsicpiTo2n2sFN4JJ3A ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Order of the Court
 case"""@en ;
     skos:editorialNote """
@@ -951,7 +951,7 @@ lamd:c_019 a skos:Concept ;
         lamd:res_wEUGhF33Edumv8u58WWjiT,
         lamd:res_ws7euKS3QMWUR3MuE2Q4kA,
         lamd:res_zztimzvQNc7yu3uD2FEAPS ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Arrangement
 European Union"""@en ;
     skos:editorialNote """arrangement between EU and third country
@@ -984,7 +984,7 @@ lamd:c_020 a skos:Concept ;
         lamd:res_q7qHFsHELdJBMCnqeTgjTg,
         lamd:res_rCb4v5P64Tr7b7UbHNhRVD,
         lamd:res_rNLumrdygNBPwT4FiCWiUn ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Withdrawal
 Commission proposals"""@en ;
     skos:example "52016XC0430(01)",
@@ -1009,7 +1009,7 @@ lamd:c_021 a skos:Concept ;
         lamd:res_feYaHRigvpVjboFxDpxLKZ,
         lamd:res_pNbtY2b2j9tWkPfYjvRmoe,
         lamd:res_zvZYqqxiXEACSmBnpzdc7S ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """European Commission
 State aid 
 Invitation to submit comments pursuant to Article 108(2) TFEU
@@ -1039,7 +1039,7 @@ lamd:c_022 a skos:Concept ;
         lamd:res_tyKpbEq9HnhyZnE2sHdVpC,
         lamd:res_uMKwzKLXGKBQbJEB6S2Aze,
         lamd:res_zi5CWD5PDTYScRmyK4zejG ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """EFTA Surveillance Authority
 State aid 
 Invitation to submit comments
@@ -1068,7 +1068,7 @@ lamd:c_023 a skos:Concept ;
         lamd:res_RQQZaoD8iB8HCrjg5rRPBM,
         lamd:res_X5hc2828MzakRsZxNCe2bD,
         lamd:res_vz4zbipHHgQajysZmZvPDb ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """EFTA Surveillance Authority
 State aid 
 Decision to open a formal investigation
@@ -1113,7 +1113,7 @@ lamd:c_024 a skos:Concept ;
         lamd:res_unGWCtNeSq5mMCY5DSXdLS,
         lamd:res_vwZBwvcbq9CoE7gQn74bYo,
         lamd:res_yRgGUTepQrFinwnjRLj5hh ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """EFTA Surveillance Authority decision
 closing the formal investigation
 State aid """@en ;
@@ -1142,7 +1142,7 @@ lamd:c_025 a skos:Concept ;
         lamd:res_fsAA4dL4UfpkHXAt3DkEWb,
         lamd:res_nYa5NwNm7KmKFYZycUTpxH,
         lamd:res_uFCm5SGMVuSiqefZKQE9cE ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """EFTA Surveillance Authority
 No state aid within the meaning of Article 61(1) of the EEA agreement"""@en ;
     skos:editorialNote "AU_CODED = EFTA_SUC AND (TI~No state aid within the meaning of) ORDER BY XC DESC"@en ;
@@ -1169,7 +1169,7 @@ lamd:c_026 a skos:Concept ;
         lamd:res_sAvvTPKZ8kCBF4e7i8EBD6,
         lamd:res_yzzq8c6fHq7V4UAyZA7mU4,
         lamd:res_zCQt9LZTb9TDeT4vFZyTdL ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Communication
 Notice
 EFTA Surveillance Authority
@@ -1206,7 +1206,7 @@ lamd:c_027 a skos:Concept ;
         lamd:res_vGcoxFNRFV3AkvNxA8mDmL,
         lamd:res_y4GnhyYHEwkKkfyon9jNxn,
         lamd:res_yFU6Dmst9VmQ8agZPd6oLj ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Notice
 EFTA Surveillance Authority 
 Cartel cases"""@en ;
@@ -1241,7 +1241,7 @@ lamd:c_028 a skos:Concept ;
         lamd:res_enxPvvWqNfUxm32BWoELYf,
         lamd:res_iLxKBYX58bH4FYQkzJfKmF,
         lamd:res_t6ziypC33Z8z8WBaQan5aa ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Summary of Decision
 EFTA Surveillance Authority"""@en ;
     skos:editorialNote "TI~Summary of the EFTA Surveillance Authority Decision ORDER BY XC DESC"@en ;
@@ -1268,7 +1268,7 @@ lamd:c_029 a skos:Concept ;
         lamd:res_erUrUVugfSLncNXe25q5TS,
         lamd:res_iG7suBpertJkASNuf53GQ9,
         lamd:res_oCWDqwCCbCxer9vzuvx9HK ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Information notice
 EFTA Surveillance Authority
 Article 17(5) of Regulation (EC) No 1008/2008
@@ -1308,7 +1308,7 @@ lamd:c_030 a skos:Concept ;
         lamd:res_rF9aswC8etcMEheLQtJ3vf,
         lamd:res_sbCU2EGsa85rb8AChcwgKJ,
         lamd:res_tcqrfZ734ujvntSCv2LTdK ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Council
 Annual Report  
 Article 8(2) of Council Common Position 2008/944/CFSP 
@@ -1344,7 +1344,7 @@ lamd:c_031 a skos:Concept ;
         lamd:res_VvAKVhYavdBGFDb5uw9KN7,
         lamd:res_i5g2Z8j6WNiUyZJZrAFp2G,
         lamd:res_oJhWvvwc2Pq69SDDwVtmCg ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Initiation of proceedings (Case M)
 
 (Information - merger)"""@en ;
@@ -1376,7 +1376,7 @@ lamd:c_032 a skos:Concept ;
         lamd:res_rAtFwWseBReQBUoNsqUMxK,
         lamd:res_sMmmBVPqq4U3Uz7DM8ZWe6,
         lamd:res_u65zeEDvWYgwyExBLZJ6hV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """European Parliament
 Decision on the closure of the accounts of the general budget of the European Union
 financial year"""@en ;
@@ -1413,7 +1413,7 @@ lamd:c_033 a skos:Concept ;
         lamd:res_kf8qNPAiCDq2FRSrJro2Gb,
         lamd:res_wEPPuWHnkgQVejCQpRraUB,
         lamd:res_wdUA3KimH65tVxkxcV8DUh ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Council
 Position of the Council at first reading with a view to the adoption of"""@en ;
     skos:editorialNote """Celex number contains split (01)
@@ -1452,7 +1452,7 @@ lamd:c_034 a skos:Concept ;
         lamd:res_r8BdfgTFLsbGcqWRah6vy9,
         lamd:res_sP3ttB3JQYo6qBGuHBZ958,
         lamd:res_w8sWUWwEm6Rj5tg4mLFCmM ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Statement of the Council's reasons
 position at first reading with a view to the adoption of"""@en ;
     skos:editorialNote """Celex number contains split (02)
@@ -1492,7 +1492,7 @@ lamd:c_035 a skos:Concept ;
         lamd:res_dUo8h6gBYpvbqiptXDinvh,
         lamd:res_rZRSCRrFXYwQGJ8egbhkxT,
         lamd:res_sbTqiDUZWMo6Aaxtr7yvxJ ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Summary of the opinion 
 European Data Protection Supervisor """@en ;
     skos:editorialNote """Link to procedure + EP - Legislative observatory
@@ -1528,7 +1528,7 @@ lamd:c_036 a skos:Concept ;
         lamd:res_ktZmZKfyL6q5uKrAAinkiM,
         lamd:res_pQsqJ6gfgQj4AyY9pCu9Yb,
         lamd:res_vHnyGPKzJ44MacYMG4DM3g ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """EEA EFTA
 list
 marketing authorisations
@@ -1561,7 +1561,7 @@ lamd:c_037 a skos:Concept ;
         lamd:res_rtsE9wbn8Uw2nYAt62SFtJ,
         lamd:res_urb9kvJk8gPF9dR2LSeg3Q,
         lamd:res_yA3v445wCZNwhq3bVMVN3n ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """European Commission
 Authorisation for State aid pursuant to Articles 107 and 108 TFEU
 Except for products falling under Annex I of the Treaty
@@ -1603,7 +1603,7 @@ lamd:c_038 a skos:Concept ;
         lamd:res_wtyxRAYLhpqa9GQuttJiHY,
         lamd:res_yFh8zi3KnMvXYRqhZdkVNC,
         lamd:res_yGm8VXTnpMnkjYeSDEXGcU ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Resolution 
 Council
 representatives of the Member States"""@en ;
@@ -1643,7 +1643,7 @@ lamd:c_039 a skos:Concept ;
         lamd:res_tbAiBoqNjz7wcTNRFUNozh,
         lamd:res_u6k7bA3tMf2mZSFri4amM7,
         lamd:res_vUTW4k3DzcTF86xRUKmky3 ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Council
 conclusions"""@en ;
     skos:editorialNote "TI~conclusions council AND AU=CONSIL NOT GOVREP AND DTT=XG ORDER BY XC DESC"@en ;
@@ -1693,7 +1693,7 @@ lamd:c_040 a skos:Concept ;
         lamd:res_orgmP5dCKaRgkarMEVp4XX,
         lamd:res_zQmbNwAxMKLie223QYNYkP,
         lamd:res_zyFJtXvo5qJZRxc3aB8WDS ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Conclusions 
 Council 
 Representatives of the Governments of the Member States"""@en ;
@@ -1733,7 +1733,7 @@ lamd:c_041 a skos:Concept ;
         lamd:res_wp5s2GiT4AFDAg3nwWx7dD,
         lamd:res_yQuMkVwprifbbUdn9h8inA,
         lamd:res_z3zaqHoRZk7qyxZjdbZaRC ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Statement
 Joint statement
 Parliament
@@ -1775,7 +1775,7 @@ lamd:c_042 a skos:Concept ;
         lamd:res_u6xfRToHaLyGMzWPheHK7b,
         lamd:res_wTYwR8BDzesvDD63RwawcP,
         lamd:res_zrWgCkwN3ApLKiijUWb5Sm ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Statement
 Commission"""@en ;
     skos:editorialNote """usually published in OJC, but 32017C0131(01) published in OJL
@@ -1814,7 +1814,7 @@ lamd:c_043 a skos:Concept ;
         lamd:res_rCMU5VCUnSFbfKrNbZ2xdn,
         lamd:res_s4KyR8cYeNWPUwz9Ajd5jG,
         lamd:res_svg48EGdqd6Zg2zArvxEe6 ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Opinion
 Council
 European Monetary Union EMU"""@en ;
@@ -1863,7 +1863,7 @@ lamd:c_044 a skos:Concept ;
         lamd:res_qJowud54LcPCkhF8npLNVT,
         lamd:res_tSQXNWee2eYwYop4VEiMiM,
         lamd:res_ue3G8Cex9bnpCG4gPjSyX2 ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Opinion
 Commission
 nuclear energy
@@ -1895,7 +1895,7 @@ lamd:c_045 a skos:Concept ;
         lamd:res_nmtNu9m4VBtgo2VXvyoiZ7,
         lamd:res_vFDphwkw56USv7ayRureDo,
         lamd:res_z6WHwCQKFM3x7NFcHzwjSF ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Information communicated by Member States 
 Summary information
 State aid granted 
@@ -1934,7 +1934,7 @@ lamd:c_046 a skos:Concept ;
         lamd:res_jhfHzdp76BudeUncf3bL78,
         lamd:res_rbD5nP2VbzcbuBQmusJJ6K,
         lamd:res_w3ZMe955jnaC39E4QTBsin ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Commission notice
 Decision to close the formal investigation procedure 
 State aid
@@ -1986,7 +1986,7 @@ lamd:c_047 a skos:Concept ;
         lamd:res_tbFr95oKmh67ffQYrf39BQ,
         lamd:res_uUhJ3Yc5y6W5u3mpe4SY7g,
         lamd:res_x4oLeaiKrKYrQjHa7NcLp4 ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Participation agreement
 European Union"""@en ;
     skos:editorialNote """Usually between EU and Swiss concerning CFSP
@@ -2036,7 +2036,7 @@ lamd:c_048 a skos:Concept ;
         lamd:res_sZzZWbsWeLqNSE3koXcUi8,
         lamd:res_xC4xWyz36F9tsMUeDXqS2L,
         lamd:res_xW5uEKCzxVzB6FkbLmaYwV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Protocol 
 amending 
 international agreement"""@en ;
@@ -2088,7 +2088,7 @@ lamd:c_049 a skos:Concept ;
         lamd:res_szG2oz9QknkYmaZ65nmVZn,
         lamd:res_vrDVajqpfY43VFqqHgbp2Y,
         lamd:res_wgWFbJ3PdNuuK6WGCWDPkK ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Protocol 
 additional
 international agreement"""@en ;
@@ -2119,7 +2119,7 @@ lamd:c_050 a skos:Concept ;
         lamd:res_TTRaxK3SmZT9vbCNCfEUQ9,
         lamd:res_iWUoHcuS87HgJvEXzDg8NJ,
         lamd:res_xG9aEUyzA2FWriPdj5YNFA ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Summary of European Union decisions
 Summary of European Union decision
 Regulation (EC) No 726/2004
@@ -2151,7 +2151,7 @@ lamd:c_051 a skos:Concept ;
         lamd:res_ouAdDMk9ygEuWRrntjR8e7,
         lamd:res_st5mj3rZetacbXG4m8v5M6,
         lamd:res_tu3Ted2vV2xn4LnAcZXUYY ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:altLabel """Summary of European Union decisions
 Summary of European Union decision
  Directive 2001/83/EC
@@ -2172,7 +2172,7 @@ medicinal products"""@en .
 
 lamd:clc_3OTHER a skos:Collection ;
     euvoc:order "3" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "Complementary acts incl. Budget, ECB guidelines"@en ;
     skos:member lamd:c_032 ;
     skos:notation "3OTHER" ;
@@ -2180,7 +2180,7 @@ lamd:clc_3OTHER a skos:Collection ;
 
 lamd:clc_5OTHER a skos:Collection ;
     euvoc:order "7" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "Preparatory acts from other EU bodies"@en ;
     skos:member lamd:c_035 ;
     skos:notation "5OTHER" ;
@@ -2188,7 +2188,7 @@ lamd:clc_5OTHER a skos:Collection ;
 
 lamd:clc_COM a skos:Collection ;
     euvoc:order "1" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "Commission proposals, drafts, other preparatory documents as well as Commission reports and working documents (green and white papers, communications, impact assesments, evaluations, fittness checks, etc.) "@en ;
     skos:member lamd:c_001,
         lamd:c_002,
@@ -2206,7 +2206,7 @@ lamd:clc_COM a skos:Collection ;
 
 lamd:clc_CONSIL a skos:Collection ;
     euvoc:order "2" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "Council positions, Statements of Council's reasons, etc."@en ;
     skos:member lamd:c_010,
         lamd:c_033,
@@ -2216,21 +2216,21 @@ lamd:clc_CONSIL a skos:Collection ;
 
 lamd:clc_COR a skos:Collection ;
     euvoc:order "5" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "CoR opinions"@en ;
     skos:notation "COR" ;
     skos:prefLabel "European Committee of Regions"@en .
 
 lamd:clc_COTHER a skos:Collection ;
     euvoc:order "4" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:member lamd:c_030 ;
     skos:notation "COTHER" ;
     skos:prefLabel "Other"@en .
 
 lamd:clc_CRDS a skos:Collection ;
     euvoc:order "2" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:member lamd:c_038,
         lamd:c_039,
         lamd:c_040,
@@ -2241,14 +2241,14 @@ lamd:clc_CRDS a skos:Collection ;
 
 lamd:clc_ECB a skos:Collection ;
     euvoc:order "6" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "ECB opinions"@en ;
     skos:notation "ECB" ;
     skos:prefLabel "European Central Bank"@en .
 
 lamd:clc_EESC a skos:Collection ;
     euvoc:order "4" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "EESC opinions"@en ;
     skos:member lamd:c_005,
         lamd:c_006,
@@ -2260,21 +2260,21 @@ lamd:clc_EESC a skos:Collection ;
 
 lamd:clc_EP a skos:Collection ;
     euvoc:order "3" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "EP resolutions, opinions, reports"@en ;
     skos:notation "EP" ;
     skos:prefLabel "European Parliament"@en .
 
 lamd:clc_LEGIS a skos:Collection ;
     euvoc:order "1" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "Legislative acts adopted by legislative procedure"@en ;
     skos:notation "LEGIS" ;
     skos:prefLabel "Legislative acts"@en .
 
 lamd:clc_MA a skos:Collection ;
     euvoc:order "3" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "usually 5*XC documents"@en ;
     skos:member lamd:c_050,
         lamd:c_051 ;
@@ -2283,7 +2283,7 @@ lamd:clc_MA a skos:Collection ;
 
 lamd:clc_NLEGIS a skos:Collection ;
     euvoc:order "2" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "Implementing, delegated and other acts not adopted by legislative procedure"@en ;
     skos:member lamd:c_043,
         lamd:c_044 ;
@@ -2292,7 +2292,7 @@ lamd:clc_NLEGIS a skos:Collection ;
 
 lamd:clc_STATEAID a skos:Collection ;
     euvoc:order "1" ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:definition "usually 5*XC or 5*M documents"@en ;
     skos:member lamd:c_021,
         lamd:c_031,
@@ -2334,7 +2334,7 @@ lamd:res_2CgZBQcyiVG45N84vWRdvf a lam:PropertyConfiguration ;
 lamd:res_2EHLazD2MQBymT6S5YfhGG a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_oJTixfEYEqT9WmcS7wcNt6 ;
     lam:path lamd:md_EV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory lamd:md_EV" .
 
@@ -2349,7 +2349,7 @@ dir-eu-legal-act:11401010""" .
 lamd:res_2Mx5HSCLiGyN9KF8Af9B8F a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_ttyPuDcETNXhHyuTcUPK4E ;
     lam:path lamd:md_EV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or when the proposal is replaced or withdrawn
 *Date of adoption of legal act - 1 day""" ;
     sh:minCount "1"^^xsd:int ;
@@ -2471,7 +2471,7 @@ lamd:res_3YFxeq273DCF8osxgC8irM a lam:PropertyConfiguration ;
 lamd:res_3ZuWCv6dCEnNFDYasrttHD a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_K9omerhKzHBRnYW3WUeeDC ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -2509,7 +2509,7 @@ lamd:res_3pJ9TEbmKuhoBxzNdE9t32 a lam:MappingPropertyConfiguration ;
 lamd:res_3r63b8nAFLuDVoEcWrGhxa a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_oEWuBTnwjxKpwEVeRKqtt5 ;
     lam:path lamd:md_EV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:name "Optional lamd:md_EV " .
 
 lamd:res_3uR9XHM3qVEMBeKbAGAk8j a lam:PropertyConfiguration ;
@@ -2622,7 +2622,7 @@ lamd:res_4iuAdAesqg792VgkxPSvWG a lam:PropertyConfiguration ;
 lamd:res_4oAdPArqLNwhcGcYCpBUF7 a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_ndscWmmvxCYE83UqxH8e2A ;
     lam:path lamd:md_EV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or withdrawn or replaced
 *Date of adoption of legal act - 1 day""" ;
     sh:minCount "1"^^xsd:int ;
@@ -2641,7 +2641,7 @@ lamd:res_4p3iHtevXaDKd2aZnLW3Ka a lam:PropertyConfiguration ;
 lamd:res_4rKunpvCqZci6ecBu2EUhG a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_zMC8YLN5bU5g69oW2u7pkP ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -2660,7 +2660,7 @@ lamd:res_4tiiuakV8qBqbKNgjscDWN a lam:PropertyConfiguration ;
 lamd:res_5362Ju4EKrVfYtPvQJ7xcb a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_oBWGokJAEKGPTGvNiTG8DQ ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -2750,7 +2750,7 @@ lamd:res_6BMDip9eMifRRH3z6idwH6 a lam:PropertyConfiguration ;
 lamd:res_6EvGLvREiVatC7NehEb7om a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_E5RvKo5mvJVnfJjzuBY7qK ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -2806,7 +2806,7 @@ lamd:res_6vsSNuzLpHpTMntNsdR9vY a lam:PropertyConfiguration ;
 lamd:res_75HsYU8mCA8je4ZTyA4pwb a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_uT82t4GtthGnje9eu4LBCT ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -3081,7 +3081,7 @@ lamd:res_AVqg4N8XZKMF2zSKGJzoeG a lam:MappingPropertyConfiguration ;
 lamd:res_AadE6stVgYguZVA5mLEgSV a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_6nys38iwkRrFX2Kggerv6D ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -3109,7 +3109,7 @@ lamd:res_AmrTdzFABQvT8Fv9WG8kf7 a lam:PropertyConfiguration ;
 lamd:res_AnGKNYXAMNbDd7mr4Wi9Sc a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_U7uBDbh4j3BrucfU7K6KHG ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -3134,7 +3134,7 @@ lamd:res_AterndLtyohqJVPpDjf8A3 a lam:PropertyConfiguration ;
 lamd:res_AwN9Kb7gNn8gWsMAa7nfxD a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_2kTrxGnUwmqX6SoY3YFS3c ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -3142,7 +3142,7 @@ lamd:res_AwN9Kb7gNn8gWsMAa7nfxD a lam:PropertyConfiguration ;
 lamd:res_B5E3XvXgiG6RH8whAxboHC a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_zSYzfa77rVWhjtDbjpkBV7 ;
     lam:path lamd:md_SG ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory lamd:md_SG" .
 
@@ -3288,7 +3288,7 @@ lamd:res_CbrPdd8osRTJv8CUCNLov7 a lam:PropertyConfiguration ;
 lamd:res_CksrtcteoK2vXoBHUTiPzU a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_dC2AUwx2gmrYfhj8aaMTGJ ;
     lam:path lamd:md_SG ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory lamd:md_SG" .
 
@@ -3300,7 +3300,7 @@ lamd:res_CowFujvWWqiwWWNFSBTi3m a lam:PropertyConfiguration ;
 lamd:res_CpPFDkjcNxjTPvnUEhBVNj a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_pSR3AwAjuPpuhfPALUtXjF ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -3455,7 +3455,7 @@ lamd:res_EfErbKJNUqEPCXQESnG4s7 a lam:MappingPropertyConfiguration ;
 lamd:res_EhgnpjPb3py7L2TdAzK4vR a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_5bEdkgdzcZxaN9sqaqt7XY ;
     lam:path lamd:md_SG ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory lamd:md_SG" .
 
@@ -3657,7 +3657,7 @@ lamd:res_GGiwAc5DfhD48kch3yfHeS a lam:PropertyConfiguration ;
 lamd:res_GM6vPGjTHkgsorHUZhksPm a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_4RxbCArwLFVv8WKBVqWGfF ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -4057,7 +4057,7 @@ lamd:res_KvDTvZFET9evGMMJThSYGB a lam:PropertyConfiguration ;
 lamd:res_KxG6zQTGiQf9b5wUuVnr6G a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_n9aLouvKQuFg7tHLSobMrh ;
     lam:path lamd:md_EV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory lamd:md_EV" .
 
@@ -4104,7 +4104,7 @@ lamd:res_LFxUidf4XGX6X2PTHxoapU a lam:PropertyConfiguration ;
 lamd:res_LLmWzmRjSkEbirE6wYp3KZ a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_HvjfVdiC4tVMzwZibRNTxF ;
     lam:path lamd:md_EV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or withdrawn or replaced
 *Date of adoption of legal act - 1 day""" ;
     sh:minCount "1"^^xsd:int ;
@@ -4150,7 +4150,7 @@ lamd:res_LqUMc7om28CRH8RbVM7tu2 a lam:MappingPropertyConfiguration ;
 lamd:res_LrzSCPRL7fUjfZAoGSqzPJ a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_jSgyECkZjtnMAtJ98b72c8 ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -4439,7 +4439,7 @@ lamd:res_P3wwBqyrU83E7NceamvUnS a lam:PropertyConfiguration ;
 lamd:res_P527WtregpeAXGJYzkCvEm a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_yQVMNfvchfemf9U4YJrqGm ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -4466,7 +4466,7 @@ lamd:res_PDWEm4DZunWSyRcp6vkz5Q a lam:PropertyConfiguration ;
 lamd:res_PGqUSXQ8v3Je8qyrGTVFha a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_KDw9er59ycU7ckgSiaL4U4 ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -4496,7 +4496,7 @@ lamd:res_PbwFawoNb9DhrBG67TZwvm a lam:MappingPropertyConfiguration ;
 lamd:res_Pgeq5PqJAPXV3H2hThB8dm a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_Tuf7QZzfuXmi46ppT4xXva ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -4535,7 +4535,7 @@ lamd:res_Q8YFkojFcDfz55wZuVFfrn a lam:PropertyConfiguration ;
 lamd:res_QDNKQz2nGiQTZPqk6aAqUP a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_TmXFZi2HsUTrpEQksuPvQE ;
     lam:path lamd:md_EV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or when the proposal is replaced or withdrawn
 *Date of adoption of legal act - 1 day""" ;
     sh:minCount "1"^^xsd:int ;
@@ -4635,7 +4635,7 @@ lamd:res_RABWBt9AhGyKGDPSkZjohJ a lam:MappingPropertyConfiguration ;
 lamd:res_RAGX9kTWpdudNVhHWeeVDB a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_xZdaER3eQHszRFy5ixApd7 ;
     lam:path lamd:md_EV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or when the proposal is replaced or withdrawn
 *Date of adoption of legal act - 1 day""" ;
     sh:minCount "1"^^xsd:int ;
@@ -4714,7 +4714,7 @@ lamd:res_RieuvGKhzG7mDYpoNrHWtB a lam:PropertyConfiguration ;
 lamd:res_RmBEkHc7yAJZ7cUYkJUDJh a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_NNVNeAJFnQo8izyVVs694N ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -4881,7 +4881,7 @@ lamd:res_T4BLPaaYdz89NXQbKdrny5 a lam:PropertyConfiguration ;
 lamd:res_T7S3KUaXkEwVyWabVivvVW a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_CABpz9iFaHpgH4GyYW6XqG ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -4979,7 +4979,7 @@ lamd:res_TmXFZi2HsUTrpEQksuPvQE a lam:AnnotationConfiguration ;
 lamd:res_TpEa9szDedLNjwcNnvENGY a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_zEykDxULWLsCsbb9Ekkaff ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -5052,7 +5052,7 @@ lamd:res_UDMAWdv99vHL3FKb89qN2k a lam:PropertyConfiguration ;
 lamd:res_UHTvGtk3p9VgetohtuEYyY a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_M8ZqSn7h6jvudS5yVd5Vea ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -5074,7 +5074,7 @@ lamd:res_UPPSHLdqUrDW3X3mnQwkVe a lam:PropertyConfiguration ;
 lamd:res_UQAqNadf6wqZh5bHNeDYTd a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_kb5fZW4tqFRPR6SyNKs99S ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -5082,7 +5082,7 @@ lamd:res_UQAqNadf6wqZh5bHNeDYTd a lam:PropertyConfiguration ;
 lamd:res_UQYHxEsVr9ETJYTiUFEbJ9 a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_6ULYaJZnhVNS48qC9HqgjF ;
     lam:path lamd:md_EV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or when the proposal is replaced or withdrawn
 *Date of adoption of legal act - 1 day""" ;
     sh:minCount "1"^^xsd:int ;
@@ -5367,7 +5367,7 @@ lamd:res_XjPpNEZcoq32CKwQjbVtuB a lam:PropertyConfiguration ;
 lamd:res_XjiiXDpJt6CVrfB5GdCnUX a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_c7xjjeJn3wmwKCov3x39KM ;
     lam:path lamd:md_EV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or withdrawn or replaced
 *Date of adoption of legal act - 1 day""" ;
     sh:minCount "1"^^xsd:int ;
@@ -5444,7 +5444,7 @@ lamd:res_YP3GoFsDUYXFBaMf6gTSzd a lam:PropertyConfiguration ;
 lamd:res_YRdTEiX8E5QqZZKBfxqPhH a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_fbzvrfYc5tBZqghcYT3SoW ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -5456,7 +5456,7 @@ lamd:res_YZTreHeHrjsgqJmgv4SLGH a lam:PropertyConfiguration ;
 lamd:res_YZU9cBaYeK375UvCdAoKFh a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_p3JnHiaLpYvb4oopEVRcyn ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -5468,7 +5468,7 @@ lamd:res_YdhoXZT28VbE4nu64bg7rU a lam:PropertyConfiguration ;
 lamd:res_YgnC2g7qdpWsjejEWcBzZ2 a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_KEVLV3qjkTUDLrSXy8Hxah ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -5520,7 +5520,7 @@ lamd:res_ZUo8zRdxt7TLu8FSbNbaYk a lam:PropertyConfiguration ;
 lamd:res_ZXgzgQA74vXqMTKVWDoHuQ a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_cR2gt8tTTbtStj4nK3XNn6 ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -5678,7 +5678,7 @@ lamd:res_ahRs2qGJjQb96zgdf3Qn34 a lam:MappingPropertyConfiguration ;
 lamd:res_ansNSGbKYGgRwstYCzZip4 a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_GuQL6dGgaTAeWngzbNVFQD ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -5804,7 +5804,7 @@ lamd:res_ba2sBfGcqcZPWP8AqGfHU5 a lam:PropertyConfiguration ;
 lamd:res_bbzE2WVnRkwku3LnLFzwJW a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_xKYbwgro2VcrpMTqgXzE4k ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -5901,7 +5901,7 @@ lamd:res_cFxMtYvPpmkkYcmdhWPLGK a lam:MappingPropertyConfiguration ;
 lamd:res_cHRL7RTprFszmfCGTdF4iJ a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_9CofRwyrLaAB7N2HF9uoum ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -6074,7 +6074,7 @@ lamd:res_dNS5qYXuDUnwbYDN69a5f5 a lam:MappingPropertyConfiguration ;
 lamd:res_dPxVe37fqudabBxL2cZRaV a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_izh9xN7HcEgjiGsavoXiV5 ;
     lam:path lamd:md_EV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or when the proposal is replaced or withdrawn
 *Date of adoption of legal act - 1 day""" ;
     sh:minCount "1"^^xsd:int ;
@@ -6133,7 +6133,7 @@ lamd:res_e2M8uNYMJBMJe54Ymby3eR a lam:PropertyConfiguration ;
 lamd:res_e2zfdL7SnjnQmG8YzyZTai a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_M6MhzPxzfTysPpc5FYziJb ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -6141,7 +6141,7 @@ lamd:res_e2zfdL7SnjnQmG8YzyZTai a lam:PropertyConfiguration ;
 lamd:res_eF7MdXgvFi7UF6s4ZqPoHT a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_JPseWov8g4dBfkzKyr8RAN ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -6163,7 +6163,7 @@ lamd:res_eKPYT6naNY4UyUYqCQVQhS a lam:PropertyConfiguration ;
 lamd:res_eMkaoMG43qYGxh3vaGX55n a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_x5KEvnpHwwa3hrQEMiBXpg ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -6250,7 +6250,7 @@ lamd:res_erUrUVugfSLncNXe25q5TS a lam:PropertyConfiguration ;
 lamd:res_evCbPWe7vJC7Q5Gp5HafSR a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_FAVziSy4EsRq83AeA8CkQ4 ;
     lam:path lamd:md_EV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:name "Optional lamd:md_EV " .
 
 lamd:res_ewbegWaWsbxJoGqGFUdSK2 a lam:PropertyConfiguration ;
@@ -6327,7 +6327,7 @@ lamd:res_fWBqfHASbraEeQeEYsAtE5 a lam:PropertyConfiguration ;
 lamd:res_fWpHmeKy4CxnQqhwRDgX2J a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_7niRYHNJ7zfGU9oB4xjjwW ;
     lam:path lamd:md_EV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory lamd:md_EV" .
 
@@ -6375,7 +6375,7 @@ lamd:res_fsAA4dL4UfpkHXAt3DkEWb a lam:PropertyConfiguration ;
 lamd:res_fsrKVwou7heuNysS8XbjK2 a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_bU4MByNmcL6c65zsRtUg59 ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -6388,7 +6388,7 @@ lamd:res_fxfGTRyk2nGjDSiC8MKdPS a lam:PropertyConfiguration ;
 lamd:res_g9jSEeiDd5acrhYZFCg543 a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_c4gXbBwSX9tUBPZaZW7ryk ;
     lam:path lamd:md_EV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory lamd:md_EV" .
 
@@ -6612,7 +6612,7 @@ lamd:res_iMUxtbw4ocuuBGLRx3982L a lam:PropertyConfiguration ;
 lamd:res_iPriHcBn55nh8VtnDbjbsn a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_TKCzajeDjrzr5Cg3weSAfg ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -6715,7 +6715,7 @@ lamd:res_jSkGtw8wLSgTw6BRV2qtWB a lam:PropertyConfiguration ;
 lamd:res_jUazm8oxig2QLL33yY23Ei a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_YKxgkhRuByLUWh7kVeAi8D ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -6766,7 +6766,7 @@ lamd:res_jobhoQaD7Bqiv5LAZ4do58 a lam:MappingPropertyConfiguration ;
 lamd:res_jojKFNjii5sfX35KQBh8hA a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_M5AWQtETXxBnLdMftk59nR ;
     lam:path lamd:md_SG ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory lamd:md_SG" .
 
@@ -6858,7 +6858,7 @@ lamd:res_khV6Gdmge4Qz6WeCkWj77T a lam:PropertyConfiguration ;
 lamd:res_kijjTT3r8JupWG4bTMSHFh a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_2xaXgDEV7w8YERxbE9X9x3 ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -6909,7 +6909,7 @@ lamd:res_m7BtpmUpSYUBo6Sv4uoa3S a lam:PropertyConfiguration ;
 lamd:res_mAWVaUizKauaNbVxCtvc6M a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_3hRoE4mVfKAPEY3KNRGfDW ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -7016,7 +7016,7 @@ lamd:res_nDNxG6geHaSUsDWqJKA3H9 a lam:PropertyConfiguration ;
 lamd:res_nEAWXXkDCwapQy9bpeFqfd a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_2ZGNyS2gVUuX36SVhoKBQD ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -7024,7 +7024,7 @@ lamd:res_nEAWXXkDCwapQy9bpeFqfd a lam:PropertyConfiguration ;
 lamd:res_nGzcr3moCoCxf45q6NNYRf a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_mhymZyKSg2EBQ7PrC6bQ8J ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -7056,7 +7056,7 @@ lamd:res_nNbm4WYeZskNHwByECsQM3 a lam:PropertyConfiguration ;
 lamd:res_nQRATtT8dXVufMetFMRNJF a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_4L9rLaseg9DoRxbykE8jfW ;
     lam:path lamd:md_EV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_EV" .
@@ -7088,7 +7088,7 @@ lamd:res_ndscWmmvxCYE83UqxH8e2A a lam:AnnotationConfiguration ;
 lamd:res_nhEazHWyvS74GEGDK7wrZd a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_ZcTCZvzTEmdk4vXzcraJo3 ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -7141,7 +7141,7 @@ lamd:res_o9EhdTtrHC7coKSJWrSiGR a lam:PropertyConfiguration ;
 lamd:res_oA9NnhSeJZo6nmmZhxgNKY a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_hfrkjCbYiEmqNoioA4PWcV ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -7293,7 +7293,7 @@ lamd:res_pArv22kGSFGpxH8L6zw7bh a lam:PropertyConfiguration ;
 lamd:res_pCAChWkCBwZtQkYNxXZ5Dn a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_Hk8kzRRXESBKXrT9FHtuwM ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -7540,7 +7540,7 @@ lamd:res_rgizCsUy46jy5qWBVGJzoB a lam:PropertyConfiguration ;
 lamd:res_rnMeWWSyff6bE3UYQEetEj a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_QzPPbXLKrcXjFaBcrXwnwN ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -7632,7 +7632,7 @@ lamd:res_sSiNksFwF5VNLQS5PTJc5n a lam:PropertyConfiguration ;
 lamd:res_sVnThV8dsbR5HHtmmWCexB a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_kBYs9FmRUd7qKPsVdygq5D ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -7799,7 +7799,7 @@ lamd:res_tbFr95oKmh67ffQYrf39BQ a lam:PropertyConfiguration ;
 lamd:res_tcqrfZ734ujvntSCv2LTdK a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_8fYtdUny2ibt6Uysu4YCfR ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -7851,7 +7851,7 @@ lamd:res_u65zeEDvWYgwyExBLZJ6hV a lam:PropertyConfiguration ;
 lamd:res_u6k7bA3tMf2mZSFri4amM7 a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_9oqMUt4rGJxCXE7ptMQBBR ;
     lam:path lamd:md_EV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:name "Optional lamd:md_EV " .
 
 lamd:res_u6xfRToHaLyGMzWPheHK7b a lam:PropertyConfiguration ;
@@ -7866,7 +7866,7 @@ lamd:res_uCGdR7MokEsw9onDTvGPXV a lam:PropertyConfiguration ;
 lamd:res_uFCm5SGMVuSiqefZKQE9cE a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_YLkBUijfjknbqmuzqbNmqX ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -7981,7 +7981,7 @@ lamd:res_vEhMUYdHVaxQ5iRUWVBywD a lam:MappingPropertyConfiguration ;
 lamd:res_vFDphwkw56USv7ayRureDo a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_jwRTVCdWKPrSrciXsTYnr3 ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -8005,7 +8005,7 @@ lamd:res_vPDY3u3gS2JnmVkhN2YaXJ a lam:MappingPropertyConfiguration ;
 lamd:res_vQMPMZDUCcM8F7ykbAvRfU a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_aW9pfT6V88QFyAwL9jpfRE ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -8028,7 +8028,7 @@ lamd:res_vXpwFF56uQeQgxhTEg4AYm a lam:MappingPropertyConfiguration ;
 lamd:res_vaqJGYQqA4Z576dGwMXquU a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_Bz5MiadF33VuUmBYFdZoe6 ;
     lam:path lamd:md_EV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or when the proposal is replaced or withdrawn
 *Date of adoption of legal act - 1 day""" ;
     sh:minCount "1"^^xsd:int ;
@@ -8066,7 +8066,7 @@ lamd:res_vsL8UtrjRPUVVbwaoK5X74 a lam:PropertyConfiguration ;
 lamd:res_vtPGr38T68Z3a97XVtqt77 a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_tDSsKDqsMKcgHdWtnmtumH ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -8101,7 +8101,7 @@ lamd:res_w7PYK3ZFQhTNb4hRfxeKQS a lam:MappingPropertyConfiguration ;
 lamd:res_w7VLdcQG6tZYVsU6LSBiKA a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_Bckt6ed7cCtPFLt5QFmbjc ;
     lam:path lamd:md_EV ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or withdrawn or replaced
 *Date of adoption of legal act - 1 day""" ;
     sh:minCount "1"^^xsd:int ;
@@ -8202,7 +8202,7 @@ lamd:res_wsR8eiSho5V75HpwYgYLTR a lam:PropertyConfiguration ;
 lamd:res_wtyxRAYLhpqa9GQuttJiHY a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_cWKAbssRnopKYoBd9QLLKi ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .
@@ -8221,7 +8221,7 @@ lamd:res_x3YQ3uVAM9HEAirRTeNdgF a lam:MappingPropertyConfiguration ;
 lamd:res_x4oLeaiKrKYrQjHa7NcLp4 a lam:PropertyConfiguration ;
     lam:hasAnnotationConfiguration lamd:res_idmFVAMv6yJn5hdE4aNw7J ;
     lam:path lamd:md_DD ;
-    dct:created "2019-12-12"^^xsd:date ;
+    dct:created "2019-12-15"^^xsd:date ;
     sh:maxCount "1"^^xsd:int ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory unique lamd:md_DD" .

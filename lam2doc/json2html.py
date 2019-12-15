@@ -36,7 +36,7 @@ def transform(input_file, template):
     out_file_ = out_ / "main.html"  # (out_ / in_.stem).with_suffix("." + frm)
 
     # add the static files
-    shutil.rmtree(out_)
+    shutil.rmtree(out_, ignore_errors=True)
     shutil.copytree(STATIC_FILES, out_)
 
     start_time = time.time()
