@@ -103,12 +103,13 @@ mandatory & Y & 1..* & yes, y, according to text\tabularnewline
 mandatory unique & YU & 1..1 &\tabularnewline
 optional & O & 0..* &\tabularnewline
 optional unique & OU & 0..1 &\tabularnewline
-forbidden & N, \textless{}empty cell\textgreater{} & 0..0 & no,
+forbidden & N & 0..0 & no,
 n\tabularnewline
+irrelevant & \textless{}empty cell\textgreater{} & 0..0 & ignore\tabularnewline
 \bottomrule
 \caption{Cardinality constraint conventions}
 \label{tab:cardinality}
-\vspace{-10pt}
+\vspace{-20pt}
 \end{longtable}
 
 The worksheet cells can contain commented values. It means that a cell
