@@ -11,7 +11,7 @@
 \usepackage{parskip}
 \usepackage{fancyhdr}
 \usepackage{vmargin}
-\usepackage[table]{xcolor}
+\usepackage[table, dvipsnames]{xcolor}
 \usepackage{setspace}
 \usepackage{array}
 \usepackage{booktabs,tabularx}
@@ -58,6 +58,51 @@
 \let\thedate\@date
 \makeatother
 
+%\usepackage[dvipsnames]{xcolor} % https://en.wikibooks.org/wiki/LaTeX/Colors
+\definecolor{LightGray}{rgb}{0.96,0.97,0.98}
+\usepackage{listings} % syntax highlighting
+
+\lstdefinelanguage{SPARQL}{
+	basicstyle=\scriptsize\ttfamily,
+	backgroundcolor=\color{LightGray},
+	columns=fullflexible,
+	breaklines=false,
+	sensitive=true,
+	% --------------------------
+	frame=bt,
+	aboveskip=1em,
+	belowskip=1em,
+	xleftmargin=.5em,
+	xrightmargin=.5em,
+	framexleftmargin=.5em,
+	framextopmargin=.5em,
+	framexbottommargin=.5em,
+	framexrightmargin=.5em,
+	% --------------------------
+	tabsize = 2,
+	showstringspaces=false,
+	morecomment=[l][\color{gray}]{\#},       % comments
+	morecomment=[n][\color{blue}]{<http}{>}, % uris
+	morestring=[b][\color{OliveGreen}]{\"},  % strings
+	% -------------------------- variables
+	keywordsprefix=?,
+	classoffset=0,
+	keywordstyle=\color{Sepia},
+	morekeywords={},
+	% -------------------------- prefixes
+	classoffset=1,
+	keywordstyle=\color{Purple},
+	morekeywords={rdf,rdfs,owl,xsd,purl, skos, sh, dct,},
+	% -------------------------- keywords
+	classoffset=2,
+	keywordstyle=\color{MidnightBlue},
+	sensitive=false,
+	morekeywords={
+		SELECT,CONSTRUCT,DESCRIBE,ASK,WHERE,FROM,NAMED,PREFIX,BASE,OPTIONAL,
+		FILTER,GRAPH,LIMIT,OFFSET,SERVICE,UNION,EXISTS,NOT,BINDINGS,MINUS,a, AS, IF, CONTAINS, BOUND, 
+	}
+}
+
 
 %\pagestyle{fancy}
 %\fancyhf{}
@@ -82,7 +127,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 %\rhead{\slshape\DelAuthor}
-\rhead{\slshape{The structure of Excel workbook}}
+\rhead{\slshape{The transformation rules}}
 \lhead{\slshape\nouppercase{\rightmark}}
 \cfoot{\thepage}
 	
@@ -92,9 +137,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Content sections follow
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
-% \input{content/excel-structure-intro.tex}
-% \input{content/excel-structure.tex}
+
+\input{content/intro.tex}
+\input{content/transformation-rules.tex}
 
  
 \end{document}
