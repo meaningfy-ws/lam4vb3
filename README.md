@@ -1,5 +1,6 @@
 # Initiative for Modeling the Legal Analysis Methodology
 
+**Homepage**: [eu-vocaularies/lam4vb3](https://github.com/eu-vocabularies/lam4vb3)
 
 The aim of the project is to provide a level of formalisation to the Legal Analise Methodology used at the European Publications Office for the legal document metadata. 
 
