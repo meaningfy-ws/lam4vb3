@@ -1,0 +1,19 @@
+{% extends "doc.html" %}
+{% import "fragment_utils.html" as fragment %}
+
+
+{% block header %}
+    <h1 class="title"> LAM class specification </h1>
+    {#    <h2>[Standard specification]</h2>#}
+    <div class="authors col-span">
+        <div class="author">
+            <div>Publications Office of the European Union</div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block main %}
+    {% include "celex_class/celex_classes_intro.html" with context %}
+    {% include "celex_class/celex_class_enumeration.html" with context %}
+{% endblock %}

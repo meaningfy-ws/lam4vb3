@@ -68,7 +68,7 @@ class MyTestCase(unittest.TestCase):
 
         self.uri_valued_columns = ['property', 'controlled value _property']
 
-        self.graph = build.make_lam_graph()
+        self.graph = build.make_graph(self.test_df)
 
         # self.cell_value_variants_properties = [None, np.nan, "", "literal", "literal_line \nnew_line_literal",
         #                                        "skos:prefLabel",

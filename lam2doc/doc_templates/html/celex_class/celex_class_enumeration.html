@@ -1,0 +1,19 @@
+{#
+ present the classes ordered by label at h2
+#}
+
+{% import "fragment_utils.html" as fragment %}
+
+{%- set lvl = 2 %}
+
+<h1>Class description</h1>
+<section>
+    {% for class in data["skos:Concept"]|sort(attribute='skos:prefLabel') %}
+        {% include "celex_class/celex_class.html" with context %}
+    {% endfor %}
+</section>
+
+
+
+
+

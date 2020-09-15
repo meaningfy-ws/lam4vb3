@@ -395,6 +395,7 @@ def make_celex_class_worksheet(celex_df_classes, celex_df_classes_classification
     # ugly column type correction, TODO: make more elegant and generic
     celex_df_classes['DTS'] = celex_df_classes['DTS'].apply(str)
     celex_df_classes['CODE'] = celex_df_classes['CODE'].apply(str)
+
     # ugly column type correction, TODO: make more elegant and generic
     celex_df_classes['DTS'] = celex_df_classes['DTS'].apply(str)
     celex_df_classes_classification['CODE'] = celex_df_classes_classification['CODE'].apply(str)

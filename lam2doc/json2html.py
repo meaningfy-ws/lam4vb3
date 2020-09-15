@@ -21,7 +21,7 @@ except ImportError:
     import importlib_resources as pkg_resources
 
 
-@click.command(name="rdf2json",
+@click.command(name="json2html",
                help="Takes a JSON file and turns it into a HTML document following a prepared template.")
 @click.argument("input_file", type=click.Path(exists=True, file_okay=True))
 # @click.argument("output_folder", type=click.Path(dir_okay=True))

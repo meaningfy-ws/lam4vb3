@@ -77,6 +77,10 @@ pip install -r ./requirements.txt
 ```
 
 ## Usage
+
+### Run the tests
+
+Running the /tests will transform the necessary files from Excel through  Turtle, Json, XML to HTML reports. 
  
 ### Jupyer notebook
 Run the Jupyter Lab and then execute all the cells in the notebook file *lam2vb3_v1.ipynb*.
