@@ -6,7 +6,6 @@ Email: costezki.eugen@gmail.com
 """
 
 import pathlib
-import shutil
 import warnings
 
 import pandas as pd
@@ -15,8 +14,9 @@ import logging
 import time
 
 from lam4vb3 import LAM_PROPERTIES_WS_NAME, LAM_CLASSES_WS_NAME, CELEX_CLASSES_WS_NAME, \
-    class_build, CELEX_c, LAM_p, LAM_c, property_build, LAM_PROPERTY_CLASSIFICATION_WS_NAME, PREFIX_WS_NAME, \
+    class_build, property_build, LAM_PROPERTY_CLASSIFICATION_WS_NAME, PREFIX_WS_NAME, \
     LAM_CLASS_CLASSIFICATION_WS_NAME, CELEX_CLASS_CLASSIFICATION_WS_NAME
+from tests import LAM_p, LAM_c, CELEX_c
 
 
 def transform_properties(input_file, output_folder):
@@ -35,7 +35,7 @@ def transform_properties(input_file, output_folder):
 
     start_time = time.time()
     property_build.make_property_worksheet(lam_df_properties, lam_df_property_classification, prefixes,
-                                           output_folder / LAM_p)
+                                           pathlib.Path(output_folder) / LAM_p)
     logging.info(f"Successfully completed the transformation. The output is written into {output_folder / LAM_p}")
     logging.info(f"Elapsed {(time.time() - start_time)} seconds")
 
@@ -56,28 +56,33 @@ def transform_classes(input_file, output_folder):
 
     start_time = time.time()
     class_build.make_class_worksheet(lam_df_classes, lam_df_class_classification, prefixes,
-                                     output_folder / LAM_c)
+                                     pathlib.Path(output_folder) / LAM_c)
     logging.info(f"Successfully completed the transformation. The output is written into {output_folder / LAM_c}")
     logging.info(f"Elapsed {(time.time() - start_time)} seconds")
 
 
 def transform_celex_classes(input_file, output_folder):
     logging.info(f"Transforming CELEX classes from the file {input_file}")
-    celex_df_classes = pd.read_excel(input_file, sheet_name=CELEX_CLASSES_WS_NAME,
-                                     header=[0], na_values=[""], keep_default_na=False)
+    celex_df_classes = pd.read_excel(input_file, sheet_name=CELEX_CLASSES_WS_NAME, header=[0],
+                                     na_values=[""],
+                                     dtype={"DTS": str, "CODE": str, },
+                                     keep_default_na=False)
     logging.info(f"Finished reading {len(celex_df_classes)} CELEX class definitions")
 
     celex_df_class_classification = pd.read_excel(input_file,
                                                   sheet_name=CELEX_CLASS_CLASSIFICATION_WS_NAME,
+                                                  dtype={"COMMENT": str, "DESCRIPTION": str, "ORDER": str,
+                                                         "PARENT": str},
                                                   header=[0], na_values=[""], keep_default_na=False)
     logging.info(f"Finished reading {len(celex_df_class_classification)} CELEX class classifications")
 
     prefixes = pd.read_excel(input_file, sheet_name=PREFIX_WS_NAME,
                              header=[0], na_values=[""], keep_default_na=False)
+    logging.info(f"Finished reading {len(prefixes)} prefixes")
 
     start_time = time.time()
     class_build.make_celex_class_worksheet(celex_df_classes, celex_df_class_classification, prefixes,
-                                           output_folder / CELEX_c)
+                                           pathlib.Path(output_folder) / CELEX_c)
     logging.info(f"Successfully completed the transformation. The output is written into {output_folder / CELEX_c}")
     logging.info(f"Elapsed {(time.time() - start_time)} seconds")
 
@@ -122,18 +127,14 @@ def transform_files_in_folder(input, output):
 @click.argument("output_folder", type=click.Path(exists=True, dir_okay=True))
 def transform(input_file, output_folder):
     """
-
+        Transform a given file and write the output into a folder.
     """
     in_ = pathlib.Path(input_file).resolve()
     out_ = pathlib.Path(output_folder).resolve()
 
-    file_list = list(in_.glob("*.xlsx*"))
-
     logging.info(f"Input: {in_}")
     logging.info(f"Output: {out_}")
 
-    # output_folder = output_folder / input_file.stem
-    # shutil.rmtree(output_folder, ignore_errors=True)
     out_.mkdir(exist_ok=True)
 
     logging.info(f"> Transforming {in_.name}")
@@ -141,9 +142,6 @@ def transform(input_file, output_folder):
     transform_celex_classes(in_, out_)
     transform_properties(in_, out_)
     transform_classes(in_, out_)
-
-    # logging.info(f"> Moving the input file {in_.name} into the output folder {out_} ")
-    # shutil.move(str(in_), str(out_))
 
 
 if __name__ == '__main__':

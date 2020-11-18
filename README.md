@@ -78,11 +78,58 @@ pip install -r ./requirements.txt
 
 ## Usage
 
-### Run the tests
+Install the necessary dependecies.
 
-Running the /tests will transform the necessary files from Excel through  Turtle, Json, XML to HTML reports. 
+```shell script
+make install
+```
+
+Make sure that the TinkerPop server is running.
+
+```shell script
+make restart-gremlin
+```
+
+### Transformation pipeline
+
+The Excel file constituting the input for the transformation is hardcoded in the Makefile as _INPUT_EXCEL_. If a new version is available, update the value of this variable.
  
-### Jupyer notebook
+To run all the transformations at once simply run 
+```shell script
+make transform-full
+```
+
+Transform Excel to RDF. 
+```shell script
+make clear
+make transform-excel2rdf
+```
+
+Transform RDF to JSOn.
+```shell script
+make transform-rdf2json
+```
+
+Transform JSON to HTML. 
+```shell script
+make transform-json2html
+```
+
+### Uploading data into a development environment
+
+The data can be uploaded into a dev environment at http://dev.meaningfy.ws:3030 triple-store. To do so automatically run
+
+```shell script
+make upload_to_fuseki_meaningfy_ws
+```
+
+### Running the Unit tests
+
+```shell script
+make test
+```
+ 
+### Jupyer notebook (outdated)
 Run the Jupyter Lab and then execute all the cells in the notebook file *lam2vb3_v1.ipynb*.
 The script, by default, searches for an excel file in the *./doc/semi-structured* folder and outputs RDF data in Turtle format in the *./output* folder. 
 

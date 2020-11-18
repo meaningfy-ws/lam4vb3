@@ -15,8 +15,10 @@ import lam4vb3
 from gremlin_python.process.graph_traversal import __
 from gremlin_python.structure.graph import Vertex
 
-LAM_PROPERTY_EXAMPLE = lam4vb3.LAM_PROPERTIES_TTL
-LAM_CLASS_EXAMPLE = lam4vb3.LAM_CLASSES_TTL
+import tests
+
+LAM_PROPERTY_EXAMPLE = tests.LAM_PROPERTIES_TTL
+LAM_CLASS_EXAMPLE = tests.LAM_CLASSES_TTL
 
 
 class MyTestCase(unittest.TestCase):
@@ -33,15 +35,6 @@ class MyTestCase(unittest.TestCase):
         known_label = "lamd:md_DTN"
         assert rdf2g.load_rdf2g(self.g, self.rdf_graph_props), "Could not load the graph"
         assert rdf2g.get_node(self.g, known_label), "Could not find the node " + known_label
-
-        # def test_load_classes(self):
-
-    #     self.rdf_graph_classes = rdflib.Graph()
-    #     self.rdf_graph_classes.parse(str(LAM_CLASS_EXAMPLE), format="ttl")
-    #     logging.info('%s triples loaded into RDF graph' % str(len(self.rdf_graph_classes)))
-    #
-    #     rdf2g.clear_graph(self.g)
-    #     assert rdf2g.load_rdf2g(self.g, self.rdf_graph_classes), "Could not load the graph"
 
     def test_get_n_levels_down(self):
         known_label = "lamd:md_DTN"
