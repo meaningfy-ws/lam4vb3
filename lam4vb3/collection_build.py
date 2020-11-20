@@ -34,7 +34,7 @@ def create_collections(lam_df_property_classification, graph):
                                   subject_in_scheme=None,
                                   target_columns=LITERAL_COLUMNS.keys(),
                                   uri_valued_columns=[],
-                                  subject_source="URI",
+                                  subject_source=URI_COLUMN,
                                   subject_class="skos:Collection",
                                   multi_line_columns=[], )
     cm.make_triples()
@@ -43,7 +43,7 @@ def create_collections(lam_df_property_classification, graph):
                                   column_mapping_dict=URI_COLUMNS,
                                   graph=graph,
                                   target_columns=URI_COLUMNS.keys(),
-                                  subject_source="URI", )
+                                  subject_source=URI_COLUMN, )
     im.make_triples()
 
 
