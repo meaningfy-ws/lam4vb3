@@ -56,9 +56,9 @@ clear:
 	@ rm -rf data/*
 
 
-upload_to_fuseki_meaningfy_ws:
+upload-to-fuseki-meaningfy-ws:
 	@ echo "$(BUILD_PRINT) Uploading the datasets to http://dev.meaningfy.ws:3030/"
-	@ curl -X DELETE --anyauth --user 'admin:admin' 'http://dev.meaningfy.ws:3030/datasets/lam'
+	@ curl -X DELETE --anyauth --user 'admin:admin' 'http://dev.meaningfy.ws:3030/$$/datasets/lam'
 	@ curl --anyauth --user 'admin:admin' -d 'dbType=tdb&dbName=lam'  'http://dev.meaningfy.ws:3030/$$/datasets'
 	@ curl -X POST -H content-type:text/turtle -T data/celex_project_classes_v2.ttl -G 'http://dev.meaningfy.ws:3030/lam/data' --data-urlencode 'graph=http://publications.europa.eu/resources/authority/celex/CelexLegalDocument'
 	@ curl -X POST -H content-type:text/turtle -T data/lam_project_classes_v2.ttl -G 'http://dev.meaningfy.ws:3030/lam/data' --data-urlencode 'graph=http://publications.europa.eu/resources/authority/lam/LAMLegalDocument'
