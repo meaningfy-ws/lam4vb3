@@ -404,8 +404,8 @@ def make_celex_class_worksheet(celex_df_classes, celex_df_classes_classification
     create_cs(graph, cs=CELEX_CS, cs_label="CELEX classes")
     create_celex_concepts(celex_df_classes, graph)
 
-    collection_build.add_concept_to_collection(celex_df_classes, graph)
     collection_build.create_collections(celex_df_classes_classification, graph)
+    collection_build.add_concept_to_collection(celex_df_classes, graph)
 
     graph.serialize(str(output_file), format='turtle', )
     return graph
