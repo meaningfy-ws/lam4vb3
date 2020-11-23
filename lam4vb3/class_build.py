@@ -336,7 +336,7 @@ def create_celex_concepts(df, graph):
     uri_maker = build.ConceptTripleMaker(df,
                                          subject_source=URI_COLUMN,
                                          subject_class="skos:Concept",
-                                         subject_in_scheme=LAM_CLASS_CS,
+                                         subject_in_scheme=CELEX_CS,
                                          column_mapping_dict=URI_CELEX_COLUMNS,
                                          target_columns=list(URI_CELEX_COLUMNS.keys()),
                                          uri_valued_columns=list(URI_CELEX_COLUMNS.keys()),

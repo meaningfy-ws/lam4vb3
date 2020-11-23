@@ -1,0 +1,17 @@
+
+#toc {
+    left: 0%;
+    top: 2%;
+    max-height: 100%;
+    width: 20%;
+}
+
+.active {
+    background-color: rgba(155, 168, 255, 0.3);
+}
+
+@media print {
+    #toc {
+        display: none;
+    }
+}
