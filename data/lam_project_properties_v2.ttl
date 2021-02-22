@@ -11,7 +11,7 @@
 
 lamd:class_CDJ a skos:Collection ;
     euvoc:order "7" ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     skos:definition "Properties applicable only to case-law collection"@en ;
     skos:member lamd:md_AP,
         lamd:md_DF,
@@ -22,7 +22,7 @@ lamd:class_CDJ a skos:Collection ;
 
 lamd:class_CLAS a skos:Collection ;
     euvoc:order "3" ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     skos:definition "Tools used for classification of the documents (Directory code, Subject matter) or for describing of the content (EuroVoc)."@en ;
     skos:member lamd:md_CC,
         lamd:md_CT,
@@ -33,7 +33,7 @@ lamd:class_CLAS a skos:Collection ;
 
 lamd:class_DATE a skos:Collection ;
     euvoc:order "2" ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     skos:definition "Properties describing different dates."@en ;
     skos:member lamd:class_DANNOT,
         lamd:class_DPROP ;
@@ -42,7 +42,7 @@ lamd:class_DATE a skos:Collection ;
 
 lamd:class_EDIT a skos:Collection ;
     euvoc:order "8" ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     skos:definition "Description of some other editorial propereties used in this document"@en ;
     skos:member lamd:md_CLASSIFICATION,
         lamd:md_COMMENT,
@@ -59,7 +59,7 @@ lamd:class_EDIT a skos:Collection ;
 
 lamd:class_ESI a skos:Collection ;
     euvoc:order "4" ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     skos:definition "Most important properties from the legal analysis point of view"@en ;
     skos:member lamd:md_AU,
         lamd:md_FM,
@@ -70,7 +70,7 @@ lamd:class_ESI a skos:Collection ;
 
 lamd:class_MIS a skos:Collection ;
     euvoc:order "6" ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     skos:definition "Additional properties relevant for the legal analysis"@en ;
     skos:member lamd:md_AD,
         lamd:md_AF,
@@ -93,7 +93,7 @@ lamd:class_MIS a skos:Collection ;
 
 lamd:class_REF a skos:Collection ;
     euvoc:order "1" ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     skos:definition "Different unique identifiers used in CELLAR database. "@en ;
     skos:member lamd:class_CLX,
         lamd:class_OTHER_REF ;
@@ -101,7 +101,7 @@ lamd:class_REF a skos:Collection ;
     skos:prefLabel "References"@en .
 
 lamd:md_CODE a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "CODE" ;
@@ -110,7 +110,7 @@ lamd:md_CODE a skos:Concept ;
 
 lamd:class_AJ a skos:Collection ;
     euvoc:order "4" ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     skos:member lamd:md_ANNULMENT_REQ,
         lamd:md_ANULMENT_PARTIAL_REQ,
         lamd:md_COMMUNIC_REQ,
@@ -124,7 +124,7 @@ lamd:class_AJ a skos:Collection ;
 
 lamd:class_CLX a skos:Collection ;
     euvoc:order "1" ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     skos:member lamd:md_DN,
         lamd:md_DN_CLASS,
         lamd:md_DTA,
@@ -137,7 +137,7 @@ lamd:class_CLX a skos:Collection ;
 
 lamd:class_DANNOT a skos:Collection ;
     euvoc:order "2" ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     skos:member lamd:md_ANN_COD,
         lamd:md_ANN_TOD ;
     skos:notation "DANNOT" ;
@@ -145,7 +145,7 @@ lamd:class_DANNOT a skos:Collection ;
 
 lamd:class_DPROP a skos:Collection ;
     euvoc:order "1" ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     skos:member lamd:md_DB,
         lamd:md_DD,
         lamd:md_DH,
@@ -163,7 +163,7 @@ lamd:class_DPROP a skos:Collection ;
 
 lamd:class_MSEA a skos:Collection ;
     euvoc:order "1" ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     skos:member lamd:md_ADDITION,
         lamd:md_ADOPTION,
         lamd:md_ADOPTION_PAR,
@@ -198,7 +198,7 @@ lamd:class_MSEA a skos:Collection ;
 
 lamd:class_OTHER_REF a skos:Collection ;
     euvoc:order "2" ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     skos:member lamd:md_ECLI,
         lamd:md_ELI,
         lamd:md_OJ_ID ;
@@ -207,7 +207,7 @@ lamd:class_OTHER_REF a skos:Collection ;
 
 lamd:class_RANNOT a skos:Collection ;
     euvoc:order "5" ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     skos:member lamd:md_ANN_ART,
         lamd:md_ANN_CLB,
         lamd:md_ANN_EOV,
@@ -226,7 +226,7 @@ lamd:class_RANNOT a skos:Collection ;
 
 lamd:class_RBD a skos:Collection ;
     euvoc:order "2" ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     skos:definition """There are seven general types of legal references in the EUR-Lex database:
 (1) Reference to the treaty (TT)
 (2) Reference to the legal basis of an act (LB)
@@ -251,14 +251,14 @@ MS-MD, EA-SP and AJ-CD are paired fields that complement each other by offering 
 
 lamd:class_RD a skos:Collection ;
     euvoc:order "3" ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     skos:member lamd:md_ASSOCIATION,
         lamd:md_RELATION ;
     skos:notation "RD" ;
     skos:prefLabel "Related documents"@en .
 
 lamd:md_AD a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Where available this field contains the name of the State, institution, organisation or individual to whom the act is addressed (addressee of parliamentary resolutions; addressee of legislation in general, and MTF decisions in particular).
 This field is applicable to European Parliamentary questions, resolutions and opinions, as well as for  Merger Task Force decisions. It is also used to index Commission decisions."""@en ;
@@ -320,7 +320,7 @@ lamd:md_ADDITION a skos:Concept ;
         lamd:res_S43ZgMxSBQYYHkuQ3J6Rww,
         lamd:res_bPm8QRYCv2DJRYLsaHe2Fu,
         lamd:res_ce2NsS72B5HAAvRpNsuNro ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Addition (JJ)
 This link contains the CELEX number of earlier acts modified by the given act (addition to).
@@ -354,7 +354,7 @@ lamd:md_ADOPTION a skos:Concept ;
         lamd:res_YoJjitXBFw2bZzMxBvAZrk,
         lamd:res_h6tGZFb2wfMLCgfMWL2hJU,
         lamd:res_kXo3hEwLm3HSE7sKLD89CM ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Adoption (YD)
 This link contains the CELEX number of proposal adopted by the given act (when proposal becomes the final act).
@@ -384,7 +384,7 @@ lamd:md_ADOPTION_PAR a skos:Concept ;
         lamd:res_Q3nsYtPF3krxm7gvVb6GLx,
         lamd:res_S5NTgKGxitcgPh4xrjTBAm,
         lamd:res_UG5sgnXKdtDWj4iHxsFfYy ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Partial adoption (YDP)
 This link contains the CELEX number of proposal partially adopted by the given act (when parts of proposal become the final act).
@@ -408,7 +408,7 @@ start_of_validity"""@en ;
     sh:path cdm:resource_legal_partially_adopts_resource_ .
 
 lamd:md_AF a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """This field refers to the political affiliation and nationality of the Member of the European Parliament who asked the question.  
 (Political groups represent various political tendencies within the Parliament. Each is represented in the Conference of Presidents by its chairperson, who also has the task of explaining the group’s position on issues under discussion at plenary sessions). """@en ;
@@ -429,7 +429,7 @@ lamd:md_AMENDMENT a skos:Concept ;
         lamd:res_NssowJnBxdiXTNrRnno6YA,
         lamd:res_RYzFSfugreBBdCrDZzaqmY,
         lamd:res_VSK6P8ZyCzZDWRhYQyMeA7 ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Amendment (MM)
 This link contains the CELEX number of earlier acts modified by the given act.
@@ -461,7 +461,7 @@ lamd:md_AMENDMENT_PRO a skos:Concept ;
         lamd:res_HeLCfZ8j9juYAhFun4gaHh,
         lamd:res_cBvFgd4ZoESossTFjXaUEW,
         lamd:res_huBrZxbUgCZ8zuYTTxnpL3 ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Proposal to amend (PM)
 Link from the Commission proposal or draft of an (amending) act to the act that should be subject of amendments. This link contains the CELEX number of the act intended to be amended (displayed under Earlier related instruments - EA)."""@en ;
@@ -487,7 +487,7 @@ lamd:md_ANNULMENT_REQ a skos:Concept ;
         lamd:res_WFATg2dPBiupzr4dUjjUmR,
         lamd:res_XiP4B57coaLrTXyzdDFecR,
         lamd:res_gN2eUby4r4YftaFb3jj8hN ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Annulment request (KL)
 
@@ -505,7 +505,7 @@ lamd:md_ANULMENT_PARTIAL_REQ a skos:Concept ;
         lamd:res_etyfTWDvA6Uv2V8pArPutk,
         lamd:res_hcKjSZdQNwjFvzArwQ9kR9,
         lamd:res_hcTLmunEsDjhFNfyvGZYxx ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Partial annulment request (DL)
 
@@ -516,7 +516,7 @@ This is a link from announcements on EU case law published in the Official Journ
     sh:path cdm:communication_case_new_requests_partial_annulment_of_resource_legal .
 
 lamd:md_AP a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field is relevant for announcements on EU case law published in the Official Journal. It refers to the institution, body or Member State submitting the application (EU case-law). If the applicant is a private entity or person, then it, she or he is referred to as \"person\"."@en ;
     skos:example "<j.0:communication_cjeu_requested_by_agent rdf:resource=\"http://publications.europa.eu/resource/authority/fd_110/PART\"/>" ;
@@ -548,7 +548,7 @@ lamd:md_APPLICABILITY_DEF a skos:Concept ;
         lamd:res_QCdebsd2anxcdMJfGGEFCr,
         lamd:res_RwTZAjj5sydTebuL8Uwj4V,
         lamd:res_biB2jDJRCDqEhAM3eFBo23 ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Defers application of (TT)
 This link contains the CELEX number of earlier acts modified by the given act (deferring aplication).
@@ -571,7 +571,7 @@ lamd:md_APPLICABILITY_EXT a skos:Concept ;
         lamd:res_NfzcgWPKtzDDE3h8HjxVTf,
         lamd:res_QyJRd72JDaZJaUcWAWBXer,
         lamd:res_SLVqfB7prYYx6pjhqHnVjX ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Extension of application (EE)
 This link contains the CELEX number of earlier acts modified by the given act (extension of aplication).
@@ -600,7 +600,7 @@ famille"""@en ;
     sh:path cdm:resource_legal_extends_application_resource_legal .
 
 lamd:md_AS a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field indicates a co-author of a Commission proposal (Commission DG or DGs)."@en ;
     skos:editorialNote "04/11/2019: Check cdm properties, which are still used?"@en,
@@ -626,7 +626,7 @@ lamd:md_ASSOCIATION a skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_G4St3UhjvxnKUxBLvxVuWj,
         lamd:res_Ky2jbCwhQfz352wfq3cGRi,
         lamd:res_gt5vzx94QwdJtf4BQXRk6B ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Related international agreement (RG)
 This is link between Council decision concerning the conclusion (and/or signing and/or provisional application and/or approval and/or signature) of an international agreement and the international agreement concerned"""@en ;
@@ -640,7 +640,7 @@ This is link between Council decision concerning the conclusion (and/or signing 
     sh:path cdm:resource_legal_associates_agreement_international .
 
 lamd:md_AU a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "The Author field indicates the name of the institution, the body or the country that produced the act."@en ;
     skos:editorialNote """April 2015: For parliamentary questions, the author field contained also the name of the Member of the European Parliament in the past. However, because of missing mapping in the CELLAR, those names are currently not displayed on the new EUR-Lex. Possible solutions should be analysed.
@@ -682,7 +682,7 @@ EU treaties and international agreements: name of the country (countries) signin
     sh:path cdm:created_by .
 
 lamd:md_CC a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Directory is a numerical classification tool. It offers access to EU law by subject.
 
@@ -909,7 +909,7 @@ The minimum number of directory codes that can be assigned to a document is one 
     sh:path cdm:resource_legal_is_about_concept_directory-code .
 
 lamd:md_CDM_CLASS a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Class or subclass according to CDM."@en ;
     skos:inScheme lamd:DocumentProperty ;
@@ -920,7 +920,7 @@ lamd:md_CDM_CLASS a skos:Concept ;
 lamd:md_CI a skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_CWY2TBnDV8LVJakYEVWroF,
         lamd:res_VbkJfD6NvHiWej4G3pRfm9 ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Instruments cited (IC)
 This field contains the document numbers of the acts cited in the document which do not have a direct effect on the document (e.g. acts which do not form the legal basis, which are not expressly affected) or of the acts cited for reference purposes only."""@en ;
@@ -950,7 +950,7 @@ fragment_cited_target indicates to which specific part of an document refers thi
     sh:path cdm:work_cites_work .
 
 lamd:md_CLASSIFICATION a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "CLASSIFICATION" ;
@@ -958,7 +958,7 @@ lamd:md_CLASSIFICATION a skos:Concept ;
     sh:path skos:member .
 
 lamd:md_CM a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "This field contains diverse data that have been added to facilitate the work of the units of the European Union."@en ;
     skos:editorialNote "04/11/2019: Check wheather this field and values MAN are still useful or not."@en,
@@ -986,7 +986,7 @@ Internal comment is currently not displayed on the EUR-Lex.
     sh:path cdm:resource_legal_comment_internal .
 
 lamd:md_COMMENT a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Field used in the cataloguing methodology for  information purposes. It contains different comments related to the specific document type."@en ;
     skos:inScheme lamd:DocumentProperty ;
@@ -1002,7 +1002,7 @@ lamd:md_COMMUNIC_REQ a skos:Concept ;
         lamd:res_ZEckznMDQVbe5QBYE7DpQu,
         lamd:res_hjL3dAf9fhRWz9DyAipbwC,
         lamd:res_nRDpVPHBZwQp2iuQrUsiWv ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Related EU case law document (JL)
 
@@ -1020,7 +1020,7 @@ lamd:md_COMPLETION a skos:Concept ;
         lamd:res_bGfmCKRbDbLZD6nLkHi4nR,
         lamd:res_kpqTfNY5TNvtwu9VwkoEAi,
         lamd:res_o5Wc5dWAPpBi2WuFMdbGnw ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Completion (CC)
 This link contains the CELEX number of earlier acts modified by the given act (completion).
@@ -1059,7 +1059,7 @@ lamd:md_CONFIRMATION a skos:Concept ;
         lamd:res_d7kHGSdHrREZ88u5XWQZBH,
         lamd:res_jZWYTocDxtjGWk7fZZyssz,
         lamd:res_mnXt9by7gQHSnw3SDfff6n ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Confirmation (FF)
 
@@ -1079,7 +1079,7 @@ lamd:md_CORRIGENDUM a skos:Concept ;
         lamd:res_aqKHFZQ2RLZCsPmSAUk3g9,
         lamd:res_dYE2aM8Noe8akDAcqBkBgT,
         lamd:res_gciAg8mGcakWTHLGJ8Pnv6 ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Corrigendum (RC)
 This link contains the CELEX number of earlier acts corrected by the given act.
@@ -1107,7 +1107,7 @@ famille"""@en ;
     sh:path cdm:resource_legal_corrects_resource_legal .
 
 lamd:md_CT a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Subject matter is a classification tool containing alphabetically structured list of over 200 keywords. It is based on the subdivisions of the treaties and on the areas of activity of the institutions. The descriptors are less specific than those used in the Directory code but provide a general overview of the content of the document."@en ;
     skos:example "<cdm:resource_legal_is_about_subject-matter rdf:resource=\"http://publications.europa.eu/resource/authority/fd_070/UD\"/>" ;
@@ -1142,7 +1142,7 @@ For directives, use also approximation of laws.
     sh:path cdm:resource_legal_is_about_subject-matter .
 
 lamd:md_DB a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Date of debate is used to index European Parliament resolutions or of committees (EESC/CoR) opinions. 
 The date has format YYYY-MM-DD."""@en ;
@@ -1156,7 +1156,7 @@ The date has format YYYY-MM-DD."""@en ;
     sh:path cdm:act_preparatory_date_debate .
 
 lamd:md_DC a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """EuroVoc is a multilingual and multi-disciplinary thesaurus which covers the field of activity of the European Union. It was originally built up specifically for processing the documentary information of the EU institutions, but is largely used outside the EU institutions as well. 
 
@@ -1237,7 +1237,7 @@ sustainable development(*) / economic growth(*)  / cocoa
  (*) In this case too general descriptors were used. See point 2.3 (Be as specific as possible).
 
 B. Incorrect descriptors 
-If descriptors are incorrectly used (not relevant, out of context), the query system will retrieve several but irrelevant documents, there will be a 'noise'  In that case, incorrect descriptors have to be deleted. 
+If descriptors are incorrectly used (not relevant, out of context), the query system will retrieve several but irrelevant documents, there will be a 'noise' In that case, incorrect descriptors have to be deleted. 
 
 The use of incorrect descriptors is due to: 
 • either the misunderstanding of the content of the document
@@ -1540,7 +1540,7 @@ Within a large indexing team, a centralized checking stage is recommended to be 
 
 lamd:md_DD a skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_ToTKo2itzBgFx5yvaZTTZi ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """It is the date present usually in document´s title. Date of document is a core metadata and therefore the one most widely available (each notice must contain one document date).
 
@@ -1684,7 +1684,7 @@ lamd:md_DEROGATION a skos:Concept ;
         lamd:res_boRJApEhiW9WmmJsjNRWjW,
         lamd:res_c6ms5d77PMMM7PcqWTsPtM,
         lamd:res_ntNnfn2KCyXPL3JutmRoF5 ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Derogation (DD)
 
@@ -1713,7 +1713,7 @@ famille"""@en ;
     sh:path cdm:resource_legal_derogates_resource_legal .
 
 lamd:md_DESCRIPTION a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "DESCRIPTION" ;
@@ -1721,7 +1721,7 @@ lamd:md_DESCRIPTION a skos:Concept ;
     sh:path skos:definition .
 
 lamd:md_DF a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field is relevant for announcements on EU case law published in the Official Journal. It refers to the defending institution, body or Member State. If the defendant is a private entity or person, then it, she or he is referred to as \"person\"."@en ;
     skos:example "<j.0:communication_cjeu_defended_by_agent rdf:resource=\"http://publications.europa.eu/resource/authority/fd_110/IC\"/>" ;
@@ -1747,7 +1747,7 @@ Information about applicant or defendant is present also in the alternative titl
 
 lamd:md_DH a skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_eAUVp45gDK3GFt7yNhedap ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Date of dispatch for transmission to one of the institutions.
 
@@ -1778,7 +1778,7 @@ Oral questions: date of the session
 
 lamd:md_DL a skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_83ZpU55vkxz54aZboXKz2b ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Date of deadline field contains various intermediate deadlines relating to the document.
 
@@ -1810,7 +1810,7 @@ For such case, an annotation to the deadline must be created, containing value B
     sh:path cdm:resource_legal_date_deadline .
 
 lamd:md_DN a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "The CELEX number is both a unique document identifier and a classification code, regardless of language. It is used as the basis for cross-referencing of documents in the database as well as for implementing hypertext links."@en ;
     skos:example "<cdm:resource_legal_id_celex rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">32015D0046</cdm:resource_legal_id_celex>" ;
@@ -1852,7 +1852,7 @@ For some specific collections of documents, CELEX number is attributed by the au
     sh:path cdm:resource_legal_id_celex .
 
 lamd:md_DN_CLASS a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "DN_CLASS" ;
@@ -1860,7 +1860,7 @@ lamd:md_DN_CLASS a skos:Concept ;
     sh:path lam:celex_class .
 
 lamd:md_DP a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field is most frequently used in Sector 2 where it contains the name of the depositary of an international agreement."@en ;
     skos:editorialNote "04/11/2019: Check cdm properties"@en,
@@ -1877,7 +1877,7 @@ lamd:md_DP a skos:Concept ;
     sh:path cdm:stored_by .
 
 lamd:md_DTA a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "The year attributed to the document (internal number or ppf number)."@en ;
     skos:example "<cdm:resource_legal_year rdf:datatype=\"http://www.w3.org/2001/XMLSchema#gYear\">2014</cdm:resource_legal_year>" ;
@@ -1898,7 +1898,7 @@ for sector 9: the year the question was introduced."""@en ;
     sh:path lam:dta .
 
 lamd:md_DTN a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """A sequential number representing the original reference number of the act.
 
@@ -1917,7 +1917,7 @@ For a corrigendum an “R” is added to the four digits (see CELEX type corrige
     sh:path lam:dtn .
 
 lamd:md_DTS a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "This refers to a specific sector (collection) of documents as indicated in the CELEX number (it is the first number in the celex number)."@en ;
     skos:example "<j.0:resource_legal_id_sector rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">2</j.0:resource_legal_id_sector>" ;
@@ -1940,7 +1940,7 @@ E  EFTA documents"""@en ;
     sh:path lam:dts .
 
 lamd:md_DTT a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """This one or two letters code refers to a specific type of document as indicated in the CELEX number. 
 
@@ -1953,7 +1953,7 @@ Celex type of sector 1 documents refers to a specific treaty. """@en ;
     sh:path lam:dtt .
 
 lamd:md_DT_CORR a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "This field indicates if the document is a corrigendum. The number inserted indicates the serial number of corrigendum. It is then displayed in the celex number of corrigendum as \"split\" number in the brackets."@en ;
     skos:example "<cdm:resource_legal_number_corrigendum rdf:datatype=\"http://www.w3.org/2001/XMLSchema#positiveInteger\">1</cdm:resource_legal_number_corrigendum>" ;
@@ -1968,7 +1968,7 @@ The sequential number of corrigendum must be attributed only after analysing the
     sh:path cdm:resource_legal_number_corrigendum .
 
 lamd:md_ECLI a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "ECLI" ;
@@ -1976,7 +1976,7 @@ lamd:md_ECLI a skos:Concept ;
     sh:path cdm:case-law_ecli .
 
 lamd:md_ELI a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "ELI" ;
@@ -1985,7 +1985,7 @@ lamd:md_ELI a skos:Concept ;
 
 lamd:md_EV a skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_ZWwDo7TwPSMfaZc9sCR6vC ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """It is the date on which the act ceases to be valid.
 
@@ -2228,7 +2228,7 @@ For different documents from the decision-making process other than proposals, t
     sh:path cdm:resource_legal_date_end-of-validity .
 
 lamd:md_EXAMPLE_CELEX a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Field used in the cataloguing methodology for  information purposes. "@en ;
     skos:inScheme lamd:DocumentProperty ;
@@ -2237,7 +2237,7 @@ lamd:md_EXAMPLE_CELEX a skos:Concept ;
     sh:path skos:example .
 
 lamd:md_EXAMPLE_EN a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Field used in the cataloguing methodology for  information purposes. "@en ;
     skos:inScheme lamd:DocumentProperty ;
@@ -2246,7 +2246,7 @@ lamd:md_EXAMPLE_EN a skos:Concept ;
     sh:path skos:example .
 
 lamd:md_EXAMPLE_FR a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Field used in the cataloguing methodology for  information purposes. "@en ;
     skos:inScheme lamd:DocumentProperty ;
@@ -2262,7 +2262,7 @@ lamd:md_FAILURE_REQ a skos:Concept ;
         lamd:res_QYmA2a7nByJv9SUsA75P3b,
         lamd:res_TjBLhbwPHUArNpzKT358Pa,
         lamd:res_oXAvSYqKeBPYTakdN9Acjv ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Request to establish failure to fulfil an obligation (FL)
 
@@ -2273,7 +2273,7 @@ This is a link from announcements on EU case law published in the Official Journ
     sh:path cdm:communication_case_new_requests_establishment_of_failure_of_obligation_resource_legal .
 
 lamd:md_FM a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field refers to the type of act. The type is usually indicated in the title of an act. However, the value used in Type of act might not be the same as the one used in the title, as this metadata shall describe the document type in legal terms."@en ;
     skos:editorialNote """April 2015: For the time being, both properties cdm:work_has_resource-type as well as cdm:resource_legal_has_type_act_concept_type_act shall be used because of technical reasons. For the display and search purposes, only cdm:resource_legal_has_type_act_concept_type_act is currently used by the EUR-Lex.
@@ -2291,7 +2291,7 @@ There should be only one value attributed except of corrigenda where two differe
     sh:path cdm:resource-type .
 
 lamd:md_IC a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Comments/additional details of international agreements and decisions taken by bodies created by these agreements."@en ;
     skos:editorialNote "04/11/2019: Check how this field is used and whether it is needed or not. Check also IMMC."@en ;
@@ -2310,7 +2310,7 @@ The field contains descriptors. The values permitted correspond to the codes of 
 lamd:md_IF a skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_62Nbe63aFxDkaCfrPhnZq8,
         lamd:res_nEvgKgvNAjNdKKgru3yibu ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """It is a date when the act enters into force or becomes operative.
 
@@ -2481,7 +2481,7 @@ lamd:md_IMPLEMENTATION a skos:Concept ;
         lamd:res_XT54NvTpEbji5DxxStMfJL,
         lamd:res_chJLqF2jGNaeRks9DWo2Q3,
         lamd:res_gujgQWckiNDpqK5Sqe7J6n ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Implementation (OO)
 
@@ -2507,7 +2507,7 @@ lamd:md_INAPPLICAB_REQ a skos:Concept ;
         lamd:res_Xf3rsDSWrf5SJQfERqFcuv,
         lamd:res_iaHeeFZtXus6pbCYSFemp8,
         lamd:res_miMYzGjJxjjaDgZcRRsyVJ ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Inapplicability request (IL)
 
@@ -2525,7 +2525,7 @@ lamd:md_INCORPORATION a skos:Concept ;
         lamd:res_TABpAoPEccK7SbS4e823QL,
         lamd:res_hZd3YpTBNEqZgrUcpyRdvp,
         lamd:res_km7QYBzv8c9BuehyGwQCaQ ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Incorporation (RE)"@en ;
     skos:editorialNote "08/11/2019: It seems there was only one particular case - EEA agreement (?)"@en ;
@@ -2544,7 +2544,7 @@ lamd:md_INFLUENCE a skos:Concept ;
         lamd:res_ZYJu95h8L5wPnPEncw8TCq,
         lamd:res_d4fLBTdwhGZjgv7qkWqBJ6,
         lamd:res_djbnjd6cNmShdq8cKzUXkb ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Part of the same procedure (PE)
 Link between documnets from the same procedure and the proposal or draft. This link contains the CELEX number of the Commission proposal (displayed under Earlier related instruments - EA)."""@en ;
@@ -2563,7 +2563,7 @@ lamd:md_INTERPRETATION a skos:Concept ;
         lamd:res_eSmLk8WgnKxTMYesUdAso4,
         lamd:res_iZushasnDaGB8zvDK9Ydsk,
         lamd:res_nzGRrSoCU5RKopWS5nq8rA ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Authoritative interpretation (II)
 
@@ -2583,7 +2583,7 @@ start_of_validity"""@en ;
     sh:path cdm:resource_legal_interpretes_authoritatively_resource_legal .
 
 lamd:md_KEYWORD a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Field used in the cataloguing methodology for  classification and search purposes. Keywords are usually extracted from the titles of documents."@en ;
     skos:inScheme lamd:DocumentProperty ;
@@ -2592,7 +2592,7 @@ lamd:md_KEYWORD a skos:Concept ;
     sh:path skos:prefLabel .
 
 lamd:md_LABEL a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "LABEL" ;
@@ -2604,7 +2604,7 @@ lamd:md_LB a skos:Concept ;
         lamd:res_FKoDKoyFRiRP6VfqvMYLAc,
         lamd:res_L6fcUTgDsggLcjNqFZSp3A,
         lamd:res_euS4CzWJcdUV7FDPQYmd3V ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This link contains identifier (CELEX, eli, cellar id,…) of the act(s) constituting the legal basis of the document."@en ;
     skos:editorialNote """10/07/2015: Legal basis – documents referring to a protocol attached to the treaties 
@@ -2651,7 +2651,7 @@ The legal basis for EFTA case law is usually a specific article of EFTA agreemen
     sh:path cdm:resource_legal_based_on_resource_legal .
 
 lamd:md_LF a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field indicates the authentic language version of an act or a European Court case. It indicates also the language of the corrigenda (this is applicable only from April 2015)."@en ;
     skos:example "<cdm:resource_legal_uses_originally_language rdf:resource=\"http://publications.europa.eu/resource/authority/language/SPA\"/>" ;
@@ -2667,7 +2667,7 @@ This field is relevant also for the communications on EU case law and corrigenda
     sh:path cdm:resource_legal_uses_originally_language .
 
 lamd:md_LG a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "This field concerns documents emanating from the European Parliament, specifically EP questions (Sector 9) and resolutions (Sector 5)."@en ;
     skos:editorialNote """04/11/2019: Check the values used in this field
@@ -2688,7 +2688,7 @@ This field was introduced during the first legislature, i.e. the first universal
     sh:path cdm:term_parliamentary .
 
 lamd:md_LO a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Court of Justice of the European Union documents: the field indicates when the document was lodged with the Registrar of the EU Court of Justice (or EFTA Court).
 
@@ -2708,7 +2708,7 @@ On 3 July 2013, the Commission decided to consult the European Economic and Soci
     sh:path cdm:resource_legal_date_request_opinion .
 
 lamd:md_MI a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field contains general miscellaneous information that varies greatly according to the type of document and EUR-Lex sector."@en ;
     skos:example "<cdm:resource_legal_information_miscellaneous rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">JOIN 2014/0034</cdm:resource_legal_information_miscellaneous>" ;
@@ -2763,7 +2763,7 @@ The CELEX number of the directive or ECSC recommendation concerned by the Member
     sh:path cdm:resource_legal_information_miscellaneous .
 
 lamd:md_NA a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field is relevant for EU case law and national case law. It is not relevant for announcements on EU case law published in the Official Journal. It  shows the country of origin of the applicant, the defendant or the court referring the case (EU case-law). "@en ;
     skos:inScheme lamd:DocumentProperty ;
@@ -2776,7 +2776,7 @@ lamd:md_NA a skos:Concept ;
 
 lamd:md_NF a skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_YRvJTfrEnjtjxoKWNzVPeG ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """This field contains the date of notification of directives and decisions which specify to whom they are addressed. 
 
@@ -2889,7 +2889,7 @@ Some Council acts (decisions or directives which specify to whom they are addres
     sh:path cdm:legislation_secondary_date_notification .
 
 lamd:md_NS a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field provides the date of the debate or the session for European Parliament resolutions, Economic and Social Committee and CR opinions and resolutions."@en ;
     skos:editorialNote """12/12/2018: Changes in cdm proerties EURLEXNEW-3672 The following cdm properies shall be depricated:
@@ -2917,7 +2917,7 @@ lamd:md_OBSOLETE a skos:Concept ;
         lamd:res_NGALrTAwCGdBHbvfPUcFrv,
         lamd:res_QdHUhRjS7p9kGrV23qgjvc,
         lamd:res_TBpwYuuKR3hKLtgDeFPNbF ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Declares as obsolete (CA)
 
@@ -2945,7 +2945,7 @@ famille"""@en ;
     sh:path cdm:resource_legal_renders_obsolete_resource_legal .
 
 lamd:md_OJ_ID a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Identifier of the Official Journal in which was the document published.
 
@@ -2967,7 +2967,7 @@ lamd:md_OPINION_COR a skos:Concept ;
         lamd:res_E4yrZ4ZD9YJmCuPfhHe4o3,
         lamd:res_H3UvBLXA5QLcePkvjUPR5B,
         lamd:res_d8EAPnGH7acJZF9WzxbeCd ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """COR Opinion (XR)
 Link from CoR opinion to relevant Commission proposal. This link contains the CELEX number of the Commission proposal (displayed under Earlier related instruments - EA).
@@ -2986,7 +2986,7 @@ lamd:md_OPINION_EESC a skos:Concept ;
         lamd:res_XwHiZ2ZsPbPSrMK6ZWhWHE,
         lamd:res_hKtq5abHKfALgyYAbKzkLd,
         lamd:res_kaX6YYxBFkm3m4rPeLHMJj ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """EESC Opinion (XC)
 Link from EESC opinion to relevant Commission proposal. This link contains the CELEX number of the Commission proposal (displayed under Earlier related instruments - EA).
@@ -3005,7 +3005,7 @@ lamd:md_OPINION_EP a skos:Concept ;
         lamd:res_UD2qa4JwyYaUuvsJvVEeTZ,
         lamd:res_ZuWJvqURS96zXQv85yDPMP,
         lamd:res_d5cf87JLCgmGfMsrg4ERp3 ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """EP Opinion (XP)
 Link from EP resolution to relevant Commission proposal. This link contains the CELEX number of the Commission proposal (displayed under Earlier related instruments - EA).
@@ -3024,7 +3024,7 @@ lamd:md_OPINION_REQ a skos:Concept ;
         lamd:res_aFxCC8HC4FyVcNhPvtx5zG,
         lamd:res_cnaLiTrBmUJPH4A9pxEY4R,
         lamd:res_eL89KKPWxDuKwBKNghwjC8 ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Request for opinion (KL)
 
@@ -3035,7 +3035,7 @@ This is a link from announcements on EU case law published in the Official Journ
     sh:path cdm:communication_request_opinion_requests_opinion_on_resource_legal .
 
 lamd:md_ORDER a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "The order among siblings under a common parent"@en ;
     skos:inScheme lamd:DocumentProperty ;
@@ -3044,7 +3044,7 @@ lamd:md_ORDER a skos:Concept ;
     sh:path euvoc:order .
 
 lamd:md_PARENT a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:DocumentProperty ;
     skos:notation "PARENT" ;
@@ -3052,7 +3052,7 @@ lamd:md_PARENT a skos:Concept ;
     sh:path skos:broader .
 
 lamd:md_PR a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field is relevant for announcements on EU case law published in the Official Journal. This field contains a descriptor referring to the nature of and where possible the outcome of the proceedings. "@en ;
     skos:example "<j.0:communication_cjeu_has_type_procedure_concept_type_procedure rdf:resource=\"http://publications.europa.eu/resource/authority/fd_100/ANNU\"/>" ;
@@ -3077,7 +3077,7 @@ lamd:md_PRELIMINARY_REQ a skos:Concept ;
         lamd:res_mpUetUefHbG6EFTQtenSdQ,
         lamd:res_mzQCf24qAaJK7R9pdxY7DN,
         lamd:res_nbLJtZXiHeyyGrz9hY8N3V ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Submits a preliminary question about (QL)
 
@@ -3088,7 +3088,7 @@ This is a link from announcements on EU case law published in the Official Journ
     sh:path cdm:communication_case_new_submits_preliminary_question_resource_legal .
 
 lamd:md_PROC a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Link to related procedure (interinstitutional or internal). It contains the identificator of the procedure ."@en ;
     skos:example "<j.0:work_part_of_dossier rdf:resource=\"http://publications.europa.eu/resource/procedure/2015_288\"/>" ;
@@ -3105,7 +3105,7 @@ lamd:md_QUESTION_RELATED a skos:Concept ;
         lamd:res_d622vfpsvA64yaPRjjymQx,
         lamd:res_iRXLDEoSB2hc8xBVqv4DNq,
         lamd:res_iu6kUzaWHZmye53mYFiG78 ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Related question (VV)
 This link contains the CELEX number of related parliamentary question earlier published on EUR-Lex (displayed under Amendment to - MS)"""@en ;
@@ -3126,7 +3126,7 @@ lamd:md_QUESTION_SIMILAR a skos:Concept ;
         lamd:res_JRaBQx4KTV7xsGV8ppQYSX,
         lamd:res_UGhjKj4EPu4eAdAb6vL5mH,
         lamd:res_gwAbdZ7bFFNeUFnQyUhfTD ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Similar question (HH)
 
@@ -3146,7 +3146,7 @@ lamd:md_REESTAB a skos:Concept ;
         lamd:res_X5QYtKLWB7VMYfXfRXCYih,
         lamd:res_cJFxxuuJeAAChPne5fxfhm,
         lamd:res_ijHHsegWYJcbiBADwLy9gP ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Re-establishment (RP) - mainly tarif preferences https://eur-lex.europa.eu/eli/reg/2012/978/oj#d1e721-1-1"@en ;
     skos:editorialNote "07/11/2019: Mainly older acts containing \"re-establishing\" in the title - check DTS=3 AND TI~\"re-establishing\" OR \"reestablishing\" ORDER BY XC DESC"@en ;
@@ -3164,7 +3164,7 @@ lamd:md_REFER_PAR a skos:Concept ;
         lamd:res_fkj4fZSMcHMzmeGD6rAWN5,
         lamd:res_nWBRShoB47sDfB3SHaADxs,
         lamd:res_oQg5zCt7UiTgXaQAXPj2fH ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Partial referral (QQ)"@en ;
     skos:inScheme lamd:DocumentProperty ;
@@ -3177,7 +3177,7 @@ lamd:md_RELATION a skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_PdDYVVLcZvU3XPc4nNhhTu,
         lamd:res_SbdKZpyK8PjmTkkffiqAba,
         lamd:res_cLsLP4Ami96vUBUBLgS4NU ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Relation (RN)
 This link contains the CELEX number of acts related to the given act (displayed under Related documents - RD).
@@ -3243,7 +3243,7 @@ Such cases should be covered by the following relation (with annotation type_of_
     sh:path cdm:work_related_to_work .
 
 lamd:md_REP a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Indicator for the extraction of titles for the production of the Directory.
 This field indicates whether an act is basing (containing anonomous provisions) or amending (not containing antonomous provisions and just amending previous act(s))."""@en ;
@@ -3292,7 +3292,7 @@ lamd:md_REPEAL a skos:Concept ;
         lamd:res_JmoM5q6d5J7WJYuPxZMhjn,
         lamd:res_ZVSvayiCVzPKCjHG2C5Lre,
         lamd:res_hH24vUEJK5yDZ4pt57EAvw ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Repeal (AA)
 This link contains the CELEX number of earlier acts repealed by the given act.
@@ -3323,7 +3323,7 @@ lamd:md_REPEAL_IMP a skos:Concept ;
         lamd:res_jmezpCrBLt697z4aBs5Hc3,
         lamd:res_joPhHPN98CK6XKZcR6B99i,
         lamd:res_nGbQSJrNTLDZDutTU6a6xZ ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Implicit repeal (AI)
 This link contains the CELEX number of earlier acts repealed by the given act.
@@ -3358,7 +3358,7 @@ lamd:md_REPLACEMENT a skos:Concept ;
         lamd:res_P4fumWFYiNvXefLB6yvMtS,
         lamd:res_ienTWNb5ezje6UBzQcCgof,
         lamd:res_nFZyLMvrJcZ32RPe9U5HFf ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Replacement (RR)
 This link contains the CELEX number of earlier acts modified by the given act (replacement).
@@ -3387,7 +3387,7 @@ famille"""@en ;
     sh:path cdm:resource_legal_replaces_resource_legal .
 
 lamd:md_REPPORTEUR a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field contains a name of the person (EP member or member of CoR or EESC) who reports on the relevant act."@en ;
     skos:editorialNote """04/11/2019: cdm properties
@@ -3422,7 +3422,7 @@ lamd:md_REVIEW_REQ a skos:Concept ;
         lamd:res_L4mKoJNVWk95ESrpCZFftD,
         lamd:res_VD67XRvjntRaX9ybvBzCGw,
         lamd:res_ec8omdCHsqjoGxDzVsKoPS ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Request to review the judgment (RL)
 
@@ -3433,7 +3433,7 @@ This is a link from announcements on EU case law published in the Official Journ
     sh:path cdm:communication_case_new_requests_review_of_decision_case-law .
 
 lamd:md_RI a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Internal reference used for sector 5 documents from EESC."@en ;
     skos:editorialNote "04/11/2019: Check how this field is used and whether it is needed or not. Check also IMMC."@en ;
@@ -3444,7 +3444,7 @@ lamd:md_RI a skos:Concept ;
     sh:path cdm:resource_legal_position_eesc .
 
 lamd:md_RJ_NEW a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """EU Case law directory code is a specific directory classification for EU case law. 
 
@@ -3463,7 +3463,7 @@ There are two different version of the EU case law directory:
 lamd:md_RP a skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_GYkMmegohMQPqBKop8CLh5,
         lamd:res_ZQA3Ciu5LeKGP2AHXCLAUS ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Date of the answer of the institution to a parliamentary question.
 
@@ -3478,7 +3478,7 @@ The date has format YYYY-MM-DD."""@en ;
     sh:path cdm:question_parliamentary_date_reply .
 
 lamd:md_RS a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "The Commission DG or DGs, author of a Commission proposal. "@en ;
     skos:editorialNote """04/11/2019: Check cdm properties, which are still used?
@@ -3510,7 +3510,7 @@ The source to be used is legislative procedure (Leading service - cdm:event_lega
 
 lamd:md_SG a skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_U9iuze9DMANQgz546yQpki ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Date of signature field provides the date or dates of the signing of an legislative act, agreement or EU budget. This field may also contain a reference to the place where the agreement was signed.
 
@@ -3535,7 +3535,7 @@ lamd:md_SUSPEND a skos:Concept ;
         lamd:res_Yv2VuJErHPRmdDUssiB7xN,
         lamd:res_cARSoALNzJkuZXqkj6Sfuf,
         lamd:res_dmAmibKkCURdSJ6obJQfE2 ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Suspension (SS) - mainly tarif preferences https://eur-lex.europa.eu/eli/reg/2012/978/oj#d1e721-1-1 or rstrictive measures"@en ;
     skos:inScheme lamd:DocumentProperty ;
@@ -3552,7 +3552,7 @@ lamd:md_SUSPEND_PAR a skos:Concept ;
         lamd:res_R9A5wjPm9hW4UGSrCJUtyd,
         lamd:res_YA5jPAUcBE3MLZZ2FfxJUW,
         lamd:res_hKrykVf5JEDBqRBKaDf7JU ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Partial suspension (SP) - similar as Suspension"@en ;
     skos:editorialNote "08/11/2019: Diferences between suspension and partial suspension? Is this really needed?"@en ;
@@ -3564,7 +3564,7 @@ lamd:md_SUSPEND_PAR a skos:Concept ;
 
 lamd:md_TP a skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_44PXiu4d8SDEHktyzMtUbT ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Date on which directives (or other acts) have to be implemented by the Member States (transposed into its national law)."@en ;
     skos:editorialNote """31/10/2019: List of relevant subproperties:
@@ -3589,7 +3589,7 @@ Date of transposition: 30/09/2014; At the latest See Art 2
     sh:path cdm:date_transposition .
 
 lamd:md_TT a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "The treaty field contains the name of the treaty/treaties that form the legal basis under which the document has been adopted. This field is linked to the Treaties authority table; no CELEX numbers are used. "@en ;
     skos:editorialNote """04/11/2019: Property cdm:resource_legal_based_on_treaty was used in the past, it has been depricated and replaced by
@@ -3610,7 +3610,7 @@ lamd:md_VALIDITY_EXT a skos:Concept ;
         lamd:res_SvahYFaJkNkLC6yA3QbUwn,
         lamd:res_hK97LdsdTfVcYJWNG6izv7,
         lamd:res_nv7MgTGvCme2EJbpCRmnDU ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Extension of validity (PP)
 This link contains the CELEX number of earlier acts modified by the given act (extension of validity).
@@ -3638,7 +3638,7 @@ famille"""@en ;
     sh:path cdm:resource_legal_extends_validity_of_resource_legal .
 
 lamd:md_VO a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """This field contains the date of vote on decisions or resolutions of the European Parliament or on committees (EESC/CoR) opinions.
 
@@ -3652,7 +3652,7 @@ The date has format YYYY-MM-DD."""@en ;
     sh:path cdm:resource_legal_date_vote .
 
 lamd:md_VV a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Indicator whether a piece of legislation still in force or not in force."@en ;
     skos:editorialNote """04/11/2019: GIL-GM Acts annuled by CdJ decision - VV field - proposal to be prepared
@@ -3676,7 +3676,7 @@ VV is not displayed when there is a date of notification=01/01/1001 (see: NF=01/
 
 This field is generated automatically, based on the end of validity date and date of effect. Values are true or false.
 
-If there is at least one IF ≤ TODAY and at least one EV ≥ TODAY is present in the notice, true is inserted. 
+If there is at least one IF < TODAY and at least one EV > TODAY is present in the notice, true is inserted. 
 If date of entry into force is not yet known (0001-01-01; e.g. cases where it is linked to the date of notification), false is inserted. 
 
 Ephemeral notices are excluded (value EPH present in manifestation_official-journal_part_durability):
@@ -5263,7 +5263,7 @@ lamd:res_oXAvSYqKeBPYTakdN9Acjv a lam:AnnotationConfiguration ;
     sh:name "Annotated with lamd:md_ANN_RL2 at:fd_375"@en .
 
 lamd:md_ANN_ART a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation specifying the article of the treaties or the legal acts constituting the legal basis of the document."@en ;
     skos:example "<annot:article>62</annot:article>" ;
@@ -5273,7 +5273,7 @@ lamd:md_ANN_ART a skos:Concept ;
     sh:path ann:article .
 
 lamd:md_ANN_CLB a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation specifying the fragments of the treaties or the legal acts constituting the legal basis of the document."@en ;
     skos:editorialNote "2019/06/25: Replacement of fd_370 by at:subdivision should be considered."@en ;
@@ -5287,7 +5287,7 @@ lamd:md_ANN_CLB a skos:Concept ;
     sh:path ann:comment_on_legal_basis .
 
 lamd:md_ANN_FCS a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation indicates specific part of this document where a reference to another document or its part is present."@en ;
     skos:editorialNote "2019/06/25: Currently string. Replacement by at:subdivision should be considered."@en ;
@@ -5298,7 +5298,7 @@ lamd:md_ANN_FCS a skos:Concept ;
     sh:path ann:fragment_citing_source .
 
 lamd:md_ANN_FCT a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation indicates  to which specific part of an document refers this document."@en ;
     skos:editorialNote "2019/06/25: Currently string. Replacement by at:subdivision should be considered."@en ;
@@ -5309,7 +5309,7 @@ lamd:md_ANN_FCT a skos:Concept ;
     sh:path ann:fragment_cited_target .
 
 lamd:md_ANN_PAR a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation specifying the paragraph of the treaties or the legal acts constituting the legal basis of the document."@en ;
     skos:example "<annot:paragraph>1</annot:paragraph>" ;
@@ -5319,7 +5319,7 @@ lamd:md_ANN_PAR a skos:Concept ;
     sh:path ann:paragraph .
 
 lamd:md_ANN_SUB a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation specifying the subparagraph of the treaties or the legal acts constituting the legal basis of the document."@en ;
     skos:example "<annot:subparagraph>1</annot:paragraph>" ;
@@ -5329,7 +5329,7 @@ lamd:md_ANN_SUB a skos:Concept ;
     sh:path ann:subparagraph .
 
 lamd:md_ANN_TOD a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation specifying date metadata."@en ;
     skos:editorialNote "2019/06/25: Differences between ann:comment_on_date and ann:type_of_date are not fully clear"@en ;
@@ -5346,7 +5346,7 @@ RP: fd_350"""@en ;
     sh:path ann:type_of_date .
 
 lamd:md_ANN_COD a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation specifying date metadata."@en ;
     skos:editorialNote "2019/06/25: Differences between ann:comment_on_date and ann:type_of_date are not fully clear"@en ;
@@ -5377,7 +5377,7 @@ SG: at:place, at:country"""@en ;
     sh:path ann:comment_on_date .
 
 lamd:md_ANN_EOV a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation indicates end of validity of a specific amendment."@en ;
     skos:inScheme lamd:DocumentProperty ;
@@ -5386,7 +5386,7 @@ lamd:md_ANN_EOV a skos:Concept ;
     sh:path ann:end_of_validity .
 
 lamd:md_ANN_LVL a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation indicates the language version concerned by a corrigendum (for cdm:resource_legal_corrects_resource_legal)."@en ;
     skos:editorialNote "2019/06/25: Currently string. Replacement by at:language should be considered."@en ;
@@ -5397,7 +5397,7 @@ lamd:md_ANN_LVL a skos:Concept ;
     sh:path ann:language_list .
 
 lamd:md_ANN_MDL a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation indicates which specific part of an act is touched by this act (or its part). "@en ;
     skos:editorialNote "2019/06/25: Currently linked to fd_370. Replacement by at:subdivision should be considered."@en ;
@@ -5409,7 +5409,7 @@ lamd:md_ANN_MDL a skos:Concept ;
     sh:path ann:reference_to_modified_location .
 
 lamd:md_ANN_MSL a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation indicating which specific part of this act touches specific part of  another act, only rarely used in the past."@en ;
     skos:editorialNote "2019/06/25: Currently linked to fd_370. Replacement by at:subdivision should be considered."@en ;
@@ -5421,7 +5421,7 @@ lamd:md_ANN_MSL a skos:Concept ;
     sh:path ann:reference_to_modifying_location .
 
 lamd:md_ANN_RL2 a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation contains an additional comment to the relation."@en ;
     skos:example "<annot:role2>{D|http://publications.europa.eu/resource/authority/fd_375/D}</annot:role2>" ;
@@ -5432,7 +5432,7 @@ lamd:md_ANN_RL2 a skos:Concept ;
     sh:path ann:role2 .
 
 lamd:md_ANN_SOV a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """This annotation indicates indicates start of validity of a specific amendment  
 This might be equal to the date of entry into force of the amending act or to the date of its application (if the date of application of the amending act or its relevant part is different as its date of entry into force) or might be directly defined in the amending act."""@en ;
@@ -5442,7 +5442,7 @@ This might be equal to the date of entry into force of the amending act or to th
     sh:path ann:start_of_validity .
 
 lamd:md_ANN_TLT a skos:Concept ;
-    dct:created "2021-01-05"^^xsd:date ;
+    dct:created "2021-01-08"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Indicates the type of metadata field (Amendment to or Earlier related instruments or Related documents)"@en ;
     skos:example "<annot:type_of_link_target>MS</annot:type_of_link_target>" ;
