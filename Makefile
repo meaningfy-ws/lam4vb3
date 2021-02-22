@@ -3,13 +3,14 @@
 #include .env-dev
 
 BUILD_PRINT = \e[1;34mSTEP: \e[0m
-INPUT_EXCEL = resources/input_workbook/LAM_metadata_20200903_JKU.xlsx
+#INPUT_EXCEL = resources/input_workbook/LAM_metadata_20200903_JKU.xlsx
+INPUT_EXCEL = resources/input_workbook/LAM_metadata_20210218_ECO.xlsx
 
 install:
 	@ echo "$(BUILD_PRINT)Installing the requirements"
 	@ pip install --upgrade pip
 	@ pip install -r requirements.txt
-	@ pip install -r requirements-srv.txt
+	@# pip install -r requirements-srv.txt
 	@ docker pull tinkerpop/gremlin-server
 
 lint:
