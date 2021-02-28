@@ -135,12 +135,19 @@ URI_CELEX_COLUMNS = {'PARENT': 'skos:broader', }
 # }
 
 
-COLUMN_ANNOTATION_ASSOCIATIONS = [('DD', 'ANN_COD(DD)'), ('EV', 'ANN_COD(EV)'), ('SG', 'ANN_COD(SG)'), ]
+COLUMN_ANNOTATION_ASSOCIATIONS = [('DD', 'ANN_COD(DD)'),
+                                  ('EV', 'ANN_COD(EV)'),
+                                  ('SG', 'ANN_COD(SG)'),
+                                  ('IF', 'ANN_TOD(IF)'),
+                                  ('IF', 'ANN_COD(IF)')]
 
 ANNOTATION_COLUMNS = {
     'ANN_COD(DD)': 'lamd:md_ANN_COD',
     'ANN_COD(EV)': 'lamd:md_ANN_COD',
     'ANN_COD(SG)': 'lamd:md_ANN_COD',
+    'ANN_TOD(IF)': 'lamd:md_ANN_TOD',
+    'ANN_COD(IF)': 'lamd:md_ANN_COD',
+    'IF': 'lamd:md_IF',
     'DD': 'lamd:md_DD',
     'EV': 'lamd:md_EV',
     'SG': 'lamd:md_SG',
@@ -289,7 +296,8 @@ def create_concepts(df, graph):
                                                                        column_mapping_dict=ANNOTATION_COLUMNS,
                                                                        target_columns=[property_annotation_column],
                                                                        uri_valued_columns=[property_annotation_column],
-                                                                       multi_line_columns=[],
+                                                                       multi_line_columns=list(
+                                                                           ANNOTATION_COLUMNS.keys()), # originally the anotation colums were not treated as multi-line
                                                                        graph=graph)
 
         value_comment_constraint_maker5.make_triples()

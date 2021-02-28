@@ -3,13 +3,14 @@
 #include .env-dev
 
 BUILD_PRINT = \e[1;34mSTEP: \e[0m
-INPUT_EXCEL = resources/input_workbook/LAM_metadata_20200903_JKU.xlsx
+#INPUT_EXCEL = resources/input_workbook/LAM_metadata_20200903_JKU.xlsx
+INPUT_EXCEL = resources/input_workbook/LAM_metadata_20210218_ECO.xlsx
 
 install:
 	@ echo "$(BUILD_PRINT)Installing the requirements"
 	@ pip install --upgrade pip
 	@ pip install -r requirements.txt
-	@ pip install -r requirements-srv.txt
+	@# pip install -r requirements-srv.txt
 	@ docker pull tinkerpop/gremlin-server
 
 lint:
@@ -57,12 +58,12 @@ clear:
 
 
 upload-to-fuseki-meaningfy-ws:
-	@ echo "$(BUILD_PRINT) Uploading the datasets to http://srv.meaningfy.ws:3030/"
-	@ curl -X DELETE --anyauth --user 'admin:admin' 'http://srv.meaningfy.ws:3030/$$/datasets/lam'
-	@ curl --anyauth --user 'admin:admin' -d 'dbType=tdb&dbName=lam'  'http://srv.meaningfy.ws:3030/$$/datasets'
-	@ curl -X POST -H content-type:text/turtle -T data/celex_project_classes_v2.ttl -G 'http://srv.meaningfy.ws:3030/lam/data' --data-urlencode 'graph=http://publications.europa.eu/resources/authority/celex/CelexLegalDocument'
-	@ curl -X POST -H content-type:text/turtle -T data/lam_project_classes_v2.ttl -G 'http://srv.meaningfy.ws:3030/lam/data' --data-urlencode 'graph=http://publications.europa.eu/resources/authority/lam/LAMLegalDocument'
-	@ curl -X POST -H content-type:text/turtle -T data/lam_project_properties_v2.ttl -G 'http://srv.meaningfy.ws:3030/lam/data' --data-urlencode 'graph=http://publications.europa.eu/resources/authority/lam/DocumentProperty'
+	@ echo "$(BUILD_PRINT) Uploading the datasets to http://srv.meaningfy.ws:3010/"
+	@ curl -X DELETE --anyauth --user 'admin:admin' 'http://srv.meaningfy.ws:3010/$$/datasets/lam'
+	@ curl --anyauth --user 'admin:admin' -d 'dbType=tdb&dbName=lam'  'http://srv.meaningfy.ws:3010/$$/datasets'
+	@ curl -X POST -H content-type:text/turtle -T data/celex_project_classes_v2.ttl -G 'http://srv.meaningfy.ws:3010/lam/data' --data-urlencode 'graph=http://publications.europa.eu/resources/authority/celex/CelexLegalDocument'
+	@ curl -X POST -H content-type:text/turtle -T data/lam_project_classes_v2.ttl -G 'http://srv.meaningfy.ws:3010/lam/data' --data-urlencode 'graph=http://publications.europa.eu/resources/authority/lam/LAMLegalDocument'
+	@ curl -X POST -H content-type:text/turtle -T data/lam_project_properties_v2.ttl -G 'http://srv.meaningfy.ws:3010/lam/data' --data-urlencode 'graph=http://publications.europa.eu/resources/authority/lam/DocumentProperty'
 
 
 
