@@ -184,7 +184,7 @@ VALUE_COMMENT_CELEX_COLUMNS = {
     'DTS': 'lam:dts',
     'DTT': 'lam:dtt',
     'DTA': 'lam:dta',
-    'DTN': 'lam:dts',
+    'DTN': 'lam:dtn',
 }
 
 
