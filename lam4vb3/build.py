@@ -1137,8 +1137,12 @@ class ConceptConstraintMaker(ConceptTripleMaker):
                             tuple([cell_subject, SHACL.maxCount, rdflib.Literal("0", datatype=XSD.int)]),
                         ])
                     else:
-                        if self.uri_valued_columns:
-                            cell_value_string = self.graph.qname(cell_value)
+                        if target_column in self.uri_valued_columns:
+                            try:
+                                cell_value_string = self.graph.qname(cell_value)
+                            except ValueError:
+                                # silently failing to parse a URI and providing the value as literal instead
+                                cell_value_string = str(cell_value)
                         else:
                             cell_value_string = str(cell_value)
                         result_triples.extend([
@@ -1236,7 +1240,6 @@ class ConceptMultiColumnConstraintMaker(PlainTripleMaker):
                                           rdflib.Literal(str(name).strip(), lang="en")]), ])
 
         return result_triples
-
 
 
 class ConceptCollectionMaker(PlainTripleMaker):

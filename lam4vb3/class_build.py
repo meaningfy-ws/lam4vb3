@@ -124,6 +124,31 @@ CONSTRAINT_VALUE_COMMENT_COLUMNS = {
     'OPINION_REQ': 'lamd:md_OPINION_REQ',
 }
 
+CONSTRAINT_VALUE_URI_COLUMN_LIST = [
+    "AU",
+    "FM",
+    "DN",
+    "DN_CLASS",
+    "DC",
+    "CT",
+    "CC",
+    "ANN_COD(DD)",
+    "ANN_COD(DH)",
+]
+
+CONSTRAINT_VALUE_MULTI_LINE_COLUMNS_LIST = [
+    "EXAMPLE_CELEX",
+    "AU",
+    "DN",
+    "DC",
+    "CT",
+    "CC",
+    "ANN_COD(DD)",
+    "ANN_COD(DH)",
+    "LB",
+    "CI",
+]
+
 URI_CELEX_COLUMNS = {'PARENT': 'skos:broader', }
 
 # COLLECTION_TARGET_COLUMNS = ["Classification level 1", "Classification level 2", "Classification level 3"]
@@ -180,11 +205,21 @@ LITERAL_CELEX_COLUMNS = {'CODE': 'skos:notation',
                          'COMMENT': 'skos:editorialNote@en',
                          }
 
+# These values shall be mapped onto lamd proxy properties not lam# directly
+# The commented code maintained for quick revert, if necessary
+
+# VALUE_COMMENT_CELEX_COLUMNS = {
+#     'DTS': 'lam:dts',
+#     'DTT': 'lam:dtt',
+#     'DTA': 'lam:dta',
+#     'DTN': 'lam:dtn',
+# }
+
 VALUE_COMMENT_CELEX_COLUMNS = {
-    'DTS': 'lam:dts',
-    'DTT': 'lam:dtt',
-    'DTA': 'lam:dta',
-    'DTN': 'lam:dtn',
+    'DTS': 'lamd:md_DTS',
+    'DTT': 'lamd:md_DTT',
+    'DTA': 'lamd:md_DTA',
+    'DTN': 'lamd:md_DTN',
 }
 
 
@@ -277,8 +312,8 @@ def create_concepts(df, graph):
                                                                    column_mapping_dict=CONSTRAINT_VALUE_COMMENT_COLUMNS,
                                                                    target_columns=list(
                                                                        CONSTRAINT_VALUE_COMMENT_COLUMNS.keys()),
-                                                                   uri_valued_columns=[],
-                                                                   multi_line_columns=[],
+                                                                   uri_valued_columns=CONSTRAINT_VALUE_URI_COLUMN_LIST,
+                                                                   multi_line_columns=CONSTRAINT_VALUE_MULTI_LINE_COLUMNS_LIST,
                                                                    graph=graph)
 
     value_comment_constraint_maker3.make_triples()
@@ -297,7 +332,8 @@ def create_concepts(df, graph):
                                                                        target_columns=[property_annotation_column],
                                                                        uri_valued_columns=[property_annotation_column],
                                                                        multi_line_columns=list(
-                                                                           ANNOTATION_COLUMNS.keys()), # originally the anotation colums were not treated as multi-line
+                                                                           ANNOTATION_COLUMNS.keys()),
+                                                                       # originally the anotation colums were not treated as multi-line
                                                                        graph=graph)
 
         value_comment_constraint_maker5.make_triples()
