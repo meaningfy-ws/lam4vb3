@@ -1092,12 +1092,15 @@ class ConceptConstraintMaker(ConceptTripleMaker):
                     # it should be the list with a single element, the column name, to be compatible with
                     # default uri handler.
                     if len(cell_values) == 1:
-                        cell_subject = lam_utils.generate_uuid_uri(str(row_index) + str([target_column]),
-                                                                   seed=str(self.df.head()) + "",
+                        cell_subject = lam_utils.generate_uuid_uri(str(row_index) + str(target_column),
+                                                                   seed=str(self.df.head()),
                                                                    graph=self.graph, )
                     else:  # also take the cell value into consideration, in case of multi-line cells
+                        # generating one constraint object for the entire cell rather than for each value in particular
+                        # this is possible to control by indicating that the constraint object ID is the
+                        # same for each value because UUID is based on "column + row" rather than "column + row + value"
                         cell_subject = lam_utils.generate_uuid_uri(
-                            str(target_column) + str(row_index) + str(cell_value) + str(cell_comment),
+                            str(target_column) + str(row_index),  # + str(cell_value) + str(cell_comment)
                             seed=str(self.df.head()),
                             graph=self.graph, )
 
