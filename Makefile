@@ -67,6 +67,14 @@ upload-to-fuseki-meaningfy-ws:
 	@ curl -X POST -H content-type:text/turtle -T data/lam_project_classes_v2.ttl -G 'http://srv.meaningfy.ws:3010/lam/data' --data-urlencode 'graph=http://publications.europa.eu/resources/authority/lam/LAMLegalDocument'
 	@ curl -X POST -H content-type:text/turtle -T data/lam_project_properties_v2.ttl -G 'http://srv.meaningfy.ws:3010/lam/data' --data-urlencode 'graph=http://publications.europa.eu/resources/authority/lam/DocumentProperty'
 
+upload-to-fuseki-localhost:
+	@ echo "$(BUILD_PRINT) Uploading the datasets to http://localhost:3010/"
+	@ curl -X DELETE --anyauth --user 'admin:admin' 'http://localhost:3010/$$/datasets/lam'
+	@ curl --anyauth --user 'admin:admin' -d 'dbType=tdb&dbName=lam'  'http://localhost:3010/$$/datasets'
+	@ curl -X POST -H content-type:text/turtle -T data/celex_project_classes_v2.ttl -G 'http://localhost:3010/lam/data' --data-urlencode 'graph=http://publications.europa.eu/resources/authority/celex/CelexLegalDocument'
+	@ curl -X POST -H content-type:text/turtle -T data/lam_project_classes_v2.ttl -G 'http://localhost:3010/lam/data' --data-urlencode 'graph=http://publications.europa.eu/resources/authority/lam/LAMLegalDocument'
+	@ curl -X POST -H content-type:text/turtle -T data/lam_project_properties_v2.ttl -G 'http://localhost:3010/lam/data' --data-urlencode 'graph=http://publications.europa.eu/resources/authority/lam/DocumentProperty'
+
 
 
 # publish-pipy:
