@@ -386,3 +386,4 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+/tests/output/
