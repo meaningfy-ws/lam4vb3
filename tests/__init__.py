@@ -13,7 +13,7 @@ logging.getLogger().setLevel(logging.DEBUG)
 THIS_PROJECT = pathlib.Path(__file__).resolve().parent.parent
 
 INPUT_EXCEL_FILE = (THIS_PROJECT / "tests" / "test_data" / "LAM_metadata_20200903_JKU.xlsx").resolve()
-INPUT_EXCEL_FILE_TEST_DATA = (THIS_PROJECT / "tests" / "test_data" / "cel_mai_bun_fisier_de_la_Andreea.xlsx").resolve()
+INPUT_EXCEL_FILE_TEST_DATA = (THIS_PROJECT / "tests" / "test_data" / "LAM_metadata_20210413_testbed.xlsx").resolve()
 
 LAM_p = "lam_project_properties_v2.ttl"
 LAM_c = "lam_project_classes_v2.ttl"
