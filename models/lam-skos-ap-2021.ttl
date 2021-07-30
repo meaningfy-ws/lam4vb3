@@ -1,0 +1,44 @@
+# baseURI: http://publications.europa.eu/ontology/lam-skos-ap
+# imports: http://purl.org/dc/terms/
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/2008/05/skos-xl
+# imports: http://www.w3.org/ns/shacl#
+
+@prefix : <http://publications.europa.eu/ontology/lam-skos-ap#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://publications.europa.eu/ontology/lam-skos-ap>
+  rdf:type owl:Ontology ;
+  rdfs:comment "LAM-SKOS-AP SHCAL shape 2021" ;
+  rdfs:label "LAM-SKOS-AP SHCAL shape 2021" ;
+  owl:imports dct: ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/2008/05/skos-xl> ;
+  owl:imports sh: ;
+  owl:versionInfo "1.0.0" ;
+.
+skos:ConceptScheme
+  rdf:type sh:NodeShape ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path owl:versionInfo ;
+      sh:maxCount 1 ;
+      sh:name "version info" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path skos:prefLabel ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "pref label" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+.
