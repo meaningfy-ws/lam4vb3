@@ -1,4 +1,5 @@
 # baseURI: http://publications.europa.eu/ontology/lam-skos-ap
+# imports: http://datashapes.org/dash
 # imports: http://purl.org/dc/terms/
 # imports: http://www.w3.org/2004/02/skos/core
 # imports: http://www.w3.org/2008/05/skos-xl
@@ -6,6 +7,8 @@
 
 @prefix : <http://publications.europa.eu/ontology/lam-skos-ap#> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix lam-skos-ap: <http://publications.europa.eu/ontology/lam-skos-ap/#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -14,15 +17,260 @@
 @prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://datashapes.org/dash#cachable>
+  rdfs:subPropertyOf <http://datashapes.org/dash#arg3> ;
+.
 <http://publications.europa.eu/ontology/lam-skos-ap>
   rdf:type owl:Ontology ;
   rdfs:comment "LAM-SKOS-AP SHCAL shape 2021" ;
   rdfs:label "LAM-SKOS-AP SHCAL shape 2021" ;
+  owl:imports <http://datashapes.org/dash> ;
   owl:imports dct: ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:imports <http://www.w3.org/2008/05/skos-xl> ;
   owl:imports sh: ;
   owl:versionInfo "1.0.0" ;
+.
+lam-skos-ap:AnnotationConfiguration
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:subClassOf lam-skos-ap:PropertyShape ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path sh:class ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "class" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
+lam-skos-ap:DocumentProperty
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:subClassOf skos:Concept ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path dct:type ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "type" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path sh:class ;
+      sh:maxCount 1 ;
+      sh:name "class" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path sh:path ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "path" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
+lam-skos-ap:LegalDocumentClass
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:subClassOf skos:Concept ;
+.
+lam-skos-ap:MappingPropertyConfiguration
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:subClassOf lam-skos-ap:PropertyShape ;
+.
+lam-skos-ap:PropertyConfiguration
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:subClassOf lam-skos-ap:PropertyShape ;
+.
+lam-skos-ap:PropertyShape
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:subClassOf owl:Thing ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path dct:created ;
+      sh:maxCount 1 ;
+      sh:name "created" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path skos:editorialNnote ;
+      sh:name "editorial nnote" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path sh:description ;
+      sh:name "description" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path sh:hasValue ;
+      sh:maxCount 1 ;
+      sh:name "has value" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path sh:maxCount ;
+      sh:maxCount 1 ;
+      sh:name "max count" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path sh:minCount ;
+      sh:maxCount 1 ;
+      sh:name "min count" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path sh:name ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "name" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path sh:pattern ;
+      sh:name "pattern" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+.
+lam-skos-ap:classifyWith
+  rdf:type owl:ObjectProperty ;
+  rdfs:range lam-skos-ap:MappingPropertyConfiguration ;
+.
+lam-skos-ap:hasAnnotationConfiguration
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain lam-skos-ap:PropertyShape ;
+  rdfs:range lam-skos-ap:AnnotationConfiguration ;
+.
+lam-skos-ap:hasPropertyConfiguration
+  rdf:type owl:ObjectProperty ;
+  rdfs:range lam-skos-ap:PropertyConfiguration ;
+.
+lam-skos-ap:path
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain lam-skos-ap:PropertyShape ;
+  rdfs:range lam-skos-ap:DocumentProperty ;
+.
+skos:Collection
+  rdf:type sh:NodeShape ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path euvoc:order ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "order" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path dct:created ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "created" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path skos:definition ;
+      sh:maxCount 1 ;
+      sh:name "definition" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path skos:notation ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "notation" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path skos:prefLabel ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "pref label" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+.
+skos:Concept
+  rdf:type sh:NodeShape ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path owl:deprecated ;
+      sh:maxCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path skos:altLabel ;
+      sh:name "alt label" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path skos:changeNote ;
+      sh:name "change note" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path skos:definition ;
+      sh:maxCount 1 ;
+      sh:name "definition" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path skos:editorialNote ;
+      sh:name "editorial note" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path skos:example ;
+      sh:name "example" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path skos:historyNote ;
+      sh:name "history note" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path skos:notation ;
+      sh:name "notation" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path skos:prefLabel ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "pref label" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path skos:scopeNote ;
+      sh:maxCount 1 ;
+      sh:name "scope note" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
 .
 skos:ConceptScheme
   rdf:type sh:NodeShape ;
