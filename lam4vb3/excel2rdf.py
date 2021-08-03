@@ -34,10 +34,11 @@ def transform_properties(input_file, output_folder):
                              header=[0], na_values=[""], keep_default_na=False)
 
     start_time = time.time()
-    property_build.make_property_worksheet(lam_df_properties, lam_df_property_classification, prefixes,
+    return_graph = property_build.make_property_worksheet(lam_df_properties, lam_df_property_classification, prefixes,
                                            pathlib.Path(output_folder) / LAM_p)
-    logging.info(f"Successfully completed the transformation. The output is written into {output_folder / LAM_p}")
+    logging.info(f"Successfully completed the transformation. The output is written into {pathlib.Path(output_folder) / LAM_p}")
     logging.info(f"Elapsed {(time.time() - start_time)} seconds")
+    return return_graph
 
 
 def transform_classes(input_file, output_folder):
@@ -55,10 +56,11 @@ def transform_classes(input_file, output_folder):
                              header=[0], na_values=[""], keep_default_na=False)
 
     start_time = time.time()
-    class_build.make_class_worksheet(lam_df_classes, lam_df_class_classification, prefixes,
+    returned_graph = class_build.make_class_worksheet(lam_df_classes, lam_df_class_classification, prefixes,
                                      pathlib.Path(output_folder) / LAM_c)
-    logging.info(f"Successfully completed the transformation. The output is written into {output_folder / LAM_c}")
+    logging.info(f"Successfully completed the transformation. The output is written into {pathlib.Path(output_folder) / LAM_c}")
     logging.info(f"Elapsed {(time.time() - start_time)} seconds")
+    return returned_graph
 
 
 def transform_celex_classes(input_file, output_folder):
@@ -81,11 +83,11 @@ def transform_celex_classes(input_file, output_folder):
     logging.info(f"Finished reading {len(prefixes)} prefixes")
 
     start_time = time.time()
-    class_build.make_celex_class_worksheet(celex_df_classes, celex_df_class_classification, prefixes,
-                                           pathlib.Path(output_folder) / CELEX_c)
-    logging.info(f"Successfully completed the transformation. The output is written into {output_folder / CELEX_c}")
+    returned_graph = class_build.make_celex_class_worksheet(celex_df_classes, celex_df_class_classification, prefixes,
+                                                            pathlib.Path(output_folder) / CELEX_c)
+    logging.info(f"Successfully completed the transformation. The output is written into {pathlib.Path(output_folder) / CELEX_c}")
     logging.info(f"Elapsed {(time.time() - start_time)} seconds")
-
+    return returned_graph
 
 @click.command()
 @click.argument("input", type=click.Path(exists=True, file_okay=False, dir_okay=True))
