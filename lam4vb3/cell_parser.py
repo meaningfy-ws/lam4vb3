@@ -12,45 +12,22 @@ import re
 
 import pandas as pd
 import rdflib
-from owlrl.RDFS import first
 
 LITERAL_VALUE = "literal_value"
 VALUES = "values"
 COMMENT = "comment"
 MIN_COUNT = "min_count"
 MAX_COUNT = "max_count"
+NAME = "name"
 
 CONTROLLED_LIST = {
-    "Y": {MIN_COUNT: 1},
-    "YU": {MIN_COUNT: 1, MAX_COUNT: 1},
-    "": {},
+    "Y": {MIN_COUNT: 1, NAME: "Mandatory"},
+    "YU": {MIN_COUNT: 1, MAX_COUNT: 1, NAME: "Mandatory unique"},
+    "": {NAME: "Optional"},
     "OU": {MAX_COUNT: 1},
-    "O": {},
-    "N": {MAX_COUNT: 0},
+    "O": {NAME: "Optional"},
+    "N": {MAX_COUNT: 0, NAME: "Forbidden"},
 }
-
-
-def split_by_pipe(string: str) -> tuple:
-    """
-        For a given cell_value (string) split the string by pipe ("|") an return a
-        list a values. It will raise an error if there are more than on pipe
-    """
-    pipe = "|"
-    result_list = string.split(pipe)
-    if len(result_list) > 2:
-        raise ValueError(f"Cannot have more than one pipe (|) separator in the cell value")
-
-    return result_list[0], result_list[1] if len(result_list) > 1 else None
-
-
-def split_lines(string: str) -> list:
-    return list(filter(None, [normalize_spaces(x) for x in string.split("\n")]))
-
-
-def normalize_spaces(string: str):
-    if string:
-        return re.sub(" +", " ", string).lstrip().rstrip()
-    return string
 
 
 def parse_cell(cell_value: str, graph: rdflib.Graph, is_literal=False) -> dict:
@@ -92,6 +69,29 @@ def parse_cell(cell_value: str, graph: rdflib.Graph, is_literal=False) -> dict:
         result[MIN_COUNT] = 1
 
     return result
+
+
+def split_by_pipe(string: str) -> tuple:
+    """
+        For a given cell_value (string) split the string by pipe ("|") an return a
+        list a values. It will raise an error if there are more than on pipe
+    """
+    pipe = "|"
+    result_list = string.split(pipe)
+    if len(result_list) > 2:
+        raise ValueError(f"Cannot have more than one pipe (|) separator in the cell value")
+
+    return result_list[0], result_list[1] if len(result_list) > 1 else None
+
+
+def split_lines(string: str) -> list:
+    return list(filter(None, [normalize_spaces(x) for x in string.split("\n")]))
+
+
+def normalize_spaces(string: str):
+    if string:
+        return re.sub(" +", " ", string).lstrip().rstrip()
+    return string
 
 
 def parse_qname(qname):

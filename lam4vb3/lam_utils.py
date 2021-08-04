@@ -17,3 +17,12 @@ def generate_uuid_uri(value, graph, seed="", prefix=URI_UUID_PREFIX, suffix=URI_
     local_uid = shortuuid.uuid(name=str(seed) + str(value))
     qname = ":" + str(prefix).strip() + str(local_uid) + str(suffix).strip()
     return qname_uri(qname, graph.namespaces())
+
+
+def add_triples_to_graph(result_triples, graph):
+    """
+        just add the triples to a graph
+    :return:
+    """
+    for triple in result_triples:
+        graph.add(triple)
