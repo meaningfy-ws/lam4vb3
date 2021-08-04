@@ -8,7 +8,7 @@
 """ """
 from pprint import pprint
 
-from lam4vb3.build import parse_multi_line_commented_value
+from lam4vb3.cell_parser import parse_multi_line_commented_value
 
 
 def test_parse_multi_line_commented_value():

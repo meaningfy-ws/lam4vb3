@@ -10,6 +10,7 @@ import pandas as pd
 import numpy as np
 import rdflib
 
+import lam4vb3.cell_parser
 from lam4vb3 import build
 
 
@@ -134,23 +135,23 @@ class MyTestCase(unittest.TestCase):
 
     def test_multi_line_values(self):
         for l in self.multi_line_literals:
-            assert isinstance(build.parse_multi_line_value(l, language="en")[0],
+            assert isinstance(lam4vb3.cell_parser.parse_multi_line_value(l, language="en")[0],
                               rdflib.Literal), "expecting literals"
 
     def test_multi_line_uris(self):
         for l in self.multi_line_uris:
-            assert isinstance(build.parse_multi_line_value(l, graph=self.graph)[0],
+            assert isinstance(lam4vb3.cell_parser.parse_multi_line_value(l, graph=self.graph)[0],
                               rdflib.URIRef), "expecting URIS"
 
     def test_parse_value_and_comment_cell(self):
         for l in self.multi_line_parse_value_and_comment_cell_examples:
-            assert len(build.parse_commented_value(l)) == 2, "expecting tuples"
+            assert len(lam4vb3.cell_parser.parse_commented_value(l)) == 2, "expecting tuples"
 
-        assert build.parse_commented_value(self.multi_line_parse_value_and_comment_cell_examples[1])[1] is None, \
+        assert lam4vb3.cell_parser.parse_commented_value(self.multi_line_parse_value_and_comment_cell_examples[1])[1] is None, \
             "expecting a tuple with second value missing"
 
         for l in self.multi_line_parse_value_and_comment_cell_examples:
-            assert 1 <= len(build.parse_multi_line_commented_value(l)) <= 2, "expecting one or two tuples"
+            assert 1 <= len(lam4vb3.cell_parser.parse_multi_line_commented_value(l)) <= 2, "expecting one or two tuples"
 
 
 if __name__ == '__main__':

@@ -5,7 +5,6 @@ Author: Eugeniu Costetchi
 Email: costezki.eugen@gmail.com
 """
 import collections
-import re
 import uuid
 import warnings
 from abc import ABC, abstractmethod
@@ -14,7 +13,10 @@ import pandas as pd
 import rdflib
 from rdflib.namespace import RDF, SKOS, DCTERMS, XSD
 
+import lam4vb3.cell_parser
 from lam4vb3 import lam_utils
+from lam4vb3.cell_parser import parse_value, parse_multi_line_value, parse_commented_value, \
+    parse_multi_line_commented_value
 
 SHACL = rdflib.Namespace("http://www.w3.org/ns/shacl#")
 
@@ -102,7 +104,7 @@ def relate_subject_sets(subject_index, object_index, graph, predicate="skos:rela
     :return:
     """
 
-    property_uri = lam_utils.qname_uri(predicate, graph.namespaces())
+    property_uri = lam4vb3.cell_parser.qname_uri(predicate, graph.namespaces())
     result_triples = []
 
     for index, subject_uri in subject_index.items():
@@ -195,10 +197,10 @@ class ColumnTripleMaker(TripleMaker, ABC):
         self.graph = graph
 
     def handle_subject(self, cell_value) -> rdflib.URIRef:
-        return lam_utils.qname_uri(cell_value, self.graph.namespaces())
+        return lam4vb3.cell_parser.qname_uri(cell_value, self.graph.namespaces())
 
     def handle_predicate(self, column_name) -> rdflib.URIRef:
-        return lam_utils.qname_uri(self.column_mapping_dict[column_name], self.graph.namespaces())
+        return lam4vb3.cell_parser.qname_uri(self.column_mapping_dict[column_name], self.graph.namespaces())
 
     def handle_data_type_from_predicate_signature(self, column_name) -> rdflib.URIRef:
         """
@@ -214,7 +216,7 @@ class ColumnTripleMaker(TripleMaker, ABC):
         :param column_name: string value of a dataframe column title. Resolve from the mapping table.
         :return: str
         """
-        return lam_utils.qname_lang(self.column_mapping_dict[column_name])
+        return lam4vb3.cell_parser.qname_lang(self.column_mapping_dict[column_name])
 
     def make_column_triples(self, target_column: "the target column",
                             error_bad_lines: "should the bad lines be silently passed or raised as exceptions" = True,
@@ -324,11 +326,11 @@ class ReifiedColumnTripleMaker(ColumnTripleMaker):
                            data_type=data_type, )
 
     def make_cell_triples(self, subject, predicate, oobject):
-        r_class = lam_utils.qname_uri(self.reification_class, self.graph.namespaces())
-        r_property = lam_utils.qname_uri(self.reification_property, self.graph.namespaces())
+        r_class = lam4vb3.cell_parser.qname_uri(self.reification_class, self.graph.namespaces())
+        r_property = lam4vb3.cell_parser.qname_uri(self.reification_property, self.graph.namespaces())
 
         # use the default namespace for intermediary/reification nodes
-        r_uri = lam_utils.qname_uri(":" + str(uuid.uuid4()), self.graph.namespaces())
+        r_uri = lam4vb3.cell_parser.qname_uri(":" + str(uuid.uuid4()), self.graph.namespaces())
         return [
             tuple([subject, predicate, r_uri]),
             tuple([r_uri, RDF.type, r_class]),
@@ -344,82 +346,6 @@ class ReifiedColumnTripleMaker(ColumnTripleMaker):
 #     :return:
 #     """
 #     return namespace[str.strip(value).replace(" ", "-")]
-
-
-def parse_value(value, graph=None, language=None, data_type=None):
-    """
-        create a resource either as URI or Literal
-    :param value:
-    :param graph:
-    :param language:
-    :param data_type:
-    :return: URIRef or Literal
-    """
-    if value and not pd.isna(value):
-        if graph is not None:
-            try:
-                return lam_utils.qname_uri(str.strip(value), graph.namespaces())
-            except Exception:
-                return rdflib.URIRef(str.strip(value))
-        elif language:
-            return rdflib.Literal(value, lang=language)
-        elif data_type:
-            return rdflib.Literal(value, datatype=data_type)
-        else:
-            return rdflib.Literal(value)
-
-
-def parse_multi_line_value(multi_line_value, graph=None, language=None, data_type=None):
-    """
-
-    :param multi_line_value:
-    :param graph:
-    :param language:
-    :param data_type:
-    :return:
-    """
-    return [parse_value(x, graph=graph, language=language, data_type=data_type)
-            for x in re.split(r"[\n,]", multi_line_value) if x]
-
-
-def parse_commented_value(commented_value, graph=None, language=None, data_type=None) -> (
-        "cell value", "cell comment"):
-    """
-        return the tuple (value,comment) spiting the cell_value into the actual value and the comment,
-        which is the part after the special character pipe (|) or tilda (~). If no comment is provided None is returned
-
-        examples:
-            value1 | with a comment
-            value2 ~ with another comment
-
-    :param data_type:
-    :param language:
-    :param graph: should the value be interpreted as URI, then use this graph for name space intepretation
-    :param commented_value: the string value of the cell
-    :return: tuple("cell value", "cell comment")
-    """
-    parts = [x for x in re.split(r"[~\|]", commented_value) if x]
-    value = parts[0] if parts else None
-    comment = parts[1] if len(parts) > 1 else None
-    parsed_value = parse_value(value, graph=graph, language=language, data_type=data_type)
-    parsed_comment = parse_value(comment, language=language, )
-    return parsed_value, parsed_comment
-
-
-def parse_multi_line_commented_value(multi_line_commented_value, graph=None, language=None,
-                                     data_type=None) -> [("cell value", "cell comment")]:
-    """
-        return a list of tuples where each tuple is a (value,comment) split
-    :param multi_line_commented_value:
-    :param graph:
-    :param language:
-    :param data_type:
-    :return:
-    """
-
-    lines = [str.strip(x) for x in re.split(r"\n", multi_line_commented_value) if x]
-    return [parse_commented_value(x, graph=graph, language=language, data_type=data_type) for x in lines
-            if x]
 
 
 class MultiColumnTripleMaker(TripleMaker):
@@ -474,7 +400,7 @@ class MultiColumnTripleMaker(TripleMaker):
         if self.subject_source in self.df.columns:
             try:
                 # try to parse it as a qualified uri
-                return lam_utils.qname_uri(self.df.loc[row_index, self.subject_source], self.graph.namespaces())
+                return lam4vb3.cell_parser.qname_uri(self.df.loc[row_index, self.subject_source], self.graph.namespaces())
             except Exception:
                 # if not then dont raise exception but use the values for random generation instead
                 return lam_utils.generate_uuid_uri(self.df.loc[row_index, self.subject_source],
@@ -486,14 +412,14 @@ class MultiColumnTripleMaker(TripleMaker):
                                            graph=self.graph, )
 
     def handle_predicate(self, column_name) -> rdflib.URIRef:
-        return lam_utils.qname_uri(self.column_mapping_dict[column_name], self.graph.namespaces())
+        return lam4vb3.cell_parser.qname_uri(self.column_mapping_dict[column_name], self.graph.namespaces())
 
     def handle_data_type_from_predicate_signature(self, column_name) -> rdflib.URIRef:
         # return XSD.string
         return None
 
     def handle_literal_language_from_predicate_signature(self, column_name) -> str:
-        return lam_utils.qname_lang(self.column_mapping_dict[column_name])
+        return lam4vb3.cell_parser.qname_lang(self.column_mapping_dict[column_name])
 
     def handle_object(self, row_index, target_column, language=None, data_type=None):
 
@@ -533,7 +459,7 @@ class MultiColumnTripleMaker(TripleMaker):
         :return:
         """
         result_triples = []
-        row_subject_class = lam_utils.qname_uri(self.subject_class, self.graph.namespaces())
+        row_subject_class = lam4vb3.cell_parser.qname_uri(self.subject_class, self.graph.namespaces())
         for index, row in self.df.iterrows():
             row_subject = self.subject_index()[index]  # self.handle_subject(index, seed=str(self.target_columns))
 
@@ -655,7 +581,7 @@ class AbstractTripleMaker(ABC):
             elif self.subject_source in self.df.columns:
                 try:
                     # try to parse it as a qualified uri
-                    return lam_utils.qname_uri(self.df.loc[row_index, self.subject_source], self.graph.namespaces())
+                    return lam4vb3.cell_parser.qname_uri(self.df.loc[row_index, self.subject_source], self.graph.namespaces())
                 except Exception:
                     # if not then dont raise exception but use the values for random generation instead
                     return lam_utils.generate_uuid_uri(self.df.loc[row_index, self.subject_source],
@@ -672,7 +598,7 @@ class AbstractTripleMaker(ABC):
         :param target_column: string value of a dataframe column title. Resolve from mapping table
         :return: rdflib.URIRef
         """
-        return lam_utils.qname_uri(self.column_mapping_dict[target_column], self.graph.namespaces())
+        return lam4vb3.cell_parser.qname_uri(self.column_mapping_dict[target_column], self.graph.namespaces())
 
     def handle_data_type_from_predicate_signature(self, target_column) -> rdflib.URIRef:
         """
@@ -686,7 +612,7 @@ class AbstractTripleMaker(ABC):
         :param target_column: string value of a dataframe column title. Resolve from the mapping table.
         :return: str
         """
-        return lam_utils.qname_lang(self.column_mapping_dict[target_column])
+        return lam4vb3.cell_parser.qname_lang(self.column_mapping_dict[target_column])
 
     @abstractmethod
     def handle_cell_value(self, row_index, target_column):
@@ -818,7 +744,7 @@ class PlainTripleMaker(AbstractTripleMaker):
         """
         # if any cells has values make the row triples otherwise skip teh row triples
         if not self.df.loc[row_index, self.target_columns].isnull().values.all():
-            row_subject_class = lam_utils.qname_uri(self.subject_class, self.graph.namespaces())
+            row_subject_class = lam4vb3.cell_parser.qname_uri(self.subject_class, self.graph.namespaces())
 
             row_subject = self.handle_row_uri(row_index=row_index, )
 
@@ -944,7 +870,7 @@ class ConceptTripleMaker(PlainTripleMaker):
         result_triples = super().make_row_triples(row_index=row_index)
         if self.subject_in_scheme:
             row_subject = self.handle_row_uri(row_index=row_index, )
-            row_concept_scheme = lam_utils.qname_uri(self.subject_in_scheme, self.graph.namespaces())
+            row_concept_scheme = lam4vb3.cell_parser.qname_uri(self.subject_in_scheme, self.graph.namespaces())
             result_triples.append(tuple([row_subject, SKOS.inScheme, row_concept_scheme]))
         return result_triples
 
@@ -986,8 +912,8 @@ class ConceptReifiedValueMaker(ConceptTripleMaker):
     def make_cell_triples(self, row_index, target_column):
         row_subject = self.handle_row_uri(row_index=row_index)
         column_predicate = self.handle_column_predicate(target_column=target_column)
-        reified_value_property_uri = lam_utils.qname_uri(self.reified_value_property, self.graph.namespaces())
-        reified_resource_class_uri = lam_utils.qname_uri(self.reified_resource_class, self.graph.namespaces())
+        reified_value_property_uri = lam4vb3.cell_parser.qname_uri(self.reified_value_property, self.graph.namespaces())
+        reified_resource_class_uri = lam4vb3.cell_parser.qname_uri(self.reified_resource_class, self.graph.namespaces())
 
         result_triples = []
 
@@ -1074,11 +1000,11 @@ class ConceptConstraintMaker(ConceptTripleMaker):
     def make_cell_triples(self, row_index, target_column):
         row_subject = self.handle_row_uri(row_index=row_index)
         column_predicate = self.handle_column_predicate(target_column=target_column)
-        constraint_property_uri = lam_utils.qname_uri(self.constraint_property, self.graph.namespaces())
-        constraint_class_uri = lam_utils.qname_uri(self.constraint_class, self.graph.namespaces())
-        constraint_comment_uri = lam_utils.qname_uri(self.constraint_comment, self.graph.namespaces())
+        constraint_property_uri = lam4vb3.cell_parser.qname_uri(self.constraint_property, self.graph.namespaces())
+        constraint_class_uri = lam4vb3.cell_parser.qname_uri(self.constraint_class, self.graph.namespaces())
+        constraint_comment_uri = lam4vb3.cell_parser.qname_uri(self.constraint_comment, self.graph.namespaces())
 
-        constraint_path_property_uri = lam_utils.qname_uri(self.constraint_path_property, self.graph.namespaces())
+        constraint_path_property_uri = lam4vb3.cell_parser.qname_uri(self.constraint_path_property, self.graph.namespaces())
 
         result_triples = []
 
@@ -1235,8 +1161,8 @@ class ConceptMultiColumnConstraintMaker(PlainTripleMaker):
 
         if result_triples:
             result_triples.extend(super().make_row_triples(row_index=row_index))
-            constraint_property_uri = lam_utils.qname_uri(self.constraint_property, self.graph.namespaces())
-            constraint_class_uri = lam_utils.qname_uri(self.constraint_class, self.graph.namespaces())
+            constraint_property_uri = lam4vb3.cell_parser.qname_uri(self.constraint_property, self.graph.namespaces())
+            constraint_class_uri = lam4vb3.cell_parser.qname_uri(self.constraint_class, self.graph.namespaces())
             result_triples.extend([tuple([row_subject, constraint_property_uri, target_cells_subject]),
                                    tuple([target_cells_subject, RDF.type, constraint_class_uri]),
                                    tuple([target_cells_subject, SHACL.name,
@@ -1297,8 +1223,8 @@ class ConceptCollectionMaker(PlainTripleMaker):
 
         row_subject = self.handle_row_uri(row_index)
 
-        collection_class_uri = lam_utils.qname_uri(self.collection_class, self.graph.namespaces())
-        membership_predicate_uri = lam_utils.qname_uri(self.membership_predicate, self.graph.namespaces())
+        collection_class_uri = lam4vb3.cell_parser.qname_uri(self.collection_class, self.graph.namespaces())
+        membership_predicate_uri = lam4vb3.cell_parser.qname_uri(self.membership_predicate, self.graph.namespaces())
 
         preceding_subject_uri = None
         for column in self.target_columns:

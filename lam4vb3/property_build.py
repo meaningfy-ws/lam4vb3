@@ -13,6 +13,7 @@ import rdflib
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, XMLNS, XSD
 
 # from lam4vb3 import lam_utils, build
+import lam4vb3.cell_parser
 from lam4vb3 import lam_utils, build, collection_build
 
 LITERAL_COLUMNS = {
@@ -80,7 +81,7 @@ def create_cs(graph):
     """
         create the concept scheme definition
     """
-    cs = lam_utils.qname_uri(LAM_MD_CS, graph.namespaces())
+    cs = lam4vb3.cell_parser.qname_uri(LAM_MD_CS, graph.namespaces())
     graph.add((cs, RDF.type, SKOS.ConceptScheme))
     graph.add((cs, SKOS.prefLabel, rdflib.Literal("Document metadata")))
 
