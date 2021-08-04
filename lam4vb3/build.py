@@ -827,6 +827,7 @@ class InverseTripleMaker(AbstractTripleMaker):
     def handle_cell_value(self, row_index, target_column):
         cell_value = self.df.loc[row_index, target_column]
         if cell_value and pd.notna(cell_value):
+
             return [parse_value(cell_value,
                                 graph=self.graph,
                                 language=None,

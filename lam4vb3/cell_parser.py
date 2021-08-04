@@ -69,7 +69,9 @@ def parse_cell(cell_value: str, graph: rdflib.Graph, is_literal=False) -> dict:
     """
     result = {}
     if is_literal:
-        if "|" not in cell_value:
+        if cell_value == "":
+            return result
+        elif "|" not in cell_value:
             return {LITERAL_VALUE: cell_value}
         else:
             raise ValueError(

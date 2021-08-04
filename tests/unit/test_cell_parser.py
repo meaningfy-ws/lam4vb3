@@ -71,6 +71,15 @@ def test_cardinality_value_parser(get_lam_classes_rdf):
     assert "no empty list of values" in result[COMMENT]
     assert MIN_COUNT not in result
 
+    example3 = ""
+
+    result = parse_cell(example3, get_lam_classes_rdf)
+
+    assert LITERAL_VALUE not in result
+    assert VALUES not in result
+    assert COMMENT not in result
+    assert result == {}
+
     counter_example1 = """XYZ | cardinality specifications that are not in the foreseen controlled list"""
 
     with pytest.raises(ValueError):
@@ -93,6 +102,12 @@ def test_literal_value_parser(get_lam_classes_rdf):
     assert COMMENT not in result
     assert MIN_COUNT not in result
     assert MAX_COUNT not in result
+
+    example2 = ""
+
+    result = parse_cell(example2, get_lam_classes_rdf, is_literal=True)
+
+    assert result == {}
 
     counter_example = """text with | pipe | separator inside"""
 

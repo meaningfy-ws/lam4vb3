@@ -145,13 +145,8 @@ class MyTestCase(unittest.TestCase):
 
     def test_parse_value_and_comment_cell(self):
         for l in self.multi_line_parse_value_and_comment_cell_examples:
-            assert len(lam4vb3.cell_parser.parse_commented_value(l)) == 2, "expecting tuples"
-
-        assert lam4vb3.cell_parser.parse_commented_value(self.multi_line_parse_value_and_comment_cell_examples[1])[1] is None, \
-            "expecting a tuple with second value missing"
-
-        for l in self.multi_line_parse_value_and_comment_cell_examples:
-            assert 1 <= len(lam4vb3.cell_parser.parse_multi_line_commented_value(l)) <= 2, "expecting one or two tuples"
+            assert isinstance(lam4vb3.cell_parser.parse_cell(l, self.graph), dict), "expecting dictionary"
+            assert lam4vb3.cell_parser.parse_cell(l, self.graph)
 
 
 if __name__ == '__main__':
