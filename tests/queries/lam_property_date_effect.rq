@@ -1,0 +1,20 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX lam: <http://publications.europa.eu/ontology/lam-skos-ap#>
+PREFIX lamd: <http://publications.europa.eu/resources/authority/lam/>
+PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>
+PREFIX at: <http://publications.europa.eu/resource/authority/>
+PREFIX ann: <http://publications.europa.eu/ontology/annotation#>
+PREFIX la: <https://linked.art/ns/terms/>
+
+# testing Date of effect LAM properties
+
+ASK
+WHERE {
+  VALUES ?subject {lamd:md_IF}
+  #?s ?predicate ann:type_of_date .
+  ?subject lam:hasAnnotationConfiguration  ?ac  .
+  ?ac lam:path lamd:md_ANN_TOD .
+  ?ac sh:minCount 1 .
+  ?ac sh:class at:fd_335 .
+}
