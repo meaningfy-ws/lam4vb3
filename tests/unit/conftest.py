@@ -36,3 +36,12 @@ def shacl_shapes() -> rdflib.Graph:
     result_graph.parse(source=str(SHACL_SHAPES_2021))
     return result_graph
 
+@pytest.fixture(scope="session")
+def lam_property_author_query():
+    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_property_author.rq"
+    return path_to_query_file.read_text()
+
+@pytest.fixture(scope="session")
+def lam_property_author_example_query():
+    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_property_author_example.rq"
+    return path_to_query_file.read_text()

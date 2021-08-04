@@ -100,8 +100,8 @@ lam-skos-ap:PropertyShape
     ] ;
   sh:property [
       rdf:type sh:PropertyShape ;
-      sh:path skos:editorialNnote ;
-      sh:name "editorial nnote" ;
+      sh:path skos:editorialNote ;
+      sh:name "editorial note" ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
