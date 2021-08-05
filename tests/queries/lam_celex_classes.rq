@@ -1,0 +1,23 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX lam: <http://publications.europa.eu/ontology/lam-skos-ap#>
+PREFIX celexd: <http://publications.europa.eu/resources/authority/celex/>
+
+# testing celexd:c_0 LAM CELEX classes
+
+ASK
+WHERE {
+  VALUES ?subject {celexd:c_5_AG_OJC}
+  ?subject ?predicate ?object .
+  ?subject a skos:Concept, lam:DocumentProperty .
+  ?subject skos:inScheme celexd:CelexLegalDocument, lam:DocumentProperty .
+  ?subject skos:topConceptOf lam:DocumentProperty .
+  ?subject skos:notation ?notation .
+  ?subject skos:prefLabel ?prefLabel .
+  ?subject skos:broader celexd:c_5_AG .
+  celexd:class_5_CONSIL skos:member ?subject .
+  ?subject lam:hasPropertyConfiguration ?prop_config .
+  ?subject skos:editorialNote ?editorial_note .
+  ?subject skos:example ?example .
+}
+
+# do CELEX classes need to be a skos:concept, skos:inScheme or skos:topConceptOf a Document Property?
