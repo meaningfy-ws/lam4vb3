@@ -6,3 +6,6 @@
 # Email: costezki.eugen@gmail.com 
 
 """ """
+import rdflib
+
+SHACL = rdflib.Namespace("http://www.w3.org/ns/shacl#")

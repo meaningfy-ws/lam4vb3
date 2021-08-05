@@ -687,6 +687,8 @@ class ConceptConstraintMaker(ConceptTripleMaker):
 
 class ConceptMultiColumnConstraintMaker(PlainTripleMaker):
     """
+        # TODO: deprecate; no longer needed after Excel refactoring
+
         creates an object from the cells of the target columns and attach it to the row id uri.
 
         row_subject a subject_class .
@@ -772,84 +774,3 @@ class ConceptMultiColumnConstraintMaker(PlainTripleMaker):
         return result_triples
 
 
-class ConceptCollectionMaker(PlainTripleMaker):
-    """
-        @Deprecated
-        creates from the target columns collections and adds the concept to the last collection.
-        The target column list is assumed to represent a sequence of subsumtions where the first
-        is the most coarse and the last the most granular collection.
-    """
-
-    def __init__(self, df,
-                 column_mapping_dict,
-                 graph,
-                 target_columns=[],
-                 subject_source="URI",
-                 subject_class="skos:Concept",
-                 membership_predicate="skos:member",
-                 collection_class="skos:Collectiopn",
-                 ):
-        """
-
-        :param df:
-        :param column_mapping_dict: the collection lexicalisation property
-        :param graph:
-        :param target_columns: which columns represent collections and in which order
-        :param subject_source:
-        :param subject_class:
-        """
-        warnings.warn("deprecated", DeprecationWarning)
-        super().__init__(df=df,
-                         column_mapping_dict=column_mapping_dict,
-                         graph=graph,
-                         target_columns=target_columns,
-                         uri_valued_columns=[],
-                         subject_source=subject_source,
-                         subject_class=subject_class,
-                         multi_line_columns=[], )
-        self.collection_class = collection_class
-        self.membership_predicate = membership_predicate
-
-    def make_cell_triples(self, row_index, target_column):
-        """
-
-        :param row_index:
-        :param target_column:
-        :return:
-        """
-        return []
-
-    def make_row_triples(self, row_index):
-        result_triples = super().make_row_triples(row_index=row_index)
-
-        row_subject = self.handle_row_uri(row_index)
-
-        collection_class_uri = lam4vb3.cell_parser.qname_uri(self.collection_class, self.graph.namespaces())
-        membership_predicate_uri = lam4vb3.cell_parser.qname_uri(self.membership_predicate, self.graph.namespaces())
-
-        preceding_subject_uri = None
-        for column in self.target_columns:
-            cell_values = self.handle_cell_value(row_index=row_index, target_column=column)
-
-            for cell_value in cell_values:
-                if cell_value:
-                    column_predicate = self.handle_column_predicate(target_column=column)
-                    cell_value_subject_uri = lam_utils.generate_uuid_uri(cell_value,
-                                                                         seed=str(self.df.head()),
-                                                                         graph=self.graph, )
-
-                    result_triples.extend([tuple([cell_value_subject_uri, column_predicate, cell_value]),
-                                           tuple([cell_value_subject_uri, RDF.type, collection_class_uri]),
-                                           ])
-
-                    if preceding_subject_uri:
-                        result_triples.extend(
-                            [tuple([preceding_subject_uri, membership_predicate_uri, cell_value_subject_uri]),
-                             ])
-
-                    preceding_subject_uri = cell_value_subject_uri
-
-        if preceding_subject_uri:
-            result_triples.extend([tuple([preceding_subject_uri, membership_predicate_uri, row_subject]), ])
-
-        return result_triples

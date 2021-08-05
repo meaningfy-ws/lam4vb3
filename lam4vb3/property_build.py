@@ -140,9 +140,12 @@ def create_concepts(df, graph):
         annotation_maker2.make_triples()
 
 
+
 def hang_annotation_subjects_on_concept(concept_subject_index, annotation_subject_index,
                                         graph, annotation_property="lam:hasAnnotation", inline=True):
     """
+    TODO: deprecate
+
         add triples to the graph connecting concepts to reified annotations
     :return: the resulting triples
     """
