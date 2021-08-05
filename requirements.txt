@@ -13,3 +13,4 @@ dicttoxml
 jinja2
 jupyter
 jsonpath-ng
+Deprecated

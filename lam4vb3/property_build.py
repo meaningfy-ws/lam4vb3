@@ -13,6 +13,7 @@ import rdflib
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, XMLNS, XSD
 
 # from lam4vb3 import lam_utils, build
+import lam4vb3.cell_parser
 from lam4vb3 import lam_utils, build, collection_build
 
 LITERAL_COLUMNS = {
@@ -80,7 +81,7 @@ def create_cs(graph):
     """
         create the concept scheme definition
     """
-    cs = lam_utils.qname_uri(LAM_MD_CS, graph.namespaces())
+    cs = lam4vb3.cell_parser.qname_uri(LAM_MD_CS, graph.namespaces())
     graph.add((cs, RDF.type, SKOS.ConceptScheme))
     graph.add((cs, SKOS.prefLabel, rdflib.Literal("Document metadata")))
 
@@ -139,9 +140,12 @@ def create_concepts(df, graph):
         annotation_maker2.make_triples()
 
 
+
 def hang_annotation_subjects_on_concept(concept_subject_index, annotation_subject_index,
                                         graph, annotation_property="lam:hasAnnotation", inline=True):
     """
+    TODO: deprecate
+
         add triples to the graph connecting concepts to reified annotations
     :return: the resulting triples
     """

@@ -6,6 +6,8 @@ Email: costezki.eugen@gmail.com
 """
 import rdflib
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, XMLNS, XSD
+
+import lam4vb3.cell_parser
 from lam4vb3 import lam_utils, build, collection_build
 
 SHACL = rdflib.Namespace("http://www.w3.org/ns/shacl#")
@@ -227,7 +229,7 @@ def create_cs(graph, cs=LAM_CLASS_CS, cs_label="Document metadata"):
     """
         create the concept scheme definition
     """
-    cs = lam_utils.qname_uri(cs, graph.namespaces())
+    cs = lam4vb3.cell_parser.qname_uri(cs, graph.namespaces())
     graph.add((cs, RDF.type, SKOS.ConceptScheme))
     graph.add((cs, SKOS.prefLabel, rdflib.Literal(cs_label)))
 
