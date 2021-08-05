@@ -9,3 +9,6 @@
 import rdflib
 
 SHACL = rdflib.Namespace("http://www.w3.org/ns/shacl#")
+LAM = rdflib.Namespace("http://publications.europa.eu/ontology/lam-skos-ap#")
+LAMD = rdflib.Namespace("http://publications.europa.eu/resources/authority/lam/")
+CDM = rdflib.Namespace("http://publications.europa.eu/ontology/cdm#")

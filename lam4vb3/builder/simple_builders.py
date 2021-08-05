@@ -38,4 +38,5 @@ class SimpleConceptTripleMaker(ConceptTripleMaker):
                 result.append((row_subject, self.comment_predicate, cell_interpretation[COMMENT]))
             return result
 
+        return []
 

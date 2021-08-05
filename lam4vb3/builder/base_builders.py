@@ -232,7 +232,8 @@ class AbstractTripleMaker(ABC):
 class ConceptTripleMaker(AbstractTripleMaker, ABC):
     """
        A base class for creating concepts.
-       Creates inScheme statements from cell values attached to a concept using the following pattern
+       Creates inScheme statements from cell values attached to a concept using the following pattern.
+
     """
 
     def __init__(self, df: pd.DataFrame,
@@ -245,6 +246,9 @@ class ConceptTripleMaker(AbstractTripleMaker, ABC):
                  subject_source_column: str = "URI",
                  subject_classes: List[rdflib.URIRef] = [SKOS.Concept],
                  ):
+        """
+        :type subject_in_scheme: the concept scheme in which all the rows will be placed
+        """
         super().__init__(df=df,
                          column_mapping_dict=column_mapping_dict,
                          graph=graph,
@@ -257,7 +261,7 @@ class ConceptTripleMaker(AbstractTripleMaker, ABC):
         self.comment_predicate = comment_predicate
 
     def make_row_triples(self, row_index) -> List[Tuple]:
-        result_triples = super().make_row_triples(row_index=row_index)
+        result_triples = []  # super().make_row_triples(row_index=row_index)
         if self.subject_in_scheme:
             row_subject = self.handle_row_uri(row_index=row_index, )
             result_triples.append((row_subject, SKOS.inScheme, self.subject_in_scheme))
