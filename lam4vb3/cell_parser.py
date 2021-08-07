@@ -21,12 +21,12 @@ MAX_COUNT = "max_count"
 NAME = "name"
 
 CONTROLLED_LIST = {
-    "Y": {MIN_COUNT: 1, NAME: "Mandatory"},
-    "YU": {MIN_COUNT: 1, MAX_COUNT: 1, NAME: "Mandatory unique"},
-    "": {NAME: "Optional"},
-    "OU": {MAX_COUNT: 1},
-    "O": {NAME: "Optional"},
-    "N": {MAX_COUNT: 0, NAME: "Forbidden"},
+    "y": {MIN_COUNT: 1, NAME: "Mandatory"},
+    "yu": {MIN_COUNT: 1, MAX_COUNT: 1, NAME: "Mandatory unique"},
+    "": {},
+    "ou": {MAX_COUNT: 1},
+    "o": {},
+    "n": {MAX_COUNT: 0, NAME: "Forbidden"},
 }
 
 
@@ -48,14 +48,14 @@ def parse_cell(cell_value: str, graph: rdflib.Graph, is_literal=False) -> dict:
     if is_literal:
         if cell_value == "":
             return result
-        elif "|" not in cell_value:
-            return {LITERAL_VALUE: cell_value}
         else:
-            raise ValueError(
-                f"Literal values should be free text with no markers present (|). The value given was {cell_value}")
+            return {LITERAL_VALUE: cell_value}
+        # else:
+        #     raise ValueError(
+        #         f"Literal values should be free text with no markers present (|). The value given was {cell_value}")
 
     first_part, second_part = split_by_pipe(cell_value)
-    first_part = normalize_spaces(first_part)
+    first_part = normalize_spaces(first_part).lower()
 
     if second_part:
         result[COMMENT] = second_part
@@ -98,7 +98,7 @@ def parse_qname(qname):
     """
         give a qualified name such as skos:prefLabel (or skos:prefLabel@en with linguistic annotation)
     """
-    p = re.compile(r"""([\w]+){0,1}:([\w\-_]+){1,1}(?:@){0,1}([\w]+){0,1}""")
+    p = re.compile(r"""([\w\-_]+){0,1}:([\w\-_]+){1,1}(?:@){0,1}([\w]+){0,1}""")
     try:
         dummy1, prefix, name, language, dummy2 = p.split(qname)
     except:

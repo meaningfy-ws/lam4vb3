@@ -9,11 +9,12 @@
 import collections
 import warnings
 from abc import ABC, abstractmethod
+from datetime import date
 from typing import List, Dict, Tuple
 
 import pandas as pd
 import rdflib
-from rdflib import RDFS, SKOS
+from rdflib import DCTERMS, RDF
 
 from lam4vb3 import cell_parser
 from lam4vb3 import lam_utils
@@ -30,7 +31,7 @@ class AbstractTripleMaker(ABC):
                  target_columns: List[str] = [],
                  literal_columns: List[str] = [],
                  subject_source_column: str = "URI",
-                 subject_classes: List[rdflib.URIRef] = [RDFS.Resource], ):
+                 subject_classes: List[rdflib.URIRef] = [], ):
         """
 
         :type subject_classes: state the class subject is an instance of.
@@ -130,11 +131,11 @@ class AbstractTripleMaker(ABC):
                                    for (index, row) in self.df.iterrows()}
         return self._subject_index
 
-    def make_triples(self, error_bad_values=True, inplace=True):
+    def make_triples(self, error_ok=False, inplace=True):
         """
             Build the triples for the entire Dataframe
 
-            :param error_bad_values:
+            :param error_ok:
             :param inplace:
             :return:
         """
@@ -147,7 +148,7 @@ class AbstractTripleMaker(ABC):
                 result_triples.extend(self.make_column_triples(target_column=column, ))
             except Exception:
                 message = f"Could not create triples for the column {column}."
-                if error_bad_values:
+                if not error_ok:
                     raise Exception(message)
                 else:
                     warnings.warn(message)
@@ -159,7 +160,7 @@ class AbstractTripleMaker(ABC):
                 result_triples.extend(self.make_row_triples(row_index=index, ))
             except Exception:
                 message = f"Could not create triples for the row {index}."
-                if error_bad_values:
+                if error_ok:
                     raise Exception(message)
                 else:
                     warnings.warn(message)
@@ -171,7 +172,7 @@ class AbstractTripleMaker(ABC):
                     result_triples.extend(self.make_cell_triples(row_index=index, target_column=column))
                 except Exception:
                     message = f"Could not create triples for the cell at row {index} and column {column}."
-                    if error_bad_values:
+                    if error_ok:
                         raise Exception(message)
                     else:
                         warnings.warn(message)
@@ -197,26 +198,28 @@ class AbstractTripleMaker(ABC):
                                           graph=self.graph)
 
         return cell_parser.parse_cell(cell_value=self.df.loc[row_index, target_column],
-                                      is_literal=True,
+                                      is_literal=False,
                                       graph=self.graph)
 
-    @abstractmethod
-    def make_column_triples(self, target_column: str) -> List[Tuple]:
-        """
-            Build the triples unique to the column
-        :param target_column: the column to make triples for
-        :return:
-        """
-        pass
-
-    @abstractmethod
     def make_row_triples(self, row_index, ) -> List[Tuple]:
         """
             Build the triples unique to the row
         :param row_index:
         :return:
         """
-        pass
+        row_subject = self.handle_row_uri(row_index=row_index)
+        result_triples = [(row_subject, DCTERMS.created, rdflib.Literal(date.today()))]
+        result_triples.extend([(row_subject, RDF.type, subject_class) for subject_class in self.subject_classes])
+
+        return result_triples
+
+    def make_column_triples(self, target_column: str) -> List[Tuple]:
+        """
+            Build the triples unique to the column
+        :param target_column: the column to make triples for
+        :return:
+        """
+        return []
 
     @abstractmethod
     def make_cell_triples(self, row_index, target_column: str, ) -> List[Tuple]:
@@ -229,40 +232,3 @@ class AbstractTripleMaker(ABC):
         pass
 
 
-class ConceptTripleMaker(AbstractTripleMaker, ABC):
-    """
-       A base class for creating concepts.
-       Creates inScheme statements from cell values attached to a concept using the following pattern.
-
-    """
-
-    def __init__(self, df: pd.DataFrame,
-                 column_mapping_dict: Dict,
-                 graph: rdflib.Graph,
-                 subject_in_scheme: rdflib.URIRef,
-                 comment_predicate: SKOS.editorialNote,
-                 target_columns: List[str] = [],
-                 literal_columns: List[str] = [],
-                 subject_source_column: str = "URI",
-                 subject_classes: List[rdflib.URIRef] = [SKOS.Concept],
-                 ):
-        """
-        :type subject_in_scheme: the concept scheme in which all the rows will be placed
-        """
-        super().__init__(df=df,
-                         column_mapping_dict=column_mapping_dict,
-                         graph=graph,
-                         target_columns=target_columns,
-                         subject_source_column=subject_source_column,
-                         literal_columns=literal_columns,
-                         subject_classes=subject_classes)
-
-        self.subject_in_scheme = subject_in_scheme
-        self.comment_predicate = comment_predicate
-
-    def make_row_triples(self, row_index) -> List[Tuple]:
-        result_triples = []  # super().make_row_triples(row_index=row_index)
-        if self.subject_in_scheme:
-            row_subject = self.handle_row_uri(row_index=row_index, )
-            result_triples.append((row_subject, SKOS.inScheme, self.subject_in_scheme))
-        return result_triples

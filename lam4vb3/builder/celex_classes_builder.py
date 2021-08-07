@@ -3,7 +3,7 @@
 # property_builder.py
 # Date:  05/08/2021
 # Author: Eugeniu Costetchi
-# Email: costezki.eugen@gmail.com 
+# Email: costezki.eugen@gmail.com
 
 """ """
 import rdflib
@@ -18,13 +18,7 @@ from lam4vb3.builder.simple_builders import ConceptTripleMaker, SimpleTripleMake
 
 LITERAL_CONCEPTS_COLUMNS = {
     'CODE': 'skos:notation',
-    'LABEL': 'skos:prefLabel@en',
-    'DESCRIPTION': 'skos:description',
-    'Example - cellar notice': 'skos:example',
-    'Analytical methodology': 'skos:scopeNote@en',
-    'Specific cases': 'skos:historyNote@en',
-    'Comments': 'skos:editorialNote@en',
-    'PROP_TYPE': 'dct:type'
+    'LABEL': 'skos:prefLabel@en'
 }
 
 LITERAL_COLLECTIONS_COLUMNS = {
@@ -35,36 +29,15 @@ LITERAL_COLLECTIONS_COLUMNS = {
     'ORDER': 'euvoc:order'
 }
 
-URI_CONCEPTS_COLUMNS = {
-    'SH_PATH': 'sh:path',
-    'CONTROLLED_LIST': 'sh:class'
-}
-
 URI_COLLECTIONS_COLUMNS = {
     'PARENT_COLLECTION': 'skos:member',
 }
 
-CONSTRAINT_COLUMNS = {
-    'ANN_COD': 'lamd:md_ANN_COD',
-    'ANN_TOD': 'lamd:md_ANN_TOD',
-    'ANN_ART': 'lamd:md_ANN_ART',
-    'ANN_CLB': 'lamd:md_ANN_CLB',
-    'ANN_FCS': 'lamd:md_ANN_FCS',
-    'ANN_FCT': 'lamd:md_ANN_FCT',
-    'ANN_TLT': 'lamd:md_ANN_TLT',
-    'ANN_PAR': 'lamd:md_ANN_PAR',
-    'ANN_RL2': 'lamd:md_ANN_RL2',
-    'ANN_MDL': 'lamd:md_ANN_MDL',
-    'ANN_SOV': 'lamd:md_ANN_SOV',
-    'ANN_SUB': 'lamd:md_ANN_SUB',
-    'ANN_MSL': 'lamd:md_ANN_MSL',
-    'ANN_EOV': 'lamd:md_ANN_EOV',
-    'ANN_LVL': 'lamd:md_ANN_LVL',
-}
+PARENT_CONCEPT_COLUMN = {'PARENT': 'skos:broader'}
 
 COLLECTION_COLUMNS = {"CLASSIFICATION": "skos:member"}
 
-LAM_CS = LAMD.DocumentProperty
+LAM_CS = LAMD.LegalDocumentClass
 
 URI_COLUMN = 'URI'
 
@@ -74,21 +47,19 @@ def create_concept_scheme(graph):
         create the concept scheme definition
     """
     graph.add((LAM_CS, RDF.type, SKOS.ConceptScheme))
-    graph.add((LAM_CS, SKOS.prefLabel, rdflib.Literal("Document properties")))
+    graph.add((LAM_CS, SKOS.prefLabel, rdflib.Literal("Legal Document")))
 
 
 def create_concepts(df, graph):
-    selected_columns = {**LITERAL_CONCEPTS_COLUMNS,
-                        **URI_CONCEPTS_COLUMNS}
     concept_maker = ConceptTripleMaker(df=df,
-                                       column_mapping_dict=selected_columns,
+                                       column_mapping_dict=LITERAL_CONCEPTS_COLUMNS,
                                        graph=graph,
                                        subject_in_scheme=LAM_CS,
                                        comment_predicate=SKOS.editorialNote,
-                                       target_columns=[*selected_columns],
+                                       target_columns=[*LITERAL_CONCEPTS_COLUMNS],
                                        literal_columns=[*LITERAL_CONCEPTS_COLUMNS],
                                        subject_source_column=URI_COLUMN,
-                                       subject_classes=[SKOS.Concept, LAMD.DocumentProperty])
+                                       subject_classes=[SKOS.Concept, LAMD.LegalDocumentClass])
 
     concept_maker.make_triples()
 
@@ -101,15 +72,14 @@ def create_concepts(df, graph):
 
     in_collection_maker.make_triples()
 
-    constraint_maker = ConstraintTripleMaker(df=df,
-                                             column_mapping_dict=CONSTRAINT_COLUMNS,
-                                             graph=graph,
-                                             target_columns=[*CONSTRAINT_COLUMNS],
-                                             constraint_property=LAM.hasAnnotationConfiguration,
-                                             constraint_class=LAM.AnnotationConfiguration,
-                                             constraint_comment=SKOS.editorialNote,
-                                             subject_source_column=URI_COLUMN)
-    constraint_maker.make_triples()
+    parent_concept_maker = InverseTripleMaker(df=df,
+                                              column_mapping_dict=PARENT_CONCEPT_COLUMN,
+                                              graph=graph,
+                                              target_columns=[*PARENT_CONCEPT_COLUMN],
+                                              subject_source_column=URI_COLUMN
+                                              )
+
+    parent_concept_maker.make_triples()
 
 
 def create_collections(df, graph):
@@ -135,17 +105,17 @@ def create_collections(df, graph):
     collection_parent_maker.make_triples()
 
 
-def make_property_worksheet(lam_df_properties, lam_df_property_classification, prefixes, output_file):
+def make_celex_classes_worksheet(lam_df_celex_classes, lam_df_celex_classes_classification, prefixes, output_file):
     """
-    :param lam_df_property_classification:
-    :param lam_df_properties:
+    :param lam_df_celex_classes_classification:
+    :param lam_df_celex_classes:
     :param prefixes:
     :param output_file:
     :return:
     """
     graph = lam4vb3.lam_utils.make_graph(prefixes)
     create_concept_scheme(graph)
-    create_concepts(lam_df_properties, graph)
-    create_collections(lam_df_property_classification, graph)
+    create_concepts(lam_df_celex_classes, graph)
+    create_collections(lam_df_celex_classes_classification, graph)
     graph.serialize(str(output_file), format='turtle', )
     return graph

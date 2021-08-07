@@ -13,6 +13,7 @@ import pandas as pd
 import pytest
 import rdflib
 
+import lam4vb3.lam_utils
 from lam4vb3 import LAM_PROPERTIES_WS_NAME, LAM_CLASSES_WS_NAME, LAM_PROPERTY_CLASSIFICATION_WS_NAME, \
     LAM_CLASS_CLASSIFICATION_WS_NAME, CELEX_CLASSES_WS_NAME, CELEX_CLASS_CLASSIFICATION_WS_NAME, PREFIX_WS_NAME, \
     LAM_PROPERTIES_NEW_WS_NAME, build
@@ -73,47 +74,35 @@ def test_lam_properties_df():
 
 @pytest.fixture(scope="session")
 def test_lam_properties_classification_df():
-    return pd.read_excel(TESTBED_EXCEL_2021_08, sheet_name=LAM_PROPERTY_CLASSIFICATION_WS_NAME,
-                         header=[0], na_values=[""], keep_default_na=False)
+    return read_excel_worksheet(file_path=TESTBED_EXCEL_2021_08, sheet_name=LAM_PROPERTY_CLASSIFICATION_WS_NAME)
 
 
 @pytest.fixture(scope="session")
 def test_lam_classes_df():
-    return pd.read_excel(TESTBED_EXCEL_2021_08, sheet_name=LAM_CLASSES_WS_NAME,
-                         header=[0], na_values=[""], keep_default_na=False)
+    return read_excel_worksheet(file_path=TESTBED_EXCEL_2021_08, sheet_name=LAM_CLASSES_WS_NAME)
 
 
 @pytest.fixture(scope="session")
 def test_lam_classes_classification_df():
-    return pd.read_excel(TESTBED_EXCEL_2021_08, sheet_name=LAM_CLASS_CLASSIFICATION_WS_NAME,
-                         header=[0], na_values=[""], keep_default_na=False)
+    return read_excel_worksheet(file_path=TESTBED_EXCEL_2021_08, sheet_name=LAM_CLASS_CLASSIFICATION_WS_NAME)
 
 
 @pytest.fixture(scope="session")
 def test_celex_classes_df():
-    return pd.read_excel(TESTBED_EXCEL_2021_08, sheet_name=CELEX_CLASSES_WS_NAME,
-                         header=[0], na_values=[""], keep_default_na=False)
+    return read_excel_worksheet(file_path=TESTBED_EXCEL_2021_08, sheet_name=CELEX_CLASSES_WS_NAME)
 
 
 @pytest.fixture(scope="session")
 def test_celex_classes_classification_df():
-    return pd.read_excel(TESTBED_EXCEL_2021_08, sheet_name=CELEX_CLASS_CLASSIFICATION_WS_NAME,
-                         header=[0], na_values=[""], keep_default_na=False)
+    return read_excel_worksheet(file_path=TESTBED_EXCEL_2021_08, sheet_name=CELEX_CLASS_CLASSIFICATION_WS_NAME)
 
 
 @pytest.fixture(scope="session")
 def test_prefixes_df():
-    return pd.read_excel(TESTBED_EXCEL_2021_08, sheet_name=PREFIX_WS_NAME,
-                         header=[0], na_values=[""], keep_default_na=False)
-
-
-@pytest.fixture(scope="session")
-def test_lam_properties_new_df():
-    return pd.read_excel(TESTBED_EXCEL_2021_08, sheet_name=LAM_PROPERTIES_NEW_WS_NAME,
-                         header=[0], na_values=[""], keep_default_na=False)
+    return read_excel_worksheet(file_path=TESTBED_EXCEL_2021_08, sheet_name=PREFIX_WS_NAME)
 
 
 # default graph
 @pytest.fixture(scope="function")
 def empty_lam_graph(test_prefixes_df):
-    return build.make_graph(test_prefixes_df)
+    return lam4vb3.lam_utils.make_graph(test_prefixes_df)

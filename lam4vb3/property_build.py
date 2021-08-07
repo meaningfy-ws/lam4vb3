@@ -14,6 +14,7 @@ from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, XMLNS, XSD
 
 # from lam4vb3 import lam_utils, build
 import lam4vb3.cell_parser
+import lam4vb3.lam_utils
 from lam4vb3 import lam_utils, build, collection_build
 
 LITERAL_COLUMNS = {
@@ -77,13 +78,7 @@ LAM_MD_CS = "lamd:DocumentProperty"
 URI_COLUMN = 'URI'
 
 
-def create_cs(graph):
-    """
-        create the concept scheme definition
-    """
-    cs = lam4vb3.cell_parser.qname_uri(LAM_MD_CS, graph.namespaces())
-    graph.add((cs, RDF.type, SKOS.ConceptScheme))
-    graph.add((cs, SKOS.prefLabel, rdflib.Literal("Document metadata")))
+
 
 
 def create_concepts(df, graph):
@@ -183,7 +178,7 @@ def make_property_worksheet(lam_df_properties, lam_df_property_classification, p
     :param output_file:
     :return:
     """
-    graph = build.make_graph(prefixes)
+    graph = lam4vb3.lam_utils.make_graph(prefixes)
     create_cs(graph)
     create_concepts(lam_df_properties, graph)
     collection_build.add_concept_to_collection(lam_df_properties, graph)

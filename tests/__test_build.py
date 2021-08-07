@@ -12,6 +12,7 @@ import rdflib
 
 import lam4vb3.builder.unused_builders
 import lam4vb3.cell_parser
+import lam4vb3.lam_utils
 from lam4vb3 import build
 
 
@@ -70,7 +71,7 @@ class MyTestCase(unittest.TestCase):
 
         self.uri_valued_columns = ['property', 'controlled value _property']
 
-        self.graph = build.make_graph(self.test_df)
+        self.graph = lam4vb3.lam_utils.make_graph(self.test_df)
 
         # self.cell_value_variants_properties = [None, np.nan, "", "literal", "literal_line \nnew_line_literal",
         #                                        "skos:prefLabel",

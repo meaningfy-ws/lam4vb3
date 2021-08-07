@@ -34,12 +34,6 @@ class InverseTripleMaker(AbstractTripleMaker):
                          target_columns=target_columns,
                          subject_source_column=subject_source_column, )
 
-    def make_column_triples(self, target_column) -> List[Tuple]:
-        return []
-
-    def make_row_triples(self, row_index) -> List[Tuple]:
-        return []
-
     def make_cell_triples(self, row_index, target_column) -> List[Tuple]:
         row_subject = self.handle_row_uri(row_index=row_index)
         column_predicate = self.handle_column_predicate(target_column=target_column)
@@ -53,3 +47,4 @@ class InverseTripleMaker(AbstractTripleMaker):
 
             return [(value, column_predicate, row_subject)
                     for value in cell_values]
+        return []

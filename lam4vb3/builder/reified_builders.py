@@ -67,11 +67,6 @@ class ConstraintTripleMaker(AbstractTripleMaker):
         self.constraint_max_property = constraint_max_property
         self.constraint_name_property = constraint_name_property
 
-    def make_column_triples(self, target_column: str) -> List[Tuple]:
-        return []
-
-    def make_row_triples(self, row_index) -> List[Tuple]:
-        return []
 
     def handle_cell_reified_subject(self, row_index, target_column: str):
         """
@@ -89,6 +84,8 @@ class ConstraintTripleMaker(AbstractTripleMaker):
 
     def make_cell_triples(self, row_index, target_column: str) -> List[Tuple]:
         cell_interpretation = self.handle_cell_value(row_index=row_index, target_column=target_column)
+        if not cell_interpretation:
+            return []
         row_subject = self.handle_row_uri(row_index=row_index)
         column_predicate = self.handle_column_predicate(target_column=target_column)
 
@@ -136,3 +133,5 @@ class ConstraintTripleMaker(AbstractTripleMaker):
             result_triples.append(
                 (cell_reification_subject, self.constraint_name_property,
                  rdflib.Literal(f"{cell_interpretation[NAME]} {column_predicate}", lang="en")))
+
+        return result_triples

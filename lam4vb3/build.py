@@ -21,39 +21,6 @@ from lam4vb3.lam_utils import add_triples_to_graph
 SHACL = rdflib.Namespace("http://www.w3.org/ns/shacl#")
 
 
-def make_graph(df, prefix_column="prefix", uri_column="uri"):
-    """
-        init the LAM data graph
-
-    :param uri_column: the column in df that contains base namespace URIs
-    :param prefix_column: the column in df that provides prefixes to be used in qnames
-    :param df: the data frame containing namespace defitions
-    """
-    graph = rdflib.Graph()
-
-    graph.bind("skos", rdflib.namespace.SKOS)
-    graph.bind("dct", rdflib.namespace.DCTERMS)
-    graph.bind("sh", SHACL)
-
-    graph.bind("rdf", rdflib.namespace.RDF)
-    graph.bind("rdfs", rdflib.namespace.RDFS)
-    graph.bind("xsd", rdflib.namespace.XSD)
-    graph.bind("owl", rdflib.namespace.OWL)
-    graph.bind("xml", rdflib.namespace.XMLNS)
-
-    # normalise the prefixes read into a dataframe
-    df.fillna("", inplace=True)
-    namespace_mapping_dict = dict(zip(df[prefix_column], df[uri_column]))
-    ns_dict = {str(k).replace(":", ""):
-                   str(v).strip() if (str(v).endswith("/") or str(v).endswith("#"))
-                   else str(str(k) + ":") for k, v in namespace_mapping_dict.items() if v}
-
-    for k, v in ns_dict.items():
-        graph.bind(k, rdflib.Namespace(v))
-
-    return graph
-
-
 def get_subjects_from_triples(resulting_triples):
     """
         provided a list of triples return the list of subjects
