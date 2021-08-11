@@ -37,3 +37,5 @@ LAM_CLASSES_HTML = (THIS_PROJECT / "data/lam_project_classes_v2.html").resolve()
 CELEX_CLASSES_HTML = (THIS_PROJECT / "data/celex_project_classes_v2.html").resolve()
 LAM_OWL_TTL = (THIS_PROJECT / "data/lam_project_ontology.ttl").resolve()
 LAM_OWL_HTML = (THIS_PROJECT / "data/lam_project_ontology.html").resolve()
+
+OUTPUT_FOLDER = (THIS_PROJECT / "tests" / "output").resolve()

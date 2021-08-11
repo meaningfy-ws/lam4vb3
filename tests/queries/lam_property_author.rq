@@ -14,7 +14,7 @@ WHERE {
   VALUES ?subject {lamd:md_AU}
   ?subject a skos:Concept, lam:DocumentProperty .
   ?subject skos:inScheme lam:DocumentProperty .
-  ?subject skos:topConceptOf lam:DocumentProperty .
+#  ?subject skos:topConceptOf lam:DocumentProperty .
   ?subject skos:prefLabel ?label .
   ?subject sh:path cdm:created_by .
   ?subject sh:class at:corporate-body .
