@@ -54,12 +54,12 @@ def test_lam_classes_description_query(lam_classes_description_query, lam_classe
 def test_lam_classes_property_configuration_DD_query(lam_classes_property_configuration_DD_query, lam_classes_graph):
     results = lam_classes_graph.query(lam_classes_property_configuration_DD_query)
     assert results.askAnswer is True
-
+# TODO: implement hasAnnotationConfiguration (ticket exists!)
 
 def test_lam_classes_property_configuration_MI_query(lam_classes_property_configuration_MI_query, lam_classes_graph):
     results = lam_classes_graph.query(lam_classes_property_configuration_MI_query)
     assert results.askAnswer is True
-
+# TODO: use an Y instead of O
 
 def test_lam_classes_classify_with_query(lam_classes_classify_with_query, lam_classes_graph):
     results = lam_classes_graph.query(lam_classes_classify_with_query)

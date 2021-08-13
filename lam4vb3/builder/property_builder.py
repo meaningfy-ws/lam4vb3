@@ -10,8 +10,7 @@ import rdflib
 from rdflib import SKOS, RDF
 
 import lam4vb3.lam_utils
-from lam4vb3 import cell_parser
-from lam4vb3.builder import LAM, LAMD
+from lam4vb3.builder import LAM, LAMD, SHACL
 from lam4vb3.builder.inverse_builders import InverseTripleMaker
 from lam4vb3.builder.reified_builders import ConstraintTripleMaker
 from lam4vb3.builder.simple_builders import ConceptTripleMaker, SimpleTripleMaker
@@ -19,10 +18,10 @@ from lam4vb3.builder.simple_builders import ConceptTripleMaker, SimpleTripleMake
 LITERAL_CONCEPTS_COLUMNS = {
     'CODE': 'skos:notation',
     'LABEL': 'skos:prefLabel@en',
-    'DESCRIPTION': 'sh:description',    #changed from 'DESCRIPTION': 'skos:description',
+    'DESCRIPTION': 'skos:definition',
     'Example - cellar notice': 'skos:example',
-    'Example - EUR-Lex display notice': 'skos:example',  #added
-    'Example - EUR-Lex index notice': 'skos:example',   #added
+    'Example - EUR-Lex display notice': 'skos:example',
+    'Example - EUR-Lex index notice': 'skos:example',
     'Analytical methodology': 'skos:scopeNote@en',
     'Specific cases': 'skos:historyNote@en',
     'Comments': 'skos:editorialNote@en',
@@ -32,7 +31,7 @@ LITERAL_CONCEPTS_COLUMNS = {
 LITERAL_COLLECTIONS_COLUMNS = {
     'CODE': 'skos:notation',
     'LABEL': 'skos:prefLabel@en',
-    'DESCRIPTION': 'sh:description',  # changed from 'DESCRIPTION': 'skos:description',
+    'DESCRIPTION': 'skos:definition',
     'COMMENT': 'skos:editorialNote@en',
     'ORDER': 'euvoc:order'
 }
@@ -66,7 +65,7 @@ CONSTRAINT_COLUMNS = {
 
 COLLECTION_COLUMNS = {"CLASSIFICATION": "skos:member"}
 
-LAM_CS = LAM.DocumentProperty   #changed from LAMD to LAM
+LAM_CS = LAMD.LAMProperties
 
 URI_COLUMN = 'URI'
 
@@ -90,7 +89,7 @@ def create_concepts(df, graph):
                                        target_columns=[*selected_columns],
                                        literal_columns=[*LITERAL_CONCEPTS_COLUMNS],
                                        subject_source_column=URI_COLUMN,
-                                       subject_classes=[SKOS.Concept, LAM.DocumentProperty])    # changed from LAMD to LAM
+                                       subject_classes=[SKOS.Concept, LAM.DocumentProperty])
 
     concept_maker.make_triples()
 
@@ -108,6 +107,8 @@ def create_concepts(df, graph):
                                              graph=graph,
                                              target_columns=[*CONSTRAINT_COLUMNS],
                                              constraint_property=LAM.hasAnnotationConfiguration,
+                                             constraint_value_property=SHACL['class'],
+                                             constraint_path_property=LAM.path,
                                              constraint_class=LAM.AnnotationConfiguration,
                                              constraint_comment=SKOS.editorialNote,
                                              subject_source_column=URI_COLUMN)

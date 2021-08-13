@@ -9,10 +9,10 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 ASK
 WHERE {
-  VALUES ?subject {lamd:c_021} .
+  VALUES ?subject {lamd:} .
   ?subject lam:hasPropertyConfiguration ?pc .
   ?pc lam:path lamd:md_MI .
   ?pc skos:editorialNote ?editorial_note .
   ?pc lam:hasAnnotationConfiguration ?ac .
-  MINUS { ?ac sh:hasValue ?value } .
+  FILTER NOT EXISTS { ?ac sh:hasValue ?value } .
 }

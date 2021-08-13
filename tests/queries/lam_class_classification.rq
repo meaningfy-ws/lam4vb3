@@ -3,17 +3,15 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX euvoc: <http://publications.europa.eu/ontology/euvoc#>
 
 # testing lamd:class_EP LAM class classification
-# TODO: lamd:class_prepdoc should be lamd:class_PREPDOC
-# TODO: definition vs description
 
 ASK
 WHERE {
   VALUES ?subject {lamd:class_EP} .
   ?subject a skos:Collection .
-  #?subject skos:definition ?defintion .
+  #?subject skos:definition ?definition .
   ?subject skos:notation ?notation .
   ?subject skos:prefLabel ?prefLabel .
   ?subject euvoc:order ?order .
-  lamd:class_prepdoc skos:member ?subject .
-  ?subject skos:member lamd:class_prepdoc .
+  lamd:class_PREPDOC skos:member ?subject .
+  FILTER NOT EXISTS { ?subject skos:member lamd:class_PREPDOC }.
 }

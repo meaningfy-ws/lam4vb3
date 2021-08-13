@@ -4,16 +4,13 @@ PREFIX lamd: <http://publications.europa.eu/resources/authority/lam/>
 PREFIX at: <http://publications.europa.eu/resource/authority/>
 
 # testing Legal basis LAM properties
-# changed lam_path to sh_path
-# changed sh:class to sh:hasValue
-# TODO: minCount is not working properly?
 
 ASK
 WHERE {
   VALUES ?subject {lamd:md_LB}
   ?subject lam:hasAnnotationConfiguration  ?ac  .
-#  ?ac sh:minCount 1 .
-  ?ac sh:path ?path .
+  ?ac sh:minCount "1"^^xsd:int .
+  ?ac lam:path ?path .
   VALUES ?lam_path { lamd:md_ANN_CLB lamd:md_ANN_ART lamd:md_ANN_PAR lamd:md_ANN_SUB } .
-  ?ac sh:hasValue at:fd_370 .
+  ?ac sh:class at:fd_370 .
 }

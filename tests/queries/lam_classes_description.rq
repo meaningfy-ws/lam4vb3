@@ -11,5 +11,5 @@ WHERE {
   ?subject skos:altLabel ?altLabel .
   ?subject skos:editorialNote ?editorialNote .
   ?subject skos:example ?example .
-  ?subject skos:inScheme lam:LegalDocumentClass .
+  ?subject skos:inScheme lamd:LAMClasses .
 }
