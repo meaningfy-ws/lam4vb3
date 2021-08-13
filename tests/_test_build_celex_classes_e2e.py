@@ -6,13 +6,12 @@ Email: costezki.eugen@gmail.com
 """
 
 import unittest
-import pytest
 
 import pandas as pd
 from rdflib.namespace import SKOS
 
-from lam4vb3 import PREFIX_WS_NAME, class_build, \
-    CELEX_CLASSES_WS_NAME, CELEX_CLASS_CLASSIFICATION_WS_NAME
+from lam4vb3 import PREFIX_WS_NAME, CELEX_CLASSES_WS_NAME, CELEX_CLASS_CLASSIFICATION_WS_NAME
+from lam4vb3.unused import class_build
 from tests import INPUT_EXCEL_FILE, CELEX_CLASSES_TTL
 
 

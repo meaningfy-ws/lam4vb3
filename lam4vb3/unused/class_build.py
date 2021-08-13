@@ -5,11 +5,14 @@ Author: Eugeniu Costetchi
 Email: costezki.eugen@gmail.com
 """
 import rdflib
-from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, XMLNS, XSD
+from rdflib.namespace import RDF, SKOS
 
 import lam4vb3.cell_parser
 import lam4vb3.lam_utils
-from lam4vb3 import lam_utils, build, collection_build
+from lam4vb3.unused import build, collection_build
+
+SHACL = rdflib.Namespace("http://www.w3.org/ns/shacl#")
+LAM = rdflib.Namespace("http://publications.europa.eu/ontology/lam-skos-ap#")
 
 URI_COLUMN = 'URI'
 
@@ -20,10 +23,6 @@ LITERAL_COLUMNS = {
     'EXAMPLE_CELEX': 'skos:example',
     'KEYWORD': 'skos:altLabel@en',
     'LABEL': 'skos:prefLabel@en',
-    'DESCRIPTION': 'skos:description',
-    'Analytical methodology': 'skos:scopeNote@en',
-    'Specific cases': 'skos:historyNote@en',
-    'CODE': 'skos:notation'
 }
 
 MAPPING_VALUE_COMMENT_COLUMNS = {
@@ -34,126 +33,206 @@ MAPPING_VALUE_COMMENT_COLUMNS = {
 }
 
 CONSTRAINT_VALUE_COMMENT_COLUMNS = {
-    'ANN_COD': 'lamd:md_ANN_COD',
-    'ANN_TOD': 'lamd:md_ANN_TOD',
-    'ANN_ART': 'lamd:md_ANN_ART',
-    'ANN_CLB': 'lamd:md_ANN_CLB',
-    'ANN_FCS': 'lamd:md_ANN_FCS',
-    'ANN_FCT': 'lamd:md_ANN_FCT',
-    'ANN_TLT': 'lamd:md_ANN_TLT',
-    'ANN_PAR': 'lamd:md_ANN_PAR',
-    'ANN_RL2': 'lamd:md_ANN_RL2',
-    'ANN_MDL': 'lamd:md_ANN_MDL',
-    'ANN_SOV': 'lamd:md_ANN_SOV',
-    'ANN_SUB': 'lamd:md_ANN_SUB',
-    'ANN_MSL': 'lamd:md_ANN_MSL',
-    'ANN_EOV': 'lamd:md_ANN_EOV',
-    'ANN_LVL': 'lamd:md_ANN_LVL',
-    "AD": "lamd:md_AD",
-    "ADDITION": "lamd:md_ADDITION",
-    "ADOPTION": "lamd:md_ADOPTION",
-    "ADOPTION_PAR": "lamd:md_ADOPTION_PAR",
-    "AF": "lamd:md_AF",
-    "AMENDMENT": "lamd:md_AMENDMENT",
-    "AMENDMENT_PRO": "lamd:md_AMENDMENT_PRO",
-    "ANNULMENT_REQ": "lamd:md_ANNULMENT_REQ",
-    "ANULMENT_PARTIAL_REQ": "lamd:md_ANULMENT_PARTIAL_REQ",
-    "AP": "lamd:md_AP",
-    "APPLICABILITY_DEF": "lamd:md_APPLICABILITY_DEF",
-    "APPLICABILITY_EXT": "lamd:md_APPLICABILITY_EXT",
-    "AS": "lamd:md_AS",
-    "ASSOCIATION": "lamd:md_ASSOCIATION",
-    "CC": "lamd:md_CC",
-    "CI": "lamd:md_CI",
-    "CM": "lamd:md_CM",
-    "COMMUNIC_REQ": "lamd:md_COMMUNIC_REQ",
-    "COMPLETION": "lamd:md_COMPLETION",
-    "CONFIRMATION": "lamd:md_CONFIRMATION",
-    "CORRIGENDUM": "lamd:md_CORRIGENDUM",
-    "CT": "lamd:md_CT",
-    "DB": "lamd:md_DB",
-    "DD": "lamd:md_DD",
-    "DEROGATION": "lamd:md_DEROGATION",
-    "DF": "lamd:md_DF",
-    "DH": "lamd:md_DH",
-    "DL": "lamd:md_DL",
-    "DP": "lamd:md_DP",
-    "DR": "lamd:md_DR",
-    "ECLI": "lamd:md_ECLI",
-    "ELI": "lamd:md_ELI",
-    "EV": "lamd:md_EV",
-    "FAILURE_REQ": "lamd:md_FAILURE_REQ",
-    "IC": "lamd:md_IC",
-    "IF": "lamd:md_IF",
-    "IMPLEMENTATION": "lamd:md_IMPLEMENTATION",
-    "INAPPLICAB_REQ": "lamd:md_INAPPLICAB_REQ",
-    "INCORPORATION": "lamd:md_INCORPORATION",
-    "INFLUENCE": "lamd:md_INFLUENCE",
-    "INTERPRETATION": "lamd:md_INTERPRETATION",
-    "LB": "lamd:md_LB",
-    "LF": "lamd:md_LF",
-    "LG": "lamd:md_LG",
-    "LO": "lamd:md_LO",
-    "MI": "lamd:md_MI",
-    "NA": "lamd:md_NA",
-    "NF": "lamd:md_NF",
-    "NS": "lamd:md_NS",
-    "OBSOLETE": "lamd:md_OBSOLETE",
-    "OPINION_COR": "lamd:md_OPINION_COR",
-    "OPINION_EESC": "lamd:md_OPINION_EESC",
-    "OPINION_EP": "lamd:md_OPINION_EP",
-    "OPINION_REQ": "lamd:md_OPINION_REQ",
-    "PR": "lamd:md_PR",
-    "PRELIMINARY_REQ": "lamd:md_PRELIMINARY_REQ",
-    "PROC": "lamd:md_PROC",
-    "QUESTION_RELATED": "lamd:md_QUESTION_RELATED",
-    "QUESTION_SIMILAR": "lamd:md_QUESTION_SIMILAR",
-    "REESTAB": "lamd:md_REESTAB",
-    "REFER_PAR": "lamd:md_REFER_PAR",
-    "RELATION": "lamd:md_RELATION",
-    "REP": "lamd:md_REP",
-    "REPEAL": "lamd:md_REPEAL",
-    "REPEAL_IMP": "lamd:md_REPEAL_IMP",
-    "REPLACEMENT": "lamd:md_REPLACEMENT",
-    "REPPORTEUR": "lamd:md_REPPORTEUR",
-    "REVIEW_REQ": "lamd:md_REVIEW_REQ",
-    "RI": "lamd:md_RI",
-    "RI_WORK": "lamd:md_RI_WORK",
-    "RJ_NEW": "lamd:md_RJ_NEW",
-    "RP": "lamd:md_RP",
-    "RS": "lamd:md_RS",
-    "SG": "lamd:md_SG",
-    "SUSPEND": "lamd:md_SUSPEND",
-    "SUSPEND_PAR": "lamd:md_SUSPEND_PAR",
-    "TOF": "lamd:md_TOF",
-    "TP": "lamd:md_TP",
-    "TT": "lamd:md_TT",
-    "VALIDITY_EXT": "lamd:md_VALIDITY_EXT",
-    "VO": "lamd:md_VO",
-    "VV": "lamd:md_VV",
+    # 'CODE': 'lamd:md_CODE',
+    # 'LABEL': 'lamd:md_LABEL',
+    # 'KEYWORD': 'lamd:md_KEYWORD',
+    # 'EXAMPLE_EN': 'lamd:md_EXAMPLE_EN',
+    # 'EXAMPLE_FR': 'lamd:md_EXAMPLE_FR',
+    # 'COMMENT': 'lamd:md_COMMENT',
+    # 'EXAMPLE_CELEX': 'lamd:md_EXAMPLE_CELEX',
+    # 'CDM_CLASS': 'lamd:md_CDM_CLASS',
+    # 'AU': 'lamd:md_AU',
+    # 'FM': 'lamd:md_FM',
+    # 'DN_CLASS': 'lamd:md_DN_CLASS',
 
     'DT_CORR': 'lamd:md_DT_CORR',
     'DN': 'lamd:md_DN',
     'DC': 'lamd:md_DC',
-
+    'CT': 'lamd:md_CT',
+    'CC': 'lamd:md_CC',
+    'RJ_NEW': 'lamd:md_RJ_NEW',
+    'DD': 'lamd:md_DD',
+    'IF': 'lamd:md_IF',
+    'EV': 'lamd:md_EV',
+    'NF': 'lamd:md_NF',
+    'TP': 'lamd:md_TP',
+    'SG': 'lamd:md_SG',
+    'VO': 'lamd:md_VO',
+    'DB': 'lamd:md_DB',
+    'LO': 'lamd:md_LO',
+    'DH': 'lamd:md_DH',
+    'DL': 'lamd:md_DL',
+    'RP': 'lamd:md_RP',
+    'VV': 'lamd:md_VV',
+    'REP': 'lamd:md_REP',
+    'RS': 'lamd:md_RS',
+    'AS': 'lamd:md_AS',
+    'AF': 'lamd:md_AF',
+    'MI': 'lamd:md_MI',
+    'LG': 'lamd:md_LG',
+    'RI': 'lamd:md_RI',
+    'DP': 'lamd:md_DP',
+    'AD': 'lamd:md_AD',
+    'LF': 'lamd:md_LF',
+    'REPPORTEUR': 'lamd:md_REPPORTEUR',
+    'IC': 'lamd:md_IC',
+    'CM': 'lamd:md_CM',
+    'NS': 'lamd:md_NS',
+    'TT': 'lamd:md_TT',
+    'LB': 'lamd:md_LB',
+    'AMENDMENT': 'lamd:md_AMENDMENT',
+    'ADDITION': 'lamd:md_ADDITION',
+    'REPEAL': 'lamd:md_REPEAL',
+    'REPEAL_IMP': 'lamd:md_REPEAL_IMP',
+    'ADOPTION': 'lamd:md_ADOPTION',
+    'ADOPTION_PAR': 'lamd:md_ADOPTION_PAR',
+    'APPLICABILITY_EXT': 'lamd:md_APPLICABILITY_EXT',
+    'COMPLETION': 'lamd:md_COMPLETION',
+    'VALIDITY_EXT': 'lamd:md_VALIDITY_EXT',
+    'REPLACEMENT': 'lamd:md_REPLACEMENT',
+    'CORRIGENDUM': 'lamd:md_CORRIGENDUM',
+    'OBSOLETE': 'lamd:md_OBSOLETE',
+    'DEROGATION': 'lamd:md_DEROGATION',
+    'CONFIRMATION': 'lamd:md_CONFIRMATION',
+    'QUESTION_SIMILAR': 'lamd:md_QUESTION_SIMILAR',
+    'INTERPRETATION': 'lamd:md_INTERPRETATION',
+    'IMPLEMENTATION': 'lamd:md_IMPLEMENTATION',
+    'REESTAB': 'lamd:md_REESTAB',
+    'SUSPEND': 'lamd:md_SUSPEND',
+    'SUSPEND_PAR': 'lamd:md_SUSPEND_PAR',
+    'APPLICABILITY_DEF': 'lamd:md_APPLICABILITY_DEF',
+    'INCORPORATION': 'lamd:md_INCORPORATION',
+    'REFER_PAR': 'lamd:md_REFER_PAR',
+    'QUESTION_RELATED': 'lamd:md_QUESTION_RELATED',
+    'OPINION_EP': 'lamd:md_OPINION_EP',
+    'OPINION_COR': 'lamd:md_OPINION_COR',
+    'OPINION_EESC': 'lamd:md_OPINION_EESC',
+    'INFLUENCE': 'lamd:md_INFLUENCE',
+    'AMENDMENT_PRO': 'lamd:md_AMENDMENT_PRO',
+    'CI': 'lamd:md_CI',
+    'RELATION': 'lamd:md_RELATION',
+    'ASSOCIATION': 'lamd:md_ASSOCIATION',
+    'PROC': 'lamd:md_PROC',
+    'AP': 'lamd:md_AP',
+    'DF': 'lamd:md_DF',
+    'PR': 'lamd:md_PR',
+    'NA': 'lamd:md_NA',
+    'ANNULMENT_REQ': 'lamd:md_ANNULMENT_REQ',
+    'FAILURE_REQ': 'lamd:md_FAILURE_REQ',
+    'INAPPLICAB_REQ': 'lamd:md_INAPPLICAB_REQ',
+    'ANULMENT_PARTIAL_REQ': 'lamd:md_ANULMENT_PARTIAL_REQ',
+    'REVIEW_REQ': 'lamd:md_REVIEW_REQ',
+    'PRELIMINARY_REQ': 'lamd:md_PRELIMINARY_REQ',
+    'COMMUNIC_REQ': 'lamd:md_COMMUNIC_REQ',
+    'OPINION_REQ': 'lamd:md_OPINION_REQ',
 }
 
+CONSTRAINT_VALUE_URI_COLUMN_LIST = [
+    "AU",
+    "FM",
+    "DN",
+    "DN_CLASS",
+    "DC",
+    "CT",
+    "CC",
+    "ANN_COD(DD)",
+    "ANN_COD(DH)",
+]
+
+CONSTRAINT_VALUE_MULTI_LINE_COLUMNS_LIST = [
+    "EXAMPLE_CELEX",
+    "AU",
+    "DN",
+    "DC",
+    "CT",
+    "CC",
+    "ANN_COD(DD)",
+    "ANN_COD(DH)",
+    "LB",
+    "CI",
+]
+
+URI_CELEX_COLUMNS = {'PARENT': 'skos:broader'}
+
+# COLLECTION_TARGET_COLUMNS = ["Classification level 1", "Classification level 2", "Classification level 3"]
+#
+# COLLECTION_COLUMNS = {
+#     "Classification level 1": "skos:prefLabel",
+#     "Classification level 2": "skos:prefLabel",
+#     "Classification level 3": "skos:prefLabel",
+# }
 
 
-URI_CELEX_COLUMNS = {'PARENT': 'skos:broader', }
+COLUMN_ANNOTATION_ASSOCIATIONS = [('DD', 'ANN_COD(DD)'),
+                                  ('EV', 'ANN_COD(EV)'),
+                                  ('SG', 'ANN_COD(SG)'),
+                                  ('IF', 'ANN_TOD(IF)'),
+                                  ('IF', 'ANN_COD(IF)')]
 
+ANNOTATION_COLUMNS = {
+    'ANN_COD(DD)': 'lamd:md_ANN_COD',
+    'ANN_COD(EV)': 'lamd:md_ANN_COD',
+    'ANN_COD(SG)': 'lamd:md_ANN_COD',
+    'ANN_TOD(IF)': 'lamd:md_ANN_TOD',
+    'ANN_COD(IF)': 'lamd:md_ANN_COD',
+    'IF': 'lamd:md_IF',
+    'DD': 'lamd:md_DD',
+    'EV': 'lamd:md_EV',
+    'SG': 'lamd:md_SG',
+}
 
+ANNOTATION_COLUMNS_UNUSED = {
+    'ANN_COD': 'lamd:md_ANN_COD',
+    'ANN_TOD': 'lamd:md_ANN_TOD',
+    'ANN_CLB': 'lamd:md_ANN_CLB',
+    'ANN_ART': 'lamd:md_ANN_ART',
+    'ANN_PAR': 'lamd:md_ANN_PAR',
+    'ANN_SUB': 'lamd:md_ANN_SUB',
+    'ANN_TLT': 'lamd:md_ANN_TLT',
+    'ANN_RL2': 'lamd:md_ANN_RL2',
+    'ANN_MDL': 'lamd:md_ANN_MDL',
+    'ANN_MSL': 'lamd:md_ANN_MSL',
+    'ANN_SOV': 'lamd:md_ANN_SOV',
+    'ANN_EOV': 'lamd:md_ANN_EOV',
+    'ANN_LVL': 'lamd:md_ANN_LVL',
+    'ANN_FCS': 'lamd:md_ANN_FCS',
+    'ANN_FCT': 'lamd:md_ANN_FCT'}
 
 LAM_CLASS_CS = "lamd:LAMLegalDocument"
 
 CELEX_CS = "celexd:CelexLegalDocument"
 
-LAM_PROPRITIES = "lam:DocumentProperty"
+LITERAL_CELEX_COLUMNS = {'CODE': 'skos:notation',
+                         'LABEL': 'skos:prefLabel@en',
+                         'EXAMPLE_EN': 'skos:example@en',
+                         'COMMENT': 'skos:editorialNote@en',
+                         }
+
+# These values shall be mapped onto lamd proxy properties not lam# directly
+# The commented code maintained for quick revert, if necessary
+
+# VALUE_COMMENT_CELEX_COLUMNS = {
+#     'DTS': 'lam:dts',
+#     'DTT': 'lam:dtt',
+#     'DTA': 'lam:dta',
+#     'DTN': 'lam:dtn',
+# }
+
+VALUE_COMMENT_CELEX_COLUMNS = {
+    'DTS': 'lamd:md_DTS',
+    'DTT': 'lamd:md_DTT',
+    'DTA': 'lamd:md_DTA',
+    'DTN': 'lamd:md_DTN',
+}
 
 
-
-
-
+def create_cs(graph, cs=LAM_CLASS_CS, cs_label="Document metadata"):
+    """
+        create the concept scheme definition
+    """
+    cs = lam4vb3.cell_parser.qname_uri(cs, graph.namespaces())
+    graph.add((cs, RDF.type, SKOS.ConceptScheme))
+    graph.add((cs, SKOS.prefLabel, rdflib.Literal(cs_label)))
 
 
 def create_concepts(df, graph):

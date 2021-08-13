@@ -4,7 +4,7 @@ Date: 23/11/2019
 Author: Eugeniu Costetchi
 Email: costezki.eugen@gmail.com 
 """
-from lam4vb3 import build
+from lam4vb3.unused import build
 
 URI_COLUMN = 'URI'
 

@@ -10,8 +10,8 @@ import unittest
 import pandas as pd
 from rdflib.namespace import SKOS
 
-from lam4vb3 import PREFIX_WS_NAME, LAM_CLASSES_WS_NAME, class_build, \
-    LAM_CLASS_CLASSIFICATION_WS_NAME
+from lam4vb3 import PREFIX_WS_NAME, LAM_CLASSES_WS_NAME, LAM_CLASS_CLASSIFICATION_WS_NAME
+from lam4vb3.unused import class_build
 from tests import INPUT_EXCEL_FILE, LAM_CLASSES_TTL
 
 

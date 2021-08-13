@@ -16,7 +16,7 @@ from rdflib import RDF
 
 import lam4vb3.cell_parser
 from lam4vb3 import lam_utils
-from lam4vb3.build import PlainTripleMaker
+from lam4vb3.unused.build import PlainTripleMaker
 from lam4vb3.lam_utils import add_triples_to_graph
 from lam4vb3.cell_parser import parse_multi_line_value, parse_value
 

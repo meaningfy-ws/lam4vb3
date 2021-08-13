@@ -13,7 +13,6 @@ import rdflib
 import lam4vb3.builder.unused_builders
 import lam4vb3.cell_parser
 import lam4vb3.lam_utils
-from lam4vb3 import build
 
 
 class MyTestCase(unittest.TestCase):

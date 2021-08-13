@@ -7,15 +7,11 @@ Email: costezki.eugen@gmail.com
 This module deals with loading and generating RDF structures for the metadata/property worksheets
 
 """
-import warnings
-
-import rdflib
-from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, XMLNS, XSD
 
 # from lam4vb3 import lam_utils, build
 import lam4vb3.cell_parser
 import lam4vb3.lam_utils
-from lam4vb3 import lam_utils, build, collection_build
+from lam4vb3.unused import build, collection_build
 
 LITERAL_COLUMNS = {
     'Code': 'skos:notation',

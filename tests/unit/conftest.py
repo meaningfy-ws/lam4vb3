@@ -6,17 +6,14 @@
 # Email: costezki.eugen@gmail.com 
 
 """ """
-import json
 import pathlib
 
-import pandas as pd
 import pytest
 import rdflib
 
 import lam4vb3.lam_utils
 from lam4vb3 import LAM_PROPERTIES_WS_NAME, LAM_CLASSES_WS_NAME, LAM_PROPERTY_CLASSIFICATION_WS_NAME, \
-    LAM_CLASS_CLASSIFICATION_WS_NAME, CELEX_CLASSES_WS_NAME, CELEX_CLASS_CLASSIFICATION_WS_NAME, PREFIX_WS_NAME, \
-    LAM_PROPERTIES_NEW_WS_NAME, build
+    LAM_CLASS_CLASSIFICATION_WS_NAME, CELEX_CLASSES_WS_NAME, CELEX_CLASS_CLASSIFICATION_WS_NAME, PREFIX_WS_NAME
 from lam4vb3.excel2rdf import transform_celex_classes, transform_properties, transform_classes
 from lam4vb3.lam_utils import read_excel_worksheet
 
