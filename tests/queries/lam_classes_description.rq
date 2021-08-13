@@ -1,6 +1,5 @@
 PREFIX lam: <http://publications.europa.eu/ontology/lam-skos-ap#>
 PREFIX lamd: <http://publications.europa.eu/resources/authority/lam/>
-PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 # testing lamd:c_017 LAM class description columns
@@ -12,5 +11,5 @@ WHERE {
   ?subject skos:altLabel ?altLabel .
   ?subject skos:editorialNote ?editorialNote .
   ?subject skos:example ?example .
-  ?subject skos:inScheme lamd:LAMLegalDocument .
+  ?subject skos:inScheme lam:LegalDocumentClass .
 }

@@ -3,14 +3,16 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX euvoc: <http://publications.europa.eu/ontology/euvoc#>
 
 # testing lamd:class_REFANNOT LAM property classification
+# TODO: lamd:class_REF is now lamd:class_ref ?
+# changed skos:definition to sh:description
 
 ASK
 WHERE {
   VALUES ?subject {lamd:class_REFANNOT} .
   ?subject a skos:Collection .
-  ?subject skos:definition ?defintion .
+  ?subject sh:description ?description .
   ?subject skos:notation ?notation .
   ?subject skos:prefLabel ?prefLabel .
   ?subject euvoc:order ?order .
-  lamd:class_REF skos:member ?subject .
+#  lamd:class_REF skos:member ?subject .
 }

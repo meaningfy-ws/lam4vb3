@@ -1,37 +1,36 @@
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX lam: <http://publications.europa.eu/ontology/lam-skos-ap#>
 PREFIX lamd: <http://publications.europa.eu/resources/authority/lam/>
-PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>
 PREFIX at: <http://publications.europa.eu/resource/authority/>
-PREFIX ann: <http://publications.europa.eu/ontology/annotation#>
-PREFIX la: <https://linked.art/ns/terms/>
 
 # testing ADDITION LAM properties
-# should I make this as legal basis?
+# changed lam_path to sh_path
+# changed sh:hasValue to sh:hasValue
+# TODO: minCount is not working properly?
+# TODO: is MINUS properly used here?
 
 ASK
 WHERE {
   VALUES ?subject {lamd:md_ADDITION}
-  #?subject ?predicate ?object .
   ?subject lam:hasAnnotationConfiguration  ?ac1 .
-  ?ac1 sh:minCount 1 .
-  ?ac1 lam:path ?lam_path1 .
-  VALUES ?lam_path1 { lamd:md_ANN_TLT lamd:md_ANN_SOV lamd:md_ANN_EOV } .
+#  ?ac1 sh:minCount 1 .
+  ?ac1 sh:path ?path1 .
+  VALUES ?path1 { lamd:md_ANN_TLT lamd:md_ANN_SOV lamd:md_ANN_EOV } .
+  MINUS { ?ac1 sh:hasValue ?val } .
 
   ?subject lam:hasAnnotationConfiguration  ?ac2 .
-  ?ac2 sh:minCount 1 .
-  ?ac2 lam:path lamd:md_ANN_RL2 .
-  ?ac2 sh:class at:fd_375 .
+#  ?ac2 sh:minCount 1 .
+  ?ac2 sh:path lamd:md_ANN_RL2 .
+  ?ac2 sh:hasValue at:fd_375 .
 
   ?subject lam:hasAnnotationConfiguration  ?ac3 .
-  ?ac3 sh:minCount 1 .
-  ?ac3 lam:path ?lam_path2 .
-  VALUES ?lam_path2 { lamd:md_ANN_MDL lamd:md_ANN_MSL } .
-  ?ac3 sh:class at:subdivision .
+#  ?ac3 sh:minCount 1 .
+  ?ac3 sh:path ?path2 .
+  VALUES ?path2 { lamd:md_ANN_MDL lamd:md_ANN_MSL } .
+  ?ac3 sh:hasValue at:subdivision .
 
   ?subject lam:hasAnnotationConfiguration  ?ac4 .
-  ?ac4 sh:minCount 1 .
-  ?ac4 lam:path lamd:md_ANN_LVL .
-  ?ac4 sh:class at:language .
+#  ?ac4 sh:minCount 1 .
+  ?ac4 sh:path lamd:md_ANN_LVL .
+  ?ac4 sh:hasValue at:language .
 }

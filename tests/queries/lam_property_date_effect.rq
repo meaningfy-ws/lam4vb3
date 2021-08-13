@@ -1,20 +1,18 @@
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX lam: <http://publications.europa.eu/ontology/lam-skos-ap#>
 PREFIX lamd: <http://publications.europa.eu/resources/authority/lam/>
-PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>
 PREFIX at: <http://publications.europa.eu/resource/authority/>
-PREFIX ann: <http://publications.europa.eu/ontology/annotation#>
-PREFIX la: <https://linked.art/ns/terms/>
 
 # testing Date of effect LAM properties
+# TODO: should we use sh:hasValue or sh:class for line 20?
+# TODO: minCount is not working properly?
 
 ASK
 WHERE {
   VALUES ?subject {lamd:md_IF}
   ?subject lam:hasAnnotationConfiguration  ?ac  .
-  ?ac sh:minCount 1 .
-  ?ac lam:path ?lam_path .
-  VALUES ?lam_path { lamd:md_ANN_TOD lamd:md_ANN_COD } .
-  ?ac sh:class at:fd_335 .
+#  ?ac sh:minCount 1 .
+  ?ac sh:path ?path .
+  VALUES ?path { lamd:md_ANN_TOD lamd:md_ANN_COD } .
+  ?ac sh:hasValue at:fd_335 .
 }

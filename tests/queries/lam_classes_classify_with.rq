@@ -4,13 +4,14 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 # testing lamd:c_022 LAM class property configuration (lamd:md_MI)
-# shouldn't we use sh:hasValue instead of sh:value?
+# changed lam:path to sh:path
+# TODO: minCount is not working properly?
 
 ASK
 WHERE {
   VALUES ?subject {lamd:c_022} .
   ?subject lam:classifyWith  ?cw  .
-  ?cw lam:path ?lam_path .
-  ?cw sh:minCount 1 .
-  ?cw sh:value ?val .
+  ?cw sh:path ?lam_path .
+  #?cw sh:minCount 1 .
+  ?cw sh:hasValue ?val .
 }

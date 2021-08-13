@@ -2,6 +2,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX lamd: <http://publications.europa.eu/resources/authority/lam/>
 
 # testing that the Author has 3 examples - LAM properties
+# added 'Example - EUR-Lex display notice' and 'Example - EUR-Lex index notice'
 
 ASK
 WHERE {

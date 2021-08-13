@@ -129,7 +129,7 @@ CONSTRAINT_COLUMNS = {
 
 COLLECTION_COLUMNS = {"CLASSIFICATION": "skos:member"}
 
-LAM_CS = LAMD.LegalDocumentClass
+LAM_CS = LAM.LegalDocumentClass    # changed to LAM
 
 URI_COLUMN = 'URI'
 
@@ -153,7 +153,7 @@ def create_concepts(df, graph):
                                        target_columns=[*LITERAL_CONCEPTS_COLUMNS],
                                        literal_columns=[*LITERAL_CONCEPTS_COLUMNS],
                                        subject_source_column=URI_COLUMN,
-                                       subject_classes=[SKOS.Concept, LAMD.LegalDocumentClass])
+                                       subject_classes=[SKOS.Concept, LAM.LegalDocumentClass]) # changed to LAM
 
     concept_maker.make_triples()
 

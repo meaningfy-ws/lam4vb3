@@ -19,8 +19,10 @@ from lam4vb3.builder.simple_builders import ConceptTripleMaker, SimpleTripleMake
 LITERAL_CONCEPTS_COLUMNS = {
     'CODE': 'skos:notation',
     'LABEL': 'skos:prefLabel@en',
-    'DESCRIPTION': 'skos:description',
+    'DESCRIPTION': 'sh:description',    #changed from 'DESCRIPTION': 'skos:description',
     'Example - cellar notice': 'skos:example',
+    'Example - EUR-Lex display notice': 'skos:example',  #added
+    'Example - EUR-Lex index notice': 'skos:example',   #added
     'Analytical methodology': 'skos:scopeNote@en',
     'Specific cases': 'skos:historyNote@en',
     'Comments': 'skos:editorialNote@en',
@@ -30,7 +32,7 @@ LITERAL_CONCEPTS_COLUMNS = {
 LITERAL_COLLECTIONS_COLUMNS = {
     'CODE': 'skos:notation',
     'LABEL': 'skos:prefLabel@en',
-    'DESCRIPTION': 'skos:description',
+    'DESCRIPTION': 'sh:description',  # changed from 'DESCRIPTION': 'skos:description',
     'COMMENT': 'skos:editorialNote@en',
     'ORDER': 'euvoc:order'
 }
@@ -64,7 +66,7 @@ CONSTRAINT_COLUMNS = {
 
 COLLECTION_COLUMNS = {"CLASSIFICATION": "skos:member"}
 
-LAM_CS = LAMD.DocumentProperty
+LAM_CS = LAM.DocumentProperty   #changed from LAMD to LAM
 
 URI_COLUMN = 'URI'
 
@@ -88,7 +90,7 @@ def create_concepts(df, graph):
                                        target_columns=[*selected_columns],
                                        literal_columns=[*LITERAL_CONCEPTS_COLUMNS],
                                        subject_source_column=URI_COLUMN,
-                                       subject_classes=[SKOS.Concept, LAMD.DocumentProperty])
+                                       subject_classes=[SKOS.Concept, LAM.DocumentProperty])    # changed from LAMD to LAM
 
     concept_maker.make_triples()
 

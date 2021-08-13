@@ -17,6 +17,8 @@ import lam4vb3.lam_utils
 from lam4vb3 import LAM_PROPERTIES_WS_NAME, LAM_CLASSES_WS_NAME, LAM_PROPERTY_CLASSIFICATION_WS_NAME, \
     LAM_CLASS_CLASSIFICATION_WS_NAME, CELEX_CLASSES_WS_NAME, CELEX_CLASS_CLASSIFICATION_WS_NAME, PREFIX_WS_NAME, \
     LAM_PROPERTIES_NEW_WS_NAME, build
+from lam4vb3.builder.celex_classes_builder import make_celex_classes_worksheet
+from lam4vb3.builder.lam_classes_builder import make_lam_classes_worksheet
 from lam4vb3.builder.property_builder import make_property_worksheet
 from lam4vb3.excel2rdf import transform_celex_classes, transform_properties, transform_classes
 from lam4vb3.lam_utils import read_excel_worksheet
@@ -25,6 +27,7 @@ from tests import OUTPUT_FOLDER
 SHACL_SHAPES_2021 = pathlib.Path(__file__).parent.parent.parent / "models" / "lam-skos-ap-2021.ttl"
 TESTBED_EXCEL_2021_08 = pathlib.Path(__file__).parent.parent / "test_data" / "LAM_metadata_20210413_testbed.xlsx"
 TEMP_OUTPUT_FOLDER = pathlib.Path(__file__).parent.parent / "output"
+# TODO: isn't this the same as OUTPUT_FOLDER from tests/__init__.py ?
 
 
 #  executions of the old transformers fixtures
@@ -67,7 +70,70 @@ def lam_property_author_example_query():
     return path_to_query_file.read_text()
 
 
-# TODO: add fixtures for the rest opf the queries
+@pytest.fixture(scope="session")
+def lam_property_date_effect_query():
+    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_property_date_effect.rq"
+    return path_to_query_file.read_text()
+
+
+@pytest.fixture(scope="session")
+def lam_property_legal_basis_query():
+    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_property_legal_basis.rq"
+    return path_to_query_file.read_text()
+
+@pytest.fixture(scope="session")
+def lam_property_addition_query():
+    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_property_addition.rq"
+    return path_to_query_file.read_text()
+
+
+@pytest.fixture(scope="session")
+def lam_property_classification_query():
+    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_property_classification.rq"
+    return path_to_query_file.read_text()
+
+
+@pytest.fixture(scope="session")
+def lam_classes_description_query():
+    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_classes_description.rq"
+    return path_to_query_file.read_text()
+
+
+@pytest.fixture(scope="session")
+def lam_classes_property_configuration_DD_query():
+    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_classes_property_configuration_DD.rq"
+    return path_to_query_file.read_text()
+
+
+@pytest.fixture(scope="session")
+def lam_classes_property_configuration_MI_query():
+    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_classes_property_configuration_MI.rq"
+    return path_to_query_file.read_text()
+
+
+@pytest.fixture(scope="session")
+def lam_classes_classify_with_query():
+    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_classes_classify_with.rq"
+    return path_to_query_file.read_text()
+
+
+@pytest.fixture(scope="session")
+def lam_class_classification_query():
+    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_class_classification.rq"
+    return path_to_query_file.read_text()
+
+
+@pytest.fixture(scope="session")
+def lam_celex_classes_query():
+    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_celex_classes.rq"
+    return path_to_query_file.read_text()
+
+
+@pytest.fixture(scope="session")
+def lam_celex_classes_classification_query():
+    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_celex_classes_classification.rq"
+    return path_to_query_file.read_text()
+
 
 # getting test data worksheets
 
@@ -92,12 +158,12 @@ def test_lam_classes_classification_df():
 
 
 @pytest.fixture(scope="session")
-def test_celex_classes_df():
+def test_lam_celex_classes_df():
     return read_excel_worksheet(file_path=TESTBED_EXCEL_2021_08, sheet_name=CELEX_CLASSES_WS_NAME)
 
 
 @pytest.fixture(scope="session")
-def test_celex_classes_classification_df():
+def test_lam_celex_classes_classification_df():
     return read_excel_worksheet(file_path=TESTBED_EXCEL_2021_08, sheet_name=CELEX_CLASS_CLASSIFICATION_WS_NAME)
 
 
@@ -123,4 +189,20 @@ def lam_properties_graph(test_lam_properties_df, test_lam_properties_classificat
                                    prefixes=test_prefixes_df, output_file=OUTPUT_FOLDER / "lam_properties.ttl")
 
 
-# TODO: add two more fixtures for lam classes and celex classes
+
+@pytest.fixture(scope="session")
+def lam_classes_graph(test_lam_classes_df, test_lam_classes_classification_df,
+                         test_prefixes_df,):
+    OUTPUT_FOLDER.mkdir(exist_ok=True)
+    return make_lam_classes_worksheet(lam_df_classes=test_lam_classes_df,
+                                   lam_df_classes_classification=test_lam_classes_classification_df,
+                                   prefixes=test_prefixes_df, output_file=OUTPUT_FOLDER / "lam_classes.ttl")
+
+
+@pytest.fixture(scope="session")
+def lam_celex_classes_graph(test_lam_celex_classes_df, test_lam_celex_classes_classification_df,
+                         test_prefixes_df,):
+    OUTPUT_FOLDER.mkdir(exist_ok=True)
+    return make_celex_classes_worksheet(lam_df_celex_classes=test_lam_celex_classes_df,
+                                   lam_df_celex_classes_classification=test_lam_celex_classes_classification_df,
+                                   prefixes=test_prefixes_df, output_file=OUTPUT_FOLDER / "lam_celex_classes.ttl")
