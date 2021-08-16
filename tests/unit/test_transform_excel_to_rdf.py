@@ -39,7 +39,7 @@ def test_lam_property_legal_basis_query(lam_property_legal_basis_query, lam_prop
 def test_lam_property_addition_query(lam_property_addition_query, lam_properties_graph):
     results = lam_properties_graph.query(lam_property_addition_query)
     assert results.askAnswer is True
-
+# TODO: why it does not return all annotations?
 
 def test_lam_property_classification_query(lam_property_classification_query, lam_properties_graph):
     results = lam_properties_graph.query(lam_property_classification_query)
@@ -56,10 +56,10 @@ def test_lam_classes_property_configuration_DD_query(lam_classes_property_config
     assert results.askAnswer is True
 # TODO: implement hasAnnotationConfiguration (ticket exists!)
 
-def test_lam_classes_property_configuration_MI_query(lam_classes_property_configuration_MI_query, lam_classes_graph):
+def test_lam_classes_property_configuration_TT_query(lam_classes_property_configuration_MI_query, lam_classes_graph):
     results = lam_classes_graph.query(lam_classes_property_configuration_MI_query)
     assert results.askAnswer is True
-# TODO: use an Y instead of O
+
 
 def test_lam_classes_classify_with_query(lam_classes_classify_with_query, lam_classes_graph):
     results = lam_classes_graph.query(lam_classes_classify_with_query)
@@ -74,6 +74,8 @@ def test_lam_class_classification_query(lam_class_classification_query, lam_clas
 def test_lam_celex_classes_query(lam_celex_classes_query, lam_celex_classes_graph):
     results = lam_celex_classes_graph.query(lam_celex_classes_query)
     assert results.askAnswer is True
+
+
 
 def test_lam_celex_classes_classification_query(lam_celex_classes_classification_query, lam_celex_classes_graph):
     results = lam_celex_classes_graph.query(lam_celex_classes_classification_query)

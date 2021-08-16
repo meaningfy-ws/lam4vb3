@@ -27,7 +27,6 @@ from tests import OUTPUT_FOLDER
 SHACL_SHAPES_2021 = pathlib.Path(__file__).parent.parent.parent / "models" / "lam-skos-ap-2021.ttl"
 TESTBED_EXCEL_2021_08 = pathlib.Path(__file__).parent.parent / "test_data" / "LAM_metadata_20210413_testbed.xlsx"
 TEMP_OUTPUT_FOLDER = pathlib.Path(__file__).parent.parent / "output"
-# TODO: isn't this the same as OUTPUT_FOLDER from tests/__init__.py ?
 
 
 #  executions of the old transformers fixtures
@@ -38,7 +37,7 @@ def get_celex_classes_rdf():
 
 
 @pytest.fixture(scope="session")
-def get_lam_proprieties_rdf():
+def get_lam_properties_rdf():
     return transform_properties(TESTBED_EXCEL_2021_08, TEMP_OUTPUT_FOLDER)
 
 
@@ -107,7 +106,7 @@ def lam_classes_property_configuration_DD_query():
 
 @pytest.fixture(scope="session")
 def lam_classes_property_configuration_MI_query():
-    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_classes_property_configuration_MI.rq"
+    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_classes_property_configuration_TT.rq"
     return path_to_query_file.read_text()
 
 

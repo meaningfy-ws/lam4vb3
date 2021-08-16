@@ -15,13 +15,14 @@ WHERE {
   ?subject a skos:Concept, lam:DocumentProperty .
   ?subject skos:inScheme lamd:LAMProperties .
   ?subject skos:prefLabel ?label .
-  ?subject lam:path cdm:created_by .
+  ?subject sh:path cdm:created_by .
   ?subject sh:class at:corporate-body .
-  ?subject sh:description ?description .
+  ?subject skos:definition ?description .
   lamd:class_ESI skos:member ?subject .
   ?subject skos:example ?example .
   ?subject skos:editorialNote ?editorialNote .
   ?subject skos:scopeNote ?scopeNote .
+  ?subject skos:historyNote ?historyNote .
 
   FILTER (lang(?label) = 'en' ) .
 

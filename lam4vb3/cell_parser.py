@@ -55,11 +55,12 @@ def parse_cell(cell_value: str, graph: rdflib.Graph, is_literal=False) -> dict:
         #         f"Literal values should be free text with no markers present (|). The value given was {cell_value}")
 
     first_part, second_part = split_by_pipe(cell_value)
+    first_part = normalize_spaces(first_part).lower()
 
     if second_part:
         result[COMMENT] = second_part
 
-    if normalize_spaces(first_part).lower() in CONTROLLED_LIST:
+    if first_part in CONTROLLED_LIST:
         result.update(CONTROLLED_LIST[first_part])
     else:
         values = split_lines(first_part)

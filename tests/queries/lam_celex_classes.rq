@@ -2,7 +2,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX lam: <http://publications.europa.eu/ontology/lam-skos-ap#>
 PREFIX celexd: <http://publications.europa.eu/resources/authority/celex/>
 
-# testing celexd:c_0 LAM CELEX classes
+# testing celexd:c_5_AG_OJC LAM CELEX classes
 
 ASK
 WHERE {
@@ -11,10 +11,7 @@ WHERE {
   ?subject skos:inScheme celexd:CelexClasses .
   ?subject skos:notation ?notation .
   ?subject skos:prefLabel ?prefLabel .
-  ?subject skos:broader celexd:c_5_AG .
+  celexd:c_5_AG skos:broader ?subject .
   celexd:class_5_CONSIL skos:member ?subject .
-  ?subject lam:hasPropertyConfiguration ?prop_config .
-  ?subject skos:editorialNote ?editorial_note .
-  ?subject skos:example ?example .
 }
 

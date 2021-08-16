@@ -12,7 +12,7 @@ WHERE {
   ?ac1 sh:minCount "1"^^xsd:int .
   ?ac1 lam:path ?path1 .
   VALUES ?path1 { lamd:md_ANN_TLT lamd:md_ANN_SOV lamd:md_ANN_EOV } .
-#  FILTER NOT EXISTS { ?ac1 sh:class ?val } .
+  FILTER NOT EXISTS { ?ac1 sh:class ?val } .
 
   ?subject lam:hasAnnotationConfiguration  ?ac2 .
   ?ac2 sh:minCount "1"^^xsd:int .

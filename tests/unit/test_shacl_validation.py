@@ -1,7 +1,7 @@
 import pathlib
 from pyshacl import validate
 
-from tests.unit.conftest import get_lam_classes_rdf, get_lam_proprieties_rdf, get_celex_classes_rdf, shacl_shapes
+from tests.unit.conftest import get_lam_classes_rdf, get_lam_properties_rdf, get_celex_classes_rdf, shacl_shapes
 
 
 def test_lam_classes(get_lam_classes_rdf, shacl_shapes):
@@ -20,8 +20,8 @@ def test_lam_classes(get_lam_classes_rdf, shacl_shapes):
     assert conforms
 
 
-def test_lam_proprieties(get_lam_proprieties_rdf, shacl_shapes):
-    r = validate(get_lam_proprieties_rdf,
+def test_lam_properties(get_lam_properties_rdf, shacl_shapes):
+    r = validate(get_lam_properties_rdf,
                  shacl_graph=shacl_shapes,
                  inference='rdfs',
                  abort_on_first=False,

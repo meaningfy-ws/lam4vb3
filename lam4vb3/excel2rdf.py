@@ -56,6 +56,7 @@ def transform_classes(input_file, output_folder):
                              header=[0], na_values=[""], keep_default_na=False)
 
     start_time = time.time()
+
     returned_graph = class_build.make_class_worksheet(lam_df_classes, lam_df_class_classification, prefixes,
                                      pathlib.Path(output_folder) / LAM_c)
     logging.info(f"Successfully completed the transformation. The output is written into {pathlib.Path(output_folder) / LAM_c}")
