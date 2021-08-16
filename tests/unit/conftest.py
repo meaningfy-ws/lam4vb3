@@ -8,6 +8,7 @@
 """ """
 import json
 import pathlib
+import shutil
 
 import pandas as pd
 import pytest
@@ -22,29 +23,11 @@ from lam4vb3.builder.lam_classes_builder import make_lam_classes_worksheet
 from lam4vb3.builder.property_builder import make_property_worksheet
 from lam4vb3.excel2rdf import transform_celex_classes, transform_properties, transform_classes
 from lam4vb3.lam_utils import read_excel_worksheet
-from tests import OUTPUT_FOLDER
+from tests import OUTPUT_FOLDER, THIS_PROJECT
 
 SHACL_SHAPES_2021 = pathlib.Path(__file__).parent.parent.parent / "models" / "lam-skos-ap-2021.ttl"
 TESTBED_EXCEL_2021_08 = pathlib.Path(__file__).parent.parent / "test_data" / "LAM_metadata_20210413_testbed.xlsx"
 TEMP_OUTPUT_FOLDER = pathlib.Path(__file__).parent.parent / "output"
-
-
-#  executions of the old transformers fixtures
-#  TODO: to be refactored to file access
-@pytest.fixture(scope="session")
-def get_celex_classes_rdf():
-    return transform_celex_classes(TESTBED_EXCEL_2021_08, TEMP_OUTPUT_FOLDER)
-
-
-@pytest.fixture(scope="session")
-def get_lam_properties_rdf():
-    return transform_properties(TESTBED_EXCEL_2021_08, TEMP_OUTPUT_FOLDER)
-
-
-@pytest.fixture(scope="session")
-def get_lam_classes_rdf():
-    return transform_classes(TESTBED_EXCEL_2021_08, TEMP_OUTPUT_FOLDER)
-
 
 # file fixtures
 
