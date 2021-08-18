@@ -55,13 +55,13 @@ def parse_cell(cell_value: str, graph: rdflib.Graph, is_literal=False) -> dict:
         #         f"Literal values should be free text with no markers present (|). The value given was {cell_value}")
 
     first_part, second_part = split_by_pipe(cell_value)
-    first_part = normalize_spaces(first_part).lower()
+    first_part = normalize_spaces(first_part)
 
     if second_part:
         result[COMMENT] = second_part
 
-    if first_part in CONTROLLED_LIST:
-        result.update(CONTROLLED_LIST[first_part])
+    if first_part.lower() in CONTROLLED_LIST:
+        result.update(CONTROLLED_LIST[first_part.lower()])
     else:
         values = split_lines(first_part)
         list_of_uris = [qname_uri(qname, graph.namespaces()) for qname in values]
@@ -76,7 +76,7 @@ def split_by_pipe(string: str) -> tuple:
         For a given cell_value (string) split the string by pipe ("|") an return a
         list a values. It will raise an error if there are more than on pipe
     """
-    pipe = "|"
+    pipe = " | "
     result_list = string.split(pipe)
     if len(result_list) > 2:
         raise ValueError(f"Cannot have more than one pipe (|) separator in the cell value")

@@ -125,7 +125,7 @@ class ConstraintTripleMaker(AbstractTripleMaker):
         # comment values if any
         if COMMENT in cell_interpretation:
             result_triples.append(
-                (cell_reification_subject, self.constraint_min_property,
+                (cell_reification_subject, self.constraint_comment,
                  rdflib.Literal(f"{cell_interpretation[COMMENT]}", lang="en")))
 
         # add name if any available
