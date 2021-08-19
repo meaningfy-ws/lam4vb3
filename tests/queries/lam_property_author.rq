@@ -6,23 +6,23 @@ PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>
 PREFIX at: <http://publications.europa.eu/resource/authority/>
 
 # testing Author LAM properties
-# this test is True only if ?subject is not a lam:DocumentProperty AND not inScheme with lam:DocumentProperty
-# AND not topConceptOf lam:DocumentProperty
+# changed LAMD.DocumentProperty to LAM.DocumentProperty; LAM_CAS from LAMD to LAM namespace
+# changed skos:description to sh:description
 
 ASK
 WHERE {
   VALUES ?subject {lamd:md_AU}
   ?subject a skos:Concept, lam:DocumentProperty .
-  ?subject skos:inScheme lam:DocumentProperty .
-#  ?subject skos:topConceptOf lam:DocumentProperty .
+  ?subject skos:inScheme lamd:LAMProperties .
   ?subject skos:prefLabel ?label .
   ?subject sh:path cdm:created_by .
   ?subject sh:class at:corporate-body .
-  ?subject skos:definition ?definition .
+  ?subject skos:definition ?description .
   lamd:class_ESI skos:member ?subject .
   ?subject skos:example ?example .
   ?subject skos:editorialNote ?editorialNote .
   ?subject skos:scopeNote ?scopeNote .
+  ?subject skos:historyNote ?historyNote .
 
   FILTER (lang(?label) = 'en' ) .
 

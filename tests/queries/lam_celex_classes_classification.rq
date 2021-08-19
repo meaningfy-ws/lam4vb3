@@ -1,0 +1,16 @@
+PREFIX lamd: <http://publications.europa.eu/resources/authority/lam/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX euvoc: <http://publications.europa.eu/ontology/euvoc#>
+
+# testing celexd:class_5_CONSIL LAM CELEX class classification
+
+ASK
+WHERE {
+  VALUES ?subject {celexd:class_5_CONSIL} .
+  ?subject a skos:Collection .
+  ?subject skos:notation ?notation .
+  ?subject skos:prefLabel ?prefLabel .
+  ?subject euvoc:order ?order .
+  celexd:class_5 skos:member ?subject .
+  ?subject skos:member ?object .
+}

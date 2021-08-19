@@ -10,7 +10,6 @@ import rdflib
 from rdflib import SKOS, RDF
 
 import lam4vb3.lam_utils
-from lam4vb3 import cell_parser
 from lam4vb3.builder import LAM, LAMD
 from lam4vb3.builder.inverse_builders import InverseTripleMaker
 from lam4vb3.builder.reified_builders import ConstraintTripleMaker
@@ -129,7 +128,7 @@ CONSTRAINT_COLUMNS = {
 
 COLLECTION_COLUMNS = {"CLASSIFICATION": "skos:member"}
 
-LAM_CS = LAMD.LegalDocumentClass
+LAM_CS = LAMD.LAMClasses
 
 URI_COLUMN = 'URI'
 
@@ -143,8 +142,6 @@ def create_concept_scheme(graph):
 
 
 def create_concepts(df, graph):
-    # selected_columns = {**LITERAL_CONCEPTS_COLUMNS,
-    #                     **URI_CONCEPTS_COLUMNS}
     concept_maker = ConceptTripleMaker(df=df,
                                        column_mapping_dict=LITERAL_CONCEPTS_COLUMNS,
                                        graph=graph,
@@ -153,7 +150,7 @@ def create_concepts(df, graph):
                                        target_columns=[*LITERAL_CONCEPTS_COLUMNS],
                                        literal_columns=[*LITERAL_CONCEPTS_COLUMNS],
                                        subject_source_column=URI_COLUMN,
-                                       subject_classes=[SKOS.Concept, LAMD.LegalDocumentClass])
+                                       subject_classes=[SKOS.Concept, LAM.LegalDocumentClass])
 
     concept_maker.make_triples()
 
@@ -173,6 +170,7 @@ def create_concepts(df, graph):
                                              constraint_property=LAM.hasPropertyConfiguration,
                                              constraint_class=LAM.PropertyConfiguration,
                                              constraint_comment=SKOS.editorialNote,
+                                             constraint_path_property=LAM.path,
                                              subject_source_column=URI_COLUMN)
     constraint_maker.make_triples()
 
@@ -183,17 +181,16 @@ def create_concepts(df, graph):
                                                      constraint_property=LAM.classifyWith,
                                                      constraint_class=LAM.MappingPropertyConfiguration,
                                                      constraint_comment=SKOS.editorialNote,
+                                                     constraint_path_property=LAM.path,
                                                      subject_source_column=URI_COLUMN)
     constraint_mapping_maker.make_triples()
 
 
 def create_collections(df, graph):
-    selected_columns = {**LITERAL_COLLECTIONS_COLUMNS,
-                        **URI_COLLECTIONS_COLUMNS}
     collection_maker = SimpleTripleMaker(df=df,
-                                         column_mapping_dict=selected_columns,
+                                         column_mapping_dict=LITERAL_COLLECTIONS_COLUMNS,
                                          graph=graph,
-                                         target_columns=[*selected_columns],
+                                         target_columns=[*LITERAL_COLLECTIONS_COLUMNS],
                                          literal_columns=[*LITERAL_COLLECTIONS_COLUMNS],
                                          subject_source_column=URI_COLUMN,
                                          subject_classes=[SKOS.Collection],

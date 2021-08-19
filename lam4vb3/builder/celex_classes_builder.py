@@ -10,10 +10,8 @@ import rdflib
 from rdflib import SKOS, RDF
 
 import lam4vb3.lam_utils
-from lam4vb3 import cell_parser
-from lam4vb3.builder import LAM, LAMD
+from lam4vb3.builder import LAM, CELEXD
 from lam4vb3.builder.inverse_builders import InverseTripleMaker
-from lam4vb3.builder.reified_builders import ConstraintTripleMaker
 from lam4vb3.builder.simple_builders import ConceptTripleMaker, SimpleTripleMaker
 
 LITERAL_CONCEPTS_COLUMNS = {
@@ -37,7 +35,7 @@ PARENT_CONCEPT_COLUMN = {'PARENT': 'skos:broader'}
 
 COLLECTION_COLUMNS = {"CLASSIFICATION": "skos:member"}
 
-LAM_CS = LAMD.LegalDocumentClass
+LAM_CS = CELEXD.CelexClasses
 
 URI_COLUMN = 'URI'
 
@@ -59,7 +57,7 @@ def create_concepts(df, graph):
                                        target_columns=[*LITERAL_CONCEPTS_COLUMNS],
                                        literal_columns=[*LITERAL_CONCEPTS_COLUMNS],
                                        subject_source_column=URI_COLUMN,
-                                       subject_classes=[SKOS.Concept, LAMD.LegalDocumentClass])
+                                       subject_classes=[SKOS.Concept, LAM.LegalDocumentClass])  #changed from LAMD to LAM
 
     concept_maker.make_triples()
 

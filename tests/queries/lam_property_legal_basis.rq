@@ -1,11 +1,7 @@
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX lam: <http://publications.europa.eu/ontology/lam-skos-ap#>
 PREFIX lamd: <http://publications.europa.eu/resources/authority/lam/>
-PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>
 PREFIX at: <http://publications.europa.eu/resource/authority/>
-PREFIX ann: <http://publications.europa.eu/ontology/annotation#>
-PREFIX la: <https://linked.art/ns/terms/>
 
 # testing Legal basis LAM properties
 
@@ -13,8 +9,8 @@ ASK
 WHERE {
   VALUES ?subject {lamd:md_LB}
   ?subject lam:hasAnnotationConfiguration  ?ac  .
-  ?ac sh:minCount 1 .
-  ?ac lam:path ?lam_path .
+  ?ac sh:minCount "1"^^xsd:int .
+  ?ac lam:path ?path .
   VALUES ?lam_path { lamd:md_ANN_CLB lamd:md_ANN_ART lamd:md_ANN_PAR lamd:md_ANN_SUB } .
   ?ac sh:class at:fd_370 .
 }

@@ -1,0 +1,17 @@
+PREFIX lamd: <http://publications.europa.eu/resources/authority/lam/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX euvoc: <http://publications.europa.eu/ontology/euvoc#>
+
+# testing lamd:class_EP LAM class classification
+
+ASK
+WHERE {
+  VALUES ?subject {lamd:class_EP} .
+  ?subject a skos:Collection .
+  #?subject skos:definition ?definition .
+  ?subject skos:notation ?notation .
+  ?subject skos:prefLabel ?prefLabel .
+  ?subject euvoc:order ?order .
+  lamd:class_PREPDOC skos:member ?subject .
+  FILTER NOT EXISTS { ?subject skos:member lamd:class_PREPDOC }.
+}

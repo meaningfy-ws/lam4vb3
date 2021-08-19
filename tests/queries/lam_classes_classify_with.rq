@@ -1,0 +1,15 @@
+PREFIX lam: <http://publications.europa.eu/ontology/lam-skos-ap#>
+PREFIX lamd: <http://publications.europa.eu/resources/authority/lam/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+# testing lamd:c_022 LAM classes - classifyWith
+
+ASK
+WHERE {
+  VALUES ?subject {lamd:c_022} .
+  ?subject lam:classifyWith  ?cw  .
+  ?cw lam:path ?path .
+  ?cw sh:minCount "1"^^xsd:int .
+  ?cw sh:hasValue ?val .
+}
