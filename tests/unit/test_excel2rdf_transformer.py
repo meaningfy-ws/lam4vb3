@@ -56,7 +56,7 @@ def test_transform_sample_data_classes(test_lam_classes_df, test_lam_classes_cla
     assert any(output_folder.iterdir())
 
 
-def test_transform_sample_data_celex_classes(test_celex_classes_df, test_celex_classes_classification_df,
+def test_transform_sample_data_celex_classes(test_lam_celex_classes_df, test_lam_celex_classes_classification_df,
                                              test_prefixes_df, empty_lam_graph):
     """
         This test will simply run the transformation and assert the output files exist.
@@ -66,8 +66,8 @@ def test_transform_sample_data_celex_classes(test_celex_classes_df, test_celex_c
     output_folder = (THIS_PROJECT / "tests" / "output").resolve()
     shutil.rmtree(output_folder, ignore_errors=True)
     output_folder.mkdir()
-    make_celex_classes_worksheet(lam_df_celex_classes=test_celex_classes_df,
-                                 lam_df_celex_classes_classification=test_celex_classes_classification_df,
+    make_celex_classes_worksheet(lam_df_celex_classes=test_lam_celex_classes_df,
+                                 lam_df_celex_classes_classification=test_lam_celex_classes_classification_df,
                                  prefixes=test_prefixes_df, output_file=output_folder / "celex_classes.ttl")
     # transform_properties(input_file=input_file, output_folder=output_folder)
     assert output_folder.exists()

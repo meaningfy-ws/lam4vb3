@@ -14,19 +14,19 @@ from lam4vb3.builder.simple_builders import ConceptTripleMaker, SimpleTripleMake
 from lam4vb3.lam_utils import generate_uuid_uri
 
 TEST_LITERAL_COLUMNS_PROPERTY_DF = {
-    'Code': 'skos:notation',
-    'Label': 'skos:prefLabel@en',
-    'Definition': 'skos:definition@en',
+    'CODE': 'skos:notation',
+    'LABEL': 'skos:prefLabel@en',
+    'DESCRIPTION': 'skos:definition@en',
     'Example - cellar notice': 'skos:example',
     'Analytical methodology': 'skos:scopeNote@en',
     'Specific cases': 'skos:historyNote@en',
     'Comments': 'skos:editorialNote@en',
     'Changes to be done': 'skos:editorialNote@en',
-    'property type': 'dct:type',
+    'PROP_TYPE': 'dct:type',
 }
 
 TEST_URI_COLUMNS_PROPERTY_DF = {
-    'property': 'sh:path',
+    'SH_PATH': 'sh:path',
 }
 
 TEST_LITERAL_COLUMNS_CLASSIFICATION = {

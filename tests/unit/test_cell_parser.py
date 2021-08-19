@@ -3,11 +3,11 @@ import pytest
 from lam4vb3.cell_parser import LITERAL_VALUE, VALUES, COMMENT, MIN_COUNT, MAX_COUNT, CONTROLLED_LIST, parse_cell
 
 
-def test_multiline_value_parser(get_lam_classes_rdf):
+def test_multiline_value_parser(lam_classes_graph):
     example1 = """eurovoc:1452
 eurovoc:4347 | this is an optional comment"""
 
-    result = parse_cell(example1, get_lam_classes_rdf)
+    result = parse_cell(example1, lam_classes_graph)
 
     assert LITERAL_VALUE not in result
     assert VALUES in result
@@ -26,7 +26,7 @@ eurovoc:4347
 
           | this is an optional comment tolerating empty new lines and spaces"""
 
-    result = parse_cell(example2, get_lam_classes_rdf)
+    result = parse_cell(example2, lam_classes_graph)
 
     assert LITERAL_VALUE not in result
     assert VALUES in result
@@ -41,18 +41,18 @@ eurovoc:4347
 eurovoc:4347, | no comments | with | extra pipes|"""
 
     with pytest.raises(ValueError):
-        parse_cell(counter_example1, get_lam_classes_rdf)
+        parse_cell(counter_example1, lam_classes_graph)
 
     counter_example2 = """eurovoc:1452 | bad intermediary comment
 eurovoc:4347 | good final comment"""
 
     with pytest.raises(ValueError):
-        parse_cell(counter_example2, get_lam_classes_rdf)
+        parse_cell(counter_example2, lam_classes_graph)
 
 
-def test_cardinality_value_parser(get_lam_classes_rdf):
-    example1 = """O|Under Internal reference the reference to the procedure is doubled (as it is specifically under procedure)"""
-    result = parse_cell(example1, get_lam_classes_rdf)
+def test_cardinality_value_parser(lam_classes_graph):
+    example1 = """O | Under Internal reference the reference to the procedure is doubled (as it is specifically under procedure)"""
+    result = parse_cell(example1, lam_classes_graph)
 
     assert LITERAL_VALUE not in result
     assert VALUES not in result
@@ -63,7 +63,7 @@ def test_cardinality_value_parser(get_lam_classes_rdf):
 
     example2 = """ | no empty list of values with a dangling comment"""
 
-    result = parse_cell(example2, get_lam_classes_rdf)
+    result = parse_cell(example2, lam_classes_graph)
 
     assert LITERAL_VALUE not in result
     assert VALUES not in result
@@ -73,7 +73,7 @@ def test_cardinality_value_parser(get_lam_classes_rdf):
 
     example3 = ""
 
-    result = parse_cell(example3, get_lam_classes_rdf)
+    result = parse_cell(example3, lam_classes_graph)
 
     assert LITERAL_VALUE not in result
     assert VALUES not in result
@@ -83,18 +83,18 @@ def test_cardinality_value_parser(get_lam_classes_rdf):
     counter_example1 = """XYZ | cardinality specifications that are not in the foreseen controlled list"""
 
     with pytest.raises(ValueError):
-        parse_cell(counter_example1, get_lam_classes_rdf)
+        parse_cell(counter_example1, lam_classes_graph)
 
     counter_example2 = """YU | comment | with pipe (|) separators | inside |"""
 
     with pytest.raises(ValueError):
-        parse_cell(counter_example2, get_lam_classes_rdf)
+        parse_cell(counter_example2, lam_classes_graph)
 
 
-def test_literal_value_parser(get_lam_classes_rdf):
+def test_literal_value_parser(lam_classes_graph):
     example1 = """Council Common Position (CFSP number)"""
 
-    result = parse_cell(example1, get_lam_classes_rdf, is_literal=True)
+    result = parse_cell(example1, lam_classes_graph, is_literal=True)
 
     assert LITERAL_VALUE in result
     assert "Council Common Position (CFSP number)" in result[LITERAL_VALUE]
@@ -105,11 +105,7 @@ def test_literal_value_parser(get_lam_classes_rdf):
 
     example2 = ""
 
-    result = parse_cell(example2, get_lam_classes_rdf, is_literal=True)
+    result = parse_cell(example2, lam_classes_graph, is_literal=True)
 
     assert result == {}
 
-    counter_example = """text with | pipe | separator inside"""
-
-    with pytest.raises(ValueError):
-        parse_cell(counter_example, get_lam_classes_rdf, is_literal=True)
