@@ -42,6 +42,6 @@ def test_get_lam_classes_rdf(lam_classes_graph):
         concepts_in_graph.append(subj)
     assert isinstance(graph, rdflib.Graph)
     # number of "triples" in the Graph
-    assert len(graph) == 2166
+    assert len(graph) == 3366
     assert len(collections_in_graph) == 20
     assert len(concepts_in_graph) == 20
