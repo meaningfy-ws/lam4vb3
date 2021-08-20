@@ -14,3 +14,4 @@ LAMD = rdflib.Namespace("http://publications.europa.eu/resources/authority/lam/"
 CDM = rdflib.Namespace("http://publications.europa.eu/ontology/cdm#")
 AT = rdflib.Namespace("http://publications.europa.eu/resource/authority/")
 CELEXD = rdflib.Namespace("http://publications.europa.eu/resources/authority/celex/")
+FD_365 = rdflib.Namespace("http://publications.europa.eu/resource/authority/fd_365/")

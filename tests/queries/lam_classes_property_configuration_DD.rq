@@ -13,8 +13,8 @@ WHERE {
   ?pc lam:path lamd:md_DD .
   ?pc sh:minCount "1"^^xsd:int .
   ?pc sh:maxCount "1"^^xsd:int .
-#  ?pc lam:hasAnnotationConfiguration ?ac .
-#  ?ac lam:path lamd:md_ANN_COD .
-#  ?ac sh:minCount "1"^^xsd:int .
-#  ?ac sh:hasValue fd_365:DATADOPT .
+  ?pc lam:hasAnnotationConfiguration ?ac .
+  ?ac lam:path lamd:md_ANN_COD .
+  ?ac sh:minCount "1"^^xsd:int .
+  ?ac sh:hasValue fd_365:DATADOPT .
 }

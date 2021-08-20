@@ -12,7 +12,7 @@ from rdflib import SKOS, RDF
 import lam4vb3.lam_utils
 from lam4vb3.builder import LAM, LAMD
 from lam4vb3.builder.inverse_builders import InverseTripleMaker
-from lam4vb3.builder.reified_builders import ConstraintTripleMaker
+from lam4vb3.builder.reified_builders import ConstraintTripleMaker, AnnotationConstraintTripleMaker
 from lam4vb3.builder.simple_builders import ConceptTripleMaker, SimpleTripleMaker
 
 LITERAL_CONCEPTS_COLUMNS = {
@@ -63,7 +63,7 @@ CONSTRAINT_COLUMNS = {
     'DL': 'lamd:md_DL',
     'RP': 'lamd:md_RP',
     'VV': 'lamd:md_VV',
-    # 'REP': 'lamd:md_REP',
+    'REP': 'lamd:md_REP',
     'RS': 'lamd:md_RS',
     'AS': 'lamd:md_AS',
     'AF': 'lamd:md_AF',
@@ -132,6 +132,24 @@ LAM_CS = LAMD.LAMClasses
 
 URI_COLUMN = 'URI'
 
+COLUMN_ANNOTATION_ASSOCIATIONS = {'ANN_COD(DD)': 'DD',
+                                  'ANN_COD(DH)': 'DH',
+                                  'ANN_COD(DL)': 'DL',
+                                  'ANN_COD(EV)': 'EV',
+                                  'ANN_COD(SG)': 'SG',
+                                  'ANN_TOD(IF)': 'IF',
+                                  'ANN_COD(IF)': 'IF'}
+
+ANNOTATION_COLUMNS = {
+    'ANN_COD(DD)': 'lamd:md_ANN_COD',
+    'ANN_COD(DH)': 'lamd:md_ANN_COD',
+    'ANN_COD(DL)': 'lamd:md_ANN_COD',
+    'ANN_COD(EV)': 'lamd:md_ANN_COD',
+    'ANN_COD(SG)': 'lamd:md_ANN_COD',
+    'ANN_TOD(IF)': 'lamd:md_ANN_TOD',
+    'ANN_COD(IF)': 'lamd:md_ANN_COD',
+}
+
 
 def create_concept_scheme(graph):
     """
@@ -184,6 +202,18 @@ def create_concepts(df, graph):
                                                      constraint_path_property=LAM.path,
                                                      subject_source_column=URI_COLUMN)
     constraint_mapping_maker.make_triples()
+
+    annotation_constraints_maker = AnnotationConstraintTripleMaker(df=df,
+                                                                   graph=graph,
+                                                                   constraint_property=LAM.hasAnnotationConfiguration,
+                                                                   column_mapping_dict=ANNOTATION_COLUMNS,
+                                                                   constraint_class=LAM.AnnotationConfiguration,
+                                                                   target_columns=[*ANNOTATION_COLUMNS],
+                                                                   annotation_column_mapping=COLUMN_ANNOTATION_ASSOCIATIONS,
+                                                                   constraint_path_property=LAM.path
+                                                                   )
+
+    annotation_constraints_maker.make_triples()
 
 
 def create_collections(df, graph):

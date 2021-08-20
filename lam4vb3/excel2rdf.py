@@ -1,6 +1,6 @@
 """ 
 excel2rdf
-Created:  14/10/2019
+Created:  15/08/2021
 Author: Eugeniu Costetchi
 Email: costezki.eugen@gmail.com
 """
