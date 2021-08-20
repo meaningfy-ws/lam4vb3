@@ -25,7 +25,7 @@ CONTROLLED_LIST = {
     "yu": {MIN_COUNT: 1, MAX_COUNT: 1, NAME: "Mandatory unique"},
     "": {},
     "ou": {MAX_COUNT: 1},
-    "o": {},
+    "o": {NAME: "Optional"},
     "n": {MAX_COUNT: 0, NAME: "Forbidden"},
 }
 
@@ -58,7 +58,7 @@ def parse_cell(cell_value: str, graph: rdflib.Graph, is_literal=False) -> dict:
     first_part = normalize_spaces(first_part)
 
     if second_part:
-        result[COMMENT] = second_part
+        result[COMMENT] = second_part.lstrip(" ")
 
     if first_part.lower() in CONTROLLED_LIST:
         result.update(CONTROLLED_LIST[first_part.lower()])
@@ -76,7 +76,7 @@ def split_by_pipe(string: str) -> tuple:
         For a given cell_value (string) split the string by pipe ("|") an return a
         list a values. It will raise an error if there are more than on pipe
     """
-    pipe = " | "
+    pipe = "|"
     result_list = string.split(pipe)
     if len(result_list) > 2:
         raise ValueError(f"Cannot have more than one pipe (|) separator in the cell value")
