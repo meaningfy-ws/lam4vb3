@@ -87,8 +87,8 @@ def lam_classes_property_configuration_DD_query():
 
 
 @pytest.fixture(scope="session")
-def lam_classes_property_configuration_MI_query():
-    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_classes_property_configuration_TT.rq"
+def lam_classes_property_configuration_SG_query():
+    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_classes_property_configuration_SG.rq"
     return path_to_query_file.read_text()
 
 

@@ -4,7 +4,6 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX fd_365: <http://publications.europa.eu/resource/authority/fd_365/>
 
 # testing lamd:c_024 LAM class property configuration (lamd:md_DD)
-# TODO: Check ticket LAM-224 for updates
 
 ASK
 WHERE {

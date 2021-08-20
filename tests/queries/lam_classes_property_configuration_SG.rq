@@ -6,7 +6,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 # testing lamd:c_021 LAM class property configuration (lamd:md_TT)
 # this test does not pass because hasAnnotationConfiguration relationship between the property configuration and
 # the annotation configuration is missing.
-# TODO: Check ticket LAM-224 for updates
+
 
 ASK
 WHERE {
