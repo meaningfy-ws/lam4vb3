@@ -24,7 +24,7 @@ CONTROLLED_LIST = {
     "y": {MIN_COUNT: 1, NAME: "Mandatory"},
     "yu": {MIN_COUNT: 1, MAX_COUNT: 1, NAME: "Mandatory unique"},
     "": {},
-    "ou": {MAX_COUNT: 1},
+    "ou": {MAX_COUNT: 1, NAME: "Optional unique"},
     "o": {NAME: "Optional"},
     "n": {MAX_COUNT: 0, NAME: "Forbidden"},
 }
