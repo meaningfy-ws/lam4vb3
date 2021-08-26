@@ -27,6 +27,7 @@ from tests import OUTPUT_FOLDER, THIS_PROJECT
 SHACL_SHAPES_2021 = pathlib.Path(__file__).parent.parent.parent / "models" / "lam-skos-ap-2021.ttl"
 TESTBED_EXCEL_2021_08 = pathlib.Path(__file__).parent.parent / "test_data" / "LAM_metadata_20210413_testbed.xlsx"
 TEMP_OUTPUT_FOLDER = pathlib.Path(__file__).parent.parent / "output"
+QUERIES_FOLDER = pathlib.Path(__file__).parent.parent / "queries"
 
 # file fixtures
 
@@ -41,78 +42,78 @@ def shacl_shapes() -> rdflib.Graph:
 
 @pytest.fixture(scope="session")
 def lam_property_author_query():
-    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_property_author.rq"
+    path_to_query_file = QUERIES_FOLDER / "lam_property_author.rq"
     return path_to_query_file.read_text()
 
 
 @pytest.fixture(scope="session")
 def lam_property_author_example_query():
-    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_property_author_example.rq"
+    path_to_query_file = QUERIES_FOLDER / "lam_property_author_example.rq"
     return path_to_query_file.read_text()
 
 
 @pytest.fixture(scope="session")
 def lam_property_date_effect_query():
-    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_property_date_effect.rq"
+    path_to_query_file = QUERIES_FOLDER / "lam_property_date_effect.rq"
     return path_to_query_file.read_text()
 
 
 @pytest.fixture(scope="session")
 def lam_property_legal_basis_query():
-    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_property_legal_basis.rq"
+    path_to_query_file = QUERIES_FOLDER / "lam_property_legal_basis.rq"
     return path_to_query_file.read_text()
 
 @pytest.fixture(scope="session")
 def lam_property_addition_query():
-    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_property_addition.rq"
+    path_to_query_file = QUERIES_FOLDER / "lam_property_addition.rq"
     return path_to_query_file.read_text()
 
 
 @pytest.fixture(scope="session")
 def lam_property_classification_query():
-    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_property_classification.rq"
+    path_to_query_file = QUERIES_FOLDER / "lam_property_classification.rq"
     return path_to_query_file.read_text()
 
 
 @pytest.fixture(scope="session")
 def lam_classes_description_query():
-    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_classes_description.rq"
+    path_to_query_file = QUERIES_FOLDER / "lam_classes_description.rq"
     return path_to_query_file.read_text()
 
 
 @pytest.fixture(scope="session")
 def lam_classes_property_configuration_DD_query():
-    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_classes_property_configuration_DD.rq"
+    path_to_query_file = QUERIES_FOLDER / "lam_classes_property_configuration_DD.rq"
     return path_to_query_file.read_text()
 
 
 @pytest.fixture(scope="session")
 def lam_classes_property_configuration_SG_query():
-    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_classes_property_configuration_SG.rq"
+    path_to_query_file = QUERIES_FOLDER / "lam_classes_property_configuration_SG.rq"
     return path_to_query_file.read_text()
 
 
 @pytest.fixture(scope="session")
 def lam_classes_classify_with_query():
-    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_classes_classify_with.rq"
+    path_to_query_file = QUERIES_FOLDER / "lam_classes_classify_with.rq"
     return path_to_query_file.read_text()
 
 
 @pytest.fixture(scope="session")
 def lam_class_classification_query():
-    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_class_classification.rq"
+    path_to_query_file = QUERIES_FOLDER / "lam_class_classification.rq"
     return path_to_query_file.read_text()
 
 
 @pytest.fixture(scope="session")
 def lam_celex_classes_query():
-    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_celex_classes.rq"
+    path_to_query_file = QUERIES_FOLDER / "lam_celex_classes.rq"
     return path_to_query_file.read_text()
 
 
 @pytest.fixture(scope="session")
 def lam_celex_classes_classification_query():
-    path_to_query_file = pathlib.Path(__file__).parent.parent / "queries" / "lam_celex_classes_classification.rq"
+    path_to_query_file = QUERIES_FOLDER / "lam_celex_classes_classification.rq"
     return path_to_query_file.read_text()
 
 

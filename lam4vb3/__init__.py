@@ -7,7 +7,6 @@ Email: costezki.eugen@gmail.com
 
 LAM_PROPERTIES_WS_NAME = "LAM properties"
 LAM_PROPERTY_CLASSIFICATION_WS_NAME = "LAM property classification"
-LAM_PROPERTIES_NEW_WS_NAME = "New LAM properties"  # temporary, to be deleted
 
 LAM_CLASSES_WS_NAME = "LAM classes"
 LAM_CLASS_CLASSIFICATION_WS_NAME = "LAM class classification"
