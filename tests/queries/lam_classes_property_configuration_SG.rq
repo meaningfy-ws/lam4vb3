@@ -1,0 +1,19 @@
+PREFIX lam: <http://publications.europa.eu/ontology/lam-skos-ap#>
+PREFIX lamd: <http://publications.europa.eu/resources/authority/lam/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+# testing lamd:c_021 LAM class property configuration (lamd:md_TT)
+# this test does not pass because hasAnnotationConfiguration relationship between the property configuration and
+# the annotation configuration is missing.
+
+
+ASK
+WHERE {
+  VALUES ?subject {lamd:c_019} .
+  ?subject lam:hasPropertyConfiguration ?pc .
+  ?pc lam:path lamd:md_SG .
+# ?pc skos:editorialNote ?editorial_note .
+  ?pc lam:hasAnnotationConfiguration ?ac .
+  FILTER NOT EXISTS { ?ac sh:hasValue ?value } .
+}

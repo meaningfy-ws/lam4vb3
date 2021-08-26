@@ -1,0 +1,29 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX lam: <http://publications.europa.eu/ontology/lam-skos-ap#>
+PREFIX lamd: <http://publications.europa.eu/resources/authority/lam/>
+PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>
+PREFIX at: <http://publications.europa.eu/resource/authority/>
+
+# testing Author LAM properties
+# changed LAMD.DocumentProperty to LAM.DocumentProperty; LAM_CAS from LAMD to LAM namespace
+# changed skos:description to sh:description
+
+ASK
+WHERE {
+  VALUES ?subject {lamd:md_AU}
+  ?subject a skos:Concept, lam:DocumentProperty .
+  ?subject skos:inScheme lamd:LAMProperties .
+  ?subject skos:prefLabel ?label .
+  ?subject sh:path cdm:created_by .
+  ?subject sh:class at:corporate-body .
+  ?subject skos:definition ?description .
+  lamd:class_ESI skos:member ?subject .
+  ?subject skos:example ?example .
+  ?subject skos:editorialNote ?editorialNote .
+  ?subject skos:scopeNote ?scopeNote .
+  ?subject skos:historyNote ?historyNote .
+
+  FILTER (lang(?label) = 'en' ) .
+
+}

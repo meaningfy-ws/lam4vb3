@@ -13,6 +13,7 @@ logging.getLogger().setLevel(logging.DEBUG)
 THIS_PROJECT = pathlib.Path(__file__).resolve().parent.parent
 
 INPUT_EXCEL_FILE = (THIS_PROJECT / "tests" / "test_data" / "LAM_metadata_20200903_JKU.xlsx").resolve()
+INPUT_EXCEL_FILE_TEST_DATA = (THIS_PROJECT / "tests" / "test_data" / "LAM_metadata_20210413_testbed.xlsx").resolve()
 
 LAM_p = "lam_project_properties_v2.ttl"
 LAM_c = "lam_project_classes_v2.ttl"
@@ -36,3 +37,5 @@ LAM_CLASSES_HTML = (THIS_PROJECT / "data/lam_project_classes_v2.html").resolve()
 CELEX_CLASSES_HTML = (THIS_PROJECT / "data/celex_project_classes_v2.html").resolve()
 LAM_OWL_TTL = (THIS_PROJECT / "data/lam_project_ontology.ttl").resolve()
 LAM_OWL_HTML = (THIS_PROJECT / "data/lam_project_ontology.html").resolve()
+
+OUTPUT_FOLDER = (THIS_PROJECT / "tests" / "output").resolve()

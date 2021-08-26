@@ -1,0 +1,19 @@
+PREFIX lam: <http://publications.europa.eu/ontology/lam-skos-ap#>
+PREFIX lamd: <http://publications.europa.eu/resources/authority/lam/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX fd_365: <http://publications.europa.eu/resource/authority/fd_365/>
+
+# testing lamd:c_024 LAM class property configuration (lamd:md_DD)
+
+ASK
+WHERE {
+  VALUES ?subject {lamd:c_024} .
+  ?subject lam:hasPropertyConfiguration ?pc .
+  ?pc lam:path lamd:md_DD .
+  ?pc sh:minCount "1"^^xsd:int .
+  ?pc sh:maxCount "1"^^xsd:int .
+  ?pc lam:hasAnnotationConfiguration ?ac .
+  ?ac lam:path lamd:md_ANN_COD .
+  ?ac sh:minCount "1"^^xsd:int .
+  ?ac sh:hasValue fd_365:DATADOPT .
+}

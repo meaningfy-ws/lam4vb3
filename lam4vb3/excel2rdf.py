@@ -1,6 +1,6 @@
 """ 
 excel2rdf
-Created:  14/10/2019
+Created:  15/08/2021
 Author: Eugeniu Costetchi
 Email: costezki.eugen@gmail.com
 """
@@ -14,77 +14,67 @@ import logging
 import time
 
 from lam4vb3 import LAM_PROPERTIES_WS_NAME, LAM_CLASSES_WS_NAME, CELEX_CLASSES_WS_NAME, \
-    class_build, property_build, LAM_PROPERTY_CLASSIFICATION_WS_NAME, PREFIX_WS_NAME, \
+    LAM_PROPERTY_CLASSIFICATION_WS_NAME, PREFIX_WS_NAME, \
     LAM_CLASS_CLASSIFICATION_WS_NAME, CELEX_CLASS_CLASSIFICATION_WS_NAME
+from lam4vb3.builder.celex_classes_builder import make_celex_classes_worksheet
+from lam4vb3.builder.lam_classes_builder import make_lam_classes_worksheet
+from lam4vb3.builder.property_builder import make_property_worksheet
+from lam4vb3.lam_utils import read_excel_worksheet
 from tests import LAM_p, LAM_c, CELEX_c
 
 
 def transform_properties(input_file, output_folder):
     logging.info(f"Transforming LAM properties from  the file {input_file}")
-    lam_df_properties = pd.read_excel(input_file, sheet_name=LAM_PROPERTIES_WS_NAME,
-                                      header=[0], na_values=[""], keep_default_na=False)
-    logging.info(f"Finished reading {len(lam_df_properties)} LAM property definitions")
 
-    lam_df_property_classification = pd.read_excel(input_file,
-                                                   sheet_name=LAM_PROPERTY_CLASSIFICATION_WS_NAME,
-                                                   header=[0], na_values=[""], keep_default_na=False)
-    logging.info(f"Finished reading {len(lam_df_property_classification)} LAM property classifications")
-
-    prefixes = pd.read_excel(input_file, sheet_name=PREFIX_WS_NAME,
-                             header=[0], na_values=[""], keep_default_na=False)
+    lam_df_properties = read_excel_worksheet(file_path=input_file, sheet_name=LAM_PROPERTIES_WS_NAME)
+    lam_df_property_classification = read_excel_worksheet(file_path=input_file,
+                                                          sheet_name=LAM_PROPERTY_CLASSIFICATION_WS_NAME)
+    prefixes = read_excel_worksheet(file_path=input_file, sheet_name=PREFIX_WS_NAME)
 
     start_time = time.time()
-    property_build.make_property_worksheet(lam_df_properties, lam_df_property_classification, prefixes,
-                                           pathlib.Path(output_folder) / LAM_p)
-    logging.info(f"Successfully completed the transformation. The output is written into {output_folder / LAM_p}")
+    return_graph = make_property_worksheet(lam_df_properties=lam_df_properties,
+                                           lam_df_property_classification=lam_df_property_classification,
+                                           prefixes=prefixes, output_file=pathlib.Path(output_folder) / LAM_p)
+
+    logging.info(
+        f"Successfully completed the transformation. The output is written into {pathlib.Path(output_folder) / LAM_p}")
     logging.info(f"Elapsed {(time.time() - start_time)} seconds")
+    return return_graph
 
 
 def transform_classes(input_file, output_folder):
     logging.info(f"Transforming LAM classes classes from the file {input_file}")
-    lam_df_classes = pd.read_excel(input_file, sheet_name=LAM_CLASSES_WS_NAME,
-                                   header=[0], na_values=[""], keep_default_na=False)
-    logging.info(f"Finished reading {len(lam_df_classes)} LAM class definitions")
-
-    lam_df_class_classification = pd.read_excel(input_file,
-                                                sheet_name=LAM_CLASS_CLASSIFICATION_WS_NAME,
-                                                header=[0], na_values=[""], keep_default_na=False)
-    logging.info(f"Finished reading {len(lam_df_class_classification)} LAM class classifications")
-
-    prefixes = pd.read_excel(input_file, sheet_name=PREFIX_WS_NAME,
-                             header=[0], na_values=[""], keep_default_na=False)
+    lam_df_classes = read_excel_worksheet(file_path=input_file, sheet_name=LAM_CLASSES_WS_NAME)
+    lam_df_classes_classification = read_excel_worksheet(file_path=input_file,
+                                                         sheet_name=LAM_CLASS_CLASSIFICATION_WS_NAME)
+    prefixes = read_excel_worksheet(file_path=input_file, sheet_name=PREFIX_WS_NAME)
 
     start_time = time.time()
-    class_build.make_class_worksheet(lam_df_classes, lam_df_class_classification, prefixes,
-                                     pathlib.Path(output_folder) / LAM_c)
-    logging.info(f"Successfully completed the transformation. The output is written into {output_folder / LAM_c}")
+    returned_graph = make_lam_classes_worksheet(lam_df_classes=lam_df_classes,
+                                                lam_df_classes_classification=lam_df_classes_classification,
+                                                prefixes=prefixes, output_file=pathlib.Path(output_folder) / LAM_c)
+    logging.info(
+        f"Successfully completed the transformation. The output is written into {pathlib.Path(output_folder) / LAM_c}")
     logging.info(f"Elapsed {(time.time() - start_time)} seconds")
+    return returned_graph
 
 
 def transform_celex_classes(input_file, output_folder):
     logging.info(f"Transforming CELEX classes from the file {input_file}")
-    celex_df_classes = pd.read_excel(input_file, sheet_name=CELEX_CLASSES_WS_NAME, header=[0],
-                                     na_values=[""],
-                                     dtype={"DTS": str, "CODE": str, },
-                                     keep_default_na=False)
-    logging.info(f"Finished reading {len(celex_df_classes)} CELEX class definitions")
-
-    celex_df_class_classification = pd.read_excel(input_file,
-                                                  sheet_name=CELEX_CLASS_CLASSIFICATION_WS_NAME,
-                                                  dtype={"COMMENT": str, "DESCRIPTION": str, "ORDER": str,
-                                                         "PARENT": str},
-                                                  header=[0], na_values=[""], keep_default_na=False)
-    logging.info(f"Finished reading {len(celex_df_class_classification)} CELEX class classifications")
-
-    prefixes = pd.read_excel(input_file, sheet_name=PREFIX_WS_NAME,
-                             header=[0], na_values=[""], keep_default_na=False)
-    logging.info(f"Finished reading {len(prefixes)} prefixes")
+    celex_df_classes = read_excel_worksheet(file_path=input_file, sheet_name=CELEX_CLASSES_WS_NAME)
+    celex_df_class_classification = read_excel_worksheet(file_path=input_file,
+                                                         sheet_name=CELEX_CLASS_CLASSIFICATION_WS_NAME)
+    prefixes = read_excel_worksheet(file_path=input_file, sheet_name=PREFIX_WS_NAME)
 
     start_time = time.time()
-    class_build.make_celex_class_worksheet(celex_df_classes, celex_df_class_classification, prefixes,
-                                           pathlib.Path(output_folder) / CELEX_c)
-    logging.info(f"Successfully completed the transformation. The output is written into {output_folder / CELEX_c}")
+    returned_graph = make_celex_classes_worksheet(lam_df_celex_classes=celex_df_classes,
+                                                  lam_df_celex_classes_classification=celex_df_class_classification,
+                                                  prefixes=prefixes,
+                                                  output_file=pathlib.Path(output_folder) / CELEX_c)
+    logging.info(
+        f"Successfully completed the transformation. The output is written into {pathlib.Path(output_folder) / CELEX_c}")
     logging.info(f"Elapsed {(time.time() - start_time)} seconds")
+    return returned_graph
 
 
 @click.command()
@@ -118,8 +108,6 @@ def transform_files_in_folder(input, output):
         except Exception:
             logging.exception("Could not transform the file. Most likely it does not respect "
                               "the conventions. Please update and try again. ", exc_info=True)
-        # logging.info(f"> Moving the input file {file_path.name} into the output folder {out_} ")
-        # shutil.move(str(file_path), str(out_))
 
 
 @click.command()

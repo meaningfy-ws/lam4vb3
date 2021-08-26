@@ -1,0 +1,3634 @@
+@prefix cdm: <http://publications.europa.eu/ontology/cdm#> .
+@prefix celexd: <http://publications.europa.eu/resources/authority/celex/> .
+@prefix corporate-body: <http://publications.europa.eu/resource/authority/corporate-body/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix eurovoc: <http://eurovoc.europa.eu/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix fd_335: <http://publications.europa.eu/resource/authority/fd_335/> .
+@prefix fd_365: <http://publications.europa.eu/resource/authority/fd_365/> .
+@prefix lam: <http://publications.europa.eu/ontology/lam-skos-ap#> .
+@prefix lamd: <http://publications.europa.eu/resources/authority/lam/> .
+@prefix ns1: <subject-matter:> .
+@prefix ns2: <dir-eu-legal-act:> .
+@prefix resource-type: <http://publications.europa.eu/resource/authority/resource-type/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+lamd:class_AGREE a skos:Collection ;
+    euvoc:order "2" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "Agreements between EU (and its Memeber States) and third countries or international organisations; celex sector 2"@en ;
+    skos:member lamd:c_019 ;
+    skos:notation "AGREE" ;
+    skos:prefLabel "International agreements and related documents"@en .
+
+lamd:class_CASE a skos:Collection ;
+    euvoc:order "5" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "Case law from Court of Justice of the EU and judicial informations published in OJ; celex sector 6"@en ;
+    skos:member lamd:c_017,
+        lamd:c_018 ;
+    skos:notation "CASE" ;
+    skos:prefLabel "Case-law"@en .
+
+lamd:class_CDOC a skos:Collection ;
+    euvoc:order "7" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "Documents concerning State aid, mergers and concentrations; notices and informations from EU institutions and bodies or from the member states published mainly in OJ-C; celex sector C or 5"@en ;
+    skos:member lamd:class_COTHER,
+        lamd:class_CRDS,
+        lamd:class_STATEAID ;
+    skos:notation "CDOC" ;
+    skos:prefLabel "Other documents"@en .
+
+lamd:class_EFTA a skos:Collection ;
+    euvoc:order "6" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "EFTA and EEA documents; celex sector E"@en ;
+    skos:member lamd:c_022,
+        lamd:c_023,
+        lamd:c_024,
+        lamd:c_025,
+        lamd:c_026 ;
+    skos:notation "EFTA" ;
+    skos:prefLabel "EFTA"@en .
+
+lamd:class_LEGAL a skos:Collection ;
+    euvoc:order "3" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "Legislative and non-legislative acts; complementary acts; celex sector 3 and 4"@en ;
+    skos:member lamd:class_3OTHER,
+        lamd:class_LEGIS,
+        lamd:class_NLEGIS ;
+    skos:notation "LEGAL" ;
+    skos:prefLabel "Legal acts"@en .
+
+lamd:class_PREPDOC a skos:Collection ;
+    euvoc:order "4" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "Commission proposals and related documents coming from legislative procedure; drafts"@en ;
+    skos:member lamd:class_5OTHER,
+        lamd:class_COM,
+        lamd:class_CONSIL,
+        lamd:class_COR,
+        lamd:class_ECB,
+        lamd:class_EESC,
+        lamd:class_EP ;
+    skos:notation "PREPDOC" ;
+    skos:prefLabel "Preparatory documents"@en .
+
+lamd:class_TREATY a skos:Collection ;
+    euvoc:order "1" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "EU treaties; celex sector 1"@en ;
+    skos:notation "TREATY" ;
+    skos:prefLabel "Treaties"@en .
+
+lamd:res_2PrqXouBwaxHT4JXBvrAou a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_WCZDgrBRodafgYmYHQPgHy ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_38J7xkDyTtX5qrRU6XdLgY a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_CkP9gAJojsMKs5X6dEwsJP ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_3wucyxmQnNrFvTMQWHuhEe a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_927MYd2qVyJfu6Ki2AHb7a ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_55ioyuALVCMJx858SATigN a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_c8ZDb3SvcJ9at3Kd3ehUqz ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_78qyiq3WwQ4VhMiSaGhUZ7 a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_JZgfdtpq6AMKVXySyp6Xjg ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_7RZ6HjDxmfWtqpFuaA8Kh8 a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_dUnzQ4Bm6NLREAStFPrBjs ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_7mJqtiTzRkgXf8wXhutNue a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_LqaTL8uC3XzApEL4wNbDn3 ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_9GzcxvkpUoY4NJB2Vh4a8z a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_fHw9ZBmxiBdrS3cj34VUzo ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_ExosdKBTaMa35SpbZ7ZP63 a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_jQ2RKPgMaqZmrGQB4PSJHd ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_FwGowPEeNNwKKmZ8pZ5XMh a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_9donCiZiNR4jMrNP6Lu7Ch ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_GUXaJd7vKW3eenLbCpEv3P a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_QH4532fce7tQXb2Cky4Ztg ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_GgLzoGnSzF2zjooGomCjYW a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_NHNrWcB5bUH6tBspUY9god ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_KMS6yQEqakUMLpsZZBrKpU a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_nQhStu8sMpFE9Gsyjze4gV ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_PJrtFsfTDzinDZpcrqMZvZ a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_3dqWmRnTJyYFJwiBxCjSmq,
+        lamd:res_KEU9KPGHBcXVUeWi6jNNyM ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_PNnV479tBUxMoC3F72xLuA a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_kWbHUjgjUmSNUViBL7LuQE ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_PmCjbutXZgJcyV8rQ9UasE a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_AdNAwbTGQc8DVkYBn2LTXU ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_S55LWcB45yNZ2BzKjmtfYu a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_Z7MJWWeWfpQPi4Ekx2zNN8 ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_STtHzvXLnyR4SFx9JfBu5k a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_8qpHfEgoSfmWYegaZyLe6g ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_TxPZXVF4hYjrDCEeuwcj4Z a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_4g7gUnDp2SFv3igDLNwf4p ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_UjueY7CT2TtLL38EzbYY5Z a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_dHNyobcJEKo8GE6rqNvfy9 ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_Ut5EXPtThdp6spoBk4MMx9 a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_YqqE9PQ2CJxWnXCEyaPq9N ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_ZQwkxms6yYTdc5SuUtjenk a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_HYenjH98QZ4Rg24zsDo6bg ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_ZXCJDnmWHrkwiamt6cgUVY a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_6XrqKVvWoxXQNwNyKxHegr ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_a66AWpuMChH26mvM8X2gPa a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_mteupLJSPXtWshfissXCwe ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_aDNKaZ3akhQkCjDb445USK a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_S6XTb6tpQGUwUBT7DWMAbo ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_aGvvcAvutexqLdky2dvo3D a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_Z3tiSSiHmUbGQKdDqZnhzc ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_bdTrFdmQkadnrsmmmKKFiD a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_7i9DhUfHQQF4iFrXqDW5w5 ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_bjHALxToJZ72mhNohwZEWd a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_8yznJRx4USPKay9a5ptYDj ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_duFFiAQB9DiXPLMZ2gTcdg a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_YwFEEUaYaeJtg2T7FuhJ4H ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_fNiujz6HdXkeHHXgeXHozN a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_g8DAfMXhkeUthD6y2herqC ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_giem94FerDFRYZ6sF7HWMd a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_FQmazQraaPmPrsJyExj7HX,
+        lamd:res_YEkbvTiJS4ydjKgFnujVFM ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_jdSNxWvquNndt2Qabichbq a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_2fo8PvXUSK8dKezfw2w6Fg ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_kFJF2PZKLFxuMFMxeGZ3Xj a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_ibSijKc3H3HKKDUjoDiQc9 ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:res_kxZohBnTRpRsGfJJWE5sP5 a lam:PropertyConfiguration ;
+    lam:hasAnnotationConfiguration lamd:res_GB5FWwwfepPFetACrRcnj4 ;
+    dct:created "2021-08-03"^^xsd:date .
+
+lamd:c_001 a skos:Concept ;
+    lam:classifyWith lamd:res_4EbRxxxgjVRMFNMojsx3tV,
+        lamd:res_Zi8Put8hPb5kHyurf4CweA,
+        lamd:res_nmhqSSqNevgXy96rKYoZpV,
+        lamd:res_oDbFA6zWcGxMp7tT9vRRF9 ;
+    lam:hasPropertyConfiguration lamd:res_6y3iqzjLnquAFygmGjTdQL,
+        lamd:res_7FGVHBiJjAza24ahGBAjne,
+        lamd:res_7QgaJJi93Utv6F8zq9SUPL,
+        lamd:res_9PUqX69V4Sq6QSBPvzgiRN,
+        lamd:res_9VyaxEqDsXPQY9ppcKHpbt,
+        lamd:res_Cr6nm2sqhnsE3e5mmjVqM6,
+        lamd:res_DvCEbzj77hXL66JmHPHXHi,
+        lamd:res_HHVx8bEmfDyuwtjaMrFvbe,
+        lamd:res_Lecy6rpjEuY6kAy9VQ3SVN,
+        lamd:res_MSWUdh6rDymzxQvDaAWukN,
+        lamd:res_NKyvAyKqLdifYLGfVBAaMZ,
+        lamd:res_PTpUdVvmLZFRtrUwUaPVoD,
+        lamd:res_PqBtpqbZPBXm2wbJw5qXg6,
+        lamd:res_QMkYAAzq9BKqzoLDM7nHcD,
+        lamd:res_Tb9y3TfYBnYap2x573Jxf9,
+        lamd:res_Tz4mUhrHncWFVBfexXDDaz,
+        lamd:res_WC5LXANcoi5F6q4RPnWWpi,
+        lamd:res_YwEJEKpfAf2MFsgZF9niT8,
+        lamd:res_aWZrC94fUy7DFRzVPNLzws,
+        lamd:res_ae4kQ9bv7J4uL88kLujKpN,
+        lamd:res_cSMdye8ZyV67v32desztFG,
+        lamd:res_iHcBGFTNeCJCLJTNLVMjmm,
+        lamd:res_izfDjME4nnZLK4bAD4nqFc,
+        lamd:res_j3zEbesnLDyM3ErTyxsN5r,
+        lamd:res_jVP6iKhPC5UZYDgWtLkgMN,
+        lamd:res_jaKDNAGAh8ef9r3WTQuB25,
+        lamd:res_kZS6ZurCTwH6oLA4X3xMey,
+        lamd:res_mUENh23EFq99mpMfNK2kG4,
+        lamd:res_oDTWoXtYHV62NHthXgWcu8 ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel "Draft regulation"@en ;
+    skos:editorialNote """Not containing COM or SEC/SWD number
+Not containing "Codified version" in the title
+Those are drafts published in the OJ in the past"""@en ;
+    skos:example "52013XC0806(02)",
+        "Draft Commission Regulation (EU) No …/… of 5 August 2013 amending Regulation (EC) No 1857/2006 as regards its period of application "@en,
+        "Projet de règlement (UE) n ° …/… de la Commission du 5 août 2013 modifiant le règlement (CE) n ° 1857/2006 en ce qui concerne sa durée d’application"@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "Draft regulation"@en .
+
+lamd:c_002 a skos:Concept ;
+    lam:classifyWith lamd:res_Ggsz8qk3L3uvxP2gmmTTgi,
+        lamd:res_SbTRji8hMzNmyPimgDmjqV,
+        lamd:res_VBsTFL5n3VjfHXnHSA4NYV,
+        lamd:res_Zby5Ec5NYNiNLurwAhjE8V ;
+    lam:hasPropertyConfiguration lamd:res_4A4fi8C4x6vAxhQXJHzs5n,
+        lamd:res_4AU4FJXyM6EyiM4oDBz98r,
+        lamd:res_CV6fix6VEGqM3MwotKWVRS,
+        lamd:res_Ckzc9xevdAmPmwb9BX3Bki,
+        lamd:res_CmwgXKxSCVtyWuVixsuNn4,
+        lamd:res_DLSsEpimsEZrnLg8Jfi8Py,
+        lamd:res_FAhTNSmMLEMmCzi3QEvm7z,
+        lamd:res_Fin3dBcfhxxTmAKbsFSXiZ,
+        lamd:res_GVAg76usWcX2nqG9urwZHu,
+        lamd:res_Htf26qQLWJGxPj2yfNUnBz,
+        lamd:res_JG4P3LSpksvnjLmAg4qaMx,
+        lamd:res_KDjurwXEBpTPknoSLMHg3i,
+        lamd:res_L6euAWPYgV8XdoN6QATP3a,
+        lamd:res_NxmNEzvpjgqMSUQFyjweQZ,
+        lamd:res_PQ7HajpwMtRYbdc23CRfDV,
+        lamd:res_TZzDxJhUpDSstuU58Zyd4u,
+        lamd:res_UER4BniMx5nQptcZMbxusG,
+        lamd:res_UaaZ7j7De8HtzXnYLvYzT5,
+        lamd:res_aKHiMtwzZin4KhUrSgCqaL,
+        lamd:res_h2PWaBP9uasrp6io4Qb7xg,
+        lamd:res_h7Y2j4QxWYYcboFr8654jv,
+        lamd:res_iYKxM5WPMpEwS9JbdK8Czh,
+        lamd:res_jnnHKtQjheqpaFn4acdSEh,
+        lamd:res_k3pq3L6PdxfRPgTgqz4dVi,
+        lamd:res_k7x5ejYfas94wnTWqr6FzS,
+        lamd:res_kqvk92XBBuRpqCS7srn8Zp,
+        lamd:res_mAAHsw8YHZFireaeduG4mU,
+        lamd:res_mzjioDnkmGJXaKDMtUuLmP,
+        lamd:res_oT6boK7QbubjwG6Vfxdy8u ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel "Draft directive"@en ;
+    skos:editorialNote """Not containing COM or SEC/SWD number
+Not containing "Codified version" in the title
+Those are drafts published in the OJ in the past"""@en ;
+    skos:example "31998Y0307(02)",
+        "Draft Commission Directive amending Directive 90/388/EEC in order to ensure that telecommunications networks and cable TV networks owned by a single operator are separate legal entities"@en,
+        "Projet de directive de la Commission modifiant la directive 90/388/CEE en vue de garantir que les réseaux de télécommunications et les réseaux câblés de télévision appartenant à un seul et même opérateur constituent des entités juridiques distinctes"@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "Draft directive"@en .
+
+lamd:c_003 a skos:Concept ;
+    lam:classifyWith lamd:res_Nn4FCGLTwECC3a3RdKcPoj,
+        lamd:res_VeZNAe6DffZKfrq9npgjXy,
+        lamd:res_cNP9Wxx3VSmarPjd73Xw3A,
+        lamd:res_m4ADLKaFjyNumNNKfd92GB ;
+    lam:hasPropertyConfiguration lamd:res_4QHqbrBH69NGHeqMMtwJFw,
+        lamd:res_5ymL5NJBVogKnqwcUnbzqL,
+        lamd:res_6zcF6U8aeBaTThjbPdrDEg,
+        lamd:res_CB6WEG3mHH93n6itN2NeHd,
+        lamd:res_DYh2CvKDPM8s2AS9dv5j4Z,
+        lamd:res_Dvh9Mr3t3rnDkAUaorMY3Z,
+        lamd:res_FYNzhsL49BgRQNQW7oZ2Wi,
+        lamd:res_Hg4eM24wvP4md7FvvLMoqv,
+        lamd:res_Huim32RaHmYMzGLZwq4r7i,
+        lamd:res_J6wAb7dSQG27P6VEaxDQnL,
+        lamd:res_JB6yLmJXj39VdRKSHDwDiN,
+        lamd:res_P8J7ZRGCmMtZH5YtaVcNxg,
+        lamd:res_QzkxsCF8poVYmGfpJ7qHkJ,
+        lamd:res_RXXko5jpP7uPMCCuk8BLsi,
+        lamd:res_TUeRcrhaSe5eQfkRoYHDE7,
+        lamd:res_TVqBRpctqJgwc7LJQqeFfM,
+        lamd:res_U5ehVDs7DAjGXTuekYdktn,
+        lamd:res_UN2kVDfMsgM4AAxLvzVyMY,
+        lamd:res_V5Jy6LQ7QMuZ4MeGZ9Q3Ct,
+        lamd:res_WY8mvz9mT7L94vkaWNAZWi,
+        lamd:res_YpAvwdDMdb9WT75vv6Tz2j,
+        lamd:res_aBrFhvR6UCHDhtnFui2vQZ,
+        lamd:res_cYD8hMsbnbRniX9AKbddek,
+        lamd:res_epijnttmH2Acphix5ALQT9,
+        lamd:res_gqfWxsf9V6ziT4bEgRW9uf,
+        lamd:res_hGLZG3LvFxnRDrBJ79cnQW,
+        lamd:res_hMaJVHKZwq7PvRXFVz4kW2,
+        lamd:res_iofVkzrJsA24AMvBWLeAxY,
+        lamd:res_nbApdBCVD9QfKiVCFQsmLS ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel "Draft communication"@en ;
+    skos:editorialNote """Not containing COM or SEC/SWD number
+Those are drafts published in the OJ in the past"""@en ;
+    skos:example """31999Y0626(02)
+C1995/291/06
+31997Y1203(01)""",
+        "Draft communication to operators in the banana sector - Subject: Applications for the registration of operators for 2000 "@en,
+        "Projet de communication aux opérateurs du secteur de la banane - Objet: demandes d'enregistrement des opérateurs pour l'an 2000"@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "Draft communication"@en .
+
+lamd:c_004 a skos:Concept ;
+    lam:classifyWith lamd:res_4jXkWSFpvRtJ4wE8ijbpYb,
+        lamd:res_LVy8Yc4JSet5zxdxjoL7h5,
+        lamd:res_PUiN9CksHb6S4fsetdih7r,
+        lamd:res_kLh87t3bjae7NbJPPETU2r ;
+    lam:hasPropertyConfiguration lamd:res_2Vqmb9JwDzYQjxQ3G5Mft3,
+        lamd:res_92uBJHvkwKDb6HvTATgysc,
+        lamd:res_A2HMMnDMxa49fMVUvdctXa,
+        lamd:res_BLwU2i4XvWye6RVHiJS5iG,
+        lamd:res_C399pYG45vr2QAcXWhVhuw,
+        lamd:res_HsjRmQcct76WJxfELkAVDq,
+        lamd:res_JQAN7fxLeMGbM5tRR9dZSL,
+        lamd:res_Jk7VDgF7H64KoDZHgjbah2,
+        lamd:res_Kh88W5KUyzkcBPW4meq76t,
+        lamd:res_LRrwpFbfzGPmYHBmURNEfa,
+        lamd:res_Mvj7PeV96Fm7NUuwuQ4jUg,
+        lamd:res_NiTqLZRjaT8hWFTAmZcuHn,
+        lamd:res_NymWUSGYchJThBSruVyjGV,
+        lamd:res_PPA94JzuDYid42DdJJfYs5,
+        lamd:res_Pd7WLNEbRtYWy6KR9hXyei,
+        lamd:res_SG8J2ADNWeCvNXMTDp6uhy,
+        lamd:res_T3dQnbHZKXwGfHbazsUvvw,
+        lamd:res_VcBrnS9LZ6uAd7gQqy2dVd,
+        lamd:res_WrTvXSsqq9Nw38VgcAhq7B,
+        lamd:res_WsPgnoQELfVqRyipxtjy4N,
+        lamd:res_XUZjWiKiHeNjoN5YSeD8vh,
+        lamd:res_bjPX3kED9Spxe3NJsunkak,
+        lamd:res_cwwFZAveeLkh89ugUDa3fc,
+        lamd:res_dCo6P6TjcWUzFaqE32WACd,
+        lamd:res_dTRoGxWiYLEMQBxYauxGXC,
+        lamd:res_dUrkEhc5kvLngfEvPADCKC,
+        lamd:res_fmqNttKD7fEMqWsqfjxwAF,
+        lamd:res_izTxC4KtPFsrPeUMzLy5gn,
+        lamd:res_mhxDxbHXu4aBdnwtcYXVqz ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel """Draft declaration
+joint declaration"""@en ;
+    skos:editorialNote """Not containing COM or SWD (SEC) number
+Those are drafts published in the OJ in the past"""@en ;
+    skos:example "JOC_1990_044_R_0014_01",
+        "Draft joint declaration by the ACP States and the Community and its Member States "@en,
+        "Projet de déclaration conjointe, des États ACP, de la Communauté et de ses États membres "@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "Draft (joint) declaration"@en .
+
+lamd:c_011 a skos:Concept ;
+    lam:classifyWith lamd:res_9Lc4eFRUbR4E5VioGdFvfX,
+        lamd:res_ASwbRQ2nbYvhPHvRicVRM6,
+        lamd:res_ixrocioF99VKiLyLYZWJ3r,
+        lamd:res_oKjPaSU2u4CwKe9tSTccA3 ;
+    lam:hasPropertyConfiguration lamd:res_2ADaLvzhbEiVf6UAUzT8hu,
+        lamd:res_3M7JhWeah4AfANLiNWSvxL,
+        lamd:res_AvhF8rgxZpcaRY2H9t3J5k,
+        lamd:res_CrwvtraTusuiQChqAvHrKa,
+        lamd:res_Ebd8JQiknJuMvUBrSS8tdX,
+        lamd:res_Kud8FuLhUrVrXMXhHE5ma8,
+        lamd:res_PWm9CUuduGZ3n37Qc6z3wS,
+        lamd:res_RcGYbJE4UsE8L74AdmrAfQ,
+        lamd:res_V3U3BorQGfqU48wKqAnpBB,
+        lamd:res_VcP27McKQG9Ktde6FZvDkR,
+        lamd:res_WS95WTV98W29hCQwncogLG,
+        lamd:res_Z8pC4cBTYC8v8xNscxsCUr,
+        lamd:res_ZPZdYP7mo4U2dsNggM8k4x,
+        lamd:res_abFHxeMXS44gFU9LgeLHq3,
+        lamd:res_bBiCNVbQadikkmhtJbTKqC,
+        lamd:res_gUBcegWzEdbmtHTXbomn4q,
+        lamd:res_gdGwra8F8XC8eYjc7mqbKH,
+        lamd:res_myp6SB5qk4ova4wkj9S5dU,
+        lamd:res_ncQXKP5rfpWqCfxmmB4GGz,
+        lamd:res_oM5NEQVy26wuajZjRgLeB2 ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel """Proposal for amending regulation
+(COM number)"""@en ;
+    skos:editorialNote """Proposal for an amending regulation - "amending" must follow directly after type and author of proposed act
+
+Link to procedure + EP - Legislative observatory"""@en ;
+    skos:example """52019PC0038
+52019PC0208""",
+        """52015PC0487: Proposal for a COUNCIL REGULATION amending Regulation (EU) No 2015/104 as regards certain fishing opportunities
+
+COM/2015/0487 final - 2015/0236 (NLE)"""@en,
+        """52015PC0487: Proposition de RÈGLEMENT DU CONSEIL modifiant le règlement (UE) 2015/104 en ce qui concerne certaines possibilités de pêche
+
+COM/2015/0487 final - 2015/0236 (NLE)"""@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "Proposal for amending regulation"@en .
+
+lamd:c_012 a skos:Concept ;
+    lam:classifyWith lamd:res_A3HPvUDcChMfuGgwjbnxYC,
+        lamd:res_Hmc9gweawhaWW3WEHfnTzs,
+        lamd:res_WrktL3Y89fiyTnd3FNcb23,
+        lamd:res_nfBWsUuddpsdrzpWXNyiX7 ;
+    lam:hasPropertyConfiguration lamd:res_2nU8ugroAiqBxhZYGFJKnN,
+        lamd:res_7QYQBAU5NmvDBPEg7nCoNh,
+        lamd:res_8cbZAGySKYrVsyWRPoNPNs,
+        lamd:res_AVBb4FDNzP2AGzPWMwesoS,
+        lamd:res_EKE7UJhtez6geyWdqvbiSX,
+        lamd:res_KVpXehpWrZ7sdNFM7RHjMB,
+        lamd:res_NcsA4MvxYRPjSKJtikDzP9,
+        lamd:res_SsZb7svdfHgYFDhX6njtrL,
+        lamd:res_U7StmEtEyaAGnYzPtJPP7A,
+        lamd:res_VkB34PEbqBDHVGKhfupyFS,
+        lamd:res_YRmVNZRNzxTBS7rGurNXFt,
+        lamd:res_ZMpm9wzBmvDtHWZ8sxUuif,
+        lamd:res_aeqatFAfDSLgHKpqSTHwoa,
+        lamd:res_cxBfsprtTDYkFs23CTaEmb,
+        lamd:res_hXVRKkZu6tTBXY8Q7zVG54,
+        lamd:res_mAWci9TT2tmHw3WdeQcQuP,
+        lamd:res_mjyqsD8EhEBj55yDPKNAYr,
+        lamd:res_nZgAdFHxybMS9fvyJx7JBw,
+        lamd:res_nv2VQDhioNQ9KkSSYRWCbE ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel """Proposal for regulation
+(COM number)"""@en ;
+    skos:editorialNote """Proposal for not amending regulation
+
+Link to procedure + EP - Legislative observatory"""@en ;
+    skos:example "52019PC0088",
+        """
+
+Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL on certain aspects of railway safety and connectivity with regard to the withdrawal of the United Kingdom of Great Britain and Northern Ireland from the Union
+
+COM/2019/88 final
+"""@en,
+        """
+
+
+
+Proposition de RÈGLEMENT DU PARLEMENT EUROPÉEN ET DU CONSEIL concernant certains aspects de la sécurité et de la connectivité du transport ferroviaire eu égard au retrait du Royaume-Uni de Grande-Bretagne et d’Irlande du Nord de l’Union
+
+COM/2019/88 final
+"""@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "Proposal for regulation"@en .
+
+lamd:c_013 a skos:Concept ;
+    lam:classifyWith lamd:res_ZY7vPGyDRvv7mTx2fQrK8q,
+        lamd:res_ZgtZStWKc4FZVKKxLWJ8aZ,
+        lamd:res_jQbNU4FsQfWV4Vw8omJXc2,
+        lamd:res_jh2beNnkjSxyS7hmXnuh2J ;
+    lam:hasPropertyConfiguration lamd:res_5V5v2qw9mhoY52aewFFNeu,
+        lamd:res_7wrZryGtMevci8QpfvSjCq,
+        lamd:res_8ivg3sdw3q4QzwnTEKiKNP,
+        lamd:res_CJwbNPRGHix6tWdyehShK4,
+        lamd:res_JuhkiUdYTR2p4YZKJzPCwE,
+        lamd:res_LDxKzXHZmaq4qxbar84i5K,
+        lamd:res_M9jXNrwGVe833JnY9UBBrR,
+        lamd:res_MwafcmKduBxdXGYixnUHYu,
+        lamd:res_N2M7kjoWg7rwgF5QgNokdA,
+        lamd:res_RHMRStyUKZutczc5T4HMKJ,
+        lamd:res_TPnrv7MbAauLYBYN6TEfHv,
+        lamd:res_TvmHu22XqYCgRiiWNzHghU,
+        lamd:res_VVcZZoSgmkqCd7zHGE2uut,
+        lamd:res_XKVYzJPmUM7rMJav2RYgkE,
+        lamd:res_ZCWco6s3n2sCWxi7rmjPNH,
+        lamd:res_dwHQ2vyNKBCzhhK9WLaAAb,
+        lamd:res_exMzmegPAYKkDjoQTTJrqj,
+        lamd:res_f9WfFVeEMEVhYZ3FcXnBKt,
+        lamd:res_fMumXhP6wtxGdPBFcWJAu4,
+        lamd:res_jNxrUkCFm9wTBMKHxsanrf,
+        lamd:res_jqdYtQCqJYQF2ejrrDdKNb,
+        lamd:res_juXHtyDhwcoV8HMKYUvjnB,
+        lamd:res_mZwST8xG3isdDtnzLKiKw2 ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel """Amended proposal for a regulation
+amendment to proposal
+(COM number)"""@en ;
+    skos:editorialNote """Link to procedure + EP - Legislative observatory
+
+There might be  a proposal with 2+ subsequent amendments:
+52016PC0408 - 52015PC0350 - 52014PC0343 - how EV should be treated? There are 3 pending proposals, but only 1 act will be adopted - statistics"""@en ;
+    skos:example "52015PC0049",
+        """Amended proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL laying down Union procedures in the field of the common commercial policy in order to ensure the exercise of the Union’s rights under international trade rules, in particular those established under the auspices of the World Trade Organization (codification)
+
+/* COM/2015/049 final - 2014/0174 (COD) */"""@en,
+        """Proposition modifiée de RÈGLEMENT DU PARLEMENT EUROPÉEN ET DU CONSEIL arrêtant des procédures de l’Union en matière de politique commerciale commune en vue d'assurer l'exercice par l’Union des droits qui lui sont conférés par les règles du commerce international, en particulier celles instituées sous l'égide de l'Organisation mondiale du commerce (OMC) (texte codifié)
+/* COM/2015/049 final - 2014/0174 (COD) *"""@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "Amended proposal for a regulation"@en .
+
+lamd:c_014 a skos:Concept ;
+    lam:classifyWith lamd:res_APMoWmJ2TTBmXPBiogZonX,
+        lamd:res_Fc3EoUh3A9aH58UDV4m3ty,
+        lamd:res_ZUfjurWqwEGK2kxFcxAJw6,
+        lamd:res_fiGuAU52c77K6m8rcXbvpF ;
+    lam:hasPropertyConfiguration lamd:res_39pJgwgfmYxkeKuPGM5Z6B,
+        lamd:res_3eLkCx5bVtjTEMZCmRBKmZ,
+        lamd:res_3jEiCR9pBQfXPBiCivw8GB,
+        lamd:res_6cKxpFaTgv5w8QhjgAeDRH,
+        lamd:res_AKpUmSHbbvVUSop25GzG48,
+        lamd:res_AfyaSimtHPMRFC5UbaAqaw,
+        lamd:res_JGXQeJ8Q2XGGiBBFPCoGg3,
+        lamd:res_MddYbeZZWbJrw79rdG9nWt,
+        lamd:res_Nn2j2NnVLDEnxQGoBxBPei,
+        lamd:res_S4zKNQQ4sZBiPqfaUmryLq,
+        lamd:res_U6RazytbH5LsQP2yEYrf6X,
+        lamd:res_VBfn8kN4KfBa46rgsM9Vte,
+        lamd:res_Y5L5iy3LW2Q7d7vQRREwBv,
+        lamd:res_YNnu56MVTUDtsPkVYENeXt,
+        lamd:res_cLWHK48ZeiUAHAkDSNfr97,
+        lamd:res_eNrZ68VprFVRzuQ2btM8PW,
+        lamd:res_ewM8m6WX42ZnE4cRuh4ywL,
+        lamd:res_g9e8rWjDPDSR59HXEE4Bb8,
+        lamd:res_m25tpJmzWyr9P7Bf425PFe,
+        lamd:res_nd9oUQ6ujE35Z2mKMAwvJG ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel """Proposal for an amending directive 
+(COM number)"""@en ;
+    skos:editorialNote """Link to procedure + EP - Legislative observatory
+
+Proposal for an amending directive - "amending" must follow directly after type and author of proposed act"""@en ;
+    skos:example "52015PC0337",
+        """Proposal for a DIRECTIVE OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL amending Directive 2003/87/EC to enhance cost-effective emission reductions and low-carbon investments
+
+COM/2015/0337 final - 2015/0148 (COD)"""@en,
+        """Proposition de DIRECTIVE DU PARLEMENT EUROPÉEN ET DU CONSEIL modifiant la directive 2003/87/CE afin de renforcer le rapport coût-efficacité des réductions d’émissions et de favoriser les investissements à faible intensité de carbone
+COM/2015/0337 final - 2015/0148 (COD)"""@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "Proposal for an amending directive "@en .
+
+lamd:c_015 a skos:Concept ;
+    lam:classifyWith lamd:res_2YeAWHf82SgjkVeQyqaeCE,
+        lamd:res_Ens4K9M9bKFyHwUM9dgx2b,
+        lamd:res_Fp8EN4UNwxJXRJxDLmuHLK,
+        lamd:res_KqxfGd8NJTDtYSCuhcV3Hn ;
+    lam:hasPropertyConfiguration lamd:res_5kNPjEYT3j6ETnyNXYdR7z,
+        lamd:res_6VtD9H5xRbNB9DK3RkXtod,
+        lamd:res_7o3Xfh7hwtMnCN7LybJ536,
+        lamd:res_B5eKB7MyGMmdaMLCi56HX9,
+        lamd:res_FVu6x6pJrPuTHyxDk8ATdG,
+        lamd:res_HfHUpazpv7Cmj3KeRK8yyU,
+        lamd:res_K8qM7bM8yAwJKXNA34ctHC,
+        lamd:res_M8kFLAgZ7osjDHxkAC6X8N,
+        lamd:res_RYg9fzXqgZjWVt3Huw2xp2,
+        lamd:res_WVDSoUi2AesC59rJJg56TG,
+        lamd:res_XJ2jo3hTRup82sNRoRTXEL,
+        lamd:res_aX34x7YxuuFgxXVh6HDLU6,
+        lamd:res_esaPop6uLjMhUfrxsVjrjj,
+        lamd:res_fKeFgSKKryD9yfVABFbxrR,
+        lamd:res_fWHV42AKVTcbTfbi3ovQST,
+        lamd:res_iX8hXRfSk7KdR98WuZtyQm,
+        lamd:res_iiMRSdHW2bw349YeqEewTR,
+        lamd:res_jGf6nL4ForzpMxd8NYkCWg,
+        lamd:res_jZmiwYpNDRDyhnm334iKJy ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel """Proposal for directive 
+(COM number)"""@en ;
+    skos:editorialNote """Proposal for not amending directive
+Link to procedure + EP - Legislative observatory"""@en ;
+    skos:example "52013PC0932",
+        """
+
+Proposal for a DIRECTIVE OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL on port reception facilities for the delivery of waste from ships, repealing Directive 2000/59/EC and amending Directive 2009/16/EC and Directive 2010/65/EU
+
+COM/2018/033 final - 2018/012 (COD)
+"""@en,
+        """
+
+Proposition de DIRECTIVE DU PARLEMENT EUROPÉEN ET DU CONSEIL relative aux installations de réception portuaires pour le dépôt des déchets des navires, abrogeant la directive 2000/59/CE et modifiant la directive 2009/16/CE et la directive 2010/65/UE
+
+COM/2018/033 final - 2018/012 (COD)
+"""@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "Proposal for directive "@en .
+
+lamd:c_016 a skos:Concept ;
+    lam:classifyWith lamd:res_KrHgeNmkHDDLuZNDKJLsbN,
+        lamd:res_PJFnYPg9JmoPKLJsZSTT82,
+        lamd:res_i5ZoD8ZqZiXNApsdfVLPyf,
+        lamd:res_mciqBMGQaf6jmSMu3wn6Xp ;
+    lam:hasPropertyConfiguration lamd:res_4UB8oG4hEbYkNwzyFB2xAs,
+        lamd:res_5gsqfVgiEejZxbfLg8dvBE,
+        lamd:res_5n96ZWAa7JBD9hCycdnDKL,
+        lamd:res_6sdnmpNPoM2cXSPDQZJTYT,
+        lamd:res_7NUMFXYBdt66kPe8xSBCki,
+        lamd:res_7di8Wt2eHtF6pjMy8Y5qye,
+        lamd:res_9dDHt2URb7q7zndj2J6Lqu,
+        lamd:res_A9WYA4rCXrY5FsV4PSzJZf,
+        lamd:res_AZvpQ6rAkXDwHmPA4ULLDX,
+        lamd:res_FELTiNKvhhrf4kDnAEsRQt,
+        lamd:res_G6UZdwaUYtgrHejGJa36za,
+        lamd:res_HFzmdVG7YP8EDUimecHF6c,
+        lamd:res_J7ThofDTupVrCZHhSwrNF5,
+        lamd:res_Kduo8m72EYg4vrXx3BtZ8b,
+        lamd:res_T63CrB2kKZnXJhWnyezR5T,
+        lamd:res_TWqDanxhuHq96pUwAeaTQN,
+        lamd:res_XRrUTBPEKwQWRazTuC56Dn,
+        lamd:res_XqoGBLoiAseiFJhYv94stb,
+        lamd:res_YpkA6ayNsSyXNUjiZMDLEy,
+        lamd:res_ak27E9QFqW2jS9hJ32wagX,
+        lamd:res_dBR73pBzj9xyLTW5H6w8n2,
+        lamd:res_fGMXJ7HPJK4i73RVXpke2P,
+        lamd:res_ntKBU7ick7VtAc5emvLpLA ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel """Amended proposal for a directive 
+amendment to proposal
+(COM number)"""@en ;
+    skos:editorialNote "Link to procedure + EP - Legislative observatory "@en ;
+    skos:example "52017PC0637",
+        """
+
+Amended proposal for a DIRECTIVE OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL on certain aspects concerning contracts for the online and other distance sales of goods, amending Regulation (EC) No 2006/2004 of the European Parliament and of the Council and Directive 2009/22/EC of the European Parliament and of the Council and repealing Directive 1999/44/EC of the European Parliament and of the Council
+
+COM/2017/0637 final - 2015/0288 (COD)"""@en,
+        """
+
+Proposition modifiée de DIRECTIVE DU PARLEMENT EUROPÉEN ET DU CONSEIL on certain aspects concerning contracts for the online and other distance sales of goods, amending Regulation (EC) No 2006/2004 of the European Parliament and of the Council and Directive 2009/22/EC of the European Parliament and of the Council and repealing Directive 1999/44/EC of the European Parliament and of the Council
+
+COM/2017/0637 final - 2015/0288 (COD)"""@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "Amended proposal for a directive "@en .
+
+lamd:c_017 a skos:Concept ;
+    lam:classifyWith lamd:res_94bvdjNgpLD68PkJf4YL9Y,
+        lamd:res_ALoGeQJWur26djXbfn9RKZ,
+        lamd:res_QdCGD3LPhqXn6GL43r9tFM,
+        lamd:res_c6wd7UazRMvaWmDrqDwwgt ;
+    lam:hasPropertyConfiguration lamd:res_2iwgZdGWjZTEdpqgCMtvLJ,
+        lamd:res_5HuYDa8Mt5WUHk9jEycFWB,
+        lamd:res_6FctYuNT2EhBr9a8ukHSny,
+        lamd:res_AMaGrXjdnyTDPKkHCTsJsq,
+        lamd:res_ETvP8vQVQkMYzg9f9qzrY7,
+        lamd:res_HgDjbGU3ht2vX3E8iD4TmR,
+        lamd:res_J4XBzXsinEAfy4KE82Z2Rt,
+        lamd:res_Ssr5YqFXi8HqZZ2WUKPWWs,
+        lamd:res_X6HvF3Gj8w3kZEBR6isafH,
+        lamd:res_bd5iHRmW82QwUrCRBGGAGc,
+        lamd:res_cB6YvgakNSr3sFi29wix5F,
+        lamd:res_iBaShiuxDcJjAgzzoahv4Y,
+        lamd:res_mWMuPAWzqEhdk3s46RD8cy ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel """Court of Justice
+judicial infomation EU case law"""@en ;
+    skos:editorialNote """
+judicial infomation EU case law - Court of Justice"""@en ;
+    skos:example "62015CA0058",
+        "Case C-58/15: Judgment of the Court (Sixth Chamber) of 23 December 2015 (request for a preliminary ruling from the Bayerischer Verwaltungsgerichtshof — Germany) — Firma Theodor Pfister v Landkreis Main-Spessart (Reference for a preliminary ruling — Agriculture — Health inspections — Official feed and food controls — Financing of controls — Inspection costs relating to slaughter — Regulation (EC) No 882/2004 — Directive 85/73/EEC — Possibility of levying fees covering the actual cost of inspection, exceeding the fees set by that directive) "@en,
+        "Affaire C-580/14: Ordonnance de la Cour (sixième chambre) du 17 décembre 2015 (demande de décision préjudicielle du Verwaltungsgericht Berlin — Allemagne) — Sandra Bitter, en qualité de mandataire liquidateur de Ziegelwerk Höxter GmbH/Bundesrepublik Deutschland (Renvoi préjudiciel — Directive 2003/87/CE — Système d'échange de quotas d'émission de gaz à effet de serre — Amende sur les émissions excédentaires — Proportionnalité»)"@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel """Judgment of the Court - C - info
+case"""@en .
+
+lamd:c_018 a skos:Concept ;
+    lam:classifyWith lamd:res_9a3Yp4Ck98ygeAXrhqdP75,
+        lamd:res_DEnv9sCcrv3TLoVFHytMqS,
+        lamd:res_FGHEKoDZJ5NDVm2jFujK5B,
+        lamd:res_fyK4ozgoH74ycnstRBQaFE ;
+    lam:hasPropertyConfiguration lamd:res_5R9GLuvztYh8RyQf3AG7vV,
+        lamd:res_8Dos5HtnbZWK2PAChyfY7k,
+        lamd:res_BAXi8QV7w9QQSPQrfpstrJ,
+        lamd:res_FQqxpYneMT8LXsLTjbPKiH,
+        lamd:res_HPPYjqCsgVhq7d7wMHVR5J,
+        lamd:res_LtiCT2jBZQnTH2Cx74ayLU,
+        lamd:res_MPLbJmQ7qWtK42z254kZAr,
+        lamd:res_TE7H9TsxroadyemyGHDJpD,
+        lamd:res_Y3wkVoMoZt8fDSTjXQAvt7,
+        lamd:res_cz54CqmhVoKMzFrGkbXVZZ,
+        lamd:res_frFydopY6vDHbpBtpEnsKi,
+        lamd:res_grZXHA4zKjBFQtfvjbThuT,
+        lamd:res_macyySHBzEyxiyKKXYFNJp ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel """Court of Justice
+judicial infomation EU case law"""@en ;
+    skos:editorialNote """
+judicial infomation EU case law - Court of Justice"""@en ;
+    skos:example "62018CB0373",
+        "Case C-373/18: Order of the Court (First Chamber) of 31 January 2019 (request for a preliminary ruling from the Tribunal Administrativo e Fiscal de Penafiel — Portugal) — Prosa — Produtos e Serviços Agrícolas v Autoridade Tributária e Aduaneira (Reference for a preliminary ruling — Article 99 of the Rules of Procedure of the Court of Justice — Indirect taxes on the raising of capital — Directive 69/335/EEC — Articles 4 and 7 — Incorporation of a capital company — Stamp duty in force on 1 July 1984 — Subsequent abolition of that stamp duty, followed by its reintroduction) "@en,
+        "Affaire C-373/18: Ordonnance de la Cour (première chambre) du 31 janvier 2019 (demande de décision préjudicielle du Tribunal Administrativo e Fiscal de Penafiel — Portugal) — Prosa — Produtos e Serviços Agrícolas/Autoridade Tributária e Aduaneira (Renvoi préjudiciel — Article 99 du règlement de procédure de la Cour — Impôts indirects frappant les rassemblements de capitaux — Directive 69/335/CEE — Articles 4 et 7 — Constitution d’une société de capitaux — Droit de timbre en vigueur au 1er juillet 1984 — Suppression de ce droit de timbre par la suite, puis réintroduction de celui-ci)"@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "Order of the Court - C - info"@en .
+
+lamd:c_019 a skos:Concept ;
+    lam:classifyWith lamd:res_4ZhMQxatRP8zWsSSeBbxZE,
+        lamd:res_6Mr2qAJgCuRhHVwgKHxxJV,
+        lamd:res_NZpBct9KczCndKeEjcSqLk,
+        lamd:res_jWygeDpp8xJFfbBECUUWeu ;
+    lam:hasPropertyConfiguration lamd:res_2XQyjGBafAYLeNqvHk2n5j,
+        lamd:res_6ZYeCTCAD3fGySRhPhdjCS,
+        lamd:res_7rfpshXfxgVTbhNrPMVB2v,
+        lamd:res_8Ce8xkA7CmUWmYxZJeQGeU,
+        lamd:res_AtLwNYfsnD5phrxcHezXoC,
+        lamd:res_GriNgu2g89kt8XpRMzRvMy,
+        lamd:res_H7GB33CEtfBs38MyeY6URT,
+        lamd:res_H7UaQBKhjW25JtuFEC5Yp3,
+        lamd:res_HSgb5uAmb9ZvnhqXGGzKx7,
+        lamd:res_HiTZNpri6c2oXZMTKdmRF5,
+        lamd:res_JGZjiQjFkw6vorsSiZhf5k,
+        lamd:res_Jo56P6XGHPVPvhaJYxBwp5,
+        lamd:res_KuYMEwz3xrwnkJxxMX4beD,
+        lamd:res_Mnz7uUVGa6A62jS3j4VezM,
+        lamd:res_SEeVFyXsYBN7RyRBSYCech,
+        lamd:res_TK9hLCzkLKSifLhZgfphvc,
+        lamd:res_Uu6oXpxT6JAPN59eoYquy3,
+        lamd:res_VLNGESXkaoqisTxAtuk86W,
+        lamd:res_WtZGzWrK8eStEMapdEZiqw,
+        lamd:res_X338Z2znmaAuNF3Pume9ar,
+        lamd:res_YWxbobJzLyQnt68jdZxeWD,
+        lamd:res_Zn93ra392G69Z6iZvd8Nmn,
+        lamd:res_anKJRMukLcYJPHHRPPpkWi,
+        lamd:res_c263KYnce7J6bTYgjaTqBx,
+        lamd:res_dgnuC64KWePnxbA9ij6v99,
+        lamd:res_doUbGKWjCLUMMNsVTK5DoZ,
+        lamd:res_h3VkcaVvTMec6HLtXJghCo,
+        lamd:res_hzd2m4qFbdMbqarRVPiaJr,
+        lamd:res_iUNd2D7medA6VqHjSL79dS,
+        lamd:res_jFBSmPBRyqsndC95wCFzvS,
+        lamd:res_jG7qR6cERTPNk8x3tiN2XC,
+        lamd:res_jZ8MNKs6UXSSEbnno4AyD2,
+        lamd:res_nVLy32p7fC3c7VnSjE3Hqg ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel """Arrangement
+European Union"""@en ;
+    skos:editorialNote """arrangement between EU and third country
+
+DTS_SUBDOM = INTER_AGREE AND (TI~arrangement between) ORDER BY XC DESC"""@en ;
+    skos:example """22016A0311(01)
+22012A0413(01)
+22014A0611(02)
+22014A0412(01)""",
+        "Arrangement between the European Union and the Swiss Confederation on the modalities of its participation in the European Asylum Support Office"@en,
+        "ARRANGEMENT entre l'Union européenne et la Confédération suisse sur les modalités de sa participation au bureau européen d'appui en matière d'asile"@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "Arrangement"@en .
+
+lamd:c_020 a skos:Concept ;
+    lam:classifyWith lamd:res_DTM4pt9rBRkuM5MRPsouvX,
+        lamd:res_bU8LxWU2oyxDCzfpq7aVvc,
+        lamd:res_eFc9WnKFaUPxjTyyVwTxPz,
+        lamd:res_iagcbpnkmekbgLh3mc5KDe ;
+    lam:hasPropertyConfiguration lamd:res_3FDi6S3499wfBLgRkYUsb4,
+        lamd:res_4HSMg7vT5562do6HbKYhjf,
+        lamd:res_5fimFwo78C9wA7KiQnzJ3Q,
+        lamd:res_C2mECuZPtkhHQHNpbRSDFz,
+        lamd:res_Dh9usnXRfgbmq4qmP5vemt,
+        lamd:res_E9f38cnDPyJ82XBYsjc5Gr,
+        lamd:res_LLTd2zaKH3GobV7q8bG3vF,
+        lamd:res_Ntxvmg3hhg39D4Zei9DzhE,
+        lamd:res_SjfBPJQRSxKLjcstNdzNGW,
+        lamd:res_X3SuMuPZRXZ7AwW2xJX4HV,
+        lamd:res_aPxP2Uzj5chtoQp5N3zC98,
+        lamd:res_iCKhTyQprH8RFY7ye2UKXE ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel """Withdrawal
+Commission proposals"""@en ;
+    skos:example "52016XC0430(01)",
+        "Withdrawal of Commission Proposals"@en,
+        "RETRAIT DE PROPOSITIONS DE LA COMMISSION"@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "Withdrawal - Commission proposals"@en .
+
+lamd:c_021 a skos:Concept ;
+    lam:classifyWith lamd:res_AhQCRnrnx9YUijZ43v42R8,
+        lamd:res_EhWsho2oyjjcXnAU3BM4qG,
+        lamd:res_JNsbUxikV8BUQexVFo62w7,
+        lamd:res_NL2DMcg2HEcGssJbU4MkTX ;
+    lam:hasPropertyConfiguration lamd:res_6gCPjfWUhNSEJCUHyYLhEz,
+        lamd:res_857sCKf6cWhnGHGQTCkrwm,
+        lamd:res_BgBGuFXtfMeXcAnayykthC,
+        lamd:res_EYs9hX8oGTbGBGjQNVkwx4,
+        lamd:res_EjiCyQSbChqBBmWfdfP8YE,
+        lamd:res_J79K6DaVDamPBZVAJXB4wK,
+        lamd:res_KsD9R9nWrpssjHygDNoSHU,
+        lamd:res_Tc9RbMuezAerePUDrJ8twK,
+        lamd:res_XbeFioqZxRuM4CYRdsN4cz,
+        lamd:res_YPNPGiYooaTLYCTxapDH7i ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel """European Commission
+State aid 
+Invitation to submit comments pursuant to Article 108(2) TFEU
+Announcement"""@en ;
+    skos:example """52015XC0605(05)
+52013XC0823(07)
+52014XC0801(02)""",
+        "State aid — Belgium — State aid SA.37667 (2015/C) (ex 2015/NN) — Excess profit tax ruling system in Belgium — Article 185§ 2(b) CIR92 — Invitation to submit comments pursuant to Article 108(2) of the Treaty on the Functioning of the European Union (Text with EEA relevance)"@en,
+        "Aide d’État — Belgique — Aide d’État SA.37667 (2015/C) (ex 2015/NN) — Système belge de décisions fiscales anticipées relatives aux bénéfices excédentaires — Article 185, paragraphe 2, point b), du Code des impôts sur les revenus 1992 («CIR 92») — Invitation à présenter des observations en application de l'article 108, paragraphe 2, du traité sur le fonctionnement de l'Union européenneTexte présentant de l'intérêt pour l'EEE "@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "State aid - Invitation to submit comments - COM"@en .
+
+lamd:c_022 a skos:Concept ;
+    lam:classifyWith lamd:res_4eH44nsjptAQj6Dfu5wymJ,
+        lamd:res_75rCuJTH4woQKpPAVXf36f,
+        lamd:res_MbaB9xa7TZGdzTAsxFtM7P,
+        lamd:res_eUzh4ntGrnWzPZsRB2rbuT ;
+    lam:hasPropertyConfiguration lamd:res_7godr2oEzwe58ba6jbNBZr,
+        lamd:res_AfHgXJLhn3muCeLhvgaV57,
+        lamd:res_QjgEWGXmXuDZ5KMUcvksdV,
+        lamd:res_ZcRmqyZCh3ZvH93xp9mrHF,
+        lamd:res_cxwTxJqvbnUMEh4v8w4v63,
+        lamd:res_evRYexDY49hvrrMfFjawBo,
+        lamd:res_hRuYYAkVXQdY5EyxQYKGsr,
+        lamd:res_hYfh2jJDyWbeTHQaWNMFC9,
+        lamd:res_mf89RgoBLX7QT9zeXd6mMd ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel """EFTA Surveillance Authority
+State aid 
+Invitation to submit comments
+"""@en ;
+    skos:editorialNote "following the decision to initiate proceedings pursuant to Article 1(2) of Part I of Protocol 3 to the Agreement between the EFTA States on the Establishment of a Surveillance Authority and a Court of Justice"@en ;
+    skos:example """E2019C0613(01)
+E2019C0523(01)""",
+        "Invitation to submit comments pursuant to Article 1(2) of Part I of Protocol 3 to the Agreement between the EFTA States on the Establishment of a Surveillance Authority and a Court of Justice on state aid issues"@en,
+        "Invitation à présenter des observations en application de l’article 1er, paragraphe 2, de la partie I du protocole 3 de l’accord entre les États de l’AELE relatif à l’institution d’une Autorité de surveillance et d’une Cour de justice, concernant des questions relatives à des aides d’État"@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "State aid - Invitation to submit comments - EFTA"@en .
+
+lamd:c_023 a skos:Concept ;
+    lam:classifyWith lamd:res_HHSFkpQP8gkjxZuXJcxpSR,
+        lamd:res_HHVYnXTAJE5ZSCk6BTR2qA,
+        lamd:res_P57sv6k85sncrViqoacBrj,
+        lamd:res_RseQ7J7gh9AUkejuGf2g8u ;
+    lam:hasPropertyConfiguration lamd:res_2FC7iJZtBcCdStC3nBHsJb,
+        lamd:res_7VJ5F57BAVuCA3fZ5BiGUG,
+        lamd:res_8cozV6Xhm8vz59WTRVbcsL,
+        lamd:res_LWVPx2oPuE4s8AjbtmU4oq,
+        lamd:res_YbaKHFTFnqM9CZnasQtTkQ,
+        lamd:res_ZgsJkYDdd6Xz4ECRjzQaZt,
+        lamd:res_aN2LfrV4DJDf2x2oPuWTs8,
+        lamd:res_bcSWqGBgPMW39jNthsR95w,
+        lamd:res_dr4Tr3RHdY6EX5woz8Nzpj ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel """EFTA Surveillance Authority
+State aid 
+Decision to open a formal investigation
+Invitation to submit comments
+"""@en ;
+    skos:editorialNote "In fact this is just the invitation to submit comments following the decision to initiate proceedings pursuant to Article 1(2) of Part I of Protocol 3 to the Agreement between the EFTA States on the Establishment of a Surveillance Authority and a Court of Justice"@en ;
+    skos:example "E2019C0822(01)",
+        """Decision No 052/19/COL of 10 July 2019 to open a formal investigation into Farsund Vekst (Case 83835)
+Invitation to submit comments pursuant to Article 1(2) of Part I of Protocol 3 to the Agreement between the EFTA States on the Establishment of a Surveillance Authority and a Court of Justice on state aid issues
+(2019/C 284/04)"""@en,
+        "Décision n° 052/19/COL du 10 juillet 2019 d’ouvrir une procédure formelle d’examen concernant Farsund Vekst (affaire 83835) — Invitation à présenter des observations, en application de l’article 1er, paragraphe 2, de la partie I du protocole 3 de l’accord entre les États de l’AELE relatif à l’institution d’une Autorité de surveillance et d’une Cour de justice, concernant des questions relatives à des aides d’État"@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "State aid - decision - EFTA"@en .
+
+lamd:c_024 a skos:Concept ;
+    lam:classifyWith lamd:res_AnyMJmF7Yu3dAVxssijAhF,
+        lamd:res_dUeSKZuKegYhaakexhWFMb,
+        lamd:res_f76v7BuRkXvQeTGQsyNkpc,
+        lamd:res_iCWKbuyNZjmbErYDaKLXEQ ;
+    lam:hasPropertyConfiguration lamd:res_22bici9FKeQtMJ9w4NdJa4,
+        lamd:res_55DxefRjqPv2JtGGeMPUdQ,
+        lamd:res_7hAX98VT6iseBnQcATimr5,
+        lamd:res_8NczfP6Qw7rvcdKUPV7Rgp,
+        lamd:res_8bAWRcpNoESosBr3eYRq2J,
+        lamd:res_9oiHfwCPRtVeRJF2kTGAnC,
+        lamd:res_AqMeqcn8EoTdRgCVhRkyX3,
+        lamd:res_DyS9XjYkJu7Nr4fZUoNW7B,
+        lamd:res_F5pGUTd4X2xYvH7nzwu3qD,
+        lamd:res_HJZzwfwwiDSjdSXHuBVGfY,
+        lamd:res_MS9SoUq8U3AQFuNxZUuXNe,
+        lamd:res_PqnHTGpXKXwVjDGaRPo6cH,
+        lamd:res_REuXFPcBqzvyxtXmVsGHML,
+        lamd:res_RtRoEbKJdzLdYJt949aGM4,
+        lamd:res_U22DqZ73BrdGUgrtcYBtVD,
+        lamd:res_WDMmL6zrxHWZ8iVZTcP2PN,
+        lamd:res_WUPZxZojJfKFTArqoKDieG,
+        lamd:res_ZgkDVsWuPYfzW2nRkFywWr,
+        lamd:res_aejyWTDvBVehCXsJZpcXau,
+        lamd:res_fQgCdjhQzERox8mCs2i8D5,
+        lamd:res_gymTTNyYicYEnHRjNumQRF,
+        lamd:res_iLgb2RNL8orBhytUsE9z3x ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel """EFTA Surveillance Authority decision
+closing the formal investigation
+State aid """@en ;
+    skos:editorialNote "AU_CODED = EFTA_SUC AND (TI~decision to close formal investigation) ORDER BY XC DESC"@en ;
+    skos:example """E2017C0094
+E2017C0081
+E2016C0061""",
+        "EFTA Surveillance Authority Decision No 94/17/COL of 31 May 2017 closing the formal investigation into the exemption rule for ambulant services under the scheme on differentiated social security contributions 2014-2020 (Norway) [2018/595]"@en,
+        "Décision de l'Autorité de surveillance AELE n° 94/17/COL du 31 mai 2017 clôturant la procédure formelle d'examen relative à la dérogation pour les services ambulatoires dans le cadre du régime de cotisations de sécurité sociale différenciées 2014-2020 (Norvège) [2018/595]"@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "State aid - closing the formal investigation - EFTA"@en .
+
+lamd:c_025 a skos:Concept ;
+    lam:classifyWith lamd:res_JFP6yb8Kp3dAU8W9QbTUNP,
+        lamd:res_Uc7s9Uy8LeyUbgUZFpuxsG,
+        lamd:res_dZ9zS9V8ZShD6oLppd5u26,
+        lamd:res_h3msocErrf23z8oyPzRv9G ;
+    lam:hasPropertyConfiguration lamd:res_437VwuXCHK75ju4FMWAe6y,
+        lamd:res_BwC9jkaNgWeXeriQNbjye3,
+        lamd:res_MG9knJU9MoNKVjFJGBGXaQ,
+        lamd:res_T7JNFW2woje6oMgKvN3GKe,
+        lamd:res_ZXqFGfLKG3DnwzFH5NxK48,
+        lamd:res_dje9mgTZjQmGepyArENAef,
+        lamd:res_eYH7w8pdGwzJCAFwLzasij,
+        lamd:res_fV4j337YLSKQsKhGnu3CTj,
+        lamd:res_gDDowBirDp2qabBgUYc7ns ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel """EFTA Surveillance Authority
+No state aid within the meaning of Article 61(1) of the EEA agreement"""@en ;
+    skos:editorialNote "AU_CODED = EFTA_SUC AND (TI~No state aid within the meaning of) ORDER BY XC DESC"@en ;
+    skos:example """E2019C0620(01)
+E2019C0606(01)
+E2018C1011(01)""",
+        "No state aid within the meaning of Article 61(1) of the EEA Agreement"@en,
+        "Absence d’aide d’État au sens de l’article 61, paragraphe 1, de l’accord EEE"@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "State aid - no state aid - EFTA"@en .
+
+lamd:c_026 a skos:Concept ;
+    lam:classifyWith lamd:res_YYeJNHqcq729LHDJbYFEEi,
+        lamd:res_YwBCMoopZUT6fFmx79KeKr,
+        lamd:res_fUc5gKQvrRi4zyx7d6nFE7,
+        lamd:res_htfEBVcDnZiuJdce4TYvb5 ;
+    lam:hasPropertyConfiguration lamd:res_8DtrNJCbsayp3ZbBYEeVZw,
+        lamd:res_8FBQJPqHPesD7oCR6QzXMu,
+        lamd:res_FbKbmvxXdrUhLNkaDyYkCM,
+        lamd:res_GPE48FzkGAAMRSJadqcuko,
+        lamd:res_U8Rj4EUC5sNgohiVbch89p,
+        lamd:res_amG4VCGAc2VEfMc57HHVvc,
+        lamd:res_b8JwCgYQaThkE7xW2ocvdv,
+        lamd:res_cVzhRQZ235rxTTkXonMHCq,
+        lamd:res_n52MgWx3B3rXLZeEUoFxcw ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:altLabel """Communication
+Notice
+EFTA Surveillance Authority
+Article 27(4)"""@en ;
+    skos:editorialNote "TI~(EFTA Surveillance Authority) AND (\"27(4)\") ORDER BY XC DESC"@en ;
+    skos:example """E2016C0428(02)
+E2016C0428(01)
+E2008C0515(03)""",
+        "Communication from the EFTA Surveillance Authority published pursuant to Article 27(4) of Chapter II, Protocol 4 of the Surveillance and Court Agreement (Case No 76958 — Color Line/Sandefjord Municipality) — Commitments offered by Sandefjord Municipality"@en,
+        "Communication de l’Autorité de surveillance AELE publiée conformément à l’article 27, paragraphe 4, du chapitre II du protocole 4 de l’accord Surveillance et Cour de justice (Affaire n° 76958 — Color Line/Municipalité de Sandefjord) — Engagements offerts par la municipalité de Sandefjord"@fr ;
+    skos:inScheme lamd:LAMLegalDocument ;
+    skos:prefLabel "EFTA notice/communication"@en .
+
+lamd:class_3OTHER a skos:Collection ;
+    euvoc:order "3" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "Complementary acts incl. Budget, ECB guidelines"@en ;
+    skos:notation "3OTHER" ;
+    skos:prefLabel "Other"@en .
+
+lamd:class_5OTHER a skos:Collection ;
+    euvoc:order "7" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "Preparatory acts from other EU bodies"@en ;
+    skos:notation "5OTHER" ;
+    skos:prefLabel "Other"@en .
+
+lamd:class_COM a skos:Collection ;
+    euvoc:order "1" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "Commission proposals, drafts, other preparatory documents as well as Commission reports and working documents (green and white papers, communications, impact assesments, evaluations, fittness checks, etc.) "@en ;
+    skos:member lamd:c_001,
+        lamd:c_002,
+        lamd:c_003,
+        lamd:c_004,
+        lamd:c_011,
+        lamd:c_012,
+        lamd:c_013,
+        lamd:c_014,
+        lamd:c_015,
+        lamd:c_016,
+        lamd:c_020 ;
+    skos:notation "COM" ;
+    skos:prefLabel "European Commmission"@en .
+
+lamd:class_CONSIL a skos:Collection ;
+    euvoc:order "2" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "Council positions, Statements of Council's reasons, etc."@en ;
+    skos:notation "CONSIL" ;
+    skos:prefLabel "Council"@en .
+
+lamd:class_COR a skos:Collection ;
+    euvoc:order "5" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "CoR opinions"@en ;
+    skos:notation "COR" ;
+    skos:prefLabel "European Committee of Regions"@en .
+
+lamd:class_COTHER a skos:Collection ;
+    euvoc:order "3" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "Different communications, notices, announcements, informations from sector 5 and C; usually published in OJ-C"@en ;
+    skos:notation "COTHER" ;
+    skos:prefLabel "Other"@en .
+
+lamd:class_CRDS a skos:Collection ;
+    euvoc:order "2" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:notation "CRDS" ;
+    skos:prefLabel "Conclusions, resolutions, declarations, statements"@en .
+
+lamd:class_ECB a skos:Collection ;
+    euvoc:order "6" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "ECB opinions"@en ;
+    skos:notation "ECB" ;
+    skos:prefLabel "European Central Bank"@en .
+
+lamd:class_EESC a skos:Collection ;
+    euvoc:order "4" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "EESC opinions"@en ;
+    skos:notation "EESC" ;
+    skos:prefLabel "European Economic and Social Committee"@en .
+
+lamd:class_EP a skos:Collection ;
+    euvoc:order "3" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "EP resolutions, opinions, reports"@en ;
+    skos:notation "EP" ;
+    skos:prefLabel "European Parliament"@en .
+
+lamd:class_LEGIS a skos:Collection ;
+    euvoc:order "1" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "Legislative acts adopted by legislative procedure"@en ;
+    skos:notation "LEGIS" ;
+    skos:prefLabel "Legislative acts"@en .
+
+lamd:class_NLEGIS a skos:Collection ;
+    euvoc:order "2" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "Implementing, delegated and other acts not adopted by legislative procedure"@en ;
+    skos:notation "NLEGIS" ;
+    skos:prefLabel "Non-legislative acts"@en .
+
+lamd:class_STATEAID a skos:Collection ;
+    euvoc:order "1" ;
+    dct:created "2021-08-03"^^xsd:date ;
+    skos:definition "usually 5*XC or 5*M documents; also guidelines and communications concerning state aid measures"@en ;
+    skos:member lamd:c_021 ;
+    skos:notation "STATEAID" ;
+    skos:prefLabel "State Aid, mergers and concentrations"@en .
+
+lamd:res_22bici9FKeQtMJ9w4NdJa4 a lam:PropertyConfiguration ;
+    lam:path lamd:md_TT ;
+    skos:editorialNote " EEA" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_TT" .
+
+lamd:res_2ADaLvzhbEiVf6UAUzT8hu a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_2FC7iJZtBcCdStC3nBHsJb a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_2Vqmb9JwDzYQjxQ3G5Mft3 a lam:PropertyConfiguration ;
+    lam:path lamd:md_MI ;
+    sh:name "Optional lamd:md_MI " .
+
+lamd:res_2XQyjGBafAYLeNqvHk2n5j a lam:PropertyConfiguration ;
+    lam:path lamd:md_AMENDMENT ;
+    sh:name "Optional lamd:md_AMENDMENT " .
+
+lamd:res_2YeAWHf82SgjkVeQyqaeCE a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    skos:editorialNote " and Service/DG responsible" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:COM" ;
+    sh:value corporate-body:COM .
+
+lamd:res_2fo8PvXUSK8dKezfw2w6Fg a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_ANN_COD to fd_365:DATADOPT" ;
+    sh:value fd_365:DATADOPT .
+
+lamd:res_2iwgZdGWjZTEdpqgCMtvLJ a lam:PropertyConfiguration ;
+    lam:path lamd:md_DF ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_DF" .
+
+lamd:res_2nU8ugroAiqBxhZYGFJKnN a lam:PropertyConfiguration ;
+    lam:path lamd:md_PROC ;
+    skos:editorialNote " link to interninstitutional procedure" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_PROC" .
+
+lamd:res_39pJgwgfmYxkeKuPGM5Z6B a lam:PropertyConfiguration ;
+    lam:path lamd:md_REP ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_REP to LIE" ;
+    sh:value "LIE" .
+
+lamd:res_3FDi6S3499wfBLgRkYUsb4 a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_3M7JhWeah4AfANLiNWSvxL a lam:PropertyConfiguration ;
+    lam:path lamd:md_DH ;
+    sh:name "Optional lamd:md_DH " .
+
+lamd:res_3dqWmRnTJyYFJwiBxCjSmq a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_ANN_COD to fd_335:DATNOT" ;
+    sh:value fd_335:DATNOT .
+
+lamd:res_3eLkCx5bVtjTEMZCmRBKmZ a lam:PropertyConfiguration ;
+    lam:path lamd:md_DH ;
+    sh:name "Optional lamd:md_DH " .
+
+lamd:res_3jEiCR9pBQfXPBiCivw8GB a lam:PropertyConfiguration ;
+    lam:path lamd:md_EV ;
+    skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or when the proposal is replaced or withdrawn
+*Date of adoption of legal act - 1 day""" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_EV" .
+
+lamd:res_437VwuXCHK75ju4FMWAe6y a lam:PropertyConfiguration ;
+    lam:path lamd:md_TT ;
+    skos:editorialNote " EEA" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_TT" .
+
+lamd:res_4A4fi8C4x6vAxhQXJHzs5n a lam:PropertyConfiguration ;
+    lam:path lamd:md_MI ;
+    sh:name "Optional lamd:md_MI " .
+
+lamd:res_4AU4FJXyM6EyiM4oDBz98r a lam:PropertyConfiguration ;
+    lam:path lamd:md_AS ;
+    sh:name "Optional lamd:md_AS " .
+
+lamd:res_4EbRxxxgjVRMFNMojsx3tV a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_5_XC_OJC" ;
+    sh:value celexd:c_5_XC_OJC .
+
+lamd:res_4HSMg7vT5562do6HbKYhjf a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_4QHqbrBH69NGHeqMMtwJFw a lam:PropertyConfiguration ;
+    lam:path lamd:md_REPLACEMENT ;
+    sh:name "Optional lamd:md_REPLACEMENT " .
+
+lamd:res_4UB8oG4hEbYkNwzyFB2xAs a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_DC" .
+
+lamd:res_4ZhMQxatRP8zWsSSeBbxZE a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:agreement_international" ;
+    sh:value cdm:agreement_international .
+
+lamd:res_4eH44nsjptAQj6Dfu5wymJ a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:resource_legal" ;
+    sh:value cdm:resource_legal .
+
+lamd:res_4g7gUnDp2SFv3igDLNwf4p a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    skos:editorialNote " (2):  + link to adopted act or notice on withdrawal or replacement" ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_4jXkWSFpvRtJ4wE8ijbpYb a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:act_preparatory" ;
+    sh:value cdm:act_preparatory .
+
+lamd:res_55DxefRjqPv2JtGGeMPUdQ a lam:PropertyConfiguration ;
+    lam:path lamd:md_EV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_EV" .
+
+lamd:res_5HuYDa8Mt5WUHk9jEycFWB a lam:PropertyConfiguration ;
+    lam:path lamd:md_CM ;
+    sh:name "Optional lamd:md_CM " .
+
+lamd:res_5R9GLuvztYh8RyQf3AG7vV a lam:PropertyConfiguration ;
+    lam:path lamd:md_LF ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_LF" .
+
+lamd:res_5V5v2qw9mhoY52aewFFNeu a lam:PropertyConfiguration ;
+    lam:path lamd:md_IC ;
+    sh:name "Optional lamd:md_IC " .
+
+lamd:res_5fimFwo78C9wA7KiQnzJ3Q a lam:PropertyConfiguration ;
+    lam:path lamd:md_MI ;
+    sh:name "Optional lamd:md_MI " .
+
+lamd:res_5gsqfVgiEejZxbfLg8dvBE a lam:PropertyConfiguration ;
+    lam:path lamd:md_AMENDMENT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_AMENDMENT" .
+
+lamd:res_5kNPjEYT3j6ETnyNXYdR7z a lam:PropertyConfiguration ;
+    lam:path lamd:md_CC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CC" .
+
+lamd:res_5n96ZWAa7JBD9hCycdnDKL a lam:PropertyConfiguration ;
+    lam:path lamd:md_MI ;
+    sh:name "Optional lamd:md_MI " .
+
+lamd:res_5ymL5NJBVogKnqwcUnbzqL a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_6FctYuNT2EhBr9a8ukHSny a lam:PropertyConfiguration ;
+    lam:path lamd:md_NA ;
+    sh:name "Optional lamd:md_NA " .
+
+lamd:res_6Mr2qAJgCuRhHVwgKHxxJV a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:ARRANG" ;
+    sh:value resource-type:ARRANG .
+
+lamd:res_6VtD9H5xRbNB9DK3RkXtod a lam:PropertyConfiguration ;
+    lam:path lamd:md_MI ;
+    sh:name "Optional lamd:md_MI " .
+
+lamd:res_6XrqKVvWoxXQNwNyKxHegr a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_ANN_COD to fd_365:DATPUB" ;
+    sh:value fd_365:DATPUB .
+
+lamd:res_6ZYeCTCAD3fGySRhPhdjCS a lam:PropertyConfiguration ;
+    lam:path lamd:md_APPLICABILITY_EXT ;
+    sh:name "Optional lamd:md_APPLICABILITY_EXT " .
+
+lamd:res_6cKxpFaTgv5w8QhjgAeDRH a lam:PropertyConfiguration ;
+    lam:path lamd:md_TT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_TT" .
+
+lamd:res_6gCPjfWUhNSEJCUHyYLhEz a lam:PropertyConfiguration ;
+    lam:path lamd:md_CT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CT to ns1:AIDE" ;
+    sh:value ns1:AIDE .
+
+lamd:res_6sdnmpNPoM2cXSPDQZJTYT a lam:PropertyConfiguration ;
+    lam:path lamd:md_EV ;
+    skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or when the proposal is replaced or withdrawn
+*Date of adoption of legal act - 1 day""" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_EV" .
+
+lamd:res_6y3iqzjLnquAFygmGjTdQL a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_6zcF6U8aeBaTThjbPdrDEg a lam:PropertyConfiguration ;
+    lam:path lamd:md_MI ;
+    sh:name "Optional lamd:md_MI " .
+
+lamd:res_75rCuJTH4woQKpPAVXf36f a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:ANNOUNC" ;
+    sh:value resource-type:ANNOUNC .
+
+lamd:res_7FGVHBiJjAza24ahGBAjne a lam:PropertyConfiguration ;
+    lam:path lamd:md_CT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CT" .
+
+lamd:res_7NUMFXYBdt66kPe8xSBCki a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_7QYQBAU5NmvDBPEg7nCoNh a lam:PropertyConfiguration ;
+    lam:path lamd:md_TT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_TT" .
+
+lamd:res_7QgaJJi93Utv6F8zq9SUPL a lam:PropertyConfiguration ;
+    lam:path lamd:md_LB ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_LB" .
+
+lamd:res_7VJ5F57BAVuCA3fZ5BiGUG a lam:PropertyConfiguration ;
+    lam:path lamd:md_LB ;
+    skos:editorialNote " As mentioned in the title:" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_LB to E1994A1231(04) - PAIA01P2",
+        "Mandatory lamd:md_LB" ;
+    sh:value "E1994A1231(04) - PAIA01P2" .
+
+lamd:res_7di8Wt2eHtF6pjMy8Y5qye a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_7godr2oEzwe58ba6jbNBZr a lam:PropertyConfiguration ;
+    lam:path lamd:md_TT ;
+    skos:editorialNote " EEA" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_TT" .
+
+lamd:res_7hAX98VT6iseBnQcATimr5 a lam:PropertyConfiguration ;
+    lam:path lamd:md_REPLACEMENT ;
+    sh:name "Optional lamd:md_REPLACEMENT " .
+
+lamd:res_7i9DhUfHQQF4iFrXqDW5w5 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_7o3Xfh7hwtMnCN7LybJ536 a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_7rfpshXfxgVTbhNrPMVB2v a lam:PropertyConfiguration ;
+    lam:path lamd:md_REPEAL_IMP ;
+    sh:name "Optional lamd:md_REPEAL_IMP " .
+
+lamd:res_7wrZryGtMevci8QpfvSjCq a lam:PropertyConfiguration ;
+    lam:path lamd:md_CC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CC" .
+
+lamd:res_857sCKf6cWhnGHGQTCkrwm a lam:PropertyConfiguration ;
+    lam:path lamd:md_MI ;
+    skos:editorialNote " EEA relevance" ;
+    sh:name "Optional lamd:md_MI " .
+
+lamd:res_8Ce8xkA7CmUWmYxZJeQGeU a lam:PropertyConfiguration ;
+    lam:path lamd:md_IC ;
+    sh:name "Optional lamd:md_IC " .
+
+lamd:res_8Dos5HtnbZWK2PAChyfY7k a lam:PropertyConfiguration ;
+    lam:path lamd:md_CM ;
+    sh:name "Optional lamd:md_CM " .
+
+lamd:res_8DtrNJCbsayp3ZbBYEeVZw a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_8FBQJPqHPesD7oCR6QzXMu a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_8NczfP6Qw7rvcdKUPV7Rgp a lam:PropertyConfiguration ;
+    lam:path lamd:md_NF ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_NF" .
+
+lamd:res_8bAWRcpNoESosBr3eYRq2J a lam:PropertyConfiguration ;
+    lam:path lamd:md_AMENDMENT ;
+    sh:name "Optional lamd:md_AMENDMENT " .
+
+lamd:res_8cbZAGySKYrVsyWRPoNPNs a lam:PropertyConfiguration ;
+    lam:path lamd:md_CT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CT" .
+
+lamd:res_8cozV6Xhm8vz59WTRVbcsL a lam:PropertyConfiguration ;
+    lam:path lamd:md_CT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CT to ns1:AELE",
+        "Constraint on lamd:md_CT to ns1:AIDE" ;
+    sh:value ns1:AELE,
+        ns1:AIDE .
+
+lamd:res_8ivg3sdw3q4QzwnTEKiKNP a lam:PropertyConfiguration ;
+    lam:path lamd:md_AS ;
+    sh:name "Optional lamd:md_AS " .
+
+lamd:res_8qpHfEgoSfmWYegaZyLe6g a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_8yznJRx4USPKay9a5ptYDj a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_ANN_COD to fd_365:DATPUB" ;
+    sh:value fd_365:DATPUB .
+
+lamd:res_927MYd2qVyJfu6Ki2AHb7a a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_ANN_COD to fd_365:DATADOPT" ;
+    sh:value fd_365:DATADOPT .
+
+lamd:res_92uBJHvkwKDb6HvTATgysc a lam:PropertyConfiguration ;
+    lam:path lamd:md_RS ;
+    sh:name "Optional lamd:md_RS " .
+
+lamd:res_94bvdjNgpLD68PkJf4YL9Y a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:CJ" ;
+    sh:value corporate-body:CJ .
+
+lamd:res_9Lc4eFRUbR4E5VioGdFvfX a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:proposal_regulation_ec" ;
+    sh:value cdm:proposal_regulation_ec .
+
+lamd:res_9PUqX69V4Sq6QSBPvzgiRN a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_9VyaxEqDsXPQY9ppcKHpbt a lam:PropertyConfiguration ;
+    lam:path lamd:md_CC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CC" .
+
+lamd:res_9a3Yp4Ck98ygeAXrhqdP75 a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_6_CB" ;
+    sh:value celexd:c_6_CB .
+
+lamd:res_9dDHt2URb7q7zndj2J6Lqu a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_9donCiZiNR4jMrNP6Lu7Ch a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    skos:editorialNote " (2):  + link to adopted act or notice on withdrawal or replacement" ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_9oiHfwCPRtVeRJF2kTGAnC a lam:PropertyConfiguration ;
+    lam:path lamd:md_DEROGATION ;
+    sh:name "Optional lamd:md_DEROGATION " .
+
+lamd:res_A2HMMnDMxa49fMVUvdctXa a lam:PropertyConfiguration ;
+    lam:path lamd:md_EV ;
+    skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or withdrawn or replaced
+*Date of adoption of legal act - 1 day""" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_EV" .
+
+lamd:res_A3HPvUDcChMfuGgwjbnxYC a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:PROP_REG" ;
+    sh:value resource-type:PROP_REG .
+
+lamd:res_A9WYA4rCXrY5FsV4PSzJZf a lam:PropertyConfiguration ;
+    lam:path lamd:md_PROC ;
+    skos:editorialNote " link to interninstitutional procedure" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_PROC" .
+
+lamd:res_AKpUmSHbbvVUSop25GzG48 a lam:PropertyConfiguration ;
+    lam:path lamd:md_IC ;
+    sh:name "Optional lamd:md_IC " .
+
+lamd:res_ALoGeQJWur26djXbfn9RKZ a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:INFO_JUDICIAL" ;
+    sh:value resource-type:INFO_JUDICIAL .
+
+lamd:res_AMaGrXjdnyTDPKkHCTsJsq a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_APMoWmJ2TTBmXPBiogZonX a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:proposal_directive_ec" ;
+    sh:value cdm:proposal_directive_ec .
+
+lamd:res_ASwbRQ2nbYvhPHvRicVRM6 a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    skos:editorialNote " and Service/DG responsible" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:COM" ;
+    sh:value corporate-body:COM .
+
+lamd:res_AVBb4FDNzP2AGzPWMwesoS a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_DC" .
+
+lamd:res_AZvpQ6rAkXDwHmPA4ULLDX a lam:PropertyConfiguration ;
+    lam:path lamd:md_DH ;
+    sh:name "Optional lamd:md_DH " .
+
+lamd:res_AdNAwbTGQc8DVkYBn2LTXU a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_AfHgXJLhn3muCeLhvgaV57 a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_AfyaSimtHPMRFC5UbaAqaw a lam:PropertyConfiguration ;
+    lam:path lamd:md_CT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CT" .
+
+lamd:res_AhQCRnrnx9YUijZ43v42R8 a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:resource_legal" ;
+    sh:value cdm:resource_legal .
+
+lamd:res_AnyMJmF7Yu3dAVxssijAhF a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:legislation_secondary" ;
+    sh:value cdm:legislation_secondary .
+
+lamd:res_AqMeqcn8EoTdRgCVhRkyX3 a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    skos:editorialNote " indicate also: country or region; type of business; aid to undertakings" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DC to eurovoc:5541",
+        "Constraint on lamd:md_DC to eurovoc:889" ;
+    sh:value eurovoc:5541,
+        eurovoc:889 .
+
+lamd:res_AtLwNYfsnD5phrxcHezXoC a lam:PropertyConfiguration ;
+    lam:path lamd:md_TT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_TT" .
+
+lamd:res_AvhF8rgxZpcaRY2H9t3J5k a lam:PropertyConfiguration ;
+    lam:path lamd:md_CM ;
+    sh:name "Optional lamd:md_CM " .
+
+lamd:res_B5eKB7MyGMmdaMLCi56HX9 a lam:PropertyConfiguration ;
+    lam:path lamd:md_REP ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_REP to REP" ;
+    sh:value "REP" .
+
+lamd:res_BAXi8QV7w9QQSPQrfpstrJ a lam:PropertyConfiguration ;
+    lam:path lamd:md_LO ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_LO" .
+
+lamd:res_BLwU2i4XvWye6RVHiJS5iG a lam:PropertyConfiguration ;
+    lam:path lamd:md_TT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_TT" .
+
+lamd:res_BgBGuFXtfMeXcAnayykthC a lam:PropertyConfiguration ;
+    lam:path lamd:md_CC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CC to ns2:0860" ;
+    sh:value ns2:0860 .
+
+lamd:res_BwC9jkaNgWeXeriQNbjye3 a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_C2mECuZPtkhHQHNpbRSDFz a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_C399pYG45vr2QAcXWhVhuw a lam:PropertyConfiguration ;
+    lam:path lamd:md_CORRIGENDUM ;
+    sh:name "Optional lamd:md_CORRIGENDUM " .
+
+lamd:res_CB6WEG3mHH93n6itN2NeHd a lam:PropertyConfiguration ;
+    lam:path lamd:md_INCORPORATION ;
+    sh:name "Optional lamd:md_INCORPORATION " .
+
+lamd:res_CJwbNPRGHix6tWdyehShK4 a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_CV6fix6VEGqM3MwotKWVRS a lam:PropertyConfiguration ;
+    lam:path lamd:md_INCORPORATION ;
+    sh:name "Optional lamd:md_INCORPORATION " .
+
+lamd:res_CkP9gAJojsMKs5X6dEwsJP a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_Ckzc9xevdAmPmwb9BX3Bki a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_CmwgXKxSCVtyWuVixsuNn4 a lam:PropertyConfiguration ;
+    lam:path lamd:md_RS ;
+    sh:name "Optional lamd:md_RS " .
+
+lamd:res_Cr6nm2sqhnsE3e5mmjVqM6 a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_DC" .
+
+lamd:res_CrwvtraTusuiQChqAvHrKa a lam:PropertyConfiguration ;
+    lam:path lamd:md_EV ;
+    skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or when the proposal is replaced or withdrawn
+*Date of adoption of legal act - 1 day""" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_EV" .
+
+lamd:res_DEnv9sCcrv3TLoVFHytMqS a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:CJ" ;
+    sh:value corporate-body:CJ .
+
+lamd:res_DLSsEpimsEZrnLg8Jfi8Py a lam:PropertyConfiguration ;
+    lam:path lamd:md_EV ;
+    skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or withdrawn or replaced
+*Date of adoption of legal act - 1 day""" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_EV" .
+
+lamd:res_DTM4pt9rBRkuM5MRPsouvX a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:NOTICE" ;
+    sh:value resource-type:NOTICE .
+
+lamd:res_DYh2CvKDPM8s2AS9dv5j4Z a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_Dh9usnXRfgbmq4qmP5vemt a lam:PropertyConfiguration ;
+    lam:path lamd:md_PROC ;
+    skos:editorialNote " link to interninstitutional procedures concerned" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_PROC" .
+
+lamd:res_DvCEbzj77hXL66JmHPHXHi a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_Dvh9Mr3t3rnDkAUaorMY3Z a lam:PropertyConfiguration ;
+    lam:path lamd:md_OBSOLETE ;
+    sh:name "Optional lamd:md_OBSOLETE " .
+
+lamd:res_DyS9XjYkJu7Nr4fZUoNW7B a lam:PropertyConfiguration ;
+    lam:path lamd:md_OBSOLETE ;
+    sh:name "Optional lamd:md_OBSOLETE " .
+
+lamd:res_E9f38cnDPyJ82XBYsjc5Gr a lam:PropertyConfiguration ;
+    lam:path lamd:md_OBSOLETE ;
+    skos:editorialNote " and link(s) to proposal(s) concerned" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_OBSOLETE" .
+
+lamd:res_EKE7UJhtez6geyWdqvbiSX a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_ETvP8vQVQkMYzg9f9qzrY7 a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_EYs9hX8oGTbGBGjQNVkwx4 a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    skos:editorialNote " indicate also: country or region; type of business; aid to undertakings" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DC to eurovoc:5541",
+        "Constraint on lamd:md_DC to eurovoc:889" ;
+    sh:value eurovoc:5541,
+        eurovoc:889 .
+
+lamd:res_Ebd8JQiknJuMvUBrSS8tdX a lam:PropertyConfiguration ;
+    lam:path lamd:md_PROC ;
+    skos:editorialNote " link to interninstitutional procedure" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_PROC" .
+
+lamd:res_EhWsho2oyjjcXnAU3BM4qG a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_5_XC_OJC" ;
+    sh:value celexd:c_5_XC_OJC .
+
+lamd:res_EjiCyQSbChqBBmWfdfP8YE a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_Ens4K9M9bKFyHwUM9dgx2b a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:proposal_directive_ec" ;
+    sh:value cdm:proposal_directive_ec .
+
+lamd:res_F5pGUTd4X2xYvH7nzwu3qD a lam:PropertyConfiguration ;
+    lam:path lamd:md_IF ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_IF" .
+
+lamd:res_FAhTNSmMLEMmCzi3QEvm7z a lam:PropertyConfiguration ;
+    lam:path lamd:md_ADOPTION ;
+    sh:name "Optional lamd:md_ADOPTION " .
+
+lamd:res_FELTiNKvhhrf4kDnAEsRQt a lam:PropertyConfiguration ;
+    lam:path lamd:md_AMENDMENT_PRO ;
+    sh:name "Optional lamd:md_AMENDMENT_PRO " .
+
+lamd:res_FGHEKoDZJ5NDVm2jFujK5B a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:info_decision_cjeu" ;
+    sh:value cdm:info_decision_cjeu .
+
+lamd:res_FQmazQraaPmPrsJyExj7HX a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TOD ;
+    sh:name "Optional lamd:md_ANN_TOD " .
+
+lamd:res_FQqxpYneMT8LXsLTjbPKiH a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_FVu6x6pJrPuTHyxDk8ATdG a lam:PropertyConfiguration ;
+    lam:path lamd:md_EV ;
+    skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or when the proposal is replaced or withdrawn
+*Date of adoption of legal act - 1 day""" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_EV" .
+
+lamd:res_FYNzhsL49BgRQNQW7oZ2Wi a lam:PropertyConfiguration ;
+    lam:path lamd:md_AS ;
+    sh:name "Optional lamd:md_AS " .
+
+lamd:res_FbKbmvxXdrUhLNkaDyYkCM a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    skos:editorialNote " indicate also: country or region; control of restrictive practices; merger controle; type of business; aid to undertakings; Agreements and concentrations; Agreements, decisions and concerted practices; Internal market - Principles; Concerted practices; Protective measures" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DC to eurovoc:3581" ;
+    sh:value eurovoc:3581 .
+
+lamd:res_Fc3EoUh3A9aH58UDV4m3ty a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:PROP_DIR" ;
+    sh:value resource-type:PROP_DIR .
+
+lamd:res_Fin3dBcfhxxTmAKbsFSXiZ a lam:PropertyConfiguration ;
+    lam:path lamd:md_COMPLETION ;
+    sh:name "Optional lamd:md_COMPLETION " .
+
+lamd:res_Fp8EN4UNwxJXRJxDLmuHLK a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_5_PC_EUR" ;
+    sh:value celexd:c_5_PC_EUR .
+
+lamd:res_G6UZdwaUYtgrHejGJa36za a lam:PropertyConfiguration ;
+    lam:path lamd:md_CT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CT" .
+
+lamd:res_GB5FWwwfepPFetACrRcnj4 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_GPE48FzkGAAMRSJadqcuko a lam:PropertyConfiguration ;
+    lam:path lamd:md_TT ;
+    skos:editorialNote " EEA" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_TT" .
+
+lamd:res_GVAg76usWcX2nqG9urwZHu a lam:PropertyConfiguration ;
+    lam:path lamd:md_RI ;
+    sh:name "Optional lamd:md_RI " .
+
+lamd:res_Ggsz8qk3L3uvxP2gmmTTgi a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    skos:editorialNote " and Service/DG responsible" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:COM" ;
+    sh:value corporate-body:COM .
+
+lamd:res_GriNgu2g89kt8XpRMzRvMy a lam:PropertyConfiguration ;
+    lam:path lamd:md_APPLICABILITY_DEF ;
+    sh:name "Optional lamd:md_APPLICABILITY_DEF " .
+
+lamd:res_H7GB33CEtfBs38MyeY6URT a lam:PropertyConfiguration ;
+    lam:path lamd:md_DP ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_DP" .
+
+lamd:res_H7UaQBKhjW25JtuFEC5Yp3 a lam:PropertyConfiguration ;
+    lam:path lamd:md_REPLACEMENT ;
+    sh:name "Optional lamd:md_REPLACEMENT " .
+
+lamd:res_HFzmdVG7YP8EDUimecHF6c a lam:PropertyConfiguration ;
+    lam:path lamd:md_CM ;
+    sh:name "Optional lamd:md_CM " .
+
+lamd:res_HHSFkpQP8gkjxZuXJcxpSR a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:EFTA_SUC" ;
+    sh:value corporate-body:EFTA_SUC .
+
+lamd:res_HHVYnXTAJE5ZSCk6BTR2qA a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:ANNOUNC" ;
+    sh:value resource-type:ANNOUNC .
+
+lamd:res_HHVx8bEmfDyuwtjaMrFvbe a lam:PropertyConfiguration ;
+    lam:path lamd:md_ADOPTION_PAR ;
+    sh:name "Optional lamd:md_ADOPTION_PAR " .
+
+lamd:res_HJZzwfwwiDSjdSXHuBVGfY a lam:PropertyConfiguration ;
+    lam:path lamd:md_REPEAL_IMP ;
+    sh:name "Optional lamd:md_REPEAL_IMP " .
+
+lamd:res_HPPYjqCsgVhq7d7wMHVR5J a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_HSgb5uAmb9ZvnhqXGGzKx7 a lam:PropertyConfiguration ;
+    lam:path lamd:md_CC ;
+    skos:editorialNote " dir-eu-legal-act:1140" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CC" .
+
+lamd:res_HYenjH98QZ4Rg24zsDo6bg a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    skos:editorialNote " (2):  + link to adopted act or notice on withdrawal or replacement or amended proposal" ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_HfHUpazpv7Cmj3KeRK8yyU a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_Hg4eM24wvP4md7FvvLMoqv a lam:PropertyConfiguration ;
+    lam:path lamd:md_ADOPTION_PAR ;
+    sh:name "Optional lamd:md_ADOPTION_PAR " .
+
+lamd:res_HgDjbGU3ht2vX3E8iD4TmR a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_HiTZNpri6c2oXZMTKdmRF5 a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_Hmc9gweawhaWW3WEHfnTzs a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    skos:editorialNote " and Service/DG responsible" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:COM" ;
+    sh:value corporate-body:COM .
+
+lamd:res_HsjRmQcct76WJxfELkAVDq a lam:PropertyConfiguration ;
+    lam:path lamd:md_ADOPTION_PAR ;
+    sh:name "Optional lamd:md_ADOPTION_PAR " .
+
+lamd:res_Htf26qQLWJGxPj2yfNUnBz a lam:PropertyConfiguration ;
+    lam:path lamd:md_REPLACEMENT ;
+    sh:name "Optional lamd:md_REPLACEMENT " .
+
+lamd:res_Huim32RaHmYMzGLZwq4r7i a lam:PropertyConfiguration ;
+    lam:path lamd:md_ADDITION ;
+    sh:name "Optional lamd:md_ADDITION " .
+
+lamd:res_J4XBzXsinEAfy4KE82Z2Rt a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_DC" .
+
+lamd:res_J6wAb7dSQG27P6VEaxDQnL a lam:PropertyConfiguration ;
+    lam:path lamd:md_EV ;
+    skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or withdrawn or replaced
+*Date of adoption of legal act - 1 day""" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_EV" .
+
+lamd:res_J79K6DaVDamPBZVAJXB4wK a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_J7ThofDTupVrCZHhSwrNF5 a lam:PropertyConfiguration ;
+    lam:path lamd:md_TT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_TT" .
+
+lamd:res_JB6yLmJXj39VdRKSHDwDiN a lam:PropertyConfiguration ;
+    lam:path lamd:md_ADOPTION ;
+    sh:name "Optional lamd:md_ADOPTION " .
+
+lamd:res_JFP6yb8Kp3dAU8W9QbTUNP a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_E_C_OJC" ;
+    sh:value celexd:c_E_C_OJC .
+
+lamd:res_JG4P3LSpksvnjLmAg4qaMx a lam:PropertyConfiguration ;
+    lam:path lamd:md_REP ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:name "Optional unique lamd:md_REP" .
+
+lamd:res_JGXQeJ8Q2XGGiBBFPCoGg3 a lam:PropertyConfiguration ;
+    lam:path lamd:md_CC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CC" .
+
+lamd:res_JGZjiQjFkw6vorsSiZhf5k a lam:PropertyConfiguration ;
+    lam:path lamd:md_REP ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_REP" .
+
+lamd:res_JNsbUxikV8BUQexVFo62w7 a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:ANNOUNC" ;
+    sh:value resource-type:ANNOUNC .
+
+lamd:res_JQAN7fxLeMGbM5tRR9dZSL a lam:PropertyConfiguration ;
+    lam:path lamd:md_COMPLETION ;
+    sh:name "Optional lamd:md_COMPLETION " .
+
+lamd:res_JZgfdtpq6AMKVXySyp6Xjg a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_Jk7VDgF7H64KoDZHgjbah2 a lam:PropertyConfiguration ;
+    lam:path lamd:md_INCORPORATION ;
+    sh:name "Optional lamd:md_INCORPORATION " .
+
+lamd:res_Jo56P6XGHPVPvhaJYxBwp5 a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_JuhkiUdYTR2p4YZKJzPCwE a lam:PropertyConfiguration ;
+    lam:path lamd:md_RI ;
+    sh:name "Optional lamd:md_RI " .
+
+lamd:res_K8qM7bM8yAwJKXNA34ctHC a lam:PropertyConfiguration ;
+    lam:path lamd:md_IC ;
+    sh:name "Optional lamd:md_IC " .
+
+lamd:res_KDjurwXEBpTPknoSLMHg3i a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_KEU9KPGHBcXVUeWi6jNNyM a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_TOD ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_ANN_TOD to fd_335:PE" ;
+    sh:value fd_335:PE .
+
+lamd:res_KVpXehpWrZ7sdNFM7RHjMB a lam:PropertyConfiguration ;
+    lam:path lamd:md_IC ;
+    sh:name "Optional lamd:md_IC " .
+
+lamd:res_Kduo8m72EYg4vrXx3BtZ8b a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_Kh88W5KUyzkcBPW4meq76t a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_KqxfGd8NJTDtYSCuhcV3Hn a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:PROP_DIR" ;
+    sh:value resource-type:PROP_DIR .
+
+lamd:res_KrHgeNmkHDDLuZNDKJLsbN a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    skos:editorialNote " and Service/DG responsible" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:COM" ;
+    sh:value corporate-body:COM .
+
+lamd:res_KsD9R9nWrpssjHygDNoSHU a lam:PropertyConfiguration ;
+    lam:path lamd:md_TT ;
+    skos:editorialNote " TFEU" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_TT" .
+
+lamd:res_KuYMEwz3xrwnkJxxMX4beD a lam:PropertyConfiguration ;
+    lam:path lamd:md_SUSPEND ;
+    sh:name "Optional lamd:md_SUSPEND " .
+
+lamd:res_Kud8FuLhUrVrXMXhHE5ma8 a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_L6euAWPYgV8XdoN6QATP3a a lam:PropertyConfiguration ;
+    lam:path lamd:md_INFLUENCE ;
+    sh:name "Optional lamd:md_INFLUENCE " .
+
+lamd:res_LDxKzXHZmaq4qxbar84i5K a lam:PropertyConfiguration ;
+    lam:path lamd:md_PROC ;
+    skos:editorialNote " link to interninstitutional procedure" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_PROC" .
+
+lamd:res_LLTd2zaKH3GobV7q8bG3vF a lam:PropertyConfiguration ;
+    lam:path lamd:md_RI ;
+    sh:name "Optional lamd:md_RI " .
+
+lamd:res_LRrwpFbfzGPmYHBmURNEfa a lam:PropertyConfiguration ;
+    lam:path lamd:md_AMENDMENT ;
+    sh:name "Optional lamd:md_AMENDMENT " .
+
+lamd:res_LVy8Yc4JSet5zxdxjoL7h5 a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_5_XC_OJC" ;
+    sh:value celexd:c_5_XC_OJC .
+
+lamd:res_LWVPx2oPuE4s8AjbtmU4oq a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_Lecy6rpjEuY6kAy9VQ3SVN a lam:PropertyConfiguration ;
+    lam:path lamd:md_CM ;
+    sh:name "Optional lamd:md_CM " .
+
+lamd:res_LqaTL8uC3XzApEL4wNbDn3 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    skos:editorialNote " Place of signature" ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_LtiCT2jBZQnTH2Cx74ayLU a lam:PropertyConfiguration ;
+    lam:path lamd:md_DF ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_DF" .
+
+lamd:res_M8kFLAgZ7osjDHxkAC6X8N a lam:PropertyConfiguration ;
+    lam:path lamd:md_RS ;
+    sh:name "Optional lamd:md_RS " .
+
+lamd:res_M9jXNrwGVe833JnY9UBBrR a lam:PropertyConfiguration ;
+    lam:path lamd:md_AMENDMENT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_AMENDMENT" .
+
+lamd:res_MG9knJU9MoNKVjFJGBGXaQ a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_MPLbJmQ7qWtK42z254kZAr a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_MS9SoUq8U3AQFuNxZUuXNe a lam:PropertyConfiguration ;
+    lam:path lamd:md_LB ;
+    skos:editorialNote " usually 21994A0103(01) - A61; E1994A1231(01) - A24" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_LB" .
+
+lamd:res_MSWUdh6rDymzxQvDaAWukN a lam:PropertyConfiguration ;
+    lam:path lamd:md_INCORPORATION ;
+    sh:name "Optional lamd:md_INCORPORATION " .
+
+lamd:res_MbaB9xa7TZGdzTAsxFtM7P a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_E_C_OJC" ;
+    sh:value celexd:c_E_C_OJC .
+
+lamd:res_MddYbeZZWbJrw79rdG9nWt a lam:PropertyConfiguration ;
+    lam:path lamd:md_RI ;
+    sh:name "Optional lamd:md_RI " .
+
+lamd:res_Mnz7uUVGa6A62jS3j4VezM a lam:PropertyConfiguration ;
+    lam:path lamd:md_REFER_PAR ;
+    sh:name "Optional lamd:md_REFER_PAR " .
+
+lamd:res_Mvj7PeV96Fm7NUuwuQ4jUg a lam:PropertyConfiguration ;
+    lam:path lamd:md_ADDITION ;
+    sh:name "Optional lamd:md_ADDITION " .
+
+lamd:res_MwafcmKduBxdXGYixnUHYu a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_DC" .
+
+lamd:res_N2M7kjoWg7rwgF5QgNokdA a lam:PropertyConfiguration ;
+    lam:path lamd:md_TT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_TT" .
+
+lamd:res_NHNrWcB5bUH6tBspUY9god a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_NKyvAyKqLdifYLGfVBAaMZ a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_NL2DMcg2HEcGssJbU4MkTX a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:COM" ;
+    sh:value corporate-body:COM .
+
+lamd:res_NZpBct9KczCndKeEjcSqLk a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    skos:editorialNote " and country" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:EURUN" ;
+    sh:value corporate-body:EURUN .
+
+lamd:res_NcsA4MvxYRPjSKJtikDzP9 a lam:PropertyConfiguration ;
+    lam:path lamd:md_LB ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_LB" .
+
+lamd:res_NiTqLZRjaT8hWFTAmZcuHn a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_Nn2j2NnVLDEnxQGoBxBPei a lam:PropertyConfiguration ;
+    lam:path lamd:md_LB ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_LB" .
+
+lamd:res_Nn4FCGLTwECC3a3RdKcPoj a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:COMMUNIC_DRAFT" ;
+    sh:value resource-type:COMMUNIC_DRAFT .
+
+lamd:res_Ntxvmg3hhg39D4Zei9DzhE a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DC to eurovoc:2809" ;
+    sh:value eurovoc:2809 .
+
+lamd:res_NxmNEzvpjgqMSUQFyjweQZ a lam:PropertyConfiguration ;
+    lam:path lamd:md_ADDITION ;
+    sh:name "Optional lamd:md_ADDITION " .
+
+lamd:res_NymWUSGYchJThBSruVyjGV a lam:PropertyConfiguration ;
+    lam:path lamd:md_PROC ;
+    skos:editorialNote " link to internal procedure" ;
+    sh:name "Optional lamd:md_PROC " .
+
+lamd:res_P57sv6k85sncrViqoacBrj a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_E_C_OJC" ;
+    sh:value celexd:c_E_C_OJC .
+
+lamd:res_P8J7ZRGCmMtZH5YtaVcNxg a lam:PropertyConfiguration ;
+    lam:path lamd:md_TT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_TT" .
+
+lamd:res_PJFnYPg9JmoPKLJsZSTT82 a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_5_PC_EUR" ;
+    sh:value celexd:c_5_PC_EUR .
+
+lamd:res_PPA94JzuDYid42DdJJfYs5 a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_DC" .
+
+lamd:res_PQ7HajpwMtRYbdc23CRfDV a lam:PropertyConfiguration ;
+    lam:path lamd:md_CORRIGENDUM ;
+    sh:name "Optional lamd:md_CORRIGENDUM " .
+
+lamd:res_PTpUdVvmLZFRtrUwUaPVoD a lam:PropertyConfiguration ;
+    lam:path lamd:md_PROC ;
+    skos:editorialNote " link to internal procedure" ;
+    sh:name "Optional lamd:md_PROC " .
+
+lamd:res_PUiN9CksHb6S4fsetdih7r a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    skos:editorialNote " and Service/DG responsible" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:COM" ;
+    sh:value corporate-body:COM .
+
+lamd:res_PWm9CUuduGZ3n37Qc6z3wS a lam:PropertyConfiguration ;
+    lam:path lamd:md_CC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CC" .
+
+lamd:res_Pd7WLNEbRtYWy6KR9hXyei a lam:PropertyConfiguration ;
+    lam:path lamd:md_LB ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_LB" .
+
+lamd:res_PqBtpqbZPBXm2wbJw5qXg6 a lam:PropertyConfiguration ;
+    lam:path lamd:md_ADOPTION ;
+    sh:name "Optional lamd:md_ADOPTION " .
+
+lamd:res_PqnHTGpXKXwVjDGaRPo6cH a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_QH4532fce7tQXb2Cky4Ztg a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_QMkYAAzq9BKqzoLDM7nHcD a lam:PropertyConfiguration ;
+    lam:path lamd:md_RS ;
+    sh:name "Optional lamd:md_RS " .
+
+lamd:res_QdCGD3LPhqXn6GL43r9tFM a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_6_CA" ;
+    sh:value celexd:c_6_CA .
+
+lamd:res_QjgEWGXmXuDZ5KMUcvksdV a lam:PropertyConfiguration ;
+    lam:path lamd:md_CC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CC to ns2:0860",
+        "Constraint on lamd:md_CC to ns2:11401010" ;
+    sh:value ns2:0860,
+        ns2:11401010 .
+
+lamd:res_QzkxsCF8poVYmGfpJ7qHkJ a lam:PropertyConfiguration ;
+    lam:path lamd:md_LB ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_LB" .
+
+lamd:res_REuXFPcBqzvyxtXmVsGHML a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_RHMRStyUKZutczc5T4HMKJ a lam:PropertyConfiguration ;
+    lam:path lamd:md_REPLACEMENT ;
+    sh:name "Optional lamd:md_REPLACEMENT " .
+
+lamd:res_RXXko5jpP7uPMCCuk8BLsi a lam:PropertyConfiguration ;
+    lam:path lamd:md_CT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CT" .
+
+lamd:res_RYg9fzXqgZjWVt3Huw2xp2 a lam:PropertyConfiguration ;
+    lam:path lamd:md_TT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_TT" .
+
+lamd:res_RcGYbJE4UsE8L74AdmrAfQ a lam:PropertyConfiguration ;
+    lam:path lamd:md_TT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_TT" .
+
+lamd:res_RseQ7J7gh9AUkejuGf2g8u a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:legislation_secondary" ;
+    sh:value cdm:legislation_secondary .
+
+lamd:res_RtRoEbKJdzLdYJt949aGM4 a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_S4zKNQQ4sZBiPqfaUmryLq a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_S6XTb6tpQGUwUBT7DWMAbo a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_ANN_COD to fd_365:DATPUB" ;
+    sh:value fd_365:DATPUB .
+
+lamd:res_SEeVFyXsYBN7RyRBSYCech a lam:PropertyConfiguration ;
+    lam:path lamd:md_EV ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_EV" .
+
+lamd:res_SG8J2ADNWeCvNXMTDp6uhy a lam:PropertyConfiguration ;
+    lam:path lamd:md_OBSOLETE ;
+    sh:name "Optional lamd:md_OBSOLETE " .
+
+lamd:res_SbTRji8hMzNmyPimgDmjqV a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:DIR_DRAFT" ;
+    sh:value resource-type:DIR_DRAFT .
+
+lamd:res_SjfBPJQRSxKLjcstNdzNGW a lam:PropertyConfiguration ;
+    lam:path lamd:md_CC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CC to ns2:0120" ;
+    sh:value ns2:0120 .
+
+lamd:res_SsZb7svdfHgYFDhX6njtrL a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_Ssr5YqFXi8HqZZ2WUKPWWs a lam:PropertyConfiguration ;
+    lam:path lamd:md_COMMUNIC_REQ ;
+    skos:editorialNote " link to judgment 6*CJ" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_COMMUNIC_REQ" .
+
+lamd:res_T3dQnbHZKXwGfHbazsUvvw a lam:PropertyConfiguration ;
+    lam:path lamd:md_REPLACEMENT ;
+    sh:name "Optional lamd:md_REPLACEMENT " .
+
+lamd:res_T63CrB2kKZnXJhWnyezR5T a lam:PropertyConfiguration ;
+    lam:path lamd:md_CC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CC" .
+
+lamd:res_T7JNFW2woje6oMgKvN3GKe a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_TE7H9TsxroadyemyGHDJpD a lam:PropertyConfiguration ;
+    lam:path lamd:md_COMMUNIC_REQ ;
+    skos:editorialNote " link to order 6*CO" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_COMMUNIC_REQ" .
+
+lamd:res_TK9hLCzkLKSifLhZgfphvc a lam:PropertyConfiguration ;
+    lam:path lamd:md_VALIDITY_EXT ;
+    sh:name "Optional lamd:md_VALIDITY_EXT " .
+
+lamd:res_TPnrv7MbAauLYBYN6TEfHv a lam:PropertyConfiguration ;
+    lam:path lamd:md_LB ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_LB" .
+
+lamd:res_TUeRcrhaSe5eQfkRoYHDE7 a lam:PropertyConfiguration ;
+    lam:path lamd:md_DP ;
+    sh:name "Optional lamd:md_DP " .
+
+lamd:res_TVqBRpctqJgwc7LJQqeFfM a lam:PropertyConfiguration ;
+    lam:path lamd:md_IC ;
+    sh:name "Optional lamd:md_IC " .
+
+lamd:res_TWqDanxhuHq96pUwAeaTQN a lam:PropertyConfiguration ;
+    lam:path lamd:md_RS ;
+    sh:name "Optional lamd:md_RS " .
+
+lamd:res_TZzDxJhUpDSstuU58Zyd4u a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_DC" .
+
+lamd:res_Tb9y3TfYBnYap2x573Jxf9 a lam:PropertyConfiguration ;
+    lam:path lamd:md_ADDITION ;
+    sh:name "Optional lamd:md_ADDITION " .
+
+lamd:res_Tc9RbMuezAerePUDrJ8twK a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_TvmHu22XqYCgRiiWNzHghU a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_Tz4mUhrHncWFVBfexXDDaz a lam:PropertyConfiguration ;
+    lam:path lamd:md_EV ;
+    skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or withdrawn or replaced
+*Date of adoption of legal act - 1 day""" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_EV" .
+
+lamd:res_U22DqZ73BrdGUgrtcYBtVD a lam:PropertyConfiguration ;
+    lam:path lamd:md_REPEAL ;
+    sh:name "Optional lamd:md_REPEAL " .
+
+lamd:res_U5ehVDs7DAjGXTuekYdktn a lam:PropertyConfiguration ;
+    lam:path lamd:md_COMPLETION ;
+    sh:name "Optional lamd:md_COMPLETION " .
+
+lamd:res_U6RazytbH5LsQP2yEYrf6X a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_U7StmEtEyaAGnYzPtJPP7A a lam:PropertyConfiguration ;
+    lam:path lamd:md_RI ;
+    sh:name "Optional lamd:md_RI " .
+
+lamd:res_U8Rj4EUC5sNgohiVbch89p a lam:PropertyConfiguration ;
+    lam:path lamd:md_CT ;
+    skos:editorialNote " Quantitative restrictions and measures of equivalent effect; Quantitative restrictions;" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CT to ns1:AELE" ;
+    sh:value ns1:AELE .
+
+lamd:res_UER4BniMx5nQptcZMbxusG a lam:PropertyConfiguration ;
+    lam:path lamd:md_DP ;
+    sh:name "Optional lamd:md_DP " .
+
+lamd:res_UN2kVDfMsgM4AAxLvzVyMY a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_UaaZ7j7De8HtzXnYLvYzT5 a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_Uc7s9Uy8LeyUbgUZFpuxsG a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:resource_legal" ;
+    sh:value cdm:resource_legal .
+
+lamd:res_Uu6oXpxT6JAPN59eoYquy3 a lam:PropertyConfiguration ;
+    lam:path lamd:md_MI ;
+    sh:name "Optional lamd:md_MI " .
+
+lamd:res_V3U3BorQGfqU48wKqAnpBB a lam:PropertyConfiguration ;
+    lam:path lamd:md_AMENDMENT_PRO ;
+    skos:editorialNote " Link to acts to be amended" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_AMENDMENT_PRO" .
+
+lamd:res_V5Jy6LQ7QMuZ4MeGZ9Q3Ct a lam:PropertyConfiguration ;
+    lam:path lamd:md_PROC ;
+    skos:editorialNote " link to internal procedure" ;
+    sh:name "Optional lamd:md_PROC " .
+
+lamd:res_VBfn8kN4KfBa46rgsM9Vte a lam:PropertyConfiguration ;
+    lam:path lamd:md_MI ;
+    sh:name "Optional lamd:md_MI " .
+
+lamd:res_VBsTFL5n3VjfHXnHSA4NYV a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:act_preparatory" ;
+    sh:value cdm:act_preparatory .
+
+lamd:res_VLNGESXkaoqisTxAtuk86W a lam:PropertyConfiguration ;
+    lam:path lamd:md_SG ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_SG" .
+
+lamd:res_VVcZZoSgmkqCd7zHGE2uut a lam:PropertyConfiguration ;
+    lam:path lamd:md_RS ;
+    sh:name "Optional lamd:md_RS " .
+
+lamd:res_VcBrnS9LZ6uAd7gQqy2dVd a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_VcP27McKQG9Ktde6FZvDkR a lam:PropertyConfiguration ;
+    lam:path lamd:md_RS ;
+    sh:name "Optional lamd:md_RS " .
+
+lamd:res_VeZNAe6DffZKfrq9npgjXy a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    skos:editorialNote " and Service/DG responsible" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:COM" ;
+    sh:value corporate-body:COM .
+
+lamd:res_VkB34PEbqBDHVGKhfupyFS a lam:PropertyConfiguration ;
+    lam:path lamd:md_CM ;
+    sh:name "Optional lamd:md_CM " .
+
+lamd:res_WC5LXANcoi5F6q4RPnWWpi a lam:PropertyConfiguration ;
+    lam:path lamd:md_CORRIGENDUM ;
+    sh:name "Optional lamd:md_CORRIGENDUM " .
+
+lamd:res_WCZDgrBRodafgYmYHQPgHy a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    skos:editorialNote " (2):  + link to adopted act or notice on withdrawal or replacement or amended proposal" ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_WDMmL6zrxHWZ8iVZTcP2PN a lam:PropertyConfiguration ;
+    lam:path lamd:md_VV ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_VV" .
+
+lamd:res_WS95WTV98W29hCQwncogLG a lam:PropertyConfiguration ;
+    lam:path lamd:md_CT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CT" .
+
+lamd:res_WUPZxZojJfKFTArqoKDieG a lam:PropertyConfiguration ;
+    lam:path lamd:md_CC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CC to ns2:0860",
+        "Constraint on lamd:md_CC to ns2:11401010" ;
+    sh:value ns2:0860,
+        ns2:11401010 .
+
+lamd:res_WVDSoUi2AesC59rJJg56TG a lam:PropertyConfiguration ;
+    lam:path lamd:md_RI ;
+    sh:name "Optional lamd:md_RI " .
+
+lamd:res_WY8mvz9mT7L94vkaWNAZWi a lam:PropertyConfiguration ;
+    lam:path lamd:md_CC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CC" .
+
+lamd:res_WrTvXSsqq9Nw38VgcAhq7B a lam:PropertyConfiguration ;
+    lam:path lamd:md_CM ;
+    sh:name "Optional lamd:md_CM " .
+
+lamd:res_WrktL3Y89fiyTnd3FNcb23 a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_5_PC_EUR" ;
+    sh:value celexd:c_5_PC_EUR .
+
+lamd:res_WsPgnoQELfVqRyipxtjy4N a lam:PropertyConfiguration ;
+    lam:path lamd:md_INFLUENCE ;
+    sh:name "Optional lamd:md_INFLUENCE " .
+
+lamd:res_WtZGzWrK8eStEMapdEZiqw a lam:PropertyConfiguration ;
+    lam:path lamd:md_VV ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_VV" .
+
+lamd:res_X338Z2znmaAuNF3Pume9ar a lam:PropertyConfiguration ;
+    lam:path lamd:md_CM ;
+    sh:name "Optional lamd:md_CM " .
+
+lamd:res_X3SuMuPZRXZ7AwW2xJX4HV a lam:PropertyConfiguration ;
+    lam:path lamd:md_CT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CT to ns1:DGEN" ;
+    sh:value ns1:DGEN .
+
+lamd:res_X6HvF3Gj8w3kZEBR6isafH a lam:PropertyConfiguration ;
+    lam:path lamd:md_PR ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_PR" .
+
+lamd:res_XJ2jo3hTRup82sNRoRTXEL a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_DC" .
+
+lamd:res_XKVYzJPmUM7rMJav2RYgkE a lam:PropertyConfiguration ;
+    lam:path lamd:md_EV ;
+    skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or when the proposal is replaced or withdrawn
+*Date of adoption of legal act - 1 day""" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_EV" .
+
+lamd:res_XRrUTBPEKwQWRazTuC56Dn a lam:PropertyConfiguration ;
+    lam:path lamd:md_AS ;
+    sh:name "Optional lamd:md_AS " .
+
+lamd:res_XUZjWiKiHeNjoN5YSeD8vh a lam:PropertyConfiguration ;
+    lam:path lamd:md_CT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CT" .
+
+lamd:res_XbeFioqZxRuM4CYRdsN4cz a lam:PropertyConfiguration ;
+    lam:path lamd:md_LB ;
+    skos:editorialNote " As mentioned in the title:" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_LB to 12016E108 - P2",
+        "Mandatory lamd:md_LB" ;
+    sh:value "12016E108 - P2" .
+
+lamd:res_XqoGBLoiAseiFJhYv94stb a lam:PropertyConfiguration ;
+    lam:path lamd:md_ADDITION ;
+    sh:name "Optional lamd:md_ADDITION " .
+
+lamd:res_Y3wkVoMoZt8fDSTjXQAvt7 a lam:PropertyConfiguration ;
+    lam:path lamd:md_PR ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_PR" .
+
+lamd:res_Y5L5iy3LW2Q7d7vQRREwBv a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_YEkbvTiJS4ydjKgFnujVFM a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_YNnu56MVTUDtsPkVYENeXt a lam:PropertyConfiguration ;
+    lam:path lamd:md_CM ;
+    sh:name "Optional lamd:md_CM " .
+
+lamd:res_YPNPGiYooaTLYCTxapDH7i a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_YRmVNZRNzxTBS7rGurNXFt a lam:PropertyConfiguration ;
+    lam:path lamd:md_EV ;
+    skos:editorialNote """ (1) virtual date 31/12/9999 to be changed to (2) a real date* when final act is adopted or when the proposal is replaced or withdrawn
+*Date of adoption of legal act - 1 day""" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_EV" .
+
+lamd:res_YWxbobJzLyQnt68jdZxeWD a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_YYeJNHqcq729LHDJbYFEEi a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:resource_legal" ;
+    sh:value cdm:resource_legal .
+
+lamd:res_YbaKHFTFnqM9CZnasQtTkQ a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    skos:editorialNote " indicate also: country or region; type of business; aid to undertakings" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DC to eurovoc:5541",
+        "Constraint on lamd:md_DC to eurovoc:889" ;
+    sh:value eurovoc:5541,
+        eurovoc:889 .
+
+lamd:res_YpAvwdDMdb9WT75vv6Tz2j a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_YpkA6ayNsSyXNUjiZMDLEy a lam:PropertyConfiguration ;
+    lam:path lamd:md_LB ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_LB" .
+
+lamd:res_YqqE9PQ2CJxWnXCEyaPq9N a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    skos:editorialNote " (2):  + link to adopted act or notice on withdrawal or replacement or amended proposal" ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_YwBCMoopZUT6fFmx79KeKr a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to corporate-body:ANNOUNC" ;
+    sh:value corporate-body:ANNOUNC .
+
+lamd:res_YwEJEKpfAf2MFsgZF9niT8 a lam:PropertyConfiguration ;
+    lam:path lamd:md_COMPLETION ;
+    sh:name "Optional lamd:md_COMPLETION " .
+
+lamd:res_YwFEEUaYaeJtg2T7FuhJ4H a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_ANN_COD to fd_365:DATPUB" ;
+    sh:value fd_365:DATPUB .
+
+lamd:res_Z3tiSSiHmUbGQKdDqZnhzc a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_ANN_COD to fd_365:DATPUB" ;
+    sh:value fd_365:DATPUB .
+
+lamd:res_Z7MJWWeWfpQPi4Ekx2zNN8 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_ANN_COD to fd_365:DATSIG" ;
+    sh:value fd_365:DATSIG .
+
+lamd:res_Z8pC4cBTYC8v8xNscxsCUr a lam:PropertyConfiguration ;
+    lam:path lamd:md_MI ;
+    sh:name "Optional lamd:md_MI " .
+
+lamd:res_ZCWco6s3n2sCWxi7rmjPNH a lam:PropertyConfiguration ;
+    lam:path lamd:md_CT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CT" .
+
+lamd:res_ZMpm9wzBmvDtHWZ8sxUuif a lam:PropertyConfiguration ;
+    lam:path lamd:md_REP ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_REP to REP" ;
+    sh:value "REP" .
+
+lamd:res_ZPZdYP7mo4U2dsNggM8k4x a lam:PropertyConfiguration ;
+    lam:path lamd:md_RI ;
+    sh:name "Optional lamd:md_RI " .
+
+lamd:res_ZUfjurWqwEGK2kxFcxAJw6 a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    skos:editorialNote " and Service/DG responsible" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:COM" ;
+    sh:value corporate-body:COM .
+
+lamd:res_ZXqFGfLKG3DnwzFH5NxK48 a lam:PropertyConfiguration ;
+    lam:path lamd:md_CT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CT to ns1:AELE",
+        "Constraint on lamd:md_CT to ns1:AIDE" ;
+    sh:value ns1:AELE,
+        ns1:AIDE .
+
+lamd:res_ZY7vPGyDRvv7mTx2fQrK8q a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:proposal_regulation_ec" ;
+    sh:value cdm:proposal_regulation_ec .
+
+lamd:res_Zby5Ec5NYNiNLurwAhjE8V a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_5_XC_OJC" ;
+    sh:value celexd:c_5_XC_OJC .
+
+lamd:res_ZcRmqyZCh3ZvH93xp9mrHF a lam:PropertyConfiguration ;
+    lam:path lamd:md_LB ;
+    skos:editorialNote " As mentioned in the title:" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_LB to E1994A1231(04) - PAIA01P2",
+        "Mandatory lamd:md_LB" ;
+    sh:value "E1994A1231(04) - PAIA01P2" .
+
+lamd:res_ZgkDVsWuPYfzW2nRkFywWr a lam:PropertyConfiguration ;
+    lam:path lamd:md_VALIDITY_EXT ;
+    sh:name "Optional lamd:md_VALIDITY_EXT " .
+
+lamd:res_ZgsJkYDdd6Xz4ECRjzQaZt a lam:PropertyConfiguration ;
+    lam:path lamd:md_TT ;
+    skos:editorialNote " EEA" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_TT" .
+
+lamd:res_ZgtZStWKc4FZVKKxLWJ8aZ a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    skos:editorialNote " and Service/DG responsible" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:COM" ;
+    sh:value corporate-body:COM .
+
+lamd:res_Zi8Put8hPb5kHyurf4CweA a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:act_preparatory" ;
+    sh:value cdm:act_preparatory .
+
+lamd:res_Zn93ra392G69Z6iZvd8Nmn a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_aBrFhvR6UCHDhtnFui2vQZ a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_DC" .
+
+lamd:res_aKHiMtwzZin4KhUrSgCqaL a lam:PropertyConfiguration ;
+    lam:path lamd:md_CM ;
+    sh:name "Optional lamd:md_CM " .
+
+lamd:res_aN2LfrV4DJDf2x2oPuWTs8 a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    skos:editorialNote " 21994A0103(01)" ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_aPxP2Uzj5chtoQp5N3zC98 a lam:PropertyConfiguration ;
+    lam:path lamd:md_CM ;
+    sh:name "Optional lamd:md_CM " .
+
+lamd:res_aWZrC94fUy7DFRzVPNLzws a lam:PropertyConfiguration ;
+    lam:path lamd:md_AS ;
+    sh:name "Optional lamd:md_AS " .
+
+lamd:res_aX34x7YxuuFgxXVh6HDLU6 a lam:PropertyConfiguration ;
+    lam:path lamd:md_DH ;
+    sh:name "Optional lamd:md_DH " .
+
+lamd:res_abFHxeMXS44gFU9LgeLHq3 a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_DC" .
+
+lamd:res_ae4kQ9bv7J4uL88kLujKpN a lam:PropertyConfiguration ;
+    lam:path lamd:md_REP ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:name "Optional unique lamd:md_REP" .
+
+lamd:res_aejyWTDvBVehCXsJZpcXau a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_aeqatFAfDSLgHKpqSTHwoa a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_ak27E9QFqW2jS9hJ32wagX a lam:PropertyConfiguration ;
+    lam:path lamd:md_REP ;
+    sh:name "Optional lamd:md_REP " .
+
+lamd:res_amG4VCGAc2VEfMc57HHVvc a lam:PropertyConfiguration ;
+    lam:path lamd:md_LB ;
+    skos:editorialNote " E1994A1231(05) - CH2A27P4" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_LB" .
+
+lamd:res_anKJRMukLcYJPHHRPPpkWi a lam:PropertyConfiguration ;
+    lam:path lamd:md_REPEAL ;
+    sh:name "Optional lamd:md_REPEAL " .
+
+lamd:res_b8JwCgYQaThkE7xW2ocvdv a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_bBiCNVbQadikkmhtJbTKqC a lam:PropertyConfiguration ;
+    lam:path lamd:md_LB ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_LB" .
+
+lamd:res_bU8LxWU2oyxDCzfpq7aVvc a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:COM" ;
+    sh:value corporate-body:COM .
+
+lamd:res_bcSWqGBgPMW39jNthsR95w a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_bd5iHRmW82QwUrCRBGGAGc a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_bjPX3kED9Spxe3NJsunkak a lam:PropertyConfiguration ;
+    lam:path lamd:md_AS ;
+    sh:name "Optional lamd:md_AS " .
+
+lamd:res_c263KYnce7J6bTYgjaTqBx a lam:PropertyConfiguration ;
+    lam:path lamd:md_CT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CT to ns1:EXT" ;
+    sh:value ns1:EXT .
+
+lamd:res_c6wd7UazRMvaWmDrqDwwgt a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:info_decision_cjeu" ;
+    sh:value cdm:info_decision_cjeu .
+
+lamd:res_c8ZDb3SvcJ9at3Kd3ehUqz a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_ANN_COD to fd_365:DATADOPT" ;
+    sh:value fd_365:DATADOPT .
+
+lamd:res_cB6YvgakNSr3sFi29wix5F a lam:PropertyConfiguration ;
+    lam:path lamd:md_AP ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_AP" .
+
+lamd:res_cLWHK48ZeiUAHAkDSNfr97 a lam:PropertyConfiguration ;
+    lam:path lamd:md_AMENDMENT_PRO ;
+    skos:editorialNote " Link to acts to be amended" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_AMENDMENT_PRO" .
+
+lamd:res_cNP9Wxx3VSmarPjd73Xw3A a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_5_XC_OJC" ;
+    sh:value celexd:c_5_XC_OJC .
+
+lamd:res_cSMdye8ZyV67v32desztFG a lam:PropertyConfiguration ;
+    lam:path lamd:md_AMENDMENT ;
+    sh:name "Optional lamd:md_AMENDMENT " .
+
+lamd:res_cVzhRQZ235rxTTkXonMHCq a lam:PropertyConfiguration ;
+    lam:path lamd:md_CC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CC to ns2:11401010" ;
+    sh:value ns2:11401010 .
+
+lamd:res_cYD8hMsbnbRniX9AKbddek a lam:PropertyConfiguration ;
+    lam:path lamd:md_CORRIGENDUM ;
+    sh:name "Optional lamd:md_CORRIGENDUM " .
+
+lamd:res_cwwFZAveeLkh89ugUDa3fc a lam:PropertyConfiguration ;
+    lam:path lamd:md_REP ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:name "Optional unique lamd:md_REP" .
+
+lamd:res_cxBfsprtTDYkFs23CTaEmb a lam:PropertyConfiguration ;
+    lam:path lamd:md_RS ;
+    sh:name "Optional lamd:md_RS " .
+
+lamd:res_cxwTxJqvbnUMEh4v8w4v63 a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_cz54CqmhVoKMzFrGkbXVZZ a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_dBR73pBzj9xyLTW5H6w8n2 a lam:PropertyConfiguration ;
+    lam:path lamd:md_REPLACEMENT ;
+    sh:name "Optional lamd:md_REPLACEMENT " .
+
+lamd:res_dCo6P6TjcWUzFaqE32WACd a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_dHNyobcJEKo8GE6rqNvfy9 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    skos:editorialNote " (2):  + link to adopted act or notice on withdrawal or replacement or amended proposal" ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_dTRoGxWiYLEMQBxYauxGXC a lam:PropertyConfiguration ;
+    lam:path lamd:md_IC ;
+    sh:name "Optional lamd:md_IC " .
+
+lamd:res_dUeSKZuKegYhaakexhWFMb a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:EFTA_SUC" ;
+    sh:value corporate-body:EFTA_SUC .
+
+lamd:res_dUnzQ4Bm6NLREAStFPrBjs a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_ANN_COD to fd_365:DATPUB" ;
+    sh:value fd_365:DATPUB .
+
+lamd:res_dUrkEhc5kvLngfEvPADCKC a lam:PropertyConfiguration ;
+    lam:path lamd:md_RI ;
+    sh:name "Optional lamd:md_RI " .
+
+lamd:res_dZ9zS9V8ZShD6oLppd5u26 a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:EFTA_SUC" ;
+    sh:value corporate-body:EFTA_SUC .
+
+lamd:res_dgnuC64KWePnxbA9ij6v99 a lam:PropertyConfiguration ;
+    lam:path lamd:md_OBSOLETE ;
+    sh:name "Optional lamd:md_OBSOLETE " .
+
+lamd:res_dje9mgTZjQmGepyArENAef a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_doUbGKWjCLUMMNsVTK5DoZ a lam:PropertyConfiguration ;
+    lam:path lamd:md_IF ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_IF" .
+
+lamd:res_dr4Tr3RHdY6EX5woz8Nzpj a lam:PropertyConfiguration ;
+    lam:path lamd:md_CC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CC to ns2:0860",
+        "Constraint on lamd:md_CC to ns2:11401010" ;
+    sh:value ns2:0860,
+        ns2:11401010 .
+
+lamd:res_dwHQ2vyNKBCzhhK9WLaAAb a lam:PropertyConfiguration ;
+    lam:path lamd:md_AMENDMENT_PRO ;
+    sh:name "Optional lamd:md_AMENDMENT_PRO " .
+
+lamd:res_eFc9WnKFaUPxjTyyVwTxPz a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:act_preparatory" ;
+    sh:value cdm:act_preparatory .
+
+lamd:res_eNrZ68VprFVRzuQ2btM8PW a lam:PropertyConfiguration ;
+    lam:path lamd:md_RS ;
+    sh:name "Optional lamd:md_RS " .
+
+lamd:res_eUzh4ntGrnWzPZsRB2rbuT a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:EFTA_SUC" ;
+    sh:value corporate-body:EFTA_SUC .
+
+lamd:res_eYH7w8pdGwzJCAFwLzasij a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    skos:editorialNote " indicate also: country or region; type of business; aid to undertakings" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DC to eurovoc:5541",
+        "Constraint on lamd:md_DC to eurovoc:889" ;
+    sh:value eurovoc:5541,
+        eurovoc:889 .
+
+lamd:res_epijnttmH2Acphix5ALQT9 a lam:PropertyConfiguration ;
+    lam:path lamd:md_RS ;
+    sh:name "Optional lamd:md_RS " .
+
+lamd:res_esaPop6uLjMhUfrxsVjrjj a lam:PropertyConfiguration ;
+    lam:path lamd:md_CM ;
+    sh:name "Optional lamd:md_CM " .
+
+lamd:res_evRYexDY49hvrrMfFjawBo a lam:PropertyConfiguration ;
+    lam:path lamd:md_CT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CT to ns1:AELE",
+        "Constraint on lamd:md_CT to ns1:AIDE" ;
+    sh:value ns1:AELE,
+        ns1:AIDE .
+
+lamd:res_ewM8m6WX42ZnE4cRuh4ywL a lam:PropertyConfiguration ;
+    lam:path lamd:md_AS ;
+    sh:name "Optional lamd:md_AS " .
+
+lamd:res_exMzmegPAYKkDjoQTTJrqj a lam:PropertyConfiguration ;
+    lam:path lamd:md_MI ;
+    sh:name "Optional lamd:md_MI " .
+
+lamd:res_f76v7BuRkXvQeTGQsyNkpc a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_E_C_OJL" ;
+    sh:value celexd:c_E_C_OJL .
+
+lamd:res_f9WfFVeEMEVhYZ3FcXnBKt a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_fGMXJ7HPJK4i73RVXpke2P a lam:PropertyConfiguration ;
+    lam:path lamd:md_RI ;
+    sh:name "Optional lamd:md_RI " .
+
+lamd:res_fHw9ZBmxiBdrS3cj34VUzo a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    skos:editorialNote " (2):  + link to adopted act or notice on withdrawal or replacement or amended proposal" ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_fKeFgSKKryD9yfVABFbxrR a lam:PropertyConfiguration ;
+    lam:path lamd:md_RELATION ;
+    sh:name "Optional lamd:md_RELATION " .
+
+lamd:res_fMumXhP6wtxGdPBFcWJAu4 a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_fQgCdjhQzERox8mCs2i8D5 a lam:PropertyConfiguration ;
+    lam:path lamd:md_REP ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_REP" .
+
+lamd:res_fUc5gKQvrRi4zyx7d6nFE7 a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_E_C_OJC" ;
+    sh:value celexd:c_E_C_OJC .
+
+lamd:res_fV4j337YLSKQsKhGnu3CTj a lam:PropertyConfiguration ;
+    lam:path lamd:md_LB ;
+    skos:editorialNote " As mentioned in the title:" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_LB to 21994A0103(01) - A61P1",
+        "Mandatory lamd:md_LB" ;
+    sh:value "21994A0103(01) - A61P1" .
+
+lamd:res_fWHV42AKVTcbTfbi3ovQST a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_fiGuAU52c77K6m8rcXbvpF a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_5_PC_EUR" ;
+    sh:value celexd:c_5_PC_EUR .
+
+lamd:res_fmqNttKD7fEMqWsqfjxwAF a lam:PropertyConfiguration ;
+    lam:path lamd:md_DP ;
+    sh:name "Optional lamd:md_DP " .
+
+lamd:res_frFydopY6vDHbpBtpEnsKi a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_DC" .
+
+lamd:res_fyK4ozgoH74ycnstRBQaFE a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:INFO_JUDICIAL" ;
+    sh:value resource-type:INFO_JUDICIAL .
+
+lamd:res_g8DAfMXhkeUthD6y2herqC a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    skos:editorialNote " (2):  + link to adopted act or notice on withdrawal or replacement or amended proposal" ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_g9e8rWjDPDSR59HXEE4Bb8 a lam:PropertyConfiguration ;
+    lam:path lamd:md_PROC ;
+    skos:editorialNote " link to interninstitutional procedure" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_PROC" .
+
+lamd:res_gDDowBirDp2qabBgUYc7ns a lam:PropertyConfiguration ;
+    lam:path lamd:md_CC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CC to ns2:0860",
+        "Constraint on lamd:md_CC to ns2:11401010" ;
+    sh:value ns2:0860,
+        ns2:11401010 .
+
+lamd:res_gUBcegWzEdbmtHTXbomn4q a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_gdGwra8F8XC8eYjc7mqbKH a lam:PropertyConfiguration ;
+    lam:path lamd:md_REP ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_REP to LIE" ;
+    sh:value "LIE" .
+
+lamd:res_gqfWxsf9V6ziT4bEgRW9uf a lam:PropertyConfiguration ;
+    lam:path lamd:md_RI ;
+    sh:name "Optional lamd:md_RI " .
+
+lamd:res_grZXHA4zKjBFQtfvjbThuT a lam:PropertyConfiguration ;
+    lam:path lamd:md_NA ;
+    sh:name "Optional lamd:md_NA " .
+
+lamd:res_gymTTNyYicYEnHRjNumQRF a lam:PropertyConfiguration ;
+    lam:path lamd:md_APPLICABILITY_EXT ;
+    sh:name "Optional lamd:md_APPLICABILITY_EXT " .
+
+lamd:res_h2PWaBP9uasrp6io4Qb7xg a lam:PropertyConfiguration ;
+    lam:path lamd:md_CC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CC" .
+
+lamd:res_h3VkcaVvTMec6HLtXJghCo a lam:PropertyConfiguration ;
+    lam:path lamd:md_INCORPORATION ;
+    sh:name "Optional lamd:md_INCORPORATION " .
+
+lamd:res_h3msocErrf23z8oyPzRv9G a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:NOTICE" ;
+    sh:value resource-type:NOTICE .
+
+lamd:res_h7Y2j4QxWYYcboFr8654jv a lam:PropertyConfiguration ;
+    lam:path lamd:md_OBSOLETE ;
+    sh:name "Optional lamd:md_OBSOLETE " .
+
+lamd:res_hGLZG3LvFxnRDrBJ79cnQW a lam:PropertyConfiguration ;
+    lam:path lamd:md_INFLUENCE ;
+    sh:name "Optional lamd:md_INFLUENCE " .
+
+lamd:res_hMaJVHKZwq7PvRXFVz4kW2 a lam:PropertyConfiguration ;
+    lam:path lamd:md_AMENDMENT ;
+    sh:name "Optional lamd:md_AMENDMENT " .
+
+lamd:res_hRuYYAkVXQdY5EyxQYKGsr a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    skos:editorialNote " 21994A0103(01)" ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_hXVRKkZu6tTBXY8Q7zVG54 a lam:PropertyConfiguration ;
+    lam:path lamd:md_DH ;
+    sh:name "Optional lamd:md_DH " .
+
+lamd:res_hYfh2jJDyWbeTHQaWNMFC9 a lam:PropertyConfiguration ;
+    lam:path lamd:md_DN ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DN" .
+
+lamd:res_htfEBVcDnZiuJdce4TYvb5 a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:EFTA_SUC" ;
+    sh:value corporate-body:EFTA_SUC .
+
+lamd:res_hzd2m4qFbdMbqarRVPiaJr a lam:PropertyConfiguration ;
+    lam:path lamd:md_RI ;
+    sh:name "Optional lamd:md_RI " .
+
+lamd:res_i5ZoD8ZqZiXNApsdfVLPyf a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:proposal_directive_ec" ;
+    sh:value cdm:proposal_directive_ec .
+
+lamd:res_iBaShiuxDcJjAgzzoahv4Y a lam:PropertyConfiguration ;
+    lam:path lamd:md_LF ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_LF" .
+
+lamd:res_iCKhTyQprH8RFY7ye2UKXE a lam:PropertyConfiguration ;
+    lam:path lamd:md_IC ;
+    sh:name "Optional lamd:md_IC " .
+
+lamd:res_iCWKbuyNZjmbErYDaKLXEQ a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:DEC" ;
+    sh:value resource-type:DEC .
+
+lamd:res_iHcBGFTNeCJCLJTNLVMjmm a lam:PropertyConfiguration ;
+    lam:path lamd:md_DP ;
+    sh:name "Optional lamd:md_DP " .
+
+lamd:res_iLgb2RNL8orBhytUsE9z3x a lam:PropertyConfiguration ;
+    lam:path lamd:md_CT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CT to ns1:AELE",
+        "Constraint on lamd:md_CT to ns1:AIDE" ;
+    sh:value ns1:AELE,
+        ns1:AIDE .
+
+lamd:res_iUNd2D7medA6VqHjSL79dS a lam:PropertyConfiguration ;
+    lam:path lamd:md_LB ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_LB" .
+
+lamd:res_iX8hXRfSk7KdR98WuZtyQm a lam:PropertyConfiguration ;
+    lam:path lamd:md_CT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CT" .
+
+lamd:res_iYKxM5WPMpEwS9JbdK8Czh a lam:PropertyConfiguration ;
+    lam:path lamd:md_ADOPTION_PAR ;
+    sh:name "Optional lamd:md_ADOPTION_PAR " .
+
+lamd:res_iagcbpnkmekbgLh3mc5KDe a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_5_XC_OJC" ;
+    sh:value celexd:c_5_XC_OJC .
+
+lamd:res_ibSijKc3H3HKKDUjoDiQc9 a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    skos:editorialNote " (2):  + link to adopted act or notice on withdrawal or replacement" ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_iiMRSdHW2bw349YeqEewTR a lam:PropertyConfiguration ;
+    lam:path lamd:md_PROC ;
+    skos:editorialNote " link to interninstitutional procedure" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_PROC" .
+
+lamd:res_iofVkzrJsA24AMvBWLeAxY a lam:PropertyConfiguration ;
+    lam:path lamd:md_REP ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:name "Optional unique lamd:md_REP" .
+
+lamd:res_ixrocioF99VKiLyLYZWJ3r a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_5_PC_EUR" ;
+    sh:value celexd:c_5_PC_EUR .
+
+lamd:res_izTxC4KtPFsrPeUMzLy5gn a lam:PropertyConfiguration ;
+    lam:path lamd:md_ADOPTION ;
+    sh:name "Optional lamd:md_ADOPTION " .
+
+lamd:res_izfDjME4nnZLK4bAD4nqFc a lam:PropertyConfiguration ;
+    lam:path lamd:md_IC ;
+    sh:name "Optional lamd:md_IC " .
+
+lamd:res_j3zEbesnLDyM3ErTyxsN5r a lam:PropertyConfiguration ;
+    lam:path lamd:md_OBSOLETE ;
+    sh:name "Optional lamd:md_OBSOLETE " .
+
+lamd:res_jFBSmPBRyqsndC95wCFzvS a lam:PropertyConfiguration ;
+    lam:path lamd:md_ADDITION ;
+    sh:name "Optional lamd:md_ADDITION " .
+
+lamd:res_jG7qR6cERTPNk8x3tiN2XC a lam:PropertyConfiguration ;
+    lam:path lamd:md_SUSPEND_PAR ;
+    sh:name "Optional lamd:md_SUSPEND_PAR " .
+
+lamd:res_jGf6nL4ForzpMxd8NYkCWg a lam:PropertyConfiguration ;
+    lam:path lamd:md_AS ;
+    sh:name "Optional lamd:md_AS " .
+
+lamd:res_jNxrUkCFm9wTBMKHxsanrf a lam:PropertyConfiguration ;
+    lam:path lamd:md_DH ;
+    sh:name "Optional lamd:md_DH " .
+
+lamd:res_jQ2RKPgMaqZmrGQB4PSJHd a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_ANN_COD to fd_365:DATPUB" ;
+    sh:value fd_365:DATPUB .
+
+lamd:res_jQbNU4FsQfWV4Vw8omJXc2 a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:AMEND_PROP_REG" ;
+    sh:value resource-type:AMEND_PROP_REG .
+
+lamd:res_jVP6iKhPC5UZYDgWtLkgMN a lam:PropertyConfiguration ;
+    lam:path lamd:md_INFLUENCE ;
+    sh:name "Optional lamd:md_INFLUENCE " .
+
+lamd:res_jWygeDpp8xJFfbBECUUWeu a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_2_A_OJL" ;
+    sh:value celexd:c_2_A_OJL .
+
+lamd:res_jZ8MNKs6UXSSEbnno4AyD2 a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    skos:editorialNote "country; subject" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DC to eurovoc:1474" ;
+    sh:value eurovoc:1474 .
+
+lamd:res_jZmiwYpNDRDyhnm334iKJy a lam:PropertyConfiguration ;
+    lam:path lamd:md_LB ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_LB" .
+
+lamd:res_jaKDNAGAh8ef9r3WTQuB25 a lam:PropertyConfiguration ;
+    lam:path lamd:md_RI ;
+    sh:name "Optional lamd:md_RI " .
+
+lamd:res_jh2beNnkjSxyS7hmXnuh2J a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_DN_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DN_CLASS to celexd:c_5_PC_EUR" ;
+    sh:value celexd:c_5_PC_EUR .
+
+lamd:res_jnnHKtQjheqpaFn4acdSEh a lam:PropertyConfiguration ;
+    lam:path lamd:md_PROC ;
+    skos:editorialNote " link to internal procedure" ;
+    sh:name "Optional lamd:md_PROC " .
+
+lamd:res_jqdYtQCqJYQF2ejrrDdKNb a lam:PropertyConfiguration ;
+    lam:path lamd:md_REP ;
+    sh:name "Optional lamd:md_REP " .
+
+lamd:res_juXHtyDhwcoV8HMKYUvjnB a lam:PropertyConfiguration ;
+    lam:path lamd:md_CM ;
+    sh:name "Optional lamd:md_CM " .
+
+lamd:res_k3pq3L6PdxfRPgTgqz4dVi a lam:PropertyConfiguration ;
+    lam:path lamd:md_CT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CT" .
+
+lamd:res_k7x5ejYfas94wnTWqr6FzS a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_kLh87t3bjae7NbJPPETU2r a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:DECLAR_DRAFT" ;
+    sh:value resource-type:DECLAR_DRAFT .
+
+lamd:res_kWbHUjgjUmSNUViBL7LuQE a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_kZS6ZurCTwH6oLA4X3xMey a lam:PropertyConfiguration ;
+    lam:path lamd:md_MI ;
+    sh:name "Optional lamd:md_MI " .
+
+lamd:res_kqvk92XBBuRpqCS7srn8Zp a lam:PropertyConfiguration ;
+    lam:path lamd:md_AMENDMENT ;
+    sh:name "Optional lamd:md_AMENDMENT " .
+
+lamd:res_m25tpJmzWyr9P7Bf425PFe a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_m4ADLKaFjyNumNNKfd92GB a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:act_preparatory" ;
+    sh:value cdm:act_preparatory .
+
+lamd:res_mAAHsw8YHZFireaeduG4mU a lam:PropertyConfiguration ;
+    lam:path lamd:md_LB ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_LB" .
+
+lamd:res_mAWci9TT2tmHw3WdeQcQuP a lam:PropertyConfiguration ;
+    lam:path lamd:md_MI ;
+    sh:name "Optional lamd:md_MI " .
+
+lamd:res_mUENh23EFq99mpMfNK2kG4 a lam:PropertyConfiguration ;
+    lam:path lamd:md_REPLACEMENT ;
+    sh:name "Optional lamd:md_REPLACEMENT " .
+
+lamd:res_mWMuPAWzqEhdk3s46RD8cy a lam:PropertyConfiguration ;
+    lam:path lamd:md_LO ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_LO" .
+
+lamd:res_mZwST8xG3isdDtnzLKiKw2 a lam:PropertyConfiguration ;
+    lam:path lamd:md_ADDITION ;
+    sh:name "Optional lamd:md_ADDITION " .
+
+lamd:res_macyySHBzEyxiyKKXYFNJp a lam:PropertyConfiguration ;
+    lam:path lamd:md_AP ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_AP" .
+
+lamd:res_mciqBMGQaf6jmSMu3wn6Xp a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:AMEND_PROP_DIR" ;
+    sh:value resource-type:AMEND_PROP_DIR .
+
+lamd:res_mf89RgoBLX7QT9zeXd6mMd a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    skos:editorialNote " indicate also: country or region; type of business; aid to undertakings" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_DC to eurovoc:5541",
+        "Constraint on lamd:md_DC to eurovoc:889" ;
+    sh:value eurovoc:5541,
+        eurovoc:889 .
+
+lamd:res_mhxDxbHXu4aBdnwtcYXVqz a lam:PropertyConfiguration ;
+    lam:path lamd:md_CC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CC" .
+
+lamd:res_mjyqsD8EhEBj55yDPKNAYr a lam:PropertyConfiguration ;
+    lam:path lamd:md_AS ;
+    sh:name "Optional lamd:md_AS " .
+
+lamd:res_mteupLJSPXtWshfissXCwe a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    skos:editorialNote " (2):  + link to adopted act or notice on withdrawal or replacement" ;
+    sh:name "Optional lamd:md_ANN_COD " .
+
+lamd:res_myp6SB5qk4ova4wkj9S5dU a lam:PropertyConfiguration ;
+    lam:path lamd:md_AS ;
+    sh:name "Optional lamd:md_AS " .
+
+lamd:res_mzjioDnkmGJXaKDMtUuLmP a lam:PropertyConfiguration ;
+    lam:path lamd:md_TT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_TT" .
+
+lamd:res_n52MgWx3B3rXLZeEUoFxcw a lam:PropertyConfiguration ;
+    lam:path lamd:md_DD ;
+    sh:maxCount "1"^^xsd:int ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory unique lamd:md_DD" .
+
+lamd:res_nQhStu8sMpFE9Gsyjze4gV a lam:AnnotationConfiguration ;
+    lam:path lamd:md_ANN_COD ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_ANN_COD to fd_365:DATPUB" ;
+    sh:value fd_365:DATPUB .
+
+lamd:res_nVLy32p7fC3c7VnSjE3Hqg a lam:PropertyConfiguration ;
+    lam:path lamd:md_COMPLETION ;
+    sh:name "Optional lamd:md_COMPLETION " .
+
+lamd:res_nZgAdFHxybMS9fvyJx7JBw a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_nbApdBCVD9QfKiVCFQsmLS a lam:PropertyConfiguration ;
+    lam:path lamd:md_CM ;
+    sh:name "Optional lamd:md_CM " .
+
+lamd:res_ncQXKP5rfpWqCfxmmB4GGz a lam:PropertyConfiguration ;
+    lam:path lamd:md_CI ;
+    sh:name "Optional lamd:md_CI " .
+
+lamd:res_nd9oUQ6ujE35Z2mKMAwvJG a lam:PropertyConfiguration ;
+    lam:path lamd:md_DC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_DC" .
+
+lamd:res_nfBWsUuddpsdrzpWXNyiX7 a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_CDM_CLASS ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_CDM_CLASS to cdm:proposal_regulation_ec" ;
+    sh:value cdm:proposal_regulation_ec .
+
+lamd:res_nmhqSSqNevgXy96rKYoZpV a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_AU ;
+    skos:editorialNote " and Service/DG responsible" ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_AU to corporate-body:COM" ;
+    sh:value corporate-body:COM .
+
+lamd:res_ntKBU7ick7VtAc5emvLpLA a lam:PropertyConfiguration ;
+    lam:path lamd:md_IC ;
+    sh:name "Optional lamd:md_IC " .
+
+lamd:res_nv2VQDhioNQ9KkSSYRWCbE a lam:PropertyConfiguration ;
+    lam:path lamd:md_CC ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_CC" .
+
+lamd:res_oDTWoXtYHV62NHthXgWcu8 a lam:PropertyConfiguration ;
+    lam:path lamd:md_TT ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Mandatory lamd:md_TT" .
+
+lamd:res_oDbFA6zWcGxMp7tT9vRRF9 a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:REG_DRAFT" ;
+    sh:value resource-type:REG_DRAFT .
+
+lamd:res_oKjPaSU2u4CwKe9tSTccA3 a lam:MappingPropertyConfiguration ;
+    lam:path lamd:md_FM ;
+    sh:minCount "1"^^xsd:int ;
+    sh:name "Constraint on lamd:md_FM to resource-type:PROP_REG" ;
+    sh:value resource-type:PROP_REG .
+
+lamd:res_oM5NEQVy26wuajZjRgLeB2 a lam:PropertyConfiguration ;
+    lam:path lamd:md_IC ;
+    sh:name "Optional lamd:md_IC " .
+
+lamd:res_oT6boK7QbubjwG6Vfxdy8u a lam:PropertyConfiguration ;
+    lam:path lamd:md_IC ;
+    sh:name "Optional lamd:md_IC " .
+
+lamd:LAMLegalDocument a skos:ConceptScheme ;
+    skos:prefLabel "LAM classes" .
+

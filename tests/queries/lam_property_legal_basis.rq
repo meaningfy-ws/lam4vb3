@@ -1,0 +1,16 @@
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX lam: <http://publications.europa.eu/ontology/lam-skos-ap#>
+PREFIX lamd: <http://publications.europa.eu/resources/authority/lam/>
+PREFIX at: <http://publications.europa.eu/resource/authority/>
+
+# testing Legal basis LAM properties
+
+ASK
+WHERE {
+  VALUES ?subject {lamd:md_LB}
+  ?subject lam:hasAnnotationConfiguration  ?ac  .
+  ?ac sh:minCount "1"^^xsd:int .
+  ?ac lam:path ?path .
+  VALUES ?lam_path { lamd:md_ANN_CLB lamd:md_ANN_ART lamd:md_ANN_PAR lamd:md_ANN_SUB } .
+  ?ac sh:class at:fd_370 .
+}

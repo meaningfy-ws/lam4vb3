@@ -1,0 +1,16 @@
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX lam: <http://publications.europa.eu/ontology/lam-skos-ap#>
+PREFIX lamd: <http://publications.europa.eu/resources/authority/lam/>
+PREFIX at: <http://publications.europa.eu/resource/authority/>
+
+# testing Date of effect LAM properties
+
+ASK
+WHERE {
+  VALUES ?subject {lamd:md_IF}
+  VALUES ?path { lamd:md_ANN_TOD lamd:md_ANN_COD } .
+  ?subject lam:hasAnnotationConfiguration  ?ac  .
+  ?ac sh:minCount "1"^^xsd:int .
+  ?ac lam:path ?path .
+  ?ac sh:class at:fd_335 .
+}
