@@ -16,13 +16,15 @@ from lam4vb3.builder.simple_builders import ConceptTripleMaker, SimpleTripleMake
 
 LITERAL_CONCEPTS_COLUMNS = {
     'CODE': 'skos:notation',
-    'LABEL': 'skos:prefLabel@en'
+    'LABEL': 'skos:prefLabel@en',
+    'EXAMPLE_EN': 'skos:example@en',
+    'COMMENT': 'skos:editorialNote@en'
 }
 
 LITERAL_COLLECTIONS_COLUMNS = {
     'CODE': 'skos:notation',
     'LABEL': 'skos:prefLabel@en',
-    'DESCRIPTION': 'skos:description',
+    'DESCRIPTION': 'skos:definition',
     'COMMENT': 'skos:editorialNote@en',
     'ORDER': 'euvoc:order'
 }

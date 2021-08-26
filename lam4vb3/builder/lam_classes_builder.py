@@ -34,7 +34,7 @@ MAPPING_PROPERTY_CONFIGURATION_COLUMNS = {
 LITERAL_COLLECTIONS_COLUMNS = {
     'CODE': 'skos:notation',
     'LABEL': 'skos:prefLabel@en',
-    'DESCRIPTION': 'skos:description',
+    'DESCRIPTION': 'skos:definition',
     'COMMENT': 'skos:editorialNote@en',
     'ORDER': 'euvoc:order'
 }
