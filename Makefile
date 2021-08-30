@@ -12,8 +12,12 @@ install:
 	@ echo "$(BUILD_PRINT)Installing the requirements"
 	@ pip install --upgrade pip
 	@ pip install -r requirements.txt
-	@# pip install -r requirements-srv.txt
 	@ docker pull tinkerpop/gremlin-server
+
+install-dev: install
+	@ echo "$(BUILD_PRINT)Installing the requirements"
+	@ pip install --upgrade pip
+	@ pip install -r requirements-dev.txt
 
 lint:
 	@ echo "$(BUILD_PRINT)Linting the code"

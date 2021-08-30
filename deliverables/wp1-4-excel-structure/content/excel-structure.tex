@@ -1,54 +1,52 @@
-\section{Worksheet structure}
+\section{General considerations}
 
-The excel file contains five worksheets: two of them define classes, two
-of them define properties and one defines namespace prefix mappings. The
-worksheet is composed of rows and columns. The rows roughly correspond
-to descriptions of an identifiable entity/element, the columns
-correspond to predicates (properties) in such descriptions while the
-cell values to predicate objects. In every worksheet, the first row is
-the header row. Each header cell denotes how the values in the
-corresponding columns should be interpreted and processed (predicate
-specification). Some denotations, as we will see below,
-signify/represent (a) plain labels, (b) reference keys described in
-another worksheet, (c) or encodings of functional links between
-reference keys. The rest of the non empty rows represent distinct
-definitions comprising value statements in all or most of the columns.
+% TODO:
+% - general presentation of the excel structure
+% - row level conventions (URI mandatory, human friendly descriptions
+% - column level conventions ()
+% - cell level conventions
+%   * literal text
+%   * carnality specification (+ comment separated by pipe)
+%   * (multi-line) value (+ comment) specification (one or more URIs ... decide multiple value interpretation: AND or OR or XOR ...)
+%
 
-The columns that represent plain labels, provided lower case, serve a
-descriptive purpose and most of the time the transformation script uses
-them as such without much additional processing. Examples of such
-columns can be found in ``LAM metadata worksheet'' which contains headers
-such as ``Code''  ``controlled value property''  ``annotation1'' etc.
+The Excel file is composed of worksheets, which are tabular structures organised by \textit{rows} and \textit{columns}. This tabular organisation is mapped to a formal conceptual structure. This mapping enables automatic transformation by a transformation script into a formal model. This section describes in broad lines the conventions and correspondences of the tabular organisation to the conceptual organisation.
 
-The columns that signify reference keys, provided in upper case, are
-richer in meaning, which is provided in another worksheet. These sort of
-columns are used in class definitions only, where the keys in the column
-header function as references to property definitions. The
-transformation script takes into consideration the definition linked to
-the reference key and any additional relations and constraints when
-processing the column values. Examples of such columns can be found in
- ``Classes Complete'' worksheet which contains headers such as ``RJ\_NEW'', ``CC'',  ``IF'',  ``EV'' etc.
+\subsection{Triple expressions}
 
-The columns that encode functional links between reference keys (using
-function notation), provided in upper case and round brackets, signify a
-second order descriptions. They are used for encoding annotations of
-values provided in another columns. For example the pair of columns ``EV'' and ``ANN\_COD(EV)'' means that the column ``EV'' contributes to the
-description identified at the level of a row whereas the column
- ``ANN\_COD(EV)'' further extends the description provided by the column
- ``EV'' in the form of an annotation. The convention for such notations is
-\emph{"KEY1(KEY2)"}, where \emph{KEY1} acts as a functor applied to
-\emph{KEY2}; we read it ``KEY1 of KEY2'' or ``annotation of KEY2 with
-KEY1''  The transformation script processes such column pairs in a
-special manner tracking two levels of description identification, at the
-level of the row and at the level of column value, taking into
-consideration the definition linked to the reference keys, the link
-between the reference keys and the implied constraints and
-relationships.
+To aid the explanations we introduce the concept of a semantic triple and then show how it maps to the tabular structure. As its name indicates, a triple is a set of three elements (slots) that codifies a statement about semantic data in the form of \textit{subject–predicate–object} expressions. For example the natural language expressions ``Bob knows Frank'' or ``John likes Mary'' conform to the triple structure. The components of a triple consist of a \textit{subject} ("Bob" and "John"), a \textit{predicate}  ("know" and "like"), and an \textit{object} ("Frank" and "Mary").
 
-The worksheet cells, which are slots formed at the intersection of a row
-and a column provide, the values filling those slots. We distinguish few
-kinds of cell values that are each controlled by a set of conventions. The value
-types are as follows:
+\subsection{Worksheet structure}
+
+The Excel file contains eight worksheets: one of them define \textit{properties}, two of them define \textit{classes}, other three provide \textit{helper classifications} and the last one contains \textit{namespace prefix mappings}.
+
+The \textit{rows} generally correspond to descriptions of an identifiable element. In this case this is a LAM class or a LAM property. The \textit{row identity} serves as \textit{subject} in a triple statement. We assign an URI such as lamd:md\_AU, lamd:c\_31. The \textit{columns} correspond to predicates (i.e. properties) in such statements. The \textit{predicate} reference is indicated by the column name in the worksheet header. For example the column "DESCRIPTION" is mapped to the property skos:definition. The \textit{cell value}, at the intersection of a row and a column, corresponds to the statement \textit{object}.
+
+In every worksheet, the first row is the header row which provides column names (titles). Each column name is used for deciding how all the values in that column should be interpreted and processed. In addition it is possible to relate a column to another one used for describing annotations (explained below).
+
+\subsection{Column conventions}
+
+The columns may be named according to one of the three conventions: (a) lower case plain text literal, (b) upper case reference keys defined in another worksheet, or (c) encoding of functional links between reference keys.
+
+The columns headed by plain text labels, provided in lower case, usually serve a descriptive purpose and most of the time the transformation script uses them as such without additional processing. These columns are mostly found in the worksheet ``LAM properties'', for example ``code'',  ``controlled value property'',  ``annotation1'' etc.
+
+The column names provided in upper case signify reference keys. They shall be interpreted by finding the row with the same code available in the ``LAM properties'' worksheet. These sort of columns are used in class definitions only, where the keys in the column header function as references to property definitions. Hence following the mapping to a triple statement described above. Examples of such columns can be found in  ``LAM classes'' worksheet which contains headers such as ``RJ\_NEW'', ``CC'',  ``IF'',  ``EV'' etc. All these values are reference codes to records in ``LAM properties'' worksheet.
+
+The transformation script takes into consideration the property definition linked by the reference key and possibly additional relations or constraints when processing the column values.
+
+In addition there are columns with headers that encode functional links between reference keys.  The convention for such notations is \textit{"KEY1(KEY2)"}, where \textit{KEY1} acts as a \textit{functor} applied to \textit{KEY2}; we read it ``KEY1 of KEY2'' or, in the context of LAM model, ``annotation of KEY2 with KEY1''.
+
+These notations are used for encoding annotations of values provided in another columns. For example the pair of columns ``EV'' and ``ANN\_COD(EV)'' means that the column ``EV'' contributes to the description identified at the level of a row whereas the column  ``ANN\_COD(EV)'' further extends the description provided by the column ``EV'' in the form of an annotation.
+
+The transformation script processes functionally related column pairs in a special manner tracking two levels of description identification, at the level of the row and at the level of column value, taking into consideration the definition linked to the reference keys, the link between the reference keys and the implied constraints and relationships.
+
+\subsection{Cell conventions}
+
+% TODO:
+% What follows below is the description of cell types,
+% what was provided above is only short reference with examples
+% the two texts shall be merged into a coherent section
+The worksheet cells, which are slots formed at the intersection of a row and a column, provide the values filling those slots. We distinguish few kinds of cell values that are each controlled by a set of conventions. The value types are as follows:
 
 \begin{itemize}
 
@@ -60,28 +58,28 @@ types are as follows:
   Controlled value
 \end{itemize}
 
-The free text literals are
+The \textit{free text literals} are
 Unicode\footnote{The Unicode Standard,
 	Version 3, The Unicode Consortium, Addison-Wesley, 2000.
 	\mbox{\url{http://www.unicode.org/unicode/standard/versions/}} } strings which
 should be in Normal Form\footnote{Unicode Normalization
 	Forms, Unicode Standard Annex \#15, Mark Davis, Martin Dürst.
-	\href{http://www.unicode.org/unicode/reports/tr15/\%20}{http://www.unicode.org/unicode/reports/tr15/}}. The intended meaning
-of short URI notation is specified by RFC 3986 on Uniform Resource
+	\href{http://www.unicode.org/unicode/reports/tr15/\%20}{http://www.unicode.org/unicode/reports/tr15/}}.
+	The intended meaning of \textit{short URI notation} is specified by RFC 3986 on Uniform Resource
 Identifiers\footnote{Berners-Lee, Fielding
 	and Masinter (2005), RFC 3986 - Uniform Resource Identifier (URI):
 	Generic Syntax. \url{https://tools.ietf.org/html/rfc3986}}. The
 expected form is short reference URI \emph{"prefix:ID'' } where the
 prefix (base URI) is formally defined in the document. The short URI
 form is preferred to absolute (resolved) form URI, the latter being
-discouraged form usage, nonetheless the transformation script is able to
+discouraged from usage, nonetheless the transformation script is able to
 identify and process them as accordingly. Both, the free text literals
 and the short URI notations can be used as either (a) values of
 properties (denoted by the column header) or (b) as property constraint
 definitions. The interpretation depends of the column function described
 below.
 
-The last type of values, the controlled values, refer to are a
+The last type of values, the \textit{controlled values}, refer to a
 convention of specifying cardinality constraints in the class
 definitions. This means that the cells with controlled values can not be
 interpreted as property values but serve only as property constraints.
@@ -101,9 +99,9 @@ values\tabularnewline
 \endhead
 mandatory & Y & 1..* & yes, y, according to text\tabularnewline
 mandatory unique & YU & 1..1 &\tabularnewline
-optional & O & 0..* &\tabularnewline
+optional & \textless{}empty cell\textgreater{} & 0..* &\tabularnewline
 optional unique & OU & 0..1 &\tabularnewline
-forbidden & N & 0..0 & no,
+forbidden & N & 0..* & no,
 n\tabularnewline
 irrelevant & \textless{}empty cell\textgreater{} & 0..0 & ignore\tabularnewline
 \bottomrule
@@ -113,10 +111,10 @@ irrelevant & \textless{}empty cell\textgreater{} & 0..0 & ignore\tabularnewline
 \end{longtable}
 
 The worksheet cells can contain commented values. It means that a cell
-can contain a value (literal, URi or controlled) and in addition a
+can contain a value (literal, URI or controlled) and in addition a
 comment on that value. The value is separated from the comment by the
 pipe (\textbar{}) character like this: ``\emph{value \textbar{}
-comment}''  The transformation script uses the pipe character for
+comment}''.  The transformation script uses the pipe character for
 detecting commented values, and so this character should not be used for
 any other purpose.
 
@@ -125,75 +123,97 @@ is the new line character (CR/LF). This means that every new line of the
 cell will be interpreted as a new value for the property indicated by
 the column header.
 
-\subsection{LAM class definition}
-\label{sec:lam-class-definition}
+The basic structure of a worksheet cell has the following requirements/conventions:
+
+    \paragraph*{Literal values -}
+     free text, without any markers present: (|)
+    \\
+
+    \begin{tabular}{|p{0.475\linewidth}|p{0.475\linewidth}|}
+        \hline
+        \multicolumn{1}{|c|}{\textbf{Example}} & \multicolumn{1}{c|}{\textbf{Counter-example}} \\ \hline
+        Council Common Position (CFSP number)  & text with | pipe | separator inside           \\ \hline
+    \end{tabular}
+
+    \paragraph*{Cardinality values with comments -}
+    cell starts with the value found in the cardinality constraint convention controlled list (see Table \ref{tab:cardinality}), optionally followed by the pipe (|) marker and free text comment
+    \\
+
+    \begin{tabular}{|p{0.475\linewidth}|p{0.475\linewidth}|}
+        \hline
+        \multicolumn{1}{|c|}{\textbf{Example}}                                                                       & \multicolumn{1}{c|}{\textbf{Counter-example}}                                 \\ \hline
+        Y                                                                                                            & XYZ | cardinality specifications that are not in the foreseen controlled list \\ \hline
+        O|Under Internal reference the reference to the procedure is doubled (as it is specifically under procedure) & YU | comment | with pipe (|) separators | inside |                            \\ \hline
+        N |                                                                                                          & | no empty cardinality spec with a dangling comment                           \\ \hline
+    \end{tabular}
+
+    \paragraph*{Multi line reference values with comments -} cell contains one or more lines with one short URI values per line. The URIs generally refer to a specific concept in a controlled list. The last line can be followed by a pipe (|) marker and free text comment. The implicit cardinality interpretation if that the value is mandatory, which is equivalent to cardinality specification "Y" (1..*). Note that there is tolerance for extra spaces or blank lines, which are simply discarded by the parser.
+    \\
+
+    \begin{tabular}{|p{0.475\linewidth}|p{0.475\linewidth}|}
+        \hline
+        \multicolumn{1}{|c|}{\textbf{Example}}                                                                                                                   & \multicolumn{1}{c|}{\textbf{Counter-example}}                                                                       \\ \hline
+        \begin{tabular}[c]{@{}p{0.95\linewidth}@{}}eurovoc:1452\\ eurovoc:4347 | this is an optional comment\end{tabular}                                                             & \begin{tabular}[c]{@{}p{0.95\linewidth}@{}}eurovoc:1452,\\ eurovoc:4347, | no comments | with | extra pipes|\end{tabular}           \\ \hline
+        \begin{tabular}[c]{@{}p{0.95\linewidth}@{}}eurovoc:1452\\ \\ eurovoc:4347 \\ \\ \\           | this is an optional comment tolerating empty new lines and spaces\end{tabular} & \begin{tabular}[c]{@{}p{0.95\linewidth}@{}}eurovoc:1452 | bad intermediary comment\\ eurovoc:4347 | good final comment\end{tabular} \\ \hline
+    \end{tabular}
+
+    \paragraph*{Multi line reference to authority tables with comments -} formally indistinguishable from the case above. Semantically, the  difference is that the cell contains references to URIs of classes or controlled lists rather than an individual concepts. In LAM data, this is the case only in the `controlled values' column from LAM properties worksheet.
+    \\
+
+    \begin{tabular}{|p{0.47\linewidth}|p{0.47\linewidth}|}
+        \hline
+        \multicolumn{1}{|c|}{\textbf{Example}}                                 & \multicolumn{1}{c|}{\textbf{Counter-example}}                                                                              \\ \hline
+        \begin{tabular}[c]{@{}p{0.95\linewidth}@{}}at:country\\ at:corporate-body\end{tabular} & \begin{tabular}[c]{@{}p{0.95\linewidth}@{}}at:country\\ country:FRA | no mixing of authority table and reference concept URIs\end{tabular} \\ \hline
+    \end{tabular}
+
+
+\section{Worksheet conventions}
+
+\subsection{LAM classes worksheet}
+\label{sec:lam-class-worksheet}
 
 The worksheet defining LAM classes plays central role in the LAM project
 as it defines the document classes used in the legal analysis
-methodology. It comprises of almost a hundred columns, which can be
-grouped according to meaning and function they play in class
+methodology. It comprises of more than a hundred columns, which can be
+grouped according to the function they play in class
 definitions. We distinguish the following functions:
 \emph{identification}, \emph{description}, \emph{mappings} to other
 classifications and \emph{property constraints}. All the columns are
-headed with reference keys defined in the worksheet ``LAM metadata'' described below.
+headed with reference keys defined in the worksheet ``LAM properties'' described below.
 
-The URI column provides a universal identifier (as the title suggests)
-for the row with values of the form \emph{"prefix:ID"}. The prefix is
-defined in the prefix worksheet, described in Section \ref{sec:prefix-section}, and the ID part is automatically generated.
+The ``UR'' column provides a universal identifier (as the title suggests) for the row with values of the form \emph{``prefix:ID''}. The prefix is defined in the prefix worksheet, described in Section \ref{sec:prefix-section}, and the ID part is automatically generated.
 
-The \emph{description} columns, containing examples, keywords, comments
-etc., represent human readable class descriptions. Their values
-essentially are simple text literals. The \emph{mapping} columns provide
-correspondences between LAM classes and other classifications, in this
-case the CDM ontology, the Resource Type authority table, and CELEX
-classification. These mappings to other classifications are intended for
-manually or eventually automatically determining and/or validating the LAM
-class to which a legal document belongs.
+The \emph{description} columns, containing examples, keywords, comments etc., represent human readable class descriptions. Their values essentially are simple text literals. The \emph{mapping} columns provide correspondences between LAM classes and other classifications, in this case the CDM ontology, the Resource Type authority table, and CELEX classification. These mappings to other classifications are intended for manually or eventually automatically determining and/or validating the LAM class to which a legal document belongs.
 
 The rest of the columns represent \emph{property constraints}. In the
 context of class definition, property constraints mean that instances of
 the defined class must respect the specified constraint. The constraints
-are provided either as a literal value, URI or cardinality specification
-(see Table \ref{tab:cardinality}). In case of literal or URI values, the constraints mean that the
-instances of the class being defined must provide property statements
-with exactly same values. If there are multiple values, then the default
-interpretation is that of alternative values either of which should be
-found among those provided in the instance data. In case of cardinality
-specifications, the interpretation is on the number of times a property
-is employed for a given instance. For example, mandatory properties must
-be employed once or multiple times, having the minimum cardinality set
-to one, while optional unique properties may be employed at most once
-with minimum cardinality set to zero and maximum to one. The cardinality
-constraints do not provide any indications about the range of values
-used of a given property.
+are provided either as a literal value, one or more URI values with an optional comment or cardinality specification (see Table \ref{tab:cardinality}). In case of URI values, the constraints mean that the instances of the described LAM class must provide property statements with any of the provided values and not others. If there are multiple values, then the default interpretation is that of alternative values either of which should be found among those provided in the instance data.
+
+In case of cardinality specifications, the interpretation is on the number of times a property is employed for a given instance. For example, mandatory properties must be employed once or multiple times, having the minimum cardinality set to one, while optional unique properties may be employed at most once with minimum cardinality set to zero and maximum to one. The cardinality constraints do not provide any indications about the range of values used of a given property.
 
 Some constraints headed by a function notation represent annotation
 constraints on a property. For example the column ``EV'' (date of end of
 validity) is annotated with ``ANN\_COD'' (annotation: comment on date)
-column written as ``ANN\_COD(EV)''  The values in this column represent
+column written as ``ANN\_COD(EV)''.  The values in this column represent
 cardinality constraints on the comment on date property. For example if
 there is a ``O'' value provided in ``ANN\_COD(EV)'' column then, whenever
 there is an end of date property employed on an instance then, that
 value, may optionally be annotated with a comment on date.
 
-The last three columns ``Classification level 1'' to ``Classification level
-3'' provide a classification structure for the defined documents as
-originally specified in the LAM documentation.
+The last column ``CLASSIFICATION'' provides an external super-class for the defined LAM class as originally specified in the LAM documentation. It is not yet formally decided the exact relation between the LAM class and the classification class, therefore, in the LAM-SKOS-AP model this relation is modelled through collection-item relation.
 
-\subsection{LAM property definition}
+\subsection{LAM property worksheet}
 
-The LAM property definition worksheet defines the meaning to the columns
+The LAM property worksheet defines the meaning of the columns
 used in the class definition worksheet(s). As mentioned in the
 introduction above, the columns roughly correspond to
-predicates/properties in the LAM model and are locally identified by a
-unique ``Code'' (usually in capital letters). The same codes are used as a
-reference values in the column headers of the class definition worksheet
-indicating which property shall be used from the model for each column.
-The ``Code'' is used to generate the LAM property URI used in the formal
-statements.
+predicates/properties in the LAM model (LAM-SKOS-AP) and are locally identified by a unique ``Code'' (usually in capital letters). The same codes are used as reference values in the column headers of the class definition worksheet indicating which property shall be used from the model for each column. The ``Code'' is used to generate the LAM property URI used in the formal statements.
 
-The property definition worksheet is structured as follows. The ``Label'' column provides a human friendly property title; the ``Definition'' provides a human readable property meaning. ``Analytical methodology'' is
-a description of how the property contributes to the LAM practice.
+The property definition worksheet is structured as follows.
+The ``Label'' column provides a human friendly property title;
+the ``Definition'' provides a human readable property meaning.
+``Analytical methodology'' is a description of how the property contributes to the LAM practice.
  ``Specific cases'' and ``Comments'' provide examples, exceptions and
 additional comments related to property usage. Example values for these
 columns are provided in Table \ref{tab:ex1}.
@@ -218,7 +238,7 @@ columns are provided in Table \ref{tab:ex1}.
 	Type of act is usually mentioned in the title.
 	\\\addlinespace
 	\bottomrule
-	\addlinespace	
+	\addlinespace
 	\caption{Example of human readable fields in LAM property definition}
 	\label{tab:ex1}
 	\vspace{-10pt}
@@ -245,25 +265,30 @@ defined in CDM ontology (other namespaces are also accepted). If there
 is a range constraint to, for example, a controlled vocabulary then it
 is indicated in the ``controlled value property''.
 
-The ``property type'' column indicate a formal constraint on how the property can be instantiated. Two options are available: ``object property'', which means that the range is always an URI and ``data property'', which means that the range is always a literal. This specifications corresponds to OWL2 semantics of owl:ObjectProperty and owl:DataProperty. If left unspecified, the fallback is the rdf:Property semantics, but this option is strongly discouraged. 
+The ``property type'' column indicate a formal constraint on how the property
+can be instantiated. Two options are available: ``object property'', which means
+that the range is always an URI and ``data property'', which means that the range
+is always a literal. This specifications corresponds to OWL2 semantics of owl:ObjectProperty
+and owl:DataProperty. If left unspecified, the fallback is the rdf:Property semantics,
+but this option is strongly discouraged.
 
-As mentioned, in Section \ref{sec:lam-class-definition}, some CDM properties are annotated to provide
-extra information. The columns ``annotation\_1'' to ``annotation\_7'' specify which CDM annotation properties may be used for the defined
-property. Columns ``controlled value\_annotation\_1'' to ``controlled
-value\_annotation\_7'' provide range constraints on the corresponding
-property. The values in columns ``annotation\_11'' to ``annotation\_71'' are
-automatically generated and do not provide any additional information,
-but play a technical role for the transformation script, providing a
-mapping between the URI of the CDM property and the URI of the LAM
-property. The translation pairs are provided in an auxiliary ``mappings'' worksheet.
-
-The last two columns ``Classification level 1'' and ``Classification level
-2'' provide a classification structure for the defined properties as
-originally specified in the LAM documentation.
+As mentioned in Section \ref{sec:lam-class-worksheet}, some CDM properties are annotated to provide
+extra information. There are more than 15 columns, each one representing a CDM annotation property that may be used for the defined property. The values in the columns provide the range constraints on the corresponding CDM property. These columns have the same pattern: ``ANN\_{property\_abbreviation}``. The translation pairs of mappings between the URI of the CDM property and the URI of the LAM property are provided in an auxiliary ``mappings'' worksheet. This worksheet plays a technical role for the transformation script.
 
 
+% The columns ``annotation\_1'' to ``annotation\_7'' specify
+% which CDM annotation properties may be used for the defined
+% property. Columns ``controlled value\_annotation\_1'' to ``controlled
+% value\_annotation\_7'' provide range constraints on the corresponding
+% property. The values in columns ``annotation\_11'' to ``annotation\_71'' are
+% automatically generated and do not provide any additional information,
+% but play a technical role for the transformation script, providing a
+% mapping between the URI of the CDM property and the URI of the LAM
+% property. The translation pairs are provided in an auxiliary ``mappings'' worksheet.
 
-\subsection{CELEX class and property definition}
+The last column ``CLASSIFICATION'' provide a classification structure for the defined properties as originally specified in the LAM documentation.
+
+\subsection{CELEX classes worksheet}
 
 This worksheet aims at capturing the description of CELEX classes
 following the logic that has been used to allocate CELEX numbers since
@@ -282,6 +307,9 @@ columns (described below) and are structured on three levels:
   cells in the sector tables describing DTTs for each of the three
   OJ\_IDs of the sector.
 \end{enumerate}
+
+This combination of DTS, DTT, DTA and OJ\_ID columns that define CELEX
+classes is hard coded by the author.
 
 \begin{longtable}[!ht]{@{}p{3.2cm}p{2cm}p{2cm}p{2cm}p{2cm}@{}}
 	\toprule
@@ -328,65 +356,198 @@ column name acronyms mean the following:
 \end{itemize}
 
 
+\subsection{Classification worksheets}
 
-Properties describing class at each level are as follows.
-
-\textbf{Level I classes:}
-
-\begin{itemize}
-
-\item
-  label
-\item
-  code (=DTS)
-\item
-  DTS
-\item
-  definition
-\item
-  scope note (optional)
-\item
-  comments (optional)
-\end{itemize}
-
-\textbf{Level II classes} (same as above plus additionally):
+There are currently 3 classification worksheets: LAM property classification, LAM class classification and CELEX classes classification. These classifications are modelled in LAM-SKOS-AP as ``skos:Collections''. It is done so to postpone the decision on what role each of these classifications plays in the overall taxonomy. The structure of classification/collection worksheets is the following:
 
 \begin{itemize}
-
-\item
-  *code (=DTS*DTT)
-\item
-  DTT
-\item
-  author
+    \item URI - uniform resource identifier obtained by concatenating a prefix (worksheet specific) with the CODE column
+    \item CODE - a mnemonic reference
+    \item PARENT\_COLLECTION - URI of the parent class/collection
+    \item ORDER - a linear sorting of classes used, for example, when a human readable HTML/PDF document is generated.
+    \item LABEL - a human readable label for the specific URI
+    \item DESCRIPTION - a human readable description of the specific URI
+    \item COMMENT - a comment for the specific URI
 \end{itemize}
 
-\textbf{Level III classes} (same as above plus additionally):
+\section{Common issues}
+\label{sec:issues}
+% TODO: bring in the points from Google Worksheets and elaborate on the findings
 
 \begin{itemize}
+    \item
+    Distinguish between reference to a specific value and the entire controlled vocabulary (RDF realisation is not the same)
 
-\item
-  *code (=DTS*DTT*OJ\_ID)
-\item
-  OJ\_ID (either \emph{"OJC"}, \emph{"OJL"} or \emph{"EuroLex}")
-\item
-  DTA source of .. (as indicated in CELEXspecification documentation
-  section 1 on general rules)
-\item
-  DTN source of .. (as indicated in CELEXspecification documentation
-  section 1 on general rules)
+    \begin{tabular}{|p{0.3\linewidth}|}
+        \hline
+        \textbf{Examples} \\ \hline
+        at:fd\_340      \\ \hline
+        at:fd\_335      \\ \hline
+        at:corporate-body       \\ \hline
+        at:subdivision      \\ \hline
+    \end{tabular}
+    \\
+    \item
+    Cardinality specification combined with value specification. Should be either one or the other as the second one is treated by the parser as a plain literal value.
+
+    \begin{tabular}{|p{0.65\linewidth}|}
+        \hline
+        \textbf{Examples} \\ \hline
+        Y |eurovoc:4370 eurovoc:5455      \\ \hline
+        Y | subject-matter:BCE subject-matter:INST      \\ \hline
+        Y | 12016EN01       \\ \hline
+    \end{tabular}
+    \\
+    \item
+    Non-URI code references that are meant as URIs. The editors shall also pay attention when resolving the references as the current codes do not correspond to those in controlled lists. For example, in the treaties table, the TFEU concept does not exist. Instead, the editor shall refer to at\_treaties:TFEU\_2016. The same holds for TEU, which should likely be at\_treaty:TEU\_2016
+
+    \begin{tabular}{|p{0.4\linewidth}|}
+        \hline
+        \textbf{Examples} \\ \hline
+        Y | TFEU, TEU      \\ \hline
+        Y | 12012M011      \\ \hline
+        21994A0103(01)       \\ \hline
+        agent,\\
+        at:fd\_50       \\ \hline
+        Y|DG06      \\ \hline
+        REP      \\ \hline
+        LIE     \\ \hline
+    \end{tabular}
+    \\
+    \item
+    Non-standard multiple value specifications. The value separation shall be done at new line and no other separator such as comma (,) semi-colon (;), slash (/) and others.
+
+    \begin{tabular}{|p{0.4\linewidth}|}
+        \hline
+        \textbf{Examples} \\ \hline
+        at:fd\_400:FIN/EXERC/BUDG |      \\ \hline
+        fd\_340:TRANS/PARL\\
+        fd\_340:TRANS/CONS      \\ \hline
+        at:fd\_365,\\
+        at:fd\_335,\\
+        at:fd\_330,\\
+        at:fd\_361,\\
+        at:fd\_340,\\
+        at:fd\_335,\\
+        at:fd\_350,\\
+        at:place,\\
+        at:country       \\ \hline
+        at:corporate-body,\\
+        at:fd\_50       \\ \hline
+    \end{tabular}
+    \\
+    \item
+    Some values are provided as long URIs. They shall be switched to the short/compressed form to normalise.
+
+    \begin{tabular}{|p{0.7\linewidth}|}
+        \hline
+        \textbf{Examples} \\ \hline
+        http://publications.europa.eu/resource/authority/country     \\ \hline
+    \end{tabular}
+    \\
+    \item
+    Correct the references; point to the controlled list instead of the dataset
+
+    \begin{tabular}{|p{0.7\linewidth}|}
+        \hline
+        \textbf{Examples} \\ \hline
+        http://publications.europa.eu/resource/dataset/eurovoc      \\ \hline
+    \end{tabular}
+    \\
+    \item
+    Re-asses the usage of [O]ptional and <blank> cells. We recommend that the optional property constraints shall be left as blank cells as they are ignored by the transformation script for brevity and reduce redundancy.
+
+    \begin{tabular}{|p{0.4\linewidth}|}
+        \hline
+        \textbf{Examples} \\ \hline
+        O | fd\_400:P/EEE     \\ \hline
+        O      \\ \hline
+    \end{tabular}
+    \\
+    \item
+    Some URIs are not valid. And in the cases specified below, it is not possible to provide valid values because not all of the ATTO tables comply with the EU-SKOS-AP standard. In such cases, the invalid URIs shall either be provided as comments, or replaced by the  corresponding value in an authority list.
+
+    \begin{tabular}{|p{0.4\linewidth}|}
+        \hline
+        \textbf{Examples} \\ \hline
+        fd\_330/EXERCICE      \\ \hline
+        at:fd\_400:FIN/EXERC/BUDG |      \\ \hline
+    \end{tabular}
+    \\
+    \item
+    Some literal values and comments contain non-standard characters.
+    It is advisable to curate the text for non UTF-8 characters. Then preferably reduce to ASCII encoding if possible.
+
+    \begin{tabular}{|p{0.4\linewidth}|}
+        \hline
+        \textbf{Examples} \\ \hline
+        <non-visible-char>      \\ \hline
+        …      \\ \hline
+        «       \\ \hline
+        °       \\ \hline
+        —       \\ \hline
+        ©       \\ \hline
+  %      ☎       \\ \hline
+    \end{tabular}
+    \\
+    \item
+    Double line breaks in literal values. For consistent an uniform formatting, especially in the generated HTML/PDF it is recommended to keep singe line breaks.
+
+    \begin{tabular}{|p{0.9\linewidth}|}
+        \hline
+        \textbf{Examples} \\ \hline
+        Amendment (MM)
+        \\ \\
+        This link contains the CELEX number of earlier acts modified by the given act. It is a link from:
+        \\ \\
+        amending act to the amended act (displayed under Amendment to - MS)
+        \\ \\
+        amending proposal to amended proposal (displayed under Earlier related instruments - EA)
+        \\ \\
+        This is rather more general relation. It should be used only if there is not any other more specific relation available.     \\ \hline
+        Documents in EUR-Lex fall into one of 12 sectors.
+        \\ \\
+        1 Treaties
+        \\ \\
+        2 International agreements
+        \\ \\
+        3 Legal acts
+        \\ \\
+        4 Complementary legislation
+        \\ \\
+        5 Preparatory documents
+        \\ \\
+        6 EU case law
+        \\ \\
+        7 National transposition
+        \\ \\
+        8 References to national case-law concerning EU law
+        \\ \\
+        9 Parliamentary questions
+        \\ \\
+        0 Consolidated texts
+            \\ \\
+        C Other documents published in the Official Journal C series
+            \\ \\
+        E EFTA documents      \\ \hline
+    \end{tabular}
+
+    % Examples:\\
+    % \\
+
+    % \\
+
+
+    % \\
+    \item
+
+    Authority tables (AT) shall be preferred to FD tables where possible. Some FD tables shall be avoided in the LAM data, especially FD\_400 and FD\_340. These tables seems to be designed to be used for the localisation purpose and not as reference table.
+
+    \begin{tabular}{|p{0.4\linewidth}|}
+        \hline
+        \textbf{Examples} \\ \hline
+        agent,
+    at:fd\_50      \\ \hline
+    \end{tabular}
+    \\
 \end{itemize}
-
-The CELEX property definition worksheet, just like the one for LAM
-properties, defines a set of properties used in CELEX class definition.
-They are primarily CELEX composition properties but in the current project a few auxiliary properties are used.
-
-\subsection{Namespace prefix definitions}
-\label{sec:prefix-section}
-
-This worksheet provides a mapping between the LAM property definitions
-and CDM ontology (or another namespace). This worksheet is auxiliary and
-has a technical role aiding the transformation script. The worksheet is
-composed of two columns, first the URI of the CDM ontology and the
-second one the URI of the LAM property.
-
