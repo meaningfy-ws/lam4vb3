@@ -6,7 +6,7 @@
 # Email: costezki.eugen@gmail.com 
 
 """ """
-import collections
+import collections.abc
 import warnings
 from abc import ABC, abstractmethod
 from datetime import date
@@ -79,7 +79,7 @@ class AbstractTripleMaker(ABC):
         """
 
         if self.subject_source_column:
-            if isinstance(self.subject_source_column, collections.Iterable) and not isinstance(
+            if isinstance(self.subject_source_column, collections.abc.Iterable) and not isinstance(
                     self.subject_source_column, str):
                 return lam_utils.generate_uuid_uri(str(row_index) + str(self.subject_source_column),
                                                    seed=str(self.df.head()) + str(seed),
