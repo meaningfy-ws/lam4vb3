@@ -73,7 +73,7 @@ CONSTRAINT_COLUMNS = {
     'DP': 'lamd:md_DP',
     'AD': 'lamd:md_AD',
     'LF': 'lamd:md_LF',
-    'REPPORTEUR': 'lamd:md_REPPORTEUR',
+    'RAPPORTEUR': 'lamd:md_RAPPORTEUR',
     'IC': 'lamd:md_IC',
     'CM': 'lamd:md_CM',
     'NS': 'lamd:md_NS',
