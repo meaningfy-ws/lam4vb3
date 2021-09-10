@@ -7,14 +7,14 @@
 
 celexd:class_0 a skos:Collection ;
     euvoc:order "12" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_0 ;
     skos:notation "0" ;
     skos:prefLabel "Celex sector 0"@en .
 
 celexd:class_1 a skos:Collection ;
     euvoc:order "1" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_1,
         celexd:c_1_AFI_DCL,
         celexd:c_1_N,
@@ -26,7 +26,7 @@ celexd:class_1 a skos:Collection ;
 
 celexd:class_2 a skos:Collection ;
     euvoc:order "2" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_2,
         celexd:c_2_A,
         celexd:c_2_A_OJC,
@@ -44,7 +44,7 @@ celexd:class_2 a skos:Collection ;
 
 celexd:class_3 a skos:Collection ;
     euvoc:order "3" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_3,
         celexd:c_3_A,
         celexd:c_3_A_OJC,
@@ -97,7 +97,7 @@ celexd:class_3 a skos:Collection ;
 
 celexd:class_4 a skos:Collection ;
     euvoc:order "4" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_4,
         celexd:c_4_A,
         celexd:c_4_A_OJC,
@@ -115,14 +115,14 @@ celexd:class_4 a skos:Collection ;
 
 celexd:class_7 a skos:Collection ;
     euvoc:order "7" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_7 ;
     skos:notation "7" ;
     skos:prefLabel "Celex sector 7"@en .
 
 celexd:class_8 a skos:Collection ;
     euvoc:order "8" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_8,
         celexd:c_8_AT,
         celexd:c_8_BE,
@@ -158,7 +158,7 @@ celexd:class_8 a skos:Collection ;
 
 celexd:class_9 a skos:Collection ;
     euvoc:order "9" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_9,
         celexd:c_9_E,
         celexd:c_9_H,
@@ -168,14 +168,14 @@ celexd:class_9 a skos:Collection ;
 
 celexd:class_C a skos:Collection ;
     euvoc:order "11" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_C ;
     skos:notation "C" ;
     skos:prefLabel "Celex sector C"@en .
 
 celexd:class_E a skos:Collection ;
     euvoc:order "10" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_E,
         celexd:c_E_A,
         celexd:c_E_A_OJC,
@@ -202,14 +202,14 @@ celexd:class_E a skos:Collection ;
 
 celexd:c_0 a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "0" ;
     skos:prefLabel "[0] Consolidated legislation"@en .
 
 celexd:c_1 a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_1_AFI_DCL,
         celexd:c_1_N,
         celexd:c_1_PRO,
@@ -221,7 +221,7 @@ celexd:c_1 a lam:LegalDocumentClass,
 
 celexd:c_2 a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_2_A,
         celexd:c_2_D,
         celexd:c_2_P,
@@ -232,7 +232,7 @@ celexd:c_2 a lam:LegalDocumentClass,
 
 celexd:c_3 a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_3_A,
         celexd:c_3_B,
         celexd:c_3_C,
@@ -261,7 +261,7 @@ celexd:c_3 a lam:LegalDocumentClass,
 
 celexd:c_4 a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_4_A,
         celexd:c_4_D,
         celexd:c_4_X,
@@ -272,7 +272,7 @@ celexd:c_4 a lam:LegalDocumentClass,
 
 celexd:c_4_Z a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote """If there is an internal number available, this shall be preferably used for celex number. For example 42020Z10201 for AGR/2020/10201 or 42005Z1111 for AGR/2005/01111 (if there are more than 4 digits starting with zero, this can be omitted). If there is no internal number available, the date of document shall be used. Splits numbers shall be used in the case there is a risk that already existing celex numbers could be duplicated.
 """@en ;
     skos:example "42003Z8271: Agreement between the ECB and Eesti Pank AGR/2003/08271"@en ;
@@ -282,7 +282,7 @@ celexd:c_4_Z a lam:LegalDocumentClass,
 
 celexd:c_5 a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_AA,
         celexd:c_5_AB,
         celexd:c_5_AC,
@@ -326,7 +326,7 @@ celexd:c_5 a lam:LegalDocumentClass,
 
 celexd:c_6 a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_CA,
         celexd:c_6_CB,
         celexd:c_6_CC,
@@ -360,7 +360,7 @@ celexd:c_6 a lam:LegalDocumentClass,
 
 celexd:c_7 a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote """The CELEX numbers for national transposition measures are composed as follows: 
  
 - The first digit represents the CELEX sector, which is 7 for national transposition measures; - Similarly to CELEX numbers of legal acts belonging to Sector 3 the following eight characters give information on the legal act that is being implemented. The first four digits represent the year, the letter indicates the type of act and the following four digits represent its unique number; - After this, there is a three letter country code, indicating the Member State which is the author of the given national transposition measure; - After an underscore, there is a new number, being the unique identifier from the database of the Secretariat-General of the Commission. """@en ;
@@ -371,7 +371,7 @@ celexd:c_7 a lam:LegalDocumentClass,
 
 celexd:c_8 a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_8_AT,
         celexd:c_8_BE,
         celexd:c_8_BG,
@@ -408,7 +408,7 @@ celexd:c_8 a lam:LegalDocumentClass,
 
 celexd:c_9 a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_9_E,
         celexd:c_9_H,
         celexd:c_9_O ;
@@ -418,14 +418,14 @@ celexd:c_9 a lam:LegalDocumentClass,
 
 celexd:c_C a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "C" ;
     skos:prefLabel "[C] Documents published in the C series of the Official Journal"@en .
 
 celexd:c_E a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_E_A,
         celexd:c_E_C,
         celexd:c_E_G,
@@ -439,7 +439,7 @@ celexd:c_E a lam:LegalDocumentClass,
 
 celexd:class_5_COM a skos:Collection ;
     euvoc:order "2" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_5_DC,
         celexd:c_5_DC_EUR,
         celexd:c_5_DC_OJC,
@@ -468,7 +468,7 @@ celexd:class_5_COM a skos:Collection ;
 
 celexd:class_5_CONSIL a skos:Collection ;
     euvoc:order "1" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_5_AG,
         celexd:c_5_AG_OJC,
         celexd:c_5_IG,
@@ -484,7 +484,7 @@ celexd:class_5_CONSIL a skos:Collection ;
 
 celexd:class_5_COR a skos:Collection ;
     euvoc:order "7" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_5_AR,
         celexd:c_5_AR_OJC,
         celexd:c_5_IR,
@@ -497,7 +497,7 @@ celexd:class_5_COR a skos:Collection ;
 
 celexd:class_5_ECA a skos:Collection ;
     euvoc:order "4" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_5_AA,
         celexd:c_5_AA_OJC,
         celexd:c_5_SA,
@@ -513,7 +513,7 @@ celexd:class_5_ECA a skos:Collection ;
 
 celexd:class_5_ECB a skos:Collection ;
     euvoc:order "5" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_5_AB,
         celexd:c_5_AB_OJC,
         celexd:c_5_HB,
@@ -526,7 +526,7 @@ celexd:class_5_ECB a skos:Collection ;
 
 celexd:class_5_ECSC a skos:Collection ;
     euvoc:order "8" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_5_AK,
         celexd:c_5_AK_OJC,
         celexd:c_5_XK,
@@ -537,7 +537,7 @@ celexd:class_5_ECSC a skos:Collection ;
 
 celexd:class_5_EESC a skos:Collection ;
     euvoc:order "6" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_5_AC,
         celexd:c_5_AC_OJC,
         celexd:c_5_AE,
@@ -552,7 +552,7 @@ celexd:class_5_EESC a skos:Collection ;
 
 celexd:class_5_EP a skos:Collection ;
     euvoc:order "3" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_5_AP,
         celexd:c_5_AP_OJC,
         celexd:c_5_AP_OJL,
@@ -571,7 +571,7 @@ celexd:class_5_EP a skos:Collection ;
 
 celexd:class_5_OTHER a skos:Collection ;
     euvoc:order "9" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_5_AS,
         celexd:c_5_AS_OJC,
         celexd:c_5_AT,
@@ -587,7 +587,7 @@ celexd:class_5_OTHER a skos:Collection ;
 
 celexd:class_6_CJ a skos:Collection ;
     euvoc:order "1" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_6_CA,
         celexd:c_6_CA_OJC,
         celexd:c_6_CB,
@@ -622,7 +622,7 @@ celexd:class_6_CJ a skos:Collection ;
 
 celexd:class_6_CST a skos:Collection ;
     euvoc:order "3" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_6_FA,
         celexd:c_6_FA_OJC,
         celexd:c_6_FB,
@@ -641,7 +641,7 @@ celexd:class_6_CST a skos:Collection ;
 
 celexd:class_6_GCEU a skos:Collection ;
     euvoc:order "2" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_6_TA,
         celexd:c_6_TA_OJC,
         celexd:c_6_TB,
@@ -662,7 +662,7 @@ celexd:class_6_GCEU a skos:Collection ;
 
 celexd:c_1_AFI_DCL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "a separate work for each declaration"@en ;
     skos:example """12016L/AFI/DCL/02: Consolidated version of the Treaty on the Functioning of the European Union
 A.DECLARATIONS CONCERNING PROVISIONS OF THE TREATIES
@@ -673,7 +673,7 @@ A.DECLARATIONS CONCERNING PROVISIONS OF THE TREATIES
 
 celexd:c_1_N a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "a separate work for each annex"@en ;
     skos:example """12016AN01: Consolidated version of the Treaty establishing the European Atomic Energy Community
 ANNEX I FIELDS OF RESEARCH CONCERNING NUCLEAR ENERGY REFERRED TO IN ARTICLE 4 OF THIS TREATY"""@en ;
@@ -683,7 +683,7 @@ ANNEX I FIELDS OF RESEARCH CONCERNING NUCLEAR ENERGY REFERRED TO IN ARTICLE 4 OF
 
 celexd:c_1_PRO a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "a separate work for each protocol"@en ;
     skos:example "12016M/PRO/01: Protocol (No 1) on the role of national parliaments in the European Union"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -692,7 +692,7 @@ celexd:c_1_PRO a lam:LegalDocumentClass,
 
 celexd:c_1_TXT a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote """Following DTT can be used:
 
 A: Treaty establishing the European Atomic Energy Community (1957, Treaty establishing European Atomic Energy Community (consolidated version 2010),  Treaty establishing European Atomic Energy Community (consolidated version 2012) 
@@ -747,7 +747,7 @@ ME:Consolidated versions of the Treaty on EU and TFEU (2016)"""@en ;
 
 celexd:c_1_nnn a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "a separate work for each article"@en ;
     skos:example "12016E027: Article 27 (ex Article 15 TEC): When drawing up its proposals with a view to achieving the objectives set out in Article 26, the Commission shal take into account the extent of the effort that certain economies showing differences in development will have to sustain for the extablishment of the internal market and it may propose appropriate provisions. If these provisions take the form of derogations, they must be of a temporary nature and must cause the least possible disturbance to the functioning of the internal market."@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -756,7 +756,7 @@ celexd:c_1_nnn a lam:LegalDocumentClass,
 
 celexd:c_2_A a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_2_A_OJC,
         celexd:c_2_A_OJL ;
     skos:editorialNote "Before 1983: The CELEX number was based on the date of signature or entry into force of the act. "@en ;
@@ -766,7 +766,7 @@ celexd:c_2_A a lam:LegalDocumentClass,
 
 celexd:c_2_A_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Last publication in OJ-C in 2012"@en ;
     skos:example "22012A1013(01): Monetary Agreement between the European Union and the Principality of Monaco"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -775,7 +775,7 @@ celexd:c_2_A_OJC a lam:LegalDocumentClass,
 
 celexd:c_2_A_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "22014A1121(01): Agreement between the European Union and Ukraine on the status of the European Union Advisory Mission for Civilian Security Sector Reform Ukraine (EUAM Ukraine)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "2_A_OJL" ;
@@ -783,7 +783,7 @@ celexd:c_2_A_OJL a lam:LegalDocumentClass,
 
 celexd:c_2_D a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_2_D_OJC,
         celexd:c_2_D_OJL ;
     skos:editorialNote """Before 1 October 2015:
@@ -797,7 +797,7 @@ The CELEX numbers of all acts were based on their date of publication (year and 
 
 celexd:c_2_D_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "22014D0717(01): Recommendation of the EU-Lebanon Association Council of 20 June 2014 on the implementation of the second EU-Lebanon European Neighbourhood Policy Action Plan"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "2_D_OJC" ;
@@ -805,7 +805,7 @@ celexd:c_2_D_OJC a lam:LegalDocumentClass,
 
 celexd:c_2_D_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "22015D1808: Decision of the EEA Joint Committee No 249/2014 of 13 November 2014 amending Protocol 31 to the EEA Agreement, on cooperation in specific fields outside the four freedoms [2015/1808] 22015D1412: Decision No 1 of the EU-Korea Committee on Trade in Goods of 28 May 2015 on the adoption of the rules for Tariff Rate Quota administration and implementation [2015/1412]"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "2_D_OJL" ;
@@ -813,7 +813,7 @@ celexd:c_2_D_OJL a lam:LegalDocumentClass,
 
 celexd:c_2_P a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_2_P_OJC ;
     skos:editorialNote "There were some cases where CELEX numbers were based on the internal number of the act. See, in particular, resolutions of the Joint Assembly of the ACP–EU Convention (e.g. 22007P3937)."@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -822,7 +822,7 @@ celexd:c_2_P a lam:LegalDocumentClass,
 
 celexd:c_2_P_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "22014P1002(03): Joint Parliamentary Assembly of the Partnership Agreement concluded between the Members of the African, Carribbean and Pacific Group of States, of the one part, and the European Union and its Member States, of the other part — Minutes of the sitting of Wednesday 19 march 2014"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "2_P_OJC" ;
@@ -830,7 +830,7 @@ celexd:c_2_P_OJC a lam:LegalDocumentClass,
 
 celexd:c_2_X a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_2_X_JOC,
         celexd:c_2_X_OJL ;
     skos:editorialNote "Acts not containing information about the entry into force, provisional application, extensions, etc. of international agreements are included in this category."@en ;
@@ -840,7 +840,7 @@ celexd:c_2_X a lam:LegalDocumentClass,
 
 celexd:c_2_X_JOC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "22012X1005(01): Information on the date of entry into force of the Monetary Agreement between the European Union and the Principality of Andorra"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "2_X_JOC" ;
@@ -848,7 +848,7 @@ celexd:c_2_X_JOC a lam:LegalDocumentClass,
 
 celexd:c_2_X_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "22014X1107(01): Information relating to the entry into force of the Agreement between the European Union and the Republic of Cape Verde on the readmission of persons residing without authorisation"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "2_X_OJL" ;
@@ -856,7 +856,7 @@ celexd:c_2_X_OJL a lam:LegalDocumentClass,
 
 celexd:c_3_A a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_3_A_OJC,
         celexd:c_3_A_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -865,7 +865,7 @@ celexd:c_3_A a lam:LegalDocumentClass,
 
 celexd:c_3_A_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Before 1998: The CELEX numbers were formed with the natural number."@en ;
     skos:example "32012A0424(01): Commission Opinion of 12 October 2011 on the application for accession to the European Union by the Republic of Croatia"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -874,7 +874,7 @@ celexd:c_3_A_OJC a lam:LegalDocumentClass,
 
 celexd:c_3_A_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Usually published in OJ-C"@en ;
     skos:example "32012A0424(01): Commission Opinion of 12 October 2011 on the application for accession to the European Union by the Republic of Croatia"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -883,7 +883,7 @@ celexd:c_3_A_OJL a lam:LegalDocumentClass,
 
 celexd:c_3_B a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_3_B_OJC,
         celexd:c_3_B_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -892,7 +892,7 @@ celexd:c_3_B a lam:LegalDocumentClass,
 
 celexd:c_3_B_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32014B0918(11): Statement of revenue and expenditure of the European Institute of Innovation and Technology for the financial year 2014 — Amending Budget No 1"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_B_OJC" ;
@@ -900,7 +900,7 @@ celexd:c_3_B_OJC a lam:LegalDocumentClass,
 
 celexd:c_3_B_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32014B0543: 2014/543/EU: Decision of the European Parliament of 3 April 2014 on discharge in respect of the implementation of the general budget of the European Union for the financial year 2012, Section II — European Council and Council"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_B_OJL" ;
@@ -908,7 +908,7 @@ celexd:c_3_B_OJL a lam:LegalDocumentClass,
 
 celexd:c_3_C a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_3_C_OJC,
         celexd:c_3_C_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -917,7 +917,7 @@ celexd:c_3_C a lam:LegalDocumentClass,
 
 celexd:c_3_C_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32010C1023(01): Council statement — Framework Agreement on relations between the European Parliament and the Commission"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_C_OJC" ;
@@ -925,7 +925,7 @@ celexd:c_3_C_OJC a lam:LegalDocumentClass,
 
 celexd:c_3_C_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "OJ-L: There is 1 example where the CELEX was created based on the internal number in the title: 31995C0907: 95/357/EC: Declaration by the European Parliament, the Council and the Commission"@en ;
     skos:example "32014C0618(01): Unilateral Statement by the Commission — Unilateral Statement by Israel"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -934,7 +934,7 @@ celexd:c_3_C_OJL a lam:LegalDocumentClass,
 
 celexd:c_3_D a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_3_D_OJC,
         celexd:c_3_D_OJL ;
     skos:editorialNote """
@@ -948,7 +948,7 @@ celexd:c_3_D a lam:LegalDocumentClass,
 
 celexd:c_3_D_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32014D1118(01): Commission Implementing Decision of 17 November 2014 concerning the amendment of the work programme 2014 covered by Commission Implementing Decision 2014/C 166/05 and the adoption of a work programme and a financing for year 2015 in the food and feed area to ensure the application of the food and feed legislation"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_D_OJC" ;
@@ -956,7 +956,7 @@ celexd:c_3_D_OJC a lam:LegalDocumentClass,
 
 celexd:c_3_D_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """(1) 32015D1477: Decision (EU) 2015/1477 of the European Parliament and of the Council of 17 July 2015 on the mobilisation of the European Globalisation Adjustment Fund (application from Finland — EGF/2015/001 FI/Broadcom)
 (2) 32014D0047(01): 2014/856/EU: Decision of the European Central Bank of 24 November 2014 amending Decision ECB/2013/46 on the approval of the volume of coin issuance in 2014 (ECB/2014/47)"""@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -965,7 +965,7 @@ celexd:c_3_D_OJL a lam:LegalDocumentClass,
 
 celexd:c_3_E a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Obsolete since 2004"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_E" ;
@@ -973,7 +973,7 @@ celexd:c_3_E a lam:LegalDocumentClass,
 
 celexd:c_3_E_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """32009E0842: Council Joint Action 2009/842/CFSP of 17 November 2009 amending Joint Action 2007/369/CFSP on the establishment of the European Union Police Mission in Afghanistan
 32009E0717: Council Common Position 2009/717/CFSP of 24 September 2009 extending Common Position 2004/694/CFSP on further measures in support of the effective implementation of the mandate of the International Criminal Tribunal for the former Yugoslavia
 """@en ;
@@ -983,7 +983,7 @@ celexd:c_3_E_OJL a lam:LegalDocumentClass,
 
 celexd:c_3_F a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote """Date of publication for Council acts establishing conventions (e.g. 31997F0827(01)), Council acts in the domain of police cooperation (e.g. 32000F1213(01)) and acts of the Management Board of Europol (e.g. 31999F0130(09))
 Post-Lisbon acts adopted in this domain take the form of regulations, directives and decisions (see R, L and D, below).
 
@@ -995,7 +995,7 @@ Obsolete since 2009
 
 celexd:c_3_F_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32006F0321(01): Act of the Management Board of Europol of 29 September 2005 modifying the list of Europol posts in Appendix 1 of the Europol Staff Regulations"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_F_OJC" ;
@@ -1003,7 +1003,7 @@ celexd:c_3_F_OJC a lam:LegalDocumentClass,
 
 celexd:c_3_F_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32009F0948: Council Framework Decision 2009/948/JHA of 30 November 2009 on prevention and settlement of conflicts of exercise of jurisdiction in criminal proceedings"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_F_OJL" ;
@@ -1011,7 +1011,7 @@ celexd:c_3_F_OJL a lam:LegalDocumentClass,
 
 celexd:c_3_G a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_3_G_OJC ;
     skos:editorialNote " Before 1998: The CELEX numbers were formed with the natural number."@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1020,7 +1020,7 @@ celexd:c_3_G a lam:LegalDocumentClass,
 
 celexd:c_3_G_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32012G0107(01): Council Resolution of 13 December 2011 on the future of customs law enforcement cooperation"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_G_OJC" ;
@@ -1028,7 +1028,7 @@ celexd:c_3_G_OJC a lam:LegalDocumentClass,
 
 celexd:c_3_G_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Latest publication in OJ-L in 1995."@en ;
     skos:example "31976G0126: Council Resolution of 15 December 1975 on the Convention for the European patent for the Common Market"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1037,7 +1037,7 @@ celexd:c_3_G_OJL a lam:LegalDocumentClass,
 
 celexd:c_3_H a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_3_H_OJC,
         celexd:c_3_H_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -1046,7 +1046,7 @@ celexd:c_3_H a lam:LegalDocumentClass,
 
 celexd:c_3_H_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32014H0829(01): Council Recommendation of 18 February 2014 concerning the discharge to be given to the Commission in respect of the implementation of the operations of the European Development Fund (eighth EDF) for the financial year 2012"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_H_OJC" ;
@@ -1054,7 +1054,7 @@ celexd:c_3_H_OJC a lam:LegalDocumentClass,
 
 celexd:c_3_H_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32014H0761: 2014/761/EU: Commission Recommendation of 29 October 2014 on the application of internal energy market rules between the EU Member States and the Energy Community Contracting Parties"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_H_OJL" ;
@@ -1062,7 +1062,7 @@ celexd:c_3_H_OJL a lam:LegalDocumentClass,
 
 celexd:c_3_J a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_3_J_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_J" ;
@@ -1070,7 +1070,7 @@ celexd:c_3_J a lam:LegalDocumentClass,
 
 celexd:c_3_J_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32002J0057: Commission Decision of 30/04/2002 declaring a concentration to be compatible with the common market (Case No IV/M.0057 - TPS) according to Council Regulation (EEC) No 4064/89 (Only the French text is authentic)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_J_OJC" ;
@@ -1078,7 +1078,7 @@ celexd:c_3_J_OJC a lam:LegalDocumentClass,
 
 celexd:c_3_K a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_3_K_OJC ;
     skos:editorialNote "Obsolete since 1996"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1087,7 +1087,7 @@ celexd:c_3_K a lam:LegalDocumentClass,
 
 celexd:c_3_K_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32002J0057: Commission Decision of 30/04/2002 declaring a concentration to be compatible with the common market (Case No IV/M.0057 - TPS) according to Council Regulation (EEC) No 4064/89 (Only the French text is authentic)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_K_OJC" ;
@@ -1095,7 +1095,7 @@ celexd:c_3_K_OJC a lam:LegalDocumentClass,
 
 celexd:c_3_L a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_3_L_OJL ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_L" ;
@@ -1103,7 +1103,7 @@ celexd:c_3_L a lam:LegalDocumentClass,
 
 celexd:c_3_L_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32015L0413: Directive (EU) 2015/413 of the European Parliament and of the Council of 11 March 2015 facilitating cross-border exchange of information on road-safety-related traffic offences Text with EEA relevance"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_L_OJL" ;
@@ -1111,7 +1111,7 @@ celexd:c_3_L_OJL a lam:LegalDocumentClass,
 
 celexd:c_3_M a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_3_M_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_M" ;
@@ -1119,7 +1119,7 @@ celexd:c_3_M a lam:LegalDocumentClass,
 
 celexd:c_3_M_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "The CELEX numbers are based on the internal number assigned by the author (e.g. Case No COMP/M.5878)."@en ;
     skos:example "32010M5878: Commission Decision of 28/05/2010 declaring a concentration to be compatible with the common market (Case No COMP/M.5878 - CVC / CAIXANOVA / R CABLE) according to Council Regulation (EC) No 139/2004 (Only the Spanish text is authentic)"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1128,7 +1128,7 @@ celexd:c_3_M_OJC a lam:LegalDocumentClass,
 
 celexd:c_3_O a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_3_O_OJC,
         celexd:c_3_O_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -1137,7 +1137,7 @@ celexd:c_3_O a lam:LegalDocumentClass,
 
 celexd:c_3_O_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32006O0028: Guideline of the European Central Bank of 21 December 2006 on the management of the foreign reserve assets of the European Central Bank by the national central banks and the legal documentation for operations involving such assets (ECB/2006/28) "@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_O_OJC" ;
@@ -1145,7 +1145,7 @@ celexd:c_3_O_OJC a lam:LegalDocumentClass,
 
 celexd:c_3_O_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32014O0015: 2014/810/EU: Guideline of the European Central Bank of 4 April 2014 on monetary and financial statistics (ECB/2014/15)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_O_OJL" ;
@@ -1153,7 +1153,7 @@ celexd:c_3_O_OJL a lam:LegalDocumentClass,
 
 celexd:c_3_Q a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_3_Q_OJC,
         celexd:c_3_Q_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -1162,7 +1162,7 @@ celexd:c_3_Q a lam:LegalDocumentClass,
 
 celexd:c_3_Q_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32013Q1220(01): Interinstitutional Agreement of 2 December 2013 between the European Parliament, the Council and the Commission on budgetary discipline, on cooperation in budgetary matters and on sound financial management "@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_Q_OJC" ;
@@ -1170,7 +1170,7 @@ celexd:c_3_Q_OJC a lam:LegalDocumentClass,
 
 celexd:c_3_Q_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32014Q0919(01): Agreement between the European Parliament and the European Commission on the transparency register for organisations and self-employed individuals engaged in EU policy-making and policy implementation"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_Q_OJL" ;
@@ -1178,7 +1178,7 @@ celexd:c_3_Q_OJL a lam:LegalDocumentClass,
 
 celexd:c_3_R a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_3_R_OJC,
         celexd:c_3_R_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -1187,7 +1187,7 @@ celexd:c_3_R a lam:LegalDocumentClass,
 
 celexd:c_3_R_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32010R1016(01): Financial Regulation applicable to Europol"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_R_OJC" ;
@@ -1195,7 +1195,7 @@ celexd:c_3_R_OJC a lam:LegalDocumentClass,
 
 celexd:c_3_R_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32014R1266: Commission Regulation (EU) No 1266/2014 of 25 November 2014 establishing a prohibition of fishing for cod in NAFO area 3M by vessels flying the flag of a Member State of the European Union"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_R_OJL" ;
@@ -1203,7 +1203,7 @@ celexd:c_3_R_OJL a lam:LegalDocumentClass,
 
 celexd:c_3_S a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_3_S_OJL ;
     skos:editorialNote "Obsolete since 2002"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1212,7 +1212,7 @@ celexd:c_3_S a lam:LegalDocumentClass,
 
 celexd:c_3_S_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32002S1043: Commission Decision No 1043/2002/ECSC of 14 June 2002 amending both Decision No 283/2000/ECSC imposing a definitive anti-dumping duty on imports of certain flat-rolled products of iron or non-alloy steel, of a width of 600 mm or more…"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_S_OJL" ;
@@ -1220,7 +1220,7 @@ celexd:c_3_S_OJL a lam:LegalDocumentClass,
 
 celexd:c_3_X a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_3_X_OJL ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_X" ;
@@ -1228,7 +1228,7 @@ celexd:c_3_X a lam:LegalDocumentClass,
 
 celexd:c_3_X_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "In the past, there were some cases of documents receiving an internal number which was used as a basis for the CELEX number: 31993X0006"@en ;
     skos:example "32011X1221(01): Addendum to Regulation (EU) No 1007/2011 of the European Parliament and of the Council of 27 September 2011 on textile fibre names and related labelling and marking of the fibre composition of textile products and repealing Council Directive 73/44/EEC and Directives 96/73/EC and 2008/121/EC of the European Parliament and of the Council ( OJ L 272, 18.10.2011 )"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1237,7 +1237,7 @@ celexd:c_3_X_OJL a lam:LegalDocumentClass,
 
 celexd:c_3_Y a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_3_Y_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_Y" ;
@@ -1245,7 +1245,7 @@ celexd:c_3_Y a lam:LegalDocumentClass,
 
 celexd:c_3_Y_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "32014Y1201(03): List of Union acts adopted before the entry into force of the Lisbon Treaty in the field of police cooperation and judicial cooperation in criminal matters which cease to apply to the United Kingdom as from 1 December 2014 pursuant to Article 10(4), second sentence, of Protocol (No 36) on transitional provisions"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "3_Y_OJC" ;
@@ -1253,7 +1253,7 @@ celexd:c_3_Y_OJC a lam:LegalDocumentClass,
 
 celexd:c_4_A a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_4_A_OJC,
         celexd:c_4_A_OJL ;
     skos:editorialNote "Before 1992: Some cases of CELEX numbers that were composed of publication numbers."@en ;
@@ -1263,7 +1263,7 @@ celexd:c_4_A a lam:LegalDocumentClass,
 
 celexd:c_4_A_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "42011A0708(01): Agreement between the Member States of the European Union, meeting within the Council, regarding the protection of classified information exchanged in the interests of the European Union"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "4_A_OJC" ;
@@ -1271,7 +1271,7 @@ celexd:c_4_A_OJC a lam:LegalDocumentClass,
 
 celexd:c_4_A_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "42013A0806(01): Internal Agreement between the Representatives of the Governments of the Member States of the European Union, meeting within the Council, on the financing of European Union aid under the multiannual financial framework for the period 2014 to 2020, …"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "4_A_OJL" ;
@@ -1279,7 +1279,7 @@ celexd:c_4_A_OJL a lam:LegalDocumentClass,
 
 celexd:c_4_D a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_4_D_OJC,
         celexd:c_4_D_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -1288,7 +1288,7 @@ celexd:c_4_D a lam:LegalDocumentClass,
 
 celexd:c_4_D_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "42001D0629(01): Decision of the Committee of Permanent Representatives of 13 June 2001 setting up a high-level working party"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "4_D_OJC" ;
@@ -1296,7 +1296,7 @@ celexd:c_4_D_OJC a lam:LegalDocumentClass,
 
 celexd:c_4_D_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "42014D0680: 2014/680/EU, Euratom: Decision of the Representatives of the Governments of the Member States of 24 September 2014 appointing Judges to the Court of Justice"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "4_D_OJL" ;
@@ -1304,7 +1304,7 @@ celexd:c_4_D_OJL a lam:LegalDocumentClass,
 
 celexd:c_4_X a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_4_X_OJL_1 ;
     skos:editorialNote "Before 2016: Date of publication"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1313,7 +1313,7 @@ celexd:c_4_X a lam:LegalDocumentClass,
 
 celexd:c_4_X_OJL_1 a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote """
 (1) Other acts published in the OJ L - Regulations UN/ECE
 
@@ -1325,7 +1325,7 @@ celexd:c_4_X_OJL_1 a lam:LegalDocumentClass,
 
 celexd:c_4_Y a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_4_Y_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "4_Y" ;
@@ -1333,7 +1333,7 @@ celexd:c_4_Y a lam:LegalDocumentClass,
 
 celexd:c_4_Y_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "42014Y0614(03): Resolution of the Council and of the Representatives of the Governments of the Member States, meeting within the Council, of 21 May 2014 on the European Union Work Plan for Sport (2014-2017)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "4_Y_OJC" ;
@@ -1341,7 +1341,7 @@ celexd:c_4_Y_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_AA a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_AA_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_AA" ;
@@ -1349,7 +1349,7 @@ celexd:c_5_AA a lam:LegalDocumentClass,
 
 celexd:c_5_AA_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52014AA0006: Opinion No 6/2014 (pursuant to Article 325, TFEU) concerning a proposal for a Regulation of the European Parliament and of the Council amending Regulation (EU, Euratom) No 883/2013 as regards the establishment of a Controller of procedural guarantees"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_AA_OJC" ;
@@ -1357,7 +1357,7 @@ celexd:c_5_AA_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_AB a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_AB_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_AB" ;
@@ -1365,7 +1365,7 @@ celexd:c_5_AB a lam:LegalDocumentClass,
 
 celexd:c_5_AB_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52014AB0058: Opinion of the European Central Bank of 25 July 2014 on a proposal for a directive of the European Parliament and of the Council concerning measures to ensure a high common level of network and information security across the Union (CON/2014/58"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_AB_OJC" ;
@@ -1373,7 +1373,7 @@ celexd:c_5_AB_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_AC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_AC_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_AC" ;
@@ -1381,7 +1381,7 @@ celexd:c_5_AC a lam:LegalDocumentClass,
 
 celexd:c_5_AC_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Deprecated since 2000"@en ;
     skos:example "52000AC1007: Opinion of the Economic and Social Committee on the 'Proposal for a Regulation of the European Parliament and of the Council amending Regulation on substances that deplete the ozone layer as regards metered dose inhalers and medical drug pumps'"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1390,7 +1390,7 @@ celexd:c_5_AC_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_AE a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_AE_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_AE" ;
@@ -1398,7 +1398,7 @@ celexd:c_5_AE a lam:LegalDocumentClass,
 
 celexd:c_5_AE_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Between 1958 and 2000, the descriptor AC was used for the opinions of the Economic and Social Committee. As code C was reserved for Commission documents, code AC was gradually replaced by the new codes AE and IE."@en ;
     skos:example "52014AE1723: Opinion of the European Economic and Social Committee on the ‘Communication from the Commission to the Council and the European Parliament on the EU Approach against Wildlife Trafficking’ — COM(2014) 64 final"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1407,7 +1407,7 @@ celexd:c_5_AE_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_AG a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_AG_OJC ;
     skos:editorialNote "Before 1999: The CELEX numbers of all acts were based on the date of publication followed by a split number."@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1416,7 +1416,7 @@ celexd:c_5_AG a lam:LegalDocumentClass,
 
 celexd:c_5_AG_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "There is a split number – (01) for position of the Council, (02) for statement of Council´s reasons."@en ;
     skos:example """52015AG0010(01) Position (EU) No 10/2015 of the Council at first reading with a view to the adoption of a Regulation of the European Parliament and of the Council amending Council Regulation (EC) No 515/97 …
 52015AG0010(02) Statement of Council's reasons: Position (EU) No 10/2015 of the Council at first reading with a view to the adoption of a Regulation of the European Parliament and of the Council amending Council Regulation (EC) No 515/97 …"""@en ;
@@ -1426,7 +1426,7 @@ celexd:c_5_AG_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_AK a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_AK_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_AK" ;
@@ -1434,7 +1434,7 @@ celexd:c_5_AK a lam:LegalDocumentClass,
 
 celexd:c_5_AK_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52002AK0301(01): Opinion of the ECSC Consultative Committee on the Commission communication \"A European Union strategy for sustainable development\" (Adopted unanimously at the 359th session of 25 January 2002)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_AK_OJC" ;
@@ -1442,7 +1442,7 @@ celexd:c_5_AK_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_AP a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_AP_OJC,
         celexd:c_5_AP_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -1451,7 +1451,7 @@ celexd:c_5_AP a lam:LegalDocumentClass,
 
 celexd:c_5_AP_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Last publication in OJ-C in 2013"@en ;
     skos:example "52012AP0318: Common system of taxation applicable to interest and royalty payments * European Parliament legislative resolution of 11 September 2012 on the proposal for a Council directive on a common system of taxation applicable to interest and royalty payments made between associated companies of different Member States (recast) (COM(2011)0714 – C7-0516/2011 – 2011/0314(CNS))"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1460,7 +1460,7 @@ celexd:c_5_AP_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_AP_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Last publication in OJ-L in 2011"@en ;
     skos:example """52012AP0214: Bluefin tuna in the eastern Atlantic and Mediterranean ***I European Parliament legislative resolution of 23 May 2012 on the proposal for a regulation of the European Parliament and of the Council amending … (COM(2011)0330 – C7-0154/2011 – 2011/0144(COD))
 P7_TC1-COD(2011)0144 Position of the European Parliament adopted at first reading on 23 May 2012 with a view to the adoption of Regulation (EU) No …/2012 of the European Parliament and of the Council amending Council Regulation (EC) No 302/2009 …"""@en ;
@@ -1470,7 +1470,7 @@ P7_TC1-COD(2011)0144 Position of the European Parliament adopted at first readin
 
 celexd:c_5_AR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_AR_OJC ;
     skos:editorialNote "Legal basis: TFEU art. 307 first paragraph"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1479,7 +1479,7 @@ celexd:c_5_AR a lam:LegalDocumentClass,
 
 celexd:c_5_AR_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52014AR1278: Opinion of the Committee of the Regions — The aid scheme for the supply of fruit and vegetables, bananas and milk in educational establishments"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_AR_OJC" ;
@@ -1487,7 +1487,7 @@ celexd:c_5_AR_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_AS a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_AS_OJC ;
     skos:editorialNote """04/12/2019: 5*XC before 03/12/2019
 
@@ -1524,7 +1524,7 @@ Example for Antitrust:
 
 celexd:c_5_AS_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Before (to be completed) CELEX numbers of State aid were classified under descriptor 5*XX"@en ;
     skos:example """52020AS53964: State aid — Belgium — State aid SA.53964 (2019/NN) — Excess profit exemption granted to Luciad — Invitation to submit comments pursuant to Article 108(2) of the Treaty on the Functioning of the European UnionText with EEA relevance.
 C/2019/6572"""@en ;
@@ -1534,7 +1534,7 @@ C/2019/6572"""@en ;
 
 celexd:c_5_AT a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_AT_OJC ;
     skos:editorialNote "04/12/2019: 5*XC before 03/12/2019"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1543,7 +1543,7 @@ celexd:c_5_AT a lam:LegalDocumentClass,
 
 celexd:c_5_AT_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Before (to be completed) CELEX numbers of Antitrust were classified under descriptor 5*XX"@en ;
     skos:example """52021AT39686: Opinion of the Advisory Committee on restrictive agreements and dominant positions at its meeting on 23 November 2020 at 15.00–17.30 (CEST (Central European Summer Time (i.e., Brussels time).)) concerning a draft decision concerning Case AT.39686 – Cephalon Rapporteur: Netherlands (Text with EEA relevance) 2021/C 32/05
 C/2020/8153"""@en ;
@@ -1553,7 +1553,7 @@ C/2020/8153"""@en ;
 
 celexd:c_5_BP a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_BP_OJC,
         celexd:c_5_BP_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -1562,7 +1562,7 @@ celexd:c_5_BP a lam:LegalDocumentClass,
 
 celexd:c_5_BP_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52012BP0232: Draft Amending Budget No 2/ 2012: EU Solidarity Fund appropriations to address flooding in Italy (Liguria and Tuscany) in 2011 European Parliament resolution of 12 June 2012 on the Council position on Draft amending budget No 2/2012 of the European Union for the financial year 2012, Section III – European Commission (09916/2012 – C7-0123/2012 – 2012/2057(BUD))"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_BP_OJC" ;
@@ -1570,7 +1570,7 @@ celexd:c_5_BP_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_BP_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote """
 Before 1 October 2015:
 CELEX numbers of budgetary resolutions published in OJ-L were based on the date of publication.
@@ -1584,7 +1584,7 @@ CELEX numbers of budgetary resolutions published in OJ-L were based on the Offic
 
 celexd:c_5_DC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_DC_EUR,
         celexd:c_5_DC_OJC ;
     skos:inScheme celexd:CelexClasses ;
@@ -1593,7 +1593,7 @@ celexd:c_5_DC a lam:LegalDocumentClass,
 
 celexd:c_5_DC_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """52004DC0171: Communication from the Commission to the Council, the European Parliament, the European Economic and Social Committee and the Committee of the Regions on the follow-up to the Commission … (text with EEA relevance)
 /* COM/2004/0171 final */
 
@@ -1604,7 +1604,7 @@ celexd:c_5_DC_EUR a lam:LegalDocumentClass,
 
 celexd:c_5_DC_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Last publication in OJ-C in 2004"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_DC_OJC" ;
@@ -1612,7 +1612,7 @@ celexd:c_5_DC_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_DP a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_DP_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_DP" ;
@@ -1620,7 +1620,7 @@ celexd:c_5_DP a lam:LegalDocumentClass,
 
 celexd:c_5_DP_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52012DP0358: Request for waiver of the immunity of Martin Ehrenhauser European Parliament decision of 23 October 2012 on the request for waiver of the immunity of Martin Ehrenhauser (2012/2152(IMM))"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_DP_OJC" ;
@@ -1628,7 +1628,7 @@ celexd:c_5_DP_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_EC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_EC_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_EC" ;
@@ -1636,7 +1636,7 @@ celexd:c_5_EC a lam:LegalDocumentClass,
 
 celexd:c_5_EC_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52002EC2377: Draft Commission Regulation (EC) no …/.. of […] on opening and providing for the administration of a Community tariff quota for malting barley from third countries and derogating from Council Regulation (EC) No 1234/2007 (Codified version)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_EC_EUR" ;
@@ -1644,7 +1644,7 @@ celexd:c_5_EC_EUR a lam:LegalDocumentClass,
 
 celexd:c_5_FC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_FC_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_FC" ;
@@ -1652,7 +1652,7 @@ celexd:c_5_FC a lam:LegalDocumentClass,
 
 celexd:c_5_FC_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "51977FC0799: Proposal for a Council Directive …/…/EC of […] concerning mutual assistance by the competent authorities of the Member States in the field of direct taxation and taxation of insurance premiums (Codified version)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_FC_EUR" ;
@@ -1660,7 +1660,7 @@ celexd:c_5_FC_EUR a lam:LegalDocumentClass,
 
 celexd:c_5_GC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_GC_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_GC" ;
@@ -1668,7 +1668,7 @@ celexd:c_5_GC a lam:LegalDocumentClass,
 
 celexd:c_5_GC_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "51996GC0540: Draft Commission Decision of […] on animal health requirements and veterinary certification for imports into the Community of ova and embryos of the equine species (…/…/EC) (Codified version)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_GC_EUR" ;
@@ -1676,7 +1676,7 @@ celexd:c_5_GC_EUR a lam:LegalDocumentClass,
 
 celexd:c_5_HB a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_HB_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_HB" ;
@@ -1684,7 +1684,7 @@ celexd:c_5_HB a lam:LegalDocumentClass,
 
 celexd:c_5_HB_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52014HB0020: Recommendation of the European Central Bank of 17 April 2014 to the Council of the European Union on the external auditors of the Central Bank of Malta (ECB/2014/20)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_HB_OJC" ;
@@ -1692,7 +1692,7 @@ celexd:c_5_HB_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_IE a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_IE_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_IE" ;
@@ -1700,7 +1700,7 @@ celexd:c_5_IE a lam:LegalDocumentClass,
 
 celexd:c_5_IE_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Between 1958 and 2000, the descriptor AC was used for the opinions of the Economic and Social Committee. As code C was reserved for Commission documents, code AC was gradually replaced by the new codes AE and IE."@en ;
     skos:example "52014IE5469: Opinion of the European Economic and Social Committee on ‘Transatlantic trade relations and the EESC’s views on an enhanced cooperation and eventual EU-USA FTA’ — Own-initiative opinion"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1709,7 +1709,7 @@ celexd:c_5_IE_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_IG a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_IG_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_IG" ;
@@ -1717,7 +1717,7 @@ celexd:c_5_IG a lam:LegalDocumentClass,
 
 celexd:c_5_IG_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52013IG1211(01): Initiative of Belgium, Bulgaria, the Czech Republic, Germany, Estonia, Greece, Spain, France, Croatia, Italy, Cyprus, Latvia, … for a Regulation of the European Parliament and of the Council amending Decision 2005/681/JHA establishing the European Police College (CEPOL)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_IG_OJC" ;
@@ -1725,7 +1725,7 @@ celexd:c_5_IG_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_IP a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_IP_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_IP" ;
@@ -1733,7 +1733,7 @@ celexd:c_5_IP a lam:LegalDocumentClass,
 
 celexd:c_5_IP_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52011IP0587: Freedom of movement for workers within the European Union European Parliament resolution of 15 December 2011 on freedom of movement for workers within the European Union"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_IP_OJC" ;
@@ -1741,7 +1741,7 @@ celexd:c_5_IP_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_IR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_IR_OJC ;
     skos:editorialNote "Legal basis: TFEU art. 307 fourth paragraph"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1750,7 +1750,7 @@ celexd:c_5_IR a lam:LegalDocumentClass,
 
 celexd:c_5_IR_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52014IR2691: Opinion of the Committee of the Regions — A policy framework for climate and energy in the period from 2020 to 2030"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_IR_OJC" ;
@@ -1758,7 +1758,7 @@ celexd:c_5_IR_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_JC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_JC_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_JC" ;
@@ -1766,7 +1766,7 @@ celexd:c_5_JC a lam:LegalDocumentClass,
 
 celexd:c_5_JC_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote """A split number is indicated when there is more than one version of the document.
 """@en ;
     skos:example """52014JC0037: Joint Proposal for a COUNCIL REGULATION amending Regulation (EU) No 36/2012 concerning restrictive measures in view of the situation in Syria
@@ -1778,7 +1778,7 @@ celexd:c_5_JC_EUR a lam:LegalDocumentClass,
 
 celexd:c_5_KG a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_KG_OJC ;
     skos:editorialNote "Obsolete since 2002"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1787,14 +1787,14 @@ celexd:c_5_KG a lam:LegalDocumentClass,
 
 celexd:c_5_KG_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_KG_OJC" ;
     skos:prefLabel "[5_KG_OJC] OJ-C: Council Assents (ECSC Treaty)"@en .
 
 celexd:c_5_M a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_M_OJC ;
     skos:editorialNote """Before 1 July 2017:
 
@@ -1810,7 +1810,7 @@ CELEX numbers of Summaries of Commission Decisions declaring concentrations comp
 
 celexd:c_5_M_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """52018M8782: Prior notification of a concentration (Case M.8782 — Cerberus Capital Management/BBVA (real estate business)) — Candidate case for simplified procedure (Text with EEA relevance.)
 
 52018M8782(01): Non-opposition to a notified concentration (Case M.8782 — Cerberus Capital Management/BBVA (Real Estate Business)) (Text with EEA relevance.)"""@en ;
@@ -1820,7 +1820,7 @@ celexd:c_5_M_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_PC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_PC_EUR,
         celexd:c_5_PC_OJC,
         celexd:c_5_PC_OJL ;
@@ -1831,7 +1831,7 @@ celexd:c_5_PC a lam:LegalDocumentClass,
 
 celexd:c_5_PC_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """52003PC0079: Commission opinion of 19 February 2003 on the applications for accession to the European Union by the Czech Republic, the Republic of Estonia, …
 /* COM/2003/0079 final */"""@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1840,7 +1840,7 @@ celexd:c_5_PC_EUR a lam:LegalDocumentClass,
 
 celexd:c_5_PC_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Last publication in OJ-C in 2002"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_PC_OJC" ;
@@ -1848,7 +1848,7 @@ celexd:c_5_PC_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_PC_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Last publication in OJ-L in 2003"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_PC_OJL" ;
@@ -1856,7 +1856,7 @@ celexd:c_5_PC_OJL a lam:LegalDocumentClass,
 
 celexd:c_5_SA a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_SA_EUR,
         celexd:c_5_SA_OJC ;
     skos:editorialNote """Before 2016: There was a celex number from sector C attributed to the notices published in OJ-C
@@ -1870,7 +1870,7 @@ The SA descriptor has been in use since March 2001. Prior to then, the special r
 
 celexd:c_5_SA_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """52015SA0006: Special Report No 6 // 2015
 The integrity and implementation of the EU ETS 
 (pursuant to Article 287(4), second subparagraph, TFEU)
@@ -1881,7 +1881,7 @@ The integrity and implementation of the EU ETS
 
 celexd:c_5_SA_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """52016SA0008(01): Special Report No 8/2016 — ‘Rail freight transport in the EU: still not on the right track’
 (Notice on publication)"""@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1890,7 +1890,7 @@ celexd:c_5_SA_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_SC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_SC_EUR,
         celexd:c_5_SC_OJC,
         celexd:c_5_SC_OJL ;
@@ -1900,7 +1900,7 @@ celexd:c_5_SC a lam:LegalDocumentClass,
 
 celexd:c_5_SC_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """52014SC0341: COMMISSION STAFF WORKING DOCUMENT Accompanying the document REPORT FROM THE COMMISSION TO THE EUROPEAN PARLIAMENT, THE COUNCIL, THE EUROPEAN CENTRAL BANK, THE EUROPEAN ECONOMIC AND SOCIAL COMMITTEE AND THE COMMITTEE OF THE REGIONS Fifteenth Report on the practical preparations for the future enlargement of the euro area
 /* SWD/2014/0341 final */"""@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1909,7 +1909,7 @@ celexd:c_5_SC_EUR a lam:LegalDocumentClass,
 
 celexd:c_5_SC_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Last publication in OJ-C in 2009"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_SC_OJC" ;
@@ -1917,7 +1917,7 @@ celexd:c_5_SC_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_SC_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Last publication in OJ-L in 1999"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_SC_OJL" ;
@@ -1925,7 +1925,7 @@ celexd:c_5_SC_OJL a lam:LegalDocumentClass,
 
 celexd:c_5_TA a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_TA_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_TA" ;
@@ -1933,7 +1933,7 @@ celexd:c_5_TA a lam:LegalDocumentClass,
 
 celexd:c_5_TA_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52014TA1112(02): Annual report of the Court of Auditors on the activities funded by the 8th, 9th and 10th European Development Funds (EDFs) concerning the financial year 2013, together with the Commission's replie"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_TA_OJC" ;
@@ -1941,7 +1941,7 @@ celexd:c_5_TA_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_XA a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_XA_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_XA" ;
@@ -1949,7 +1949,7 @@ celexd:c_5_XA a lam:LegalDocumentClass,
 
 celexd:c_5_XA_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52014XA1113(02): The Court's statement of assurance provided to the European Parliament and the Council — Independent auditor’s report"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_XA_OJC" ;
@@ -1957,7 +1957,7 @@ celexd:c_5_XA_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_XB a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_XB_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_XB" ;
@@ -1965,7 +1965,7 @@ celexd:c_5_XB a lam:LegalDocumentClass,
 
 celexd:c_5_XB_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52011XB0209(01): Part 0 of the ECB Staff Rules containing the Ethics Framework (This text cancels and replaces the text published in Official Journal C 104, 23.4.2010, p. 3 )"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_XB_OJC" ;
@@ -1973,7 +1973,7 @@ celexd:c_5_XB_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_XC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_XC_OJC,
         celexd:c_5_XC_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -1982,7 +1982,7 @@ celexd:c_5_XC a lam:LegalDocumentClass,
 
 celexd:c_5_XC_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52014XC1205(01): Authorisation for State aid pursuant to Articles 107 and 108 of the Treaty on the Functioning of the European Union — Cases where the Commission raises no objections Text with EEA relevance"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_XC_OJC" ;
@@ -1990,7 +1990,7 @@ celexd:c_5_XC_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_XC_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Usually published in OJ-C"@en ;
     skos:example "52011XC0514(01): Commission’s statements"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -1999,7 +1999,7 @@ celexd:c_5_XC_OJL a lam:LegalDocumentClass,
 
 celexd:c_5_XE a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_XE_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_XE" ;
@@ -2007,7 +2007,7 @@ celexd:c_5_XE a lam:LegalDocumentClass,
 
 celexd:c_5_XE_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "There were some cases of CELEX numbers based on the publication date of the document."@en ;
     skos:example "52012XE2309: Resolution of the European Economic and Social Committee on ‘“More Europe” — for submission to the European Summit to be held on 22 and 23 November 2012 ’"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -2016,7 +2016,7 @@ celexd:c_5_XE_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_XG a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_XG_OJC,
         celexd:c_5_XG_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -2025,7 +2025,7 @@ celexd:c_5_XG a lam:LegalDocumentClass,
 
 celexd:c_5_XG_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52014XG1205(01): Conclusions of the Council and of the Representatives of the Governments of the Member States, meeting within the Council, on sport as a driver of innovation and economic growth"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_XG_OJC" ;
@@ -2033,7 +2033,7 @@ celexd:c_5_XG_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_XG_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Currently, there are only 2 cases in the database published in OJ L. The CELEX was based on the publication date or on the internal number."@en ;
     skos:example "52013XG1109(01): Notice concerning the entry into force of the Treaty of Accession between the …"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -2042,7 +2042,7 @@ celexd:c_5_XG_OJL a lam:LegalDocumentClass,
 
 celexd:c_5_XK a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_XK_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_XK" ;
@@ -2050,7 +2050,7 @@ celexd:c_5_XK a lam:LegalDocumentClass,
 
 celexd:c_5_XK_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52002XK0724(01): Resolution of the ECSC Consultative Committee on the occasion of its final session on the legacy of the European Coal and Steel Community (Adopted unanimously at the 361st session on 26 June 2002)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_XK_OJC" ;
@@ -2058,7 +2058,7 @@ celexd:c_5_XK_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_XP a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_XP_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_XP" ;
@@ -2066,7 +2066,7 @@ celexd:c_5_XP a lam:LegalDocumentClass,
 
 celexd:c_5_XP_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52014XP0408(01): Contribution of the L COSAC — 27 – 29 October 2013 , Vilnius"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_XP_OJC" ;
@@ -2074,7 +2074,7 @@ celexd:c_5_XP_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_XR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_XR_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_XR" ;
@@ -2082,7 +2082,7 @@ celexd:c_5_XR a lam:LegalDocumentClass,
 
 celexd:c_5_XR_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "There were some cases of CELEX numbers based on the publication date of the document."@en ;
     skos:example "52014XR2333: Resolution of the Committee of the Regions on — ‘Proposals of the Committee of the Regions for the new European Union legislative mandate’"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -2091,7 +2091,7 @@ celexd:c_5_XR_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_XX a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_5_XX_OJC,
         celexd:c_5_XX_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -2100,7 +2100,7 @@ celexd:c_5_XX a lam:LegalDocumentClass,
 
 celexd:c_5_XX_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Usually published in OJ-C"@en ;
     skos:example "52011XX0228(01): Statement by the European Parliament, the Council and the Commission"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -2109,7 +2109,7 @@ celexd:c_5_XX_OJC a lam:LegalDocumentClass,
 
 celexd:c_5_XX_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "52014XX1115(33): European Chemicals Agency — Publication of the final accounts for the financial year 2013"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "5_XX_OJL" ;
@@ -2117,7 +2117,7 @@ celexd:c_5_XX_OJL a lam:LegalDocumentClass,
 
 celexd:c_6_CA a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_CA_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CA" ;
@@ -2125,7 +2125,7 @@ celexd:c_6_CA a lam:LegalDocumentClass,
 
 celexd:c_6_CA_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "62014CA0348: Case C-348/14: Judgment of the Court (Sixth Chamber) of 9 July 2015 (request for a preliminary ruling from the Judecătoria Câmpulung — Romania) — Maria Bucura v SC Bancpost SA (Reference for a preliminary ruling — Consumer protection — Directive 87/102/EEC…"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CA_OJC" ;
@@ -2133,7 +2133,7 @@ celexd:c_6_CA_OJC a lam:LegalDocumentClass,
 
 celexd:c_6_CB a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_CB_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CB" ;
@@ -2141,7 +2141,7 @@ celexd:c_6_CB a lam:LegalDocumentClass,
 
 celexd:c_6_CB_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "62014CB0124: Case C-124/14: Order of the President of the Court of 23 January 2015 — European Commission v Italian Republic"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CB_OJC" ;
@@ -2149,7 +2149,7 @@ celexd:c_6_CB_OJC a lam:LegalDocumentClass,
 
 celexd:c_6_CC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_CC_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CC" ;
@@ -2157,7 +2157,7 @@ celexd:c_6_CC a lam:LegalDocumentClass,
 
 celexd:c_6_CC_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """62014CC0115: Advocate General’s Opinion - 9 September 2015
 RegioPost
 Case C-115/14
@@ -2168,7 +2168,7 @@ Advocate General: Mengozzi"""@en ;
 
 celexd:c_6_CD a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_CD_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CD" ;
@@ -2176,7 +2176,7 @@ celexd:c_6_CD a lam:LegalDocumentClass,
 
 celexd:c_6_CD_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """62012CD0334: Decision of the Court of Justice (special chamber provided for in Article 123b of the Rules of Procedure) 12 July 2012. 
 Review. 
 Case C-334/12 RX."""@en ;
@@ -2186,7 +2186,7 @@ Case C-334/12 RX."""@en ;
 
 celexd:c_6_CG a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_CG_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CG" ;
@@ -2194,7 +2194,7 @@ celexd:c_6_CG a lam:LegalDocumentClass,
 
 celexd:c_6_CG_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "62013CG0002: Opinion 2/13: Opinion of the Court (Full Court) of 18 December 2014  — European Commission (Opinion pursuant to Article 218(11) TFEU — Draft international agreement — Accession of the European Union to the European Convention for the Protection of Human Rights and Fundamental Freedoms — Compatibility of the draft agreement with the EU and FEU Treaties)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CG_OJC" ;
@@ -2202,7 +2202,7 @@ celexd:c_6_CG_OJC a lam:LegalDocumentClass,
 
 celexd:c_6_CJ a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_CJ_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CJ" ;
@@ -2210,7 +2210,7 @@ celexd:c_6_CJ a lam:LegalDocumentClass,
 
 celexd:c_6_CJ_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """62014CJ0348: Judgment of the Court (Sixth Chamber) of 9 July 2015. 
 Maria Bucura v SC Bancpost SA. 
 Reference for a preliminary ruling: Judecătoria Câmpulung - Romania. 
@@ -2221,7 +2221,7 @@ Case C-348/14."""@en ;
 
 celexd:c_6_CN a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_CN_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CN" ;
@@ -2229,7 +2229,7 @@ celexd:c_6_CN a lam:LegalDocumentClass,
 
 celexd:c_6_CN_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "62015CN0311: Case C-311/15: Request for a preliminary ruling from the Korkein oikeus (Finland) lodged on 25 June 2015 — TrustBuddy AB v Lauri Pihjalaniemi"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CN_OJC" ;
@@ -2237,7 +2237,7 @@ celexd:c_6_CN_OJC a lam:LegalDocumentClass,
 
 celexd:c_6_CO a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_CO_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CO" ;
@@ -2245,7 +2245,7 @@ celexd:c_6_CO a lam:LegalDocumentClass,
 
 celexd:c_6_CO_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """62014CO0082: Order of the Court (Sixth Chamber) of 15 July 2015. 
 Agenzia delle Entrate v Nuova Invincibile srl. 
 Reference for a preliminary ruling: Corte suprema di cassazione - Italy. 
@@ -2256,7 +2256,7 @@ Case C-82/14"""@en ;
 
 celexd:c_6_CP a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_CP_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CP" ;
@@ -2264,7 +2264,7 @@ celexd:c_6_CP a lam:LegalDocumentClass,
 
 celexd:c_6_CP_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """CP View   62015CP0237: Advocate General’s Opinion - 6 July 2015
 Lanigan
 Case C-237/15 PPU
@@ -2275,7 +2275,7 @@ Advocate General: Cruz Villalón  """@en ;
 
 celexd:c_6_CS a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_CS_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CS" ;
@@ -2283,7 +2283,7 @@ celexd:c_6_CS a lam:LegalDocumentClass,
 
 celexd:c_6_CS_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """62004CS0001: Order of the Court (Third Chamber) of 14 December 2004. 
 Tertir-Terminais de Portugal SA v Commission of the European Communities. 
 Application for authorisation to serve an interim garnishee order on the Commission of the European Communities. 
@@ -2294,7 +2294,7 @@ Case C-1/04 SA."""@en ;
 
 celexd:c_6_CT a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_CT_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CT" ;
@@ -2302,7 +2302,7 @@ celexd:c_6_CT a lam:LegalDocumentClass,
 
 celexd:c_6_CT_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """61984CT0292: Order of the Court (Sixth Chamber) of 22 September 1987. 
 F. Bolognese and others v H. Scharf and Commission of the European Communities. 
 Third-party proceedings - Inadmissible. 
@@ -2313,7 +2313,7 @@ Case 292/84 TO."""@en ;
 
 celexd:c_6_CU a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_CU_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CU" ;
@@ -2321,7 +2321,7 @@ celexd:c_6_CU a lam:LegalDocumentClass,
 
 celexd:c_6_CU_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "62015CU0001: Opinion 1/15: Request for an opinion submitted by the European Parliament pursuant to Article 218(11) TFEU"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CU_OJC" ;
@@ -2329,7 +2329,7 @@ celexd:c_6_CU_OJC a lam:LegalDocumentClass,
 
 celexd:c_6_CV a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_CV_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CV" ;
@@ -2337,7 +2337,7 @@ celexd:c_6_CV a lam:LegalDocumentClass,
 
 celexd:c_6_CV_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """62013CV0002: Opinion of the Court (Full Court) of 18 December 2014. 
 Opinion pursuant to Article 218(11) TFEU - Draft international agreement - Accession of the European Union to the European Convention for the Protection of Human Rights and Fundamental Freedoms - Compatibility of the draft agreement with the EU and FEU Treaties. 
 Opinion 2/13 """@en ;
@@ -2347,7 +2347,7 @@ Opinion 2/13 """@en ;
 
 celexd:c_6_CX a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_CX_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_CX" ;
@@ -2355,7 +2355,7 @@ celexd:c_6_CX a lam:LegalDocumentClass,
 
 celexd:c_6_CX_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """61978CX0001: Ruling of the Court of 14 November 1978. 
 Ruling delivered pursuant to the third paragraph of Article 103 of the EAEC Treaty - Draft Convention of the International Atomic Energy Agency on the Physical Protection of Nuclear Materials, Facilities and Transports. 
 Ruling 1/78."""@en ;
@@ -2365,7 +2365,7 @@ Ruling 1/78."""@en ;
 
 celexd:c_6_FA a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_FA_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_FA" ;
@@ -2373,7 +2373,7 @@ celexd:c_6_FA a lam:LegalDocumentClass,
 
 celexd:c_6_FA_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "62014FA0116: Case F-116/14: Judgment of the Civil Service Tribunal (First Chamber) of 16 July 2015 — Muariu v EIOPA (Civil Service — EIOPA staff — Temporary member of staff — Vacancy notice — Requirement for minimum professional experience of eight …"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_FA_OJC" ;
@@ -2381,7 +2381,7 @@ celexd:c_6_FA_OJC a lam:LegalDocumentClass,
 
 celexd:c_6_FB a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_FB_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_FB" ;
@@ -2389,7 +2389,7 @@ celexd:c_6_FB a lam:LegalDocumentClass,
 
 celexd:c_6_FB_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "62014FB0097: Case F-97/14: Order of the Civil Service Tribunal of 24 March 2015 — BU v EMA"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_FB_OJC" ;
@@ -2397,7 +2397,7 @@ celexd:c_6_FB_OJC a lam:LegalDocumentClass,
 
 celexd:c_6_FJ a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_FJ_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_FJ" ;
@@ -2405,7 +2405,7 @@ celexd:c_6_FJ a lam:LegalDocumentClass,
 
 celexd:c_6_FJ_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """62014FJ0028: Judgment of the Civil Service Tribunal - 9 September 2015
 De Loecker v EEAS
 Case F-28/14"""@en ;
@@ -2415,7 +2415,7 @@ Case F-28/14"""@en ;
 
 celexd:c_6_FN a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_FN_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_FN" ;
@@ -2423,7 +2423,7 @@ celexd:c_6_FN a lam:LegalDocumentClass,
 
 celexd:c_6_FN_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "62015FN0092: Case F-92/15: Action brought on 26 June 2015 — ZZ v Commission"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_FN_OJC" ;
@@ -2431,7 +2431,7 @@ celexd:c_6_FN_OJC a lam:LegalDocumentClass,
 
 celexd:c_6_FO a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_FO_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_FO" ;
@@ -2439,7 +2439,7 @@ celexd:c_6_FO a lam:LegalDocumentClass,
 
 celexd:c_6_FO_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """62015FO0020: Order of the Civil Service Tribunal (Third Chamber) of 16 July 2015. 
 FG v European Commission. 
 Case F-20/15."""@en ;
@@ -2449,7 +2449,7 @@ Case F-20/15."""@en ;
 
 celexd:c_6_FT a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_FT_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_FT" ;
@@ -2457,14 +2457,14 @@ celexd:c_6_FT a lam:LegalDocumentClass,
 
 celexd:c_6_FT_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_FT_EUR" ;
     skos:prefLabel "[6_FT_EUR] EUR-Lex: Third party proceeding"@en .
 
 celexd:c_6_TA a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_TA_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_TA" ;
@@ -2472,7 +2472,7 @@ celexd:c_6_TA a lam:LegalDocumentClass,
 
 celexd:c_6_TA_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "62014TA0395: Case T-395/14: Judgment of the General Court of 16 June 2015 — Best-Lock (Europe) v OHIM — Lego Juris (Shape of a toy figure) (Community trade mark…"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_TA_OJC" ;
@@ -2480,7 +2480,7 @@ celexd:c_6_TA_OJC a lam:LegalDocumentClass,
 
 celexd:c_6_TB a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_TB_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_TB" ;
@@ -2488,7 +2488,7 @@ celexd:c_6_TB a lam:LegalDocumentClass,
 
 celexd:c_6_TB_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "TB Communication: order  62014TB0280: Case T-280/14: Order of the General Court of 9 June 2015 — Ineos Manufacturing Deutschland and Others v Commission (State aid — Measures adopted by Germany …)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_TB_OJC" ;
@@ -2496,7 +2496,7 @@ celexd:c_6_TB_OJC a lam:LegalDocumentClass,
 
 celexd:c_6_TC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_TC_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_TC" ;
@@ -2504,7 +2504,7 @@ celexd:c_6_TC a lam:LegalDocumentClass,
 
 celexd:c_6_TC_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """61989TC0120: Opinion of Mr Advocate General Biancarelli delivered on 30 January 1991. 
 Stahlwerke Peine-Salzgitter AG v Commission of the European Communities. 
 ECSC - Non-contractual liability of the Community. 
@@ -2515,7 +2515,7 @@ Case T-120/89."""@en ;
 
 celexd:c_6_TJ a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_TJ_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_TJ" ;
@@ -2523,7 +2523,7 @@ celexd:c_6_TJ a lam:LegalDocumentClass,
 
 celexd:c_6_TJ_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """62013TJ0082: Judgment of the Court of First Instance - 9 September 2015
 Panasonic and MT Picture Display v Commission
 Case T-82/13"""@en ;
@@ -2533,7 +2533,7 @@ Case T-82/13"""@en ;
 
 celexd:c_6_TN a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_TN_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_TN" ;
@@ -2541,7 +2541,7 @@ celexd:c_6_TN a lam:LegalDocumentClass,
 
 celexd:c_6_TN_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "62015TN0336: Case T-336/15: Action brought on 25 June 2015 — Windrush Aka v OHIM — Dammers (The Specials)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_TN_OJC" ;
@@ -2549,7 +2549,7 @@ celexd:c_6_TN_OJC a lam:LegalDocumentClass,
 
 celexd:c_6_TO a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_TO_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_TO" ;
@@ -2557,7 +2557,7 @@ celexd:c_6_TO a lam:LegalDocumentClass,
 
 celexd:c_6_TO_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """62015TO0259: Order of the President of the General Court of 15 June 2015. 
 SA Close and Cegelec v European Parliament. 
 Case T-259/15 R."""@en ;
@@ -2567,7 +2567,7 @@ Case T-259/15 R."""@en ;
 
 celexd:c_6_TT a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_6_TT_EUR ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "6_TT" ;
@@ -2575,7 +2575,7 @@ celexd:c_6_TT a lam:LegalDocumentClass,
 
 celexd:c_6_TT_EUR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """62005TT0385: Order of the President of the General Court of 4 February 2010. 
 Portuguese Republic v Transnáutica - Transportes e Navegação, SA and European Commission. 
 Interim measures - Customs union …
@@ -2586,7 +2586,7 @@ Case T-385/05 TO R."""@en ;
 
 celexd:c_8_AT a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82011AT0705(02): Oberster Gerichtshof, Beschluss vom 05/07/2011  82011AT0531(01): Bundeskommunikationssenat, Beschluss vom 31/05/2011 - GZ 611.003/0004-BKS/201"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_AT" ;
@@ -2594,7 +2594,7 @@ celexd:c_8_AT a lam:LegalDocumentClass,
 
 celexd:c_8_BE a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82010BE1117(03): Tribunal de 1re instance de Namur, 4e chambre, jugement du 17/11/2010 - Remi Paquot / Etat belge  82010BE1013(01): Rechtbank van 1e aanleg Brugge, 4e kamer, vonnis van 13/10/2010 - Vlaamse Oliemaatschappij / F.O.D. Financiën"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_BE" ;
@@ -2602,7 +2602,7 @@ celexd:c_8_BE a lam:LegalDocumentClass,
 
 celexd:c_8_BG a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82011BG1026(01): Administrativen sad Veliko Tarnovo, Opredelenie 26/10/2011 - Menidzherski biznes reshenia OOD / Direktor na Direktsia Obzhalvane i upravlenie na izpalnenieto - V. Tarnovo  82011BG0719(01): Komissia za zashtita ot discriminazia, Reshenie, 19/07/2011 - Valeri Hariev Belov / CEZ Electro Bulgaria AD e.a."@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_BG" ;
@@ -2610,7 +2610,7 @@ celexd:c_8_BG a lam:LegalDocumentClass,
 
 celexd:c_8_CY a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82009CY0714(01): Anotato Dikastirio Kyprou, 14/07/2009  82008CY1127(01): Anotato Dikastirio Kyprou, Anatheoritiki Dikaiodosia, apofasi tis 27/11/2008"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_CY" ;
@@ -2618,7 +2618,7 @@ celexd:c_8_CY a lam:LegalDocumentClass,
 
 celexd:c_8_CZ a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82009CZ0923(02): Nejvyšší správní soud, usnesení ze dne 23/09/2009 - M. Landtová / Ceská správa socialního zabezpecení  82010CZ0429(01): Nejvyšší soud, usnesení ze dne 29/04/2010 - KONFORM, s.r.o. / Erwin Behr Automotive GmbH "@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_CZ" ;
@@ -2626,7 +2626,7 @@ celexd:c_8_CZ a lam:LegalDocumentClass,
 
 celexd:c_8_DE a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82009DE1217(01): Oberlandesgericht Stuttgart, 5. Senat für Bußgeldsachen, Beschluss vom 17/12/2009  82010DE1209(02): Bundesverwaltungsgericht, Beschluss vom 09/12/201"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_DE" ;
@@ -2634,7 +2634,7 @@ celexd:c_8_DE a lam:LegalDocumentClass,
 
 celexd:c_8_DK a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82011DK0914(01): Vestre Landsret, 15. afdeling, kendelse af 14/09/2011 - HK Danmark agissant pour Glennie Kristensen / Experian A/S  82011DK0111(01): Højesteret, dom af 11/01/2011- Niels Hausgaard m.fl. / Statsministeren og Udenrigsministere"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_DK" ;
@@ -2642,7 +2642,7 @@ celexd:c_8_DK a lam:LegalDocumentClass,
 
 celexd:c_8_EE a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82011EE0317(01): Riigikohus, kohtumäärus 17/03/2011 - AS Pimix (en liquidation) / Maksu- ja Tolliameti Lõuna maksu- ja tollikeskus et Põllumajandusministeerium  82008EE0319(01): Tallinna Halduskohus, kohtumäärus 19/03/2008 - Rakvere Lihakombinaat AS / Põllumajandusministeerium et Maksu- ja Tolliameti Ida maksu- ja tollikeskus"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_EE" ;
@@ -2650,7 +2650,7 @@ celexd:c_8_EE a lam:LegalDocumentClass,
 
 celexd:c_8_EL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82009EL1009(01): Symvoulio tis Epikrateias, Olomeleia, apofasi tis 09/10/2009  82008EL1127(01): Anotato Dikastirio Kyprou, Anatheoritiki Dikaiodosia, apofasi tis 27/11/2008 "@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_EL" ;
@@ -2658,7 +2658,7 @@ celexd:c_8_EL a lam:LegalDocumentClass,
 
 celexd:c_8_ES a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82008ES1222(01): Tribunal Superior de Justicia de Madrid, Sala de lo Contencioso-administrativo, Sección 6, sentencia de 22/12/2008 - Real Sociedad de Fútbol SAD et Nihat Kahveci / Real Federación Española de Fútbol et Consejo Superior de Deportes  82010ES0914(01): Tribunal Supremo, Sala de lo Contencioso-Administrativo, Sección tercera, auto del 14/09/2010 - Asociación para la Calidad de los Forjados (Ascafor) e.a. / Administración del Estado e.a "@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_ES" ;
@@ -2666,7 +2666,7 @@ celexd:c_8_ES a lam:LegalDocumentClass,
 
 celexd:c_8_FI a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82010FI1213(01): Korkein hallinto-oikeus, välipäätös 13/12/2010 - Insinööritoimisto InsTiimi Oy / Puolustusvoimat  82011FI0705(01): Korkein hallinto-oikeus, välipäätös 05/07/2011 - O et S / Maahanmuuttovirasto "@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_FI" ;
@@ -2674,7 +2674,7 @@ celexd:c_8_FI a lam:LegalDocumentClass,
 
 celexd:c_8_FR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82010FR1117(01): Cour de cassation (France), arrêt du 17/11/2010 - Refcomp SpA / Axa Corporate Solutions Assurance SA e. a.  82011FR1128(01): Conseil d'État, décision du 28/11/2011 - Établissement national des produits de l'agriculture et de la mer (FranceAgriMer), venant aux droits de l'Office national interprofessionnel des fruits, des légumes, des vins et de l'horticulture (VINIFLHOR)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_FR" ;
@@ -2682,7 +2682,7 @@ celexd:c_8_FR a lam:LegalDocumentClass,
 
 celexd:c_8_HR a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82018HR1112(51): Županijski sud u Splitu; 2018-11-12; M. Š.; P.-B. B.-H.-Š.; Gž-2467/2016"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_HR" ;
@@ -2690,7 +2690,7 @@ celexd:c_8_HR a lam:LegalDocumentClass,
 
 celexd:c_8_HU a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82011HU0712(02): Fővárosi Bíróság, végzés 12/07/2011 - Erika Jőrös / Aegon Magyarország Hitel Zrt  82011HU0503(01): Magyar Köztársaság Legfelsőbb Bírósága, végzés 03/05/2011 - Oskar Shomodi / Szabolcs-Szatmár-Bereg Megyei e.a."@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_HU" ;
@@ -2698,7 +2698,7 @@ celexd:c_8_HU a lam:LegalDocumentClass,
 
 celexd:c_8_IE a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82011IE0513(01): Supreme Court (Ireland), order of 13/05/2011 - Peter Sweetman, Irlande e.a. / An Bord Pleanala, Galway County Council et Galway City Council  82010IE0129(01): High Court (Ireland), order of 29/01/2010 - P. Kelly / The National University of Ireland, also known as University College, Dublin and The Director of the Equality Tribunal (Notice Party)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_IE" ;
@@ -2706,7 +2706,7 @@ celexd:c_8_IE a lam:LegalDocumentClass,
 
 celexd:c_8_IT a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82011IT0920(01): Commissione tributaria provinciale di Parma, ordinanza del 20/09/2011 - Danilo Debiasi / Agenzia delle Entrate Ufficio di Parma  82009IT1020(01): Tribunale Amministrativo Regionale della Lombardia, Sezione Prima, ordinanza del 20/10/200 - Duomo Gpa Srl / Comune di Baranzate e.a."@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_IT" ;
@@ -2714,7 +2714,7 @@ celexd:c_8_IT a lam:LegalDocumentClass,
 
 celexd:c_8_LT a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82008LT0825(02): Aukščiausiasis Teismas, nutartis 25/08/2008 - Inga Rinau / Michael Rinau  82010LT0513(01): Lietuvos vyriausiasis administracinis teismas, nutartis 13/05/2010 - G. Valčiukienė e.a. / Pakruojo rajono savivaldybės taryba e.a."@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_LT" ;
@@ -2722,7 +2722,7 @@ celexd:c_8_LT a lam:LegalDocumentClass,
 
 celexd:c_8_LU a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82010LU0608(01): Tribunal administratif (Grand-Duché de Luxembourg), 3ème chambre, jugement du 08/06/2010 - Tankreederei I SA / Directeur de l'administration des contributions directes  82011LU0714(01): Cour administrative, 14/07/2011 - Caves Krier Frères SARL / Directeur de l'Administration de l'emploi "@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_LU" ;
@@ -2730,7 +2730,7 @@ celexd:c_8_LU a lam:LegalDocumentClass,
 
 celexd:c_8_LV a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82008LV1023(01): Latvijas Republikas Augstākās tiesas Senāts Administratīvo lietu departaments, 23/10/2008 - Alstom Power Hydro / Valsts ieņēmumu dienests  82009LV0626(01): Latvijas Republikas Augstākās tiesas Senāts Administratīvo lietu departaments, 26/06/2009 - SIA Pakora Pluss / Valsts ienemumu dienests"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_LV" ;
@@ -2738,7 +2738,7 @@ celexd:c_8_LV a lam:LegalDocumentClass,
 
 celexd:c_8_MT a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82011MT0131(01): Qorti Ta' L-Appell - Court of Appeal (Malta), Sentenz 31/01/2011 - Dr Hugh Peralta (Curatel del Fallimento Tondon Sedie sas) / Zet Ltd  82009MT0604(01): Prim'Awla tal-Qorti Ċivili, ordni ta 04/06/2009 - AJD Tuna Limited / Direttur tal-Agrikoltura u s-Sajd et IAvukat Generali "@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_MT" ;
@@ -2746,7 +2746,7 @@ celexd:c_8_MT a lam:LegalDocumentClass,
 
 celexd:c_8_NL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82009NL1104(01): Rechtbank 's-Gravenhage, sector bestuursrecht, 3e afdeling, meervoudige kamer, vonnis van 04/11/2009 - AHP Manufacturing BV / Bureau van de Industriële Eigendom, handelend onder de naam Octrooicentrum Nederland  82011NL0630(01): Rechtbank Haarlem, sector bestuursrecht, meervoudige douanekamer, uitspraak van 30/06/2011 - HewlettPackard Europe BV / Inspecteur van de Belastingdienst/Douane West "@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_NL" ;
@@ -2754,7 +2754,7 @@ celexd:c_8_NL a lam:LegalDocumentClass,
 
 celexd:c_8_PL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82010PL1202(01): Sąd Apelacyjny -Sąd Pracy i Ubezpieczeń Społecznych, postanowienie z dnia 02/12/2010 - Janina Wencel / Zakład Ubezpieczeń Społecznych w Białymstoku  82008PL0917(01): Naczelny Sąd Administracyjny, postanowienie z dnia 17/09/2008, II GSK 331/08"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_PL" ;
@@ -2762,7 +2762,7 @@ celexd:c_8_PL a lam:LegalDocumentClass,
 
 celexd:c_8_PT a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82008PT0306(01): Supremo Tribunal Administrativo, Acórdão de 06/03/2008 - A / Vogal do Conselho de Administração do INGA  82010PT0415(01): Tribunal Cível da Comarca do Porto, certidão de 15/04/2010 - Maria Alice Pendão Lapa Costa Ferreira et Alexandra Pendão Lapa Ferreira / Companhia de Seguros Tranquilidade SA"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_PT" ;
@@ -2770,7 +2770,7 @@ celexd:c_8_PT a lam:LegalDocumentClass,
 
 celexd:c_8_RO a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82010RO1220(01): Curtea de Apel Bucureşti, Secţia de Contencios Administrativ şi Fiscal, 20/12/2010 - S.C. Gran Via Moineşti SRL / Agenţia Naţională de Administrare Fiscală (A.N.A.F) e.a.  82011RO0919(01): Tribunalul Comercial Cluj, Încheiere din 19/09/2011- SC Volksbank România SA / Andreia Câmpan et Ioan Dan Câmpan"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_RO" ;
@@ -2778,7 +2778,7 @@ celexd:c_8_RO a lam:LegalDocumentClass,
 
 celexd:c_8_SE a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82011SE0621(02): Förvaltningsrätten i Falun, beslut av 21/06/2011 - Widex A/S / Skatteverket  82009SE1217(01): Göta hovrätt, beslut av 17/12/2009 - Österström Rederi Aktiebolag / 1. Bellona Shipping Company Limited et 2. Schulte & Bruns GmbH & Co. KG "@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_SE" ;
@@ -2786,7 +2786,7 @@ celexd:c_8_SE a lam:LegalDocumentClass,
 
 celexd:c_8_SI a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82011SI0915(01): Vrhovno sodišče Republike Slovenije, sklep z dne 15/09/2011 - Ministrstvo za notranje zadeve Republike Slovenije (Ministère des affaires intérieures de la République de Slovénie) / Ahmed Abdirahman (Somalie)  82010SI1208(01): Upravno sodišce Republike Slovenije, sklep z dne 08/12/2010 - Pelati doo / Republika Slovenija"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_SI" ;
@@ -2794,7 +2794,7 @@ celexd:c_8_SI a lam:LegalDocumentClass,
 
 celexd:c_8_SK a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82009SK0917(01): Najvyšší súd Slovenskej republiky, rozsudok zo dňa 17.09.2009  82010SK0119(01): Krajský súd v Prešove, uznesenie zo dňa 19/01/2010 "@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_SK" ;
@@ -2802,7 +2802,7 @@ celexd:c_8_SK a lam:LegalDocumentClass,
 
 celexd:c_8_UK a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82009UK1215(02): Court of Appeal (England), Civil Division, order of 15/12/2009 - The Number (UK) Limited et Conduit Enterprises Limited / Office of Communications et British Telecommunications plc  82010UK1215(01): High Court of Justice (England), Chancery Division, 15/12/2010 - Test Claimants in the FII Group Litigation / Commissioners of Inland Revenue e.a. "@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_UK" ;
@@ -2810,7 +2810,7 @@ celexd:c_8_UK a lam:LegalDocumentClass,
 
 celexd:c_8_XX a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "82010XX0223(01): Cour européenne des droits de l'homme, arrêt du 23/02/2010 - Agnidis / Turquie  82009XX0929(01): Schweizerisches Bundesgericht, II. Öffentlichrechtliche Abteilung, Urteil vom 29/09/2009 - 1. X. und 2. Y. / Sicherheitsdirektion des Kantons Zürich  82007XX0314(01): EFTA Court, judgment of 14/03/2007, E-1/06 - EFTA Surveillance Authority / Kingdom of Norway"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "8_XX" ;
@@ -2818,7 +2818,7 @@ celexd:c_8_XX a lam:LegalDocumentClass,
 
 celexd:c_9_E a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """92004E001190: Written Question P-1190/04 by Joan Vallvé (ELDR) to the Commission. Forum of Cultures 2004 
 The CELEX numbers for written questions are based on the year in which the question is asked and the internal EP reference."""@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -2827,7 +2827,7 @@ The CELEX numbers for written questions are based on the year in which the quest
 
 celexd:c_9_H a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """92000H000132: Question No 111 (H-0132/00) by Jean-Claude Fruteau to the Commission. Common organisation of the market in sugar 
 The CELEX numbers for questions at question time are based on the year in which the question is asked and the internal EP reference"""@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -2836,7 +2836,7 @@ The CELEX numbers for questions at question time are based on the year in which 
 
 celexd:c_9_O a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """92000O000006: Oral Question B5-0007/00 with debate by Wolfgang Kreissl- Doerfler, Alain Lipietz, Camilo Nogueira Román to the Commission. Protection of humanitarian aid workers in Colombia 
 The CELEX numbers for oral questions are based on the year in which the question is asked and the internal EP reference. """@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -2845,7 +2845,7 @@ The CELEX numbers for oral questions are based on the year in which the question
 
 celexd:c_E_A a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_E_A_OJC,
         celexd:c_E_A_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -2854,7 +2854,7 @@ celexd:c_E_A a lam:LegalDocumentClass,
 
 celexd:c_E_A_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "E1994A0701(01): Joint Statements adopted at the 62nd meeting of the EEA Joint Committee on 26 March 1999"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "E_A_OJC" ;
@@ -2862,7 +2862,7 @@ celexd:c_E_A_OJC a lam:LegalDocumentClass,
 
 celexd:c_E_A_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Last publication in OJ-L in 1994 "@en ;
     skos:example "E1994A1231(04): PROTOCOL 3 on the functions and powers of the EFTA Surveillance Authority in the field of State aid "@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -2871,7 +2871,7 @@ celexd:c_E_A_OJL a lam:LegalDocumentClass,
 
 celexd:c_E_C a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_E_C_OJC,
         celexd:c_E_C_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -2880,7 +2880,7 @@ celexd:c_E_C a lam:LegalDocumentClass,
 
 celexd:c_E_C_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example """E2014C1204(01): Information communicated by the EFTA States regarding State aid granted under the Act referred to in point 1j of Annex XV to the EEA Agreement (Commission Regulation (EU) No 651/2014 declaring certain categories of aid compatible with the internal market in application of Articles 107 and 108 of the Treaty) (General Block Exemption Regulation) 
  
  """@en ;
@@ -2890,7 +2890,7 @@ celexd:c_E_C_OJC a lam:LegalDocumentClass,
 
 celexd:c_E_C_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "E2014C0021: EFTA Surveillance Authority Decision No 21/14/COL of 29 January 2014 amending for the 93rd time the procedural and substantive rules in the field of State aid "@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "E_C_OJL" ;
@@ -2898,7 +2898,7 @@ celexd:c_E_C_OJL a lam:LegalDocumentClass,
 
 celexd:c_E_G a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_E_G_OJC,
         celexd:c_E_G_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -2907,7 +2907,7 @@ celexd:c_E_G a lam:LegalDocumentClass,
 
 celexd:c_E_G_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "E2014G1106(01): Medicinal products — List of marketing authorisations granted by the EEA EFTA States for the first half of 2013"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "E_G_OJC" ;
@@ -2915,7 +2915,7 @@ celexd:c_E_G_OJC a lam:LegalDocumentClass,
 
 celexd:c_E_G_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "E2011G0001: Decision of the Standing Committee of the EFTA States No 1/2011/SC of 29 September 2011 regarding the audit of programmes and projects under the Financial Mechanism (2009–2014)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "E_G_OJL" ;
@@ -2923,7 +2923,7 @@ celexd:c_E_G_OJL a lam:LegalDocumentClass,
 
 celexd:c_E_J a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_E_J_OJC,
         celexd:c_E_J_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -2932,7 +2932,7 @@ celexd:c_E_J a lam:LegalDocumentClass,
 
 celexd:c_E_J_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "E2013J0018: Judgment of the Court of 6 December 2013 in Case E-18/13 — EFTA Surveillance Authority v Iceland (Failure by a Contracting Party to fulfil its obligations — Directive 2001/81/EC — Failure to implement)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "E_J_OJC" ;
@@ -2940,7 +2940,7 @@ celexd:c_E_J_OJC a lam:LegalDocumentClass,
 
 celexd:c_E_J_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Last publication in OJ-L in 1996"@en ;
     skos:example "E1997J0918(01): AMENDMENTS TO THE RULES OF PROCEDURE OF THE EFTA COURT adopted by the Court on 22 August 1996 and approved by the Governments of the EFTA States"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -2949,7 +2949,7 @@ celexd:c_E_J_OJL a lam:LegalDocumentClass,
 
 celexd:c_E_O a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_E_O_OJC,
         celexd:c_E_O_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -2958,7 +2958,7 @@ celexd:c_E_O a lam:LegalDocumentClass,
 
 celexd:c_E_O_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "No cases"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "E_O_OJC" ;
@@ -2966,7 +2966,7 @@ celexd:c_E_O_OJC a lam:LegalDocumentClass,
 
 celexd:c_E_O_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "No cases"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "E_O_OJL" ;
@@ -2974,7 +2974,7 @@ celexd:c_E_O_OJL a lam:LegalDocumentClass,
 
 celexd:c_E_P a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_E_P_OJC ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "E_P" ;
@@ -2982,7 +2982,7 @@ celexd:c_E_P a lam:LegalDocumentClass,
 
 celexd:c_E_P_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "E2014P0016: Request for an Advisory Opinion from the EFTA Court by Oslo tingrett dated 16 June 2014 in the case of Pharmaq AS v Intervet International BV (Case E-16/14)"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "E_P_OJC" ;
@@ -2990,7 +2990,7 @@ celexd:c_E_P_OJC a lam:LegalDocumentClass,
 
 celexd:c_E_X a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:broader celexd:c_E_X_OJC,
         celexd:c_E_X_OJL ;
     skos:inScheme celexd:CelexClasses ;
@@ -2999,7 +2999,7 @@ celexd:c_E_X a lam:LegalDocumentClass,
 
 celexd:c_E_X_OJC a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:example "E2013X0919(01): Publication of Oppland County’s intention of entering into contracts concerning local public transport with vehicles up to 16 seats in accordance with Article 7(2) in Regulation (EC) No 1370/2007 of the European Parliament and of the Council on public passenger transport services by rail and by road and repealing Council Regulations (EEC) No 1191/69 and (EEC) No 1107/70"@en ;
     skos:inScheme celexd:CelexClasses ;
     skos:notation "E_X_OJC" ;
@@ -3007,7 +3007,7 @@ celexd:c_E_X_OJC a lam:LegalDocumentClass,
 
 celexd:c_E_X_OJL a lam:LegalDocumentClass,
         skos:Concept ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:editorialNote "Last publication in OJ-L in 1994"@en ;
     skos:example "E1994X0922(01): RECOMMENDATIONS BY THE JOINT PARLIAMENTARY COMMITTEE OF THE EEA adopted at the second meeting in Helsinki 26 and 27 April 1994"@en ;
     skos:inScheme celexd:CelexClasses ;
@@ -3016,7 +3016,7 @@ celexd:c_E_X_OJL a lam:LegalDocumentClass,
 
 celexd:class_6 a skos:Collection ;
     euvoc:order "6" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_6,
         celexd:class_6_CJ,
         celexd:class_6_CST,
@@ -3026,7 +3026,7 @@ celexd:class_6 a skos:Collection ;
 
 celexd:class_5 a skos:Collection ;
     euvoc:order "5" ;
-    dct:created "2021-09-08"^^xsd:date ;
+    dct:created "2021-09-10"^^xsd:date ;
     skos:member celexd:c_5,
         celexd:class_5_COM,
         celexd:class_5_CONSIL,
