@@ -6,7 +6,8 @@ BUILD_PRINT = \e[1;34mSTEP: \e[0m
 #INPUT_EXCEL = resources/input_workbook/LAM_metadata_20200903_JKU.xlsx
 #INPUT_EXCEL = resources/input_workbook/LAM_metadata_20210218_ECO.xlsx
 #INPUT_EXCEL = resources/input_workbook/LAM_metadata_20210408.xlsx
-INPUT_EXCEL = resources/input_workbook/LAM_metadata_20210413.xlsx
+#INPUT_EXCEL = resources/input_workbook/LAM_metadata_20210413.xlsx
+INPUT_EXCEL = resources/input_workbook/LAM_metadata_20210909.xlsx
 
 install:
 	@ echo "$(BUILD_PRINT)Installing the requirements"
@@ -38,7 +39,7 @@ stop-gremlin:
 
 restart-gremlin: | stop-gremlin start-gremlin
 
-# Transformation paipeline
+# Transformation pipeline
 
 transform-full: | clear transform-excel2rdf transform-rdf2json transform-json2html
 

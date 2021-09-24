@@ -11,7 +11,7 @@ WHERE {
   ?subject skos:inScheme celexd:CelexClasses .
   ?subject skos:notation ?notation .
   ?subject skos:prefLabel ?prefLabel .
-  celexd:c_5_AG skos:broader ?subject .
+  ?subject skos:broader celexd:c_5_AG .
   celexd:class_5_CONSIL skos:member ?subject .
 }
 
