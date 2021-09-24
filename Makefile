@@ -39,7 +39,7 @@ stop-gremlin:
 
 restart-gremlin: | stop-gremlin start-gremlin
 
-# Transformation paipeline
+# Transformation pipeline
 
 transform-full: | clear transform-excel2rdf transform-rdf2json transform-json2html
 

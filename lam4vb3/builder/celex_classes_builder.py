@@ -52,11 +52,11 @@ def create_concept_scheme(graph):
 
 def create_concepts(df, graph):
     concept_maker = ConceptTripleMaker(df=df,
-                                       column_mapping_dict=LITERAL_CONCEPTS_COLUMNS,
+                                       column_mapping_dict={**LITERAL_CONCEPTS_COLUMNS, **PARENT_CONCEPT_COLUMN},
                                        graph=graph,
                                        subject_in_scheme=LAM_CS,
                                        comment_predicate=SKOS.editorialNote,
-                                       target_columns=[*LITERAL_CONCEPTS_COLUMNS],
+                                       target_columns=[*LITERAL_CONCEPTS_COLUMNS, *PARENT_CONCEPT_COLUMN],
                                        literal_columns=[*LITERAL_CONCEPTS_COLUMNS],
                                        subject_source_column=URI_COLUMN,
                                        subject_classes=[SKOS.Concept, LAM.LegalDocumentClass])  #changed from LAMD to LAM
@@ -72,14 +72,14 @@ def create_concepts(df, graph):
 
     in_collection_maker.make_triples()
 
-    parent_concept_maker = InverseTripleMaker(df=df,
-                                              column_mapping_dict=PARENT_CONCEPT_COLUMN,
-                                              graph=graph,
-                                              target_columns=[*PARENT_CONCEPT_COLUMN],
-                                              subject_source_column=URI_COLUMN
-                                              )
+    # parent_concept_maker = ConceptTripleMaker(df=df,
+    #                                           column_mapping_dict=PARENT_CONCEPT_COLUMN,
+    #                                           graph=graph,
+    #                                           target_columns=[*PARENT_CONCEPT_COLUMN],
+    #                                           subject_source_column=URI_COLUMN
+    #                                           )
 
-    parent_concept_maker.make_triples()
+    # parent_concept_maker.make_triples()
 
 
 def create_collections(df, graph):
