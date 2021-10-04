@@ -14,15 +14,13 @@ This is a proxy class for the formal properties. It is aimed at capturing the hu
 \itemsep1pt\parskip0pt\parsep0pt
 \item
   \emph{skos:Concept}
-\item
-  \emph{sh:PropertyShape}
 \end{itemize}
 
 {
 	%	\fontsize{10pt}{10pt}
 	\footnotesize
 	\selectfont%\tabcolsep=3pt % hold it local
-	\begin{longtable}[c]{@{}p{3cm}p{2cm}p{2cm}p{7.8cm}@{}}
+	\begin{longtable}[c]{@{}p{3cm}p{3cm}p{2cm}p{5.8cm}@{}}
 		\toprule\addlinespace
 		Name & Type & Cardinality & Definition
 		\\\addlinespace
@@ -33,6 +31,11 @@ This is a proxy class for the formal properties. It is aimed at capturing the hu
 		\\\addlinespace
 		sh:path & rdfs:Resource & 1..1 & The property that is formally used in
 		describing the legal documents. Usually a CDM property.
+		\\\addlinespace
+		dct:type & rdfsLiteral & 1..1 & A literal that specifies if the property is a data property or an object property.
+		\\\addlinespace
+		lam:hasAnnotationConfiguration & 
+		lam:AnnotationConfiguration & 0..* & 
 		\\\addlinespace
 		\bottomrule
 		\addlinespace
@@ -61,7 +64,7 @@ This class aims to describe legal documents that have a set of common features. 
 		Name & Type & Cardinality & Definition
 		\\\addlinespace
 		\midrule\endhead
-		lam:hasProperty​Configuration​ & lam:Property​Configuration​ & 1..*​ &
+		lam:hasProperty​Configuration​ & lam:Property​Configuration​ & 0..*​ &
 		The constraint definition for a legal document property. ​
 		\\\addlinespace
 		lam:classify​With​ & lam:Classiffication​Hint​ & 0..*​ &
@@ -71,30 +74,6 @@ This class aims to describe legal documents that have a set of common features. 
 		\caption{Properties of the lam:LegalDocumentClass class}
 	\end{longtable}
 }
-
-\subsection{lam:LegalDocumentGroup}
-
-A way of grouping legal document classes.
-
-\textbf{Superclasses:}
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  \emph{skos:Collection}
-\end{itemize}
-
-\subsection{lam:LegalPropertyGroup}
-
-A way of grouping properties of the legal documents.
-
-\textbf{Superclasses:}
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  \emph{skos:Collection}
-\end{itemize}
 
 \subsection{lam:AnnotationConfiguration}
 
@@ -122,16 +101,13 @@ the legal documents.
 		that each value node is a SHACL instance of a given type. This property
 		constraints the range of the values that the property may take.
 		\\\addlinespace
-		sh:hasValue & rdfs:Resource & 1..1 & sh:hasValue specifies the condition
-		that at least one value node is equal to the given RDF term.
-		\\\addlinespace
 		\bottomrule
 		\addlinespace
 		\caption{Properties of the lam:AnnotationConfiguration class}
 	\end{longtable}
 }
 
-\subsection{lam:ClassifficationHint}
+\subsection{lam:MappingPropertyConfiguration}
 
 This class defines how a document may be automatically assigned as a
 member of a given class of legal documents.
@@ -144,31 +120,7 @@ member of a given class of legal documents.
   \emph{sh:PropertyShape}
 \end{itemize}
 
-{
-	%	\fontsize{10pt}{10pt}
-	\footnotesize
-	\selectfont%\tabcolsep=3pt % hold it local
-	\begin{longtable}[c]{@{}p{3cm}p{2cm}p{2cm}p{7.8cm}@{}}
-		\toprule\addlinespace
-		Name & Type & Cardinality & Definition
-		\\\addlinespace
-		\midrule\endhead
-		sh:flags & rdfs:Literal & 0..1 & An optional string of flags accepting
-		SPARQL RegEx flags.
-		\\\addlinespace
-		sh:pattern & rdfs:Literal & 1..* & sh:pattern specifies a regular
-		expression that each value node matches to satisfy the condition.
-		
-		It can be plain text or RegEx pattern matching the value of a given
-		lam:property.
-		\\\addlinespace
-		\bottomrule
-		\addlinespace
-		\caption{Properties of the lam:ClassifficationHint class}
-	\end{longtable}
-}
-
-\subsection{lam:Propertyconfiguration}
+\subsection{lam:PropertyConfiguration}
 
 The Property Configuration define constraints on a lam:DocumentProperty
 for a given lam:DocumentClass
@@ -180,36 +132,6 @@ for a given lam:DocumentClass
 \item
   \emph{sh:PropertyShape}
 \end{itemize}
-
-{
-	%	\fontsize{10pt}{10pt}
-	\footnotesize
-	\selectfont%\tabcolsep=3pt % hold it local
-	\begin{longtable}[c]{@{}p{3cm}p{2cm}p{2cm}p{7.8cm}@{}}
-		\toprule\addlinespace
-		Name & Type & Cardinality & Definition
-		\\\addlinespace
-		\midrule\endhead
-		sh:hasValue & rdfs:Resource & 0..1 & sh:hasValue specifies the condition
-		that at least one value node is equal to the given RDF term.
-		\\\addlinespace
-		sh:maxCount & xsd:int & 0..1 & Maximum cardinality constraint. Formally
-		sh:maxCount specifies the maximum number of value nodes that satisfy the
-		condition.
-		\\\addlinespace
-		sh:minCount & xsd:int & 0..1 & Minimum cardinality constraint. Formally
-		sh:minCount specifies the minimum number of value nodes that satisfy the
-		condition. If the minimum cardinality value is 0 then this constraint is
-		always satisfied and so may be omitted.
-		\\\addlinespace
-		skos:editorialNote & rdfs:Literal & 0..* & A note for an editor,
-		translator or maintainer of the vocabulary.
-		\\\addlinespace
-		\bottomrule
-		\addlinespace
-		\caption{Properties of the lam:Propertyconfiguration class}
-	\end{longtable}
-}
 
 \subsection{skos:ConceptScheme}
 
@@ -267,11 +189,14 @@ class.
 	%	\fontsize{10pt}{10pt}
 	\footnotesize
 	\selectfont%\tabcolsep=3pt % hold it local
-	\begin{longtable}[c]{@{}p{3cm}p{2cm}p{2cm}p{7.8cm}@{}}
+	\begin{longtable}[c]{@{}p{3cm}p{3cm}p{1.5cm}p{7cm}@{}}
 		\toprule\addlinespace
 		Name & Type & Cardinality & Definition
 		\\\addlinespace
 		\midrule\endhead
+		\\\addlinespace
+		dct:created & xsd:date & 0..1 & Date of creation of the resource.
+		\\\addlinespace
 		owl:deprecated & xsd:boolean & 0..1 & States whether the resource is
 		current or deprecated. By deprecating a resource, it means that it
 		should not be used in new documents.
@@ -296,6 +221,8 @@ class.
 		\\\addlinespace
 		skos:example & rdfs:Literal & 0..* & An example of the use of a concept.
 		\\\addlinespace
+		skos:historyNote & rdfs:Literal & 0..* & 
+		\\\addlinespace
 		skos:notation & rdfs:Literal & 0..* & A notation is a string of
 		characters such as ``T58.5'' or ``303.4833'' used to uniquely identify a
 		concept within the scope of a given concept scheme or within a specified
@@ -317,6 +244,10 @@ class.
 		\\\addlinespace
 		skos:related & skos:Concept & 0..* & A concept with which there is an
 		associative semantic relationship.
+		\\\addlinespace
+		skos:inScheme & skos:ConceptScheme & 1..* &
+		\\\addlinespace
+		skos:topConceptOf & skos:ConceptScheme & 0..*
 		\\\addlinespace
 		\bottomrule
 		\addlinespace
@@ -340,8 +271,17 @@ the hierarchy.
 		Name & Type & Cardinality & Definition
 		\\\addlinespace
 		\midrule\endhead
+		dct:created & xsd:date & 0..1 & Date of creation of the resource.
+		\\\addlinespace
+		euvoc:order & xsd:int & 1..1 &
+		\\\addlinespace
 		skos:definition & rdfs:Literal & 0..1 & A statement or formal
 		explanation of the meaning of a collection.
+		\\\addlinespace
+		skos:notation & rdfs:Literal & 0..* & A notation is a string of
+		characters such as ``T58.5'' or ``303.4833'' used to uniquely identify a
+		collection within a specified
+		context.
 		\\\addlinespace
 		skos:prefLabel & rdfs:Literal & 1..1 & The preferred lexical label for a
 		resource, in a given language. No two concepts in the same concept
@@ -378,13 +318,38 @@ In LAM-SKOS-AP the role of sh:path is taken by lam:path.
 		Name & Type & Cardinality & Definition
 		\\\addlinespace
 		\midrule\endhead
+		dct:created & xsd:date & 0..1 & Date of creation of the resource.
+		\\\addlinespace
 		sh:description & rdfs:Literal & 0..* & Property shape may have values
 		for sh:description to provide descriptions of the property in the given
 		context.
 		\\\addlinespace
+		sh:hasValue & rdfs:Resource & 1..1 & sh:hasValue specifies the condition
+		that at least one value node is equal to the given RDF term.
+		\\\addlinespace
+		sh:maxCount & xsd:int & 0..1 & Maximum cardinality constraint. Formally
+		sh:maxCount specifies the maximum number of value nodes that satisfy the
+		condition.
+		\\\addlinespace
+		sh:minCount & xsd:int & 0..1 & Minimum cardinality constraint. Formally
+		sh:minCount specifies the minimum number of value nodes that satisfy the
+		condition. If the minimum cardinality value is 0 then this constraint is
+		always satisfied and so may be omitted.
+		\\\addlinespace
 		sh:name & rdfs:Literal & 1..1 & Property shapes may have one or more
 		values for sh:name to provide human-readable labels for the property in
 		the target where it appears.
+		\\\addlinespace
+		sh:pattern & rdfs:Literal & 1..* & sh:pattern specifies a regular
+		expression that each value node matches to satisfy the condition.
+		
+		It can be plain text or RegEx pattern matching the value of a given
+		lam:property.
+		\\\addlinespace
+		skos:editorialNote & rdfs:Literal & 0..* & A note for an editor,
+		translator or maintainer of the vocabulary.
+		\\\addlinespace
+		lam:hasAnnotationConfiguration & lam:AnnotationConfiguration & 0..*
 		\\\addlinespace
 		\bottomrule
 		\addlinespace
