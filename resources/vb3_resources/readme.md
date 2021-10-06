@@ -19,6 +19,7 @@ prefix dct:  <http://purl.org/dc/terms/>
 prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> 
 prefix sh:   <http://www.w3.org/ns/shacl#> 
 prefix lam: <http://publications.europa.eu/ontology/lam-skos-ap#> 
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
 ```
 
 # Custom forms (PEARL definitions)
@@ -39,6 +40,7 @@ prefix dct:  <http://purl.org/dc/terms/>
 prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> 
 prefix cdm:  <http://publications.europa.eu/ontology/cdm#> 
 prefix ann:  <http://publications.europa.eu/ontology/annotation#> 
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
 
 prefix	xsd: 	<http://www.w3.org/2001/XMLSchema#>
 prefix	rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -53,8 +55,11 @@ rule it.uniroma2.art.semanticturkey.customform.form.annotationConfiguration id:a
 		path uri userPrompt/path .
 		min literal^^xsd:integer userPrompt/min .
 		max literal^^xsd:integer userPrompt/max .
+		description literal userPrompt/description .
+		hasValue uri userPrompt/hasValue .
+		pattern literal userPrompt/pattern .
+		editorialNote literal userPrompt/editorialNote .
 		class uri userPrompt/class .
-		value uri userPrompt/value .
 	}
 	graph = {
 		$shapeId a lam:AnnotationConfiguration .
@@ -67,10 +72,19 @@ rule it.uniroma2.art.semanticturkey.customform.form.annotationConfiguration id:a
 			$shapeId sh:maxCount $max .
 		}
 		OPTIONAL{
-			$shapeId sh:class $class .
+			$shapeId sh:description $description .
 		}
 		OPTIONAL{
-			$shapeId sh:value $value .
+			$shapeId sh:hasValue $hasValue .
+		}
+		OPTIONAL{
+			$shapeId sh:pattern $pattern .
+		}
+		OPTIONAL{
+			$shapeId skos:editorialNote $editorialNote .
+		}
+		OPTIONAL{
+			$shapeId sh:class $class .
 		}
 	}
 }
@@ -91,7 +105,8 @@ prefix sh:   <http://www.w3.org/ns/shacl#>
 prefix dct:  <http://purl.org/dc/terms/> 
 prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> 
 prefix cdm:  <http://publications.europa.eu/ontology/cdm#> 
-prefix ann:  <http://publications.europa.eu/ontology/annotation#> 
+prefix ann:  <http://publications.europa.eu/ontology/annotation#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
 
 prefix	xsd: 	<http://www.w3.org/2001/XMLSchema#>
 prefix	rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -106,8 +121,10 @@ rule it.uniroma2.art.semanticturkey.customform.form.propertyConfiguration id:pro
 		path uri userPrompt/path .
 		min literal^^xsd:integer userPrompt/min .
 		max literal^^xsd:integer userPrompt/max .
-		class uri userPrompt/class .
-		value uri userPrompt/value .
+		description literal userPrompt/description .
+		hasValue uri userPrompt/hasValue .
+		pattern literal userPrompt/pattern .
+		editorialNote literal userPrompt/editorialNote .
 	}
 	graph = {
 		$shapeId a lam:PropertyConfiguration .
@@ -120,17 +137,23 @@ rule it.uniroma2.art.semanticturkey.customform.form.propertyConfiguration id:pro
 			$shapeId sh:maxCount $max .
 		}
 		OPTIONAL{
-			$shapeId sh:class $class .
+			$shapeId sh:description $description .
 		}
 		OPTIONAL{
-			$shapeId sh:value $value .
+			$shapeId sh:hasValue $hasValue .
+		}
+		OPTIONAL{
+			$shapeId sh:pattern $pattern .
+		}
+		OPTIONAL{
+			$shapeId skos:editorialNote $editorialNote .
 		}
 	}
 }
 ``` 
 
-## Classes mapping configuration
-Id: mappingConfiguration
+## Classes mapping property configuration
+Id: mappingPropertyConfiguration
 
 Show property: shacl:name
 
@@ -143,14 +166,15 @@ prefix sh:   <http://www.w3.org/ns/shacl#>
 prefix dct:  <http://purl.org/dc/terms/> 
 prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> 
 prefix cdm:  <http://publications.europa.eu/ontology/cdm#> 
-prefix ann:  <http://publications.europa.eu/ontology/annotation#> 
+prefix ann:  <http://publications.europa.eu/ontology/annotation#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
 
 prefix	xsd: 	<http://www.w3.org/2001/XMLSchema#>
 prefix	rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix	dc:		<http://purl.org/dc/terms/>
 prefix	coda: 	<http://art.uniroma2.it/coda/contracts/>
 			
-rule it.uniroma2.art.semanticturkey.customform.form.mappingConfiguration id:mappingConfiguration {
+rule it.uniroma2.art.semanticturkey.customform.form.mappingPropertyConfiguration id:mappingPropertyConfiguration {
 	nodes = {
  		shapeId uri(coda:randIdGen("res", {})) .
 		nameLang literal userPrompt/lang .
@@ -158,8 +182,10 @@ rule it.uniroma2.art.semanticturkey.customform.form.mappingConfiguration id:mapp
 		path uri userPrompt/path .
 		min literal^^xsd:integer userPrompt/min .
 		max literal^^xsd:integer userPrompt/max .
-		class uri userPrompt/class .
-		value uri userPrompt/value .
+		description literal userPrompt/description .
+		hasValue uri userPrompt/hasValue .
+		pattern literal userPrompt/pattern .
+		editorialNote literal userPrompt/editorialNote .
 	}
 	graph = {
 		$shapeId a lam:MappingPropertyConfiguration .
@@ -172,10 +198,16 @@ rule it.uniroma2.art.semanticturkey.customform.form.mappingConfiguration id:mapp
 			$shapeId sh:maxCount $max .
 		}
 		OPTIONAL{
-			$shapeId sh:class $class .
+			$shapeId sh:description $description .
 		}
 		OPTIONAL{
-			$shapeId sh:value $value .
+			$shapeId sh:hasValue $hasValue .
+		}
+		OPTIONAL{
+			$shapeId sh:pattern $pattern .
+		}
+		OPTIONAL{
+			$shapeId skos:editorialNote $editorialNote .
 		}
 	}
 }
