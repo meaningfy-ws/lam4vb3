@@ -212,3 +212,40 @@ rule it.uniroma2.art.semanticturkey.customform.form.mappingPropertyConfiguration
 	}
 }
 ``` 
+
+## LAM path configuration
+Id: lamPathConfiguration
+
+Show property: shacl:name
+
+Used for: lam:path
+
+Ref: 
+```turtle
+prefix lam: <http://publications.europa.eu/ontology/lam-skos-ap#>
+prefix sh:   <http://www.w3.org/ns/shacl#>
+prefix dct:  <http://purl.org/dc/terms/>
+prefix euvoc: <http://publications.europa.eu/ontology/euvoc#>
+prefix cdm:  <http://publications.europa.eu/ontology/cdm#>
+prefix ann:  <http://publications.europa.eu/ontology/annotation#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+
+prefix	xsd: 	<http://www.w3.org/2001/XMLSchema#>
+prefix	rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix	dc:		<http://purl.org/dc/terms/>
+prefix	coda: 	<http://art.uniroma2.it/coda/contracts/>
+
+rule it.uniroma2.art.semanticturkey.customform.form.lamPathConfiguration id:lamPathConfiguration {
+	nodes = {
+ 		shapeId uri(coda:randIdGen("res", {})) .
+		nameLang literal userPrompt/lang .
+		nameLit literal(coda:langString($nameLang)) userPrompt/name .
+		uriPath uri userPrompt/uriPath .
+	}
+	graph = {
+		$shapeId a lam:path .
+		$shapeId sh:name $nameLit .
+		$shapeId lam:path $uriPath .
+	}
+}
+```

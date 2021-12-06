@@ -1,0 +1,65 @@
+prefix lam: <http://publications.europa.eu/ontology/lam-skos-ap#> 
+prefix shacl:   <http://www.w3.org/ns/shacl#>
+prefix dct:  <http://purl.org/dc/terms/>
+prefix euvoc: <http://publications.europa.eu/ontology/euvoc#>
+prefix cdm:  <http://publications.europa.eu/ontology/cdm#>
+prefix ann:  <http://publications.europa.eu/ontology/annotation#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+
+prefix	xsd: 	<http://www.w3.org/2001/XMLSchema#>
+prefix	rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix	dc:		<http://purl.org/dc/terms/>
+prefix	coda: 	<http://art.uniroma2.it/coda/contracts/>
+
+rule it.uniroma2.art.semanticturkey.customform.form.documentPropertyConfiguration id:documentPropertyConfiguration {
+	nodes = {
+ 		shapeId uri(coda:randIdGen("res", {})) .
+		nameLang literal userPrompt/lang .
+
+		dctType literal stdForm/dctType.
+		SHPath uri userPrompt/SHPath .
+		class uri userPrompt/class .
+
+		altLabel literal(coda:langString($nameLang)) userPrompt/altLabel .
+		changeNote literal(coda:langString($nameLang)) userPrompt/changeNote .
+		definition literal userPrompt/definition .
+		editorialNote literal(coda:langString($nameLang)) userPrompt/editorialNote .
+		example literal userPrompt/example .
+		historyNote literal(coda:langString($nameLang)) userPrompt/historyNote .
+		notation literal userPrompt/notation .
+		scopeNote literal(coda:langString($nameLang)) userPrompt/scopeNote .
+	}
+	graph = {
+		$shapeId a lam:DocumentProperty .
+		$shapeId a skos:Concept .
+		$shapeId shacl:path $SHPath .
+		$shapeId dct:type ?dctType .
+		OPTIONAL{
+			$shapeId shacl:class $class .
+		}
+		OPTIONAL{
+			$shapeId shacl:altLabel ?altLabel .
+		}
+		OPTIONAL{
+			$shapeId shacl:changeNote ?changeNote .
+		}
+		OPTIONAL{
+			$shapeId shacl:definition ?definition .
+		}
+		OPTIONAL{
+			$shapeId skos:editorialNote $editorialNote .
+		}
+		OPTIONAL{
+			$shapeId skos:example $example .
+		}
+		OPTIONAL{
+			$shapeId shacl:historyNote $historyNote .
+		}
+		OPTIONAL{
+			$shapeId shacl:notation ?notation .
+		}
+		OPTIONAL{
+			$shapeId shacl:scopeNote $scopeNote .
+		}
+	}
+}

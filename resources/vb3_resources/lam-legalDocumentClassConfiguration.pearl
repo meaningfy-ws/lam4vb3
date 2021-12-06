@@ -1,0 +1,62 @@
+prefix lam: <http://publications.europa.eu/ontology/lam-skos-ap#>
+prefix sh:   <http://www.w3.org/ns/shacl#>
+prefix dct:  <http://purl.org/dc/terms/>
+prefix euvoc: <http://publications.europa.eu/ontology/euvoc#>
+prefix cdm:  <http://publications.europa.eu/ontology/cdm#>
+prefix ann:  <http://publications.europa.eu/ontology/annotation#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+
+prefix	xsd: 	<http://www.w3.org/2001/XMLSchema#>
+prefix	rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix	dc:		<http://purl.org/dc/terms/>
+prefix	coda: 	<http://art.uniroma2.it/coda/contracts/>
+
+rule it.uniroma2.art.semanticturkey.customform.form.legalDocumentClassConfiguration id:legalDocumentClassConfiguration {
+	nodes = {
+ 		resource uri(coda:randIdGen("res", {})) .
+		nameLang literal userPrompt/lang .
+		nameLit literal(coda:langString($nameLang)) userPrompt/Label .
+		date literal^^xsd:date userPrompt/dateCreated .
+
+		notation literal userPrompt/notation .
+		altLabel literal(coda:langString($nameLang)) userPrompt/altLabel .
+		definition literal(coda:langString($nameLang)) userPrompt/definition .
+		scopeNote literal(coda:langString($nameLang)) userPrompt/scopeNote .
+		example literal(coda:langString($nameLang)) userPrompt/example .
+		changeNote literal(coda:langString($nameLang)) userPrompt/changeNote .
+		historyNote literal(coda:langString($nameLang)) userPrompt/historyNote .
+		editorialNote literal(coda:langString($nameLang)) userPrompt/editorialNote .
+	}
+	graph = {
+
+		$resource a lam:LegalDocumentClass .
+		$resource a skos:Concept .
+		$resource skos:prefLabel $nameLit .
+		$resource dct:created $date .
+
+		OPTIONAL{
+			$resource skos:altLabel ?altLabel .
+		}
+		OPTIONAL{
+			$resource skos:changeNote ?changeNote .
+		}
+		OPTIONAL{
+			$resource skos:definition ?definition .
+		}
+		OPTIONAL{
+			$resource skos:editorialNote $editorialNote .
+		}
+		OPTIONAL{
+			$resource skos:example $example .
+		}
+		OPTIONAL{
+			$resource skos:historyNote $historyNote .
+		}
+		OPTIONAL{
+			$resource skos:notation ?notation .
+		}
+		OPTIONAL{
+			$resource skos:scopeNote $scopeNote .
+		}
+	}
+}
