@@ -34,8 +34,8 @@ This is a proxy class for the formal properties. It is aimed at capturing the hu
 		\\\addlinespace
 		dct:type & rdfsLiteral & 1..1 & A literal that specifies if the property is a data property or an object property.
 		\\\addlinespace
-		lam:hasAnnotationConfiguration & 
-		lam:AnnotationConfiguration & 0..* & 
+		{\makecell{lam:hasAnnotation\\Configuration}} & 
+		{\makecell{lam:hasAnnotation\\Configuration}} & 0..* & 
 		\\\addlinespace
 		\bottomrule
 		\addlinespace
@@ -313,7 +313,7 @@ In LAM-SKOS-AP the role of sh:path is taken by lam:path.
 	%	\fontsize{10pt}{10pt}
 	\footnotesize
 	\selectfont%\tabcolsep=3pt % hold it local
-	\begin{longtable}[c]{@{}p{3cm}p{2cm}p{2cm}p{7.8cm}@{}}
+	\begin{longtable}[c]{@{}p{3cm}p{3cm}p{2cm}p{6.8cm}@{}}
 		\toprule\addlinespace
 		Name & Type & Cardinality & Definition
 		\\\addlinespace
@@ -349,7 +349,8 @@ In LAM-SKOS-AP the role of sh:path is taken by lam:path.
 		skos:editorialNote & rdfs:Literal & 0..* & A note for an editor,
 		translator or maintainer of the vocabulary.
 		\\\addlinespace
-		lam:hasAnnotationConfiguration & lam:AnnotationConfiguration & 0..*
+		{\makecell{lam:hasAnnotation\\Configuration}} & 
+		{\makecell{lam:hasAnnotation\\Configuration}} & 0..* &
 		\\\addlinespace
 		\bottomrule
 		\addlinespace
