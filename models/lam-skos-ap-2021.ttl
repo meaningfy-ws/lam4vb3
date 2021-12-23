@@ -21,7 +21,7 @@
   rdfs:subPropertyOf <http://datashapes.org/dash#arg3> ;
 .
 <http://publications.europa.eu/ontology/lam-skos-ap>
-  a owl:Ontology ;
+  rdf:type owl:Ontology ;
   rdfs:comment "LAM-SKOS-AP SHCAL shape 2021" ;
   rdfs:label "LAM-SKOS-AP SHCAL shape 2021" ;
   owl:imports <http://datashapes.org/dash> ;
@@ -32,22 +32,22 @@
   owl:versionInfo "1.0.0" ;
 .
 lam:AnnotationConfiguration
-  a owl:Class ;
-  a sh:NodeShape ;
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
   rdfs:subClassOf lam:PropertyShape ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path sh:class ;
       sh:name "class" ;
       sh:nodeKind sh:IRI ;
     ] ;
 .
 lam:DocumentProperty
-  a owl:Class ;
-  a sh:NodeShape ;
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
   rdfs:subClassOf skos:Concept ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path dct:type ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -55,13 +55,13 @@ lam:DocumentProperty
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path sh:class ;
       sh:name "class" ;
       sh:nodeKind sh:IRI ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path sh:path ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -70,77 +70,77 @@ lam:DocumentProperty
     ] ;
 .
 lam:LegalDocumentClass
-  a owl:Class ;
-  a sh:NodeShape ;
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
   rdfs:subClassOf skos:Concept ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path lam:classifyWith ;
       sh:name "classify with" ;
       sh:nodeKind sh:IRI ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path lam:hasPropertyConfiguration ;
       sh:name "has property configuration" ;
       sh:nodeKind sh:IRI ;
     ] ;
 .
 lam:MappingPropertyConfiguration
-  a owl:Class ;
-  a sh:NodeShape ;
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
   rdfs:subClassOf lam:PropertyShape ;
 .
 lam:PropertyConfiguration
-  a owl:Class ;
-  a sh:NodeShape ;
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
   rdfs:subClassOf lam:PropertyShape ;
 .
 lam:PropertyShape
-  a owl:Class ;
-  a sh:NodeShape ;
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
   rdfs:subClassOf owl:Thing ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path dct:created ;
       sh:maxCount 1 ;
       sh:name "created" ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path skos:editorialNote ;
       sh:name "editorial note" ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path sh:description ;
       sh:name "description" ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path sh:hasValue ;
       sh:name "has value" ;
       sh:nodeKind sh:IRI ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path sh:maxCount ;
       sh:maxCount 1 ;
       sh:name "max count" ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path sh:minCount ;
       sh:maxCount 1 ;
       sh:name "min count" ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path sh:name ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -148,36 +148,36 @@ lam:PropertyShape
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path sh:pattern ;
       sh:name "pattern" ;
       sh:nodeKind sh:Literal ;
     ] ;
 .
 lam:classifyWith
-  a owl:ObjectProperty ;
+  rdf:type owl:ObjectProperty ;
   rdfs:domain lam:LegalDocumentClass ;
   rdfs:range lam:MappingPropertyConfiguration ;
 .
 lam:hasAnnotationConfiguration
-  a owl:ObjectProperty ;
+  rdf:type owl:ObjectProperty ;
   rdfs:domain lam:PropertyShape ;
   rdfs:range lam:AnnotationConfiguration ;
 .
 lam:hasPropertyConfiguration
-  a owl:ObjectProperty ;
+  rdf:type owl:ObjectProperty ;
   rdfs:domain lam:LegalDocumentClass ;
   rdfs:range lam:PropertyConfiguration ;
 .
 lam:path
-  a owl:ObjectProperty ;
+  rdf:type owl:ObjectProperty ;
   rdfs:domain lam:PropertyShape ;
   rdfs:range lam:DocumentProperty ;
 .
 skos:Collection
-  a sh:NodeShape ;
+  rdf:type sh:NodeShape ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path euvoc:order ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -185,7 +185,7 @@ skos:Collection
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path dct:created ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -193,14 +193,14 @@ skos:Collection
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path skos:definition ;
       sh:maxCount 1 ;
       sh:name "definition" ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path skos:notation ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -208,7 +208,7 @@ skos:Collection
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path skos:prefLabel ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -217,58 +217,58 @@ skos:Collection
     ] ;
 .
 skos:Concept
-  a sh:NodeShape ;
+  rdf:type sh:NodeShape ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path owl:deprecated ;
       sh:maxCount 1 ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path skos:altLabel ;
       sh:name "alt label" ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path skos:changeNote ;
       sh:name "change note" ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path skos:definition ;
       sh:maxCount 1 ;
       sh:name "definition" ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path skos:editorialNote ;
       sh:name "editorial note" ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path skos:example ;
       sh:name "example" ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path skos:historyNote ;
       sh:name "history note" ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path skos:notation ;
       sh:name "notation" ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path skos:prefLabel ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
@@ -276,24 +276,35 @@ skos:Concept
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path skos:scopeNote ;
       sh:maxCount 1 ;
       sh:name "scope note" ;
       sh:nodeKind sh:Literal ;
     ] ;
+  sh:sparql [
+      sh:message "Concept [{$this}] outside collection. Please add the concept [{$this}] into collection." ;
+      sh:prefixes <http://publications.europa.eu/ontology/lam-skos-ap> ;
+      sh:select """SELECT $this
+WHERE {
+	FILTER not exists {
+    ?collection a skos:Collection .
+	?collection skos:member $this .
+	}
+}""" ;
+    ] ;
 .
 skos:ConceptScheme
-  a sh:NodeShape ;
+  rdf:type sh:NodeShape ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path owl:versionInfo ;
       sh:maxCount 1 ;
       sh:name "version info" ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
-      a sh:PropertyShape ;
+      rdf:type sh:PropertyShape ;
       sh:path skos:prefLabel ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
