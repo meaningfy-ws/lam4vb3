@@ -285,11 +285,11 @@ skos:Concept
   sh:sparql [
       sh:message "Concept [{$this}] outside collection. Please add the concept [{$this}] into collection." ;
       sh:prefixes <http://publications.europa.eu/ontology/lam-skos-ap> ;
-      sh:select """SELECT $this
+      sh:select """SELECT ?this
 WHERE {
 	FILTER not exists {
     ?collection a skos:Collection .
-	?collection skos:member $this .
+	?collection skos:member ?this .
 	}
 }""" ;
     ] ;
