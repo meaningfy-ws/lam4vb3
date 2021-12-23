@@ -239,7 +239,7 @@ skos:Concept
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path skos:definition ;
-      sh:maxCount 1 ;
+      sh:maxCount 2 ;
       sh:name "definition" ;
       sh:nodeKind sh:Literal ;
     ] ;
@@ -270,7 +270,7 @@ skos:Concept
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path skos:prefLabel ;
-      sh:maxCount 1 ;
+      sh:maxCount 2 ;
       sh:minCount 1 ;
       sh:name "pref label" ;
       sh:nodeKind sh:Literal ;
