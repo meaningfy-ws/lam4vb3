@@ -1925,8 +1925,7 @@ celexd:class_5_COM a skos:Collection ;
         celexd:c_5_SC_OJL,
         celexd:c_5_XC,
         celexd:c_5_XC_OJC,
-        celexd:c_5_XC_OJL,
-        celexd:class_5 ;
+        celexd:c_5_XC_OJL ;
     skos:notation "5_COM" ;
     skos:prefLabel "European Commission"@en .
 
@@ -1941,8 +1940,7 @@ celexd:class_5_CONSIL a skos:Collection ;
         celexd:c_5_KG_OJC,
         celexd:c_5_XG,
         celexd:c_5_XG_OJC,
-        celexd:c_5_XG_OJL,
-        celexd:class_5 ;
+        celexd:c_5_XG_OJL ;
     skos:notation "5_CONSIL" ;
     skos:prefLabel "Council or Member States"@en .
 
@@ -1954,8 +1952,7 @@ celexd:class_5_COR a skos:Collection ;
         celexd:c_5_IR,
         celexd:c_5_IR_OJC,
         celexd:c_5_XR,
-        celexd:c_5_XR_OJC,
-        celexd:class_5 ;
+        celexd:c_5_XR_OJC ;
     skos:notation "5_COR" ;
     skos:prefLabel "European Committee of Regions"@en .
 
@@ -1970,8 +1967,7 @@ celexd:class_5_ECA a skos:Collection ;
         celexd:c_5_TA,
         celexd:c_5_TA_OJC,
         celexd:c_5_XA,
-        celexd:c_5_XA_OJC,
-        celexd:class_5 ;
+        celexd:c_5_XA_OJC ;
     skos:notation "5_ECA" ;
     skos:prefLabel "European Court of Auditors"@en .
 
@@ -1983,8 +1979,7 @@ celexd:class_5_ECB a skos:Collection ;
         celexd:c_5_HB,
         celexd:c_5_HB_OJC,
         celexd:c_5_XB,
-        celexd:c_5_XB_OJC,
-        celexd:class_5 ;
+        celexd:c_5_XB_OJC ;
     skos:notation "5_ECB" ;
     skos:prefLabel "European Central Bank"@en .
 
@@ -1994,8 +1989,7 @@ celexd:class_5_ECSC a skos:Collection ;
     skos:member celexd:c_5_AK,
         celexd:c_5_AK_OJC,
         celexd:c_5_XK,
-        celexd:c_5_XK_OJC,
-        celexd:class_5 ;
+        celexd:c_5_XK_OJC ;
     skos:notation "5_ECSC" ;
     skos:prefLabel "European Coal and Steel Community Consultative Committee (obsolete)"@en .
 
@@ -2009,8 +2003,7 @@ celexd:class_5_EESC a skos:Collection ;
         celexd:c_5_IE,
         celexd:c_5_IE_OJC,
         celexd:c_5_XE,
-        celexd:c_5_XE_OJC,
-        celexd:class_5 ;
+        celexd:c_5_XE_OJC ;
     skos:notation "5_EESC" ;
     skos:prefLabel "European Economic and Social Committee"@en .
 
@@ -2028,8 +2021,7 @@ celexd:class_5_EP a skos:Collection ;
         celexd:c_5_IP,
         celexd:c_5_IP_OJC,
         celexd:c_5_XP,
-        celexd:c_5_XP_OJC,
-        celexd:class_5 ;
+        celexd:c_5_XP_OJC ;
     skos:notation "5_EP" ;
     skos:prefLabel "European Parliament"@en .
 
@@ -2044,8 +2036,7 @@ celexd:class_5_OTHER a skos:Collection ;
         celexd:c_5_M_OJC,
         celexd:c_5_XX,
         celexd:c_5_XX_OJC,
-        celexd:c_5_XX_OJL,
-        celexd:class_5 ;
+        celexd:c_5_XX_OJL ;
     skos:notation "5_OTHER" ;
     skos:prefLabel "Other"@en .
 
@@ -2079,8 +2070,7 @@ celexd:class_6_CJ a skos:Collection ;
         celexd:c_6_CV,
         celexd:c_6_CV_EUR,
         celexd:c_6_CX,
-        celexd:c_6_CX_EUR,
-        celexd:class_6 ;
+        celexd:c_6_CX_EUR ;
     skos:notation "6_CJ" ;
     skos:prefLabel "Court of Justice"@en .
 
@@ -2098,8 +2088,7 @@ celexd:class_6_CST a skos:Collection ;
         celexd:c_6_FO,
         celexd:c_6_FO_EUR,
         celexd:c_6_FT,
-        celexd:c_6_FT_EUR,
-        celexd:class_6 ;
+        celexd:c_6_FT_EUR ;
     skos:notation "6_CST" ;
     skos:prefLabel "Civil Service Tribunal"@en .
 
@@ -2119,8 +2108,7 @@ celexd:class_6_GCEU a skos:Collection ;
         celexd:c_6_TO,
         celexd:c_6_TO_EUR,
         celexd:c_6_TT,
-        celexd:c_6_TT_EUR,
-        celexd:class_6 ;
+        celexd:c_6_TT_EUR ;
     skos:notation "6_GCEU" ;
     skos:prefLabel "General Court (pre-Lisbon: Court of First Instance)"@en .
 
