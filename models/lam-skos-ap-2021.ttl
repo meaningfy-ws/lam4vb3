@@ -2,7 +2,6 @@
 # imports: http://datashapes.org/dash
 # imports: http://purl.org/dc/terms/
 # imports: http://www.w3.org/2004/02/skos/core
-# imports: http://www.w3.org/2008/05/skos-xl
 # imports: http://www.w3.org/ns/shacl#
 # prefix: lam
 
@@ -14,7 +13,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://datashapes.org/dash#cachable>
@@ -83,7 +81,7 @@ lam:LegalDocumentClass
       rdf:type sh:PropertyShape ;
       sh:path lam:hasPropertyConfiguration ;
       sh:name "has property configuration" ;
-      sh:nodeKind sh:IRI ;
+      sh:minCount 0;
     ] ;
 .
 lam:MappingPropertyConfiguration
