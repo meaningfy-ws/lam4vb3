@@ -140,6 +140,7 @@ lam:PropertyShape
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path sh:name ;
+      sh:severity sh:Info ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
       sh:name "name" ;
@@ -154,23 +155,15 @@ lam:PropertyShape
 .
 lam:classifyWith
   rdf:type owl:ObjectProperty ;
-  rdfs:domain lam:LegalDocumentClass ;
-  rdfs:range lam:MappingPropertyConfiguration ;
 .
 lam:hasAnnotationConfiguration
   rdf:type owl:ObjectProperty ;
-  rdfs:domain lam:PropertyShape ;
-  rdfs:range lam:AnnotationConfiguration ;
 .
 lam:hasPropertyConfiguration
   rdf:type owl:ObjectProperty ;
-  rdfs:domain lam:LegalDocumentClass ;
-  rdfs:range lam:PropertyConfiguration ;
 .
 lam:path
   rdf:type owl:ObjectProperty ;
-  rdfs:domain lam:PropertyShape ;
-  rdfs:range lam:DocumentProperty ;
 .
 skos:Collection
   rdf:type sh:NodeShape ;
@@ -281,13 +274,13 @@ skos:Concept
       sh:nodeKind sh:Literal ;
     ] ;
   sh:sparql [
-      sh:message "Concept [{$this}] outside collection. Please add the concept [{$this}] into collection." ;
+      sh:message "Concept outside collection. Please add the concept into collection." ;
       sh:prefixes <http://publications.europa.eu/ontology/lam-skos-ap> ;
       sh:select """SELECT ?this
 WHERE {
 	FILTER not exists {
-    ?collection a skos:Collection .
-	?collection skos:member ?this .
+    ?collection a <http://www.w3.org/2004/02/skos/core#Collection> .
+	?collection <http://www.w3.org/2004/02/skos/core#member> ?this .
 	}
 }""" ;
     ] ;
