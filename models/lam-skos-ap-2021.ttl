@@ -269,7 +269,7 @@ skos:Concept
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path skos:scopeNote ;
-      sh:maxCount 1 ;
+      sh:maxCount 2 ;
       sh:name "scope note" ;
       sh:nodeKind sh:Literal ;
     ] ;
