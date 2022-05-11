@@ -47,7 +47,7 @@ lam:DocumentProperty
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path dct:type ;
-      sh:maxCount 1 ;
+      sh:maxCount 2 ;
       sh:minCount 1 ;
       sh:name "type" ;
       sh:nodeKind sh:Literal ;
@@ -61,7 +61,7 @@ lam:DocumentProperty
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path sh:path ;
-      sh:maxCount 1 ;
+      sh:maxCount 2 ;
       sh:minCount 1 ;
       sh:name "path" ;
       sh:nodeKind sh:IRI ;
@@ -101,7 +101,7 @@ lam:PropertyShape
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path dct:created ;
-      sh:maxCount 1 ;
+      sh:maxCount 2 ;
       sh:name "created" ;
       sh:nodeKind sh:Literal ;
     ] ;
@@ -126,14 +126,14 @@ lam:PropertyShape
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path sh:maxCount ;
-      sh:maxCount 1 ;
+      sh:maxCount 2 ;
       sh:name "max count" ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path sh:minCount ;
-      sh:maxCount 1 ;
+      sh:maxCount 2 ;
       sh:name "min count" ;
       sh:nodeKind sh:Literal ;
     ] ;
@@ -141,7 +141,7 @@ lam:PropertyShape
       rdf:type sh:PropertyShape ;
       sh:path sh:name ;
       sh:severity sh:Info ;
-      sh:maxCount 1 ;
+      sh:maxCount 2 ;
       sh:minCount 1 ;
       sh:name "name" ;
       sh:nodeKind sh:Literal ;
@@ -170,7 +170,7 @@ skos:Collection
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path euvoc:order ;
-      sh:maxCount 1 ;
+      sh:maxCount 2 ;
       sh:minCount 1 ;
       sh:name "order" ;
       sh:nodeKind sh:Literal ;
@@ -178,7 +178,7 @@ skos:Collection
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path dct:created ;
-      sh:maxCount 1 ;
+      sh:maxCount 2 ;
       sh:minCount 1 ;
       sh:name "created" ;
       sh:nodeKind sh:Literal ;
@@ -186,14 +186,14 @@ skos:Collection
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path skos:definition ;
-      sh:maxCount 1 ;
+      sh:maxCount 2 ;
       sh:name "definition" ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path skos:notation ;
-      sh:maxCount 1 ;
+      sh:maxCount 2 ;
       sh:minCount 1 ;
       sh:name "notation" ;
       sh:nodeKind sh:Literal ;
@@ -201,7 +201,7 @@ skos:Collection
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path skos:prefLabel ;
-      sh:maxCount 1 ;
+      sh:maxCount 2 ;
       sh:minCount 1 ;
       sh:name "pref label" ;
       sh:nodeKind sh:Literal ;
@@ -212,7 +212,7 @@ skos:Concept
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path owl:deprecated ;
-      sh:maxCount 1 ;
+      sh:maxCount 2 ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
@@ -290,14 +290,14 @@ skos:ConceptScheme
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path owl:versionInfo ;
-      sh:maxCount 1 ;
+      sh:maxCount 2 ;
       sh:name "version info" ;
       sh:nodeKind sh:Literal ;
     ] ;
   sh:property [
       rdf:type sh:PropertyShape ;
       sh:path skos:prefLabel ;
-      sh:maxCount 1 ;
+      sh:maxCount 2 ;
       sh:minCount 1 ;
       sh:name "pref label" ;
       sh:nodeKind sh:Literal ;
