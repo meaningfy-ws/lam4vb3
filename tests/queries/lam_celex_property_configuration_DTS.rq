@@ -13,7 +13,4 @@ WHERE {
   ?pc lam:path lamd:md_DTA .
   ?pc sh:minCount "1"^^xsd:int .
   ?pc sh:hasValue "5"^^xsd:int .
-# checking that the property configuration does not have an annotation configuration value.
-  ?pc lam:hasAnnotationConfiguration ?ac .
-  FILTER NOT EXISTS { ?ac sh:hasValue ?value } .
 }
