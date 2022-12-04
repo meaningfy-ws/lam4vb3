@@ -138,3 +138,4 @@ wrapt==1.12.1
 xlrd==2.0.1
 yarl==1.6.3
 zipp==3.5.0
+setuptools~=57.5.0
