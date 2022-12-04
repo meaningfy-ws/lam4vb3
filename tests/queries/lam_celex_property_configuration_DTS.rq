@@ -10,7 +10,6 @@ ASK
 WHERE {
   VALUES ?subject {celexd:c_5_XR_OJC} .
   ?subject lam:hasPropertyConfiguration ?pc .
-  ?pc lam:path lamd:md_DTA .
+  ?pc lam:path lamd:md_DTS .
   ?pc sh:minCount "1"^^xsd:int .
-  ?pc sh:hasValue "5"^^xsd:int .
 }
