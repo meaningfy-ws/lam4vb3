@@ -1,0 +1,15 @@
+PREFIX lam: <http://publications.europa.eu/ontology/lam-skos-ap#>
+PREFIX lamd: <http://publications.europa.eu/resources/authority/lam/>
+PREFIX celexd: <http://publications.europa.eu/resources/authority/celex/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+
+# testing celexd:c_5_XR_OJC CELEX class property configuration (lamd:md_DTS) with value 5
+
+
+ASK
+WHERE {
+  VALUES ?subject {celexd:c_5_XR_OJC} .
+  ?subject lam:hasPropertyConfiguration ?pc .
+  ?pc lam:path lamd:md_DTS .
+  ?pc sh:minCount "1"^^xsd:int .
+}

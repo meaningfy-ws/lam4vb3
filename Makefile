@@ -7,7 +7,9 @@ BUILD_PRINT = \e[1;34mSTEP: \e[0m
 #INPUT_EXCEL = resources/input_workbook/LAM_metadata_20210218_ECO.xlsx
 #INPUT_EXCEL = resources/input_workbook/LAM_metadata_20210408.xlsx
 #INPUT_EXCEL = resources/input_workbook/LAM_metadata_20210413.xlsx
-INPUT_EXCEL = resources/input_workbook/LAM_metadata_20210909.xlsx
+# INPUT_EXCEL = resources/input_workbook/LAM_metadata_20210909.xlsx
+INPUT_EXCEL = resources/input_workbook/LAM_metadata_20210909-ECO-corr-2022-12-4.xlsx
+
 
 install:
 	@ echo "$(BUILD_PRINT)Installing the requirements"
@@ -19,6 +21,12 @@ install-dev: install
 	@ echo "$(BUILD_PRINT)Installing the requirements"
 	@ pip install --upgrade pip
 	@ pip install -r requirements-dev.txt
+
+install-release-1.1.lock:
+	@ echo "$(BUILD_PRINT)Installing the requirements"
+	@ pip install pip==21.2.2
+	@ pip install setuptools~=57.5.0
+	@ pip install -r requirements-2021-08-30.txt.lock
 
 lint:
 	@ echo "$(BUILD_PRINT)Linting the code"

@@ -12,7 +12,7 @@
 
 lamd:class_ADI a skos:Collection ;
     euvoc:order "6" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:definition "Additional properties relevant for the legal analysis" ;
     skos:member lamd:md_AD_COUNTRY,
         lamd:md_AD_INST,
@@ -44,7 +44,7 @@ lamd:class_ADI a skos:Collection ;
 
 lamd:class_CLAS a skos:Collection ;
     euvoc:order "3" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:definition "Tools used for classification of the documents (Directory code, Subject matter) or for describing of the content (EuroVoc)." ;
     skos:member lamd:md_CC,
         lamd:md_CT,
@@ -56,7 +56,7 @@ lamd:class_CLAS a skos:Collection ;
 
 lamd:class_EDIT a skos:Collection ;
     euvoc:order "8" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:definition "Description of some other editorial propereties used in this document" ;
     skos:member lamd:md_CLASSIFICATION,
         lamd:md_CODE,
@@ -74,7 +74,7 @@ lamd:class_EDIT a skos:Collection ;
 
 lamd:class_ESI a skos:Collection ;
     euvoc:order "4" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:definition "Most important properties from the legal analysis point of view" ;
     skos:member lamd:md_AU,
         lamd:md_FM,
@@ -85,7 +85,7 @@ lamd:class_ESI a skos:Collection ;
 
 lamd:md_CONTROLLED_LIST a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:LAMProperties ;
     skos:notation "CONTROLLED_LIST" ;
@@ -94,7 +94,7 @@ lamd:md_CONTROLLED_LIST a lam:DocumentProperty,
 
 lamd:md_LAM_PATH a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:LAMProperties ;
     skos:notation "LAM_PATH" ;
@@ -103,7 +103,7 @@ lamd:md_LAM_PATH a lam:DocumentProperty,
 
 lamd:md_PARENT_COLLECTION a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:inScheme lamd:LAMProperties ;
     skos:notation "PARENT_COLLECTION" ;
@@ -112,7 +112,7 @@ lamd:md_PARENT_COLLECTION a lam:DocumentProperty,
 
 lamd:md_PROP_TYPE a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:inScheme lamd:LAMProperties ;
     skos:notation "PROP_TYPE" ;
@@ -121,7 +121,7 @@ lamd:md_PROP_TYPE a lam:DocumentProperty,
 
 lamd:md_SH_PATH a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:inScheme lamd:LAMProperties ;
     skos:notation "SH_PATH" ;
@@ -130,7 +130,7 @@ lamd:md_SH_PATH a lam:DocumentProperty,
 
 lamd:class_AJ a skos:Collection ;
     euvoc:order "4" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:member lamd:class_RBD,
         lamd:md_ANNULMENT_REQ,
         lamd:md_ANULMENT_PARTIAL_REQ,
@@ -145,7 +145,7 @@ lamd:class_AJ a skos:Collection ;
 
 lamd:class_CI a skos:Collection ;
     euvoc:order "5" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:member lamd:class_CI,
         lamd:md_CI ;
     skos:notation "CI" ;
@@ -153,7 +153,7 @@ lamd:class_CI a skos:Collection ;
 
 lamd:class_CLX a skos:Collection ;
     euvoc:order "1" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:member lamd:class_REF,
         lamd:md_DN,
         lamd:md_DN_CLASS,
@@ -168,7 +168,7 @@ lamd:class_CLX a skos:Collection ;
 
 lamd:class_CURIA a skos:Collection ;
     euvoc:order "1" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:definition "Properties applicable to EU case-law collection (CURIA)." ;
     skos:member lamd:class_JURI,
         lamd:md_AP,
@@ -180,7 +180,7 @@ lamd:class_CURIA a skos:Collection ;
 
 lamd:class_DANNOT a skos:Collection ;
     euvoc:order "2" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:member lamd:class_DATE,
         lamd:md_ANN_COD,
         lamd:md_ANN_TOD ;
@@ -189,7 +189,7 @@ lamd:class_DANNOT a skos:Collection ;
 
 lamd:class_DPROP a skos:Collection ;
     euvoc:order "1" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:member lamd:class_DATE,
         lamd:md_DB,
         lamd:md_DD,
@@ -208,7 +208,7 @@ lamd:class_DPROP a skos:Collection ;
 
 lamd:class_LB a skos:Collection ;
     euvoc:order "1" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:member lamd:class_RBD,
         lamd:md_LB ;
     skos:notation "LB" ;
@@ -216,7 +216,7 @@ lamd:class_LB a skos:Collection ;
 
 lamd:class_MSEA a skos:Collection ;
     euvoc:order "2" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:member lamd:class_RBD,
         lamd:md_ADDITION,
         lamd:md_ADOPTION,
@@ -252,7 +252,7 @@ lamd:class_MSEA a skos:Collection ;
 
 lamd:class_NAT a skos:Collection ;
     euvoc:order "2" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:definition "Properties applicable to national case-law collection (incl. JURE)." ;
     skos:member lamd:class_JURI,
         lamd:md_CLASS_COURT,
@@ -274,7 +274,7 @@ lamd:class_NAT a skos:Collection ;
 
 lamd:class_OTHER_REF a skos:Collection ;
     euvoc:order "2" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:member lamd:class_REF,
         lamd:md_ECLI,
         lamd:md_ELI,
@@ -290,7 +290,7 @@ lamd:class_OTHER_REF a skos:Collection ;
 
 lamd:class_RANNOT a skos:Collection ;
     euvoc:order "6" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:member lamd:class_RBD,
         lamd:md_ANN_ART,
         lamd:md_ANN_CLB,
@@ -310,7 +310,7 @@ lamd:class_RANNOT a skos:Collection ;
 
 lamd:class_RD a skos:Collection ;
     euvoc:order "3" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:member lamd:class_RBD,
         lamd:md_ASSOCIATION,
         lamd:md_ASSOCIATION_WORK,
@@ -320,7 +320,7 @@ lamd:class_RD a skos:Collection ;
 
 lamd:class_REFANNOT a skos:Collection ;
     euvoc:order "3" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:definition "Anntoations to references." ;
     skos:member lamd:class_REF,
         lamd:md_ANN_DP ;
@@ -336,7 +336,7 @@ lamd:md_ADDITION a lam:DocumentProperty,
         lamd:res_PQWvQKqcv6x6aTy3QzR34q,
         lamd:res_bjQwCUqzZyQYV7s3vhRvy9,
         lamd:res_cqsBxpuTffVD52u4kbVZjb ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Addition (JJ)
 
@@ -383,7 +383,7 @@ lamd:md_ADOPTION a lam:DocumentProperty,
         lamd:res_Yfh9RHAuy6w8PNMW9G6rrs,
         lamd:res_adJfUcpAHi7iVFpf6kaaQw,
         lamd:res_dkLXt7AFitvgNp98AgeXJn ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Adoption (YD)
 
@@ -420,7 +420,7 @@ lamd:md_ADOPTION_PAR a lam:DocumentProperty,
         lamd:res_WgVPVq2zXhZ6tU6CUCgUkb,
         lamd:res_dCSRBkHcx9NTtHLNW7h6n7,
         lamd:res_dfgnGwPsHhuGKmMkYaBX9Y ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Partial adoption (YDP)
 
@@ -452,7 +452,7 @@ start_of_validity"""@en ;
 
 lamd:md_AD_COUNTRY a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Where available this field contains the name of MS or third country." ;
     skos:editorialNote "16/2/2021 This field is used for ECB facet search on addressees."@en ;
@@ -468,7 +468,7 @@ lamd:md_AD_COUNTRY a lam:DocumentProperty,
 
 lamd:md_AD_INST a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Where available this field contains the name of institution." ;
     skos:editorialNote """(13/07/2015): New code LIBELLE CODE="CH" - Switzerland was created in FD_050. Should be used also in this document: 32015D1056
@@ -526,7 +526,7 @@ ECB opinions and letters: AD_COUNTRY
 
 lamd:md_AD_ORGAN a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Where available this field contains the name of organisation, company,…" ;
     skos:example "<j.0:resource_legal_addresses_organization rdf:resource=\"http://publications.europa.eu/resource/agent/CVC%20Group\"/>" ;
@@ -542,7 +542,7 @@ lamd:md_AD_ORGAN a lam:DocumentProperty,
 
 lamd:md_AF a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """This field refers to the political affiliation and nationality of the Member of the European Parliament who asked the question.  
 (Political groups represent various political tendencies within the Parliament. Each is represented in the Conference of Presidents by its chairperson, who also has the task of explaining the group’s position on issues under discussion at plenary sessions). """ ;
@@ -564,7 +564,7 @@ lamd:md_AMENDMENT a lam:DocumentProperty,
         lamd:res_R9tRSDzxxjjar77cbdPogx,
         lamd:res_RZLfHHR3WF7ghRkHixUFdK,
         lamd:res_kXmtqg7rR9TnqxhBMtn5Q6 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Amendment (MM)
 
@@ -607,7 +607,7 @@ lamd:md_AMENDMENT_PRO a lam:DocumentProperty,
         lamd:res_Hxa9ioxWn8NghWcPDew7oq,
         lamd:res_jswX769j2qt2VVaKV3hpzz,
         lamd:res_knuFmyKooPU5bsZ8fqQT6o ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Proposal to amend (PM)
 
@@ -643,7 +643,7 @@ lamd:md_ANNULMENT_REQ a lam:DocumentProperty,
         lamd:res_VXMm4SLXg3SfrAau39joWs,
         lamd:res_Zdk9TvnKHu2hcZvcm3JCn9,
         lamd:res_exhAcgqF6KUaivoUsFL5UD ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Annulment request (KL)
 
@@ -655,7 +655,7 @@ This is a link from announcements on EU case law published in the Official Journ
 
 lamd:md_ANN_DP a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Indicates domain position in OJ act reference." ;
     skos:inScheme lamd:LAMProperties ;
@@ -672,7 +672,7 @@ lamd:md_ANULMENT_PARTIAL_REQ a lam:DocumentProperty,
         lamd:res_XPn2MUFoo44BTx8fn6kVuu,
         lamd:res_kqLSBnakYqWBX2sAGejQQM,
         lamd:res_mq9c2HijqfSonLbtYnzuFM ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Partial annulment request (DL)
 
@@ -684,7 +684,7 @@ This is a link from announcements on EU case law published in the Official Journ
 
 lamd:md_AP a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field is relevant for announcements on EU case law published in the Official Journal. It refers to the institution, body or Member State submitting the application (EU case-law). If the applicant is a private entity or person, then it, she or he is referred to as \"person\"." ;
     skos:example "<j.0:communication_cjeu_requested_by_agent rdf:resource=\"http://publications.europa.eu/resource/authority/fd_110/PART\"/>" ;
@@ -720,7 +720,7 @@ lamd:md_APPLICABILITY_DEF a lam:DocumentProperty,
         lamd:res_WbfiVyVcBtb6LdUP2t7qRS,
         lamd:res_g9hVtpDk7fnsoboyHaFjDA,
         lamd:res_gAXXYmxu9XBYWCxHDxiVBg ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Defers application of (TT)
 
@@ -744,7 +744,7 @@ lamd:md_APPLICABILITY_EXT a lam:DocumentProperty,
         lamd:res_cmXCJ6vQomvdS9knvGB7Ta,
         lamd:res_eRqq8zrKeiCWahNNZeTxwr,
         lamd:res_mVSBkbrZ2dtaUDTKJPjrRq ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Extension of application (EE)
 
@@ -788,7 +788,7 @@ famille"""@en ;
 
 lamd:md_AS a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field indicates a co-author of a Commission proposal (Commission DG or DGs)." ;
     skos:editorialNote """cdm properties:
@@ -821,7 +821,7 @@ lamd:md_ASSOCIATION a lam:DocumentProperty,
     lam:hasAnnotationConfiguration lamd:res_HevBrretYe7FhSsAXMbTuB,
         lamd:res_Qh97z2u2WTGU4LtkRAcpe4,
         lamd:res_V9UmZp4h7mYn8rWQ82aJZN ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Related international agreement (RG)
 
@@ -840,7 +840,7 @@ lamd:md_ASSOCIATION_WORK a lam:DocumentProperty,
     lam:hasAnnotationConfiguration lamd:res_BHwSWcmrNUdVoKpqPR5r9B,
         lamd:res_Focq8d6eGQxdDH5rgsit2V,
         lamd:res_kB6zsixAqSoCcMXFZvzbMG ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "OJ ABA - link between documents usually published on the same day but in different OJ-series and concerning the same topic (restrictive measures, fisheries,…).  See also Related international agreement (RG)." ;
     skos:inScheme lamd:LAMProperties ;
@@ -850,7 +850,7 @@ lamd:md_ASSOCIATION_WORK a lam:DocumentProperty,
 
 lamd:md_AU a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "The Author field indicates the name of the institution, the body or the country that produced the act." ;
     skos:editorialNote """April 2015: For parliamentary questions, the author field contained also the name of the Member of the European Parliament in the past. However, because of missing mapping in the CELLAR, those names are currently not displayed on the new EUR-Lex. 
@@ -892,7 +892,7 @@ EU treaties and international agreements: name of the country (countries) signin
 
 lamd:md_BP a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "This element describes the type of referral on which the committee is acting to elaborate the document. In IMMC the element is *:basis_procedural and the 3 values allowed by the schema are: mandatory; optional; own-initiative." ;
     skos:editorialNote """EURLEXNEW-3088
@@ -905,7 +905,7 @@ lamd:md_BP a lam:DocumentProperty,
 
 lamd:md_CC a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Directory is a numerical classification tool. It offers access to EU law by subject.
 ******The Directory is a classification that consists of 20 chapters with subdivisions covering the main activities and competences of the EU. Strictly speaking, the directory codes are the numbers given to every chapter and subdivision in the Directory. For example: 03.20 Agricultural structural funds. The Directory Code has a tree structure and it can be browsed online or it can be downloaded in PDF format from the EUR-Lex website or in XML or SKOS format from the MDR svn (table FD_555). The EUR-Lex Directory gives access to European Union legal acts / acts of EU legislation, but also to other instruments such as preparatory and informative documents, agreements and conventions concluded by the EU and to other non-binding instruments relating to policy activities such as declarations, guidelines, reports, etc. The structure and the subdivisions of the Directory mat change with the time. It is foreseen to perform modifications in the Directory in order to make it conform with the Treaties in force and to cover all the competencies and policies of the EU. 
@@ -1035,7 +1035,7 @@ The minimum number of directory codes that can be assigned to a document is one 
 
 lamd:md_CDM_CLASS a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Class or subclass according to CDM." ;
     skos:inScheme lamd:LAMProperties ;
@@ -1047,7 +1047,7 @@ lamd:md_CI a lam:DocumentProperty,
         skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_6ijyjPpnfLhczNDCZs2WjR,
         lamd:res_jJCT8v5F82bismqEKL4Zcf ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Instruments cited (IC)
 
@@ -1080,7 +1080,7 @@ fragment_cited_target indicates to which specific part of an document refers thi
 
 lamd:md_CLASSIFICATION a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Only for LAM purposes." ;
     skos:inScheme lamd:LAMProperties ;
@@ -1090,7 +1090,7 @@ lamd:md_CLASSIFICATION a lam:DocumentProperty,
 
 lamd:md_CLASS_COURT a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Limited to sector 8. Classification of the national court in the national legal system. " ;
     skos:editorialNote """
@@ -1119,7 +1119,7 @@ CASE-LAW_DELIVERED_BY_COURT_NATIONAL/EMBEDDED_NOTICE/AGENT/COURT_NATIONAL_HAS_TY
 
 lamd:md_CM a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "This field contains diverse data that have been added to facilitate the work of the units of the European Union." ;
     skos:editorialNote """28/02/2017:  New value for ephemeral documents introduced (EPH). 
@@ -1171,7 +1171,7 @@ This field has a free text format and the contents are exported without translat
 
 lamd:md_CODE a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:inScheme lamd:LAMProperties ;
     skos:notation "CODE" ;
@@ -1180,7 +1180,7 @@ lamd:md_CODE a lam:DocumentProperty,
 
 lamd:md_CODIF a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Indication whether a this is a codified version of a legal act or not." ;
     skos:editorialNote "18/2/2021: Currently not used by EUR-Lex. To be followed."@en ;
@@ -1193,7 +1193,7 @@ lamd:md_CODIF a lam:DocumentProperty,
 
 lamd:md_COMMENT a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Field used in the cataloguing methodology for  information purposes. It contains different comments related to the specific document type." ;
     skos:inScheme lamd:LAMProperties ;
@@ -1210,7 +1210,7 @@ lamd:md_COMMUNIC_REQ a lam:DocumentProperty,
         lamd:res_PgNb6rZUGcwnSpodsPBTwY,
         lamd:res_QJZhBbJTwzSoz2CDeFNd9j,
         lamd:res_bpABZh8QrLVmnGj2dmqFxG ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Related EU case law document (JL)
 
@@ -1229,7 +1229,7 @@ lamd:md_COMPLETION a lam:DocumentProperty,
         lamd:res_Y4yvxEJr9JYafcAGYcRRrp,
         lamd:res_iGhtVckfBsAinZUTSJbHqG,
         lamd:res_jKfeNNcy9byU3UZiEMb3xQ ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Completion (CC)
 
@@ -1277,7 +1277,7 @@ lamd:md_CONFIRMATION a lam:DocumentProperty,
         lamd:res_WiHQEyJBchdzntfz3d8Ggh,
         lamd:res_YEWMvq8UPhhLKWTWRKKpCk,
         lamd:res_a2xX7oQDUYwk9zoe7iFVjL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Confirmation (FF)
 
@@ -1297,7 +1297,7 @@ lamd:md_CORRIGENDUM a lam:DocumentProperty,
         lamd:res_bbL3RhftwFMLQxMbRYD5yw,
         lamd:res_emBPNGATP3Ntem5BECmTXh,
         lamd:res_gmMPmNsMpmqUgN6jQkaQFX ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Corrigendum (RC)
 This link contains the CELEX number of earlier acts corrected by the given act.
@@ -1334,7 +1334,7 @@ famille"""@en ;
 
 lamd:md_CT a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Subject matter is a classification tool containing alphabetically structured list of over 200 keywords. It is based on the subdivisions of the treaties and on the areas of activity of the institutions. The descriptors are less specific than those used in the Directory code but provide a general overview of the content of the document." ;
     skos:editorialNote "November 2020: A special extension for ECB documents was created - ECB topics classification was integrated into subject matter. This extension has a tree structure and is under code BCE. This tree structure is also respected by EUR-Lex (subject matter level 1 - level 3). As a general rule, ECB documents shall be indexed by at least by one concept from ECB extension (provided directly by ECB), but also other concepts can be used (by legal analysis). "@en ;
@@ -1360,7 +1360,7 @@ In order to maintain consistency, some rules must be respected by the indexation
 
 lamd:md_DB a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Date of debate on the proposed secondary legislation in the European Parliament, European Economic and Social Committee or European Committee of Regions. The date has format YYYY-MM-DD." ;
     skos:editorialNote "02/05/2015: There are currently two fields duplicating the same information – DB (date of debate) and VO (date of vote). Both were used for different notices in the past. Date of debate is usually not indicated in the OJ, there is only information concerning the session (e.g. 109th plenary session, 3—4 December 2014). Both dates should be present in DB field, but it can currently contain only one date. This should be clarified with the CELLAR."@en ;
@@ -1373,7 +1373,7 @@ lamd:md_DB a lam:DocumentProperty,
 
 lamd:md_DC a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """EuroVoc is a multilingual and multi-disciplinary thesaurus which covers the field of activity of the European Union. It was originally built up specifically for processing the documentary information of the EU institutions, but is largely used outside the EU institutions as well. 
 The aim of EuroVoc is to provide the information management and dissemination services with a coherent indexing tool for the effective management of their documentary resources and to enable users to carry out documentary searches using controlled vocabulary.
@@ -1476,7 +1476,7 @@ EUROVOC descriptor: European trademark / trademark law / action for annulment of
 lamd:md_DD a lam:DocumentProperty,
         skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_EnK6CP3LGqdgZ74VQdzEgQ ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """It is the date present usually in document´s title. Date of document is a core metadata and therefore the one most widely available (each notice must contain one document date). The date has format YYYY-MM-DD. The date of the document might correspond to (an appropriate annotation has to be created): 
 
@@ -1560,7 +1560,7 @@ lamd:md_DEROGATION a lam:DocumentProperty,
         lamd:res_WtwxTV5UxWE9fbW8iQ39xV,
         lamd:res_bvs9apnikfzJwWKFJNtoy9,
         lamd:res_jMktU2EHhHnuGZKUap5GKT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Derogation (DD)
 
@@ -1589,7 +1589,7 @@ famille"""@en ;
 
 lamd:md_DESCRIPTION a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Only for LAM purposes." ;
     skos:inScheme lamd:LAMProperties ;
@@ -1599,7 +1599,7 @@ lamd:md_DESCRIPTION a lam:DocumentProperty,
 
 lamd:md_DF a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field is relevant for announcements on EU case law published in the Official Journal. It refers to the defending institution, body or Member State. If the defendant is a private entity or person, then it, she or he is referred to as \"person\"." ;
     skos:example "<j.0:communication_cjeu_defended_by_agent rdf:resource=\"http://publications.europa.eu/resource/authority/fd_110/IC\"/>" ;
@@ -1626,7 +1626,7 @@ Information about applicant or defendant is present also in the alternative titl
 lamd:md_DH a lam:DocumentProperty,
         skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_jpQ8iXdBqb8idsujJeFd7v ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Date of dispatch for transmission to one of the institutions. The date has format YYYY-MM-DD." ;
     skos:example "cdm:resource_legal_date_dispatch rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2000-10-26</cdm:resource_legal_date_dispatch>" ;
@@ -1661,7 +1661,7 @@ Oral questions: date of the session
 lamd:md_DL a lam:DocumentProperty,
         skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_7HdmbRFwMPExhrCeyVwNPa ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Date of deadline field contains various intermediate deadlines relating to the document.
 
@@ -1691,7 +1691,7 @@ For such case, an annotation to the deadline must be created, containing value B
 
 lamd:md_DN a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "CELEX number is both a unique document identifier and a classification code, regardless of language. It is used as the basis for cross-referencing of documents in the database as well as for implementing hypertext links." ;
     skos:example "<cdm:resource_legal_id_celex rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">32015D0046</cdm:resource_legal_id_celex>",
@@ -1726,7 +1726,7 @@ For some specific collections of documents, CELEX number is attributed by the au
 
 lamd:md_DN_CLASS a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """This property is only used for purposes of this document in order to indicate which type of celex number shall be attributed to a specific template representing a virtual type of document.
 It is not based on cdm and not available in cellar.""" ;
@@ -1737,7 +1737,7 @@ It is not based on cdm and not available in cellar.""" ;
 
 lamd:md_DN_old a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "The obsolete CELEX number field concerns documents that have been renumbered and provides a reference to their initial CELEX document number." ;
     skos:editorialNote "17/2/2021: cdm:resource_legal_id_obsolete_document deprecated as obsolete in cdm (Use cdm:work_id_obsolete_document). But this property is used by the quick search on EUR-Lex - to be checked with cdm. "@en ;
@@ -1752,7 +1752,7 @@ lamd:md_DN_old a lam:DocumentProperty,
 
 lamd:md_DP a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field is most frequently used in Sector 2 where it contains the name of the depositary of an international agreement." ;
     skos:editorialNote """04/11/2019: cdm properties:
@@ -1772,7 +1772,7 @@ lamd:md_DP a lam:DocumentProperty,
 
 lamd:md_DR a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """This element describes the date on which institutions (EP or Council or Commission or all of them but with different dates in this case) decided to consult the concerned Committee. Basically it corresponds to the consultation date.
 
@@ -1791,7 +1791,7 @@ In the CELLAR it has to be mapped with the cdm property resource_legal_date_refe
 
 lamd:md_DTA a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "The year attributed to the document (internal number or ppf number)." ;
     skos:example "<cdm:resource_legal_year rdf:datatype=\"http://www.w3.org/2001/XMLSchema#gYear\">2014</cdm:resource_legal_year>" ;
@@ -1819,7 +1819,7 @@ for sector 9: the year the question was introduced."""@en ;
 
 lamd:md_DTN a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "A sequential number representing the original reference number of the act. In some instances composed or non-standardised numbers are attributed (e.g. treaties)." ;
     skos:example "<cdm:resource_legal_number_natural_celex rdf:datatype=\"http://www.w3.org/2001/XMLSchema#positiveInteger\">0556</cdm:resource_legal_number_natural_celex>" ;
@@ -1837,7 +1837,7 @@ For a corrigendum an “R” is added to the four digits (see CELEX type corrige
 
 lamd:md_DTS a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "This refers to a specific sector (collection) of documents as indicated in the CELEX number (it is the first number in the celex number)." ;
     skos:example "<j.0:resource_legal_id_sector rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">2</j.0:resource_legal_id_sector>" ;
@@ -1873,7 +1873,7 @@ E  EFTA documents"""@en ;
 
 lamd:md_DTT a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "This one or two letters code refers to a specific type of document as indicated in the CELEX number. In some cases, this metadata is related to another metadata field Form (FM), Author (AU) Author.  Celex type of sector 1 documents refers to a specific treaty. " ;
     skos:example "<cdm:resource_legal_type rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">D</cdm:resource_legal_type>" ;
@@ -1884,7 +1884,7 @@ lamd:md_DTT a lam:DocumentProperty,
 
 lamd:md_DT_CORR a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "This field indicates if the document is a corrigendum. The number inserted indicates the serial number of corrigendum. It is then displayed in the celex number of corrigendum as \"split\" number in the brackets." ;
     skos:example "<cdm:resource_legal_number_corrigendum rdf:datatype=\"http://www.w3.org/2001/XMLSchema#positiveInteger\">1</cdm:resource_legal_number_corrigendum>" ;
@@ -1898,7 +1898,7 @@ The sequential number of corrigendum must be attributed only after analysing the
 
 lamd:md_ECLI a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:inScheme lamd:LAMProperties ;
     skos:notation "ECLI" ;
@@ -1907,7 +1907,7 @@ lamd:md_ECLI a lam:DocumentProperty,
 
 lamd:md_EEA_RELEVANCE a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Indication whether a legal act is EEA relevant or not." ;
     skos:editorialNote "18/2/2021: Currently not used by EUR-Lex. To be followed."@en ;
@@ -1920,7 +1920,7 @@ lamd:md_EEA_RELEVANCE a lam:DocumentProperty,
 
 lamd:md_ELI a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:inScheme lamd:LAMProperties ;
     skos:notation "ELI" ;
@@ -1930,7 +1930,7 @@ lamd:md_ELI a lam:DocumentProperty,
 lamd:md_EV a lam:DocumentProperty,
         skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_DvNbjhSapYBp3JuoTno2Ta ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "It is the date on which the act ceases to be valid. The date has the format YYYY-MM-DD or 9999-12-31 (a fictional date for documents whose validity is indefinite). The end of validity date is also used as an indicator for the production of the Directory of legislation in force and of the Directory of preparatory acts." ;
     skos:editorialNote """
@@ -2111,7 +2111,7 @@ There are two basic scenarios for the amendments concerning the end of validity 
 
 lamd:md_EXAMPLE_CELEX a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Field used in the cataloguing methodology for  information purposes. " ;
     skos:inScheme lamd:LAMProperties ;
@@ -2121,7 +2121,7 @@ lamd:md_EXAMPLE_CELEX a lam:DocumentProperty,
 
 lamd:md_EXAMPLE_EN a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Field used in the cataloguing methodology for  information purposes. " ;
     skos:inScheme lamd:LAMProperties ;
@@ -2131,7 +2131,7 @@ lamd:md_EXAMPLE_EN a lam:DocumentProperty,
 
 lamd:md_EXAMPLE_FR a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Field used in the cataloguing methodology for  information purposes. " ;
     skos:inScheme lamd:LAMProperties ;
@@ -2148,7 +2148,7 @@ lamd:md_FAILURE_REQ a lam:DocumentProperty,
         lamd:res_cNCuBaSjDqPe8EGm35L3VU,
         lamd:res_fz5EfJ6rRweGLnaasmHzMc,
         lamd:res_gsVbN2bXVp7A6C2zBcTDsu ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Request to establish failure to fulfil an obligation (FL)
 
@@ -2160,7 +2160,7 @@ This is a link from announcements on EU case law published in the Official Journ
 
 lamd:md_FM a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field refers to the type of act. The type is usually indicated in the title of an act. However, the value used in Type of act might not be the same as the one used in the title, as this metadata shall describe the document type in legal terms." ;
     skos:editorialNote """April 2015: For the time being, both cdm:work_has_resource-type as well as cdm:resource_legal_has_type_act_concept_type_act shall be used because of technical reasons. For the display and search purposes, only the second one is currently used by the EUR-Lex. In few months, a complete switch to cdm:work_has_resource-type will be done.
@@ -2183,7 +2183,7 @@ There should be only one value attributed except of corrigenda where two differe
 
 lamd:md_FOLLOW_UP_NAT a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Limited to sector 8. Follow up to the case by the national Court." ;
     skos:example """<j.0:case-law_national_follow-up rdf:parseType="Literal">
@@ -2197,7 +2197,7 @@ lamd:md_FOLLOW_UP_NAT a lam:DocumentProperty,
 
 lamd:md_IC a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Comments/additional details of international agreements and decisions taken by bodies created by these agreements." ;
     skos:example "<cdm:agreement_international_has_type_comment_concept_type_comment rdf:resource=\"http://publications.europa.eu/resource/authority/fd_301/ACC%2FMIXTE\"/>" ;
@@ -2210,7 +2210,7 @@ lamd:md_IC a lam:DocumentProperty,
 
 lamd:md_ID_LOCAL a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Limited to sector 8. The identifier of the judgment at national level. " ;
     skos:editorialNote """Displayed as " National identifier" under category "Miscellaneous information".
@@ -2229,7 +2229,7 @@ lamd:md_IF a lam:DocumentProperty,
         skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_9mrjdFyxDakUfLFWbRoyB7,
         lamd:res_YYDzRHtWAAGWtYFcqnGmnM ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "It is a date when the act enters into force/takes effect and/or becomes operative (applicability). The date has the format YYYY-MM-DD or 1001-01-01 (a fictional date where the date of effect/entry into force/ application is not yet known, as for example documents that take effect by future notification; to be changed in a factual date if/when the date is known). The date of effect is also used as an indicator for the production of the Directory of legislation in force and of the Directory of preparatory acts." ;
     skos:editorialNote """12/03/2019: GIL-GM Provisional application of international agreements (P/12032019/4b)
@@ -2413,7 +2413,7 @@ lamd:md_IMPLEMENTATION a lam:DocumentProperty,
         lamd:res_G9x5RjDryTNXGPukuxhejx,
         lamd:res_SmsAgzswaTyoFuS89whfZJ,
         lamd:res_X4Po2J5qseJFGGjkQXWEaL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Implementation (OO)
 
@@ -2441,7 +2441,7 @@ lamd:md_INAPPLICAB_REQ a lam:DocumentProperty,
         lamd:res_eamXMJew8akRuLAxQNfAdJ,
         lamd:res_iAuuKeGyp5DTpFUrjXGTcz,
         lamd:res_nCWPSjaDAF8Z8TfwU3C9dE ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Inapplicability request (IL)
 
@@ -2460,7 +2460,7 @@ lamd:md_INCORPORATION a lam:DocumentProperty,
         lamd:res_Kg5uW2urhbZdp3xz6pmVcG,
         lamd:res_WxUGXiLiJxJUMFWAc4FYPk,
         lamd:res_fDHoktoWMYM6a3hWXW7HnU ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Incorporation (RE)" ;
     skos:editorialNote "08/11/2019: It seems there was only one particular case - EEA agreement (?)"@en ;
@@ -2479,7 +2479,7 @@ lamd:md_INFLUENCE a lam:DocumentProperty,
         lamd:res_NJS4YJDahWAgqtjagsssov,
         lamd:res_dw8moevrXjrVUSkrCRSimY,
         lamd:res_ngxthsveqRTdWkoCrbjqfd ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Part of the same procedure (PE)
 
@@ -2499,7 +2499,7 @@ lamd:md_INTERPRETATION a lam:DocumentProperty,
         lamd:res_hU8g6y4uLsu5HHbKCNVeGY,
         lamd:res_kRGgiZTfAkWPpB5auQxqNt,
         lamd:res_kUR8jkJaJnpeYqU7dSUWYF ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Authoritative interpretation (II)
 
@@ -2524,7 +2524,7 @@ start_of_validity"""@en ;
 
 lamd:md_IN_NUMBER a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Sequential number of unique internal identifier of the resource legal." ;
     skos:example "<j.0:internal_number_sequential_number rdf:datatype=\"http://www.w3.org/2001/XMLSchema#positiveInteger\">390</j.0:internal_number_sequential_number>" ;
@@ -2535,7 +2535,7 @@ lamd:md_IN_NUMBER a lam:DocumentProperty,
 
 lamd:md_IN_PREFIX a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Prefix of the unique internal identifier of the resource legal. " ;
     skos:example "<j.0:resource_legal_internal_number_prefix rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">SEC</j.0:resource_legal_internal_number_prefix>" ;
@@ -2547,7 +2547,7 @@ lamd:md_IN_PREFIX a lam:DocumentProperty,
 
 lamd:md_IN_SUFFIX a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Suffix of the unique internal identifier of the resource legal." ;
     skos:example "<j.0:resource_legal_internal_number_suffix rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">INIT</j.0:resource_legal_internal_number_suffix>" ;
@@ -2559,7 +2559,7 @@ lamd:md_IN_SUFFIX a lam:DocumentProperty,
 
 lamd:md_IN_YEAR a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Year of unique internal identifier of the resource legal." ;
     skos:example "<j.0:resource_legal_internal_number_year rdf:datatype=\"http://www.w3.org/2001/XMLSchema#year\">1970</j.0:resource_legal_internal_number_year>" ;
@@ -2570,7 +2570,7 @@ lamd:md_IN_YEAR a lam:DocumentProperty,
 
 lamd:md_KEYWORD a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Field used in the cataloguing methodology for  classification and search purposes. Keywords are usually extracted from the titles of documents." ;
     skos:inScheme lamd:LAMProperties ;
@@ -2580,7 +2580,7 @@ lamd:md_KEYWORD a lam:DocumentProperty,
 
 lamd:md_KEYWORDS_NAT a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Limited to sector 8. Keywords attributed to a national case-law document." ;
     skos:editorialNote "EUR-Lex: Descriptors"@en ;
@@ -2598,7 +2598,7 @@ CEE - Union européenne ; - Coopération policière et judiciaire en matière p�
 
 lamd:md_LABEL a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:inScheme lamd:LAMProperties ;
     skos:notation "LABEL" ;
@@ -2611,7 +2611,7 @@ lamd:md_LB a lam:DocumentProperty,
         lamd:res_LXrjLHQSYptPs6mQ67VqvQ,
         lamd:res_bok6b5fdxxyDH4swrzTFuW,
         lamd:res_j3rfqWh8ZrXMCtNDer9nQc ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This link contains identifier (CELEX, eli, cellar id,…) of the act(s) constituting the legal basis of the document." ;
     skos:editorialNote """10/07/2015: Legal basis – documents referring to a protocol attached to the treaties 
@@ -2648,7 +2648,7 @@ Information concerning articles, paragraphs and subparagraphs (if applicable) is
 
 lamd:md_LEGIS_NAT a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Limited to sector 8. Articles of the national legislation mentioned in the text of the judgment." ;
     skos:editorialNote """"Provisions of national law in application" under the category "Analysis".
@@ -2680,7 +2680,7 @@ Ustawa z dnia 6 czerwca 1997 r. - Kodeks postępowania karnego (Dz.U. Nr 89, poz
 
 lamd:md_LF a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field indicates the authentic language version of an act or a European Court case. It indicates also the language of the corrigenda (this is applicable only from April 2015)." ;
     skos:example "<cdm:resource_legal_uses_originally_language rdf:resource=\"http://publications.europa.eu/resource/authority/language/SPA\"/>" ;
@@ -2693,7 +2693,7 @@ lamd:md_LF a lam:DocumentProperty,
 
 lamd:md_LG a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "This field concerns documents emanating from the European Parliament, specifically EP questions (Sector 9) and resolutions (Sector 5)." ;
     skos:editorialNote "30/11/2015: A new concept for the 8th parliamentary term was created in FD_285 (L-08 Eighth legislature) and published in MDR publication 20151118-0 (release date: 18/11/2015). Provisional value OP_DATPRO should be removed and replaced by L-08."@en ;
@@ -2707,7 +2707,7 @@ lamd:md_LG a lam:DocumentProperty,
 
 lamd:md_LO a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Court of Justice of the European Union documents: the field indicates when the document was lodged with the Registrar of the EU Court of Justice (or EFTA Court). Committee of Regions, European Economic and Social Committee: Date on which a proposal is submitted for consultation. The date has format YYYY-MM-DD." ;
     skos:editorialNote "16/2/2021: Check the relation between LO and DH for sector 5."@en ;
@@ -2720,7 +2720,7 @@ lamd:md_LO a lam:DocumentProperty,
 
 lamd:md_MI a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field contains general miscellaneous information that varies greatly according to the type of document and EUR-Lex sector." ;
     skos:example "<cdm:resource_legal_information_miscellaneous rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">JOIN 2014/0034</cdm:resource_legal_information_miscellaneous>" ;
@@ -2761,7 +2761,7 @@ The CELEX number of the directive or ECSC recommendation concerned by the Member
 
 lamd:md_NA a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field is relevant for EU case law and national case law. It is not relevant for announcements on EU case law published in the Official Journal. It  shows the country of origin of the applicant, the defendant or the court referring the case (EU case-law). " ;
     skos:inScheme lamd:LAMProperties ;
@@ -2774,7 +2774,7 @@ lamd:md_NA a lam:DocumentProperty,
 
 lamd:md_NAME_COURT a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Limited to sector 8. The name of the national court that delivered the judgment. 
 """ ;
@@ -2802,7 +2802,7 @@ CASE-LAW_DELIVERED_BY_COURT_NATIONAL/EMBEDDED_NOTICE/AGENT/COURT_NATIONAL_HAS_TY
 lamd:md_NF a lam:DocumentProperty,
         skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_FuRQGhxqGERUu2EXRo4rVa ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "This field contains the date of notification of directives and decisions which specify to whom they are addressed.  The date has format YYYY-MM-DD." ;
     skos:editorialNote """14/10/2015: Methodology related to the Council decisions or directives which specify to whom they are addressed and indicating the date of effect was updated (Analytical methodology, point 2).
@@ -2860,7 +2860,7 @@ Some Council acts (decisions or directives which specify to whom they are addres
 
 lamd:md_NO_JOURNAL a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Reference to an article which has appeared in a juridical journal and is related to the judgement in question (e.g. Thompson, James E.:Common Market Law Review 1990 p.589-607) " ;
     skos:editorialNote "See NO - Notes related to the decision."@en ;
@@ -2871,7 +2871,7 @@ lamd:md_NO_JOURNAL a lam:DocumentProperty,
 
 lamd:md_NS a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field provides the date of the debate or the session for European Parliament resolutions, Economic and Social Committee and CR opinions and resolutions." ;
     skos:editorialNote """12/12/2018: Changes in cdm proerties EURLEXNEW-3672 The following cdm properies shall be depricated:
@@ -2908,7 +2908,7 @@ lamd:md_OBSOLETE a lam:DocumentProperty,
         lamd:res_U8Gc3oGh9SRDKFPREyYuhJ,
         lamd:res_ZbuEacMEiQo5fm8XA6ewKB,
         lamd:res_juhZ6AfsaMng32QHtxsguf ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Declares as obsolete (CA)
 
@@ -2945,7 +2945,7 @@ famille"""@en ;
 
 lamd:md_OJ_ID a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Identifier of the Official Journal in which was the document published. The OJ identifier contains several parts: (a) collection OJL or OJC; (b) year of the OJ; (c) number of the OJ" ;
     skos:example "<j.0:resource_legal_published_in_official-journal rdf:resource=\"http://publications.europa.eu/resource/oj/JOL_2010_276_R\"/>" ;
@@ -2956,7 +2956,7 @@ lamd:md_OJ_ID a lam:DocumentProperty,
 
 lamd:md_OJ_REF a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Reference of OJ act attributed by OP and appearing in the title. For example \"2013/16\" in regulation (EU) 2023/16. Shall be treated together with property refering to the domain (cdm:resource_legal_domain_reference_oj-act)." ;
     skos:editorialNote "17/2/2021: Created in context of ABA."@en ;
@@ -2969,7 +2969,7 @@ lamd:md_OJ_REF a lam:DocumentProperty,
 
 lamd:md_OJ_REF_DOM a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Domain appearing in the OJ act reference attributed by OP. For exmaple \"(EU)\" in regulation (EU) 2023/16. Shall be treated together with property cdm:resource_legal_reference_oj-act." ;
     skos:editorialNote "17/2/2021: Created in context of ABA."@en ;
@@ -2988,7 +2988,7 @@ lamd:md_OPINION_COR a lam:DocumentProperty,
         lamd:res_LsAs5KttWrw6ZV8pxoP73H,
         lamd:res_WQn32xHNp975V7SvTntWjh,
         lamd:res_fk8KNo4dhVJPuoGxmGusBe ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """COR Opinion (XR)
 
@@ -3008,7 +3008,7 @@ lamd:md_OPINION_EESC a lam:DocumentProperty,
         lamd:res_eKrdtnjeC7BCpGsmZ5qqDw,
         lamd:res_fTedDovQiGbNLPbKrg2NN4,
         lamd:res_mT39iaxsKN6ZPhiFoT6iPS ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """EESC Opinion (XC)
 
@@ -3028,7 +3028,7 @@ lamd:md_OPINION_EP a lam:DocumentProperty,
         lamd:res_SpMfq7FKF7WjD2Fvssrr5h,
         lamd:res_XcYMokCjx3JmKpn2RwWWDQ,
         lamd:res_eEctCbXkB9DmboVyF2SdZf ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """EP Opinion (XP)
 
@@ -3048,7 +3048,7 @@ lamd:md_OPINION_REQ a lam:DocumentProperty,
         lamd:res_VMt8x5d65gY6Ru4fjjCFLv,
         lamd:res_aURhwbJZZkQYKZqAiU6nuT,
         lamd:res_nt4qXpye2tCeVqzdGLbVBg ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Request for opinion (KL)
 
@@ -3060,7 +3060,7 @@ This is a link from announcements on EU case law published in the Official Journ
 
 lamd:md_ORDER a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "The order among siblings under a common parent. Only for LAM purposes." ;
     skos:inScheme lamd:LAMProperties ;
@@ -3070,7 +3070,7 @@ lamd:md_ORDER a lam:DocumentProperty,
 
 lamd:md_PARENT a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Only for LAM purposes." ;
     skos:inScheme lamd:LAMProperties ;
@@ -3080,7 +3080,7 @@ lamd:md_PARENT a lam:DocumentProperty,
 
 lamd:md_PARTIES_NAT a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Limited to sector 8. Reference to the parties involved in this case law. " ;
     skos:editorialNote """Not displayed on EUR-Lex. It is not planned to display it in future (very often bad quality data – e.g. XX / YY). However, the parties are searchable in the JURE advanced search form.
@@ -3104,7 +3104,7 @@ SARL Etablissements Castellani & Frères / SA Hustinx et Philippe Delvaux, curat
 
 lamd:md_PR a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field is relevant for announcements on EU case law published in the Official Journal. This field contains a descriptor referring to the nature of and where possible the outcome of the proceedings. " ;
     skos:example "<j.0:communication_cjeu_has_type_procedure_concept_type_procedure rdf:resource=\"http://publications.europa.eu/resource/authority/fd_100/ANNU\"/>" ;
@@ -3132,7 +3132,7 @@ lamd:md_PRELIMINARY_REQ a lam:DocumentProperty,
         lamd:res_gS4w3TVgiVqGizCYtMmQdp,
         lamd:res_gqxjFGqJTV85jZFdUBWcgg,
         lamd:res_jaN2Rg6xrL5zF7GZZt5jMu ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Submits a preliminary question about (QL)
 
@@ -3144,7 +3144,7 @@ This is a link from announcements on EU case law published in the Official Journ
 
 lamd:md_PROC a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Link to related procedure (interinstitutional or internal). It contains the identificator of the procedure ." ;
     skos:example "<j.0:work_part_of_dossier rdf:resource=\"http://publications.europa.eu/resource/procedure/2015_288\"/>" ;
@@ -3162,7 +3162,7 @@ lamd:md_QUESTION_RELATED a lam:DocumentProperty,
         lamd:res_LXMTebwjRnM8UsdLFmMNU8,
         lamd:res_hsPRKWomj2sxLsrNh6qJsh,
         lamd:res_kjPZiZS5frhYRAJv9cviyu ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Related question (VV)
 
@@ -3185,7 +3185,7 @@ lamd:md_QUESTION_SIMILAR a lam:DocumentProperty,
         lamd:res_JaPeoiirqTHj9P5JF9Knij,
         lamd:res_SSrYhp3BpEZJaZC5o8748W,
         lamd:res_Wt8bMDjpjPW78ZZuxbyjTq ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Similar question (HH)
 
@@ -3199,7 +3199,7 @@ Link in sector 9 between similar parliamentary questions (displayed under Amendm
 
 lamd:md_RAPPORTEUR a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This field contains a name of the person (EP member or member of CoR or EESC) who reports on the relevant act." ;
     skos:editorialNote """04/11/2019: cdm properties:
@@ -3247,7 +3247,7 @@ lamd:md_REESTAB a lam:DocumentProperty,
         lamd:res_NkWxKpfeveBT5FJkKzSjMc,
         lamd:res_R3fjU69ZSDDBwczGzQpXhJ,
         lamd:res_RmUbRs5vgi4EowweMZBBC9 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Re-establishment (RP) - mainly tarif preferences https://eur-lex.europa.eu/eli/reg/2012/978/oj#d1e721-1-1" ;
     skos:editorialNote "07/11/2019: Mainly older acts containing \"re-establishing\" in the title - check DTS=3 AND TI~\"re-establishing\" OR \"reestablishing\" ORDER BY XC DESC"@en ;
@@ -3266,7 +3266,7 @@ lamd:md_REFER_PAR a lam:DocumentProperty,
         lamd:res_gFMLheAzQo4oiqR2JD64SS,
         lamd:res_kGuXBHHEHMXuxVeJXwHxgB,
         lamd:res_oQiKoKH6ojVARQTTVKj4tb ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Partial referral (QQ)" ;
     skos:inScheme lamd:LAMProperties ;
@@ -3277,7 +3277,7 @@ lamd:md_REFER_PAR a lam:DocumentProperty,
 
 lamd:md_REF_INTERNATIONAL a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Limited to sector 8. International conventions and treaties in application." ;
     skos:example """<j.0:case-law_national_act_reference_international rdf:parseType="Literal">
@@ -3297,7 +3297,7 @@ General Social Security Agreement between Belgium and Turkey of 4 July 1966
 
 lamd:md_REF_JUDG a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Limited to sector 8. Reference to a judgement, typically on the European level." ;
     skos:editorialNote "EUR-Lex: Court Judgment"@en ;
@@ -3311,7 +3311,7 @@ lamd:md_REF_JURE a lam:DocumentProperty,
     lam:hasAnnotationConfiguration lamd:res_8JxbWbnbyxJKQSQH5p8Sg2,
         lamd:res_HpByEfWqzsHaQdi8oarDwY,
         lamd:res_nvUUKwP26Grej4niDXNawX ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Limited to sector 8. The article(s) of the Brussels regulations, Brussels conventions or Lugano conventions used in the judgment." ;
     skos:editorialNote """Instruments involved under the category "Relationship between documents".
@@ -3331,7 +3331,7 @@ IMMC: ecextjure:reference
 
 lamd:md_REF_OTHER_JURE a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Limited to sector 8. Any other EU instrument apart from the \"Instruments involved\" or any EU judgment mentioned in the text of the national judgment." ;
     skos:editorialNote """Other EU instruments cited.
@@ -3351,7 +3351,7 @@ If in the judgment there is a mention to an article (e.g. A5) and then to the sa
 
 lamd:md_REF_PUBLICATION a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Limited to sector 8. Freetext information on the publication in which this judgement appeared. This element describes references to publications where the national judgement has been published: Court report, official publications, ECLI etc." ;
     skos:editorialNote """ "Publication" under the category "Analysis".
@@ -3385,7 +3385,7 @@ lamd:md_RELATION a lam:DocumentProperty,
     lam:hasAnnotationConfiguration lamd:res_5XnqnnPwVVm5fb72YEqb2o,
         lamd:res_5vHuNaXyMdTrguZSHYLf5c,
         lamd:res_gHWA4mM4Jwu9jdPfdwMCe2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Relation (RN)
 
@@ -3475,7 +3475,7 @@ Such cases should be covered by the following relation (with annotation type_of_
 
 lamd:md_REP a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Indicator for the extraction of titles for the production of the Directory. This field indicates whether an act is basing (containing anonomous provisions) or amending (not containing antonomous provisions and just amending previous act(s))." ;
     skos:editorialNote "18/2/2019: Discussion with AION regarding Join practical guide, points 8.3 and 19: REP: Autonomous act containing \"subsidiary\" amendments (32005R0396 or 31992L0096). At the end of the title, “amending” can be found. LIE: Amending acts containing \"subsidiary\" autonomous provisions, it seems to be just a theoretical example. The title of such act contains its number and document date which are directly followed by “amending”."@en ;
@@ -3515,7 +3515,7 @@ lamd:md_REPEAL a lam:DocumentProperty,
         lamd:res_VBXfVkiNxzU6THrbJn6V53,
         lamd:res_dDj2RMKxyKrQuKxib423q4,
         lamd:res_dE3yZfEnqjUJfgthxAQdzR ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Repeal (AA)
 
@@ -3558,7 +3558,7 @@ lamd:md_REPEAL_IMP a lam:DocumentProperty,
         lamd:res_QkzUxPHRHn6DD9YSu4fPgt,
         lamd:res_TxUYoaSaASedidzSMhtteN,
         lamd:res_evmTEiiLfUZsDMjmJ2sGVx ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Implicit repeal (AI)
 
@@ -3603,7 +3603,7 @@ lamd:md_REPLACEMENT a lam:DocumentProperty,
         lamd:res_TjnDf8xNMhnSE7nPhsRKaQ,
         lamd:res_aUPgjjfgPfZouQ4uT4XkXw,
         lamd:res_kpn3mtWziH2htXGZ2CTXbZ ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Replacement (RR)
 This link contains the CELEX number of earlier acts modified by the given act (replacement).
@@ -3648,7 +3648,7 @@ lamd:md_REVIEW_REQ a lam:DocumentProperty,
         lamd:res_eSnFqy6j3bm9y27gsABMdf,
         lamd:res_hrhktao3m7rdGDezK6Aq2n,
         lamd:res_iGvyv75TEiameXRzoyv3h9 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Request to review the judgment (RL)
 
@@ -3660,7 +3660,7 @@ This is a link from announcements on EU case law published in the Official Journ
 
 lamd:md_RI a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Internal reference used for sector 5 documents from EESC." ;
     skos:editorialNote """For the search, EUR-Lex has a single Expert search field for the internal reference: RI. This expert fields targets simultaneously 3 XPaths in the index notice:
@@ -3678,7 +3678,7 @@ lamd:md_RI a lam:DocumentProperty,
 
 lamd:md_RI_NAT a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Internal identifier from the Court for the national decisions, limited to sector 8. Identifier attributed by the EU Court of Justice/Association of the Councils of States when analysing the judgment." ;
     skos:example "<j.0:case-law_national_decision_internal_identifier rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">IA/01133-A</j.0:case-law_national_decision_internal_identifier>" ;
@@ -3689,7 +3689,7 @@ lamd:md_RI_NAT a lam:DocumentProperty,
 
 lamd:md_RI_WORK a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "The information indicates the internal reference of the dossier for the concerned institution. The way in which this information is provided by each institution varies in their IMMC transmissions. It has been defined as optional in their respective schema." ;
     skos:editorialNote "EURLEXNEW-3088"@en ;
@@ -3714,7 +3714,7 @@ For the search, EUR-Lex has a single Expert search field for the internal refere
 
 lamd:md_RJ a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """EU Case law directory code is a specific directory classification for EU case law.
 There are two different version of the EU case law directory: (a)  before 2010 (RJ); (b) after 2010 (RJ_NEW) – this directory follows the changes brought up by the Lisbon Treaty.""" ;
@@ -3728,7 +3728,7 @@ There are two different version of the EU case law directory: (a)  before 2010 (
 
 lamd:md_RJ_NEW a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """EU Case law directory code is a specific directory classification for EU case law.
 There are two different version of the EU case law directory: (a)  before 2010 (RJ); (b) after 2010 (RJ_NEW) – this directory follows the changes brought up by the Lisbon Treaty.""" ;
@@ -3744,7 +3744,7 @@ lamd:md_RP a lam:DocumentProperty,
         skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_ByXwGLxRFy8yc3CNNphLPF,
         lamd:res_aNTdbnV8iRr3KdLPbYXsgS ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Date of the answer of the institution to a parliamentary question. The date has format YYYY-MM-DD." ;
     skos:example "<cdm:question_parliamentary_date_reply rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2013-02-18</cdm:question_parliamentary_date_reply>" ;
@@ -3756,7 +3756,7 @@ lamd:md_RP a lam:DocumentProperty,
 
 lamd:md_RS a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "The Commission DG or DGs, author of a Commission proposal. " ;
     skos:editorialNote """There are many cdm properties refering to the same, they shall be deprecated: *cdm:proposal_act_service_responsible (deprecated: CDM-75 https://webgate.ec.europa.eu/publications/jira/browse/EURLEXNEW-3413); *cdm:non-opposition_concentration_notified_service_responsible;
@@ -3814,7 +3814,7 @@ EUR-Lex field RS is defined by both properties cdm:service_responsible and cdm:r
 
 lamd:md_RSA a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "EESC and COR opinions - Responsible body for preparation of the drafts of opinions or other documents." ;
     skos:editorialNote "Described in EURLEXNEW-3782. Covered by AS EUR-Lex field."@en ;
@@ -3832,7 +3832,7 @@ EUR-Lex field RS is defined by both properties cdm:service_responsible and cdm:r
 lamd:md_SG a lam:DocumentProperty,
         skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_EKv8oH47sYSvM7xYTPugdS ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Date of signature field provides the date or dates of the signing of an legislative act, agreement or EU budget. This field may also contain a reference to the place where the agreement was signed. The date has format YYYY-MM-DD." ;
     skos:example "<cdm:resource_legal_date_signature rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2014-03-25</cdm:resource_legal_date_signature>" ;
@@ -3851,7 +3851,7 @@ lamd:md_SUSPEND a lam:DocumentProperty,
         lamd:res_YKFCHnsoFvsEy4Awg3nyUE,
         lamd:res_fdFAkxwKTtpcpARTJ6uwcS,
         lamd:res_o5dFqXBqLooHbUbhGBQ2w6 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Suspension (SS) - mainly tarif preferences https://eur-lex.europa.eu/eli/reg/2012/978/oj#d1e721-1-1 or rstrictive measures" ;
     skos:inScheme lamd:LAMProperties ;
@@ -3869,7 +3869,7 @@ lamd:md_SUSPEND_PAR a lam:DocumentProperty,
         lamd:res_bCtZwmtdAe2P5BxN8wkKu4,
         lamd:res_hez27s7wQnnMrhvC7yMpnp,
         lamd:res_hrpks48mdUH5ZYBTqRMxgR ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Partial suspension (SP) - similar as Suspension" ;
     skos:editorialNote "08/11/2019: Diferences between suspension and partial suspension? Is this really needed?"@en ;
@@ -3881,7 +3881,7 @@ lamd:md_SUSPEND_PAR a lam:DocumentProperty,
 
 lamd:md_TOF a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition """Term of office for committees
 
@@ -3895,7 +3895,7 @@ EESC: Members are nominated by national governments and appointed by the Council
 lamd:md_TP a lam:DocumentProperty,
         skos:Concept ;
     lam:hasAnnotationConfiguration lamd:res_nBGQdcpYqkZQZXgZDykXry ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Date on which directives (or other acts) have to be implemented by the Member States (transposed into its national law)." ;
     skos:editorialNote """31/10/2019: List of relevant subproperties:
@@ -3921,7 +3921,7 @@ cdm:cooperation_police-and-judicial_date_transposition"""@en ;
 
 lamd:md_TT a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "The treaty field contains the name of the treaty/treaties that form the legal basis under which the document has been adopted. This field is linked to the Treaties authority table; no CELEX numbers are used. " ;
     skos:editorialNote """04/11/2019: Property cdm:resource_legal_based_on_treaty was used in the past, it has been depricated and replaced by
@@ -3943,7 +3943,7 @@ lamd:md_VALIDITY_EXT a lam:DocumentProperty,
         lamd:res_XWTpZBQqQ9RoCMZP8nVbzp,
         lamd:res_Z4nWJWRySW54k5ahBXmaLr,
         lamd:res_jCxZaZzTy4uMtmeczXtrWs ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition """Extension of validity (PP)
 This link contains the CELEX number of earlier acts modified by the given act (extension of validity).
@@ -3980,7 +3980,7 @@ famille"""@en ;
 
 lamd:md_VO a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "This field contains the date of vote on decisions or resolutions of the European Parliament or on committees (EESC/CoR) opinions. The date has format YYYY-MM-DD." ;
     skos:editorialNote "14/10/2015: Date of vote in sector 2 – resolutions, declarations:  Joint Parliamentary Assembly of the Partnership Agreement concluded between the members of the African, Caribbean and Pacific group of States, of the one part, and the European Community and its Member States, of the other part - Resolution on racism, racial discrimination, xenophobia and related intolerance (ACP-EU 3549/03/fin) 22003P0926(14)"@en ;
@@ -3993,7 +3993,7 @@ lamd:md_VO a lam:DocumentProperty,
 
 lamd:md_VV a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "data property" ;
     skos:definition "Indicator whether a piece of legislation still in force or not in force." ;
     skos:editorialNote """11/03/2019: Display of VV on EUR-Lex - There were new values created on EUR-Lex "Not yet in force". VV is not displayed when there is a date of notification=01/01/1001 (see: NF=01/01/1001 AND VV=false ORDER BY XC DESC). Rules:
@@ -4202,138 +4202,138 @@ Issues: (i) some delayed updates in cellar; (ii) there is sometimes wrong value 
 
 lamd:res_2ESj2uJ3DS49whyXJkBsKs a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_2P7o4XoeSFLXtnRRZWsHy9 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_2QukvgiWkbURNYgH5nvfk6 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_2eBEngeVokscVJ62TARXBj a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_2mWr3a9yzYRSXkFXDsniee a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_2nMEJB7vfLkBf2YNG3ueLX a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_2qAb2rGeXQoKHxccWqdqve a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_33Dr6tmkbQ6nrnViJLmoti a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_35WydGqNgvUQ8WrMXnzA6b a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_3njGedbKFoafM7bAkYNcnX a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_44t9jtZzMM8Hdn2XRoLfpH a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_4HoFR6od38CR9UFQ8xQZru a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_52e3eRKzCi7ydESHNJpxzF a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_59XpHBgsbRMTNFQJkWTPQ8 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_5CeE2Ux6HKVAkDVsJCGQE2 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_5PADbaMiBFNpfbBeLqBSoS a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_5St3DyCVkA9c3q9WK74MCC a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_5XnqnnPwVVm5fb72YEqb2o a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_5fBExHbADHUzQvUiZC4hPi a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_5t3HSorxhKDqvAJY5wiFWs a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_5vHuNaXyMdTrguZSHYLf5c a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_370,
         at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
@@ -4341,227 +4341,227 @@ lamd:res_5vHuNaXyMdTrguZSHYLf5c a lam:AnnotationConfiguration ;
 
 lamd:res_6XVR2ZeyBK6fGqNcPEVJRD a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_6ijyjPpnfLhczNDCZs2WjR a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_FCT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_FCT to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_6k5gt8DFK5dYUJwfUcu6Cm a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_6tVQCUvz7BKb9gwXxrGL36 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_6vHCtQHDevnVGo3bPRZUyV a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_723JrgcZVd6Y8pwaR8G5f7 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_75Dcer77fYtPXD4TBLLvDr a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_78ppLR38uLZWMEooZhjNqS a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_7FFZKEzrRhbha82wcjFkXF a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_7FkBSxqSgmKUzrJYvwXDDd a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_7HdmbRFwMPExhrCeyVwNPa a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_COD ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_335 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_COD to http://publications.europa.eu/resource/authority/fd_335" .
 
 lamd:res_7KKtqQ4DBu4LcH6CBbGyNd a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_7ZDkbYAbh2zFx9toRTnfp9 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_7wZJHZXWHLsGRZFfxGjpiq a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_7zJQmCLwYFdc3n9vQSNcCE a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_88vA2Wm3r4rhaqeeGby8t7 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_8JxbWbnbyxJKQSQH5p8Sg2 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_ART ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_ART"@en .
 
 lamd:res_8Li4bGqCkvuxLtDLw9WNAU a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_8MpSYDtZhQvKf2BNGKi5YQ a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_8Uh9cXCTsKjD7Mn3rNBpgy a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_942y5WcRhZaaevrRqXtup4 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_9JrhALnd3Z8ck65c8hiMDL a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_9PrtAwWaGAEsLKkEt9V27W a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_9QcjgL8UoubKphVWHMaeFE a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_9aii4Q3tsqjeyvWGjFN2wm a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_9hghVk7sygsekz5swTBsvu a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_9jXHbsiJkjjpyoSmJnSK9Z a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_9mrjdFyxDakUfLFWbRoyB7 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_COD ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_335 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_COD to http://publications.europa.eu/resource/authority/fd_335" .
 
 lamd:res_AJadYZ7AeqknebXDZwoWY3 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_AMVkPxihowt84L8B3ZFpsU a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_AZTY3uEHpF2zSERP38Sz23 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_B2t2BUuAGpPNJgfwXhaijA a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_BBQjqSfPFNXUCbLXWQD4xo a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_BHwSWcmrNUdVoKpqPR5r9B a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_370,
         at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
@@ -4569,101 +4569,101 @@ lamd:res_BHwSWcmrNUdVoKpqPR5r9B a lam:AnnotationConfiguration ;
 
 lamd:res_BNFnunMEAMZxef3JwHNMfw a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_BXgiyP3kABADjVDV7KfrcL a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_Bansaf2niAtdKL6tx68hhk a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_BdTFnwrXaQ6WW8kS8yC5iC a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_BseKwdbCcVouLrL2eKJRpU a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_ByXwGLxRFy8yc3CNNphLPF a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TOD ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_350 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_TOD to http://publications.europa.eu/resource/authority/fd_350" .
 
 lamd:res_CAnndpeCarBoy6rnnmsyEz a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_CGowGpf3kEe5nTysExC8AN a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_CHWn8MsKZCqjQdHMxdM5Tn a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_CkNepfFbjeUL9GZfoQXbBY a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_CvwBXiJEzDmTxQLDZ4aaq8 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_DG4j3JTmekNuG3z9zDEBQC a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_DcubYo6DwYEKdHkNCxGvnE a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_DvNbjhSapYBp3JuoTno2Ta a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_COD ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_330 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_COD to http://publications.europa.eu/resource/authority/fd_330" .
 
 lamd:res_EKv8oH47sYSvM7xYTPugdS a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_COD ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:country,
         at:place ;
     sh:minCount "1"^^xsd:int ;
@@ -4671,206 +4671,206 @@ lamd:res_EKv8oH47sYSvM7xYTPugdS a lam:AnnotationConfiguration ;
 
 lamd:res_EdgmJ9jJAmSA4nobRNCndG a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_EnK6CP3LGqdgZ74VQdzEgQ a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_COD ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_365 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_COD to http://publications.europa.eu/resource/authority/fd_365" .
 
 lamd:res_EuzgH7cvgFNVYvRRPVoUZ2 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_F28vw4AXgNfxPnYCHcgdPr a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_F75aGuiNeyhhW9Y8WCZ6Xe a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_FA94ve7aXX9Kn84MGRmz9E a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_Fc5vkmZ7vSfNVKbXN4qTXA a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_FgnEQDchrgvGazU8MHHetu a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_FoAxaENkonB6kpNkpeXhP9 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_Focq8d6eGQxdDH5rgsit2V a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_FuRQGhxqGERUu2EXRo4rVa a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_COD ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_365 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_COD to http://publications.europa.eu/resource/authority/fd_365" .
 
 lamd:res_FvNUnKwLbpELmcKJtbhBXU a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_G2jh2X5CtYuVStsCKXDEnb a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_G4r5exmVAamzZqgftwMMmL a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_G9x5RjDryTNXGPukuxhejx a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_GFhrrU9YSmUCf8iPUoqo8V a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_GR8ZmgNLQeVh4AXFRfZLsW a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_GRAsmAHZuYpLVKWw6pY6Vj a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_GRfLVhhTC5CT4dYh4GHNwg a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_GTbjodY5c3jtqbUQrVeRW9 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_GVKgMb2cbhPPMKyYiuRRWZ a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_GVvsfWreLWsxZeHMwvoCYm a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_Gg5kY7wcQBv8rU3SVddCai a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_Gksex2QzEjeXad6DW5skqw a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_GyEJUxhRHweJWxNUg3waFw a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_GyH3Fj9EVEwkumF2AnYGvT a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_H9TCBdL5X2ZYLkg9d6wqqF a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_HJboLBWFtMqaieMX25JeP9 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_HMXWxH5AdSgyrQqAqK3GvC a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_HVchwJEzStDqPfHdVnoxba a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_HevBrretYe7FhSsAXMbTuB a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_370,
         at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
@@ -4878,1228 +4878,1228 @@ lamd:res_HevBrretYe7FhSsAXMbTuB a lam:AnnotationConfiguration ;
 
 lamd:res_Hf3qNKt7wHWMzSVLHTmS6G a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_Hi6EJt7uqVmKWHxAXnfGWQ a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_HpByEfWqzsHaQdi8oarDwY a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SUB ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SUB"@en .
 
 lamd:res_Hpux3cjzfPaXuZ8WkT44Qx a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_Hxa9ioxWn8NghWcPDew7oq a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_JAkke9RUSA6EppFSBZrGBi a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_JLMTwdKg3D7azgZ9v6zSyP a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_JVtfztk97iFznWic5oiE2Q a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_JaPeoiirqTHj9P5JF9Knij a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_JhHUgiHhqhQrbFK9kjRjMM a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_Jjtju8yMfREd8u7bEKqHoU a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_Jn4gWVC4RHMPPHCHZwdwEg a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_CLB ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_370 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_CLB to http://publications.europa.eu/resource/authority/fd_370" .
 
 lamd:res_JyCMSAhBePYxnbTAjkLGDK a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_KUKLzEeiesEEoYVzWki7i6 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_Kg5uW2urhbZdp3xz6pmVcG a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_KyZVHxY4KX3HdGtkXsdXcf a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_L2T4grveucc9GD4fxR92TW a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_LXMTebwjRnM8UsdLFmMNU8 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_LXrjLHQSYptPs6mQ67VqvQ a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SUB ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SUB"@en .
 
 lamd:res_LZ4dMA5CVEvxthGsVwFXFb a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_Lb9fSTFrAVmFv7UuAYHATz a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_LmHitS5KvpPjXpXwKQYqR8 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_LoUSfkes8WfE3UTvEYnz5M a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_Ls94t2fd4mWRDcn2UGmSRv a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_LsAs5KttWrw6ZV8pxoP73H a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_LuV9kp7HJ4v9bQfzHczHZR a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_Lx25MWwChDufbJ4rddKyfb a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_MVGNdNkwjZKU7DjChz7GvU a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_MZ5zMJwoeJLoWUayvGwTq7 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_MdgzRrLUceGvGibvTSiPQU a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_MyDu3ZuJvUTP3bQksZigHZ a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_N7hCBxysCyBk7437BBAy2B a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_NJS4YJDahWAgqtjagsssov a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_NTwuHVpaqvCYcAuYBRkJ88 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_NVi8vPHdRFPCxzuWB7KuiR a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_NYYnm9rDjtiLRSFQAbZ9Gp a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_NkWxKpfeveBT5FJkKzSjMc a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_NqsCr2DvGJDmoMm3HW3Yf2 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_PMNMZA7qW56NNxe6drd5x7 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_PQWvQKqcv6x6aTy3QzR34q a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_PbRPGYTPRLnsNUJytokRYs a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_PgNb6rZUGcwnSpodsPBTwY a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_PsobiBM4JWKBmW3eKjJCXo a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_PvZZNWnQfX2Ch6cwNhNHs9 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_Q59PuDPXYLiXbeFroE4qeV a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_QJZhBbJTwzSoz2CDeFNd9j a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_Qh97z2u2WTGU4LtkRAcpe4 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_QkzUxPHRHn6DD9YSu4fPgt a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_Qu8b2UPKqcnTfcMPQHd96H a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_R3fjU69ZSDDBwczGzQpXhJ a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_R7885FoRNw2dPmL9gHfJsY a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_R8bRuwENJH2ZzgpMVXHy89 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_R9tRSDzxxjjar77cbdPogx a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_RZLfHHR3WF7ghRkHixUFdK a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_RgYVHQwjCZcj7PM6KEjeCS a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_RmUbRs5vgi4EowweMZBBC9 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_RqwFbkoKQiAj3hc8tbFSkE a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_SSrYhp3BpEZJaZC5o8748W a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_ScM46xxmPNJAKx3xCqSQRM a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_Sh8WD2ahNHAPQA3WX2CGDo a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_SmsAgzswaTyoFuS89whfZJ a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_SpMfq7FKF7WjD2Fvssrr5h a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_SzXzNrZi8m6Nij86MS4FR3 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_TDHsRwKptRZZYyykFNAT3K a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_TKyFHRsaWosai2kEnT3uRb a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_TPQTsNKigo7aoLdNsNdUj9 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_TjnDf8xNMhnSE7nPhsRKaQ a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_TxUYoaSaASedidzSMhtteN a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_TxgEnpeZG9iY6TW3MNmm3G a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_U8Gc3oGh9SRDKFPREyYuhJ a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_UCnNfTkZwppZeSuJWqZzcR a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_Uxj7xxGJqLSQwoUCjg7uWC a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_V8ZXM2bvSKSGrEWZuoRf2c a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_V9UmZp4h7mYn8rWQ82aJZN a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_VBXfVkiNxzU6THrbJn6V53 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_VMt8x5d65gY6Ru4fjjCFLv a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_VXMm4SLXg3SfrAau39joWs a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_VbxrWAHQ9PfSLF42BywwYk a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_VcwYBDXc6KXc632QyWvmue a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_VvEetk2uauHd6PRyBp35gS a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_WQn32xHNp975V7SvTntWjh a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_WbfiVyVcBtb6LdUP2t7qRS a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_WgVPVq2zXhZ6tU6CUCgUkb a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_WiHQEyJBchdzntfz3d8Ggh a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_Wt8bMDjpjPW78ZZuxbyjTq a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_WtwxTV5UxWE9fbW8iQ39xV a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_WxUGXiLiJxJUMFWAc4FYPk a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_X4Po2J5qseJFGGjkQXWEaL a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_X6cDjYKK3fWwohG4TTPxBK a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_XPn2MUFoo44BTx8fn6kVuu a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_XPnpYc9QTvbaDJyCEQSaYv a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_XVWP2HN2qgRBWvMuczYsWv a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_XWTpZBQqQ9RoCMZP8nVbzp a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_XcYMokCjx3JmKpn2RwWWDQ a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_Y4yvxEJr9JYafcAGYcRRrp a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_YBGx8jdTpDv2kYQHdsfgsg a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_YEWMvq8UPhhLKWTWRKKpCk a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_YGw6vJYcdEmGKbpvVUT7sP a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_YKFCHnsoFvsEy4Awg3nyUE a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_YYDzRHtWAAGWtYFcqnGmnM a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TOD ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_335 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_TOD to http://publications.europa.eu/resource/authority/fd_335" .
 
 lamd:res_Yfh9RHAuy6w8PNMW9G6rrs a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_YuSZE5B5sJ5g5oAHWPcC8L a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_Z2MsEc9yLFCsFsRrAudqkq a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_Z4nWJWRySW54k5ahBXmaLr a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_ZbuEacMEiQo5fm8XA6ewKB a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_Zdk9TvnKHu2hcZvcm3JCn9 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_Zoug7NeUqRagD8UbQq9dXN a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_a2xX7oQDUYwk9zoe7iFVjL a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_aMqVdFgZv3KPPTpUW8CbqA a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_aNTdbnV8iRr3KdLPbYXsgS a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_COD ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_350 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_COD to http://publications.europa.eu/resource/authority/fd_350" .
 
 lamd:res_aUPgjjfgPfZouQ4uT4XkXw a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_aURhwbJZZkQYKZqAiU6nuT a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_adJfUcpAHi7iVFpf6kaaQw a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_bCtZwmtdAe2P5BxN8wkKu4 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_bbL3RhftwFMLQxMbRYD5yw a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_bjQwCUqzZyQYV7s3vhRvy9 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_bok6b5fdxxyDH4swrzTFuW a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_PAR ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_PAR"@en .
 
 lamd:res_bpABZh8QrLVmnGj2dmqFxG a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_bvs9apnikfzJwWKFJNtoy9 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_cNCuBaSjDqPe8EGm35L3VU a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_caoujgfuGjaURea9GuTpt2 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_cmXCJ6vQomvdS9knvGB7Ta a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_cqsBxpuTffVD52u4kbVZjb a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_dCSRBkHcx9NTtHLNW7h6n7 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_dDj2RMKxyKrQuKxib423q4 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_dE3yZfEnqjUJfgthxAQdzR a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_dXTMZaSVEkhSMNrbKhWvQJ a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_dfgnGwPsHhuGKmMkYaBX9Y a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_dkLXt7AFitvgNp98AgeXJn a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_dw8moevrXjrVUSkrCRSimY a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_eEctCbXkB9DmboVyF2SdZf a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_eKrdtnjeC7BCpGsmZ5qqDw a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_eRqq8zrKeiCWahNNZeTxwr a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_eSnFqy6j3bm9y27gsABMdf a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_eamXMJew8akRuLAxQNfAdJ a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_emBPNGATP3Ntem5BECmTXh a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_evmTEiiLfUZsDMjmJ2sGVx a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_exhAcgqF6KUaivoUsFL5UD a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_fDHoktoWMYM6a3hWXW7HnU a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_fTedDovQiGbNLPbKrg2NN4 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_fdFAkxwKTtpcpARTJ6uwcS a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_fk8KNo4dhVJPuoGxmGusBe a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_fz5EfJ6rRweGLnaasmHzMc a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_g9hVtpDk7fnsoboyHaFjDA a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_gAXXYmxu9XBYWCxHDxiVBg a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_gFMLheAzQo4oiqR2JD64SS a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_gHWA4mM4Jwu9jdPfdwMCe2 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_gS4w3TVgiVqGizCYtMmQdp a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_gmMPmNsMpmqUgN6jQkaQFX a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_gqxjFGqJTV85jZFdUBWcgg a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_gsVbN2bXVp7A6C2zBcTDsu a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_hU8g6y4uLsu5HHbKCNVeGY a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_hez27s7wQnnMrhvC7yMpnp a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_hrhktao3m7rdGDezK6Aq2n a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_hrpks48mdUH5ZYBTqRMxgR a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_hsPRKWomj2sxLsrNh6qJsh a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_iAuuKeGyp5DTpFUrjXGTcz a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_iGhtVckfBsAinZUTSJbHqG a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_iGvyv75TEiameXRzoyv3h9 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_j3rfqWh8ZrXMCtNDer9nQc a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_ART ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_ART"@en .
 
 lamd:res_jCxZaZzTy4uMtmeczXtrWs a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_jJCT8v5F82bismqEKL4Zcf a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_FCS ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_FCS to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_jKfeNNcy9byU3UZiEMb3xQ a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_jMktU2EHhHnuGZKUap5GKT a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_jaN2Rg6xrL5zF7GZZt5jMu a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_jpQ8iXdBqb8idsujJeFd7v a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_COD ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_340 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_COD to http://publications.europa.eu/resource/authority/fd_340" .
 
 lamd:res_jswX769j2qt2VVaKV3hpzz a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_juhZ6AfsaMng32QHtxsguf a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_kB6zsixAqSoCcMXFZvzbMG a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_kGuXBHHEHMXuxVeJXwHxgB a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_kRGgiZTfAkWPpB5auQxqNt a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_kUR8jkJaJnpeYqU7dSUWYF a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MDL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MDL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_kXmtqg7rR9TnqxhBMtn5Q6 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_kjPZiZS5frhYRAJv9cviyu a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_knuFmyKooPU5bsZ8fqQT6o a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_kpn3mtWziH2htXGZ2CTXbZ a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_LVL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:language ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_LVL to http://publications.europa.eu/resource/authority/language" .
 
 lamd:res_kqLSBnakYqWBX2sAGejQQM a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:res_mT39iaxsKN6ZPhiFoT6iPS a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_mVSBkbrZ2dtaUDTKJPjrRq a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_mq9c2HijqfSonLbtYnzuFM a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_nBGQdcpYqkZQZXgZDykXry a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_COD ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_361 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_COD to http://publications.europa.eu/resource/authority/fd_361" .
 
 lamd:res_nCWPSjaDAF8Z8TfwU3C9dE a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_TLT ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_TLT"@en .
 
 lamd:res_ngxthsveqRTdWkoCrbjqfd a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_SOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_SOV"@en .
 
 lamd:res_nt4qXpye2tCeVqzdGLbVBg a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_MSL ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:subdivision ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_MSL to http://publications.europa.eu/resource/authority/subdivision" .
 
 lamd:res_nvUUKwP26Grej4niDXNawX a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_PAR ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_PAR"@en .
 
 lamd:res_o5dFqXBqLooHbUbhGBQ2w6 a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_RL2 ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:class at:fd_375 ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Constraint on http://publications.europa.eu/resources/authority/lam/md_ANN_RL2 to http://publications.europa.eu/resource/authority/fd_375" .
 
 lamd:res_oQiKoKH6ojVARQTTVKj4tb a lam:AnnotationConfiguration ;
     lam:path lamd:md_ANN_EOV ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     sh:minCount "1"^^xsd:int ;
     sh:name "Mandatory http://publications.europa.eu/resources/authority/lam/md_ANN_EOV"@en .
 
 lamd:class_DATE a skos:Collection ;
     euvoc:order "2" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:definition "Properties describing different dates." ;
     skos:member lamd:class_DANNOT,
         lamd:class_DPROP ;
@@ -6108,7 +6108,7 @@ lamd:class_DATE a skos:Collection ;
 
 lamd:class_JURI a skos:Collection ;
     euvoc:order "7" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:definition "Properties applicable only to case-law collection" ;
     skos:member lamd:class_CURIA,
         lamd:class_NAT ;
@@ -6117,7 +6117,7 @@ lamd:class_JURI a skos:Collection ;
 
 lamd:md_ANN_CLB a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation specifying the fragments of the treaties or the legal acts constituting the legal basis of the document." ;
     skos:editorialNote "2019/06/25: Replacement of fd_370 by at:subdivision should be considered."@en ;
@@ -6132,7 +6132,7 @@ lamd:md_ANN_CLB a lam:DocumentProperty,
 
 lamd:md_ANN_FCS a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation indicates specific part of this document where a reference to another document or its part is present." ;
     skos:editorialNote "2019/06/25: Currently string. Replacement by at:subdivision should be considered."@en ;
@@ -6144,7 +6144,7 @@ lamd:md_ANN_FCS a lam:DocumentProperty,
 
 lamd:md_ANN_FCT a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation indicates  to which specific part of an document refers this document." ;
     skos:editorialNote "2019/06/25: Currently string. Replacement by at:subdivision should be considered."@en ;
@@ -6156,7 +6156,7 @@ lamd:md_ANN_FCT a lam:DocumentProperty,
 
 lamd:class_REF a skos:Collection ;
     euvoc:order "1" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:definition "Different unique identifiers used in CELLAR database. " ;
     skos:member lamd:class_CLX,
         lamd:class_OTHER_REF,
@@ -6166,7 +6166,7 @@ lamd:class_REF a skos:Collection ;
 
 lamd:md_ANN_ART a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation specifying the article of the treaties or the legal acts constituting the legal basis of the document." ;
     skos:example "<annot:article>62</annot:article>" ;
@@ -6177,7 +6177,7 @@ lamd:md_ANN_ART a lam:DocumentProperty,
 
 lamd:md_ANN_PAR a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation specifying the paragraph of the treaties or the legal acts constituting the legal basis of the document." ;
     skos:example "<annot:paragraph>1</annot:paragraph>" ;
@@ -6188,7 +6188,7 @@ lamd:md_ANN_PAR a lam:DocumentProperty,
 
 lamd:md_ANN_SUB a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation specifying the subparagraph of the treaties or the legal acts constituting the legal basis of the document." ;
     skos:example "<annot:subparagraph>1</annot:paragraph>" ;
@@ -6199,7 +6199,7 @@ lamd:md_ANN_SUB a lam:DocumentProperty,
 
 lamd:md_ANN_TOD a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation specifying date metadata." ;
     skos:editorialNote "2019/06/25: Differences between ann:comment_on_date and ann:type_of_date are not fully clear"@en ;
@@ -6217,7 +6217,7 @@ RP: fd_350"""@en ;
 
 lamd:class_RBD a skos:Collection ;
     euvoc:order "5" ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     skos:definition """There are seven general types of legal references in the EUR-Lex database:
 (1) Reference to the treaty (TT)
 (2) Reference to the legal basis of an act (LB)
@@ -6240,7 +6240,7 @@ MS-MD, EA-SP and AJ-CD are paired fields that complement each other by offering 
 
 lamd:md_ANN_COD a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation specifying date metadata." ;
     skos:editorialNote "2019/06/25: Differences between ann:comment_on_date and ann:type_of_date are not fully clear"@en ;
@@ -6272,7 +6272,7 @@ SG: at:place, at:country"""@en ;
 
 lamd:md_ANN_EOV a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation indicates end of validity of a specific amendment." ;
     skos:inScheme lamd:LAMProperties ;
@@ -6282,7 +6282,7 @@ lamd:md_ANN_EOV a lam:DocumentProperty,
 
 lamd:md_ANN_LVL a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation indicates the language version concerned by a corrigendum (for cdm:resource_legal_corrects_resource_legal)." ;
     skos:editorialNote "2019/06/25: Currently string. Replacement by at:language should be considered."@en ;
@@ -6294,7 +6294,7 @@ lamd:md_ANN_LVL a lam:DocumentProperty,
 
 lamd:md_ANN_MDL a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation indicates which specific part of an act is touched by this act (or its part). " ;
     skos:editorialNote "2019/06/25: Currently linked to fd_370. Replacement by at:subdivision should be considered."@en ;
@@ -6307,7 +6307,7 @@ lamd:md_ANN_MDL a lam:DocumentProperty,
 
 lamd:md_ANN_MSL a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Annotation indicating which specific part of this act touches specific part of  another act, only rarely used in the past." ;
     skos:editorialNote "2019/06/25: Currently linked to fd_370. Replacement by at:subdivision should be considered."@en ;
@@ -6320,7 +6320,7 @@ lamd:md_ANN_MSL a lam:DocumentProperty,
 
 lamd:md_ANN_RL2 a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation contains an additional comment to the relation." ;
     skos:example "<annot:role2>{D|http://publications.europa.eu/resource/authority/fd_375/D}</annot:role2>" ;
@@ -6332,7 +6332,7 @@ lamd:md_ANN_RL2 a lam:DocumentProperty,
 
 lamd:md_ANN_SOV a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "This annotation indicates indicates start of validity of a specific amendment. This might be equal to the date of entry into force of the amending act or to the date of its application (if the date of application of the amending act or its relevant part is different as its date of entry into force) or might be directly defined in the amending act." ;
     skos:inScheme lamd:LAMProperties ;
@@ -6342,7 +6342,7 @@ lamd:md_ANN_SOV a lam:DocumentProperty,
 
 lamd:md_ANN_TLT a lam:DocumentProperty,
         skos:Concept ;
-    dct:created "2021-09-24"^^xsd:date ;
+    dct:created "2022-12-04"^^xsd:date ;
     dct:type "object property" ;
     skos:definition "Indicates the type of metadata field (Amendment to or Earlier related instruments or Related documents)" ;
     skos:example "<annot:type_of_link_target>MS</annot:type_of_link_target>" ;

@@ -68,3 +68,9 @@ def test_lam_celex_classes_query(lam_celex_classes_query, lam_celex_classes_grap
 def test_lam_celex_classes_classification_query(lam_celex_classes_classification_query, lam_celex_classes_graph):
     results = lam_celex_classes_graph.query(lam_celex_classes_classification_query)
     assert results.askAnswer is True
+
+
+def test_lam_celex_property_configuration_DTS_query(lam_celex_property_configuration_DTS_query,
+                                                    lam_celex_classes_graph):
+    results = lam_celex_classes_graph.query(lam_celex_property_configuration_DTS_query)
+    assert results.askAnswer is True

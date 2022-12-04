@@ -12,6 +12,7 @@ from rdflib import SKOS, RDF
 import lam4vb3.lam_utils
 from lam4vb3.builder import LAM, CELEXD
 from lam4vb3.builder.inverse_builders import InverseTripleMaker
+from lam4vb3.builder.reified_builders import ConstraintTripleMaker
 from lam4vb3.builder.simple_builders import ConceptTripleMaker, SimpleTripleMaker
 
 LITERAL_CONCEPTS_COLUMNS = {
@@ -40,6 +41,13 @@ COLLECTION_COLUMNS = {"CLASSIFICATION": "skos:member"}
 LAM_CS = CELEXD.CelexClasses
 
 URI_COLUMN = 'URI'
+
+CONSTRAINT_COLUMNS = {
+    'DTS': 'lamd:md_DTS',
+    'DTT': 'lamd:md_DTT',
+    'DTA': 'lamd:md_DTA',
+    'DTN': 'lamd:md_DTN'
+}
 
 
 def create_concept_scheme(graph):
@@ -71,6 +79,17 @@ def create_concepts(df, graph):
                                              )
 
     in_collection_maker.make_triples()
+
+    constraint_maker = ConstraintTripleMaker(df=df,
+                                             column_mapping_dict=CONSTRAINT_COLUMNS,
+                                             graph=graph,
+                                             target_columns=[*CONSTRAINT_COLUMNS],
+                                             constraint_property=LAM.hasPropertyConfiguration,
+                                             constraint_class=LAM.PropertyConfiguration,
+                                             constraint_comment=SKOS.editorialNote,
+                                             constraint_path_property=LAM.path,
+                                             subject_source_column=URI_COLUMN)
+    constraint_maker.make_triples()
 
     # parent_concept_maker = ConceptTripleMaker(df=df,
     #                                           column_mapping_dict=PARENT_CONCEPT_COLUMN,
