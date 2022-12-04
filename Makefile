@@ -20,6 +20,11 @@ install-dev: install
 	@ pip install --upgrade pip
 	@ pip install -r requirements-dev.txt
 
+install-release-1.1.lock
+	@ echo "$(BUILD_PRINT)Installing the requirements"
+	@ pip install --upgrade pip
+	@ pip install -r requirements-2021-08-30.txt.lock
+
 lint:
 	@ echo "$(BUILD_PRINT)Linting the code"
 	@ flake8 || true
